@@ -7,6 +7,8 @@ I study natural language understanding by humans and machines,
 using techniques involving logic and programming.
 The technical names of these areas are formal and computational semantics.
 
+We have an emerging lab under Informatics Institute: [Laboratory for Formal and Computational Semantics](lfcs.ii.metu.edu.tr)
+
 ## Recent activity 
 
 * Conf. Pres.: Özge, U. and von Heusinger, K. (2018). Inferable Indefinites and the
@@ -18,7 +20,7 @@ Tallinn, Estonia.
 
 * Invited talk: Dimensions of Definiteness in Turkish. Institute for German Language and Linguistics, University of Stuttgart, July 9, 2018.
 
-Please see my [cv](files/cv/UmutOzge-CV.pdf).
+Here is a [cv](files/cv/UmutOzge-CV.pdf).
 
 ## Teaching
 
