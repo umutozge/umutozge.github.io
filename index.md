@@ -7,7 +7,7 @@ I study natural language understanding by humans and machines,
 using techniques involving logic and programming.
 The technical names of these areas are formal and computational semantics.
 
-We have an emerging lab under Informatics Institute: [Laboratory for Formal and Computational Semantics](lfcs.ii.metu.edu.tr)
+We have an emerging lab under Informatics Institute: [Laboratory for Formal and Computational Semantics](http://lfcs.ii.metu.edu.tr)
 
 ## Recent activity 
 
