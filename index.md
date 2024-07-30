@@ -11,15 +11,6 @@ We have an emerging lab under Informatics Institute: [Laboratory for Formal and 
 
 ## Recent activity 
 
-* Conf. Pres.: Özge, U. and von Heusinger, K. (2018). Inferable Indefinites and the
-Discourse-Information Structure Interface. At the  Workshop on Information
-Structure at the Interfaces, in 51st Meeting of SLE, August 2018,
-Tallinn, Estonia.
-
-* Poster Pres.: Umbach, C. and Özge, U. (2018). Scalar and non-scalar equatives in Turkish and in German. At the 2nd International Conference on Prominence in Linguistics, July 2018, Cologne, Germany.  
-
-* Invited talk: Dimensions of Definiteness in Turkish. Institute for German Language and Linguistics, University of Stuttgart, July 9, 2018.
-
 Here is a [cv](files/cv/UmutOzge-CV.pdf).
 
 ## Teaching
