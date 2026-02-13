@@ -1,0 +1,477 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Linear Algebra - Umut Özge</title>
+<meta name="description" content="Linear algebra exercises.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Umut Özge">
+<meta property="og:title" content="Linear Algebra">
+<meta property="og:url" content="https://umutozge.github.io/exercises/linalg/">
+
+
+  <meta property="og:description" content="Linear algebra exercises.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-02-13T15:40:51+03:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/exercises/linalg/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+<script type="text/javascript">
+  window.MathJax = {
+    loader: {load: ['[tex]/ams']},
+    tex: {
+      packages: {'[+]': ['ams']},
+      tags: 'all',
+      macros: {
+        vectg: ["\\boldsymbol{#1}", 1],
+        vect: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      }
+    },
+    options: {
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<!-- MathJax configuration for automatic equation numbering 
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      packages: ['base','ams'],
+      tags: 'all',
+      macros: {
+        vect: ["\\boldsymbol{#1}", 1],
+        vv: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      },
+    },
+    options: {
+      // Optional: Ensure equation numbers are on the right
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+-->
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Umut Özge
+          <span class="site-subtitle">Graduate School of Informatics, Middle East Technical University</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Courses</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/prelim/schedule/">COGS 502</a></li>
+            
+              <li><a href="/cl/schedule/">COGS 543</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <a href="/exercise/browser/"><span class="nav__sub-title">Exercises</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
+          
+
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Linear Algebra">
+    <meta itemprop="description" content="Linear algebra exercises.">
+    <meta itemprop="datePublished" content="2026-02-13T15:40:51+03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://umutozge.github.io/exercises/linalg/" itemprop="url">Linear Algebra
+</a>
+          </h1>
+          
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="numbered">
+
+  <div class="item" id="ex-dot-product" data-kind="exercise" data-label="Exercise" data-title="Dot Product">
+
+    <p>Define a function <code class="language-plaintext highlighter-rouge">dot_product(v, w)</code> that takes two equal-length lists of
+numbers <code class="language-plaintext highlighter-rouge">v</code> and <code class="language-plaintext highlighter-rouge">w</code> and returns their dot product.</p>
+
+    <details>
+      <summary>Criteria</summary>
+      <p>The dot product is defined as the sum of the products of the corresponding
+elements of the two sequences. For example, the dot product of <code class="language-plaintext highlighter-rouge">[1, 2, 3]</code>
+and <code class="language-plaintext highlighter-rouge">[4, 5, 6]</code> is <code class="language-plaintext highlighter-rouge">1*4 + 2*5 + 3*6 = 32</code>.</p>
+    </details>
+  </div>
+
+  <div class="item" id="ex-matrix-multiplication" data-kind="exercise" data-label="Exercise" data-title="Matrix Multiplication">
+    <p>Define a function <code class="language-plaintext highlighter-rouge">matrix_multiply(A, B)</code> that takes two matrices <code class="language-plaintext highlighter-rouge">A</code> and <code class="language-plaintext highlighter-rouge">B</code>
+and returns their product.</p>
+    <details>
+      <summary>Criteria</summary>
+      <p>The matrices <code class="language-plaintext highlighter-rouge">A</code> and <code class="language-plaintext highlighter-rouge">B</code> are represented as lists of lists, where each inner
+list represents a row of the matrix. The number of columns in <code class="language-plaintext highlighter-rouge">A</code> must equal
+the number of rows in <code class="language-plaintext highlighter-rouge">B</code>. The resulting matrix should have dimensions</p>
+
+      <p>equal to the number of rows in <code class="language-plaintext highlighter-rouge">A</code> and the number of columns in <code class="language-plaintext highlighter-rouge">B</code>.</p>
+    </details>
+  </div>
+
+  <div class="item" id="ex-transpose" data-kind="exercise" data-label="Exercise" data-title="Transpose">
+    <p>Define a function <code class="language-plaintext highlighter-rouge">transpose(M)</code> that takes a matrix <code class="language-plaintext highlighter-rouge">M</code> and returns its
+transpose.</p>
+    <details>
+      <summary>Criteria</summary>
+      <p>The matrix <code class="language-plaintext highlighter-rouge">M</code> is represented as a list of lists, where each inner list
+represents a row of the matrix. The transpose of <code class="language-plaintext highlighter-rouge">M</code> is obtained by
+swapping its rows and columns.</p>
+    </details>
+  </div>
+
+  <div class="item" id="ex-softmax" data-kind="exercise" data-label="Exercise" data-title="Softmax">
+
+    <p>The softmax function is defined as follows on vector inputs:</p>
+
+\[\softmax{\vect{s},\alpha} = \vect{p} \text{, with } \vect{p}_i = \frac{e^{\alpha s_i}}{\sum_{j} e^{\alpha s_j}}\]
+
+    <p>where \(\vect{s}\) is a vector of scores, \(\alpha\) is the softmax
+parameter.<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+    <p>Implement the softmax function in Python using <code class="language-plaintext highlighter-rouge">numpy</code>.</p>
+
+    <details>
+      <summary>Notes</summary>
+
+      <ul>
+        <li>
+          <p>In computer implementations the temperature parameter is not handled by the
+  softmax function itself. So write a “bare” softmax function and handle the
+  temperature in your calls.</p>
+        </li>
+        <li>
+          <p>To improve numerical stability, it is common to normalize the logits by
+  subtracting the maximum logit value from each logit before applying the
+  exponential function. This helps prevent overflow issues when dealing with
+  large logit values. Once you are done with your solution, integrate this
+  functionality as well.</p>
+        </li>
+      </ul>
+
+    </details>
+
+    <details>
+      <summary>Library</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">scipy.special</span> <span class="kn">import</span> <span class="n">softmax</span>
+</code></pre></div>      </div>
+
+    </details>
+
+  </div>
+
+  <div class="item" id="ex-softmax-multi" data-kind="exercise" data-label="Exercise" data-title="Softmax (multi-dimensional)">
+
+    <p>Extend your previous implementation of the softmax function to handle
+multi-dimensional inputs. Your function should take an additional argument
+<code class="language-plaintext highlighter-rouge">axis</code> that specifies the axis along which to compute the softmax. If the user
+does not provide an axis, compute the softmax over the entire input. Remember
+that <code class="language-plaintext highlighter-rouge">axis=-1</code> means the last axis for <code class="language-plaintext highlighter-rouge">numpy</code> arrays.</p>
+
+  </div>
+
+</div>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>In some contexts the inverse of the softmax parameter \(\alpha\) is used
+and it is called the “temperature” parameter \(\tau = 1/\alpha\). <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#linear-algebra"
+         class="page__taxonomy-item p-category" rel="tag">
+        linear algebra <span class="taxonomy__count">1</span>
+      </a>
+    
+    </span>
+  </p>
+
+
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-02-13T15:40:51+03:00">2026-02-13</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/exercises/iteration/" class="pagination--pager" title="Iteration">Previous</a>
+    
+    
+      <a href="/exercises/numbers/" class="pagination--pager" title="Basic number theory">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://umutozge.github.io">Umut Özge</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

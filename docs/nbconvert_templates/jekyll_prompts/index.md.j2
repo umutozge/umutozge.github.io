@@ -1,0 +1,52 @@
+{%- extends 'markdown/index.md.j2' -%}
+
+{%- macro exec_count(cell) -%}
+{{ cell.execution_count if cell.execution_count is not none else " " }}
+{%- endmacro -%}
+
+{# ---------- Inputs ---------- #}
+{%- block input -%}
+<div class="nb-cell nb-input" markdown="1">
+<div class="nb-prompt"></div>
+```python
+{{ cell.source.rstrip() }}
+```
+</div>
+{%- endblock input -%}
+
+{%- block output -%}
+<div class="nb-cell nb-output" markdown="1">
+<div class="nb-prompt"><i class="fa-solid fa-arrow-right"></i></div>
+{{ super() }}
+</div>
+{%- endblock output -%}
+
+{%- block stream -%}
+```output
+{{ output.text.rstrip() }}
+```
+{%- endblock stream -%}
+
+{%- block data_text scoped -%}
+```output
+{{ output.data['text/plain'].rstrip() }}
+```
+{%- endblock data_text -%}
+
+
+{# HTML output (e.g. pandas DataFrame tables) #}
+{%- block data_html scoped -%}
+
+<div class="nb-html-output"> {{ output.data['text/html'] }} </div> {%- endblock data_html -%}
+{# Images (matplotlib, etc.) #}
+{%- block data_png scoped -%}
+<img class="nb-image" alt="notebook output" src="data:image/png;base64,{{ output.data['image/png'] }}" />
+{%- endblock data_png -%}
+
+{%- block data_svg scoped -%}
+
+<div class="nb-svg-output"> {{ output.data['image/svg+xml'] }} </div> {%- endblock data_svg -%}
+{# Tracebacks #}
+{%- block traceback_line -%}
+{{ line.rstrip() | strip_ansi }}
+{%- endblock traceback_line -%}

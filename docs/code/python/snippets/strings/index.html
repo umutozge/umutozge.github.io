@@ -1,0 +1,413 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Strings - Umut Özge</title>
+<meta name="description" content="String operations in Python.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Umut Özge">
+<meta property="og:title" content="Strings">
+<meta property="og:url" content="https://umutozge.github.io/code/python/snippets/strings/">
+
+
+  <meta property="og:description" content="String operations in Python.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-02-13T15:40:51+03:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/code/python/snippets/strings/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+<script type="text/javascript">
+  window.MathJax = {
+    loader: {load: ['[tex]/ams']},
+    tex: {
+      packages: {'[+]': ['ams']},
+      tags: 'all',
+      macros: {
+        vectg: ["\\boldsymbol{#1}", 1],
+        vect: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      }
+    },
+    options: {
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<!-- MathJax configuration for automatic equation numbering 
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      packages: ['base','ams'],
+      tags: 'all',
+      macros: {
+        vect: ["\\boldsymbol{#1}", 1],
+        vv: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      },
+    },
+    options: {
+      // Optional: Ensure equation numbers are on the right
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+-->
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Umut Özge
+          <span class="site-subtitle">Graduate School of Informatics, Middle East Technical University</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Courses</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/prelim/schedule/">COGS 502</a></li>
+            
+              <li><a href="/cl/schedule/">COGS 543</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <a href="/exercise/browser/"><span class="nav__sub-title">Exercises</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
+          
+
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Strings">
+    <meta itemprop="description" content="String operations in Python.">
+    <meta itemprop="datePublished" content="2026-02-13T15:40:51+03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://umutozge.github.io/code/python/snippets/strings/" itemprop="url">Strings
+</a>
+          </h1>
+          
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Strings in Python are sequences of characters and come with a variety of
+built-in methods for manipulation and analysis. Here are some common operations:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Creating a string
+</span><span class="n">my_string</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Hello, World!</span><span class="sh">"</span>
+<span class="c1"># Accessing characters
+</span><span class="n">first_char</span> <span class="o">=</span> <span class="n">my_string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 'H'
+</span><span class="n">last_char</span> <span class="o">=</span> <span class="n">my_string</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>   <span class="c1"># '!'
+# Slicing
+</span><span class="n">substring</span> <span class="o">=</span> <span class="n">my_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># 'Hello'
+# String length
+</span><span class="n">length</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>      <span class="c1"># 13
+# Changing case
+</span><span class="n">upper_case</span> <span class="o">=</span> <span class="n">my_string</span><span class="p">.</span><span class="nf">upper</span><span class="p">()</span>  <span class="c1"># 'HELLO, WORLD!'
+</span><span class="n">lower_case</span> <span class="o">=</span> <span class="n">my_string</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span>  <span class="c1"># 'hello, world!'
+# Replacing substrings
+</span><span class="n">replaced_string</span> <span class="o">=</span> <span class="n">my_string</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="sh">"</span><span class="s">World</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Python</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># 'Hello, Python!'
+# Splitting strings
+</span><span class="n">words</span> <span class="o">=</span> <span class="n">my_string</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sh">"</span><span class="s">, </span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># ['Hello', 'World!']
+# Joining strings
+</span><span class="n">joined_string</span> <span class="o">=</span> <span class="sh">"</span><span class="s"> </span><span class="sh">"</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>  <span class="c1"># 'Hello World!'
+# Checking for substrings
+</span><span class="n">contains_hello</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Hello</span><span class="sh">"</span> <span class="ow">in</span> <span class="n">my_string</span>  <span class="c1"># True
+# Stripping whitespace
+</span><span class="n">stripped_string</span> <span class="o">=</span> <span class="sh">"</span><span class="s">   Hello   </span><span class="sh">"</span><span class="p">.</span><span class="nf">strip</span><span class="p">()</span>  <span class="c1"># 'Hello'
+# Testing string properties
+</span><span class="n">is_alpha</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Hello</span><span class="sh">"</span><span class="p">.</span><span class="nf">isalpha</span><span class="p">()</span>  <span class="c1"># True
+</span><span class="n">is_digit</span> <span class="o">=</span> <span class="sh">"</span><span class="s">12345</span><span class="sh">"</span><span class="p">.</span><span class="nf">isdigit</span><span class="p">()</span>  <span class="c1"># True
+</span></code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#python"
+         class="page__taxonomy-item p-category" rel="tag">
+        python <span class="taxonomy__count">6</span>
+      </a>
+    
+      
+      
+      <a href="/tags/#strings"
+         class="page__taxonomy-item p-category" rel="tag">
+        strings <span class="taxonomy__count">2</span>
+      </a>
+    
+    </span>
+  </p>
+
+
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-02-13T15:40:51+03:00">2026-02-13</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/code/python/snippets/sorting/" class="pagination--pager" title="Sorting">Previous</a>
+    
+    
+      <a href="/code/python/snippets/tokenization/" class="pagination--pager" title="Tokenization">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://umutozge.github.io">Umut Özge</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

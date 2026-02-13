@@ -1,0 +1,735 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Iteration - Umut Özge</title>
+<meta name="description" content="A set of programming exercises to practice iteration.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Umut Özge">
+<meta property="og:title" content="Iteration">
+<meta property="og:url" content="https://umutozge.github.io/exercises/iteration/">
+
+
+  <meta property="og:description" content="A set of programming exercises to practice iteration.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-02-13T15:40:51+03:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/exercises/iteration/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+<script type="text/javascript">
+  window.MathJax = {
+    loader: {load: ['[tex]/ams']},
+    tex: {
+      packages: {'[+]': ['ams']},
+      tags: 'all',
+      macros: {
+        vectg: ["\\boldsymbol{#1}", 1],
+        vect: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      }
+    },
+    options: {
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<!-- MathJax configuration for automatic equation numbering 
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      packages: ['base','ams'],
+      tags: 'all',
+      macros: {
+        vect: ["\\boldsymbol{#1}", 1],
+        vv: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      },
+    },
+    options: {
+      // Optional: Ensure equation numbers are on the right
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+-->
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Umut Özge
+          <span class="site-subtitle">Graduate School of Informatics, Middle East Technical University</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Courses</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/prelim/schedule/">COGS 502</a></li>
+            
+              <li><a href="/cl/schedule/">COGS 543</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <a href="/exercise/browser/"><span class="nav__sub-title">Exercises</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
+          
+
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Iteration">
+    <meta itemprop="description" content="A set of programming exercises to practice iteration.">
+    <meta itemprop="datePublished" content="2026-02-13T15:40:51+03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://umutozge.github.io/exercises/iteration/" itemprop="url">Iteration
+</a>
+          </h1>
+          
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <ol>
+  <li>
+    <p>The factorial function is defined over the non-negative integers as:<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+\[n! = \begin{cases}
+ 1, &amp; \text{if } n = 0;\\
+ n \times (n - 1)!, &amp; \text{if } n &gt; 0.
+ \end{cases}\]
+
+    <p>Define a function that computes the factorial of a given non-negative integer \(n\) using iteration by <code class="language-plaintext highlighter-rouge">while</code>.</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">Return the factorial of n (n&gt;=0).
+</span><span class="gp">
+     &gt;&gt;&gt;</span> <span class="nf">factorial</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+     <span class="mi">1</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+     <span class="mi">120</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">factorial</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+     <span class="mi">5040</span>
+     <span class="sh">"""</span>
+</code></pre></div>    </div>
+    <details>
+      <summary>Solutions</summary>
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">Return the factorial of n (n&gt;=0).
+</span><span class="gp">
+     &gt;&gt;&gt;</span> <span class="nf">factorial</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+     <span class="mi">1</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+     <span class="mi">120</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">factorial</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+     <span class="mi">5040</span>
+     <span class="sh">"""</span>
+     <span class="n">store</span> <span class="o">=</span> <span class="mi">1</span>
+     <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+     <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+         <span class="n">store</span> <span class="o">*=</span> <span class="n">k</span>
+         <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+     <span class="k">return</span> <span class="n">store</span>
+</code></pre></div>      </div>
+    </details>
+  </li>
+  <li>
+    <p>Implement the modulo operation using iteration by <code class="language-plaintext highlighter-rouge">while</code>. The modulo operation \(a \bmod b\) returns the remainder of the division of \(a\) by \(b\). You can assume that \(a \geq 0\) and \(b &gt; 0\).</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">modulo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">Return a mod b (a&gt;=0, b&gt;0).
+</span><span class="gp">
+     &gt;&gt;&gt;</span> <span class="nf">modulo</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+     <span class="mi">1</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">modulo</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+     <span class="mi">4</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">modulo</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+     <span class="mi">0</span>
+     <span class="sh">"""</span>
+</code></pre></div>    </div>
+    <details>
+      <summary>Solutions</summary>
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">modulo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">Return a mod b (a&gt;=0, b&gt;0).
+</span><span class="gp">
+     &gt;&gt;&gt;</span> <span class="nf">modulo</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+     <span class="mi">1</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">modulo</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+     <span class="mi">4</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">modulo</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+     <span class="mi">0</span>
+     <span class="sh">"""</span>
+     <span class="k">while</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">:</span>
+         <span class="n">a</span> <span class="o">-=</span> <span class="n">b</span>
+     <span class="k">return</span> <span class="n">a</span>
+</code></pre></div>      </div>
+    </details>
+  </li>
+  <li>
+    <p id="fibonacci-def">The Fibonacci function \(F_n\) is defined as:</p>
+
+\[F_n =
+ \begin{cases}
+ 0 &amp; \text{if } n = 0, \\
+ 1 &amp; \text{if } n = 1, \\
+ F_{n-1} + F_{n-2} &amp; \text{if } n &gt; 1.
+ \end{cases}\]
+
+    <p>There is a unique (and infinite) sequence of numbers called the Fibonacci sequence (or numbers) where the first number is 0, the second number is 1, and each subsequent number is the sum of the two preceding numbers.</p>
+
+    <p>Define a function that computes the n-th Fibonacci number using iteration by <code class="language-plaintext highlighter-rouge">while</code>. Write two versions, one that counts up, and one that counts down.</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">Return the n-th Fibonacci number (n&gt;=1).
+</span><span class="gp">
+     &gt;&gt;&gt;</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+     <span class="mi">0</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+     <span class="mi">1</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+     <span class="mi">13</span>
+     <span class="sh">"""</span>
+</code></pre></div>    </div>
+    <details>
+      <summary>Solutions</summary>
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">Return the n-th Fibonacci number (n&gt;=1).
+</span><span class="gp">
+     &gt;&gt;&gt;</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+     <span class="mi">0</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+     <span class="mi">1</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+     <span class="mi">13</span>
+     <span class="sh">"""</span>
+     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+         <span class="k">return</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+     <span class="n">count</span> <span class="o">=</span> <span class="mi">3</span>
+     <span class="n">prev</span><span class="p">,</span> <span class="n">curr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+     <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+         <span class="n">prev</span><span class="p">,</span> <span class="n">curr</span> <span class="o">=</span> <span class="n">curr</span><span class="p">,</span> <span class="n">prev</span> <span class="o">+</span> <span class="n">curr</span>
+         <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+     <span class="k">return</span> <span class="n">curr</span>
+</code></pre></div>      </div>
+    </details>
+  </li>
+  <li>You have a message source that emits random integers in the range 1–100 (check <a href="/posts/course/iteration-by-while/">this</a> for how to implement such a source). Define a function that listens to this source and returns the first three consecutive integers \(m\), \(n\) and \(p\) such that \(m\leq n \leq p\). You can assume that such a triplet will eventually be emitted by the source. When returning the result you can put comma between the variables (e.g. <code class="language-plaintext highlighter-rouge">return m, n, p</code>).
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">first_non_decreasing_triplet</span><span class="p">():</span>
+     <span class="sh">"""</span><span class="s">Return the first non-decreasing triplet of random integers between 1 and 100.
+</span><span class="gp">
+     &gt;&gt;&gt;</span> <span class="kn">import</span> <span class="n">random</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="p">.</span><span class="nf">seed</span><span class="p">(</span><span class="mi">48</span><span class="p">)</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">first_non_decreasing_triplet</span><span class="p">()</span>
+     <span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">92</span><span class="p">)</span>
+     <span class="sh">"""</span>
+</code></pre></div>    </div>
+
+    <details>
+      <summary>Solutions</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">first_non_decreasing_triplet</span><span class="p">():</span>
+     <span class="sh">"""</span><span class="s">Return the first non-decreasing triplet of random integers between 1 and 100.
+</span><span class="gp">
+     &gt;&gt;&gt;</span> <span class="kn">import</span> <span class="n">random</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="p">.</span><span class="nf">seed</span><span class="p">(</span><span class="mi">48</span><span class="p">)</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">first_non_decreasing_triplet</span><span class="p">()</span>
+     <span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">92</span><span class="p">)</span>
+     <span class="sh">"""</span>
+     <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+     <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="nf">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="nf">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+     <span class="k">while</span> <span class="ow">not</span> <span class="p">(</span><span class="n">m</span> <span class="o">&lt;=</span> <span class="n">n</span> <span class="ow">and</span>  <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">p</span><span class="p">):</span>  <span class="c1"># not (x &lt;= y &lt;= z) for short
+</span>         <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="nf">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+     <span class="nf">return </span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+</code></pre></div>      </div>
+    </details>
+  </li>
+  <li>
+    <p>Define a function that takes a positive integer and returns the sum of its digits. Two mathematical operations that might be useful here are modulo and division.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">sum_of_digits</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">Return the sum of the digits of a positive integer n.
+</span><span class="gp">
+     &gt;&gt;&gt;</span> <span class="nf">sum_of_digits</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+     <span class="mi">6</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">sum_of_digits</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span>
+     <span class="mi">19</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">sum_of_digits</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+     <span class="mi">7</span>
+     <span class="sh">"""</span>
+</code></pre></div>    </div>
+    <details>
+      <summary>Solutions</summary>
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">sum_of_digits</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">Return the sum of the digits of a positive integer n.
+</span><span class="gp">
+     &gt;&gt;&gt;</span> <span class="nf">sum_of_digits</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+     <span class="mi">6</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">sum_of_digits</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span>
+     <span class="mi">19</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="nf">sum_of_digits</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+     <span class="mi">7</span>
+     <span class="sh">"""</span>
+     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+     <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+         <span class="n">digit</span> <span class="o">=</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">10</span>
+         <span class="n">total</span> <span class="o">+=</span> <span class="n">digit</span>
+         <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">10</span>
+     <span class="k">return</span> <span class="n">total</span>
+</code></pre></div>      </div>
+    </details>
+  </li>
+  <li>Write a Python function <code class="language-plaintext highlighter-rouge">gcd</code> that implements <a href="/posts/course/euclids-algorithm/">Euclid’s algorithm</a>. The function should return the greatest common divisor of the two input integers \(a\) and \(b\).</li>
+  <li>An aliquot sequence is a sequence seeded by a positive integer and each number in the sequence, except the seed, is equal to the sum of the <a href="/posts/course/intro-number-theory">proper divisors</a> of the number immediately preceding it. Write a function that maps a given positive integer into the next item in its aliquot sequence.</li>
+  <li>
+    <p>An integer is <strong>happy</strong> if it divides the sum of the numbers in its collatz sequence. The <strong>pride</strong> of an integer is the total number of happy integers in its collatz sequence, excluding itself if it is happy. Define a function that computes the largest and most proud integer less than a given positive integer \(k\).</p>
+
+    <details>
+      <summary>Criteria</summary>
+
+      <p>Those who solved <a href="/exercises/sequence-operations/#ref:sum">this</a> can use Python’s built-in <code class="language-plaintext highlighter-rouge">sum</code>.
+ You can use <code class="language-plaintext highlighter-rouge">collatz_sequence</code> from <a href="/code/python/modules/collatz/"><code class="language-plaintext highlighter-rouge">collatz</code> module</a>.</p>
+    </details>
+
+    <details>
+      <summary>Solution</summary>
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+ <span class="kn">from</span> <span class="n">collatz</span> <span class="kn">import</span> <span class="o">*</span>
+
+ <span class="k">def</span> <span class="nf">happy</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">n&gt;1 is happy if it can divide the sum of its Collatz sequence</span><span class="sh">"""</span>
+     <span class="kn">from</span> <span class="n">collatz</span> <span class="kn">import</span> <span class="n">collatz_sequence</span>
+     <span class="k">return</span> <span class="nf">sum</span><span class="p">(</span><span class="nf">collatz_sequence</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="o">%</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span>
+
+ <span class="k">def</span> <span class="nf">pride</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">The number of happy integers in n</span><span class="sh">'</span><span class="s">s Collatz sequence</span><span class="sh">"""</span>
+     <span class="k">return</span> <span class="nf">len</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nf">collatz_sequence</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="nf">happy</span><span class="p">(</span><span class="n">x</span><span class="p">)])</span>
+
+ <span class="k">def</span> <span class="nf">most_proud</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">return the most proud largest integer less than k</span><span class="sh">"""</span>
+     <span class="k">return</span> <span class="nf">proc</span><span class="p">({</span><span class="sh">'</span><span class="s">n</span><span class="sh">'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="sh">'</span><span class="s">maxpride</span><span class="sh">'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="sh">'</span><span class="s">maxn</span><span class="sh">'</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span>
+                 <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">n</span><span class="sh">'</span><span class="p">]</span><span class="o">&lt;</span><span class="n">k</span><span class="p">,</span>
+                 <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="p">{</span><span class="sh">'</span><span class="s">n</span><span class="sh">'</span><span class="p">:</span> <span class="p">(</span><span class="n">newn</span> <span class="p">:</span><span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">n</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)}</span><span class="o">|</span>
+                           <span class="p">({</span><span class="sh">'</span><span class="s">maxpride</span><span class="sh">'</span><span class="p">:</span> <span class="n">newpride</span><span class="p">,</span> <span class="sh">'</span><span class="s">maxn</span><span class="sh">'</span><span class="p">:</span> <span class="n">newn</span><span class="p">}</span>
+                            <span class="nf">if </span><span class="p">(</span><span class="n">newpride</span> <span class="p">:</span><span class="o">=</span> <span class="nf">pride</span><span class="p">(</span><span class="n">newn</span><span class="p">))</span> <span class="o">&gt;</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">maxpride</span><span class="sh">'</span><span class="p">]</span>
+                            <span class="k">else</span> <span class="n">s</span><span class="o">|</span><span class="p">{</span><span class="sh">'</span><span class="s">n</span><span class="sh">'</span><span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">n</span><span class="sh">'</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">}))</span>
+</code></pre></div>      </div>
+
+      <p>Alternative definitions of <code class="language-plaintext highlighter-rouge">pride</code>:</p>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">pride</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="nf">sum</span><span class="p">([</span><span class="nf">int</span><span class="p">(</span><span class="nf">happy</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nf">collatz_sequence</span><span class="p">(</span><span class="n">n</span><span class="p">)])</span>
+</code></pre></div>      </div>
+
+      <p>or</p>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">from</span> <span class="n">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+ <span class="n">pride</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="nf">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">acc</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">acc</span> <span class="o">+</span> <span class="nf">int</span><span class="p">(</span><span class="nf">happy</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span>
+                          <span class="nf">collatz_sequence</span><span class="p">(</span><span class="n">n</span><span class="p">),</span>
+                          <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>      </div>
+    </details>
+  </li>
+  <li>
+    <p>Define a function <code class="language-plaintext highlighter-rouge">bonacci(n, k)</code> that computes the <code class="language-plaintext highlighter-rouge">n</code>th <code class="language-plaintext highlighter-rouge">k</code>-bonacci number. The <code class="language-plaintext highlighter-rouge">k</code>-bonacci numbers are defined as follows:</p>
+
+\[B(n, k) =
+\begin{cases}
+0 &amp; \text{if } n &lt; k - 1, \\
+1 &amp; \text{if } n = k - 1, \\
+\sum_{i=1}^{k} B(n - i, k) &amp; \text{if } n \geq k.
+\end{cases}\]
+
+    <p>For example, the Fibonacci numbers are the 2-bonacci numbers.</p>
+
+    <details>
+      <summary>Criteria and hints</summary>
+
+      <ul>
+        <li>You can also solve by <code class="language-plaintext highlighter-rouge">while</code> but make sure you can also solve with  <code class="language-plaintext highlighter-rouge">proc_seq</code> or <code class="language-plaintext highlighter-rouge">proc</code> from <a href="/code/python/modules/funcutils/">funcutils</a>.</li>
+        <li>Use a <code class="language-plaintext highlighter-rouge">tuple</code> (or <code class="language-plaintext highlighter-rouge">list</code>) as memory.</li>
+        <li>You need to figure out how to construct your memory. The following “trick” is not allowed:
+          <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span><span class="o">*</span><span class="mi">5</span>  <span class="c1"># a tuple of five 1s
+</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+ <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>          </div>
+        </li>
+        <li>Do NOT use built-in <code class="language-plaintext highlighter-rouge">sum</code>, unless you solved <a href="/exercises/sequence-operations/#ref:sum">this</a>.</li>
+        <li>Use slicing and concatenation (<code class="language-plaintext highlighter-rouge">+</code>) to manipulate memory. Slicing:
+          <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># all but the first element
+</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># all but the last element
+</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># elements at index 1 and 2
+</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>          </div>
+        </li>
+      </ul>
+    </details>
+  </li>
+  <li>
+    <p>For integers \(n,m &gt; 1\) and \(m\neq n\), we say ‘\(n\) <strong>governs</strong> \(m\)’ iff \(m\) is in the Collatz sequence seeded by \(n\). Define a function <code class="language-plaintext highlighter-rouge">governors</code> that maps <code class="language-plaintext highlighter-rouge">n</code> and <code class="language-plaintext highlighter-rouge">k</code> to the list of governors of \(n\) that are less than <code class="language-plaintext highlighter-rouge">k</code>.</p>
+
+    <details>
+      <summary>Solution</summary>
+
+      <p>I provide only the comprehension based solution here, which is almost plain English. I also wanted to show how to have docstrings for <code class="language-plaintext highlighter-rouge">lambda</code> expression. But note that it is not good style to use <code class="language-plaintext highlighter-rouge">lambda</code> to define named functions with docstrings. The only reason to use <code class="language-plaintext highlighter-rouge">lambda</code> for such functions is to make sure you are writing a expression-based function without statements.</p>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">governors</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="p">[</span><span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="nf">collatz_sequence</span><span class="p">(</span><span class="n">m</span><span class="p">)]</span>
+ <span class="n">governors</span><span class="p">.</span><span class="n">__doc__</span><span class="o">=</span> <span class="sh">"""</span><span class="s">return list of m&lt;k s.t. n is in m</span><span class="sh">'</span><span class="s">s Collatz sequence</span><span class="sh">"""</span>
+</code></pre></div>      </div>
+    </details>
+  </li>
+  <li>
+    <p>Define <code class="language-plaintext highlighter-rouge">mutual_government(k)</code> that returns all pairs of integers \((m,n)\) with \(m,n &lt; k\) such that \(m\) governs \(n\) and \(n\) governs \(m\).</p>
+
+    <details>
+      <summary>Solution</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">mutual_government</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="p">[]</span>
+</code></pre></div>      </div>
+
+      <p>No need to bother for a program here, as mutual government is mathematically impossible. Why?</p>
+
+      <p>But taken as a programming exercise, mutual government can be computed by:</p>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">governs</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="n">m</span><span class="o">!=</span><span class="n">n</span>  <span class="ow">and</span> <span class="n">n</span> <span class="ow">in</span> <span class="nf">collatz_sequence</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+ <span class="n">mutual_government</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="p">[(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+                                <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
+                                <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
+                                <span class="k">if</span>  <span class="nf">governs</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="ow">and</span> <span class="nf">governs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">)]</span>
+</code></pre></div>      </div>
+    </details>
+  </li>
+  <li>
+    <p>Given integers \(n,m\) with \(n,m &gt;1\) and \(n\neq m\), \(n\) is an <strong>observer</strong> for \(m\), iff \(n\) divides the sum of the numbers in the Collatz sequence seeded by \(m\). An <strong>observer</strong> \(n\) of \(m\) is an <strong>external observer</strong> if \(n\) is not in the Collatz sequence seeded by \(m\). An <strong>observer</strong> \(n\) of \(m\) is said to be <strong>proper</strong> if \(n &lt; m\).</p>
+
+    <p>Define a function <code class="language-plaintext highlighter-rouge">observers(n, external=False, proper=False, prime=False)</code> that returns the list of observers of \(n\) with the given properties. The parameters <code class="language-plaintext highlighter-rouge">external</code>, <code class="language-plaintext highlighter-rouge">proper</code>, and <code class="language-plaintext highlighter-rouge">prime</code> are boolean flags that indicate which type of observers the caller is interested in.</p>
+
+    <details>
+      <summary>Solutions</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">observers</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">external</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">proper</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">prime</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">Return the list of observers of n</span><span class="sh">"""</span>
+     <span class="kn">from</span> <span class="n">collatz</span> <span class="kn">import</span> <span class="n">collatz_sequence</span>
+     <span class="n">divides</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">:</span> <span class="n">b</span> <span class="o">%</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span>
+     <span class="n">colseq</span> <span class="o">=</span> <span class="nf">collatz_sequence</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+     <span class="n">sumcolseq</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">colseq</span><span class="p">)</span>
+     <span class="k">return</span> <span class="p">[</span><span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+             <span class="k">if</span> <span class="nf">divides</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">sumcolseq</span><span class="p">)</span>
+                <span class="ow">and</span>
+                <span class="p">(</span><span class="ow">not</span> <span class="n">external</span> <span class="ow">or</span> <span class="n">m</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">colseq</span><span class="p">)</span>
+                <span class="ow">and</span>
+                <span class="p">(</span><span class="ow">not</span> <span class="n">proper</span> <span class="ow">or</span> <span class="n">m</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>
+                <span class="ow">and</span>
+                <span class="p">(</span><span class="ow">not</span> <span class="n">prime</span> <span class="ow">or</span> <span class="nf">isprime</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+            <span class="p">]</span>
+</code></pre></div>      </div>
+
+    </details>
+  </li>
+</ol>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>The factorial function is usually written as \(n!\) instead of the standard \(f(n)\) syntax. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#iteration"
+         class="page__taxonomy-item p-category" rel="tag">
+        iteration <span class="taxonomy__count">3</span>
+      </a>
+    
+      
+      
+      <a href="/tags/#programming"
+         class="page__taxonomy-item p-category" rel="tag">
+        programming <span class="taxonomy__count">5</span>
+      </a>
+    
+      
+      
+      <a href="/tags/#python"
+         class="page__taxonomy-item p-category" rel="tag">
+        python <span class="taxonomy__count">6</span>
+      </a>
+    
+    </span>
+  </p>
+
+
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-02-13T15:40:51+03:00">2026-02-13</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/exercises/higher-order-functions/" class="pagination--pager" title="Higher-order functions">Previous</a>
+    
+    
+      <a href="/exercises/linalg/" class="pagination--pager" title="Linear Algebra">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://umutozge.github.io">Umut Özge</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
