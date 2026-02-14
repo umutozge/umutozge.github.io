@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-02-14T17:30:15+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.</subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-02-14T00:00:00+03:00</published><updated>2026-02-14T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-02-14T17:38:17+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.</subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-02-14T00:00:00+03:00</published><updated>2026-02-14T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
 
-  <p>Linguistics is too complicated to introduce a newcomer to the study of
+  <p>Linguistics too complicated to introduce a newcomer to the study of
 language in cognitive science. This is a very brief initiator that skips
 linguistics as much as possible.</p>
 
@@ -56,13 +56,15 @@ whether it is well-formed or not.</p>
 <em>mean</em>? Or, can you say what they are <em>about</em>? Or, can you say what they are
 <em>for</em>?</p>
 
-  <p>They are theorems of binary addition of non-equal non-negative integers.</p>
+  <p>They are theorems of binary addition of non-equal non-negative integers. Their
+<em>meaning</em> is this.</p>
 
   <h2 id="levels-of-analysis">Levels of analysis</h2>
 
-  <p>Language is studied in levels of analysis. The study of the indivisible building
-blocks of language is called <strong>phonology</strong>. The alphabet  analogy would be a
-little misleading here, because the building blocks of language are not the
+  <p>Language is studied in levels of analysis. The study of the atomic building
+blocks of language and how they combine into more complex structures is called
+<strong>phonology</strong>. The alphabet analogy, although the best we can do, would be a little
+misleading here, because the building blocks of language are not the
 orthographic symbols, but the <strong>phonemes</strong>, the smallest units of sound that can
 distinguish meaning in a language.</p>
 

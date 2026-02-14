@@ -162,7 +162,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Language primer",
-        "excerpt":"Linguistics is too complicated to introduce a newcomer to the study of language in cognitive science. This is a very brief initiator that skips linguistics as much as possible. A simple formal system Douglas Hofstadter1 has this tiny formal system called pq-System. In defining formal systems, we start with a...","categories": ["course"],
+        "excerpt":"Linguistics too complicated to introduce a newcomer to the study of language in cognitive science. This is a very brief initiator that skips linguistics as much as possible. A simple formal system Douglas Hofstadter1 has this tiny formal system called pq-System. In defining formal systems, we start with a set...","categories": ["course"],
         "tags": ["language"],
         "url": "/posts/course/language-primer/",
         "teaser": null
