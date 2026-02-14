@@ -5379,6 +5379,10 @@ body.layout--home .entries-grid .archive__item-excerpt {
 }
 
 .numbered > .item {
+  font-size: 0.8rem;
+}
+
+.numbered > .item {
   counter-increment: item;
   /*  padding: 0.5rem; */
   margin: 0.5rem 0.5rem 1.5rem 0rem;
@@ -5390,7 +5394,7 @@ body.layout--home .entries-grid .archive__item-excerpt {
 .numbered > .item::before {
   content: attr(data-label) " " counter(item) ": " attr(data-title) " ";
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 /* Optional per-kind theming later */
@@ -5399,7 +5403,7 @@ body.layout--home .entries-grid .archive__item-excerpt {
 }
 
 .course-card {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .item {

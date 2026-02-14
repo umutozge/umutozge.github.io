@@ -155,6 +155,18 @@ var store = [{
         "url": "/posts/course/more-state-power/",
         "teaser": null
       },{
+        "title": "Assignment in lambda expressions",
+        "excerpt":"We closed the post More state power with a function that collects n random numbers between start and end into a list. Here is the function again: def n_uniq_random(n, start, end): \"\"\"Return a list of n unique random numbers between start and end. \"\"\" from random import randint from funcutils...","categories": ["course"],
+        "tags": ["programming","functional programming","cogs501","lambda"],
+        "url": "/posts/course/walrus-operator/",
+        "teaser": null
+      },{
+        "title": "Language primer",
+        "excerpt":"Linguistics is too complicated to introduce a newcomer to the study of language in cognitive science. This is a very brief initiator that skips linguistics as much as possible. A simple formal system Douglas Hofstadter1 has this tiny formal system called pq-System. In defining formal systems, we start with a...","categories": ["course"],
+        "tags": ["language"],
+        "url": "/posts/course/language-primer/",
+        "teaser": null
+      },{
     "title": "Page Not Found",
     "excerpt":"Sorry, but the page you were trying to view does not exist.  ","url": "https://umutozge.github.io/404.html"
   },{
@@ -183,10 +195,10 @@ var store = [{
     "excerpt":"Spring 2026 Umut Özge (✉️), Anıl Öğdül (TA, ✉️) 🕐 W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. ✳️ marks optional material. Week Content 1&nbsp;(18/2) Why logic is still relevant for cognitive science and AI...","url": "https://umutozge.github.io/courses/lccm/schedule/"
   },{
     "title": "COGS 543",
-    "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(18/2) Course introduction; a place...","url": "https://umutozge.github.io/cl/schedule/"
+    "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass %} to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(18/2) Course introduction; general...","url": "https://umutozge.github.io/cl/schedule/"
   },{
     "title": "COGS 502",
-    "excerpt":"Spring 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ T 2:40-5:30, II03 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(19/2) Basic notions in probability...","url": "https://umutozge.github.io/prelim/schedule/"
+    "excerpt":"Spring 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ T 2:40-5:30, II03 Check the current syllabus for course information and policies. Make sure you are on odtuclass %} to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(19/2) Basic notions in...","url": "https://umutozge.github.io/prelim/schedule/"
   },{
     "title": "COGS 543 Computational Semantics",
     "excerpt":"Course information The course is an introduction to computational approaches to representing and processing meaning in natural language. The course takes a scientific perspective on the subject and focuses on interpretable models that potentially have cognitive plausiblity. If you are interested rather in the engineering field of NLP and state-of-the-art...","url": "https://umutozge.github.io/cl/syllabus/"
@@ -202,6 +214,12 @@ var store = [{
   },{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
+  },{
+    "title": "Linguistic Fundamentals for Natural Language Processing",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/bender-fundamentals/"
+  },{
+    "title": "The softmax function: Properties, motivation, and interpretation",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/softmax/"
   },{
     "title": "SEP: Computational Linguistics",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/stanford-cl/"

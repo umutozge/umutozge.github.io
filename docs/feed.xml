@@ -1,4 +1,394 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-02-13T15:45:26+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.</subtitle><entry><title type="html">More state power</title><link href="https://umutozge.github.io/posts/course/more-state-power/" rel="alternate" type="text/html" title="More state power" /><published>2025-12-20T00:00:00+03:00</published><updated>2025-12-20T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/more-state-power</id><content type="html" xml:base="https://umutozge.github.io/posts/course/more-state-power/"><![CDATA[<p class="notice--warning"><strong>Prerequisites:</strong> <a href="/posts/course/state-power/">The power of the state</a> and <a href="/posts/course/way-of-lambda/">The way of lambda</a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-02-14T17:30:15+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.</subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-02-14T00:00:00+03:00</published><updated>2026-02-14T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
+
+  <p>Linguistics is too complicated to introduce a newcomer to the study of
+language in cognitive science. This is a very brief initiator that skips
+linguistics as much as possible.</p>
+
+  <h2 id="a-simple-formal-system">A simple formal system</h2>
+
+  <p>Douglas Hofstadter<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> has this tiny formal system called <code class="language-plaintext highlighter-rouge">pq-System</code>. In
+defining formal systems, we start with a set of symbols, called <strong>the
+alphabet</strong>. This dictates that any expression of the system must be made by
+bringing together, in some order, one or more of these symbols. Next, and the
+last, step is to define which expressions formed out of these symbols are
+<strong>well-formed</strong> in the system.</p>
+
+  <p>This well-formedness step comes in two sub-steps.</p>
+
+  <ol>
+    <li>First we define the <strong>axioms</strong>, those expressions that we take to be
+well-formed without any further justification.</li>
+    <li>Second is <strong>the rules of production</strong> that allow us to generate new
+well-formed expressions from already existing well-formed expressions.</li>
+  </ol>
+
+  <p>In <code class="language-plaintext highlighter-rouge">pq-System</code>, the alphabet consists of the following three symbols: <code class="language-plaintext highlighter-rouge">p</code>, <code class="language-plaintext highlighter-rouge">q</code>, and <code class="language-plaintext highlighter-rouge">-</code>.</p>
+
+  <p>We have infinitely many axioms in <code class="language-plaintext highlighter-rouge">pq-System</code>, therefore we cannot list them
+all. Instead, we provide a rule that generates all of the axioms, usually called
+an <strong>axiom schema</strong>.</p>
+
+  <div class="item" id="def:pq-axioms" data-kind="definition" data-label="Definition" data-title="Axioms of `pq-System`">
+
+    <p>\(x\vect{p}\text{-}\vect{q}x\text{-}\) is an axiom, whenever \(x\) is composed of only ‘\(\text{-}\)’s.</p>
+
+  </div>
+
+  <p>Given this, you should be able to verify that
+\(\text{-}\text{-}\vect{p}\text{-}\vect{q}\text{-}\text{-}\text{-}\) is an axiom
+of the system (=a well-formed expression).</p>
+
+  <p>There is only one rule of production:</p>
+
+  <div class="item" id="def:pq-production" data-kind="definition" data-label="Definition" data-title="Productions of `pq-System`">
+
+    <p>If \(x\vect{p}y\vect{q}z\) is a well-formed expression, then so
+ is \(x\vect{p}y\text{-}\vect{q}z\text{-}\).</p>
+
+  </div>
+
+  <p>Now. think of a <strong>decision procedure</strong> that takes an expression and decides
+whether it is well-formed or not.</p>
+
+  <hr class="topic-separator" />
+
+  <p>Inspecting the well-formed expressions of <code class="language-plaintext highlighter-rouge">pq-System</code>, can you see what do they
+<em>mean</em>? Or, can you say what they are <em>about</em>? Or, can you say what they are
+<em>for</em>?</p>
+
+  <p>They are theorems of binary addition of non-equal non-negative integers.</p>
+
+  <h2 id="levels-of-analysis">Levels of analysis</h2>
+
+  <p>Language is studied in levels of analysis. The study of the indivisible building
+blocks of language is called <strong>phonology</strong>. The alphabet  analogy would be a
+little misleading here, because the building blocks of language are not the
+orthographic symbols, but the <strong>phonemes</strong>, the smallest units of sound that can
+distinguish meaning in a language.</p>
+
+  <p>The study of the properties of well-formed expressions is called
+<strong>morphosytax</strong>. As you observed above, this can be studied without any
+reference to meaning or significance in any form.</p>
+
+  <p>The study of the meaning of expressions is called <strong>semantics</strong>. And again as
+you saw above, what we mean by “meaning” is not obvious at all. What sort of a
+relation is it? Correspondence, aboutness, use (procedural)? If it’s a
+correspondence, what is the nature of the entities that are related? Are they
+mental, neural, abstract? All these, and many more, are part of the game in the
+study of natural language meaning.</p>
+
+  <p>The last level that is interest to cognitive science is <strong>pragmatics</strong>, the
+study of how language is used in context. The boundary between semantics and
+pragmatics is not clear, and there are many different views on how to draw it.
+As we go along, we will see that there might not be much value in drawing such
+a boundary. Perhaps some boundaries are more useful when they are left fuzzy.</p>
+
+  <p>In studying language from a cognitive science perspective, studying morphosyntax
+on its own does not make much sense.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> The relevant field of inquiry is rather
+the study of the relation between morphosyntax on one hand, and semantics and
+pragmatics on the other. Let’s call this domain “semantax” for the sake of
+having a name for it.<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
+
+  <h2 id="grammar">Grammar</h2>
+
+  <p>The most important aspects of human language for our purposes are:</p>
+
+  <ol>
+    <li><strong>Compositionality:</strong> “The meaning of a compound expression is a function of
+the meanings of its parts and of the way they are syntactically
+combined.”<sup id="fnref:partee"><a href="#fn:partee" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> This is usually cited as <strong>Frege’s principle</strong>. Fodor and
+Lepore has a nice way to put it: You cannot understand <em>John loves Mary</em>
+without also understanding <em>Mary loves John</em>.</li>
+    <li><strong>Recursion:</strong> In principle, there is no end to the expressions that can be generated
+   in a language. This is due to the fact that expressions of a given type
+   can be (directly or indirectly) inserted in expressions of the same type.</li>
+    <li>
+      <p><strong>Structure dependence:</strong> For physical constraints, language is produced in a
+linear fashion (you can speak one word at a time). But the meaning is “read
+off” from the hierarchical structure. A necessary consequence of this is that
+items that are related at the meaning level may find themselves fallen apart
+on the actual acoustic/visual signal. Take:</p>
+
+\[\text{I saw the man with the telescope.}\]
+
+      <p>The sentence can mean two different things: (1) the speaker has the telescope, or (2)
+the man has the telescope. The two meanings are determined by the hierarchical
+structure of the expression: in (2) <code class="language-plaintext highlighter-rouge">the telescope</code> is
+attached to <code class="language-plaintext highlighter-rouge">the man</code>, in (1), to <code class="language-plaintext highlighter-rouge">saw</code>.</p>
+    </li>
+  </ol>
+
+  <p>In a very broad sense, a <strong>grammar</strong> regulates the correspondence between form
+and meaning in a way that manifests the three properties above.</p>
+
+  <p>When we talk about <strong>syntactic structure</strong>, we mean a particular organisation of
+the components of an expression. For instance the two meanings of the telescope
+sentence are related to the following (fairly simplified) structures:</p>
+
+\[\begin{align}
+   \text{[I [saw [the man [with the telescope]]]]} \\
+   \text{[I [[saw [the man]] [with the telescope]]]} \\
+\end{align}\]
+
+  <p>Another way of thinking about structure, which is more transparent to semantics,
+is to think of it as a particular organization of operators and arguments, much
+like we do in arithmetic.</p>
+
+\[((3 + 4) \times 5)\]
+
+  <p>When we go from the linear string of symbols \(((3 + 4) \times 5)\) to its
+meaning, which is the value of the expression (=35), we work out the structure
+of the expression in such a way that the <strong>operator</strong> +  is applied to its
+<strong>arguments</strong> 3 and 4, and then the operator \(\times\) is applied to its
+arguments, which are the value of the first operator (recursion!) and 5.</p>
+
+  <p>Similarly, for the telescope example, in one reading the operator <em>saw</em> takes as
+arguments the subject <em>I</em> and the object <em>the man with the telescope</em>; and in
+the other reading, the operator <em>saw</em> takes as its object argument the noun
+phrase <em>the man</em>, rather than the entire phrase <em>the man with the telescope</em>;
+and this time the operator <em>with</em> takes as arguments the noun <em>the telescope</em>
+and the verb phrase <em>saw the man</em> as arguments.<sup id="fnref:ser"><a href="#fn:ser" class="footnote" rel="footnote" role="doc-noteref">5</a></sup></p>
+
+  <h2 id="objects-of-inquiry">Objects of inquiry</h2>
+
+  <p>The grammar is studied mainly around the following
+questions:</p>
+
+  <ol>
+    <li>How do we understand and produce language?</li>
+    <li>How do we acquire the capacity to do so?</li>
+    <li>How is our language capacity related to other cognitive capacities, such as
+perception, planning, reasoning, etc.?</li>
+    <li>How do the above questions relate to our neural architecture?</li>
+  </ol>
+
+  <p>At this point, keep in mind that I am using the notion of grammar in a fairly
+broad sense. I especially don’t want to mean a system of explicit rules like a
+Phrase Structure Grammar or any algorithmic mechanism like a parser.</p>
+
+  <h2 id="cognitive-science">Cognitive science</h2>
+
+  <p>The above questions are studied in several fields. What distinguishes cognitive
+science from fields like psychology and linguistics is its emphasis on the
+computational modeling of the phenomena. Cognitive science, at least in how we
+take it to mean in our institute, takes the mind to be an information processing
+system, and therefore the best way to understand it is by building computational
+models of the phenomena we are interested in, be it a processing question or a
+learning question.</p>
+
+  <h2 id="where-to-start-reading">Where to start reading</h2>
+
+  <p>The best place to start, in my opinion, is <a href="/p/chomsky-ss/" target="_blank" rel="noopener">Chomsky (1957)</a><span aria-hidden="true">(first 6 chapters)</span>.</p>
+
+  <p>As you will see, Chomsky has a very low opinion on the relevance of probability,
+statistics and information theory to the study of language. He appears to have
+kept this attitude in the rest of his career, and the attitude is still widely
+held in mainstream linguistics. But in cognitive science, the debate is almost
+never on <em>whether</em> but <em>how</em> these fields are relevant for language.</p>
+
+  <p>An advanced but a good reading on the relevance of information theory to the study of language is
+<a href="/p/pereira/" target="_blank" rel="noopener">Pereira (2000)</a>. Have a shallow
+first pass, to come back to it later.</p>
+
+  <p>The fields of probability, statistics and information theory
+lie at the heart of
+machine learning and artificial intelligence, and by this token, they also lie at
+the heart of engineering approaches to language, the field of Natural Language
+Processing (NLP).</p>
+
+  <p>People sometimes use the term <strong>computational linguistics</strong> to differentiate the
+scientific study of language through computational modeling from the engineering
+field of NLP. But be warned that this is not a well-established terminology. See
+<a href="/p/stanford-cl/" target="_blank" rel="noopener">Schubert (2020)</a><span aria-hidden="true">(1-4)</span> for a balanced view.</p>
+
+  <p>Leaving “how to call what” aside, there is an important distinction between NLP
+and the cognitive science of language. Both fields aim to build computational
+models of various aspects of language capacity, but the nature of the models
+they build differs. A good terminology for this distinction is that of <a href="/p/softmax/" target="_blank" rel="noopener">Frank and Degen (2023)</a>’s <strong>input-output models</strong> vs <strong>internally
+meaningful models</strong>. The aim of science is not mere prediction but also
+explanation, so when our models predict a behavior correctly/wrongly we would
+want to understand why. <a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a> gives a broader view
+of this distinction in cognitive science.</p>
+
+  <p>Whenever you get stuck with a linguistics concept or term, consult <a href="/p/bender-fundamentals/" target="_blank" rel="noopener">Bender (2022)</a>. This will work fine as a practical
+reference book until you develop a more serious interest in linguistics and/or go on
+with language research.</p>
+
+</div>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Douglas Hofstadter, <em>Gödel, Escher, Bach: An Eternal Golden Braid</em> (Basic Books, 1979), Ch. 2. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>The same does not apply to phonology, which is a very interesting field of study from a cognitive science perspective on its own. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>John R. Ross offered the term “semantax”, but it seems it did not get caught on. Mark Steedman has a project named such, though. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:partee">
+      <p>Barbara Partee, “Compositionality”, in <em>Varieties of Formal Semantics</em>, 1984. <a href="#fnref:partee" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:ser">
+      <p>I am wildly simplifying for the sake of discussion. <a href="#fnref:ser" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="course" /><category term="language" /><summary type="html"><![CDATA[Initial steps for cognitive science students.]]></summary></entry><entry><title type="html">Assignment in lambda expressions</title><link href="https://umutozge.github.io/posts/course/walrus-operator/" rel="alternate" type="text/html" title="Assignment in lambda expressions" /><published>2026-02-12T00:00:00+03:00</published><updated>2026-02-12T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/walrus-operator</id><content type="html" xml:base="https://umutozge.github.io/posts/course/walrus-operator/"><![CDATA[<p>We closed the post <a href="/posts/course/more-state-power/">More state power</a> with a function that collects <code class="language-plaintext highlighter-rouge">n</code> random numbers between <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code> into a list. Here is the function again:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">n_uniq_random</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Return a list of n unique random numbers between start and end. </span><span class="sh">"""</span>
+
+    <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+    <span class="kn">from</span> <span class="n">funcutils</span> <span class="kn">import</span> <span class="n">proc</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]:</span>
+            <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span>
+            <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">s</span>
+
+    <span class="k">return</span> <span class="nf">proc</span><span class="p">(</span><span class="n">state</span><span class="o">=</span><span class="p">{</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">:</span> <span class="p">[],</span> <span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+                <span class="n">alive</span><span class="o">=</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">,</span>
+                <span class="n">update</span><span class="o">=</span><span class="n">update</span>
+                <span class="p">)[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>If we wanted to send our <code class="language-plaintext highlighter-rouge">update</code> functions as a lambda expression, this would have been impossile because our function is full of assignments. One for the random number <code class="language-plaintext highlighter-rouge">x</code>, and two for updating the dictionary <code class="language-plaintext highlighter-rouge">s</code>. The <code class="language-plaintext highlighter-rouge">if</code> statement is also a problem, and we cannot turn it into an expression <code class="language-plaintext highlighter-rouge">if</code> since its arguments are assignments, not expressions.</p>
+
+<p>Actually, dictionary key assignment is not a problem, because it is totally unnecessary. You can get rid of it by:<sup id="fnref:wrap"><a href="#fn:wrap" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">],</span>
+                <span class="sh">'</span><span class="s">count</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">s</span>
+</code></pre></div></div>
+
+<p>Once you get rid of assignments inside the <code class="language-plaintext highlighter-rouge">if</code> statement, you can turn the <code class="language-plaintext highlighter-rouge">if</code> into an expression:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+    <span class="nf">return </span><span class="p">({</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="sh">'</span><span class="s">count</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span>
+            <span class="k">else</span> <span class="n">s</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>In this solution you have to re-write the dictionary <code class="language-plaintext highlighter-rouge">s</code> you received as argument. It is fine for this case but this may be inefficient especially in cases where you have many keys in the state dictionary and you update only one or two of them. You will then have to write the whole dictionary again. Furthermore, imagine you have 3 conditions according to which you change a different key in the dictionary. You will then have to write the whole dictionary 3 times, once for each condition. This is tedious and, more importantly, error-prone.</p>
+
+<p>Actually you do not have to write the entire dictionary. We can use the dictionary merging operator ‘<code class="language-plaintext highlighter-rouge">|</code>’ to create a new dictionary with the updated values instead of modifying the existing one in place. Here is how merge works:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span>
+<span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>  <span class="c1"># new dictionary with 'b' mapped to 5
+</span><span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="c1"># original dictionary remains unchanged
+</span><span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">d</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span><span class="mi">9</span><span class="p">}</span>  <span class="c1"># multiple changes in a single stroke 
+</span><span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="sh">'</span><span class="s">d</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">3</span><span class="p">}</span>  <span class="c1"># updating 'b' based on its previous value
+</span><span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="sh">'</span><span class="s">e</span><span class="sh">'</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>  <span class="c1"># updates and additions
+</span><span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="sh">'</span><span class="s">e</span><span class="sh">'</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>The update function above can be re-written, of course unnecessarily in this case, as:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+    <span class="nf">return </span><span class="p">(</span><span class="n">s</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="sh">'</span><span class="s">count</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span>
+            <span class="k">else</span> <span class="n">s</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This would work perfectly fine in a setting where there are other keys in your state dictionary which you want to leave untouched when updating <code class="language-plaintext highlighter-rouge">'uniq_nums'</code> and <code class="language-plaintext highlighter-rouge">'count'</code>.</p>
+
+<p>Having handled dictionary manipulation without using assignment, what do we now do with the variable assignment <code class="language-plaintext highlighter-rouge">x = randint(start, end)</code>? We simply cannot do:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="nf">return </span><span class="p">(</span><span class="n">s</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)],</span> 
+                 <span class="sh">'</span><span class="s">count</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+            <span class="k">if</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span>
+            <span class="k">else</span> <span class="n">s</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>since the two calls of <code class="language-plaintext highlighter-rouge">randint</code> will give different values. We need to store the value of <code class="language-plaintext highlighter-rouge">randint(start, end)</code> somewhere to use it twice.</p>
+
+<p>Let’s simplify the problem a little bit. Suppose we want to write a function that generates a random integer between 1 and 10, and returns it if it is even, otherwise returns -1. Using assignment, we can write:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="k">def</span> <span class="nf">random_even</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Pick a random integer between start and end, and return it if even or -1 if odd.</span><span class="sh">"""</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div></div>
+
+<p>If you want to write this as a lambda expression, we saw above that the following will not work:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="n">random_even</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="p">(</span><span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+                                  <span class="k">if</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+                                  <span class="k">else</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>as this picks two different random numbers, one used for evenness check and other as return value.</p>
+
+<p>As lambda expressions are expressions, it shouldn’t be hard to make sense of this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span><span class="p">))(</span><span class="mi">8</span><span class="p">)</span>
+<span class="mi">8</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span><span class="p">))(</span><span class="mi">7</span><span class="p">)</span>
+<span class="o">-</span><span class="mi">1</span>
+</code></pre></div></div>
+
+<p>Lambda expressions are simply names of functions, whenever you have a name <code class="language-plaintext highlighter-rouge">a</code> you can apply it to its argument <code class="language-plaintext highlighter-rouge">x</code> by <code class="language-plaintext highlighter-rouge">a(x)</code>. What we did above is exactly this.</p>
+
+<p>I guess this also makes sense:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span><span class="p">))(</span><span class="nf">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="c1"># some return value according to the result of randint(1,10)
+</span></code></pre></div></div>
+
+<p>I couldn’t write the return value as it is random. But we know that the value returned by <code class="language-plaintext highlighter-rouge">randint</code> will be bound to <code class="language-plaintext highlighter-rouge">x</code> and used both in the test and the success expression. With all this in place, here is our <code class="language-plaintext highlighter-rouge">random_even</code> function as a lambda expression:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">random_even</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span><span class="p">))(</span><span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>And, here is our <code class="language-plaintext highlighter-rouge">update</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">update</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span>
+                  <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span>  <span class="p">(</span><span class="n">s</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="sh">'</span><span class="s">count</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+                               <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span>
+                               <span class="k">else</span> <span class="n">s</span><span class="p">))(</span><span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Thankfully, the developers of Python have found a way to simplify this somewhat cumbersome syntax by introducing the “walrus operator” <code class="language-plaintext highlighter-rouge">:=</code>. Using this operator, you can perform assignments inside expressions. First, see it in action in <code class="language-plaintext highlighter-rouge">random_even</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">random_even</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="n">x</span> <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="p">:</span><span class="o">=</span> <span class="nf">random</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="p">))</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div></div>
+
+<p>And here is our final <code class="language-plaintext highlighter-rouge">update</code> function using the walrus operator:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">update</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="p">(</span><span class="n">s</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="sh">'</span><span class="s">count</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+            <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="p">:</span><span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="p">))</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span>
+            <span class="k">else</span> <span class="n">s</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The walrus operator is not restricted to lambda expressions, you can use it in regular function as well. We will make good use of it when we deal with comprehensions.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:wrap">
+      <p>From here on the code blocks of isolated <code class="language-plaintext highlighter-rouge">update</code> are meant to be placed inside <code class="language-plaintext highlighter-rouge">n_uniq_random</code> function. <a href="#fnref:wrap" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="course" /><category term="programming" /><category term="functional programming" /><category term="cogs501" /><category term="lambda" /><summary type="html"><![CDATA[We closed the post More state power with a function that collects n random numbers between start and end into a list. Here is the function again:]]></summary></entry><entry><title type="html">More state power</title><link href="https://umutozge.github.io/posts/course/more-state-power/" rel="alternate" type="text/html" title="More state power" /><published>2025-12-20T00:00:00+03:00</published><updated>2025-12-20T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/more-state-power</id><content type="html" xml:base="https://umutozge.github.io/posts/course/more-state-power/"><![CDATA[<p class="notice--warning"><strong>Prerequisites:</strong> <a href="/posts/course/state-power/">The power of the state</a> and <a href="/posts/course/way-of-lambda/">The way of lambda</a></p>
 
 <p>We fortified our <code class="language-plaintext highlighter-rouge">proc_seq</code> with tuples to keep track of multiple state variables.  We scan through a sequence of numbers that proceeds according to a given rule, keeping track of various properties of the sequence, like what is the largest number seen so far according to a given criterion, or what is the sum of all numbers seen so far. We are able to scan through the sequence in pairs, triples, or more, and can keep record of multiple properties of the sequence. We can add as many state variables as we want, but these variables can hold only single values.</p>
 

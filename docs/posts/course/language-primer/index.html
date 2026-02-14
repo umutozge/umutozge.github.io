@@ -1,0 +1,751 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Language primer - Umut Özge</title>
+<meta name="description" content="Initial steps for cognitive science students.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Umut Özge">
+<meta property="og:title" content="Language primer">
+<meta property="og:url" content="https://umutozge.github.io/posts/course/language-primer/">
+
+
+  <meta property="og:description" content="Initial steps for cognitive science students.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-02-14T00:00:00+03:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/posts/course/language-primer/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+<script type="text/javascript">
+  window.MathJax = {
+    loader: {load: ['[tex]/ams']},
+    tex: {
+      packages: {'[+]': ['ams']},
+      tags: 'all',
+      macros: {
+        vectg: ["\\boldsymbol{#1}", 1],
+        vect: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      }
+    },
+    options: {
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<!-- MathJax configuration for automatic equation numbering 
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      packages: ['base','ams'],
+      tags: 'all',
+      macros: {
+        vect: ["\\boldsymbol{#1}", 1],
+        vv: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      },
+    },
+    options: {
+      // Optional: Ensure equation numbers are on the right
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+-->
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Umut Özge
+          <span class="site-subtitle">Graduate School of Informatics, Middle East Technical University</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Courses</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/prelim/schedule/">COGS 502</a></li>
+            
+              <li><a href="/cl/schedule/">COGS 543</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <a href="/exercise/browser/"><span class="nav__sub-title">Exercises</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
+          
+
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Language primer">
+    <meta itemprop="description" content="Initial steps for cognitive science students.">
+    <meta itemprop="datePublished" content="2026-02-14T00:00:00+03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://umutozge.github.io/posts/course/language-primer/" itemprop="url">Language primer
+</a>
+          </h1>
+          
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2026-02-14T00:00:00+03:00">2026-02-14</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="numbered">
+
+  <p>Linguistics is too complicated to introduce a newcomer to the study of
+language in cognitive science. This is a very brief initiator that skips
+linguistics as much as possible.</p>
+
+  <h2 id="a-simple-formal-system">A simple formal system</h2>
+
+  <p>Douglas Hofstadter<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> has this tiny formal system called <code class="language-plaintext highlighter-rouge">pq-System</code>. In
+defining formal systems, we start with a set of symbols, called <strong>the
+alphabet</strong>. This dictates that any expression of the system must be made by
+bringing together, in some order, one or more of these symbols. Next, and the
+last, step is to define which expressions formed out of these symbols are
+<strong>well-formed</strong> in the system.</p>
+
+  <p>This well-formedness step comes in two sub-steps.</p>
+
+  <ol>
+    <li>First we define the <strong>axioms</strong>, those expressions that we take to be
+well-formed without any further justification.</li>
+    <li>Second is <strong>the rules of production</strong> that allow us to generate new
+well-formed expressions from already existing well-formed expressions.</li>
+  </ol>
+
+  <p>In <code class="language-plaintext highlighter-rouge">pq-System</code>, the alphabet consists of the following three symbols: <code class="language-plaintext highlighter-rouge">p</code>, <code class="language-plaintext highlighter-rouge">q</code>, and <code class="language-plaintext highlighter-rouge">-</code>.</p>
+
+  <p>We have infinitely many axioms in <code class="language-plaintext highlighter-rouge">pq-System</code>, therefore we cannot list them
+all. Instead, we provide a rule that generates all of the axioms, usually called
+an <strong>axiom schema</strong>.</p>
+
+  <div class="item" id="def:pq-axioms" data-kind="definition" data-label="Definition" data-title="Axioms of `pq-System`">
+
+    <p>\(x\vect{p}\text{-}\vect{q}x\text{-}\) is an axiom, whenever \(x\) is composed of only ‘\(\text{-}\)’s.</p>
+
+  </div>
+
+  <p>Given this, you should be able to verify that
+\(\text{-}\text{-}\vect{p}\text{-}\vect{q}\text{-}\text{-}\text{-}\) is an axiom
+of the system (=a well-formed expression).</p>
+
+  <p>There is only one rule of production:</p>
+
+  <div class="item" id="def:pq-production" data-kind="definition" data-label="Definition" data-title="Productions of `pq-System`">
+
+    <p>If \(x\vect{p}y\vect{q}z\) is a well-formed expression, then so
+ is \(x\vect{p}y\text{-}\vect{q}z\text{-}\).</p>
+
+  </div>
+
+  <p>Now. think of a <strong>decision procedure</strong> that takes an expression and decides
+whether it is well-formed or not.</p>
+
+  <hr class="topic-separator" />
+
+  <p>Inspecting the well-formed expressions of <code class="language-plaintext highlighter-rouge">pq-System</code>, can you see what do they
+<em>mean</em>? Or, can you say what they are <em>about</em>? Or, can you say what they are
+<em>for</em>?</p>
+
+  <p>They are theorems of binary addition of non-equal non-negative integers.</p>
+
+  <h2 id="levels-of-analysis">Levels of analysis</h2>
+
+  <p>Language is studied in levels of analysis. The study of the indivisible building
+blocks of language is called <strong>phonology</strong>. The alphabet  analogy would be a
+little misleading here, because the building blocks of language are not the
+orthographic symbols, but the <strong>phonemes</strong>, the smallest units of sound that can
+distinguish meaning in a language.</p>
+
+  <p>The study of the properties of well-formed expressions is called
+<strong>morphosytax</strong>. As you observed above, this can be studied without any
+reference to meaning or significance in any form.</p>
+
+  <p>The study of the meaning of expressions is called <strong>semantics</strong>. And again as
+you saw above, what we mean by “meaning” is not obvious at all. What sort of a
+relation is it? Correspondence, aboutness, use (procedural)? If it’s a
+correspondence, what is the nature of the entities that are related? Are they
+mental, neural, abstract? All these, and many more, are part of the game in the
+study of natural language meaning.</p>
+
+  <p>The last level that is interest to cognitive science is <strong>pragmatics</strong>, the
+study of how language is used in context. The boundary between semantics and
+pragmatics is not clear, and there are many different views on how to draw it.
+As we go along, we will see that there might not be much value in drawing such
+a boundary. Perhaps some boundaries are more useful when they are left fuzzy.</p>
+
+  <p>In studying language from a cognitive science perspective, studying morphosyntax
+on its own does not make much sense.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> The relevant field of inquiry is rather
+the study of the relation between morphosyntax on one hand, and semantics and
+pragmatics on the other. Let’s call this domain “semantax” for the sake of
+having a name for it.<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
+
+  <h2 id="grammar">Grammar</h2>
+
+  <p>The most important aspects of human language for our purposes are:</p>
+
+  <ol>
+    <li><strong>Compositionality:</strong> “The meaning of a compound expression is a function of
+the meanings of its parts and of the way they are syntactically
+combined.”<sup id="fnref:partee"><a href="#fn:partee" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> This is usually cited as <strong>Frege’s principle</strong>. Fodor and
+Lepore has a nice way to put it: You cannot understand <em>John loves Mary</em>
+without also understanding <em>Mary loves John</em>.</li>
+    <li><strong>Recursion:</strong> In principle, there is no end to the expressions that can be generated
+   in a language. This is due to the fact that expressions of a given type
+   can be (directly or indirectly) inserted in expressions of the same type.</li>
+    <li>
+      <p><strong>Structure dependence:</strong> For physical constraints, language is produced in a
+linear fashion (you can speak one word at a time). But the meaning is “read
+off” from the hierarchical structure. A necessary consequence of this is that
+items that are related at the meaning level may find themselves fallen apart
+on the actual acoustic/visual signal. Take:</p>
+
+\[\text{I saw the man with the telescope.}\]
+
+      <p>The sentence can mean two different things: (1) the speaker has the telescope, or (2)
+the man has the telescope. The two meanings are determined by the hierarchical
+structure of the expression: in (2) <code class="language-plaintext highlighter-rouge">the telescope</code> is
+attached to <code class="language-plaintext highlighter-rouge">the man</code>, in (1), to <code class="language-plaintext highlighter-rouge">saw</code>.</p>
+    </li>
+  </ol>
+
+  <p>In a very broad sense, a <strong>grammar</strong> regulates the correspondence between form
+and meaning in a way that manifests the three properties above.</p>
+
+  <p>When we talk about <strong>syntactic structure</strong>, we mean a particular organisation of
+the components of an expression. For instance the two meanings of the telescope
+sentence are related to the following (fairly simplified) structures:</p>
+
+\[\begin{align}
+   \text{[I [saw [the man [with the telescope]]]]} \\
+   \text{[I [[saw [the man]] [with the telescope]]]} \\
+\end{align}\]
+
+  <p>Another way of thinking about structure, which is more transparent to semantics,
+is to think of it as a particular organization of operators and arguments, much
+like we do in arithmetic.</p>
+
+\[((3 + 4) \times 5)\]
+
+  <p>When we go from the linear string of symbols \(((3 + 4) \times 5)\) to its
+meaning, which is the value of the expression (=35), we work out the structure
+of the expression in such a way that the <strong>operator</strong> +  is applied to its
+<strong>arguments</strong> 3 and 4, and then the operator \(\times\) is applied to its
+arguments, which are the value of the first operator (recursion!) and 5.</p>
+
+  <p>Similarly, for the telescope example, in one reading the operator <em>saw</em> takes as
+arguments the subject <em>I</em> and the object <em>the man with the telescope</em>; and in
+the other reading, the operator <em>saw</em> takes as its object argument the noun
+phrase <em>the man</em>, rather than the entire phrase <em>the man with the telescope</em>;
+and this time the operator <em>with</em> takes as arguments the noun <em>the telescope</em>
+and the verb phrase <em>saw the man</em> as arguments.<sup id="fnref:ser"><a href="#fn:ser" class="footnote" rel="footnote" role="doc-noteref">5</a></sup></p>
+
+  <h2 id="objects-of-inquiry">Objects of inquiry</h2>
+
+  <p>The grammar is studied mainly around the following
+questions:</p>
+
+  <ol>
+    <li>How do we understand and produce language?</li>
+    <li>How do we acquire the capacity to do so?</li>
+    <li>How is our language capacity related to other cognitive capacities, such as
+perception, planning, reasoning, etc.?</li>
+    <li>How do the above questions relate to our neural architecture?</li>
+  </ol>
+
+  <p>At this point, keep in mind that I am using the notion of grammar in a fairly
+broad sense. I especially don’t want to mean a system of explicit rules like a
+Phrase Structure Grammar or any algorithmic mechanism like a parser.</p>
+
+  <h2 id="cognitive-science">Cognitive science</h2>
+
+  <p>The above questions are studied in several fields. What distinguishes cognitive
+science from fields like psychology and linguistics is its emphasis on the
+computational modeling of the phenomena. Cognitive science, at least in how we
+take it to mean in our institute, takes the mind to be an information processing
+system, and therefore the best way to understand it is by building computational
+models of the phenomena we are interested in, be it a processing question or a
+learning question.</p>
+
+  <h2 id="where-to-start-reading">Where to start reading</h2>
+
+  <p>The best place to start, in my opinion, is <a href="/p/chomsky-ss/" target="_blank" rel="noopener">Chomsky (1957)</a><span aria-hidden="true">(first 6 chapters)</span>.</p>
+
+  <p>As you will see, Chomsky has a very low opinion on the relevance of probability,
+statistics and information theory to the study of language. He appears to have
+kept this attitude in the rest of his career, and the attitude is still widely
+held in mainstream linguistics. But in cognitive science, the debate is almost
+never on <em>whether</em> but <em>how</em> these fields are relevant for language.</p>
+
+  <p>An advanced but a good reading on the relevance of information theory to the study of language is
+<a href="/p/pereira/" target="_blank" rel="noopener">Pereira (2000)</a>. Have a shallow
+first pass, to come back to it later.</p>
+
+  <p>The fields of probability, statistics and information theory
+lie at the heart of
+machine learning and artificial intelligence, and by this token, they also lie at
+the heart of engineering approaches to language, the field of Natural Language
+Processing (NLP).</p>
+
+  <p>People sometimes use the term <strong>computational linguistics</strong> to differentiate the
+scientific study of language through computational modeling from the engineering
+field of NLP. But be warned that this is not a well-established terminology. See
+<a href="/p/stanford-cl/" target="_blank" rel="noopener">Schubert (2020)</a><span aria-hidden="true">(1-4)</span> for a balanced view.</p>
+
+  <p>Leaving “how to call what” aside, there is an important distinction between NLP
+and the cognitive science of language. Both fields aim to build computational
+models of various aspects of language capacity, but the nature of the models
+they build differs. A good terminology for this distinction is that of <a href="/p/softmax/" target="_blank" rel="noopener">Frank and Degen (2023)</a>’s <strong>input-output models</strong> vs <strong>internally
+meaningful models</strong>. The aim of science is not mere prediction but also
+explanation, so when our models predict a behavior correctly/wrongly we would
+want to understand why. <a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a> gives a broader view
+of this distinction in cognitive science.</p>
+
+  <p>Whenever you get stuck with a linguistics concept or term, consult <a href="/p/bender-fundamentals/" target="_blank" rel="noopener">Bender (2022)</a>. This will work fine as a practical
+reference book until you develop a more serious interest in linguistics and/or go on
+with language research.</p>
+
+</div>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Douglas Hofstadter, <em>Gödel, Escher, Bach: An Eternal Golden Braid</em> (Basic Books, 1979), Ch. 2. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>The same does not apply to phonology, which is a very interesting field of study from a cognitive science perspective on its own. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>John R. Ross offered the term “semantax”, but it seems it did not get caught on. Mark Steedman has a project named such, though. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:partee">
+      <p>Barbara Partee, “Compositionality”, in <em>Varieties of Formal Semantics</em>, 1984. <a href="#fnref:partee" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:ser">
+      <p>I am wildly simplifying for the sake of discussion. <a href="#fnref:ser" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#language"
+         class="page__taxonomy-item p-category" rel="tag">
+        language <span class="taxonomy__count">3</span>
+      </a>
+    
+    </span>
+  </p>
+
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#course" class="page__taxonomy-item p-category" rel="tag">course</a>
+    
+    </span>
+  </p>
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-02-14T00:00:00+03:00">2026-02-14</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/posts/course/walrus-operator/" class="pagination--pager" title="Assignment in lambda expressions">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item"
+     
+     
+    >
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/course/walrus-operator/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>Assignment in lambda expressions
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">We closed the post More state power with a function that collects n random numbers between start and end into a list. Here is the function again:
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item"
+     
+     
+    >
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/course/more-state-power/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>More state power
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">State unfied into a single parameter, dictionaries introduced.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item"
+     
+     
+    >
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/course/way-of-lambda/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>The way of lambda
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">An introduction to lambda expressions in Python and their use in (functional) programming.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item"
+     
+     
+    >
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/course/state-power/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>The power of the state
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">The notion of state and how to enhance its memory power by tuples.
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://umutozge.github.io">Umut Özge</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

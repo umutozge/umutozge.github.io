@@ -1,0 +1,692 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Assignment in lambda expressions - Umut Özge</title>
+<meta name="description" content="We closed the post More state power with a function that collects n random numbers between start and end into a list. Here is the function again:">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Umut Özge">
+<meta property="og:title" content="Assignment in lambda expressions">
+<meta property="og:url" content="https://umutozge.github.io/posts/course/walrus-operator/">
+
+
+  <meta property="og:description" content="We closed the post More state power with a function that collects n random numbers between start and end into a list. Here is the function again:">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-02-12T00:00:00+03:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/posts/course/walrus-operator/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+<script type="text/javascript">
+  window.MathJax = {
+    loader: {load: ['[tex]/ams']},
+    tex: {
+      packages: {'[+]': ['ams']},
+      tags: 'all',
+      macros: {
+        vectg: ["\\boldsymbol{#1}", 1],
+        vect: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      }
+    },
+    options: {
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<!-- MathJax configuration for automatic equation numbering 
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      packages: ['base','ams'],
+      tags: 'all',
+      macros: {
+        vect: ["\\boldsymbol{#1}", 1],
+        vv: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      },
+    },
+    options: {
+      // Optional: Ensure equation numbers are on the right
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+-->
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Umut Özge
+          <span class="site-subtitle">Graduate School of Informatics, Middle East Technical University</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Courses</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/prelim/schedule/">COGS 502</a></li>
+            
+              <li><a href="/cl/schedule/">COGS 543</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <a href="/exercise/browser/"><span class="nav__sub-title">Exercises</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
+          
+
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Assignment in lambda expressions">
+    <meta itemprop="description" content="We closed the post More state power with a function that collects n random numbers between start and end into a list. Here is the function again:">
+    <meta itemprop="datePublished" content="2026-02-12T00:00:00+03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://umutozge.github.io/posts/course/walrus-operator/" itemprop="url">Assignment in lambda expressions
+</a>
+          </h1>
+          
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2026-02-12T00:00:00+03:00">2026-02-12</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>We closed the post <a href="/posts/course/more-state-power/">More state power</a> with a function that collects <code class="language-plaintext highlighter-rouge">n</code> random numbers between <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code> into a list. Here is the function again:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">n_uniq_random</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Return a list of n unique random numbers between start and end. </span><span class="sh">"""</span>
+
+    <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+    <span class="kn">from</span> <span class="n">funcutils</span> <span class="kn">import</span> <span class="n">proc</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]:</span>
+            <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span>
+            <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">s</span>
+
+    <span class="k">return</span> <span class="nf">proc</span><span class="p">(</span><span class="n">state</span><span class="o">=</span><span class="p">{</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">:</span> <span class="p">[],</span> <span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+                <span class="n">alive</span><span class="o">=</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">,</span>
+                <span class="n">update</span><span class="o">=</span><span class="n">update</span>
+                <span class="p">)[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>If we wanted to send our <code class="language-plaintext highlighter-rouge">update</code> functions as a lambda expression, this would have been impossile because our function is full of assignments. One for the random number <code class="language-plaintext highlighter-rouge">x</code>, and two for updating the dictionary <code class="language-plaintext highlighter-rouge">s</code>. The <code class="language-plaintext highlighter-rouge">if</code> statement is also a problem, and we cannot turn it into an expression <code class="language-plaintext highlighter-rouge">if</code> since its arguments are assignments, not expressions.</p>
+
+<p>Actually, dictionary key assignment is not a problem, because it is totally unnecessary. You can get rid of it by:<sup id="fnref:wrap"><a href="#fn:wrap" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">],</span>
+                <span class="sh">'</span><span class="s">count</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">s</span>
+</code></pre></div></div>
+
+<p>Once you get rid of assignments inside the <code class="language-plaintext highlighter-rouge">if</code> statement, you can turn the <code class="language-plaintext highlighter-rouge">if</code> into an expression:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+    <span class="nf">return </span><span class="p">({</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="sh">'</span><span class="s">count</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span>
+            <span class="k">else</span> <span class="n">s</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>In this solution you have to re-write the dictionary <code class="language-plaintext highlighter-rouge">s</code> you received as argument. It is fine for this case but this may be inefficient especially in cases where you have many keys in the state dictionary and you update only one or two of them. You will then have to write the whole dictionary again. Furthermore, imagine you have 3 conditions according to which you change a different key in the dictionary. You will then have to write the whole dictionary 3 times, once for each condition. This is tedious and, more importantly, error-prone.</p>
+
+<p>Actually you do not have to write the entire dictionary. We can use the dictionary merging operator ‘<code class="language-plaintext highlighter-rouge">|</code>’ to create a new dictionary with the updated values instead of modifying the existing one in place. Here is how merge works:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span>
+<span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>  <span class="c1"># new dictionary with 'b' mapped to 5
+</span><span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="c1"># original dictionary remains unchanged
+</span><span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">d</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span><span class="mi">9</span><span class="p">}</span>  <span class="c1"># multiple changes in a single stroke 
+</span><span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="sh">'</span><span class="s">d</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">3</span><span class="p">}</span>  <span class="c1"># updating 'b' based on its previous value
+</span><span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="sh">'</span><span class="s">e</span><span class="sh">'</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>  <span class="c1"># updates and additions
+</span><span class="p">{</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="sh">'</span><span class="s">e</span><span class="sh">'</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>The update function above can be re-written, of course unnecessarily in this case, as:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+    <span class="nf">return </span><span class="p">(</span><span class="n">s</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="sh">'</span><span class="s">count</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span>
+            <span class="k">else</span> <span class="n">s</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This would work perfectly fine in a setting where there are other keys in your state dictionary which you want to leave untouched when updating <code class="language-plaintext highlighter-rouge">'uniq_nums'</code> and <code class="language-plaintext highlighter-rouge">'count'</code>.</p>
+
+<p>Having handled dictionary manipulation without using assignment, what do we now do with the variable assignment <code class="language-plaintext highlighter-rouge">x = randint(start, end)</code>? We simply cannot do:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="nf">return </span><span class="p">(</span><span class="n">s</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)],</span> 
+                 <span class="sh">'</span><span class="s">count</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+            <span class="k">if</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span>
+            <span class="k">else</span> <span class="n">s</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>since the two calls of <code class="language-plaintext highlighter-rouge">randint</code> will give different values. We need to store the value of <code class="language-plaintext highlighter-rouge">randint(start, end)</code> somewhere to use it twice.</p>
+
+<p>Let’s simplify the problem a little bit. Suppose we want to write a function that generates a random integer between 1 and 10, and returns it if it is even, otherwise returns -1. Using assignment, we can write:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="k">def</span> <span class="nf">random_even</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Pick a random integer between start and end, and return it if even or -1 if odd.</span><span class="sh">"""</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div></div>
+
+<p>If you want to write this as a lambda expression, we saw above that the following will not work:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="n">random_even</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="p">(</span><span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+                                  <span class="k">if</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+                                  <span class="k">else</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>as this picks two different random numbers, one used for evenness check and other as return value.</p>
+
+<p>As lambda expressions are expressions, it shouldn’t be hard to make sense of this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span><span class="p">))(</span><span class="mi">8</span><span class="p">)</span>
+<span class="mi">8</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span><span class="p">))(</span><span class="mi">7</span><span class="p">)</span>
+<span class="o">-</span><span class="mi">1</span>
+</code></pre></div></div>
+
+<p>Lambda expressions are simply names of functions, whenever you have a name <code class="language-plaintext highlighter-rouge">a</code> you can apply it to its argument <code class="language-plaintext highlighter-rouge">x</code> by <code class="language-plaintext highlighter-rouge">a(x)</code>. What we did above is exactly this.</p>
+
+<p>I guess this also makes sense:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span><span class="p">))(</span><span class="nf">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="c1"># some return value according to the result of randint(1,10)
+</span></code></pre></div></div>
+
+<p>I couldn’t write the return value as it is random. But we know that the value returned by <code class="language-plaintext highlighter-rouge">randint</code> will be bound to <code class="language-plaintext highlighter-rouge">x</code> and used both in the test and the success expression. With all this in place, here is our <code class="language-plaintext highlighter-rouge">random_even</code> function as a lambda expression:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">random_even</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span><span class="p">))(</span><span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>And, here is our <code class="language-plaintext highlighter-rouge">update</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">update</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span>
+                  <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span>  <span class="p">(</span><span class="n">s</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="sh">'</span><span class="s">count</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+                               <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span>
+                               <span class="k">else</span> <span class="n">s</span><span class="p">))(</span><span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Thankfully, the developers of Python have found a way to simplify this somewhat cumbersome syntax by introducing the “walrus operator” <code class="language-plaintext highlighter-rouge">:=</code>. Using this operator, you can perform assignments inside expressions. First, see it in action in <code class="language-plaintext highlighter-rouge">random_even</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">random_even</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="n">x</span> <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="p">:</span><span class="o">=</span> <span class="nf">random</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="p">))</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div></div>
+
+<p>And here is our final <code class="language-plaintext highlighter-rouge">update</code> function using the walrus operator:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">update</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="p">(</span><span class="n">s</span> <span class="o">|</span> <span class="p">{</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="sh">'</span><span class="s">count</span><span class="sh">'</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">count</span><span class="sh">'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+            <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="p">:</span><span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="p">))</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="sh">'</span><span class="s">uniq_nums</span><span class="sh">'</span><span class="p">]</span>
+            <span class="k">else</span> <span class="n">s</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The walrus operator is not restricted to lambda expressions, you can use it in regular function as well. We will make good use of it when we deal with comprehensions.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:wrap">
+      <p>From here on the code blocks of isolated <code class="language-plaintext highlighter-rouge">update</code> are meant to be placed inside <code class="language-plaintext highlighter-rouge">n_uniq_random</code> function. <a href="#fnref:wrap" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#cogs501"
+         class="page__taxonomy-item p-category" rel="tag">
+        cogs501 <span class="taxonomy__count">1</span>
+      </a>
+    
+      
+      
+      <a href="/tags/#functional-programming"
+         class="page__taxonomy-item p-category" rel="tag">
+        functional programming <span class="taxonomy__count">1</span>
+      </a>
+    
+      
+      
+      <a href="/tags/#lambda"
+         class="page__taxonomy-item p-category" rel="tag">
+        lambda <span class="taxonomy__count">2</span>
+      </a>
+    
+      
+      
+      <a href="/tags/#programming"
+         class="page__taxonomy-item p-category" rel="tag">
+        programming <span class="taxonomy__count">6</span>
+      </a>
+    
+    </span>
+  </p>
+
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#course" class="page__taxonomy-item p-category" rel="tag">course</a>
+    
+    </span>
+  </p>
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-02-12T00:00:00+03:00">2026-02-12</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/posts/course/more-state-power/" class="pagination--pager" title="More state power">Previous</a>
+    
+    
+      <a href="/posts/course/language-primer/" class="pagination--pager" title="Language primer">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item"
+     
+     
+    >
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/course/language-primer/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>Language primer
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">Initial steps for cognitive science students.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item"
+     
+     
+    >
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/course/more-state-power/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>More state power
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">State unfied into a single parameter, dictionaries introduced.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item"
+     
+     
+    >
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/course/way-of-lambda/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>The way of lambda
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">An introduction to lambda expressions in Python and their use in (functional) programming.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item"
+     
+     
+    >
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/course/state-power/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>The power of the state
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">The notion of state and how to enhance its memory power by tuples.
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://umutozge.github.io">Umut Özge</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
