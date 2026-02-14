@@ -182,29 +182,20 @@ var store = [{
     "title": "Exercise browser",
     "excerpt":"discrete 1 funprog 1 iteration 1 language 1 linear algebra 1 lists 1 number theory 1 probability 3 programming 1 proof 1 python 3 sequence 1 sets 1 tuples 1 Basic probability Probability and programming exercises. Combinatorics Various counting exercises. Higher-order functions A set of programming exercises to practice higher-order...","url": "https://umutozge.github.io/exercise/browser/"
   },{
-    "title": "COGS 501 Quiz",
-    "excerpt":"[2pts*] Translate the following into first order logic: i. Every student in this class has submitted at least one assignment. - S(x): “x is a student in this class” - A(x, y): “x has submitted assignment y” \\[\\forall x (S(x) \\to \\exists y A(x,y))\\] ii. There is a professor who...","url": "https://umutozge.github.io/q06s/"
-  },{
-    "title": "COGS 501 Quiz",
-    "excerpt":"Define a function that takes a positive integer and returns the sum of its digits. Two mathematical operations that might be useful here are modulo and division. You get 2pts bonus credit if you solve the problem using proc_seq. Save the definition of proc_seq from here in a file named...","url": "https://umutozge.github.io/q09s/"
-  },{
-    "title": "COGS 501 Quiz",
-    "excerpt":"[1pt] Prove that the product of an even integer with an odd integer is even. Let \\(m\\) be an even integer and \\(n\\) be an odd integer. By definition of even numbers, there exists an integer \\(k\\) such that \\(m = 2k\\). By definition of odd numbers, there exists an...","url": "https://umutozge.github.io/q10s/"
-  },{
-    "title": "COGS 526",
-    "excerpt":"Spring 2026 Umut Özge (✉️), Anıl Öğdül (TA, ✉️) 🕐 W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. ✳️ marks optional material. Week Content 1&nbsp;(18/2) Why logic is still relevant for cognitive science and AI...","url": "https://umutozge.github.io/courses/lccm/schedule/"
-  },{
     "title": "COGS 543",
     "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass %} to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(18/2) Course introduction; general...","url": "https://umutozge.github.io/cl/schedule/"
   },{
     "title": "COGS 502",
     "excerpt":"Spring 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ T 2:40-5:30, II03 Check the current syllabus for course information and policies. Make sure you are on odtuclass %} to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(19/2) Basic notions in...","url": "https://umutozge.github.io/prelim/schedule/"
   },{
-    "title": "COGS 543 Computational Semantics",
-    "excerpt":"Course information The course is an introduction to computational approaches to representing and processing meaning in natural language. The course takes a scientific perspective on the subject and focuses on interpretable models that potentially have cognitive plausiblity. If you are interested rather in the engineering field of NLP and state-of-the-art...","url": "https://umutozge.github.io/cl/syllabus/"
+    "title": "COGS 526",
+    "excerpt":"Spring 2026 Umut Özge (✉️), Anıl Öğdül (TA, ✉️) 🕐 W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. ✳️ marks optional material. Week Content 1&nbsp;(18/2) Why logic is still relevant for cognitive science and AI...","url": "https://umutozge.github.io/courses/lccm/schedule/"
   },{
     "title": "COGS 526 Meaning and Logic",
     "excerpt":"Course information The course aims to provide fundamental knowledge and skills for applying logic in computational cognitive modeling. Prerequisites The course is open, without any prerequisites, to any graduate student, with Cogsci first, Informatics second, and the rest third priority. Material The relevant material on this site. Weekly reading assignments....","url": "https://umutozge.github.io/lccm/syllabus/"
+  },{
+    "title": "COGS 543 Computational Semantics",
+    "excerpt":"Course information The course is an introduction to computational approaches to representing and processing meaning in natural language. The course takes a scientific perspective on the subject and focuses on interpretable models that potentially have cognitive plausiblity. If you are interested rather in the engineering field of NLP and state-of-the-art...","url": "https://umutozge.github.io/cl/syllabus/"
   },{
     "title": "Syllabus for COGS 501/2",
     "excerpt":"Course Information These courses aim to introduce graduate students in cognitive science to the mathematical and computational foundations that are necessary for advanced study in cognitive science. The mathematical topics covered at a basic level are, sets, relations, functions, logic, combinatorics, number theory, probability, linear algebra, and calculus. A functional...","url": "https://umutozge.github.io/prelim/syllabus/"
