@@ -183,10 +183,10 @@ var store = [{
     "excerpt":"discrete 1 funprog 1 iteration 1 language 1 linear algebra 1 lists 1 number theory 1 probability 3 programming 1 proof 1 python 3 sequence 1 sets 1 tuples 1 Basic probability Probability and programming exercises. Combinatorics Various counting exercises. Higher-order functions A set of programming exercises to practice higher-order...","url": "https://umutozge.github.io/exercise/browser/"
   },{
     "title": "COGS 543",
-    "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass %} to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(18/2) Course introduction; general...","url": "https://umutozge.github.io/cl/schedule/"
+    "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(18/2) Course introduction; general discussion...","url": "https://umutozge.github.io/cl/schedule/"
   },{
     "title": "COGS 502",
-    "excerpt":"Spring 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ T 2:40-5:30, II03 Check the current syllabus for course information and policies. Make sure you are on odtuclass %} to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(19/2) Basic notions in...","url": "https://umutozge.github.io/prelim/schedule/"
+    "excerpt":"Spring 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ T 2:40-5:30, II03 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(19/2) Basic notions in probability...","url": "https://umutozge.github.io/prelim/schedule/"
   },{
     "title": "COGS 526",
     "excerpt":"Spring 2026 Umut Özge (✉️), Anıl Öğdül (TA, ✉️) 🕐 W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. ✳️ marks optional material. Week Content 1&nbsp;(18/2) Why logic is still relevant for cognitive science and AI...","url": "https://umutozge.github.io/courses/lccm/schedule/"
