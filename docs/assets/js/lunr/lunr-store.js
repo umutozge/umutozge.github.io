@@ -162,8 +162,8 @@ var store = [{
         "teaser": null
       },{
         "title": "Language primer",
-        "excerpt":"This is a very quick entry to the study of language in computational cognitive science. A simple formal system Douglas Hofstadter1 has this tiny formal system called pq-System. In defining formal systems, we start with a set of symbols, called the alphabet. This dictates that any expression of the system...","categories": ["course"],
-        "tags": ["language"],
+        "excerpt":"This is a quick start for cognitive science students on the cognitive science of language. A simple formal system Douglas Hofstadter1 has this tiny formal system called pq-System. In defining formal systems, we start with a set of symbols, called the alphabet. This dictates that any expression of the system...","categories": ["course"],
+        "tags": ["language","cogsci"],
         "url": "/posts/course/language-primer/",
         "teaser": null
       },{
