@@ -5378,11 +5378,11 @@ body.layout--home .entries-grid .archive__item-excerpt {
   counter-reset: item;
 }
 
-.numbered > .item {
+.numbered .item {
   font-size: 0.9rem;
 }
 
-.numbered > .item {
+.numbered .item {
   counter-increment: item;
   /*  padding: 0.5rem; */
   margin: 0.5rem 0.5rem 1.5rem 0rem;
@@ -5391,14 +5391,14 @@ body.layout--home .entries-grid .archive__item-excerpt {
   /*  border-radius: .5rem; */
 }
 
-.numbered > .item::before {
+.numbered .item::before {
   content: attr(data-label) " " counter(item) ": " attr(data-title) " ";
   font-weight: 600;
   font-size: 0.9rem;
 }
 
 /* Optional per-kind theming later */
-.numbered > .item[data-kind=exercise] {
+.numbered .item[data-kind=exercise] {
   border-left-color: #0FA5DB;
 }
 

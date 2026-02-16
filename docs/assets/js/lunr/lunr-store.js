@@ -206,6 +206,27 @@ var store = [{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
   },{
+    "title": "No Free Lunch in Linguistics Or Machine Learning: Response to Pater",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/rawski-heins/"
+  },{
+    "title": "Generative Linguistics and Neural Networks at 60: Foundation, Friction, and Fusion",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/pater-2019/"
+  },{
+    "title": "Statistical Modeling: The Two Cultures",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/breiman-2001/"
+  },{
+    "title": "Probabilistic Modeling in Psycholinguistics: Linguistic Comprehension and Production",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/jurafsky-psycho/"
+  },{
+    "title": "Probabilistic Syntax",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/manning-prob/"
+  },{
+    "title": "Chomsky and the Two Cultures of Statistical Learning",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/norvig-chomsky/"
+  },{
+    "title": "Machine learning theory and practice as a source of insightinto universal grammar",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/lappin-shieber/"
+  },{
     "title": "Linguistic Fundamentals for Natural Language Processing",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/bender-fundamentals/"
   },{

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-02-14T20:35:50+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.</subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-02-14T00:00:00+03:00</published><updated>2026-02-14T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-02-16T17:01:47+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.</subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-02-14T00:00:00+03:00</published><updated>2026-02-14T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
 
   <p>This is a very quick entry to the study of language in computational cognitive
 science.</p>
@@ -58,7 +58,7 @@ whether it is well-formed or not.</p>
   <p>They are theorems of binary addition of non-equal non-negative integers. Their
 <em>meaning</em> is this.</p>
 
-  <h2 id="levels-of-analysis">Levels of analysis</h2>
+  <h3 id="levels-of-analysis">Levels of analysis</h3>
 
   <p>Language is studied in levels of analysis. The study of the atomic building
 blocks of language and how they combine into more complex structures is called
@@ -87,12 +87,12 @@ a boundary. Perhaps some boundaries are more useful when they are left fuzzy.</p
   <p>In studying language from a cognitive science perspective, studying morphosyntax
 on its own does not make much sense.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> The relevant field of inquiry is rather
 the study of the relation between morphosyntax on one hand, and semantics and
-pragmatics on the other. Let’s call this domain “semantax” for the sake of
+pragmatics on the other. Let’s call this domain <strong>semantax</strong> for the sake of
 having a name for it.<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
 
-  <h2 id="grammar">Grammar</h2>
+  <h3 id="grammar">Grammar</h3>
 
-  <p>The most important aspects of human language for our purposes are:</p>
+  <p>Some important aspects of human language are:</p>
 
   <ol>
     <li><strong>Compositionality:</strong> “The meaning of a compound expression is a function of
@@ -110,7 +110,9 @@ off” from the hierarchical structure. A necessary consequence of this is that
 items that are related at the meaning level may find themselves fallen apart
 on the actual acoustic/visual signal. Take:</p>
 
-\[\text{I saw the man with the telescope.}\]
+      <div class="item" id="ex:telescope" data-kind="definition" data-label="Example" data-title="The telescope sentence">
+        <p>I saw the man with the telescope.</p>
+      </div>
 
       <p>The sentence can mean two different things: (1) the speaker has the telescope, or (2)
 the man has the telescope. The two meanings are determined by the hierarchical
@@ -126,13 +128,15 @@ and meaning in a way that manifests the three properties above.</p>
 the components of an expression. For instance the two meanings of the telescope
 sentence are related to the following (fairly simplified) structures:</p>
 
-\[\begin{align}
-   \text{[I [saw [the man [with the telescope]]]]} \\
-   \text{[I [[saw [the man]] [with the telescope]]]} \\
-\end{align}\]
+  <div class="item" id="ex:telescope-structures" data-kind="definition" data-label="Example" data-title="Two structures for the telescope sentence">
+    <ol>
+      <li>[I [saw [the man [with the telescope]]]]</li>
+      <li>[I [[saw [the man]] [with the telescope]]]</li>
+    </ol>
+  </div>
 
   <p>Another way of thinking about structure, which is more transparent to semantics,
-is to think of it as a particular organization of operators and arguments, much
+is to think of it as a particular organization of operators and arguments,
 like we do in arithmetic.</p>
 
 \[((3 + 4) \times 5)\]
@@ -141,7 +145,7 @@ like we do in arithmetic.</p>
 meaning, which is the value of the expression (=35), we work out the structure
 of the expression in such a way that the <strong>operator</strong> +  is applied to its
 <strong>arguments</strong> 3 and 4, and then the operator \(\times\) is applied to its
-arguments, which are the value of the first operator (recursion!) and 5.</p>
+arguments, which are, 7, the value of the first operation (recursion!), and 5.</p>
 
   <p>Similarly, for the telescope example, in one reading the operator <em>saw</em> takes as
 arguments the subject <em>I</em> and the object <em>the man with the telescope</em>; and in
@@ -150,24 +154,19 @@ phrase <em>the man</em>, rather than the entire phrase <em>the man with the tele
 and this time the operator <em>with</em> takes as arguments the noun <em>the telescope</em>
 and the verb phrase <em>saw the man</em> as arguments.<sup id="fnref:ser"><a href="#fn:ser" class="footnote" rel="footnote" role="doc-noteref">5</a></sup></p>
 
-  <h2 id="objects-of-inquiry">Objects of inquiry</h2>
+  <h3 id="main-questions">Main questions</h3>
 
-  <p>The grammar is studied mainly around the following
-questions:</p>
+  <p>The  major research questions on the grammar<sup id="fnref:sense"><a href="#fn:sense" class="footnote" rel="footnote" role="doc-noteref">6</a></sup> are:</p>
 
   <ol>
     <li>How do we understand and produce language?</li>
     <li>How do we acquire the capacity to do so?</li>
     <li>How is our language capacity related to other cognitive capacities, such as
 perception, planning, reasoning, etc.?</li>
-    <li>How do the above questions relate to our neural architecture?</li>
+    <li>How do these relate to our neural substance?</li>
   </ol>
 
-  <p>At this point, keep in mind that I am using the notion of grammar in a fairly
-broad sense. I especially don’t want to mean a system of explicit rules like a
-Phrase Structure Grammar or any algorithmic mechanism like a parser.</p>
-
-  <h2 id="cognitive-science">Cognitive science</h2>
+  <h3 id="cognitive-science-of-language">Cognitive science of language</h3>
 
   <p>The above questions are studied in several fields. What distinguishes cognitive
 science from fields like psychology and linguistics is its emphasis on the
@@ -177,43 +176,73 @@ system, and therefore the best way to understand it is by building computational
 models of the phenomena we are interested in, be it a processing question or a
 learning question.</p>
 
-  <h2 id="where-to-start-reading">Where to start reading</h2>
+  <h3 id="suggestions-on-where-to-start">Suggestions on where to start</h3>
 
-  <p>The best place to start, in my opinion, is <a href="/p/chomsky-ss/" target="_blank" rel="noopener">Chomsky (1957)</a><span aria-hidden="true">(first 6 chapters)</span>.</p>
+  <p>I suggest to start with <a href="/p/chomsky-ss/" target="_blank" rel="noopener">Chomsky (1957)</a><span aria-hidden="true">(first 6 chapters)</span>. This sets the frame of discussion for almost
+everything that follows, and remarkably – considering its impact – requires
+almost no background.</p>
 
-  <p>As you will see, Chomsky has a very low opinion on the relevance of probability,
-statistics and information theory to the study of language. He appears to have
-kept this attitude in the rest of his career, and the attitude is still widely
-held in mainstream linguistics. But in cognitive science, the debate is almost
-never on <em>whether</em> but <em>how</em> these fields are relevant for language.</p>
+  <p>There are two axes of tension in the field, which I think it is better to meet
+them from the start and in a balanced way, before you find yourself
+indoctrinated in one.<sup id="fnref:gazdar"><a href="#fn:gazdar" class="footnote" rel="footnote" role="doc-noteref">7</a></sup></p>
 
-  <p>An advanced but a good reading on the relevance of information theory to the study of language is
-<a href="/p/pereira/" target="_blank" rel="noopener">Pereira (2000)</a>. Have a shallow
-first pass, to come back to it later.</p>
+  <p>The first of these is the debate on the relevance of probability  (statistics
+and information theory) to the study of language. Chomsky is widely considered,
+at times too crudely I think,  to be firmly on the “not relevant” side of the
+debate. Although the matter is more nuanced, as you will see in due course, it
+is largely true that probability is not much popular in mainstream linguistics.
+But in cognitive science, the debate is almost never on <em>whether</em> but <em>how</em>
+these fields are relevant for the scientific study of language. For convenience,
+I will call these positions the <strong>probabilist</strong> and the <strong>determinist</strong>
+position.</p>
 
-  <p>The fields of probability, statistics and information theory
-lie at the heart of
-machine learning and artificial intelligence, and by this token, they also lie at
-the heart of engineering approaches to language, the field of Natural Language
-Processing (NLP).</p>
+  <p>Another dimension of tension in the field is between the <strong>rationalist</strong> and the
+<strong>empiricist</strong> positions, which seems to have gone nuclear especially after the
+appearance of LLMs. The debate here concerns the relevance of data-driven
+approaches like corpus linguistics, machine learning, statistical language
+models, etc. to the scientific study of language. This often naturally comes
+intertwined with discussions on the goals of science, especially the distinction
+between prediction and explanation.</p>
+
+  <p>Of course, you need to keep in mind that these positions are just fiction, and
+grossly simplistic; the issues are too complex to be reduced to simple
+dichotomies like these. I nevertheless think they may be useful as a way to get
+a handle on the field, for newcommers. It also adds some excitement to a
+difficult subject.</p>
+
+  <p>All the readings I suggest below will most probably be too difficult at this
+stage. There is no cure for this. There are no textbooks that can be read in
+a linear way. You need to have initial passes with low reception and come back
+to the papers later.</p>
+
+  <p>On how probability fits into the study of language:  <a href="/p/manning-prob/" target="_blank" rel="noopener">Manning (2003)</a> and
+<a href="/p/jurafsky-psycho/" target="_blank" rel="noopener">Jurafsky (2003)</a>.</p>
+
+  <p><a href="/p/norvig-chomsky/" target="_blank" rel="noopener">Norvig (2011)</a> addresses the latest views of
+Chomsky on the relevance of (statistical) language models to the study of
+language. More advanced readings that take issue with the <strong>determinist</strong> and
+<strong>rationalist</strong> position are <a href="/p/pereira/" target="_blank" rel="noopener">Pereira (2000)</a> and <a href="/p/lappin-shieber/" target="_blank" rel="noopener">Lappin and Shieber (2007)</a>.</p>
 
   <p>People sometimes use the term <strong>computational linguistics</strong> to differentiate the
 scientific study of language through computational modeling from the engineering
 field of NLP. But be warned that this is not a well-established terminology. See
-<a href="/p/stanford-cl/" target="_blank" rel="noopener">Schubert (2020)</a><span aria-hidden="true">(1-4)</span> for a balanced view.</p>
+<a href="/p/stanford-cl/" target="_blank" rel="noopener">Schubert (2020)</a><span aria-hidden="true">(1-4)</span> for a balanced view.
+Leaving “how to call what” aside, some people think there is (or should be) an
+important distinction between NLP and the cognitive science of language. Both
+fields aim to build computational models of various aspects of language
+capacity, but the nature of the models they build differs. A good terminology
+for this distinction is that of <a href="/p/softmax/" target="_blank" rel="noopener">Frank and Degen (2023)</a>’s
+<strong>input-output models</strong> vs <strong>internally meaningful models</strong> – so good that it
+barely needs to define them. Deep learning models are input-output models par
+excellence. An exchange that is focused on deep learning is <a href="/p/pater-2019/" target="_blank" rel="noopener">Pater (2019)</a> and <a href="/p/rawski-heins/" target="_blank" rel="noopener">Rawski and Heins (2023)</a>. <a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a> is a recent relevant reading not restricted to language.
+These are just a few examples, the literature on this topic is exploding,
+especially after the birth of LLMs. If you had statistics courses, reading <a href="/p/breiman-2001/" target="_blank" rel="noopener">Breiman (2001)</a> would be very helpful in navigating
+yourself in this literature, at least to appreciate that there are no easy
+answers in this debate.</p>
 
-  <p>Leaving “how to call what” aside, there is an important distinction between NLP
-and the cognitive science of language. Both fields aim to build computational
-models of various aspects of language capacity, but the nature of the models
-they build differs. A good terminology for this distinction is that of <a href="/p/softmax/" target="_blank" rel="noopener">Frank and Degen (2023)</a>’s <strong>input-output models</strong> vs <strong>internally
-meaningful models</strong>. The aim of science is not mere prediction but also
-explanation, so when our models predict a behavior correctly/wrongly we would
-want to understand why. <a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a> gives a broader view
-of this distinction in cognitive science.</p>
-
-  <p>Whenever you get stuck with a linguistics concept or term, consult <a href="/p/bender-fundamentals/" target="_blank" rel="noopener">Bender (2022)</a>. This will work fine as a practical
-reference book until you develop a more serious interest in linguistics and/or go on
-with language research.</p>
+  <p>Finally, whenever you hit an unfamiliar linguistic concept or term, consult <a href="/p/bender-fundamentals/" target="_blank" rel="noopener">Bender (2022)</a>. This will work fine as a practical
+reference book until you develop a more serious interest in linguistics and/or
+go on with language research.</p>
 
 </div>
 <div class="footnotes" role="doc-endnotes">
@@ -225,7 +254,7 @@ with language research.</p>
       <p>The same does not apply to phonology, which is a very interesting field of study from a cognitive science perspective on its own. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:3">
-      <p>John R. Ross offered the term “semantax”, but it seems it did not get caught on. Mark Steedman has a project named such, though. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/John_R._Ross">John R. Ross</a> offered the term “semantax”, but it seems it did not get caught on. <a href="https://homepages.inf.ed.ac.uk/steedman/">Mark Steedman</a> has a project named such, though. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:partee">
       <p>Barbara Partee, “Compositionality”, in <em>Varieties of Formal Semantics</em>, 1984. <a href="#fnref:partee" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
@@ -233,8 +262,14 @@ with language research.</p>
     <li id="fn:ser">
       <p>I am wildly simplifying for the sake of discussion. <a href="#fnref:ser" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
+    <li id="fn:sense">
+      <p>I use the term grammar in a fairly broad sense as the totality of the system that mediates between form and meaning. The term has a well-defined technical sense in formal language theory and the theory (and applications) of parsing. <a href="#fnref:sense" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:gazdar">
+      <p><a href="https://en.wikipedia.org/wiki/Gerald_Gazdar">Gerald Gazdar</a> calls this “socializing into a terminology”. <a href="#fnref:gazdar" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
   </ol>
-</div>]]></content><author><name></name></author><category term="course" /><category term="language" /><summary type="html"><![CDATA[Initial steps for cognitive science students.]]></summary></entry><entry><title type="html">Assignment in lambda expressions</title><link href="https://umutozge.github.io/posts/course/walrus-operator/" rel="alternate" type="text/html" title="Assignment in lambda expressions" /><published>2026-02-12T00:00:00+03:00</published><updated>2026-02-12T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/walrus-operator</id><content type="html" xml:base="https://umutozge.github.io/posts/course/walrus-operator/"><![CDATA[<p>We closed the post <a href="/posts/course/more-state-power/">More state power</a> with a function that collects <code class="language-plaintext highlighter-rouge">n</code> random numbers between <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code> into a list. Here is the function again:</p>
+</div>]]></content><author><name></name></author><category term="course" /><category term="language" /><summary type="html"><![CDATA[Initial steps for cognitive science students interested in language.]]></summary></entry><entry><title type="html">Assignment in lambda expressions</title><link href="https://umutozge.github.io/posts/course/walrus-operator/" rel="alternate" type="text/html" title="Assignment in lambda expressions" /><published>2026-02-12T00:00:00+03:00</published><updated>2026-02-12T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/walrus-operator</id><content type="html" xml:base="https://umutozge.github.io/posts/course/walrus-operator/"><![CDATA[<p>We closed the post <a href="/posts/course/more-state-power/">More state power</a> with a function that collects <code class="language-plaintext highlighter-rouge">n</code> random numbers between <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code> into a list. Here is the function again:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">n_uniq_random</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
     <span class="sh">"""</span><span class="s">Return a list of n unique random numbers between start and end. </span><span class="sh">"""</span>
