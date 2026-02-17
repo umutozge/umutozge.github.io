@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-02-16T17:13:04+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.</subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-02-14T00:00:00+03:00</published><updated>2026-02-14T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-02-17T11:07:14+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.</subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-02-14T00:00:00+03:00</published><updated>2026-02-14T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
 
-  <p>This is a quick start for cognitive science students on the cognitive science of
-language.</p>
+  <p>This is a quick start for cognitive science students on language.</p>
 
   <h2 id="a-simple-formal-system">A simple formal system</h2>
 
@@ -68,7 +67,7 @@ orthographic symbols, but the <strong>phonemes</strong>, the smallest units of s
 distinguish meaning in a language.</p>
 
   <p>The study of the properties of well-formed expressions is called
-<strong>morphosytax</strong>. As you observed above, this can be studied without any
+<strong>morphosyntax</strong>. As you observed above, this can be studied without any
 reference to meaning or significance in any form.</p>
 
   <p>The study of the meaning of expressions is called <strong>semantics</strong>. And again as
@@ -176,73 +175,56 @@ system, and therefore the best way to understand it is by building computational
 models of the phenomena we are interested in, be it a processing question or a
 learning question.</p>
 
-  <h3 id="suggestions-on-where-to-start">Suggestions on where to start</h3>
+  <p class="notice--warning"><strong>Warning:</strong> Some, or perhaps all, readings suggested below might be difficult at this
+stage. There is no cure for this. There are no textbooks, which can be read in
+a linear way.<sup id="fnref:strictly"><a href="#fn:strictly" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> You need to have a couple of passes with low reception and come back
+to them later.</p>
 
   <p>I suggest to start with <a href="/p/chomsky-ss/" target="_blank" rel="noopener">Chomsky (1957)</a><span aria-hidden="true">(first 6 chapters)</span>. This sets the frame of discussion for almost
 everything that follows, and remarkably – considering its impact – requires
 almost no background.</p>
 
-  <p>There are two axes of tension in the field, which I think it is better to meet
-them from the start and in a balanced way, before you find yourself
-indoctrinated in one.<sup id="fnref:gazdar"><a href="#fn:gazdar" class="footnote" rel="footnote" role="doc-noteref">7</a></sup></p>
+  <p>There are two axes of tension in the field, which I think it is better to
+open-mindedly meet them from the very start, before you find yourself
+socialized<sup id="fnref:gazdar"><a href="#fn:gazdar" class="footnote" rel="footnote" role="doc-noteref">8</a></sup> into one.</p>
 
   <p>The first of these is the debate on the relevance of probability  (statistics
-and information theory) to the study of language. Chomsky is widely considered,
-at times too crudely I think,  to be firmly on the “not relevant” side of the
-debate. Although the matter is more nuanced, as you will see in due course, it
-is largely true that probability is not much popular in mainstream linguistics.
-But in cognitive science, the debate is almost never on <em>whether</em> but <em>how</em>
-these fields are relevant for the scientific study of language. For convenience,
-I will call these positions the <strong>probabilist</strong> and the <strong>determinist</strong>
-position.</p>
+and information theory) to the study of language, particularly syntax. Chomsky
+is widely considered, at times too crudely I think,  to be firmly on the “not
+relevant” side of the debate. It is nevertheless true that probability is not
+much popular in mainstream linguistics. But in cognitive science, the debate is
+almost never on <em>whether</em> but <em>how</em> these fields are relevant for the scientific
+study of language. For convenience, I will call this the <strong>probability
+debate</strong>.<sup id="fnref:catogorist"><a href="#fn:catogorist" class="footnote" rel="footnote" role="doc-noteref">9</a></sup></p>
 
-  <p>Another dimension of tension in the field is between the <strong>rationalist</strong> and the
-<strong>empiricist</strong> positions, which seems to have gone nuclear especially after the
-appearance of LLMs. The debate here concerns the relevance of data-driven
-approaches like corpus linguistics, machine learning, statistical language
-models, etc. to the scientific study of language. This often naturally comes
-intertwined with discussions on the goals of science, especially the distinction
-between prediction and explanation.</p>
+  <p>Another source of tension in the field concerns the relevance of data-driven
+approaches like corpus linguistics, deep neural nets, machine learning,
+statistical language models, etc. to the scientific study of language, which
+seems to be going nuclear especially after the appearance of LLMs.  This debate
+naturally comes intertwined with discussions on the goals of science, especially
+the distinction between prediction and explanation. For convenience, I will call
+this the <strong>data debate</strong>.</p>
 
-  <p>Of course, you need to keep in mind that these positions are just fiction, and
-grossly simplistic; the issues are too complex to be reduced to simple
-dichotomies like these. I nevertheless think they may be useful as a way to get
-a handle on the field, for newcommers. It also adds some excitement to a
-difficult subject.</p>
-
-  <p>All the readings I suggest below will most probably be too difficult at this
-stage. There is no cure for this. There are no textbooks, which can be read in
-a linear way.<sup id="fnref:strictly"><a href="#fn:strictly" class="footnote" rel="footnote" role="doc-noteref">8</a></sup> You need to have initial passes with low reception and come back
-to the papers later.</p>
-
-  <p>On how probability fits into the study of language:  <a href="/p/manning-prob/" target="_blank" rel="noopener">Manning (2003)</a> and
-<a href="/p/jurafsky-psycho/" target="_blank" rel="noopener">Jurafsky (2003)</a>.</p>
-
-  <p><a href="/p/norvig-chomsky/" target="_blank" rel="noopener">Norvig (2011)</a> addresses the latest views of
+  <ul>
+    <li>On how probability fits into the study of language:  <a href="/p/manning-prob/" target="_blank" rel="noopener">Manning (2003)</a> and
+<a href="/p/jurafsky-psycho/" target="_blank" rel="noopener">Jurafsky (2003)</a>.</li>
+    <li>Readings relevant for the both debates are <a href="/p/pereira/" target="_blank" rel="noopener">Pereira (2000)</a> and <a href="/p/lappin-shieber/" target="_blank" rel="noopener">Lappin and Shieber (2007)</a></li>
+    <li><a href="/p/norvig-chomsky/" target="_blank" rel="noopener">Norvig (2011)</a> addresses the latest views of
 Chomsky on the relevance of (statistical) language models to the study of
-language. More advanced readings that take issue with the <strong>determinist</strong> and
-<strong>rationalist</strong> position are <a href="/p/pereira/" target="_blank" rel="noopener">Pereira (2000)</a> and <a href="/p/lappin-shieber/" target="_blank" rel="noopener">Lappin and Shieber (2007)</a>.</p>
-
-  <p>People sometimes use the term <strong>computational linguistics</strong> to differentiate the
+language. Although, Norvig’s reading of Chomsky’s “claims” are rather superficial<sup id="fnref:calmer"><a href="#fn:calmer" class="footnote" rel="footnote" role="doc-noteref">10</a></sup>,
+I think it is still a good read.</li>
+    <li>People sometimes use the term <strong>computational linguistics</strong> to differentiate the
 scientific study of language through computational modeling from the engineering
 field of NLP. But be warned that this is not a well-established terminology. See
-<a href="/p/stanford-cl/" target="_blank" rel="noopener">Schubert (2020)</a><span aria-hidden="true">(1-4)</span> for a balanced view.
-Leaving “how to call what” aside, some people think there is (or should be) an
-important distinction between NLP and the cognitive science of language. Both
-fields aim to build computational models of various aspects of language
-capacity, but the nature of the models they build differs. A good terminology
-for this distinction is that of <a href="/p/softmax/" target="_blank" rel="noopener">Frank and Degen (2023)</a>’s
-<strong>input-output models</strong> vs <strong>internally meaningful models</strong> – so good that they
-barely need a definition. Deep learning models are input-output models par
-excellence. An exchange that is focused on deep learning is <a href="/p/pater-2019/" target="_blank" rel="noopener">Pater (2019)</a> and <a href="/p/rawski-heins/" target="_blank" rel="noopener">Rawski and Heins (2023)</a>. <a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a> is a recent relevant reading not restricted to language.
-These are just a few examples, the literature on this topic is exploding,
-especially after the birth of LLMs. If you had statistics courses, reading <a href="/p/breiman-2001/" target="_blank" rel="noopener">Breiman (2001)</a> would be very helpful in navigating
-yourself in this literature, at least to appreciate that there are no easy
-answers in this debate.</p>
-
-  <p>Finally, whenever you hit an unfamiliar linguistic concept or term, consult <a href="/p/bender-fundamentals/" target="_blank" rel="noopener">Bender (2022)</a>. This will work fine as a practical
+<a href="/p/stanford-cl/" target="_blank" rel="noopener">Schubert (2020)</a><span aria-hidden="true">(1-4)</span> for a balanced view.</li>
+    <li>For a taste of the data debate focused on deep neural networks: <a href="/p/pater-2019/" target="_blank" rel="noopener">Pater (2019)</a> and <a href="/p/rawski-heins/" target="_blank" rel="noopener">Rawski and Heins (2023)</a>.</li>
+    <li><a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a> and the commentaries on it are a good place
+  to get introduced to the data debate within the broader cognitive
+  science.<sup id="fnref:data-debate-terms"><a href="#fn:data-debate-terms" class="footnote" rel="footnote" role="doc-noteref">11</a></sup></li>
+    <li>Whenever you hit an unfamiliar linguistic concept or term, consult <a href="/p/bender-fundamentals/" target="_blank" rel="noopener">Bender (2022)</a>. This will work fine as a practical
 reference book until you develop a more serious interest in linguistics and/or
-go on with language research.</p>
+go on with language research.</li>
+  </ul>
 
 </div>
 <div class="footnotes" role="doc-endnotes">
@@ -265,11 +247,20 @@ go on with language research.</p>
     <li id="fn:sense">
       <p>I use the term grammar in a fairly broad sense as the totality of the system that mediates between form and meaning. The term has a well-defined technical sense in formal language theory and the theory (and applications) of parsing. <a href="#fnref:sense" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:gazdar">
-      <p><a href="https://en.wikipedia.org/wiki/Gerald_Gazdar">Gerald Gazdar</a> calls this “socializing into a terminology”. <a href="#fnref:gazdar" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
     <li id="fn:strictly">
-      <p>There <em>are</em> textbooks actually, but they are too opiniated. Also be warned about “handbook” entries that focus on the personal contributions of the author. <a href="#fnref:strictly" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>There actually <em>are</em>, but they are too opinionated. Also be warned about “handbook” entries that focus on the personal contributions of the author. <a href="#fnref:strictly" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:gazdar">
+      <p><a href="https://nlp.fi.muni.cz/~xjakub/briscoe-gazdar/gpsg.html">Gerald Gazdar</a>:  “Just a collection of buzz words whose appropriate use you are socialized into.” <a href="#fnref:gazdar" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:catogorist">
+      <p>Closely, related to this is the issue of categorical vs. gradient phenomena in language. <a href="#fnref:catogorist" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:calmer">
+      <p>See the LSLT quotes in <a href="/p/yang-crunch/" target="_blank" rel="noopener">Yang (2008)</a> for a more accurate view on Chomsky’s stance on the subject. <a href="#fnref:calmer" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:data-debate-terms">
+      <p>Useful terminology on the data debate are <a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a>’s <strong>pattern recognition</strong> vs. <strong>model building</strong>, and <a href="/p/softmax/" target="_blank" rel="noopener">Frank and Degen (2023)</a>’s <strong>input-output models</strong> vs <strong>internally meaningful models</strong>. <a href="#fnref:data-debate-terms" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>]]></content><author><name></name></author><category term="course" /><category term="language" /><category term="cogsci" /><summary type="html"><![CDATA[Initial steps for cognitive science students interested in language.]]></summary></entry><entry><title type="html">Assignment in lambda expressions</title><link href="https://umutozge.github.io/posts/course/walrus-operator/" rel="alternate" type="text/html" title="Assignment in lambda expressions" /><published>2026-02-12T00:00:00+03:00</published><updated>2026-02-12T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/walrus-operator</id><content type="html" xml:base="https://umutozge.github.io/posts/course/walrus-operator/"><![CDATA[<p>We closed the post <a href="/posts/course/more-state-power/">More state power</a> with a function that collects <code class="language-plaintext highlighter-rouge">n</code> random numbers between <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code> into a list. Here is the function again:</p>
