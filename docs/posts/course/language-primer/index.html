@@ -288,7 +288,7 @@
         
         <div class="numbered">
 
-  <p>This is a quick start for cognitive science students on language.</p>
+  <p>This is a quick start on langugage for cognitive science students.</p>
 
   <h2 id="a-simple-formal-system">A simple formal system</h2>
 
@@ -328,8 +328,7 @@ of the system (=a well-formed expression).</p>
 
   <div class="item" id="def:pq-production" data-kind="definition" data-label="Definition" data-title="Productions of `pq-System`">
 
-    <p>If \(x\vect{p}y\vect{q}z\) is a well-formed expression, then so
- is \(x\vect{p}y\text{-}\vect{q}z\text{-}\).</p>
+    <p>If \(x\vect{p}y\vect{q}z\) is a well-formed expression, again with \(x,y,z\) all composed of zero or more ‘\(\text{-}\)’s, then so is \(x\vect{p}y\text{-}\vect{q}z\text{-}\).</p>
 
   </div>
 
@@ -468,13 +467,9 @@ stage. There is no cure for this. There are no textbooks, which can be read in
 a linear way.<sup id="fnref:strictly"><a href="#fn:strictly" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> You need to have a couple of passes with low reception and come back
 to them later.</p>
 
-  <p>I suggest to start with <a href="/p/chomsky-ss/" target="_blank" rel="noopener">Chomsky (1957)</a><span aria-hidden="true">(first 6 chapters)</span>. This sets the frame of discussion for almost
-everything that follows, and remarkably – considering its impact – requires
-almost no background.</p>
-
-  <p>There are two axes of tension in the field, which I think it is better to
-open-mindedly meet them from the very start, before you find yourself
-socialized<sup id="fnref:gazdar"><a href="#fn:gazdar" class="footnote" rel="footnote" role="doc-noteref">8</a></sup> into one.</p>
+  <p>There are two closely related axes of tension in the field, which I think it
+is better to open-mindedly meet them from the very start, before you find
+yourself socialized<sup id="fnref:gazdar"><a href="#fn:gazdar" class="footnote" rel="footnote" role="doc-noteref">8</a></sup> into one camp or another.</p>
 
   <p>The first of these is the debate on the relevance of probability  (statistics
 and information theory) to the study of language, particularly syntax. Chomsky
@@ -494,12 +489,15 @@ the distinction between prediction and explanation. For convenience, I will call
 this the <strong>data debate</strong>.</p>
 
   <ul>
+    <li>I suggest to start with <a href="/p/chomsky-ss/" target="_blank" rel="noopener">Chomsky (1957)</a>.<sup id="fnref:ss-parts"><a href="#fn:ss-parts" class="footnote" rel="footnote" role="doc-noteref">10</a></sup>
+This sets the frame of discussion for almost everything that follows, and
+remarkably – considering its impact – requires almost no background.</li>
     <li>On how probability fits into the study of language:  <a href="/p/manning-prob/" target="_blank" rel="noopener">Manning (2003)</a> and
 <a href="/p/jurafsky-psycho/" target="_blank" rel="noopener">Jurafsky (2003)</a>.</li>
     <li>Readings relevant for the both debates are <a href="/p/pereira/" target="_blank" rel="noopener">Pereira (2000)</a> and <a href="/p/lappin-shieber/" target="_blank" rel="noopener">Lappin and Shieber (2007)</a></li>
     <li><a href="/p/norvig-chomsky/" target="_blank" rel="noopener">Norvig (2011)</a> addresses the latest views of
 Chomsky on the relevance of (statistical) language models to the study of
-language. Although, Norvig’s reading of Chomsky’s “claims” are rather superficial<sup id="fnref:calmer"><a href="#fn:calmer" class="footnote" rel="footnote" role="doc-noteref">10</a></sup>,
+language. Although, Norvig’s reading of Chomsky’s “claims” are rather superficial,<sup id="fnref:calmer"><a href="#fn:calmer" class="footnote" rel="footnote" role="doc-noteref">11</a></sup>
 I think it is still a good read.</li>
     <li>People sometimes use the term <strong>computational linguistics</strong> to differentiate the
 scientific study of language through computational modeling from the engineering
@@ -508,7 +506,7 @@ field of NLP. But be warned that this is not a well-established terminology. See
     <li>For a taste of the data debate focused on deep neural networks: <a href="/p/pater-2019/" target="_blank" rel="noopener">Pater (2019)</a> and <a href="/p/rawski-heins/" target="_blank" rel="noopener">Rawski and Heins (2023)</a>.</li>
     <li><a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a> and the commentaries on it are a good place
   to get introduced to the data debate within the broader cognitive
-  science.<sup id="fnref:data-debate-terms"><a href="#fn:data-debate-terms" class="footnote" rel="footnote" role="doc-noteref">11</a></sup></li>
+  science.<sup id="fnref:data-debate-terms"><a href="#fn:data-debate-terms" class="footnote" rel="footnote" role="doc-noteref">12</a></sup></li>
     <li>Whenever you hit an unfamiliar linguistic concept or term, consult <a href="/p/bender-fundamentals/" target="_blank" rel="noopener">Bender (2022)</a>. This will work fine as a practical
 reference book until you develop a more serious interest in linguistics and/or
 go on with language research.</li>
@@ -539,13 +537,17 @@ go on with language research.</li>
       <p>There actually <em>are</em>, but they are too opinionated. Also be warned about “handbook” entries that focus on the personal contributions of the author. <a href="#fnref:strictly" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:gazdar">
-      <p><a href="https://nlp.fi.muni.cz/~xjakub/briscoe-gazdar/gpsg.html">Gerald Gazdar</a>:  “Just a collection of buzz words whose appropriate use you are socialized into.” <a href="#fnref:gazdar" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>“Just a collection of buzz words whose appropriate use you are socialized into”, says <a href="https://nlp.fi.muni.cz/~xjakub/briscoe-gazdar/gpsg.html">Gerald Gazdar</a> describing his not so bright opinion about a particular version of Chomskyan generative grammar. <a href="#fnref:gazdar" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:catogorist">
       <p>Closely, related to this is the issue of categorical vs. gradient phenomena in language. <a href="#fnref:catogorist" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
+    <li id="fn:ss-parts">
+      <p>Chapters 1-4, 6, and 8. Chapter 9 is also of interest on Chomsky’s
+take on syntax-semantics relation. <a href="#fnref:ss-parts" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
     <li id="fn:calmer">
-      <p>Objectors of Chomsky on this count largely concentrate on his observation that the grammatical English sentence <em>Colorless green ideas sleep furiously</em> has zero probability on crude frequency based models without smoothing. Chomsky’s attitude toward the place of probability and statistics in linguistics is not as crude as his objectors appear to think. For instance, Norvig seems to have missed footnote 4 on p. 17 of <em>Syntactic Structures</em>. See Chomsky’s preface to 1975 edition of <em>Logical Structure of Linguistic Theory</em>, p.3. Also see the other LSLT quotes in <a href="/p/yang-crunch/" target="_blank" rel="noopener">Yang (2008)</a> for a more accurate view on Chomsky’s stance on the subject. <a href="#fnref:calmer" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>Objectors of Chomsky on this count largely concentrate on his observation that the grammatical English sentence <em>Colorless green ideas sleep furiously</em> has zero probability on crude frequency based models without smoothing, which was the state-of-art at that date, and the corollary he draws from this fact that statistical regularity has no place in defining the notion of “grammatical sentence in language \(L\)”. Chomsky’s attitude toward the place of probability and statistics in language science is not as crude as his objectors appear to think. For instance, Norvig seems to have missed footnote 4 on p. 17 of <em>Syntactic Structures</em>, and his remarks on syntax, semantics, and language use in Chapter 9. See Chomsky’s preface to 1975 edition of <em>Logical Structure of Linguistic Theory</em>, p.3. Also see the other LSLT quotes in <a href="/p/yang-crunch/" target="_blank" rel="noopener">Yang (2008)</a> for a more accurate view on Chomsky’s stance on the subject. <a href="#fnref:calmer" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:data-debate-terms">
       <p>Useful terminology on the data debate are <a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a>’s <strong>pattern recognition</strong> vs. <strong>model building</strong>, and <a href="/p/softmax/" target="_blank" rel="noopener">Frank and Degen (2023)</a>’s <strong>input-output models</strong> vs <strong>internally meaningful models</strong>. <a href="#fnref:data-debate-terms" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
