@@ -113,6 +113,24 @@ var store = [{
         "url": "/exercises/zipfs-law/",
         "teaser": null
       },{
+        "title": "Conditional proability",
+        "excerpt":"The conditional probability of an event \\(A\\) given an event \\(B\\) is the probability of \\(A\\) occurring given that \\(B\\) has occurred. It is denoted as \\(P(A|B)\\) and can be calculated using the formula:   \\[P(A\\mid B) = \\frac{P(A \\cap B)}{P(B)}\\] ","categories": [],
+        "tags": [],
+        "url": "/items/probability/df/df-cond-prob/",
+        "teaser": null
+      },{
+        "title": "Flip",
+        "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p).  ","categories": [],
+        "tags": [],
+        "url": "/items/probability/ex/ex-flip/",
+        "teaser": null
+      },{
+        "title": "Second throw",
+        "excerpt":"You roll a 6-sided dice once; only if the outcome is even, you roll it for a    second time. What is the probability that you roll a 6 on the second roll?  ","categories": [],
+        "tags": [],
+        "url": "/items/probability/ex/ex-second-throw/",
+        "teaser": null
+      },{
         "title": "Iteration by `while`",
         "excerpt":"Let’s start with a simple function defined over integers called the Collatz function \\(C\\). \\[C(n) = \\begin{cases} \\frac{n}{2} &amp; \\text{if } n \\text{ is even}\\\\ 3n + 1 &amp; \\text{if } n \\text{ is odd} \\end{cases}\\] Collatz’ conjecture states that for any positive integer \\(n\\), repeated application of \\(C\\) will...","categories": ["course"],
         "tags": ["iteration"],
@@ -206,6 +224,12 @@ var store = [{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
   },{
+    "title": "Word meaning in minds and machines",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/lake-word-meaning/"
+  },{
+    "title": "Introduction to Natural Language Processing",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/eisenstein/"
+  },{
     "title": "The great number crunch",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/yang-crunch/"
   },{
@@ -272,8 +296,11 @@ var store = [{
     "title": "A logic for default reasoning",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/reiter-default/"
   },{
-    "title": "Solution for Summation",
-    "excerpt":"With `while`: ```python def mysum(seq): total = 0 while seq: total += seq[0] seq = seq[1:] return total ``` With `for`: ```python def mysum(seq): total = 0 for x in seq: total += x return total ``` With `proc`: ```python from funcutils import proc mysum = lambda seq: proc((0,seq), lambda...","url": "https://umutozge.github.io/solutions/ex-sum/"
+    "title": "Solution: Flip",
+    "excerpt":"All you can expect from Python is to generate for you a random number in $$[1,0)$$. In an unbiased `flip` all the shots of `random` below 0.5 would be `True` and above would be `False`, or vice versa. Now you can adjust the bias of the `flip` with the parameter...","url": "https://umutozge.github.io/solutions/ex-flip/"
+  },{
+    "title": "Solution: Second throw",
+    "excerpt":"The solution is fairly straightforward by using conditional probability and the multiplication rule. However, we can also compute the probability directly over the sample space. The sample space consists of the single rolls and the double rolls. Representing single rolls as numbers and double rolls as tuples of numbers, we...","url": "https://umutozge.github.io/solutions/ex-second-throw/"
   },{
     "title": "Tags",
     "excerpt":"","url": "https://umutozge.github.io/tags/"

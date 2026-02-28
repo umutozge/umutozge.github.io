@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-02-18T13:18:42+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.</subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-02-14T00:00:00+03:00</published><updated>2026-02-14T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-02-28T17:36:34+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
+</subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-02-14T00:00:00+03:00</published><updated>2026-02-14T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
 
   <p>This is a quick start on langugage for cognitive science students.</p>
 
@@ -53,7 +54,7 @@ whether it is well-formed or not.</p>
 <em>mean</em>? Or, can you say what they are <em>about</em>? Or, can you say what they are
 <em>for</em>?</p>
 
-  <p>They are theorems of binary addition of non-equal non-negative integers. Their
+  <p>They are theorems of binary addition of non-equal (except \(1 + 1 = 2\)) and non-negative integers. Their
 <em>meaning</em> is this.</p>
 
   <h3 id="levels-of-analysis">Levels of analysis</h3>
@@ -214,7 +215,7 @@ I think it is still a good read.</li>
     <li>People sometimes use the term <strong>computational linguistics</strong> to differentiate the
 scientific study of language through computational modeling from the engineering
 field of NLP. But be warned that this is not a well-established terminology. See
-<a href="/p/stanford-cl/" target="_blank" rel="noopener">Schubert (2020)</a><span aria-hidden="true">(1-4)</span> for a balanced view.</li>
+<a href="/p/stanford-cl/" target="_blank" rel="noopener">Schubert (2020)</a><span aria-hidden="true">, 1-4</span> for a balanced view.</li>
     <li>For a taste of the data debate focused on deep neural networks: <a href="/p/pater-2019/" target="_blank" rel="noopener">Pater (2019)</a> and <a href="/p/rawski-heins/" target="_blank" rel="noopener">Rawski and Heins (2023)</a>.</li>
     <li><a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a> and the commentaries on it are a good place
   to get introduced to the data debate within the broader cognitive

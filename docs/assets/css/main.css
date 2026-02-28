@@ -5414,7 +5414,7 @@ body.layout--home .entries-grid .archive__item-excerpt {
   display: inline-block;
   position: absolute;
   right: 0.5rem;
-  bottom: 0.5rem;
+  bottom: -1rem;
 }
 
 .nb-cell {
@@ -5440,6 +5440,17 @@ body.layout--home .entries-grid .archive__item-excerpt {
 .nb-cell.nb-output .highlight,
 .nb-cell.nb-output pre.highlight {
   margin: 0.25rem 0 0;
+}
+
+.term {
+  font-weight: bold;
+}
+
+/* Only for pages using layout: solution */
+.layout--solution .page__title {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
 }
 
 /*# sourceMappingURL=main.css.map */

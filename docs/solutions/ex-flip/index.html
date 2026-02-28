@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>COGS 502 - Umut Özge</title>
+<!-- begin _includes/seo.html --><title>Solution: Flip - Umut Özge</title>
 <meta name="description" content="Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.">
 
 
@@ -18,8 +18,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Umut Özge">
-<meta property="og:title" content="COGS 502">
-<meta property="og:url" content="https://umutozge.github.io/prelim/schedule/">
+<meta property="og:title" content="Solution: Flip">
+<meta property="og:url" content="https://umutozge.github.io/solutions/ex-flip/">
 
 
   <meta property="og:description" content="Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.">
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="https://umutozge.github.io/prelim/schedule/">
+<link rel="canonical" href="https://umutozge.github.io/solutions/ex-flip/">
 
 
 
@@ -122,7 +122,7 @@
 
   </head>
 
-  <body class="layout--single wide" dir="ltr">
+  <body class="layout--solution wide" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -187,68 +187,10 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-  
-    
-      
-      
-      
-      
-    
-    
-      <nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle Menu</label>
-  <ul class="nav__items">
-    
-      
-      
-        <li>
-          
-            <span class="nav__sub-title">Courses</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/prelim/schedule/" class="active">COGS 502</a></li>
-            
-              <li><a href="/cl/schedule/">COGS 543</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <a href="/exercise/browser/"><span class="nav__sub-title">Exercises</span></a>
-          
-
-          
-        </li>
-      
-        <li>
-          
-            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
-          
-
-          
-        </li>
-      
-    
-  </ul>
-</nav>
-
-    
-  
-  </div>
-
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="COGS 502">
+    <meta itemprop="headline" content="Solution: Flip">
     
     
     
@@ -257,11 +199,9 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="https://umutozge.github.io/prelim/schedule/" itemprop="url">COGS 502
+            <a href="https://umutozge.github.io/solutions/ex-flip/" itemprop="url">Solution: Flip
 </a>
           </h1>
-          
-          <p class="page__subtitle">Symbols and programming</p>
           
           
 
@@ -271,67 +211,43 @@
 
       <section class="page__content" itemprop="text">
         
-        
-<div class="course-card warning--info">
+        <main class="solution">
+  <div class="numbered">
+    <p>All you can expect from Python is to generate for you a random number in \([1,0)\). In an unbiased <code class="language-plaintext highlighter-rouge">flip</code> all the shots of <code class="language-plaintext highlighter-rouge">random</code> below 0.5 would be <code class="language-plaintext highlighter-rouge">True</code> and above would be <code class="language-plaintext highlighter-rouge">False</code>, or vice versa. Now you can adjust the bias of the <code class="language-plaintext highlighter-rouge">flip</code> with the parameter <code class="language-plaintext highlighter-rouge">p</code>.</p>
 
-  <p class="notice--warning"><strong>Spring 2026</strong><br />
-Umut Özge (<a href="mailto:umozge@metu.edu.tr">✉️</a>)
-, İlteriş Bozkurt (TA, <a href="mailto:ilteris@metu.edu.tr">✉️</a>) 
-<br />
-⏰ T 2:40-5:30, II03<br />
-Check <a href="/prelim/syllabus/">the current syllabus</a> for course information and policies. <br />
-Make sure you are on <a href="https://odtuclass.metu.edu.tr/">odtuclass</a> to get announcements and updates.<br />
-📖: reading | 📝: exercise | 🧩: optional/advanced material</p>
+<div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">flip</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Return True with probability p</span><span class="sh">"""</span>
+    <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">random</span>
+    <span class="k">return</span> <span class="nf">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">p</span>
+</code></pre></div>  </div>
+</div>
+<p>You can test your flip by:</p>
+
+<div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">len</span><span class="p">([</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">[</span><span class="nf">flip</span><span class="p">(</span><span class="mf">0.8</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">int</span><span class="p">(</span><span class="mf">1e5</span><span class="p">))]</span> <span class="k">if</span> <span class="n">k</span><span class="p">])</span><span class="o">/</span><span class="mf">1e5</span>
+</code></pre></div>  </div>
+</div>
+<div class="nb-cell nb-output">
+  <div class="nb-prompt"><i class="fa-solid fa-arrow-right"></i></div>
+
+  <pre><code class="language-output">0.80005
+</code></pre>
+
+</div>
+<div class="solution-actions">
+  <button class="btn btn--primary" type="button" onclick="window.history.back()" aria-label="Go back to the previous page">
+    Back to exercise
+  </button>
+  <a class="btn btn--warning" href="/assets/solutions/ex-flip/ex-flip.ipynb">Download .ipynb</a>
+  <a class="btn btn--warning" href="/assets/solutions/ex-flip/ex-flip.py">Download .py</a>
 </div>
 
-<table class="table--course">
-  <thead>
-    <tr>
-      <th style="text-align:left;">Week</th>
-      <th>Content</th>
-    </tr>
-  </thead>
-  <tbody><tr>
-      <td style="text-align:left;">1&nbsp;(19/2)</td>
-      <td><p>Basic notions in probability theory.</p>
 
-<p>📖
-<a href="/p/bertsekas/" target="_blank" rel="noopener">ItP</a><span aria-hidden="true">, 1.1-2</span></p>
-
-<p>📝
-<a href="/p/bertsekas/" target="_blank" rel="noopener">ItP</a><span aria-hidden="true">, Problems 5-10, p. 54-5</span></p>
-
-<p>📝
-For Python warm-up make sure you are comfortable solving
-<a href="/exercises/sequence-operations/" target="_blank" rel="noopener">Sequence operations</a>.</p>
-
-<p>📝
-Check the solution of
-<a href="/exercises/sequence-operations/#ex-freqcount" target="_blank" rel="noopener">this</a>
-for some notes on efficiency in non-mutating dictionary update
-(🧩).</p>
-
-<p>📝
-<a href="/exercises/basic-probability/#ex-flip" target="_blank" rel="noopener">Flip</a>,
-<a href="/exercises/basic-probability/#ex-geometric" target="_blank" rel="noopener">Geometric</a>,
-<a href="/exercises/basic-probability/#ex-unfair-coin" target="_blank" rel="noopener">Unfair coin</a>(🧩).</p>
-</td>
-    </tr><tr>
-      <td style="text-align:left;">2&nbsp;(26/2)</td>
-      <td>
-<p>Conditional probability; returning functions.</p>
-
-<p>📖
-<a href="/p/bertsekas/" target="_blank" rel="noopener">ItP</a><span aria-hidden="true">, ‘1.3’</span></p>
-
-<p>📝
-<a href="/p/bertsekas/" target="_blank" rel="noopener">ItP</a><span aria-hidden="true">, Problems 14-18 on p. 56-7</span></p>
-
-<p>Check the solution for the <a href="/exercises/basic-probability/#ex-second-throw">quiz
-question</a>.</p>
-</td>
-    </tr></tbody>
-</table>
+  </div>
+</main>
 
         
       </section>

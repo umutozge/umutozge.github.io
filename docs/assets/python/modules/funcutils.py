@@ -28,6 +28,41 @@ def proc(state, alive, update, debug=False, display=lambda x: print(x) or x):
         state = update(state) if not debug else display(update(state))
     return state
 
+def lproc(state, alive, update):
+    """A lazy version of proc that produces an iterator of states."""
+    done = False
+    _sentinel = object()
+
+    def f():
+        nonlocal state, done
+        if done:
+            return _sentinel
+        elif alive(state):
+            result = state
+            state = update(state)
+            return result
+        else:
+            done = True
+            return state
+
+    return iter(f, _sentinel)
+
+def make_state(dict):
+    """Create a namedtuple state object from a dictionary.
+
+    In:
+        dict: dictionary of state variables
+    Out:
+        namedtuple with fields from the dictionary keys
+
+    Example:
+        >>> state = make_state({'x': 1, 'y': 2})
+        >>> state.x
+        1
+    """
+    from collections import namedtuple
+    return namedtuple('State', dict.keys())(**dict)
+
 def make_generator(seq, init):
     """Create a generator from a sequence function.
 

@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-02-18T13:18:42+03:00">
+  <meta property="article:published_time" content="2026-02-28T17:36:34+03:00">
 
 
 
@@ -124,7 +124,7 @@
 
   </head>
 
-  <body class="layout--single wide" dir="ltr">
+  <body class="layout--numbered wide" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -142,7 +142,7 @@
         
         <a class="site-title" href="/">
           Umut Özge
-          <span class="site-subtitle">Graduate School of Informatics, Middle East Technical University</span>
+          <span class="site-subtitle">Graduate School of Informatics, METU</span>
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a
@@ -252,7 +252,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Basic probability">
     <meta itemprop="description" content="Probability and programming exercises.">
-    <meta itemprop="datePublished" content="2026-02-18T13:18:42+03:00">
+    <meta itemprop="datePublished" content="2026-02-28T17:36:34+03:00">
     
 
     <div class="page__inner-wrap">
@@ -272,62 +272,107 @@
       <section class="page__content" itemprop="text">
         
         <div class="numbered">
+  
+<div class="item" id="ex-flip" data-kind="exercise" data-label="Exercise" data-title="Flip">
 
-  <div class="item" id="ex-flip" data-kind="exercise" data-label="Exercise" data-title="Flip">
+    
+      <p>Define <code class="language-plaintext highlighter-rouge">flip(p)</code> that returns <code class="language-plaintext highlighter-rouge">True</code> with probability <code class="language-plaintext highlighter-rouge">p</code> and <code class="language-plaintext highlighter-rouge">False</code> with probability <code class="language-plaintext highlighter-rouge">(1-p)</code>.</p>
 
-    <p>Define <code class="language-plaintext highlighter-rouge">flip(p)</code> that returns <code class="language-plaintext highlighter-rouge">True</code> with probability <code class="language-plaintext highlighter-rouge">p</code> and <code class="language-plaintext highlighter-rouge">False</code> with probability <code class="language-plaintext highlighter-rouge">(1-p)</code>.</p>
-    <details>
-      <summary>Criteria</summary>
+    
 
-      <p>The only built-in you can use is <code class="language-plaintext highlighter-rouge">radoom.random</code>:</p>
-      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="n">random</span>
+
+    
+      
+
+      
+      <details class="item-criteria">
+        <summary>Criteria</summary>
+        <p>The only built-in you can use is <code class="language-plaintext highlighter-rouge">radoom.random</code>:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="n">random</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="c1"># returns a number in [0,1)
 </span><span class="mf">0.4013560344771465</span>
-</code></pre></div>      </div>
-      <p>which returns a uniformly distributed number in the interval <code class="language-plaintext highlighter-rouge">[0,1)</code>. You cannot
+</code></pre></div></div>
+<p>which returns a uniformly distributed number in the interval <code class="language-plaintext highlighter-rouge">[0,1)</code>. You cannot
 specify any parameters to <code class="language-plaintext highlighter-rouge">random.random()</code>.</p>
-    </details>
 
+      </details>
+      
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-flip/" aria-label="Solution for ex-flip">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
   </div>
 
-  <div class="item" id="ex-geometric" data-kind="exercise" data-label="Exercise" data-title="Geometric">
+<div class="item" id="ex-geometric" data-kind="exercise" data-label="Exercise" data-title="Geometric">
 
-    <p>Define a function <code class="language-plaintext highlighter-rouge">geometric(p)</code> that flips with probability <code class="language-plaintext highlighter-rouge">p</code> until it succeeds and returns the number of failed trials before that.</p>
-    <details>
-      <summary>Criteria</summary>
-      <p>If you are at a stage where we covered recursion, use recursion. Otherwise, use
+  <p>Define a function <code class="language-plaintext highlighter-rouge">geometric(p)</code> that flips with probability <code class="language-plaintext highlighter-rouge">p</code> until it succeeds and returns the number of failed trials before that.</p>
+  <details>
+    <summary>Criteria</summary>
+    <p>If you are at a stage where we covered recursion, use recursion. Otherwise, use
 iteration.</p>
-    </details>
+  </details>
 
-  </div>
+</div>
 
-  <div class="item" id="ex-unfair-coin" data-kind="exercise" data-label="Exercise" data-title="The unfair coin">
+<div class="item" id="ex-unfair-coin" data-kind="exercise" data-label="Exercise" data-title="The unfair coin">
 
-    <p>You need to make a toss with equal chance for heads and tails, but you have a
+  <p>You need to make a toss with equal chance for heads and tails, but you have a
 coin that you know is biased, but don’t know by how much and in which way. Using
 only this biased coin, design an experiment that is equivalent to making a fair
 toss. You can assume that the outcomes of successive tosses of the coin are
 independent.</p>
 
-    <details>
-      <summary>Solution</summary>
+  <details>
+    <summary>Solution</summary>
 
-      <p>The example is due to
+    <p>The example is due to
  <a href="https://en.wikipedia.org/wiki/John_von_Neumann">John von Neumann</a>,
 taken from his 1951 paper
 <a href="https://mcnp-green.lanl.gov/pdf_files/InBook_Computing_1961_Neumann_JohnVonNeumannCollectedWorks_VariousTechniquesUsedinConnectionwithRandomDigits.pdf">Various Techniques Used in Connection with Random Digits</a></p>
 
-      <p>The experiment consists of two tosses of the biased coin. If the result is <code class="language-plaintext highlighter-rouge">HT</code>
+    <p>The experiment consists of two tosses of the biased coin. If the result is <code class="language-plaintext highlighter-rouge">HT</code>
 you agree to count it as “heads”; if the result is <code class="language-plaintext highlighter-rouge">TH</code> you agree to count it as
 “tails”, or vice versa. If the result is <code class="language-plaintext highlighter-rouge">HH</code> or <code class="language-plaintext highlighter-rouge">TT</code> you ignore the result and
 start over. This is equivalent to a fair toss under the assumption that the
 outcomes of the successive tosses are independent.</p>
 
-    </details>
-  </div>
-
+  </details>
 </div>
 
+<div class="item" id="ex-second-throw" data-kind="exercise" data-label="Exercise" data-title="Second throw">
+
+    
+      <p>You roll a 6-sided dice once; only if the outcome is even, you roll it for a
+   second time. What is the probability that you roll a 6 on the second roll?</p>
+
+    
+
+
+    
+      
+
+      
+      <details class="item-criteria">
+        <summary>Criteria</summary>
+        <p>Do not use the multiplication rule or conditional probability. Compute
+the probability directly over the sample space.</p>
+
+      </details>
+      
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-second-throw/" aria-label="Solution for ex-second-throw">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
+
+
+</div>
 
         
       </section>
@@ -361,7 +406,7 @@ outcomes of the successive tosses are independent.</p>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-02-18T13:18:42+03:00">2026-02-18</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-02-28T17:36:34+03:00">2026-02-28</time></p>
 
       </footer>
 
