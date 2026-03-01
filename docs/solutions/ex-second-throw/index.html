@@ -213,9 +213,12 @@
         
         <main class="solution">
   <div class="numbered">
-    <p>The solution is fairly straightforward by using conditional probability and the
-multiplication rule. However, we can also compute the probability directly over
-the sample space.</p>
+    <p>The exercise can be solved by using the definition of the conditional
+probability, or we can also compute the probability of the “6 on second role”
+event directly over the sample space using the fundamental axioms and theorems
+of probability.</p>
+
+<h3 id="without-conditional-probabiilty">Without conditional probabiilty</h3>
 
 <p>The sample space consists of the single rolls and the double rolls. Representing
 single rolls as numbers and double rolls as tuples of numbers, we have:</p>
@@ -228,35 +231,60 @@ single rolls as numbers and double rolls as tuples of numbers, we have:</p>
 <p>There are 3 outcomes that have a 6 in the second roll, namely \((2,6), (4,6),
 (6,6)\). Therefore, the probability of rolling a 6 on the second roll is:
 \(\frac{3}{21}= \frac{1}{7}\), one might think. But this is not correct, because
-this reasoning assumes that all the 21 outcomes are equally likely, which is not
-the case. Why not?</p>
+this reasoning assumes that all the 21 outcomes are equally likely, but they are
+not. Why so?</p>
 
 <p>Concentrate on the first roll. The event of having an odd number must share the
-same amount of cake (probability mass) with all the tuples that start with an
-even number. This is because our dice is fair. Therefore, what is left from the
+same amount of cake (probability mass) with having an even number.
+This is because our dice is fair. Therefore, what is left from the
 entire cake to the set of tuples is only the half. As there is no reason to
-think that the outcomes in the tuples are not equally likely, each and every
+think that the outcomes in the tuples region of our sample space are not equally likely, each and every
 tuple should share the half of the cake equally among themselves. This means
 \(1/2\) total mass of probability will be shared between 18 tuples, leaving
-\(1/36\) to each tuple. As we have only \(3\) tuples with a \(6\) in the second
+\(1/36\) to each tuple. As there are \(3\) tuples with a \(6\) in the second
 roll, the probability of rolling a 6 on the second roll is \(3 \times 1/36 =
 1/12\).</p>
 
-<p>If you have the notion of conditional probability and the multiplication rule in
-place, then the solution is easier to find. To get a \(6\) in the second roll,
-you need to have two things happening together: you roll an even number in the
-first roll, and you roll a \(6\) in the second roll. The probability of doing
-these at the same time is  the product of their probabilities, which is
-\(1/2\times 1/6 = 1/12\).</p>
+<h3 id="with-conditional-probability">With conditional probability</h3>
+
+<p>First the definition:</p>
+
+<div class="item" id="df-cond-prob" data-kind="definition" data-label="Definition" data-title="Conditional proability">
+
+    
+      <p>The <strong>conditional probability</strong> of an event \(A\) given an event \(B\) is the
+probability of \(A\) occurring given that \(B\) has occurred. It is denoted as
+\(P(A|B)\) and can be calculated using the formula:</p>
+
+\[P(A\mid B) = \frac{P(A \cap B)}{P(B)}\]
+
+    
+
+
+    
+
+    
+  </div>
+
+<p>Let \(A=\)“6 on second roll” and \(B=\)“even on first roll”. We are interested
+in finding \(P(A\cap B)\). Rearranging we get:</p>
+
+\[P(A\cap B) = P(A\mid B)P(B)\]
+
+<p>\(P(B)=1/2\) is not hard to find. What about \(P(A\mid B)\)? If we know that the
+first roll was even, then we now that there is a second roll, and that the
+second role has equally likely \(6\) outcomes. Therefore, \(P(A\mid B) = 1/6\).
+Putting everything together,</p>
+
+\[P(A\cap B)= \frac{1}{2}\times\frac{1}{6}=\frac{1}{12}\]
+
+<hr />
 
 <div class="solution-actions">
   <button class="btn btn--primary" type="button" onclick="window.history.back()" aria-label="Go back to the previous page">
     Back to exercise
   </button>
-  <a class="btn btn--warning" href="/assets/solutions/ex-second-throw/ex-second-throw.ipynb">Download .ipynb</a>
-  <a class="btn btn--warning" href="/assets/solutions/ex-second-throw/ex-second-throw.py">Download .py</a>
 </div>
-
 
   </div>
 </main>

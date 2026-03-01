@@ -300,7 +300,7 @@ var store = [{
     "excerpt":"All you can expect from Python is to generate for you a random number in $$[1,0)$$. In an unbiased `flip` all the shots of `random` below 0.5 would be `True` and above would be `False`, or vice versa. Now you can adjust the bias of the `flip` with the parameter...","url": "https://umutozge.github.io/solutions/ex-flip/"
   },{
     "title": "Solution: Second throw",
-    "excerpt":"The solution is fairly straightforward by using conditional probability and the multiplication rule. However, we can also compute the probability directly over the sample space. The sample space consists of the single rolls and the double rolls. Representing single rolls as numbers and double rolls as tuples of numbers, we...","url": "https://umutozge.github.io/solutions/ex-second-throw/"
+    "excerpt":"The exercise can be solved by using the definition of the conditional probability, or we can also compute the probability of the \"6 on second role\" event directly over the sample space using the fundamental axioms and theorems of probability. ### Without conditional probabiilty The sample space consists of the...","url": "https://umutozge.github.io/solutions/ex-second-throw/"
   },{
     "title": "Tags",
     "excerpt":"","url": "https://umutozge.github.io/tags/"
