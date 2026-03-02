@@ -74,7 +74,9 @@
       macros: {
         vectg: ["\\boldsymbol{#1}", 1],
         vect: ["\\mathbf{#1}", 1],
-        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1],
+        given: "{\\mathrel{\\mkern-1mu\\mid\\mkern-1mu}}",
+        card: ["\\mid\\mkern-3mu#1\\mkern-3mu\\mid", 1]
       }
     },
     options: {
@@ -226,7 +228,7 @@ single rolls as numbers and double rolls as tuples of numbers, we have:</p>
 \[\Omega = \lbrace 1,3,5\rbrace \cup \lbrace 2,4,6\rbrace \times \lbrace
 1,2,3,4,5,6\rbrace\]
 
-<p>The total number of outcomes \(\mid\Omega\mid = 21\).</p>
+<p>The total number of outcomes \(\card{\Omega} = 21\).</p>
 
 <p>There are 3 outcomes that have a 6 in the second roll, namely \((2,6), (4,6),
 (6,6)\). Therefore, the probability of rolling a 6 on the second roll is:
@@ -254,26 +256,30 @@ roll, the probability of rolling a 6 on the second roll is \(3 \times 1/36 =
     
       <p>The <strong>conditional probability</strong> of an event \(A\) given an event \(B\) is the
 probability of \(A\) occurring given that \(B\) has occurred. It is denoted as
-\(P(A|B)\) and can be calculated using the formula:</p>
+\(P(A\given B)\) and can be calculated using the formula:</p>
 
-\[P(A\mid B) = \frac{P(A \cap B)}{P(B)}\]
-
-    
-
+\[P(A\given B) = \frac{P(A \cap B)}{P(B)}\]
 
     
 
+
+    
+
+    
+      <a class="solution-badge" href="/solutions/df-cond-prob/" aria-label="Solution for df-cond-prob">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
     
   </div>
 
 <p>Let \(A=\)“6 on second roll” and \(B=\)“even on first roll”. We are interested
 in finding \(P(A\cap B)\). Rearranging we get:</p>
 
-\[P(A\cap B) = P(A\mid B)P(B)\]
+\[P(A\cap B) = P(A\given B)P(B)\]
 
-<p>\(P(B)=1/2\) is not hard to find. What about \(P(A\mid B)\)? If we know that the
+<p>\(P(B)=1/2\) is not hard to find. What about \(P(A\given B)\)? If we know that the
 first roll was even, then we now that there is a second roll, and that the
-second role has equally likely \(6\) outcomes. Therefore, \(P(A\mid B) = 1/6\).
+second role has equally likely \(6\) outcomes. Therefore, \(P(A\given B) = 1/6\).
 Putting everything together,</p>
 
 \[P(A\cap B)= \frac{1}{2}\times\frac{1}{6}=\frac{1}{12}\]
@@ -285,6 +291,7 @@ Putting everything together,</p>
     Back to exercise
   </button>
 </div>
+
 
   </div>
 </main>

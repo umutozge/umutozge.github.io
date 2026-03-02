@@ -113,8 +113,20 @@ var store = [{
         "url": "/exercises/zipfs-law/",
         "teaser": null
       },{
+        "title": "Zero property of multiplication",
+        "excerpt":"Given any number \\(n\\) you can write it as an addition of \\(n\\) number of \\(1\\)’s: \\[n = 1 + 1 + \\cdots + 1 (n\\text{ times})\\] Therefore, we have: \\[n\\times 0 = (1 + 1 + \\cdots + 1)\\times 0\\] By distributivity of multiplication over addition, we have: \\[n\\times...","categories": [],
+        "tags": [],
+        "url": "/items/numbers/pr-mult-zero/",
+        "teaser": null
+      },{
+        "title": "Zero property of multiplication",
+        "excerpt":"For any number \\(n\\), we have \\(n \\times 0 = 0\\).  ","categories": [],
+        "tags": [],
+        "url": "/items/numbers/th-mult-zero/",
+        "teaser": null
+      },{
         "title": "Conditional proability",
-        "excerpt":"The conditional probability of an event \\(A\\) given an event \\(B\\) is the probability of \\(A\\) occurring given that \\(B\\) has occurred. It is denoted as \\(P(A|B)\\) and can be calculated using the formula:   \\[P(A\\mid B) = \\frac{P(A \\cap B)}{P(B)}\\] ","categories": [],
+        "excerpt":"The conditional probability of an event \\(A\\) given an event \\(B\\) is the probability of \\(A\\) occurring given that \\(B\\) has occurred. It is denoted as \\(P(A\\given B)\\) and can be calculated using the formula:   \\[P(A\\given B) = \\frac{P(A \\cap B)}{P(B)}\\] ","categories": [],
         "tags": [],
         "url": "/items/probability/df/df-cond-prob/",
         "teaser": null
@@ -129,6 +141,12 @@ var store = [{
         "excerpt":"You roll a 6-sided dice once; only if the outcome is even, you roll it for a    second time. What is the probability that you roll a 6 on the second roll?  ","categories": [],
         "tags": [],
         "url": "/items/probability/ex/ex-second-throw/",
+        "teaser": null
+      },{
+        "title": "Summation",
+        "excerpt":"Define a function mysum(seq) that returns the sum of all numbers in the list seq. def mysum(seq): \"\"\"Return the sum of all numbers in seq. In: seq - a sequnce of summable items Out: sum of all items in seq \"\"\" Solutions With while: def mysum(seq): total = 0 while...","categories": [],
+        "tags": [],
+        "url": "/items/prog/ex-sum/",
         "teaser": null
       },{
         "title": "Iteration by `while`",
@@ -224,6 +242,9 @@ var store = [{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
   },{
+    "title": "Mathematics: A Very Short Introduction",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/gowers-math/"
+  },{
     "title": "Word meaning in minds and machines",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/lake-word-meaning/"
   },{
@@ -296,11 +317,17 @@ var store = [{
     "title": "A logic for default reasoning",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/reiter-default/"
   },{
+    "title": "Proof of Zero property of multiplication",
+    "excerpt":"Proof not written yet.          Back to statement      ","url": "https://umutozge.github.io/proofs/th-mult-zero/"
+  },{
     "title": "Solution: Flip",
     "excerpt":"All you can expect from Python is to generate for you a random number in $$[1,0)$$. In an unbiased `flip` all the shots of `random` below 0.5 would be `True` and above would be `False`, or vice versa. Now you can adjust the bias of the `flip` with the parameter...","url": "https://umutozge.github.io/solutions/ex-flip/"
   },{
     "title": "Solution: Second throw",
     "excerpt":"The exercise can be solved by using the definition of the conditional probability, or we can also compute the probability of the \"6 on second role\" event directly over the sample space using the fundamental axioms and theorems of probability. ### Without conditional probabiilty The sample space consists of the...","url": "https://umutozge.github.io/solutions/ex-second-throw/"
+  },{
+    "title": "Solution: Summation",
+    "excerpt":"With `while`: ```python def mysum(seq): total = 0 while seq: total += seq[0] seq = seq[1:] return total ``` With `for`: ```python def mysum(seq): total = 0 for x in seq: total += x return total ``` With `proc`: ```python from funcutils import proc mysum = lambda seq: proc((0,seq), lambda...","url": "https://umutozge.github.io/solutions/ex-sum/"
   },{
     "title": "Tags",
     "excerpt":"","url": "https://umutozge.github.io/tags/"

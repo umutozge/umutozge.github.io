@@ -5379,7 +5379,7 @@ body.layout--home .entries-grid .archive__item-excerpt {
 }
 
 .numbered .item {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .numbered .item {
@@ -5400,6 +5400,10 @@ body.layout--home .entries-grid .archive__item-excerpt {
 /* Optional per-kind theming later */
 .numbered .item[data-kind=exercise] {
   border-left-color: #0FA5DB;
+}
+
+.numbered .item[data-kind=theorem] {
+  border-left-color: #4A90E2;
 }
 
 .course-card {

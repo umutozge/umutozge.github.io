@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-03-01T10:20:13+03:00">
+  <meta property="article:published_time" content="2026-03-02T14:04:12+03:00">
 
 
 
@@ -76,7 +76,9 @@
       macros: {
         vectg: ["\\boldsymbol{#1}", 1],
         vect: ["\\mathbf{#1}", 1],
-        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1],
+        given: "{\\mathrel{\\mkern-1mu\\mid\\mkern-1mu}}",
+        card: ["\\mid\\mkern-3mu#1\\mkern-3mu\\mid", 1]
       }
     },
     options: {
@@ -252,7 +254,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Sequence operations">
     <meta itemprop="description" content="Exercises on sequence manipulation.">
-    <meta itemprop="datePublished" content="2026-03-01T10:20:13+03:00">
+    <meta itemprop="datePublished" content="2026-03-02T14:04:12+03:00">
     
 
     <div class="page__inner-wrap">
@@ -277,73 +279,83 @@
 
   <div class="item" id="ex-sum" data-kind="exercise" data-label="Exercise" data-title="Summation">
 
-    <p>Define a function <code class="language-plaintext highlighter-rouge">mysum(seq)</code> that returns the sum of all numbers in the list <code class="language-plaintext highlighter-rouge">seq</code>.</p>
+    
+      <p>Define a function <code class="language-plaintext highlighter-rouge">mysum(seq)</code> that returns the sum of all numbers in the list <code class="language-plaintext highlighter-rouge">seq</code>.</p>
 
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mysum</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mysum</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
     <span class="sh">"""</span><span class="s">Return the sum of all numbers in seq.
     In:
         seq - a sequnce of summable items
     Out:
         sum of all items in seq
     </span><span class="sh">"""</span>
-</code></pre></div>    </div>
+</code></pre></div></div>
 
-    <details>
-      <summary> Solutions </summary>
-      <p>With <code class="language-plaintext highlighter-rouge">while</code>:</p>
+<details>
+  <summary> Solutions </summary>
+  <p>With <code class="language-plaintext highlighter-rouge">while</code>:</p>
 
-      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mysum</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mysum</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
 <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">seq</span><span class="p">:</span>
     <span class="n">total</span> <span class="o">+=</span> <span class="n">seq</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
 <span class="k">return</span> <span class="n">total</span>
-</code></pre></div>      </div>
+</code></pre></div>  </div>
 
-      <p>With <code class="language-plaintext highlighter-rouge">for</code></p>
-      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mysum</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+  <p>With <code class="language-plaintext highlighter-rouge">for</code></p>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mysum</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
         <span class="n">total</span> <span class="o">+=</span> <span class="n">x</span>
     <span class="k">return</span> <span class="n">total</span>
-</code></pre></div>      </div>
+</code></pre></div>  </div>
 
-      <p>With <code class="language-plaintext highlighter-rouge">proc</code>:</p>
-      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">funcutils</span> <span class="kn">import</span> <span class="n">proc</span>
+  <p>With <code class="language-plaintext highlighter-rouge">proc</code>:</p>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">funcutils</span> <span class="kn">import</span> <span class="n">proc</span>
 <span class="n">mysum</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">seq</span><span class="p">:</span> <span class="nf">proc</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="n">seq</span><span class="p">),</span>
                          <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
                          <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">:]))[</span><span class="mi">0</span><span class="p">]</span>
-</code></pre></div>      </div>
-      <p>or</p>
-      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysum</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">seq</span><span class="p">:</span> <span class="nf">proc</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">seq</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="nf">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">+</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">:])[</span><span class="mi">0</span><span class="p">]</span>
-</code></pre></div>      </div>
+</code></pre></div>  </div>
+  <p>or</p>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysum</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">seq</span><span class="p">:</span> <span class="nf">proc</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">seq</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="nf">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">+</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">:])[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>  </div>
 
-      <p>With <code class="language-plaintext highlighter-rouge">funcutils.reduce</code>, which is I think as short as you get:</p>
+  <p>With <code class="language-plaintext highlighter-rouge">funcutils.reduce</code>, which is I think as short as you get:</p>
 
-      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
 <span class="kn">from</span> <span class="n">operator</span> <span class="kn">import</span> <span class="n">add</span>
 
 <span class="n">mysum</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">seq</span><span class="p">:</span> <span class="nf">reduce</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span>
-</code></pre></div>      </div>
+</code></pre></div>  </div>
 
-      <p>Another thing that the <code class="language-plaintext highlighter-rouge">reduce</code> solution is superior to the others, including Python’s built-in <code class="language-plaintext highlighter-rouge">sum</code>, is that it can project the generality of addition. You cannot find the “sum” of a list of lists with <code class="language-plaintext highlighter-rouge">sum</code>, but with <code class="language-plaintext highlighter-rouge">mysum</code> defined with <code class="language-plaintext highlighter-rouge">reduce</code> you can do it:</p>
+  <p>Another thing that the <code class="language-plaintext highlighter-rouge">reduce</code> solution is superior to the others, including Python’s built-in <code class="language-plaintext highlighter-rouge">sum</code>, is that it can project the generality of addition. You cannot find the “sum” of a list of lists with <code class="language-plaintext highlighter-rouge">sum</code>, but with <code class="language-plaintext highlighter-rouge">mysum</code> defined with <code class="language-plaintext highlighter-rouge">reduce</code> you can do it:</p>
 
-      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nf">mysum</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]])</span>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nf">mysum</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]])</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-</code></pre></div>      </div>
+</code></pre></div>  </div>
 
-      <p>One drawback is that <code class="language-plaintext highlighter-rouge">reduce</code>-based solution cannot handle empty sequences. For that, you need to specify 0 as a third argument for arithmetic addition and <code class="language-plaintext highlighter-rouge">[]</code> for list concatenation.</p>
-    </details>
+  <p>One drawback is that <code class="language-plaintext highlighter-rouge">reduce</code>-based solution cannot handle empty sequences. For that, you need to specify 0 as a third argument for arithmetic addition and <code class="language-plaintext highlighter-rouge">[]</code> for list concatenation.</p>
+</details>
 
-    <details>
-      <summary> Library </summary>
-      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<details>
+  <summary> Library </summary>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
 <span class="nb">sum</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="nf">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span> <span class="c1"># Output: 10
-</span></code></pre></div>      </div>
-    </details>
+</span></code></pre></div>  </div>
+</details>
 
-    <p><a class="solution-badge" href="/solutions/ex-sum/" aria-label="Solution for Summation"><i class="fa fa-battery-quarter" aria-hidden="true"></i></a></p>
+    
+
+
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-sum/" aria-label="Solution for ex-sum">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
   </div>
 
   <div class="item" id="ex-insert" data-kind="exercise" data-label="Exercise" data-title="Insertion">
@@ -764,7 +776,7 @@ functional updates efficient. Here is a solution with <code class="language-plai
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-01T10:20:13+03:00">2026-03-01</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-02T14:04:12+03:00">2026-03-02</time></p>
 
       </footer>
 
