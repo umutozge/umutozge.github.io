@@ -5400,6 +5400,8 @@ body.layout--home .entries-grid .archive__item-excerpt {
 /* Optional per-kind theming later */
 .numbered .item[data-kind=exercise] {
   border-left-color: #0FA5DB;
+  margin: 0.5rem 0.5rem 1.5rem 0rem;
+  padding-bottom: 0.3rem;
 }
 
 .numbered .item[data-kind=theorem] {

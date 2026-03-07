@@ -1,0 +1,516 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Phrase Structure Grammars - Umut Özge</title>
+<meta name="description" content="Building phrase structure grammars to generate sentences and analyze their structure.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Umut Özge">
+<meta property="og:title" content="Phrase Structure Grammars">
+<meta property="og:url" content="https://umutozge.github.io/exercises/psg/">
+
+
+  <meta property="og:description" content="Building phrase structure grammars to generate sentences and analyze their structure.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-03-07T15:06:52+03:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/exercises/psg/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+<script type="text/javascript">
+  window.MathJax = {
+    loader: {load: ['[tex]/ams']},
+    tex: {
+      packages: {'[+]': ['ams']},
+      tags: 'all',
+      macros: {
+        vectg: ["\\boldsymbol{#1}", 1],
+        vect: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1],
+        given: "{\\mathrel{\\mkern-1mu\\mid\\mkern-1mu}}",
+        card: ["\\mid\\mkern-3mu#1\\mkern-3mu\\mid", 1]
+      }
+    },
+    options: {
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<!-- MathJax configuration for automatic equation numbering 
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      packages: ['base','ams'],
+      tags: 'all',
+      macros: {
+        vect: ["\\boldsymbol{#1}", 1],
+        vv: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      },
+    },
+    options: {
+      // Optional: Ensure equation numbers are on the right
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+-->
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--numbered narrow" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Umut Özge
+          <span class="site-subtitle">Graduate School of Informatics, METU</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Courses</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/prelim/schedule/">COGS 502</a></li>
+            
+              <li><a href="/cl/schedule/">COGS 543</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <a href="/exercise/browser/"><span class="nav__sub-title">Exercises</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
+          
+
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Phrase Structure Grammars">
+    <meta itemprop="description" content="Building phrase structure grammars to generate sentences and analyze their structure.">
+    <meta itemprop="datePublished" content="2026-03-07T15:06:52+03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+              <h1 id="page-title" class="page__title" itemprop="headline">
+                <a href="https://umutozge.github.io/exercises/psg/" itemprop="url">Phrase Structure Grammars
+</a>
+              </h1>
+            
+          
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="numbered">
+  <p>In the following suit of exercises you are asked to use the Python module <code class="language-plaintext highlighter-rouge">nltk</code>
+to build and use phrase structure grammars. You need to first install the <code class="language-plaintext highlighter-rouge">nltk</code>
+module if you haven’t already. You can do this using pip:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>nltk
+</code></pre></div></div>
+
+<p>Or, if you are on <code class="language-plaintext highlighter-rouge">conda</code>, you can use:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> conda-forge nltk
+</code></pre></div></div>
+
+<p>Import the packages you need:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">nltk</span>
+<span class="kn">from</span> <span class="n">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="n">nltk</span> <span class="kn">import</span> <span class="n">CFG</span>
+<span class="kn">from</span> <span class="n">nltk.parse</span> <span class="kn">import</span> <span class="n">ChartParser</span>
+</code></pre></div></div>
+
+<p>Here is an example grammar in <code class="language-plaintext highlighter-rouge">nltk</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">grammar</span> <span class="o">=</span> <span class="n">CFG</span><span class="p">.</span><span class="nf">fromstring</span><span class="p">(</span><span class="sh">"""</span><span class="s">
+S  -&gt; NP VP
+NP -&gt; Det N
+VP -&gt; V
+VP -&gt; V NP
+
+Det -&gt; </span><span class="sh">'</span><span class="s">every</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">the</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">some</span><span class="sh">'</span><span class="s">
+N   -&gt; </span><span class="sh">'</span><span class="s">student</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">professor</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">dog</span><span class="sh">'</span><span class="s">
+V   -&gt; </span><span class="sh">'</span><span class="s">walks</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">saw</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">talks</span><span class="sh">'</span><span class="s">
+</span><span class="sh">"""</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>You build a parser based on the grammar you defined:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span> <span class="o">=</span> <span class="nc">ChartParser</span><span class="p">(</span><span class="n">grammar</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Here is a helper function that maps a sentence (<code class="language-plaintext highlighter-rouge">str</code>) to a list of resulting parse trees:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">parse_sentence</span><span class="p">(</span><span class="n">parser</span><span class="p">,</span> <span class="n">sentence</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Map sentence to the set of its parse trees.
+
+       In:
+           parser: nltk.parse.chart.ChartParser object
+           sentence: str
+       Out:
+           trees: list of nltk Tree objects
+    </span><span class="sh">"""</span>
+    <span class="k">return</span>\
+        <span class="nf">list</span><span class="p">(</span>
+            <span class="n">parser</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span>
+                <span class="nf">word_tokenize</span><span class="p">(</span>
+                    <span class="n">sentence</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+</code></pre></div></div>
+
+<p>You can use the <code class="language-plaintext highlighter-rouge">parse_sentence</code> function to get the parse trees for a given sentence.
+Make it a little convenient by:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parse</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">sentence</span><span class="p">:</span> <span class="nf">parse_sentence</span><span class="p">(</span><span class="n">parser</span><span class="p">,</span> <span class="n">sentence</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Now you can parse sentences like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trees</span> <span class="o">=</span> <span class="nf">parse</span><span class="p">(</span><span class="sh">"</span><span class="s">every student walks</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This will give you a list of parse trees for the sentence “every student walks”. You can print the trees to see their structure:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trees</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">pretty_print</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>to the console, or use  <code class="language-plaintext highlighter-rouge">trees[0].draw()</code> to visualize the tree in a separate
+window.</p>
+
+<div class="item" id="ex-subcat" data-kind="exercise" data-label="Exercise" data-title="Subcategorization">
+
+    
+      <p>You are given the following grammar:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>S  -&gt; NP VP
+NP -&gt; Det N
+VP -&gt; V
+VP -&gt; V NP
+
+Det -&gt; 'every' | 'a' | 'the' | 'some'
+N   -&gt; 'student' | 'professor' | 'dog'
+V   -&gt; 'walks' | 'saw' | 'talks'
+</code></pre></div></div>
+
+<ol>
+  <li>Extend your grammar so that you can parse sentences like  <em>Every student saw a dog with a telescope</em>, with its two readings (i.e.,
+     the one in which the dog has a telescope, and the one in which the
+     student has a telescope).</li>
+  <li>Your grammar generates ungrammatical sentences like <em>*Every student saw</em>
+(English requires an explicit object in this case). Modify your grammar so
+that it does not generate such sentences. But, be careful, both <em>Every
+student walks</em> and <em>Every student walks a dog</em> are grammatical, you should do
+justice to this fact as well.</li>
+  <li>Extend your grammar so that your grammar accepts sentences like <em>Every student talks
+to a professor</em> and rejects <em>*Every student talks a professor</em>.</li>
+</ol>
+
+<p>Feel free to introduce new non-terminal symbols to your grammar.</p>
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#grammar"
+         class="page__taxonomy-item p-category" rel="tag">
+        grammar <span class="taxonomy__count">1</span>
+      </a>
+    
+      
+      
+      <a href="/tags/#language"
+         class="page__taxonomy-item p-category" rel="tag">
+        language <span class="taxonomy__count">4</span>
+      </a>
+    
+      
+      
+      <a href="/tags/#parsing"
+         class="page__taxonomy-item p-category" rel="tag">
+        parsing <span class="taxonomy__count">1</span>
+      </a>
+    
+    </span>
+  </p>
+
+
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-07T15:06:52+03:00">2026-03-07</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/exercises/numbers/" class="pagination--pager" title="Basic number theory">Previous</a>
+    
+    
+      <a href="/exercises/sequence-operations/" class="pagination--pager" title="Sequence operations">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://umutozge.github.io">Umut Özge</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

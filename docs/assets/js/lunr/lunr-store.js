@@ -95,6 +95,12 @@ var store = [{
         "url": "/exercises/numbers/",
         "teaser": null
       },{
+        "title": "Phrase Structure Grammars",
+        "excerpt":"In the following suit of exercises you are asked to use the Python module nltk to build and use phrase structure grammars. You need to first install the nltk module if you haven’t already. You can do this using pip: pip install nltk Or, if you are on conda, you...","categories": [],
+        "tags": ["language","parsing","grammar"],
+        "url": "/exercises/psg/",
+        "teaser": null
+      },{
         "title": "Sequence operations",
         "excerpt":"In the following exercises, you can treat sequences as lists or tuples, unless explicitly stated otherwise. Define a function mysum(seq) that returns the sum of all numbers in the list seq. def mysum(seq): \"\"\"Return the sum of all numbers in seq. In: seq - a sequnce of summable items Out:...","categories": [],
         "tags": ["python","sequence","lists","tuples"],
@@ -113,40 +119,82 @@ var store = [{
         "url": "/exercises/zipfs-law/",
         "teaser": null
       },{
-        "title": "Zero property of multiplication",
-        "excerpt":"Given any number \\(n\\) you can write it as an addition of \\(n\\) number of \\(1\\)’s: \\[n = 1 + 1 + \\cdots + 1 (n\\text{ times})\\] Therefore, we have: \\[n\\times 0 = (1 + 1 + \\cdots + 1)\\times 0\\] By distributivity of multiplication over addition, we have: \\[n\\times...","categories": [],
-        "tags": [],
-        "url": "/items/numbers/pr-mult-zero/",
-        "teaser": null
-      },{
-        "title": "Zero property of multiplication",
-        "excerpt":"For any number \\(n\\), we have \\(n \\times 0 = 0\\).  ","categories": [],
-        "tags": [],
-        "url": "/items/numbers/th-mult-zero/",
-        "teaser": null
-      },{
         "title": "Conditional proability",
         "excerpt":"The conditional probability of an event \\(A\\) given an event \\(B\\) is the probability of \\(A\\) occurring given that \\(B\\) has occurred. It is denoted as \\(P(A\\given B)\\) and can be calculated using the formula:   \\[P(A\\given B) = \\frac{P(A \\cap B)}{P(B)}\\] ","categories": [],
         "tags": [],
-        "url": "/items/probability/df/df-cond-prob/",
+        "url": "/items/df-cond-prob/",
+        "teaser": null
+      },{
+        "title": "Subcategorization",
+        "excerpt":"You are given the following grammar: S -&gt; NP VP NP -&gt; Det N VP -&gt; V VP -&gt; V NP Det -&gt; 'every' | 'a' | 'the' | 'some' N -&gt; 'student' | 'professor' | 'dog' V -&gt; 'walks' | 'saw' | 'talks' Extend your grammar so that you...","categories": [],
+        "tags": [],
+        "url": "/items/ex-subcat/",
         "teaser": null
       },{
         "title": "Flip",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p).  ","categories": [],
         "tags": [],
-        "url": "/items/probability/ex/ex-flip/",
+        "url": "/items/ex-flip/",
         "teaser": null
       },{
-        "title": "Second throw",
+        "title": "Optimum order",
+        "excerpt":"You enter a special kind of chess tournament, in which you play one game with each of three opponents, but you get to choose the order in which you play your opponents, knowing the probability of a win against each. You win the tournament if you win two games in...","categories": [],
+        "tags": [],
+        "url": "/items/ex-middle-best/",
+        "teaser": null
+      },{
+        "title": "Second roll",
         "excerpt":"You roll a 6-sided dice once; only if the outcome is even, you roll it for a    second time. What is the probability that you roll a 6 on the second roll?  ","categories": [],
         "tags": [],
-        "url": "/items/probability/ex/ex-second-throw/",
+        "url": "/items/ex-second-throw/",
+        "teaser": null
+      },{
+        "title": "Strange Bob",
+        "excerpt":"Bob has a peculiar pair of three-sided dice. When he rolls the dice, the probability of any particular outcome is proportional to the product of the outcome of each die. All outcomes that result in a particular product are equally likely. a. What is the probability of the product being...","categories": [],
+        "tags": [],
+        "url": "/items/ex-strange-bob/",
+        "teaser": null
+      },{
+        "title": "Zero property of multiplication",
+        "excerpt":"Given any number \\(n\\) you can write it as an addition of \\(n\\) number of \\(1\\)’s: \\[n = 1 + 1 + \\cdots + 1 (n\\text{ times})\\] Therefore, we have: \\[n\\times 0 = (1 + 1 + \\cdots + 1)\\times 0\\] By distributivity of multiplication over addition, we have: \\[n\\times...","categories": [],
+        "tags": [],
+        "url": "/items/pr-mult-zero/",
+        "teaser": null
+      },{
+        "title": "Zero property of multiplication",
+        "excerpt":"For any number \\(n\\), we have \\(n \\times 0 = 0\\).  ","categories": [],
+        "tags": [],
+        "url": "/items/th-mult-zero/",
+        "teaser": null
+      },{
+        "title": "Insertion",
+        "excerpt":"Define a function myinsert(seq,index,item) that inserts item at position index of the list seq and returns the new list. def myinsert(seq, index, item): \"\"\"Insert item at index of seq. &gt;&gt;&gt; myinsert([1, 2, 3], 1, 4) [1, 4, 2, 3] &gt;&gt;&gt; myinsert([1, 2, 3], 5, 4) [1, 2, 3] &gt;&gt;&gt; myinsert([True,...","categories": [],
+        "tags": [],
+        "url": "/items/ex-insert/",
         "teaser": null
       },{
         "title": "Summation",
-        "excerpt":"Define a function mysum(seq) that returns the sum of all numbers in the list seq. def mysum(seq): \"\"\"Return the sum of all numbers in seq. In: seq - a sequnce of summable items Out: sum of all items in seq \"\"\" Solutions With while: def mysum(seq): total = 0 while...","categories": [],
+        "excerpt":"Define a function mysum(seq) that returns the sum of all numbers in the list seq. def mysum(seq): \"\"\"Return the sum of all numbers in seq. In: seq - a sequnce of summable items Out: sum of all items in seq \"\"\" Library x = [1,2,3,4] sum = sum(x) print(sum) #...","categories": [],
         "tags": [],
-        "url": "/items/prog/ex-sum/",
+        "url": "/items/ex-sum/",
+        "teaser": null
+      },{
+        "title": "Total Probability",
+        "excerpt":"Given that the collection \\(A_i\\) is a parition of \\(\\Omega\\), for any set \\(B\\subseteq \\Omega\\), \\[B = \\bigcup_{i}^{} A_i \\cap B\\] Also thanks to \\(A_i\\)’s partitioning \\(\\Omega\\), the sets that constitue \\(B\\) as above are mutually exclusive. Given this, by the additivity axiom of probability, we have: \\[P(B) = \\sum_{i}^{}...","categories": [],
+        "tags": [],
+        "url": "/items/pr-total-probability/",
+        "teaser": null
+      },{
+        "title": "Number",
+        "excerpt":"\\(1\\) is a number. If \\(n\\) is a number, then so is \\(s(n)\\). There is no number \\(n\\) such that \\(s(n) = 1\\). Given any two numbers \\(n\\) and \\(m\\), if \\(s(n) = s(m)\\) then \\(n = m\\). If a set \\(X\\) of numbers contains \\(1\\) and is closed1 under...","categories": [],
+        "tags": [],
+        "url": "/items/ax-peano-1/",
+        "teaser": null
+      },{
+        "title": "Total Probability",
+        "excerpt":"Let a collection of sets \\(\\mathcal{A}= \\lbrace A_i:A_i \\subseteq \\Omega\\rbrace\\) be such that,      each \\(x\\in \\Omega\\) occurs in exactly one \\(A_i \\in \\mathcal{A}\\) (partition);   and  \\(P(A_i) &gt; 0\\) for each \\(A_i\\in\\mathcal{A}\\),   then for any event \\(B\\subseteq \\Omega\\):   \\[P(B) = \\sum_{i}^{} P(A_i \\cap B) = \\sum_{i}^{}{P(B\\given A_i) P(A_i)}\\]  ","categories": [],
+        "tags": [],
+        "url": "/items/th-total-probability/",
         "teaser": null
       },{
         "title": "Iteration by `while`",
@@ -216,7 +264,7 @@ var store = [{
     "excerpt":"Language: Any Python Haskell Type: Any Module Snippet collatz python · module Various goodies related to Collatz conjecture. funcutils python · module A utility module for functional abstractions. Files python · snippet Working with files in Python. Plotting python · snippet Plotting in Python. A sequence processor python · module...","url": "https://umutozge.github.io/code/browser/"
   },{
     "title": "Exercise browser",
-    "excerpt":"discrete 1 funprog 1 iteration 1 language 1 linear algebra 1 lists 1 number theory 1 probability 3 programming 1 proof 1 python 3 sequence 1 sets 1 tuples 1 Basic probability Probability and programming exercises. Combinatorics Various counting exercises. Higher-order functions A set of programming exercises to practice higher-order...","url": "https://umutozge.github.io/exercise/browser/"
+    "excerpt":"discrete 1 funprog 1 grammar 1 iteration 1 language 2 linear algebra 1 lists 1 number theory 1 parsing 1 probability 3 programming 1 proof 1 python 3 sequence 1 sets 1 tuples 1 Basic probability Probability and programming exercises. Combinatorics Various counting exercises. Higher-order functions A set of programming...","url": "https://umutozge.github.io/exercise/browser/"
   },{
     "title": "COGS 543",
     "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(18/2) Course introduction; general discussion...","url": "https://umutozge.github.io/cl/schedule/"
@@ -241,6 +289,12 @@ var store = [{
   },{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
+  },{
+    "title": "Probabilistic Systems Analysis and Applied Probability",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/bertsekas-course/"
+  },{
+    "title": "I don\\'t believe in word senses",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/kilgarriff/"
   },{
     "title": "Mathematics: A Very Short Introduction",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/gowers-math/"
@@ -317,17 +371,32 @@ var store = [{
     "title": "A logic for default reasoning",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/reiter-default/"
   },{
-    "title": "Proof of Zero property of multiplication",
-    "excerpt":"Proof not written yet.          Back to statement      ","url": "https://umutozge.github.io/proofs/th-mult-zero/"
+    "title": "Solution: Subcategorization",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-subcat/"
   },{
     "title": "Solution: Flip",
     "excerpt":"All you can expect from Python is to generate for you a random number in $$[1,0)$$. In an unbiased `flip` all the shots of `random` below 0.5 would be `True` and above would be `False`, or vice versa. Now you can adjust the bias of the `flip` with the parameter...","url": "https://umutozge.github.io/solutions/ex-flip/"
   },{
-    "title": "Solution: Second throw",
+    "title": "Solution: Optimum order",
+    "excerpt":"Let's name the three opponents as 1, 2, and 3, and let $$p_i$$ be the probability of winning against opponent $$i$$. Let's also take, without loss of generality, $$p_1 \\leq p_2 \\leq p_3$$, meaning that opponent 3 is the weakest. For a given order of opponents $$o_1, o_2 , o_3...","url": "https://umutozge.github.io/solutions/ex-middle-best/"
+  },{
+    "title": "Solution: Second roll",
     "excerpt":"The exercise can be solved by using the definition of the conditional probability, or we can also compute the probability of the \"6 on second role\" event directly over the sample space using the fundamental axioms and theorems of probability. ### Without conditional probabiilty The sample space consists of the...","url": "https://umutozge.github.io/solutions/ex-second-throw/"
+  },{
+    "title": "Solution: Strange Bob",
+    "excerpt":"The sample space has the following 9 outcomes, with the corresponding products: | Outcome | Product | |---------|---------| | (1,1) | 1 | | (1,2) | 2 | | (1,3) | 3 | | (2,1) | 2 | | (2,2) | 4 | | (2,3) | 6 | | (3,1)...","url": "https://umutozge.github.io/solutions/ex-strange-bob/"
+  },{
+    "title": "Proof of Zero property of multiplication",
+    "excerpt":"Proof not written yet.          Back to statement      ","url": "https://umutozge.github.io/proofs/th-mult-zero/"
+  },{
+    "title": "Solution: Insertion",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-insert/"
   },{
     "title": "Solution: Summation",
     "excerpt":"With `while`: ```python def mysum(seq): total = 0 while seq: total += seq[0] seq = seq[1:] return total ``` With `for`: ```python def mysum(seq): total = 0 for x in seq: total += x return total ``` With `proc`: ```python from funcutils import proc mysum = lambda seq: proc((0,seq), lambda...","url": "https://umutozge.github.io/solutions/ex-sum/"
+  },{
+    "title": "Proof of Total Probability",
+    "excerpt":"Proof not written yet.          Back to statement      ","url": "https://umutozge.github.io/proofs/th-total-probability/"
   },{
     "title": "Tags",
     "excerpt":"","url": "https://umutozge.github.io/tags/"
