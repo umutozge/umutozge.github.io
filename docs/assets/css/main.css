@@ -5157,6 +5157,91 @@ body {
     height: 1px !important;
   }
 }
+.numbered {
+  counter-reset: item;
+}
+
+.numbered .item {
+  font-size: 0.8rem;
+}
+
+.numbered .item {
+  counter-increment: item;
+  /*  padding: 0.5rem; */
+  margin: 0.5rem 0.5rem 1.5rem 0rem;
+  border-left: 2px outset #ccc;
+  padding-left: 0.3rem;
+  /*  border-radius: .5rem; */
+}
+
+.numbered .item::before {
+  content: attr(data-label) " " counter(item) ": " attr(data-title) " ";
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Optional per-kind theming later */
+.numbered .item[data-kind=exercise] {
+  border-left-color: #228B22;
+  margin: 0.5rem 0.5rem 1.5rem 0rem;
+  padding-bottom: 0.3rem;
+}
+
+.numbered .item[data-kind=theorem] {
+  border-left-color: #4A90E2;
+}
+
+.figure-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+  margin: 1.5rem 0;
+}
+
+.figure-col-image {
+  flex: 0 0 35%;
+}
+
+.figure-col-text {
+  flex: 1 1 60%;
+}
+
+.figure-row img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.figure-caption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.browser-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.browser-filters__item {
+  white-space: nowrap;
+}
+
+.browser-filters label {
+  font-size: 0.8rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.browser-filters select {
+  font-size: 0.8rem;
+  padding: 0.15rem 0.4rem;
+}
+
 .mathbox {
   font-style: normal !important;
   border-left: 4px solid #4a90e2;
@@ -5203,58 +5288,6 @@ body {
   margin-left: 0.5em;
 }
 
-.code-meta {
-  margin-top: 0.15rem;
-  margin-bottom: 0.15rem;
-  font-style: bold;
-  font-size: 0.5em;
-  line-height: 1.2;
-  color: #111;
-}
-
-.browser-filters {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.25rem 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.browser-filters__item {
-  white-space: nowrap;
-}
-
-.browser-filters label {
-  font-size: 0.8rem;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.browser-filters select {
-  font-size: 0.8rem;
-  padding: 0.15rem 0.4rem;
-}
-
-hr.topic-separator {
-  border: 0;
-  border-top: 2px solid #ccc;
-  margin: 3rem auto;
-  width: 60%;
-}
-
-hr.topic-symbol {
-  border: none;
-  margin: 3rem auto;
-  text-align: center;
-}
-
-hr.topic-symbol::before {
-  content: "· · ·";
-  letter-spacing: 0.4em;
-  color: #888;
-  font-size: 1.2rem;
-}
-
 /* Make course tables more compact */
 table.table--course {
   border-collapse: collapse;
@@ -5280,6 +5313,35 @@ table.table--course td ol {
 
 table.table--course td li {
   margin: 0;
+}
+
+.code-meta {
+  margin-top: 0.15rem;
+  margin-bottom: 0.15rem;
+  font-style: bold;
+  font-size: 0.5em;
+  line-height: 1.2;
+  color: #111;
+}
+
+hr.topic-separator {
+  border: 0;
+  border-top: 2px solid #ccc;
+  margin: 3rem auto;
+  width: 60%;
+}
+
+hr.topic-symbol {
+  border: none;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+hr.topic-symbol::before {
+  content: "· · ·";
+  letter-spacing: 0.4em;
+  color: #888;
+  font-size: 1.2rem;
 }
 
 /* Tags page: shrink archive cards in the lists 
@@ -5374,40 +5436,6 @@ body.layout--home .entries-grid .archive__item-excerpt {
   margin: 0; /* remove the auto margin */
 }
 
-.numbered {
-  counter-reset: item;
-}
-
-.numbered .item {
-  font-size: 0.8rem;
-}
-
-.numbered .item {
-  counter-increment: item;
-  /*  padding: 0.5rem; */
-  margin: 0.5rem 0.5rem 1.5rem 0rem;
-  border-left: 2px outset #ccc;
-  padding-left: 0.3rem;
-  /*  border-radius: .5rem; */
-}
-
-.numbered .item::before {
-  content: attr(data-label) " " counter(item) ": " attr(data-title) " ";
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-/* Optional per-kind theming later */
-.numbered .item[data-kind=exercise] {
-  border-left-color: #0FA5DB;
-  margin: 0.5rem 0.5rem 1.5rem 0rem;
-  padding-bottom: 0.3rem;
-}
-
-.numbered .item[data-kind=theorem] {
-  border-left-color: #4A90E2;
-}
-
 .course-card {
   font-size: 0.9rem;
 }
@@ -5457,6 +5485,12 @@ body.layout--home .entries-grid .archive__item-excerpt {
   font-size: 1.5rem;
   line-height: 1.2;
   margin-bottom: 0.3rem;
+}
+
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

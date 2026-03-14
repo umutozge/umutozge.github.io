@@ -59,8 +59,26 @@ var store = [{
         "url": "/code/python/snippets/tokenization/",
         "teaser": null
       },{
+        "title": "COGS 502 Quiz",
+        "excerpt":"[2pt] You roll a 6-sided dice once; only if the outcome is even, you roll it for a second time. What is the probability that you roll a 6 on the second roll? [2pts] A six-sided die is loaded in a way that each even face is twice as likely...","categories": [],
+        "tags": [],
+        "url": "/exams/2026-02-26-502-quiz/",
+        "teaser": null
+      },{
+        "title": "502 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-03-05-502-quiz/",
+        "teaser": null
+      },{
+        "title": "502 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-03-12-502-quiz/",
+        "teaser": null
+      },{
         "title": "Basic probability",
-        "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). Criteria The only built-in you can use is radoom.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to...","categories": [],
+        "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": ["probability"],
         "url": "/exercises/basic-probability/",
         "teaser": null
@@ -95,6 +113,12 @@ var store = [{
         "url": "/exercises/numbers/",
         "teaser": null
       },{
+        "title": "Peano Arithmetic",
+        "excerpt":"How many natural numbers are there? In one sense, there are infinitely many of them. In this sense we think in particular objects like \\(1,2,3,\\ldots\\). In another, more abstract, sense, number is a concept rather than a collection of entities. If you insist on concreteness, then it can be said...","categories": [],
+        "tags": ["discrete","number theory","recursion","typing"],
+        "url": "/exercises/peano-arithmetic/",
+        "teaser": null
+      },{
         "title": "Phrase Structure Grammars",
         "excerpt":"In the following suit of exercises you are asked to use the Python module nltk to build and use phrase structure grammars. You need to first install the nltk module if you haven’t already. You can do this using pip: pip install nltk Or, if you are on conda, you...","categories": [],
         "tags": ["language","parsing","grammar"],
@@ -119,6 +143,24 @@ var store = [{
         "url": "/exercises/zipfs-law/",
         "teaser": null
       },{
+        "title": "Addition",
+        "excerpt":"   \\(\\forall x. x+0=x\\).   \\(\\forall x,y. x+s(y) = s(x + y)\\).  ","categories": [],
+        "tags": [],
+        "url": "/items/df-addition/",
+        "teaser": null
+      },{
+        "title": "Multiplication",
+        "excerpt":"   \\(\\forall x. x\\cdot 0=x\\).   \\(\\forall x,y. x\\cdot s(y) = x\\cdot y + x\\).  ","categories": [],
+        "tags": [],
+        "url": "/items/df-multiplication/",
+        "teaser": null
+      },{
+        "title": "The Peano type",
+        "excerpt":"A Python object p is of type peano if,     it is None, or,   it is a 1-tuple whose sole member is of peano type.  ","categories": [],
+        "tags": [],
+        "url": "/items/df-peano-type/",
+        "teaser": null
+      },{
         "title": "Conditional proability",
         "excerpt":"The conditional probability of an event \\(A\\) given an event \\(B\\) is the probability of \\(A\\) occurring given that \\(B\\) has occurred. It is denoted as \\(P(A\\given B)\\) and can be calculated using the formula:   \\[P(A\\given B) = \\frac{P(A \\cap B)}{P(B)}\\] ","categories": [],
         "tags": [],
@@ -131,8 +173,14 @@ var store = [{
         "url": "/items/ex-subcat/",
         "teaser": null
       },{
+        "title": "A module for Peano arithmetic",
+        "excerpt":"Write a module1 peano which implements the following functions: Name and type Description zero :: -&gt; peano Constructor for the zero of the system, i.e., returns None succ :: peano -&gt; peano Constructor for the rest zerop :: peano -&gt; bool Check whether the given peano object is zero (in...","categories": [],
+        "tags": [],
+        "url": "/items/ex-peano-module/",
+        "teaser": null
+      },{
         "title": "Flip",
-        "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p).  ","categories": [],
+        "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": [],
         "url": "/items/ex-flip/",
         "teaser": null
@@ -153,6 +201,12 @@ var store = [{
         "excerpt":"Bob has a peculiar pair of three-sided dice. When he rolls the dice, the probability of any particular outcome is proportional to the product of the outcome of each die. All outcomes that result in a particular product are equally likely. a. What is the probability of the product being...","categories": [],
         "tags": [],
         "url": "/items/ex-strange-bob/",
+        "teaser": null
+      },{
+        "title": "Definitons over Venn",
+        "excerpt":"Here is the depiction of the sample space of a probabilistic model, where the reals \\(x,y,z,t &gt; 0\\) indicate the probability mass of the corresponding regions. Note that they are not probabilities themselves, they are only proportional to the probabilities of the corresponding events. Indicate the following probabilities in terms...","categories": [],
+        "tags": [],
+        "url": "/items/ex-venn-for-cond/",
         "teaser": null
       },{
         "title": "Zero property of multiplication",
@@ -185,10 +239,22 @@ var store = [{
         "url": "/items/pr-total-probability/",
         "teaser": null
       },{
+        "title": "Peano Axioms",
+        "excerpt":"The set of natural numbers \\(\\mathbb{N}\\) is defined as follows:1 \\(0 \\in \\mathbb{N}\\). \\(\\forall x. x\\in \\mathbb{N} \\to s(x) \\in \\mathbb{N}\\). \\(\\neg\\exists x\\in\\mathbb{N}. s(x) = 0\\). \\(\\forall x,y\\in\\mathbb{N}. s(x) = s(y) \\to x = y\\). Let \\(\\phi\\) be a unary predicate: \\[\\begin{align*} [\\phi(0)\\land \\forall x\\in\\mathbb{N}. \\phi(x)\\to\\phi(s(x))] \\to \\forall y\\in \\mathbb{N}.\\phi(y)...","categories": [],
+        "tags": [],
+        "url": "/items/ax-peano-0/",
+        "teaser": null
+      },{
         "title": "Number",
         "excerpt":"\\(1\\) is a number. If \\(n\\) is a number, then so is \\(s(n)\\). There is no number \\(n\\) such that \\(s(n) = 1\\). Given any two numbers \\(n\\) and \\(m\\), if \\(s(n) = s(m)\\) then \\(n = m\\). If a set \\(X\\) of numbers contains \\(1\\) and is closed1 under...","categories": [],
         "tags": [],
         "url": "/items/ax-peano-1/",
+        "teaser": null
+      },{
+        "title": "Bayes' Theorem",
+        "excerpt":"Given a sample space \\(\\Omega\\), with events \\(A_1,...,A_n \\subseteq \\Omega\\) forming a partition of \\(\\Omega\\), with \\(P(A_i) &gt; 0\\) for all \\(i\\leq n\\), and an event \\(B \\subseteq \\Omega\\), such that \\(P(B) &gt; 0\\): \\[\\begin{align*} P(A_i\\given B) &amp;= \\frac{P(A_i)P(B\\given A_i)}{P(B)} \\\\ &amp; = \\frac{P(A_i)P(B\\given A_i)}{P(A_1)P(B\\given A_1) + \\cdots + P(A_n)P(B\\given...","categories": [],
+        "tags": [],
+        "url": "/items/th-bayes/",
         "teaser": null
       },{
         "title": "Total Probability",
@@ -251,6 +317,12 @@ var store = [{
         "url": "/posts/course/language-primer/",
         "teaser": null
       },{
+        "title": "Venn For Cond",
+        "excerpt":"\\begin{tikzpicture}[scale=1.0] % Rectangle and its label inside, top-left \\draw (-3,-2) rectangle (3,2); \\node[anchor=north west] at (-3,2) {$U$}; % Circles \\draw (-1,0) circle (1.5); \\draw ( 1,0) circle (1.5); % Labels A and B outside using polar-style coordinates % radius 1.6, angle 140° for A (10 o'clock-ish) \\node at ({-1 +...","categories": [],
+        "tags": [],
+        "url": "/tikz/venn-for-cond/",
+        "teaser": null
+      },{
     "title": "Page Not Found",
     "excerpt":"Sorry, but the page you were trying to view does not exist.  ","url": "https://umutozge.github.io/404.html"
   },{
@@ -264,7 +336,7 @@ var store = [{
     "excerpt":"Language: Any Python Haskell Type: Any Module Snippet collatz python · module Various goodies related to Collatz conjecture. funcutils python · module A utility module for functional abstractions. Files python · snippet Working with files in Python. Plotting python · snippet Plotting in Python. A sequence processor python · module...","url": "https://umutozge.github.io/code/browser/"
   },{
     "title": "Exercise browser",
-    "excerpt":"discrete 1 funprog 1 grammar 1 iteration 1 language 2 linear algebra 1 lists 1 number theory 1 parsing 1 probability 3 programming 1 proof 1 python 3 sequence 1 sets 1 tuples 1 Basic probability Probability and programming exercises. Combinatorics Various counting exercises. Higher-order functions A set of programming...","url": "https://umutozge.github.io/exercise/browser/"
+    "excerpt":"discrete 2 funprog 1 grammar 1 iteration 1 language 2 linear algebra 1 lists 1 number theory 2 parsing 1 probability 3 programming 1 proof 1 python 3 recursion 1 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability and programming exercises. Combinatorics Various counting exercises. Higher-order functions...","url": "https://umutozge.github.io/exercise/browser/"
   },{
     "title": "COGS 543",
     "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(18/2) Course introduction; general discussion...","url": "https://umutozge.github.io/cl/schedule/"
@@ -374,6 +446,9 @@ var store = [{
     "title": "Solution: Subcategorization",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-subcat/"
   },{
+    "title": "Solution: A module for Peano arithmetic",
+    "excerpt":"It must be fairly straightforward to decide to start with the constructors. Define what is the base element in your system, and define how to construct other elements from this unique seed. One must, however, do this with some care. The correct approach is to first define the base element...","url": "https://umutozge.github.io/solutions/ex-peano-module/"
+  },{
     "title": "Solution: Flip",
     "excerpt":"All you can expect from Python is to generate for you a random number in $$[1,0)$$. In an unbiased `flip` all the shots of `random` below 0.5 would be `True` and above would be `False`, or vice versa. Now you can adjust the bias of the `flip` with the parameter...","url": "https://umutozge.github.io/solutions/ex-flip/"
   },{
@@ -385,6 +460,9 @@ var store = [{
   },{
     "title": "Solution: Strange Bob",
     "excerpt":"The sample space has the following 9 outcomes, with the corresponding products: | Outcome | Product | |---------|---------| | (1,1) | 1 | | (1,2) | 2 | | (1,3) | 3 | | (2,1) | 2 | | (2,2) | 4 | | (2,3) | 6 | | (3,1)...","url": "https://umutozge.github.io/solutions/ex-strange-bob/"
+  },{
+    "title": "Solution: Definitons over Venn",
+    "excerpt":"{% capture img_url %}{% tikz_img venn-for-cond %}{% endcapture %} {% include figure-row.html src=img_url alt=\"Conditional Probability\" content=\" 1. \\\\( P(A\\given B) = \\frac{y}{y + z}\\\\) 1. \\\\( P(A\\given \\neg B) = \\frac{x}{x+t} \\\\) 1. \\\\( P(A\\cap \\neg B) = \\frac{x}{x+y+z+t}\\\\) 1. \\\\( P(B\\given A\\cap B) = 1 \\\\) 1. \\\\( P(A\\cup...","url": "https://umutozge.github.io/solutions/ex-venn-for-cond/"
   },{
     "title": "Proof of Zero property of multiplication",
     "excerpt":"Proof not written yet.          Back to statement      ","url": "https://umutozge.github.io/proofs/th-mult-zero/"

@@ -1,0 +1,317 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Bayes’ Theorem - Umut Özge</title>
+<meta name="description" content="Given a sample space \(\Omega\), with events \(A_1,...,A_n \subseteq \Omega\) forming a partition of \(\Omega\), with \(P(A_i) &gt; 0\) for all \(i\leq n\), and an event \(B \subseteq \Omega\), such that \(P(B) &gt; 0\):">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Umut Özge">
+<meta property="og:title" content="Bayes’ Theorem">
+<meta property="og:url" content="https://umutozge.github.io/items/th-bayes/">
+
+
+  <meta property="og:description" content="Given a sample space \(\Omega\), with events \(A_1,...,A_n \subseteq \Omega\) forming a partition of \(\Omega\), with \(P(A_i) &gt; 0\) for all \(i\leq n\), and an event \(B \subseteq \Omega\), such that \(P(B) &gt; 0\):">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-03-14T15:35:18+03:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/items/th-bayes/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+<script type="text/javascript">
+  window.MathJax = {
+    loader: {load: ['[tex]/ams']},
+    tex: {
+      packages: {'[+]': ['ams']},
+      tags: 'all',
+      macros: {
+        vectg: ["\\boldsymbol{#1}", 1],
+        vect: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1],
+        given: "{\\mathrel{\\mkern-1mu\\mid\\mkern-1mu}}",
+        card: ["\\mid\\mkern-3mu#1\\mkern-3mu\\mid", 1]
+      }
+    },
+    options: {
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<!-- MathJax configuration for automatic equation numbering 
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      packages: ['base','ams'],
+      tags: 'all',
+      macros: {
+        vect: ["\\boldsymbol{#1}", 1],
+        vv: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      },
+    },
+    options: {
+      // Optional: Ensure equation numbers are on the right
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+-->
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--numbered" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Umut Özge
+          <span class="site-subtitle">Graduate School of Informatics, METU</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Bayes’ Theorem">
+    <meta itemprop="description" content="Given a sample space \(\Omega\), with events \(A_1,...,A_n \subseteq \Omega\)forming a partition of \(\Omega\), with \(P(A_i) &gt; 0\) for all \(i\leq n\), and an event \(B \subseteq \Omega\), such that \(P(B) &gt; 0\):">
+    <meta itemprop="datePublished" content="2026-03-14T15:35:18+03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+              <h2 id="page-title" class="page__title" itemprop="headline">
+                <a href="https://umutozge.github.io/items/th-bayes/" itemprop="url">Theorem: Bayes’ Theorem
+</a>
+              </h2>
+            
+          
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="numbered">
+  <p>Given a sample space \(\Omega\), with events \(A_1,...,A_n \subseteq \Omega\)
+forming a partition of \(\Omega\), with \(P(A_i) &gt; 0\) for all \(i\leq n\), and an event \(B \subseteq \Omega\), such that \(P(B) &gt; 0\):</p>
+
+\[\begin{align*}
+P(A_i\given B) &amp;= \frac{P(A_i)P(B\given A_i)}{P(B)} \\
+&amp; = \frac{P(A_i)P(B\given A_i)}{P(A_1)P(B\given A_1) + \cdots + P(A_n)P(B\given A_n)}
+\end{align*}\]
+
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-14T15:35:18+03:00">2026-03-14</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/items/ax-peano-1/" class="pagination--pager" title="Number">Previous</a>
+    
+    
+      <a href="/items/th-total-probability/" class="pagination--pager" title="Total Probability">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://umutozge.github.io">Umut Özge</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

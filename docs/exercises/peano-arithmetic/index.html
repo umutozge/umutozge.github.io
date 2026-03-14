@@ -1,0 +1,623 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Peano Arithmetic - Umut Özge</title>
+<meta name="description" content="An introduction to recursion and typing through PA">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Umut Özge">
+<meta property="og:title" content="Peano Arithmetic">
+<meta property="og:url" content="https://umutozge.github.io/exercises/peano-arithmetic/">
+
+
+  <meta property="og:description" content="An introduction to recursion and typing through PA">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-03-14T15:35:18+03:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/exercises/peano-arithmetic/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+<script type="text/javascript">
+  window.MathJax = {
+    loader: {load: ['[tex]/ams']},
+    tex: {
+      packages: {'[+]': ['ams']},
+      tags: 'all',
+      macros: {
+        vectg: ["\\boldsymbol{#1}", 1],
+        vect: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1],
+        given: "{\\mathrel{\\mkern-1mu\\mid\\mkern-1mu}}",
+        card: ["\\mid\\mkern-3mu#1\\mkern-3mu\\mid", 1]
+      }
+    },
+    options: {
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<!-- MathJax configuration for automatic equation numbering 
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      packages: ['base','ams'],
+      tags: 'all',
+      macros: {
+        vect: ["\\boldsymbol{#1}", 1],
+        vv: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
+      },
+    },
+    options: {
+      // Optional: Ensure equation numbers are on the right
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+-->
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--numbered narrow" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Umut Özge
+          <span class="site-subtitle">Graduate School of Informatics, METU</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Courses</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/prelim/schedule/">COGS 502</a></li>
+            
+              <li><a href="/cl/schedule/">COGS 543</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <a href="/exercise/browser/"><span class="nav__sub-title">Exercises</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
+          
+
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Peano Arithmetic">
+    <meta itemprop="description" content="An introduction to recursion and typing through PA">
+    <meta itemprop="datePublished" content="2026-03-14T15:35:18+03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+              <h1 id="page-title" class="page__title" itemprop="headline">
+                <a href="https://umutozge.github.io/exercises/peano-arithmetic/" itemprop="url">Peano Arithmetic
+</a>
+              </h1>
+            
+          
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="numbered">
+  <p>How many natural numbers are there?</p>
+
+<p>In one sense, there are infinitely many of them. In this sense we think in
+particular objects like \(1,2,3,\ldots\).  In another, more abstract, sense,
+number is a concept rather than a collection of entities. If you insist on
+concreteness, then it can be said that there is one and only one number. And one
+single number and a tiny one-argument function are all we need.</p>
+
+<div class="item" id="ax-peano-0" data-kind="axiom" data-label="Axioms" data-title="Peano Axioms">
+
+    
+      <p>The set of natural numbers \(\mathbb{N}\) is defined as follows:<sup id="fnref:version"><a href="#fn:version" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<ol>
+  <li>\(0 \in \mathbb{N}\).</li>
+  <li>\(\forall x. x\in \mathbb{N} \to  s(x) \in \mathbb{N}\).</li>
+  <li>\(\neg\exists x\in\mathbb{N}. s(x) = 0\).</li>
+  <li>\(\forall x,y\in\mathbb{N}. s(x) = s(y) \to x = y\).</li>
+  <li>Let \(\phi\) be a unary predicate:</li>
+</ol>
+
+\[\begin{align*}
+[\phi(0)\land \forall x\in\mathbb{N}. \phi(x)\to\phi(s(x))] \to \forall y\in
+\mathbb{N}.\phi(y)
+\end{align*}\]
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:version">
+      <p>This is a version of <a href="https://en.wikipedia.org/wiki/Peano_axioms">Peano Axioms</a> that omits the axioms on
+equality and differs from the original by taking 0, rather than 1, as the
+base case. <a href="#fnref:version" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>This gives all the non-negative whole numbers there are. Now we define two
+familiar operations:</p>
+
+<div class="item" id="df-addition" data-kind="definition" data-label="Definition" data-title="Addition">
+
+    
+      <ol>
+  <li>\(\forall x. x+0=x\).</li>
+  <li>\(\forall x,y. x+s(y) = s(x + y)\).</li>
+</ol>
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<div class="item" id="df-multiplication" data-kind="definition" data-label="Definition" data-title="Multiplication">
+
+    
+      <ol>
+  <li>\(\forall x. x\cdot 0=x\).</li>
+  <li>\(\forall x,y. x\cdot s(y) = x\cdot y + x\).</li>
+</ol>
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>Our task is to do some arithmetic on computer. But we do not have numbers
+themselves as we are used to. For instance when you want to compute the value of
+\(2+5\), you will not be able to type <code class="language-plaintext highlighter-rouge">2+5</code> into Python console. The numeral <code class="language-plaintext highlighter-rouge">2</code>
+will just be a name for the value \(s(s(0))\). In
+this respect typing <code class="language-plaintext highlighter-rouge">2+5</code> will be like typing <code class="language-plaintext highlighter-rouge">"two" + "five"</code>, which would not
+give what you expect (it gives “twofive”, by the way).</p>
+
+<p>In constructing the system of numbers to be represented and processed by the
+computer, we agree that <code class="language-plaintext highlighter-rouge">None</code> is the object that the numeral <code class="language-plaintext highlighter-rouge">0</code> names. The
+return value of the successor function \(s\) will be represented by wrapping a
+pair of parentheses around its argument. To give you the initial feel for the
+system our naming scheme will be:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">0</code> will name <code class="language-plaintext highlighter-rouge">None</code></li>
+  <li><code class="language-plaintext highlighter-rouge">1</code> will name <code class="language-plaintext highlighter-rouge">(None,)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">2</code> will name <code class="language-plaintext highlighter-rouge">((None,),)</code></li>
+</ol>
+
+<p>As Python’s <code class="language-plaintext highlighter-rouge">int</code> type, which represents the whole numbers, will already be in
+place, we need to be careful not to mix these two types. For this purpose, we
+define a new type <code class="language-plaintext highlighter-rouge">peano</code> as follows:</p>
+
+<div class="item" id="df-peano-type" data-kind="definition" data-label="Definition" data-title="The Peano type">
+
+    
+      <p>A Python object <code class="language-plaintext highlighter-rouge">p</code> is of type <code class="language-plaintext highlighter-rouge">peano</code> if,</p>
+<ol>
+  <li>it is <code class="language-plaintext highlighter-rouge">None</code>, or,</li>
+  <li>it is a 1-tuple whose sole member is of <code class="language-plaintext highlighter-rouge">peano</code> type.</li>
+</ol>
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>Here is your first exercise:</p>
+
+<div class="item" id="ex-peano-module" data-kind="exercise" data-label="Exercise" data-title="A module for Peano arithmetic">
+
+    
+      <p>Write a module<sup id="fnref:mod"><a href="#fn:mod" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> <code class="language-plaintext highlighter-rouge">peano</code> which implements the following functions:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name and type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">zero :: -&gt; peano</code></td>
+      <td>Constructor for the zero of the system, i.e., returns <code class="language-plaintext highlighter-rouge">None</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">succ :: peano -&gt; peano</code></td>
+      <td>Constructor for the rest</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">zerop :: peano -&gt; bool</code></td>
+      <td>Check whether the given <code class="language-plaintext highlighter-rouge">peano</code> object is zero (in the <code class="language-plaintext highlighter-rouge">peano</code> sense).<sup id="fnref:psuff"><a href="#fn:psuff" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">peanop:: obj -&gt; bool</code></td>
+      <td>Check whether the argument is <code class="language-plaintext highlighter-rouge">peano</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">to_int :: peano -&gt; int</code></td>
+      <td>Conversion</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">from_int :: int -&gt; peano</code></td>
+      <td><em>ditto</em></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">peano_add :: peano, peano -&gt; peano</code></td>
+      <td>Addition</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">peano_mult :: peano, peano -&gt; peano</code></td>
+      <td>Multiplication</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">peano_eq :: peano, peano -&gt; bool</code></td>
+      <td>Equality</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Here are the rules of the game:</p>
+<ol>
+  <li>All your functions must be recursively defined (no <code class="language-plaintext highlighter-rouge">while</code>, <code class="language-plaintext highlighter-rouge">proc</code>, whatever).</li>
+  <li>No use of <code class="language-plaintext highlighter-rouge">+</code>, <code class="language-plaintext highlighter-rouge">-</code>, <code class="language-plaintext highlighter-rouge">==</code>, <code class="language-plaintext highlighter-rouge">&lt;=</code>, and so on, in your definitions. As long as it
+is not numerical comparison, <code class="language-plaintext highlighter-rouge">==</code> is allowed.</li>
+</ol>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:mod">
+      <p>If we are not already in the module business, “write a module” means create a <code class="language-plaintext highlighter-rouge">peano.py</code> file and define your functions there. Later on you can import your function names with <code class="language-plaintext highlighter-rouge">from peano import peano_add, peano_mult</code>, and so on. <a href="#fnref:mod" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:psuff">
+      <p>We follow the <code class="language-plaintext highlighter-rouge">LISP</code> convention of naming predicates by attaching a <code class="language-plaintext highlighter-rouge">p</code> at the end of the corresponding property. The programmatic way to inquire about someone’s mood is to apply <code class="language-plaintext highlighter-rouge">happyp</code> to him/her. <a href="#fnref:psuff" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    
+
+
+    
+
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-peano-module/" aria-label="Solution for ex-peano-module">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
+
+
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#discrete"
+         class="page__taxonomy-item p-category" rel="tag">
+        discrete <span class="taxonomy__count">4</span>
+      </a>
+    
+      
+      
+      <a href="/tags/#number-theory"
+         class="page__taxonomy-item p-category" rel="tag">
+        number theory <span class="taxonomy__count">4</span>
+      </a>
+    
+      
+      
+      <a href="/tags/#recursion"
+         class="page__taxonomy-item p-category" rel="tag">
+        recursion <span class="taxonomy__count">1</span>
+      </a>
+    
+      
+      
+      <a href="/tags/#typing"
+         class="page__taxonomy-item p-category" rel="tag">
+        typing <span class="taxonomy__count">1</span>
+      </a>
+    
+    </span>
+  </p>
+
+
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-14T15:35:18+03:00">2026-03-14</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/exercises/numbers/" class="pagination--pager" title="Basic number theory">Previous</a>
+    
+    
+      <a href="/exercises/psg/" class="pagination--pager" title="Phrase Structure Grammars">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://umutozge.github.io">Umut Özge</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
