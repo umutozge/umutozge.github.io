@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Basic probability - Umut Özge</title>
-<meta name="description" content="Probability and programming exercises.">
+<meta name="description" content="Probability exercises.">
 
 
 
@@ -22,7 +22,7 @@
 <meta property="og:url" content="https://umutozge.github.io/exercises/basic-probability/">
 
 
-  <meta property="og:description" content="Probability and programming exercises.">
+  <meta property="og:description" content="Probability exercises.">
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-03-14T15:45:53+03:00">
+  <meta property="article:published_time" content="2026-03-23T15:26:59+03:00">
 
 
 
@@ -257,8 +257,8 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Basic probability">
-    <meta itemprop="description" content="Probability and programming exercises.">
-    <meta itemprop="datePublished" content="2026-03-14T15:45:53+03:00">
+    <meta itemprop="description" content="Probability exercises.">
+    <meta itemprop="datePublished" content="2026-03-23T15:26:59+03:00">
     
 
     <div class="page__inner-wrap">
@@ -312,41 +312,48 @@ specify any parameters to <code class="language-plaintext highlighter-rouge">ran
     
   </div>
 
-<div class="item" id="ex-geometric" data-kind="exercise" data-label="Exercise" data-title="Geometric">
+<div class="item" id="ex-geometric-rec" data-kind="exercise" data-label="Exercise" data-title="Geometric">
 
-  <p>Define a function <code class="language-plaintext highlighter-rouge">geometric(p)</code> that flips with probability <code class="language-plaintext highlighter-rouge">p</code> until it succeeds and returns the number of failed trials before that.</p>
-  <details>
-    <summary>Criteria</summary>
-    <p>If you are at a stage where we covered recursion, use recursion. Otherwise, use
-iteration.</p>
-  </details>
+    
+      <p>Define a recursive function <code class="language-plaintext highlighter-rouge">geometric(p)</code> that flips with probability <code class="language-plaintext highlighter-rouge">p</code> until it succeeds and returns the number of failed trials before that.</p>
 
-</div>
+    
+
+
+    
+
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-geometric-rec/" aria-label="Solution for ex-geometric-rec">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
 
 <div class="item" id="ex-unfair-coin" data-kind="exercise" data-label="Exercise" data-title="The unfair coin">
 
-  <p>You need to make a toss with equal chance for heads and tails, but you have a
+    
+      <p>You need to make a toss with equal chance for heads and tails, but you have a
 coin that you know is biased, but don’t know by how much and in which way. Using
 only this biased coin, design an experiment that is equivalent to making a fair
 toss. You can assume that the outcomes of successive tosses of the coin are
 independent.</p>
 
-  <details>
-    <summary>Solution</summary>
 
-    <p>The example is due to
- <a href="https://en.wikipedia.org/wiki/John_von_Neumann">John von Neumann</a>,
-taken from his 1951 paper
-<a href="https://mcnp-green.lanl.gov/pdf_files/InBook_Computing_1961_Neumann_JohnVonNeumannCollectedWorks_VariousTechniquesUsedinConnectionwithRandomDigits.pdf">Various Techniques Used in Connection with Random Digits</a></p>
+    
 
-    <p>The experiment consists of two tosses of the biased coin. If the result is <code class="language-plaintext highlighter-rouge">HT</code>
-you agree to count it as “heads”; if the result is <code class="language-plaintext highlighter-rouge">TH</code> you agree to count it as
-“tails”, or vice versa. If the result is <code class="language-plaintext highlighter-rouge">HH</code> or <code class="language-plaintext highlighter-rouge">TT</code> you ignore the result and
-start over. This is equivalent to a fair toss under the assumption that the
-outcomes of the successive tosses are independent.</p>
 
-  </details>
-</div>
+    
+
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-unfair-coin/" aria-label="Solution for ex-unfair-coin">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
 
 <div class="item" id="ex-second-throw" data-kind="exercise" data-label="Exercise" data-title="Second roll">
 
@@ -443,7 +450,7 @@ the reals \(x,y,z,t &gt; 0\) indicate the probability mass of the corresponding
 regions. Note that they are not probabilities themselves, they are only
 proportional to the probabilities of the corresponding events.</p>
 
-<p><img src="/assets/svg/venn-for-cond.svg" alt="Conditional Venn" /></p>
+<p><img src="/assets/svg/venn-for-cond.svg" alt="Conditional Venn" class="centered-image" /></p>
 
 <p>Indicate the following probabilities in terms of \(x,y,z,t\):</p>
 
@@ -464,6 +471,192 @@ proportional to the probabilities of the corresponding events.</p>
 
     
       <a class="solution-badge" href="/solutions/ex-venn-for-cond/" aria-label="Solution for ex-venn-for-cond">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
+
+<div class="item" id="ex-recursive-jar" data-kind="exercise" data-label="Exercise" data-title="Recursive jar">
+
+    
+      <p>Two players take turns removing a ball from a jar that initially contains \(m\) white and \(n\) black balls. The first player to remove a white ball wins. Develop a
+recursive formula that allows the convenient computation of the probability that the starting player wins.</p>
+
+    
+
+
+    
+
+    
+      <i> Source: </i>
+      
+        
+          <a href="/p/bertsekas/" target="_blank" rel="noopener">ItP</a><span aria-hidden="true">, Ex 21, Ch 1</span>
+        
+      
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-recursive-jar/" aria-label="Solution for ex-recursive-jar">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
+
+<div class="item" id="ex-recursive-jars" data-kind="exercise" data-label="Exercise" data-title="Recursive jars">
+
+    
+      <p>Each of k jars contains m white and n black balls. A ball is randomly chosen from jar 1 and transferred to jar 2, then a ball is randomly chosen from jar 2 and transferred to jar 3, etc. Finally, a ball is randomly chosen from jar k. Show that the probability that the last ball is white is the same as the probability that the first ball is white, i.e., it is m/(m + n).</p>
+
+    
+
+
+    
+
+    
+      <i> Source: </i>
+      
+        
+          <a href="/p/bertsekas/" target="_blank" rel="noopener">ItP</a><span aria-hidden="true">, Ex 22, Ch 1</span>
+        
+      
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-recursive-jars/" aria-label="Solution for ex-recursive-jars">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
+
+<div class="item" id="ex-swap-game" data-kind="exercise" data-label="Exercise" data-title="Swap game">
+
+    
+      <p>We have two jars, each initially containing an equal number of balls. We perform four successive ball exchanges. In each exchange, we pick simultaneously and at random a ball from each jar and move it to the other jar. What is the probability that at the end of the four exchanges all the balls will be in the jar where they started?</p>
+
+    
+
+
+    
+
+    
+      <i> Source: </i>
+      
+        
+          <a href="/p/bertsekas/" target="_blank" rel="noopener">ItP</a><span aria-hidden="true">, Ex 23, Ch 1</span>
+        
+      
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-swap-game/" aria-label="Solution for ex-swap-game">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
+
+<div class="item" id="ex-prisoners-dilemma" data-kind="exercise" data-label="Exercise" data-title="The prisoner's dilemma">
+
+    
+      <p>The release of two out of three prisoners has been announced, but their identity is kept secret. One of the prisoners considers asking a friendly guard to tell him who is the prisoner other than himself that will be released, but hesitates based on the following rationale: at the prisoner’s present state of knowledge, the probability of being released is 2/3, but after he knows the answer, the probability of being released will become 1/2, since there will be two prisoners (including himself) whose fate is unknown and exactly one of the two will be released. What is wrong with this line of reasoning?</p>
+
+    
+
+
+    
+
+    
+      <i> Source: </i>
+      
+        
+          <a href="/p/bertsekas/" target="_blank" rel="noopener">ItP</a><span aria-hidden="true">, Pr. 24, Ch 1</span>
+        
+      
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-prisoners-dilemma/" aria-label="Solution for ex-prisoners-dilemma">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
+
+<div class="item" id="ex-two-envelopes" data-kind="exercise" data-label="Exercise" data-title="Two envelopes">
+
+    
+      <p>You are handed two envelopes, and you know that each contains a positive integer dollar amount and that the two amounts are different. The values of these two amounts are modeled as constants that are unknown. Without knowing what the amounts are, you select at random one of the two envelopes, and after looking at the amount inside, you may switch envelopes if you wish. A friend claims that the following strategy will increase above 1/2 your probability of ending up with the envelope with the larger amount: toss a coin repeatedly, let X be equal to 1/2 plus the number of tosses required to obtain heads for the first time, and switch if the amount in the envelope you selected is less than the value of X. Is your friend correct?</p>
+
+    
+
+
+    
+
+    
+      <i> Source: </i>
+      
+        
+          <a href="/p/bertsekas/" target="_blank" rel="noopener">ItP</a><span aria-hidden="true">, Pr. 25, Ch 1</span>
+        
+      
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-two-envelopes/" aria-label="Solution for ex-two-envelopes">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
+
+<div class="item" id="ex-more-heads" data-kind="exercise" data-label="Exercise" data-title="More heads for Bob">
+
+    
+      <p>Alice and Bob have \(2 n + 1\) coins, each coin with probability of heads equal
+to \(1/2\). Bob tosses  \(n+1\) coins, while Alice tosses the remaining \(n\)
+coins. Assuming independent coin tosses, show that the probability that after
+all coins have been tossed, Bob will have gotten more heads than Alice is
+\(1/2\).</p>
+
+    
+
+
+    
+
+    
+      <i> Source: </i>
+      
+        
+          <a href="/p/bertsekas/" target="_blank" rel="noopener">ItP</a><span aria-hidden="true">, Pr. 27, Ch 1</span>
+        
+      
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-more-heads/" aria-label="Solution for ex-more-heads">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
+
+<div class="item" id="ex-question-of-independence" data-kind="exercise" data-label="Exercise" data-title="A question of independence">
+
+    
+      <p>You are given the following state space with the probabilities of the
+corresponding events:</p>
+
+<p><img src="/assets/svg/venn-for-cond.svg" alt="State space" class="centered-image" /></p>
+
+<p>If you receive the information that event \(A\) and \(B\) are independent, what
+can you say, if anything, about the relation between the probability mass terms \(x,y,z,t\)?</p>
+
+    
+
+
+    
+
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-question-of-independence/" aria-label="Solution for ex-question-of-independence">
         <i class="fa fa-battery-quarter" aria-hidden="true"></i>
       </a>
     
@@ -504,7 +697,7 @@ proportional to the probabilities of the corresponding events.</p>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-14T15:45:53+03:00">2026-03-14</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-23T15:26:59+03:00">2026-03-23</time></p>
 
       </footer>
 

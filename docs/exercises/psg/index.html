@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-03-14T15:45:53+03:00">
+  <meta property="article:published_time" content="2026-03-23T15:26:59+03:00">
 
 
 
@@ -258,7 +258,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Phrase Structure Grammars">
     <meta itemprop="description" content="Building phrase structure grammars to generate sentences and analyze their structure.">
-    <meta itemprop="datePublished" content="2026-03-14T15:45:53+03:00">
+    <meta itemprop="datePublished" content="2026-03-23T15:26:59+03:00">
     
 
     <div class="page__inner-wrap">
@@ -280,28 +280,18 @@
       <section class="page__content" itemprop="text">
         
         <div class="numbered">
-  <p>In the following suit of exercises you are asked to use the Python module <code class="language-plaintext highlighter-rouge">nltk</code>
-to build and use phrase structure grammars. You need to first install the <code class="language-plaintext highlighter-rouge">nltk</code>
-module if you haven’t already. You can do this using pip:</p>
+  <p class="notice--warning">In some of the exercises below you are asked to use the Python module <code class="language-plaintext highlighter-rouge">nltk</code>
+to build and use phrase structure grammars. All necessary modules and helpers
+can be obtained via <a href="/p/coursepy/" target="_blank" rel="noopener">coursepy</a>. You can directly use <code class="language-plaintext highlighter-rouge">nltk</code> itself if
+you like.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>nltk
+<p>The imports needed:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">coursepy.lang.parsing</span> <span class="kn">import</span> <span class="n">make_parser</span><span class="p">,</span> <span class="n">make_cfg</span>
 </code></pre></div></div>
 
-<p>Or, if you are on <code class="language-plaintext highlighter-rouge">conda</code>, you can use:</p>
+<p>Here is an example grammar:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> conda-forge nltk
-</code></pre></div></div>
-
-<p>Import the packages you need:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">nltk</span>
-<span class="kn">from</span> <span class="n">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
-<span class="kn">from</span> <span class="n">nltk</span> <span class="kn">import</span> <span class="n">CFG</span>
-<span class="kn">from</span> <span class="n">nltk.parse</span> <span class="kn">import</span> <span class="n">ChartParser</span>
-</code></pre></div></div>
-
-<p>Here is an example grammar in <code class="language-plaintext highlighter-rouge">nltk</code>:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">grammar</span> <span class="o">=</span> <span class="n">CFG</span><span class="p">.</span><span class="nf">fromstring</span><span class="p">(</span><span class="sh">"""</span><span class="s">
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">grammar</span> <span class="o">=</span> <span class="nf">make_cfg</span><span class="p">(</span><span class="sh">"""</span><span class="s">
 S  -&gt; NP VP
 NP -&gt; Det N
 VP -&gt; V
@@ -314,48 +304,55 @@ V   -&gt; </span><span class="sh">'</span><span class="s">walks</span><span clas
 </code></pre></div></div>
 
 <p>You build a parser based on the grammar you defined:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span> <span class="o">=</span> <span class="nc">ChartParser</span><span class="p">(</span><span class="n">grammar</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span> <span class="o">=</span> <span class="nf">make_parser</span><span class="p">(</span><span class="n">grammar</span><span class="p">)</span> 
 </code></pre></div></div>
 
-<p>Here is a helper function that maps a sentence (<code class="language-plaintext highlighter-rouge">str</code>) to a list of resulting parse trees:</p>
+<p>Now you can map any expression to the list of its parse trees using the parser:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">parse_sentence</span><span class="p">(</span><span class="n">parser</span><span class="p">,</span> <span class="n">sentence</span><span class="p">):</span>
-    <span class="sh">"""</span><span class="s">Map sentence to the set of its parse trees.
-
-       In:
-           parser: nltk.parse.chart.ChartParser object
-           sentence: str
-       Out:
-           trees: list of nltk Tree objects
-    </span><span class="sh">"""</span>
-    <span class="k">return</span>\
-        <span class="nf">list</span><span class="p">(</span>
-            <span class="n">parser</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span>
-                <span class="nf">word_tokenize</span><span class="p">(</span>
-                    <span class="n">sentence</span>
-                <span class="p">)</span>
-            <span class="p">)</span>
-        <span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trees</span> <span class="o">=</span> <span class="nf">parser</span><span class="p">(</span><span class="sh">"</span><span class="s">every student walks</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>You can use the <code class="language-plaintext highlighter-rouge">parse_sentence</code> function to get the parse trees for a given sentence.
-Make it a little convenient by:</p>
+<p>You can print the trees to the console to see their structure:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parse</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">sentence</span><span class="p">:</span> <span class="nf">parse_sentence</span><span class="p">(</span><span class="n">parser</span><span class="p">,</span> <span class="n">sentence</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="nf">pretty_print</span><span class="p">()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">trees</span><span class="p">]</span>
+</code></pre></div></div>
+<p>Tree objects also have a <code class="language-plaintext highlighter-rouge">.draw()</code> method that opens a separate window with a
+graphical representation of the tree.</p>
+
+<hr class="topic-separator" />
+
+<div class="item" id="ex-simple-pst" data-kind="exercise" data-label="Exercise" data-title="&quot;Telescope&quot; sentences">
+
+    
+      <p>You are given the following grammar:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>S  -&gt; NP VP
+NP -&gt; Det N | Det N PP
+VP -&gt; V NP | VP PP
+PP -&gt; P NP
+Det -&gt; 'the' | 'a'
+N  -&gt; 'dog' | 'owner' | 'leash'
+V  -&gt; 'found'
+P  -&gt; 'with'
 </code></pre></div></div>
 
-<p>Now you can parse sentences like this:</p>
+<p>Draw all the possible parse trees for the sentence <em>The owner found the dog with
+the leash</em>.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trees</span> <span class="o">=</span> <span class="nf">parse</span><span class="p">(</span><span class="sh">"</span><span class="s">every student walks</span><span class="sh">"</span><span class="p">)</span>
-</code></pre></div></div>
 
-<p>This will give you a list of parse trees for the sentence “every student walks”. You can print the trees to see their structure:</p>
+    
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trees</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">pretty_print</span><span class="p">()</span>
-</code></pre></div></div>
 
-<p>to the console, or use  <code class="language-plaintext highlighter-rouge">trees[0].draw()</code> to visualize the tree in a separate
-window.</p>
+    
+
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-simple-pst/" aria-label="Solution for ex-simple-pst">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
 
 <div class="item" id="ex-subcat" data-kind="exercise" data-label="Exercise" data-title="Subcategorization">
 
@@ -394,6 +391,38 @@ to a professor</em> and rejects <em>*Every student talks a professor</em>.</li>
 
     
 
+    
+      <a class="solution-badge" href="/solutions/ex-subcat/" aria-label="Solution for ex-subcat">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
+    
+  </div>
+
+<div class="item" id="ex-arithmetic-grammar" data-kind="exercise" data-label="Exercise" data-title="Grammar for arithmetic">
+
+    
+      <p>Consider simple arithmetic expressions involving addition and multiplication, such as:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3 + 4
+3 + 4 * 2
+( 3 + 4 ) * 2
+</code></pre></div></div>
+
+<p>Write a CFG over the terminals \(\lbrace +, *, (, ),2,3,4\)} that generates such expressions.
+Your grammar should assign more than one phrase structure to ambiguous
+expressions like <code class="language-plaintext highlighter-rouge">3 + 4 * 2</code>.</p>
+
+    
+
+
+    
+
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-arithmetic-grammar/" aria-label="Solution for ex-arithmetic-grammar">
+        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+      </a>
     
   </div>
 
@@ -446,7 +475,7 @@ to a professor</em> and rejects <em>*Every student talks a professor</em>.</li>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-14T15:45:53+03:00">2026-03-14</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-23T15:26:59+03:00">2026-03-23</time></p>
 
       </footer>
 

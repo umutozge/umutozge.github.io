@@ -77,6 +77,12 @@ var store = [{
         "url": "/exams/2026-03-12-502-quiz/",
         "teaser": null
       },{
+        "title": "543 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-03-18-543-quiz/",
+        "teaser": null
+      },{
         "title": "Basic probability",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": ["probability"],
@@ -120,7 +126,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Phrase Structure Grammars",
-        "excerpt":"In the following suit of exercises you are asked to use the Python module nltk to build and use phrase structure grammars. You need to first install the nltk module if you haven’t already. You can do this using pip: pip install nltk Or, if you are on conda, you...","categories": [],
+        "excerpt":"In some of the exercises below you are asked to use the Python module nltk to build and use phrase structure grammars. All necessary modules and helpers can be obtained via coursepy. You can directly use nltk itself if you like. The imports needed: from coursepy.lang.parsing import make_parser, make_cfg Here...","categories": [],
         "tags": ["language","parsing","grammar"],
         "url": "/exercises/psg/",
         "teaser": null
@@ -167,6 +173,18 @@ var store = [{
         "url": "/items/df-cond-prob/",
         "teaser": null
       },{
+        "title": "Grammar for arithmetic",
+        "excerpt":"Consider simple arithmetic expressions involving addition and multiplication, such as: 3 + 4 3 + 4 * 2 ( 3 + 4 ) * 2 Write a CFG over the terminals \\(\\lbrace +, *, (, ),2,3,4\\)} that generates such expressions. Your grammar should assign more than one phrase structure to...","categories": [],
+        "tags": [],
+        "url": "/items/ex-arithmetic-grammar/",
+        "teaser": null
+      },{
+        "title": "&quot;Telescope&quot; sentences",
+        "excerpt":"You are given the following grammar: S -&gt; NP VP NP -&gt; Det N | Det N PP VP -&gt; V NP | VP PP PP -&gt; P NP Det -&gt; 'the' | 'a' N -&gt; 'dog' | 'owner' | 'leash' V -&gt; 'found' P -&gt; 'with' Draw all the...","categories": [],
+        "tags": [],
+        "url": "/items/ex-simple-pst/",
+        "teaser": null
+      },{
         "title": "Subcategorization",
         "excerpt":"You are given the following grammar: S -&gt; NP VP NP -&gt; Det N VP -&gt; V VP -&gt; V NP Det -&gt; 'every' | 'a' | 'the' | 'some' N -&gt; 'student' | 'professor' | 'dog' V -&gt; 'walks' | 'saw' | 'talks' Extend your grammar so that you...","categories": [],
         "tags": [],
@@ -185,10 +203,46 @@ var store = [{
         "url": "/items/ex-flip/",
         "teaser": null
       },{
+        "title": "Geometric",
+        "excerpt":"Define a recursive function geometric(p) that flips with probability p until it succeeds and returns the number of failed trials before that.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-geometric-rec/",
+        "teaser": null
+      },{
         "title": "Optimum order",
         "excerpt":"You enter a special kind of chess tournament, in which you play one game with each of three opponents, but you get to choose the order in which you play your opponents, knowing the probability of a win against each. You win the tournament if you win two games in...","categories": [],
         "tags": [],
         "url": "/items/ex-middle-best/",
+        "teaser": null
+      },{
+        "title": "More heads for Bob",
+        "excerpt":"Alice and Bob have \\(2 n + 1\\) coins, each coin with probability of heads equal to \\(1/2\\). Bob tosses \\(n+1\\) coins, while Alice tosses the remaining \\(n\\) coins. Assuming independent coin tosses, show that the probability that after all coins have been tossed, Bob will have gotten more heads...","categories": [],
+        "tags": [],
+        "url": "/items/ex-more-heads/",
+        "teaser": null
+      },{
+        "title": "The prisoner's dilemma",
+        "excerpt":"The release of two out of three prisoners has been announced, but their identity is kept secret. One of the prisoners considers asking a friendly guard to tell him who is the prisoner other than himself that will be released, but hesitates based on the following rationale: at the prisoner’s...","categories": [],
+        "tags": [],
+        "url": "/items/ex-prisoners-dilemma/",
+        "teaser": null
+      },{
+        "title": "A question of independence",
+        "excerpt":"You are given the following state space with the probabilities of the corresponding events:      If you receive the information that event \\(A\\) and \\(B\\) are independent, what can you say, if anything, about the relation between the probability mass terms \\(x,y,z,t\\)?  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-question-of-independence/",
+        "teaser": null
+      },{
+        "title": "Recursive jar",
+        "excerpt":"Two players take turns removing a ball from a jar that initially contains \\(m\\) white and \\(n\\) black balls. The first player to remove a white ball wins. Develop a recursive formula that allows the convenient computation of the probability that the starting player wins.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-recursive-jar/",
+        "teaser": null
+      },{
+        "title": "Recursive jars",
+        "excerpt":"Each of k jars contains m white and n black balls. A ball is randomly chosen from jar 1 and transferred to jar 2, then a ball is randomly chosen from jar 2 and transferred to jar 3, etc. Finally, a ball is randomly chosen from jar k. Show that...","categories": [],
+        "tags": [],
+        "url": "/items/ex-recursive-jars/",
         "teaser": null
       },{
         "title": "Second roll",
@@ -201,6 +255,24 @@ var store = [{
         "excerpt":"Bob has a peculiar pair of three-sided dice. When he rolls the dice, the probability of any particular outcome is proportional to the product of the outcome of each die. All outcomes that result in a particular product are equally likely. a. What is the probability of the product being...","categories": [],
         "tags": [],
         "url": "/items/ex-strange-bob/",
+        "teaser": null
+      },{
+        "title": "Swap game",
+        "excerpt":"We have two jars, each initially containing an equal number of balls. We perform four successive ball exchanges. In each exchange, we pick simultaneously and at random a ball from each jar and move it to the other jar. What is the probability that at the end of the four...","categories": [],
+        "tags": [],
+        "url": "/items/ex-swap-game/",
+        "teaser": null
+      },{
+        "title": "Two envelopes",
+        "excerpt":"You are handed two envelopes, and you know that each contains a positive integer dollar amount and that the two amounts are different. The values of these two amounts are modeled as constants that are unknown. Without knowing what the amounts are, you select at random one of the two...","categories": [],
+        "tags": [],
+        "url": "/items/ex-two-envelopes/",
+        "teaser": null
+      },{
+        "title": "The unfair coin",
+        "excerpt":"You need to make a toss with equal chance for heads and tails, but you have a coin that you know is biased, but don’t know by how much and in which way. Using only this biased coin, design an experiment that is equivalent to making a fair toss. You...","categories": [],
+        "tags": [],
+        "url": "/items/ex-unfair-coin/",
         "teaser": null
       },{
         "title": "Definitons over Venn",
@@ -317,6 +389,18 @@ var store = [{
         "url": "/posts/course/language-primer/",
         "teaser": null
       },{
+        "title": "Prisoners Dilemma",
+        "excerpt":"\\begin{tikzpicture}[ every node/.style={inner sep=2pt}, edge/.style={draw, -latex} ] % Root \\node (root) at (0,0) {}; % Level 1 nodes \\node (A) at (2, -3) {$C$}; \\node (B) at (2, 0) {$B$}; \\node (C) at (2, 3) {$A$}; % Level 2 nodes under A \\node (AgB) at (4, -3.75) {$G_C$}; \\node (AgC)...","categories": [],
+        "tags": [],
+        "url": "/tikz/prisoners-dilemma/",
+        "teaser": null
+      },{
+        "title": "Two Envelopes",
+        "excerpt":"\\begin{tikzpicture}[x=2.2cm,y=1.3cm,>=latex] % Root \\node (R) at (0,0) {}; % Level 1: 2 branches \\node (A1) at (1, 1.5) {$S$}; \\node (A2) at (1, -1.5) {$\\neg S$}; \\draw[->] (R) -- (A1) node[midway, sloped, above] {$\\frac{1}{2}$}; \\draw[->] (R) -- (A2) node[midway, sloped, above] {$\\frac{1}{2}$}; % Level 2: each of the above has...","categories": [],
+        "tags": [],
+        "url": "/tikz/two-envelopes/",
+        "teaser": null
+      },{
         "title": "Venn For Cond",
         "excerpt":"\\begin{tikzpicture}[scale=1.0] % Rectangle and its label inside, top-left \\draw (-3,-2) rectangle (3,2); \\node[anchor=north west] at (-3,2) {$U$}; % Circles \\draw (-1,0) circle (1.5); \\draw ( 1,0) circle (1.5); % Labels A and B outside using polar-style coordinates % radius 1.6, angle 140° for A (10 o'clock-ish) \\node at ({-1 +...","categories": [],
         "tags": [],
@@ -336,13 +420,13 @@ var store = [{
     "excerpt":"Language: Any Python Haskell Type: Any Module Snippet collatz python · module Various goodies related to Collatz conjecture. funcutils python · module A utility module for functional abstractions. Files python · snippet Working with files in Python. Plotting python · snippet Plotting in Python. A sequence processor python · module...","url": "https://umutozge.github.io/code/browser/"
   },{
     "title": "Exercise browser",
-    "excerpt":"discrete 2 funprog 1 grammar 1 iteration 1 language 2 linear algebra 1 lists 1 number theory 2 parsing 1 probability 3 programming 1 proof 1 python 3 recursion 1 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability and programming exercises. Combinatorics Various counting exercises. Higher-order functions...","url": "https://umutozge.github.io/exercise/browser/"
+    "excerpt":"discrete 2 funprog 1 grammar 1 iteration 1 language 2 linear algebra 1 lists 1 number theory 2 parsing 1 probability 3 programming 1 proof 1 python 3 recursion 1 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. Combinatorics Various counting exercises. Higher-order functions A set...","url": "https://umutozge.github.io/exercise/browser/"
   },{
     "title": "COGS 543",
-    "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(18/2) Course introduction; general discussion...","url": "https://umutozge.github.io/cl/schedule/"
+    "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Some exercises on this course may require some helper code. Please visit coursepy on how to get and install the helper code. Make sure you are on...","url": "https://umutozge.github.io/cl/schedule/"
   },{
     "title": "COGS 502",
-    "excerpt":"Spring 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ T 2:40-5:30, II03 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(19/2) Basic notions in probability...","url": "https://umutozge.github.io/prelim/schedule/"
+    "excerpt":"Spring 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ T 2:40-5:30, II03 Check the current syllabus for course information and policies. Some exercises on this course may require some helper code. Please visit coursepy on how to get and install the helper code. Make sure you are on...","url": "https://umutozge.github.io/prelim/schedule/"
   },{
     "title": "COGS 526",
     "excerpt":"Spring 2026 Umut Özge (✉️), Anıl Öğdül (TA, ✉️) 🕐 W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. ✳️ marks optional material. Week Content 1&nbsp;(18/2) Why logic is still relevant for cognitive science and AI...","url": "https://umutozge.github.io/courses/lccm/schedule/"
@@ -361,6 +445,9 @@ var store = [{
   },{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
+  },{
+    "title": "A repo for course related code",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/coursepy/"
   },{
     "title": "Probabilistic Systems Analysis and Applied Probability",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/bertsekas-course/"
@@ -443,8 +530,14 @@ var store = [{
     "title": "A logic for default reasoning",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/reiter-default/"
   },{
+    "title": "Solution: Grammar for arithmetic",
+    "excerpt":"```python from coursepy.lang.parsing import make_parser, make_cfg grammar_text=\"\"\" E -> E O E E -> LP E RP E -> '1'|'2'|'3'|'4' O -> '+'|'*' LP -> '(' RP -> ')' \"\"\" parser = make_parser(make_cfg(grammar_text)) for e in \"3 + 4,3 + 4 * 2,( 3 + 4 ) * 2\".split(\",\"): print(f\"Parse(s)...","url": "https://umutozge.github.io/solutions/ex-arithmetic-grammar/"
+  },{
+    "title": "Solution: &quot;Telescope&quot; sentences",
+    "excerpt":"```python from coursepy.lang.parsing import make_parser, make_cfg grammar_text = \"\"\" S -> NP VP NP -> Det N | Det N PP VP -> V NP | VP PP PP -> P NP Det -> 'the' | 'a' N -> 'dog' | 'owner' | 'leash' V -> 'found' P -> 'with'...","url": "https://umutozge.github.io/solutions/ex-simple-pst/"
+  },{
     "title": "Solution: Subcategorization",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-subcat/"
+    "excerpt":"```python from coursepy.lang.parsing import make_parser, make_cfg ``` **Part 1:** Extend your grammar so that you can parse sentences like _Every student saw a dog with a telescope_, with its two readings (i.e., the one in which the dog has a telescope, and the one in which the student has a...","url": "https://umutozge.github.io/solutions/ex-subcat/"
   },{
     "title": "Solution: A module for Peano arithmetic",
     "excerpt":"It must be fairly straightforward to decide to start with the constructors. Define what is the base element in your system, and define how to construct other elements from this unique seed. One must, however, do this with some care. The correct approach is to first define the base element...","url": "https://umutozge.github.io/solutions/ex-peano-module/"
@@ -452,14 +545,41 @@ var store = [{
     "title": "Solution: Flip",
     "excerpt":"All you can expect from Python is to generate for you a random number in $$[1,0)$$. In an unbiased `flip` all the shots of `random` below 0.5 would be `True` and above would be `False`, or vice versa. Now you can adjust the bias of the `flip` with the parameter...","url": "https://umutozge.github.io/solutions/ex-flip/"
   },{
+    "title": "Solution: Geometric",
+    "excerpt":"Assuming you have a flipping function like: ```python def flip(p): \"\"\"Return True with probability p\"\"\" from random import random return random() we can define a recursive function like: ```python def geometric(p): return 1 if flip(p) else 1 + geometric(p) ``` Let's play a little with our creation: ```python def test_geometric(p,...","url": "https://umutozge.github.io/solutions/ex-geometric-rec/"
+  },{
     "title": "Solution: Optimum order",
     "excerpt":"Let's name the three opponents as 1, 2, and 3, and let $$p_i$$ be the probability of winning against opponent $$i$$. Let's also take, without loss of generality, $$p_1 \\leq p_2 \\leq p_3$$, meaning that opponent 3 is the weakest. For a given order of opponents $$o_1, o_2 , o_3...","url": "https://umutozge.github.io/solutions/ex-middle-best/"
+  },{
+    "title": "Solution: More heads for Bob",
+    "excerpt":"There is an elegant solution to the problem, which is, at least for me, not easy to come by. I'll come back to it after I discuss my not-so-elegant solution. If you already discovered the \"harder\" solution, congratulate yourself, and feel free to ignore the rest of this page. There...","url": "https://umutozge.github.io/solutions/ex-more-heads/"
+  },{
+    "title": "Solution: The prisoner's dilemma",
+    "excerpt":"Let's name the prisoners $$A$$, $$B$$ and $$C$$, where ours is $$A$$. The two possible responses of the guard are $$G_B$$ and $$G_C$$. The prisoner $$A$$ thinks that the probability that he will be released is $$P(A_r)=2/3$$. He also thinks that the probability that his chances of being released gets...","url": "https://umutozge.github.io/solutions/ex-prisoners-dilemma/"
+  },{
+    "title": "Solution: A question of independence",
+    "excerpt":"Here is the state space again: ![State space]({% tikz_img venn-for-cond %}){:.centered-image} One common mistake is to infer that $$y=0$$, thinking that independent events do not intersect. The definition of independence is: $$P(A\\cap B) = P(A)\\cdot P(B)$$ Therefore the independence of $$A$$ and $$B$$ entails that: $$y\\cdot t = x\\cdot z$$...","url": "https://umutozge.github.io/solutions/ex-question-of-independence/"
+  },{
+    "title": "Solution: Recursive jar",
+    "excerpt":"The critical point to recognize is that we need to look at the exact same event from different perspectives. Conceptually, there appears to be a single event, which is described as \"the starting player wins with initially $$m$$ white, and $$n$$ black balls\". The probability of this event can be...","url": "https://umutozge.github.io/solutions/ex-recursive-jar/"
+  },{
+    "title": "Solution: Recursive jars",
+    "excerpt":"Let's concentrate what happens when we move from one jar to the next. Symbolically, $$ p(w,k+1) = p(w,k) \\cdot \\frac{m+1}{m+n+1} + (1 - p(w,k)) \\cdot \\frac{m}{m+n+1} $$ where $$p(w,k)$$ is the probability of drawing a white ball from the jar numbered $$k$$. We know that, $$ p(w,1) = \\frac{m}{m+n} $$...","url": "https://umutozge.github.io/solutions/ex-recursive-jars/"
   },{
     "title": "Solution: Second roll",
     "excerpt":"The exercise can be solved by using the definition of the conditional probability, or we can also compute the probability of the \"6 on second role\" event directly over the sample space using the fundamental axioms and theorems of probability. ### Without conditional probabiilty The sample space consists of the...","url": "https://umutozge.github.io/solutions/ex-second-throw/"
   },{
     "title": "Solution: Strange Bob",
     "excerpt":"The sample space has the following 9 outcomes, with the corresponding products: | Outcome | Product | |---------|---------| | (1,1) | 1 | | (1,2) | 2 | | (1,3) | 3 | | (2,1) | 2 | | (2,2) | 4 | | (2,3) | 6 | | (3,1)...","url": "https://umutozge.github.io/solutions/ex-strange-bob/"
+  },{
+    "title": "Solution: Swap game",
+    "excerpt":"First let us get clear about the process that we are aiming to build a probabilistic model for, leaning a little on what we bring from programming, especially how we took computation to be a succession of states. To help with mental consolidation of the process, think of two jars...","url": "https://umutozge.github.io/solutions/ex-swap-game/"
+  },{
+    "title": "Solution: Two envelopes",
+    "excerpt":"A tough problem. Let's call the unknown amounts $$a_1$$ and $$a_2$$ with $$a_1  d_2$$, a max $$X$$, call this event $$A$$.     - $$d_1 1$$ (by problem definition), $$P(B) > 0$$; therefore $$P(W) > \\frac{1}{2}$$, with the suggested strategy.           Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-two-envelopes/"
+  },{
+    "title": "Solution: The unfair coin",
+    "excerpt":"The example is due to [John von Neumann](https://en.wikipedia.org/wiki/John_von_Neumann), taken from his 1951 paper [Various Techniques Used in Connection with Random Digits](https://mcnp-green.lanl.gov/pdf_files/InBook_Computing_1961_Neumann_JohnVonNeumannCollectedWorks_VariousTechniquesUsedinConnectionwithRandomDigits.pdf) The experiment consists of two tosses of the biased coin. If the result is `HT` you agree to count it as \"heads\"; if the result is `TH` you agree...","url": "https://umutozge.github.io/solutions/ex-unfair-coin/"
   },{
     "title": "Solution: Definitons over Venn",
     "excerpt":"{% capture img_url %}{% tikz_img venn-for-cond %}{% endcapture %} {% include figure-row.html src=img_url alt=\"Conditional Probability\" content=\" 1. \\\\( P(A\\given B) = \\frac{y}{y + z}\\\\) 1. \\\\( P(A\\given \\neg B) = \\frac{x}{x+t} \\\\) 1. \\\\( P(A\\cap \\neg B) = \\frac{x}{x+y+z+t}\\\\) 1. \\\\( P(B\\given A\\cap B) = 1 \\\\) 1. \\\\( P(A\\cup...","url": "https://umutozge.github.io/solutions/ex-venn-for-cond/"

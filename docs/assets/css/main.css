@@ -5324,6 +5324,13 @@ table.table--course td li {
   color: #111;
 }
 
+hr.solution-separator {
+  border: 0;
+  border-top: 2px solid #ccc;
+  margin: 3rem auto;
+  width: 60%;
+}
+
 hr.topic-separator {
   border: 0;
   border-top: 2px solid #ccc;

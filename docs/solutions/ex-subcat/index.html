@@ -221,13 +221,282 @@
         
         <main class="solution">
   <div class="numbered">
-    <p>Solution not written yet.</p>
+    <div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">coursepy.lang.parsing</span> <span class="kn">import</span> <span class="n">make_parser</span><span class="p">,</span> <span class="n">make_cfg</span>
+</code></pre></div>  </div>
+</div>
+<p><strong>Part 1:</strong> Extend your grammar so that you can parse sentences like  <em>Every student saw a dog with a telescope</em>, with its two readings (i.e.,
+        the one in which the dog has a telescope, and the one in which the
+        student has a telescope).</p>
+
+<div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">grammar1</span> <span class="o">=</span> <span class="nf">make_cfg</span><span class="p">(</span><span class="sh">"""</span><span class="s">
+S  -&gt; NP VP
+
+NP -&gt; Det N
+NP -&gt; NP PP
+
+VP -&gt; V
+VP -&gt; V NP
+VP -&gt; VP PP
+
+PP -&gt; P NP
+
+Det -&gt; </span><span class="sh">'</span><span class="s">every</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">the</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">some</span><span class="sh">'</span><span class="s">
+N   -&gt; </span><span class="sh">'</span><span class="s">student</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">professor</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">dog</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">telescope</span><span class="sh">'</span><span class="s">
+V   -&gt; </span><span class="sh">'</span><span class="s">walks</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">saw</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">talks</span><span class="sh">'</span><span class="s">
+P   -&gt; </span><span class="sh">'</span><span class="s">with</span><span class="sh">'</span><span class="s">
+</span><span class="sh">"""</span><span class="p">)</span>
+
+<span class="n">parser1</span> <span class="o">=</span> <span class="nf">make_parser</span><span class="p">(</span><span class="n">grammar1</span><span class="p">)</span>
+<span class="n">trees1</span> <span class="o">=</span> <span class="nf">parser1</span><span class="p">(</span><span class="sh">"</span><span class="s">every student saw a dog with a telescope</span><span class="sh">"</span><span class="p">)</span>
+<span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="nf">pretty_print</span><span class="p">()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">trees1</span><span class="p">]</span>
+</code></pre></div>  </div>
+</div>
+<div class="nb-cell nb-output">
+  <div class="nb-prompt"><i class="fa-solid fa-arrow-right"></i></div>
+  <pre><code class="language-output">                       S                                
+        _______________|_______                          
+       |                       VP                       
+       |                _______|________                 
+       |               VP               PP              
+       |            ___|___         ____|___             
+       NP          |       NP      |        NP          
+   ____|_____      |    ___|___    |     ___|______      
+ Det         N     V  Det      N   P   Det         N    
+  |          |     |   |       |   |    |          |     
+every     student saw  a      dog with  a      telescope
+
+                       S                                
+        _______________|_______                          
+       |                       VP                       
+       |            ___________|___                      
+       |           |               NP                   
+       |           |        _______|____                 
+       |           |       |            PP              
+       |           |       |        ____|___             
+       NP          |       NP      |        NP          
+   ____|_____      |    ___|___    |     ___|______      
+ Det         N     V  Det      N   P   Det         N    
+  |          |     |   |       |   |    |          |     
+every     student saw  a      dog with  a      telescope
+</code></pre>
+</div>
+<div class="nb-cell nb-output">
+  <div class="nb-prompt"><i class="fa-solid fa-arrow-right"></i></div>
+
+  <pre><code class="language-output">[None, None]
+</code></pre>
+
+</div>
+<p><strong>Part 2:</strong> Your grammar generates ungrammatical sentences like <em>*Every student saw</em>
+   (English requires an explicit object in this case). Modify your grammar so
+   that it does not generate such sentences. But, be careful, both <em>Every
+   student walks</em> and <em>Every student walks a dog</em> are grammatical, you should do
+   justice to this fact as well.</p>
+
+<div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">grammar2</span> <span class="o">=</span> <span class="nf">make_cfg</span><span class="p">(</span><span class="sh">"""</span><span class="s">
+S  -&gt; NP VP
+
+NP -&gt; Det N
+NP -&gt; NP PP
+
+VP -&gt; IV
+VP -&gt; TV NP
+VP -&gt; VP PP
+
+PP -&gt; P NP
+
+Det -&gt; </span><span class="sh">'</span><span class="s">every</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">the</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">some</span><span class="sh">'</span><span class="s">
+N   -&gt; </span><span class="sh">'</span><span class="s">student</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">professor</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">dog</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">telescope</span><span class="sh">'</span><span class="s">
+IV   -&gt; </span><span class="sh">'</span><span class="s">walks</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">talks</span><span class="sh">'</span><span class="s">
+TV   -&gt; </span><span class="sh">'</span><span class="s">walks</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">saw</span><span class="sh">'</span><span class="s">
+P   -&gt; </span><span class="sh">'</span><span class="s">with</span><span class="sh">'</span><span class="s">
+</span><span class="sh">"""</span><span class="p">)</span>
+</code></pre></div>  </div>
+</div>
+<div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser2</span> <span class="o">=</span> <span class="nf">make_parser</span><span class="p">(</span><span class="n">grammar2</span><span class="p">)</span>
+<span class="nf">parser2</span><span class="p">(</span><span class="sh">"</span><span class="s">every student saw</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div>  </div>
+</div>
+<div class="nb-cell nb-output">
+  <div class="nb-prompt"><i class="fa-solid fa-arrow-right"></i></div>
+
+  <pre><code class="language-output">[]
+</code></pre>
+
+</div>
+<div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">parser2</span><span class="p">(</span><span class="sh">"</span><span class="s">every student walks a dog</span><span class="sh">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nf">pretty_print</span><span class="p">()</span>
+<span class="nf">parser2</span><span class="p">(</span><span class="sh">"</span><span class="s">every student walks</span><span class="sh">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nf">pretty_print</span><span class="p">()</span>
+</code></pre></div>  </div>
+</div>
+<div class="nb-cell nb-output">
+  <div class="nb-prompt"><i class="fa-solid fa-arrow-right"></i></div>
+  <pre><code class="language-output">                    S              
+        ____________|____           
+       |                 VP        
+       |             ____|___       
+       NP           |        NP    
+   ____|_____       |     ___|___   
+ Det         N      TV  Det      N 
+  |          |      |    |       |  
+every     student walks  a      dog
+
+             S         
+        _____|______    
+       NP           VP 
+   ____|_____       |   
+ Det         N      IV 
+  |          |      |   
+every     student walks
+</code></pre>
+</div>
+<p><strong>Part 3:</strong> Extend your grammar so that your grammar accepts sentences like <em>Every student talks to a professor</em> and rejects <em>*Every student talks a professor</em>.</p>
+
+<div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">grammar3</span> <span class="o">=</span> <span class="nf">make_cfg</span><span class="p">(</span><span class="sh">"""</span><span class="s">
+S  -&gt; NP VP
+
+NP -&gt; Det N
+NP -&gt; NP PP
+DNP -&gt; Dat NP
+
+
+VP -&gt; IV
+VP -&gt; TV NP
+VP -&gt; VP PP
+VP -&gt; OV DNP
+
+PP -&gt; P NP
+
+Det -&gt; </span><span class="sh">'</span><span class="s">every</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">the</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">some</span><span class="sh">'</span><span class="s">
+N   -&gt; </span><span class="sh">'</span><span class="s">student</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">professor</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">dog</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">telescope</span><span class="sh">'</span><span class="s">
+IV   -&gt; </span><span class="sh">'</span><span class="s">walks</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">talks</span><span class="sh">'</span><span class="s">
+TV   -&gt; </span><span class="sh">'</span><span class="s">walks</span><span class="sh">'</span><span class="s"> | </span><span class="sh">'</span><span class="s">saw</span><span class="sh">'</span><span class="s">
+OV   -&gt; </span><span class="sh">'</span><span class="s">talks</span><span class="sh">'</span><span class="s">
+P   -&gt; </span><span class="sh">'</span><span class="s">with</span><span class="sh">'</span><span class="s">
+Dat -&gt; </span><span class="sh">'</span><span class="s">to</span><span class="sh">'</span><span class="s">
+
+</span><span class="sh">"""</span><span class="p">)</span>
+</code></pre></div>  </div>
+</div>
+<div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser3</span> <span class="o">=</span> <span class="nf">make_parser</span><span class="p">(</span><span class="n">grammar3</span><span class="p">)</span>
+<span class="nf">parser3</span><span class="p">(</span><span class="sh">"</span><span class="s">every student talks to a professor</span><span class="sh">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nf">pretty_print</span><span class="p">()</span>
+</code></pre></div>  </div>
+</div>
+<div class="nb-cell nb-output">
+  <div class="nb-prompt"><i class="fa-solid fa-arrow-right"></i></div>
+  <pre><code class="language-output">                    S                            
+        ____________|________                     
+       |                     VP                  
+       |             ________|___                 
+       |            |           DNP              
+       |            |     _______|___             
+       NP           |    |           NP          
+   ____|_____       |    |        ___|______      
+ Det         N      OV  Dat     Det         N    
+  |          |      |    |       |          |     
+every     student talks  to      a      professor
+</code></pre>
+</div>
+<div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="nf">pretty_print</span><span class="p">()</span> <span class="k">for</span> <span class="n">t</span>  <span class="ow">in</span> <span class="nf">parser3</span><span class="p">(</span><span class="sh">"</span><span class="s">every student talks to a professor with a telescope</span><span class="sh">"</span><span class="p">)]</span>
+</code></pre></div>  </div>
+</div>
+<div class="nb-cell nb-output">
+  <div class="nb-prompt"><i class="fa-solid fa-arrow-right"></i></div>
+  <pre><code class="language-output">                                 S                                      
+        _________________________|__________                             
+       |                                    VP                          
+       |                      ______________|___________                 
+       |                     VP                         |               
+       |             ________|___                       |                
+       |            |           DNP                     PP              
+       |            |     _______|___               ____|___             
+       NP           |    |           NP            |        NP          
+   ____|_____       |    |        ___|______       |     ___|______      
+ Det         N      OV  Dat     Det         N      P   Det         N    
+  |          |      |    |       |          |      |    |          |     
+every     student talks  to      a      professor with  a      telescope
+
+             S                                                      
+        _____|___________                                            
+       |                 VP                                         
+       |             ____|______________                             
+       |            |                  DNP                          
+       |            |     ______________|______                      
+       |            |    |                     NP                   
+       |            |    |        _____________|____                 
+       |            |    |       |                  PP              
+       |            |    |       |              ____|___             
+       NP           |    |       NP            |        NP          
+   ____|_____       |    |    ___|______       |     ___|______      
+ Det         N      OV  Dat Det         N      P   Det         N    
+  |          |      |    |   |          |      |    |          |     
+every     student talks  to  a      professor with  a      telescope
+</code></pre>
+</div>
+<div class="nb-cell nb-output">
+  <div class="nb-prompt"><i class="fa-solid fa-arrow-right"></i></div>
+
+  <pre><code class="language-output">[None, None]
+</code></pre>
+
+</div>
+<p>Another solution for <em>talk to</em> would be to treat it as a single lexical item. However, there is a subtle distinction between verbal complexes like <em>talk to</em> on one hand and those like <em>look at</em> on the other.</p>
+
+<p><em>look</em> allows many prepositions with clear shifts in meaning:</p>
+
+<ol>
+  <li><em>look at</em> (direct gaze toward),</li>
+  <li><em>look for</em> (search),</li>
+  <li><em>look into</em> (investigate),</li>
+  <li><em>look after</em> (take care of), etc.</li>
+</ol>
+
+<p>These are (diachronically) prepositional or phrasal-verb constructions with largely idiosyncratic semantics.</p>
+
+<p><em>talk</em> has a rather narrower set of productive patterns:</p>
+
+<ol>
+  <li><em>talk to/with</em> NP (addressee),</li>
+  <li><em>talk about</em> NP (topic),</li>
+  <li><em>talk of</em> NP (more formal/literary topic),</li>
+</ol>
+
+<p>In this sense <em>talk</em> + P has a more systematic/transparent semantics. Compare the above types of <em>talk</em> + P with lexicalized usages like <em>talk back</em>, <em>talk down to</em>, etc., which have negative connotations.</p>
+
+<p>Both <em>look at</em> and <em>talk to</em> syntactically differ from phrasal verbs like <em>look up</em>.</p>
+
+<ol>
+  <li>I looked the word up.</li>
+  <li>*I looked the word at.</li>
+  <li>I looked it up.</li>
+  <li>*I looked up it.</li>
+  <li>* I looked it at.</li>
+  <li>I looked at it.</li>
+</ol>
+
 <hr />
 
 <div class="solution-actions">
   <button class="btn btn--primary" type="button" onclick="window.history.back()" aria-label="Go back to the previous page">
     Back to exercise
   </button>
+  <a class="btn btn--warning" href="/assets/solutions/ex-subcat/ex-subcat.ipynb">Download .ipynb</a>
+  <a class="btn btn--warning" href="/assets/solutions/ex-subcat/ex-subcat.py">Download .py</a>
 </div>
 
 
