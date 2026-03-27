@@ -64,9 +64,7 @@ def peanop(p):
     return (
             zerop(p)
             or
-            (
-                isinstance(p, tuple) and len(p) == 1 and peanop(p[0])
-            )
+            (isinstance(p, tuple) and len(p) == 1 and peanop(p[0]))
            )
 
 

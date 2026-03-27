@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-03-23T15:26:59+03:00">
+  <meta property="article:published_time" content="2026-03-27T12:31:34+03:00">
 
 
 
@@ -68,17 +68,25 @@
 
 
 <script type="text/javascript">
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"tcon":{"def":"{#1'_{\\scriptscriptstyle #2}}","args":2},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"}};
+  const extraMacros = {};
+
+  for (const [name, val] of Object.entries(extraMacroData || {})) {
+    extraMacros[name] = val.def ? [val.def, val.args] : val;
+  }
+
   window.MathJax = {
-    loader: {load: ['[tex]/ams']},
+    loader: {load: ['[tex]/ams', '[tex]/boldsymbol']},
     tex: {
-      packages: {'[+]': ['ams']},
+      packages: {'[+]': ['ams', 'boldsymbol']},
       tags: 'all',
       macros: {
         vectg: ["\\boldsymbol{#1}", 1],
         vect: ["\\mathbf{#1}", 1],
         softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1],
         given: "{\\mathrel{\\mkern-1mu\\mid\\mkern-1mu}}",
-        card: ["\\mid\\mkern-3mu#1\\mkern-3mu\\mid", 1]
+        card: ["\\mid\\mkern-3mu#1\\mkern-3mu\\mid", 1],
+        ...extraMacros
       }
     },
     options: {
@@ -91,32 +99,6 @@
 
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-
-<!-- MathJax configuration for automatic equation numbering 
-<script type="text/javascript">
-  window.MathJax = {
-    tex: {
-      packages: ['base','ams'],
-      tags: 'all',
-      macros: {
-        vect: ["\\boldsymbol{#1}", 1],
-        vv: ["\\mathbf{#1}", 1],
-        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
-      },
-    },
-    options: {
-      // Optional: Ensure equation numbers are on the right
-      tagSide: "right",
-      tagIndent: "0.8em"
-    }
-  };
-</script>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-
--->
 
     <!-- start custom head snippets -->
 
@@ -258,7 +240,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Basic probability">
     <meta itemprop="description" content="Probability exercises.">
-    <meta itemprop="datePublished" content="2026-03-23T15:26:59+03:00">
+    <meta itemprop="datePublished" content="2026-03-27T12:31:34+03:00">
     
 
     <div class="page__inner-wrap">
@@ -307,7 +289,7 @@ specify any parameters to <code class="language-plaintext highlighter-rouge">ran
 
     
       <a class="solution-badge" href="/solutions/ex-flip/" aria-label="Solution for ex-flip">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -326,7 +308,7 @@ specify any parameters to <code class="language-plaintext highlighter-rouge">ran
 
     
       <a class="solution-badge" href="/solutions/ex-geometric-rec/" aria-label="Solution for ex-geometric-rec">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -350,7 +332,7 @@ independent.</p>
 
     
       <a class="solution-badge" href="/solutions/ex-unfair-coin/" aria-label="Solution for ex-unfair-coin">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -381,7 +363,33 @@ the probability directly over the sample space.</p>
 
     
       <a class="solution-badge" href="/solutions/ex-second-throw/" aria-label="Solution for ex-second-throw">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
+      </a>
+    
+  </div>
+
+<div class="item" id="ex-inspection-batch" data-kind="exercise" data-label="Exercise" data-title="Inspection batch">
+
+    
+      <p>A batch of one hundred items is inspected by testing four randomly selected items. If one of the four is defective, the batch is rejected. What is the probability that the batch is accepted if it contains five defectives?</p>
+
+    
+
+
+    
+
+    
+      <i> Source: </i>
+      
+        
+          <a href="/p/bertsekas/" target="_blank" rel="noopener">ItP</a><span aria-hidden="true">, Pr. 17, Ch 1</span>
+        
+      
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-inspection-batch/" aria-label="Solution for ex-inspection-batch">
+        🗝️
       </a>
     
   </div>
@@ -407,7 +415,7 @@ the probability directly over the sample space.</p>
 
     
       <a class="solution-badge" href="/solutions/ex-middle-best/" aria-label="Solution for ex-middle-best">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -437,7 +445,7 @@ that result in a particular product are equally likely.
 
     
       <a class="solution-badge" href="/solutions/ex-strange-bob/" aria-label="Solution for ex-strange-bob">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -471,7 +479,33 @@ proportional to the probabilities of the corresponding events.</p>
 
     
       <a class="solution-badge" href="/solutions/ex-venn-for-cond/" aria-label="Solution for ex-venn-for-cond">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
+      </a>
+    
+  </div>
+
+<div class="item" id="ex-rolex" data-kind="exercise" data-label="Exercise" data-title="Rolex">
+
+    
+      <p>Suppose that we have found that the word “Rolex” occurs in 250 of 2000 messages known to be spam and in 5 of 1000 messages known not to be spam. Estimate the probability that an incoming message containing the word “Rolex” is spam, assuming that it is equally likely that an incoming message is spam or not spam.</p>
+
+    
+
+
+    
+
+    
+      <i> Source: </i>
+      
+        
+          <a href="/p/rosen/" target="_blank" rel="noopener">Rosen (2019)</a><span aria-hidden="true">, Ex 3. p. 499</span>
+        
+      
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-rolex/" aria-label="Solution for ex-rolex">
+        🗝️
       </a>
     
   </div>
@@ -498,7 +532,7 @@ recursive formula that allows the convenient computation of the probability that
 
     
       <a class="solution-badge" href="/solutions/ex-recursive-jar/" aria-label="Solution for ex-recursive-jar">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -524,7 +558,7 @@ recursive formula that allows the convenient computation of the probability that
 
     
       <a class="solution-badge" href="/solutions/ex-recursive-jars/" aria-label="Solution for ex-recursive-jars">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -550,7 +584,7 @@ recursive formula that allows the convenient computation of the probability that
 
     
       <a class="solution-badge" href="/solutions/ex-swap-game/" aria-label="Solution for ex-swap-game">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -576,7 +610,7 @@ recursive formula that allows the convenient computation of the probability that
 
     
       <a class="solution-badge" href="/solutions/ex-prisoners-dilemma/" aria-label="Solution for ex-prisoners-dilemma">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -602,7 +636,7 @@ recursive formula that allows the convenient computation of the probability that
 
     
       <a class="solution-badge" href="/solutions/ex-two-envelopes/" aria-label="Solution for ex-two-envelopes">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -632,7 +666,7 @@ all coins have been tossed, Bob will have gotten more heads than Alice is
 
     
       <a class="solution-badge" href="/solutions/ex-more-heads/" aria-label="Solution for ex-more-heads">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -657,7 +691,7 @@ can you say, if anything, about the relation between the probability mass terms 
 
     
       <a class="solution-badge" href="/solutions/ex-question-of-independence/" aria-label="Solution for ex-question-of-independence">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -697,7 +731,7 @@ can you say, if anything, about the relation between the probability mass terms 
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-23T15:26:59+03:00">2026-03-23</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-27T12:31:34+03:00">2026-03-27</time></p>
 
       </footer>
 

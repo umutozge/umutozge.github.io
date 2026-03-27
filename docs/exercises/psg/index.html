@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-03-23T15:26:59+03:00">
+  <meta property="article:published_time" content="2026-03-27T12:31:34+03:00">
 
 
 
@@ -68,17 +68,25 @@
 
 
 <script type="text/javascript">
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"tcon":{"def":"{#1'_{\\scriptscriptstyle #2}}","args":2},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"}};
+  const extraMacros = {};
+
+  for (const [name, val] of Object.entries(extraMacroData || {})) {
+    extraMacros[name] = val.def ? [val.def, val.args] : val;
+  }
+
   window.MathJax = {
-    loader: {load: ['[tex]/ams']},
+    loader: {load: ['[tex]/ams', '[tex]/boldsymbol']},
     tex: {
-      packages: {'[+]': ['ams']},
+      packages: {'[+]': ['ams', 'boldsymbol']},
       tags: 'all',
       macros: {
         vectg: ["\\boldsymbol{#1}", 1],
         vect: ["\\mathbf{#1}", 1],
         softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1],
         given: "{\\mathrel{\\mkern-1mu\\mid\\mkern-1mu}}",
-        card: ["\\mid\\mkern-3mu#1\\mkern-3mu\\mid", 1]
+        card: ["\\mid\\mkern-3mu#1\\mkern-3mu\\mid", 1],
+        ...extraMacros
       }
     },
     options: {
@@ -91,32 +99,6 @@
 
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-
-<!-- MathJax configuration for automatic equation numbering 
-<script type="text/javascript">
-  window.MathJax = {
-    tex: {
-      packages: ['base','ams'],
-      tags: 'all',
-      macros: {
-        vect: ["\\boldsymbol{#1}", 1],
-        vv: ["\\mathbf{#1}", 1],
-        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1]
-      },
-    },
-    options: {
-      // Optional: Ensure equation numbers are on the right
-      tagSide: "right",
-      tagIndent: "0.8em"
-    }
-  };
-</script>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-
--->
 
     <!-- start custom head snippets -->
 
@@ -258,7 +240,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Phrase Structure Grammars">
     <meta itemprop="description" content="Building phrase structure grammars to generate sentences and analyze their structure.">
-    <meta itemprop="datePublished" content="2026-03-23T15:26:59+03:00">
+    <meta itemprop="datePublished" content="2026-03-27T12:31:34+03:00">
     
 
     <div class="page__inner-wrap">
@@ -349,7 +331,7 @@ the leash</em>.</p>
 
     
       <a class="solution-badge" href="/solutions/ex-simple-pst/" aria-label="Solution for ex-simple-pst">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -393,7 +375,7 @@ to a professor</em> and rejects <em>*Every student talks a professor</em>.</li>
 
     
       <a class="solution-badge" href="/solutions/ex-subcat/" aria-label="Solution for ex-subcat">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -421,7 +403,7 @@ expressions like <code class="language-plaintext highlighter-rouge">3 + 4 * 2</c
 
     
       <a class="solution-badge" href="/solutions/ex-arithmetic-grammar/" aria-label="Solution for ex-arithmetic-grammar">
-        <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+        🗝️
       </a>
     
   </div>
@@ -475,7 +457,7 @@ expressions like <code class="language-plaintext highlighter-rouge">3 + 4 * 2</c
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-23T15:26:59+03:00">2026-03-23</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-27T12:31:34+03:00">2026-03-27</time></p>
 
       </footer>
 

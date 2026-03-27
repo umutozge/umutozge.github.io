@@ -5315,6 +5315,29 @@ table.table--course td li {
   margin: 0;
 }
 
+.tikz-display {
+  text-align: center;
+  margin: 1.25rem 0;
+}
+
+.tikz-display__img {
+  display: inline-block;
+  width: auto;
+  max-width: 75%;
+  height: auto;
+}
+
+.tikz-display__caption {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+@media (max-width: 800px) {
+  .tikz-display__img {
+    max-width: 100%;
+  }
+}
 .code-meta {
   margin-top: 0.15rem;
   margin-bottom: 0.15rem;
@@ -5322,6 +5345,14 @@ table.table--course td li {
   font-size: 0.5em;
   line-height: 1.2;
   color: #111;
+}
+
+.solution-badge {
+  display: inline-block;
+  position: absolute;
+  right: 0.5rem;
+  bottom: -1rem;
+  text-decoration: none;
 }
 
 hr.solution-separator {
@@ -5449,13 +5480,6 @@ body.layout--home .entries-grid .archive__item-excerpt {
 
 .item {
   position: relative;
-}
-
-.solution-badge {
-  display: inline-block;
-  position: absolute;
-  right: 0.5rem;
-  bottom: -1rem;
 }
 
 .nb-cell {

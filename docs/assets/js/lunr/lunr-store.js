@@ -83,6 +83,12 @@ var store = [{
         "url": "/exams/2026-03-18-543-quiz/",
         "teaser": null
       },{
+        "title": "502 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-03-26-502-quiz/",
+        "teaser": null
+      },{
         "title": "Basic probability",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": ["probability"],
@@ -149,6 +155,24 @@ var store = [{
         "url": "/exercises/zipfs-law/",
         "teaser": null
       },{
+        "title": "Characteristic function",
+        "excerpt":"For every set \\(A\\), there exists a unique function \\(f_A\\), called the characteristic function of \\(A\\), defined as follows:   \\[f_A(x) = \\begin{cases} 1,  \\text{ if } x \\in A \\\\ 0,  \\text{ otherwise } \\end{cases}\\] ","categories": [],
+        "tags": [],
+        "url": "/items/df-char-func/",
+        "teaser": null
+      },{
+        "title": "Syntax of $$L$$",
+        "excerpt":"Given the sets \\(C\\), \\(K\\), \\(V\\), \\(Q\\) for constants, connectives, variables, and quantifiers, respectively, the language \\(L\\) is defined as follows: \\(C\\cup K\\cup V \\subseteq L\\) If \\(\\pi_{\\smtyp{\\alpha}{\\beta}} \\in L\\) and \\(\\sigma_{\\alpha} \\in L\\), then \\((\\pi\\sigma)_{\\beta} \\in L\\). If \\(\\kappa \\in \\{\\forall,\\exists\\}\\), \\(\\chi \\in V\\) and \\(\\tau_{t} \\in L\\), then...","categories": [],
+        "tags": [],
+        "url": "/items/df-mt-l0/",
+        "teaser": null
+      },{
+        "title": "Semantic types",
+        "excerpt":"Given a set \\(T\\) of basic semantic types.      \\(\\tau\\) is a semantic type if \\(\\tau \\in T\\).   If \\(\\tau_1\\) and \\(\\tau_2\\) are semantic types, then \\(\\smtyp{\\tau_1}{\\tau_2}\\) is a semantic type.   Nothing else is a semantic type.  ","categories": [],
+        "tags": [],
+        "url": "/items/df-sem-types/",
+        "teaser": null
+      },{
         "title": "Addition",
         "excerpt":"   \\(\\forall x. x+0=x\\).   \\(\\forall x,y. x+s(y) = s(x + y)\\).  ","categories": [],
         "tags": [],
@@ -209,6 +233,12 @@ var store = [{
         "url": "/items/ex-geometric-rec/",
         "teaser": null
       },{
+        "title": "Inspection batch",
+        "excerpt":"A batch of one hundred items is inspected by testing four randomly selected items. If one of the four is defective, the batch is rejected. What is the probability that the batch is accepted if it contains five defectives?  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-inspection-batch/",
+        "teaser": null
+      },{
         "title": "Optimum order",
         "excerpt":"You enter a special kind of chess tournament, in which you play one game with each of three opponents, but you get to choose the order in which you play your opponents, knowing the probability of a win against each. You win the tournament if you win two games in...","categories": [],
         "tags": [],
@@ -243,6 +273,12 @@ var store = [{
         "excerpt":"Each of k jars contains m white and n black balls. A ball is randomly chosen from jar 1 and transferred to jar 2, then a ball is randomly chosen from jar 2 and transferred to jar 3, etc. Finally, a ball is randomly chosen from jar k. Show that...","categories": [],
         "tags": [],
         "url": "/items/ex-recursive-jars/",
+        "teaser": null
+      },{
+        "title": "Rolex",
+        "excerpt":"Suppose that we have found that the word “Rolex” occurs in 250 of 2000 messages known to be spam and in 5 of 1000 messages known not to be spam. Estimate the probability that an incoming message containing the word “Rolex” is spam, assuming that it is equally likely that...","categories": [],
+        "tags": [],
+        "url": "/items/ex-rolex/",
         "teaser": null
       },{
         "title": "Second roll",
@@ -389,6 +425,18 @@ var store = [{
         "url": "/posts/course/language-primer/",
         "teaser": null
       },{
+        "title": "Mts T1",
+        "excerpt":"\\begin{tikzpicture}[scale=1.5] \t\\Tree [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ] \\end{tikzpicture} ","categories": [],
+        "tags": [],
+        "url": "/tikz/mts-t1/",
+        "teaser": null
+      },{
+        "title": "Mts T2",
+        "excerpt":"\\begin{tikzpicture}[scale=1.5] \t\\Tree [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ]  \t\t\t  [.\\sysm{\\tcon{mary}{e}} ] \t] \\end{tikzpicture} ","categories": [],
+        "tags": [],
+        "url": "/tikz/mts-t2/",
+        "teaser": null
+      },{
         "title": "Prisoners Dilemma",
         "excerpt":"\\begin{tikzpicture}[ every node/.style={inner sep=2pt}, edge/.style={draw, -latex} ] % Root \\node (root) at (0,0) {}; % Level 1 nodes \\node (A) at (2, -3) {$C$}; \\node (B) at (2, 0) {$B$}; \\node (C) at (2, 3) {$A$}; % Level 2 nodes under A \\node (AgB) at (4, -3.75) {$G_C$}; \\node (AgC)...","categories": [],
         "tags": [],
@@ -445,6 +493,9 @@ var store = [{
   },{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
+  },{
+    "title": "Discrete Mathematics and Its Applications",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/rosen/"
   },{
     "title": "A repo for course related code",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/coursepy/"
@@ -548,6 +599,9 @@ var store = [{
     "title": "Solution: Geometric",
     "excerpt":"Assuming you have a flipping function like: ```python def flip(p): \"\"\"Return True with probability p\"\"\" from random import random return random() we can define a recursive function like: ```python def geometric(p): return 1 if flip(p) else 1 + geometric(p) ``` Let's play a little with our creation: ```python def test_geometric(p,...","url": "https://umutozge.github.io/solutions/ex-geometric-rec/"
   },{
+    "title": "Solution: Inspection batch",
+    "excerpt":"The batch gets accepted if the randomly selected four items are all from the 95 non-defective items. Thinking in terms of a sequential model avails us of using the multiplication rule. The probability we are interested in is, $$ P(\\text{accept}) = \\frac{95}{100} \\cdot \\frac{94}{99} \\cdot \\frac{93}{98} \\cdot \\frac{92}{97} \\approx 0.814...","url": "https://umutozge.github.io/solutions/ex-inspection-batch/"
+  },{
     "title": "Solution: Optimum order",
     "excerpt":"Let's name the three opponents as 1, 2, and 3, and let $$p_i$$ be the probability of winning against opponent $$i$$. Let's also take, without loss of generality, $$p_1 \\leq p_2 \\leq p_3$$, meaning that opponent 3 is the weakest. For a given order of opponents $$o_1, o_2 , o_3...","url": "https://umutozge.github.io/solutions/ex-middle-best/"
   },{
@@ -565,6 +619,9 @@ var store = [{
   },{
     "title": "Solution: Recursive jars",
     "excerpt":"Let's concentrate what happens when we move from one jar to the next. Symbolically, $$ p(w,k+1) = p(w,k) \\cdot \\frac{m+1}{m+n+1} + (1 - p(w,k)) \\cdot \\frac{m}{m+n+1} $$ where $$p(w,k)$$ is the probability of drawing a white ball from the jar numbered $$k$$. We know that, $$ p(w,1) = \\frac{m}{m+n} $$...","url": "https://umutozge.github.io/solutions/ex-recursive-jars/"
+  },{
+    "title": "Solution: Rolex",
+    "excerpt":"Suppose that we have found that the word “Rolex” occurs in 250 of 2000 messages known to be spam and in 5 of 1000 messages known not to be spam. Estimate the probability that an incoming message containing the word “Rolex” is spam, assuming that it is equally likely that...","url": "https://umutozge.github.io/solutions/ex-rolex/"
   },{
     "title": "Solution: Second roll",
     "excerpt":"The exercise can be solved by using the definition of the conditional probability, or we can also compute the probability of the \"6 on second role\" event directly over the sample space using the fundamental axioms and theorems of probability. ### Without conditional probabiilty The sample space consists of the...","url": "https://umutozge.github.io/solutions/ex-second-throw/"
