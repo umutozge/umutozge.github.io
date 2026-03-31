@@ -5191,10 +5191,22 @@ body {
   border-left-color: #4A90E2;
 }
 
-.numbered .xref {
+.xref {
   color: #0D93C5;
   font-weight: 600;
   text-decoration: none;
+}
+
+.numbered .item .item-criteria::before {
+  content: "Criteria:";
+  font-weight: 600;
+  font-style: italic;
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.numbered .item .item-criteria {
+  font-size: 0.7rem;
 }
 
 .figure-row {
@@ -5319,6 +5331,12 @@ table.table--course td ol {
 
 table.table--course td li {
   margin: 0;
+}
+
+table.table--course a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #37541A;
 }
 
 .tikz-display {

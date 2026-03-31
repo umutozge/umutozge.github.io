@@ -1,0 +1,428 @@
+{
+  "def:pq-axioms": {
+    "page": "/posts/course/language-primer/",
+    "number": 1,
+    "label": "Definition",
+    "title": "Axioms of `pq-System`"
+  },
+  "def:pq-production": {
+    "page": "/posts/course/language-primer/",
+    "number": 2,
+    "label": "Definition",
+    "title": "Productions of `pq-System`"
+  },
+  "ex:telescope": {
+    "page": "/posts/course/language-primer/",
+    "number": 3,
+    "label": "Example",
+    "title": "The telescope sentence"
+  },
+  "ex:telescope-structures": {
+    "page": "/posts/course/language-primer/",
+    "number": 4,
+    "label": "Example",
+    "title": "Two structures for the telescope sentence"
+  },
+  "df-char-func": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 1,
+    "label": "Definition",
+    "title": "Characteristic function"
+  },
+  "df-sem-types": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 2,
+    "label": "Definition",
+    "title": "Semantic types"
+  },
+  "df-mt-l0": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 3,
+    "label": "Definition",
+    "title": "Syntax"
+  },
+  "tr-mts-1": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 4,
+    "label": "Tree",
+    "title": ""
+  },
+  "tr-mts-2": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 5,
+    "label": "Tree",
+    "title": ""
+  },
+  "tr-mts-3": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 6,
+    "label": "Tree",
+    "title": ""
+  },
+  "tr-mts-4": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 7,
+    "label": "Tree",
+    "title": ""
+  },
+  "tr-mts-5": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 8,
+    "label": "Tree",
+    "title": ""
+  },
+  "df-funcset": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 9,
+    "label": "Notation",
+    "title": "Set exponents"
+  },
+  "df-mt-env-ext": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 10,
+    "label": "Notation",
+    "title": "Environment extension"
+  },
+  "df-mt-l0-sem": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 11,
+    "label": "Definition",
+    "title": "Semantics of L"
+  },
+  "ex-flip": {
+    "page": "/exercises/basic-probability/",
+    "number": 1,
+    "label": "Exercise",
+    "title": "Flip"
+  },
+  "ex-geometric-rec": {
+    "page": "/exercises/basic-probability/",
+    "number": 2,
+    "label": "Exercise",
+    "title": "Geometric"
+  },
+  "ex-unfair-coin": {
+    "page": "/exercises/basic-probability/",
+    "number": 3,
+    "label": "Exercise",
+    "title": "The unfair coin"
+  },
+  "ex-second-throw": {
+    "page": "/exercises/basic-probability/",
+    "number": 4,
+    "label": "Exercise",
+    "title": "Second roll"
+  },
+  "ex-inspection-batch": {
+    "page": "/exercises/basic-probability/",
+    "number": 5,
+    "label": "Exercise",
+    "title": "Inspection batch"
+  },
+  "ex-middle-best": {
+    "page": "/exercises/basic-probability/",
+    "number": 6,
+    "label": "Exercise",
+    "title": "Optimum order"
+  },
+  "ex-strange-bob": {
+    "page": "/exercises/basic-probability/",
+    "number": 7,
+    "label": "Exercise",
+    "title": "Strange Bob"
+  },
+  "ex-venn-for-cond": {
+    "page": "/exercises/basic-probability/",
+    "number": 8,
+    "label": "Exercise",
+    "title": "Definitons over Venn"
+  },
+  "ex-rolex": {
+    "page": "/exercises/basic-probability/",
+    "number": 9,
+    "label": "Exercise",
+    "title": "Rolex"
+  },
+  "ex-recursive-jar": {
+    "page": "/exercises/basic-probability/",
+    "number": 10,
+    "label": "Exercise",
+    "title": "Recursive jar"
+  },
+  "ex-recursive-jars": {
+    "page": "/exercises/basic-probability/",
+    "number": 11,
+    "label": "Exercise",
+    "title": "Recursive jars"
+  },
+  "ex-swap-game": {
+    "page": "/exercises/basic-probability/",
+    "number": 12,
+    "label": "Exercise",
+    "title": "Swap game"
+  },
+  "ex-prisoners-dilemma": {
+    "page": "/exercises/basic-probability/",
+    "number": 13,
+    "label": "Exercise",
+    "title": "The prisoner's dilemma"
+  },
+  "ex-two-envelopes": {
+    "page": "/exercises/basic-probability/",
+    "number": 14,
+    "label": "Exercise",
+    "title": "Two envelopes"
+  },
+  "ex-more-heads": {
+    "page": "/exercises/basic-probability/",
+    "number": 15,
+    "label": "Exercise",
+    "title": "More heads for Bob"
+  },
+  "ex-question-of-independence": {
+    "page": "/exercises/basic-probability/",
+    "number": 16,
+    "label": "Exercise",
+    "title": "A question of independence"
+  },
+  "ex-four-out": {
+    "page": "/exercises/combinatorics/",
+    "number": 1,
+    "label": "Exercise",
+    "title": "Four spades out"
+  },
+  "ex-dot-product": {
+    "page": "/exercises/linalg/",
+    "number": 1,
+    "label": "Exercise",
+    "title": "Dot Product"
+  },
+  "ex-matrix-multiplication": {
+    "page": "/exercises/linalg/",
+    "number": 2,
+    "label": "Exercise",
+    "title": "Matrix Multiplication"
+  },
+  "ex-transpose": {
+    "page": "/exercises/linalg/",
+    "number": 3,
+    "label": "Exercise",
+    "title": "Transpose"
+  },
+  "ex-softmax": {
+    "page": "/exercises/linalg/",
+    "number": 4,
+    "label": "Exercise",
+    "title": "Softmax"
+  },
+  "ex-softmax-multi": {
+    "page": "/exercises/linalg/",
+    "number": 5,
+    "label": "Exercise",
+    "title": "Softmax (multi-dimensional)"
+  },
+  "ax-peano-0": {
+    "page": "/exercises/peano-arithmetic/",
+    "number": 1,
+    "label": "Axioms",
+    "title": "Peano Axioms"
+  },
+  "df-addition": {
+    "page": "/exercises/peano-arithmetic/",
+    "number": 2,
+    "label": "Definition",
+    "title": "Addition"
+  },
+  "df-multiplication": {
+    "page": "/exercises/peano-arithmetic/",
+    "number": 3,
+    "label": "Definition",
+    "title": "Multiplication"
+  },
+  "df-peano-type": {
+    "page": "/exercises/peano-arithmetic/",
+    "number": 4,
+    "label": "Definition",
+    "title": "The Peano type"
+  },
+  "ex-peano-module": {
+    "page": "/exercises/peano-arithmetic/",
+    "number": 5,
+    "label": "Ex.",
+    "title": "A module for Peano arithmetic"
+  },
+  "ex-peano-comp": {
+    "page": "/exercises/peano-arithmetic/",
+    "number": 6,
+    "label": "Ex.",
+    "title": "Peano comparison"
+  },
+  "ex-peano-pow": {
+    "page": "/exercises/peano-arithmetic/",
+    "number": 7,
+    "label": "Ex.",
+    "title": "Peano power"
+  },
+  "ex-peano-sub": {
+    "page": "/exercises/peano-arithmetic/",
+    "number": 8,
+    "label": "Ex.",
+    "title": "Peano subtraction"
+  },
+  "ex-peano-div": {
+    "page": "/exercises/peano-arithmetic/",
+    "number": 9,
+    "label": "Ex.",
+    "title": "Peano Division"
+  },
+  "ex-simple-pst": {
+    "page": "/exercises/psg/",
+    "number": 1,
+    "label": "Exercise",
+    "title": "\"Telescope\" sentences"
+  },
+  "ex-subcat": {
+    "page": "/exercises/psg/",
+    "number": 2,
+    "label": "Exercise",
+    "title": "Subcategorization"
+  },
+  "ex-arithmetic-grammar": {
+    "page": "/exercises/psg/",
+    "number": 3,
+    "label": "Exercise",
+    "title": "Grammar for arithmetic"
+  },
+  "ex-member-index": {
+    "page": "/exercises/recursion/",
+    "number": 1,
+    "label": "Exercise",
+    "title": "Index"
+  },
+  "ex-powerset": {
+    "page": "/exercises/sets/",
+    "number": 2,
+    "label": "Exercise",
+    "title": "Powerset"
+  },
+  "ex-sum": {
+    "page": "/exercises/sequence-operations/",
+    "number": 1,
+    "label": "Exercise",
+    "title": "Summation"
+  },
+  "ex-insert": {
+    "page": "/exercises/sequence-operations/",
+    "number": 2,
+    "label": "Exercise",
+    "title": "Insertion"
+  },
+  "ex-reverse": {
+    "page": "/exercises/sequence-operations/",
+    "number": 3,
+    "label": "Exercise",
+    "title": "Reversing"
+  },
+  "ex-takewhile": {
+    "page": "/exercises/sequence-operations/",
+    "number": 4,
+    "label": "Exercise",
+    "title": "Taking"
+  },
+  "ex-map": {
+    "page": "/exercises/sequence-operations/",
+    "number": 5,
+    "label": "Exercise",
+    "title": "Mapping"
+  },
+  "ex-filter": {
+    "page": "/exercises/sequence-operations/",
+    "number": 6,
+    "label": "Exercise",
+    "title": "Filtering"
+  },
+  "ex-reduce": {
+    "page": "/exercises/sequence-operations/",
+    "number": 7,
+    "label": "Exercise",
+    "title": "Reducing"
+  },
+  "ex-enumerate": {
+    "page": "/exercises/sequence-operations/",
+    "number": 8,
+    "label": "Exercise",
+    "title": "Enumerating"
+  },
+  "ex-zip": {
+    "page": "/exercises/sequence-operations/",
+    "number": 9,
+    "label": "Exercise",
+    "title": "Zipping"
+  },
+  "ex-shuffle": {
+    "page": "/exercises/sequence-operations/",
+    "number": 10,
+    "label": "Exercise",
+    "title": "Shuffling"
+  },
+  "ex-freqcount": {
+    "page": "/exercises/sequence-operations/",
+    "number": 11,
+    "label": "Exercise",
+    "title": "Frequency counts"
+  },
+  "def-powerset": {
+    "page": "/exercises/sets/",
+    "number": 1,
+    "label": "Definition",
+    "title": "Powerset"
+  },
+  "def-partition": {
+    "page": "/exercises/sets/",
+    "number": 3,
+    "label": "Definition",
+    "title": "Partition"
+  },
+  "ex-random-partition": {
+    "page": "/exercises/sets/",
+    "number": 4,
+    "label": "Exercise",
+    "title": "Random partition"
+  },
+  "def-fields": {
+    "page": "/exercises/sets/",
+    "number": 5,
+    "label": "Definition",
+    "title": "Fields of sets"
+  },
+  "ex-field-test": {
+    "page": "/exercises/sets/",
+    "number": 6,
+    "label": "Exercise",
+    "title": "Field test"
+  },
+  "def-sigma-field": {
+    "page": "/exercises/sets/",
+    "number": 7,
+    "label": "Definition",
+    "title": "Sigma-field"
+  },
+  "ex-corpus": {
+    "page": "/exercises/zipfs-law/",
+    "number": 1,
+    "label": "Exercise",
+    "title": "Computing frequencies and ranks"
+  },
+  "ex-plot": {
+    "page": "/exercises/zipfs-law/",
+    "number": 2,
+    "label": "Exercise",
+    "title": "Plotting frequency vs. rank"
+  },
+  "df-cond-prob": {
+    "page": "/solutions/ex-second-throw/",
+    "number": 1,
+    "label": "Definition",
+    "title": "Conditional proability"
+  }
+}

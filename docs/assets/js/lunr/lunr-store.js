@@ -137,6 +137,12 @@ var store = [{
         "url": "/exercises/psg/",
         "teaser": null
       },{
+        "title": "Basic Recursion",
+        "excerpt":"Write a function that takes an object and a sequence and returns the index of the item in the sequence, starting from 0. If the item does not occur in the sequence, return -1. Use recursion. 🗝️ Given a set of items provided as a list, write a function that...","categories": [],
+        "tags": ["recursion"],
+        "url": "/exercises/recursion/",
+        "teaser": null
+      },{
         "title": "Sequence operations",
         "excerpt":"In the following exercises, you can treat sequences as lists or tuples, unless explicitly stated otherwise. Define a function mysum(seq) that returns the sum of all numbers in the list seq. def mysum(seq): \"\"\"Return the sum of all numbers in seq. In: seq - a sequnce of summable items Out:...","categories": [],
         "tags": ["python","sequence","lists","tuples"],
@@ -233,10 +239,34 @@ var store = [{
         "url": "/items/ex-subcat/",
         "teaser": null
       },{
+        "title": "Peano comparison",
+        "excerpt":"Define functions peano_eq and peano_lt for equality and less-than comparison of peano objects.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-peano-comp/",
+        "teaser": null
+      },{
+        "title": "Peano Division",
+        "excerpt":"Define a function divmod which takes two peano objects a and b and returns a pair of peano objects (q, r) such that q is the quotient of a divided by b and r is the remainder. You can assume that b is not zero.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-peano-div/",
+        "teaser": null
+      },{
         "title": "A module for Peano arithmetic",
         "excerpt":"Write a module1 peano which implements the following functions: Name and type Description zero :: -&gt; peano Constructor for the zero of the system, i.e., returns None succ :: peano -&gt; peano Constructor for the rest zerop :: peano -&gt; bool Check whether the given peano object is zero (in...","categories": [],
         "tags": [],
         "url": "/items/ex-peano-module/",
+        "teaser": null
+      },{
+        "title": "Peano power",
+        "excerpt":"Define a function peano_power that raises its first argument to the power of the second, all in peano type.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-peano-pow/",
+        "teaser": null
+      },{
+        "title": "Peano subtraction",
+        "excerpt":"Define two function pred and sub for predecessor and subtraction, respectively. As we are modeling the natural numbers, the predecessor of zero is zero, and subtraction is truncated at zero. For example, sub(from_int(3), from_int(5)) should return from_int(0), not from_int(-2).  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-peano-sub/",
         "teaser": null
       },{
         "title": "Flip",
@@ -333,6 +363,18 @@ var store = [{
         "excerpt":"Here is the depiction of the sample space of a probabilistic model, where the reals \\(x,y,z,t &gt; 0\\) indicate the probability mass of the corresponding regions. Note that they are not probabilities themselves, they are only proportional to the probabilities of the corresponding events. Indicate the following probabilities in terms...","categories": [],
         "tags": [],
         "url": "/items/ex-venn-for-cond/",
+        "teaser": null
+      },{
+        "title": "Index",
+        "excerpt":"Write a function that takes an object and a sequence and returns the index of the item in the sequence, starting from 0. If the item does not occur in the sequence, return -1.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-member-index/",
+        "teaser": null
+      },{
+        "title": "Power set",
+        "excerpt":"Given a set of items provided as a list, write a function that returns the power set of the given set.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-powerset/",
         "teaser": null
       },{
         "title": "",
@@ -540,7 +582,7 @@ var store = [{
     "excerpt":"Language: Any Python Haskell Type: Any Module Snippet collatz python · module Various goodies related to Collatz conjecture. funcutils python · module A utility module for functional abstractions. Files python · snippet Working with files in Python. Plotting python · snippet Plotting in Python. A sequence processor python · module...","url": "https://umutozge.github.io/code/browser/"
   },{
     "title": "Exercise browser",
-    "excerpt":"discrete 2 funprog 1 grammar 1 iteration 1 language 2 linear algebra 1 lists 1 number theory 2 parsing 1 probability 3 programming 1 proof 1 python 3 recursion 1 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. Combinatorics Various counting exercises. Higher-order functions A set...","url": "https://umutozge.github.io/exercise/browser/"
+    "excerpt":"discrete 2 funprog 1 grammar 1 iteration 1 language 2 linear algebra 1 lists 1 number theory 2 parsing 1 probability 3 programming 1 proof 1 python 3 recursion 2 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. Combinatorics Various counting exercises. Higher-order functions A set...","url": "https://umutozge.github.io/exercise/browser/"
   },{
     "title": "COGS 543",
     "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Some exercises on this course may require some helper code. Please visit coursepy on how to get and install the helper code. Make sure you are on...","url": "https://umutozge.github.io/cl/schedule/"
@@ -662,8 +704,20 @@ var store = [{
     "title": "Solution: Subcategorization",
     "excerpt":"```python from coursepy.lang.parsing import make_parser, make_cfg ``` **Part 1:** Extend your grammar so that you can parse sentences like _Every student saw a dog with a telescope_, with its two readings (i.e., the one in which the dog has a telescope, and the one in which the student has a...","url": "https://umutozge.github.io/solutions/ex-subcat/"
   },{
+    "title": "Solution: Peano comparison",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-peano-comp/"
+  },{
+    "title": "Solution: Peano Division",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-peano-div/"
+  },{
     "title": "Solution: A module for Peano arithmetic",
     "excerpt":"It must be fairly straightforward to decide to start with the constructors. Define what is the base element in your system, and define how to construct other elements from this unique seed. One must, however, do this with some care. The correct approach is to first define the base element...","url": "https://umutozge.github.io/solutions/ex-peano-module/"
+  },{
+    "title": "Solution: Peano power",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-peano-pow/"
+  },{
+    "title": "Solution: Peano subtraction",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-peano-sub/"
   },{
     "title": "Solution: Flip",
     "excerpt":"All you can expect from Python is to generate for you a random number in $$[1,0)$$. In an unbiased `flip` all the shots of `random` below 0.5 would be `True` and above would be `False`, or vice versa. Now you can adjust the bias of the `flip` with the parameter...","url": "https://umutozge.github.io/solutions/ex-flip/"
@@ -712,6 +766,12 @@ var store = [{
   },{
     "title": "Solution: Definitons over Venn",
     "excerpt":"{% capture img_url %}{% tikz_img venn-for-cond %}{% endcapture %} {% include figure-row.html src=img_url alt=\"Conditional Probability\" content=\" 1. \\\\( P(A\\given B) = \\frac{y}{y + z}\\\\) 1. \\\\( P(A\\given \\neg B) = \\frac{x}{x+t} \\\\) 1. \\\\( P(A\\cap \\neg B) = \\frac{x}{x+y+z+t}\\\\) 1. \\\\( P(B\\given A\\cap B) = 1 \\\\) 1. \\\\( P(A\\cup...","url": "https://umutozge.github.io/solutions/ex-venn-for-cond/"
+  },{
+    "title": "Solution: Index",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-member-index/"
+  },{
+    "title": "Solution: Power set",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-powerset/"
   },{
     "title": "Proof of Zero property of multiplication",
     "excerpt":"Proof not written yet.          Back to statement      ","url": "https://umutozge.github.io/proofs/th-mult-zero/"

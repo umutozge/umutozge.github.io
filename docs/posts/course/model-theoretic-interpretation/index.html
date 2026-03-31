@@ -367,7 +367,7 @@ relations are sets of triples, and so on. In model-theoretic semantics, a very
 central, and equally simple, mathematical fact is that every set is equivalent
 to a function, which is called its <span class="term" id="characteristic-function">characteristic function</span>.</p>
 
-<div class="item" id="df-char-func" data-kind="definition" data-label="Definition" data-title="Characteristic function">
+<div class="item" id="df-char-func" data-kind="definition" data-label="Definition" data-title="Characteristic function" data-ref="Definition">
 
     
       <p>For every set \(A\), there exists a unique function \(f_A\), called the
@@ -476,7 +476,7 @@ individuals to functions from individuals to truth values.</p>
 built on the basis of a set of basic types \(T\) (\(=\lbrace e, t\rbrace\) in our
 case):</p>
 
-<div class="item" id="df-sem-types" data-kind="defintion" data-label="Definition" data-title="Semantic types">
+<div class="item" id="df-sem-types" data-kind="defintion" data-label="Definition" data-title="Semantic types" data-ref="Definition">
 
     
       <p>Given a set \(T\) of basic semantic types.</p>
@@ -542,7 +542,7 @@ at issue or obvious, we do not write it.</p>
 <p>Let \(L\) be the set of well-formed expressions of the language of logical
 forms.</p>
 
-<div class="item" id="df-mt-l0" data-kind="defintion" data-label="Definition" data-title="Syntax">
+<div class="item" id="df-mt-l0" data-kind="defintion" data-label="Definition" data-title="Syntax" data-ref="Definition">
 
     
       <p>Given the sets \(C\), \(K\), \(V\), \(Q\) for constants, connectives, variables,
@@ -569,7 +569,7 @@ and quantifiers, respectively, the language \(L\) is defined as follows:</p>
 are well-formed expressions. Clause (2) builds up complex expressions
 through function application. A simple example:</p>
 
-<div class="item" id="tr-mts-1" data-kind="example" data-label="Tree" data-title="">
+<div class="item" id="tr-mts-1" data-kind="example" data-label="Tree" data-title="" data-ref="Tree">
 
     
       
@@ -595,7 +595,7 @@ to form the root of the tree, , is validated by Clause (2). Now we take
 a further step and apply the function we obtained in to another item
 from our vocabulary, this time a constant rather than a variable:</p>
 
-<div class="item" id="tr-mts-2" data-kind="example" data-label="Tree" data-title="">
+<div class="item" id="tr-mts-2" data-kind="example" data-label="Tree" data-title="" data-ref="Tree">
 
     
       
@@ -623,11 +623,11 @@ mentioned above. And as in the case of natural language pronouns, we
 cannot decide on the truth value of the expression unless we know who or
 what the variable (or pronoun) stands for.</p>
 
-<p>So far we made use of Clauses (1) and (2) of <a class="xref" href="#df-mt-l0"></a>
+<p>So far we made use of Clauses (1) and (2) of <a class="xref" href="#df-mt-l0" data-refmode="full"></a>
 .
 Now let us see Clause (3) in action.</p>
 
-<div class="item" id="tr-mts-3" data-kind="example" data-label="Tree" data-title="">
+<div class="item" id="tr-mts-3" data-kind="example" data-label="Tree" data-title="" data-ref="Tree">
 
     
       
@@ -663,7 +663,7 @@ standard logical notation:</p>
 <p>Here is a representation corresponding to <em>For any individual, if
 Mary loves him or her, then there is someone who gets broken</em>:</p>
 
-<div class="item" id="tr-mts-4" data-kind="example" data-label="Tree" data-title="">
+<div class="item" id="tr-mts-4" data-kind="example" data-label="Tree" data-title="" data-ref="Tree">
 
     
       
@@ -699,12 +699,12 @@ counting the left-most two</em>. Here are a couple of examples:</p>
  x(yz)w &amp;\equiv&amp; ((x(yz))w) &amp;
 \end{align*}\]
 
-<p>Let us now apply these parentheses elimination conventions to <a class="xref" href="#tr-mts-4"></a>
+<p>Let us now apply these parentheses elimination conventions to <a class="xref" href="#tr-mts-4" data-refmode="full"></a>
 ; observe
 that the type decorations goes away with the outer parentheses, you need
 to mentally keep track of them:</p>
 
-<div class="item" id="tr-mts-5" data-kind="example" data-label="Tree" data-title="">
+<div class="item" id="tr-mts-5" data-kind="example" data-label="Tree" data-title="" data-ref="Tree">
 
     
       
@@ -742,7 +742,7 @@ D_e,D_t,I\rangle\), where \(D_e\) is the domain of individuals (i.e. a set of
 and \(I\) is the interpretation function. We need some more notation to
 understand the mechanics of \(I\).</p>
 
-<div class="item" id="df-funcset" data-kind="definition" data-label="Notation" data-title="Set exponents">
+<div class="item" id="df-funcset" data-kind="definition" data-label="Notation" data-title="Set exponents" data-ref="Notation">
 
     
       <p>Given two sets \(X\) and \(Y\), \(X^Y\) denotes the set of all functions defined from \(Y\) to \(X\).
@@ -761,7 +761,7 @@ The notation is motivated by the fact that given two sets \(X\) and \(Y\) with c
   </div>
 
 <p>Given a model \(\mathcal{M}=\langle D_e,D_t,I\rangle\), the domain of any type
-of objects can be denoted using <a class="xref" href="#df-funcset"></a>
+of objects can be denoted using <a class="xref" href="#df-funcset" data-refmode="full"></a>
 . For instance, the domain of
 functions from entities to truth values is \(D_t^{D_e}\) or \(\{0,1\}^{D_e}\).
 For the domain of functions of type \((e(et))\) you will have
@@ -786,7 +786,7 @@ by the model and does not change during the course of evaluation; the
 environment on the other hand is dynamic, it gets <em>extended</em> during
 evaluation. We define the extension of an environment as follows:</p>
 
-<div class="item" id="df-mt-env-ext" data-kind="definition" data-label="Notation" data-title="Environment extension">
+<div class="item" id="df-mt-env-ext" data-kind="definition" data-label="Notation" data-title="Environment extension" data-ref="Notation">
 
     
       <p>Given an environment \(g\), a variable \(x\), and a constant \(c\), an extension of \(g\) is the function denoted as \(\fnex{g}{x}{c}\) which is exactly like \(g\) possibly except that it maps \(x\) to \(c\).</p>
@@ -807,7 +807,7 @@ higher order function denoted by double pipes:
 \(\interp{\psi}_{\mathcal{M},g}\) stands for the semantic evaluation of
 the expression \(\psi\) with respect to \(\mathcal{M}\) and \(g\).</p>
 
-<div class="item" id="df-mt-l0-sem" data-kind="definition" data-label="Definition" data-title="Semantics of L">
+<div class="item" id="df-mt-l0-sem" data-kind="definition" data-label="Definition" data-title="Semantics of L" data-ref="Definition">
 
     
       <ol>
@@ -859,7 +859,7 @@ g    = &amp; \{(x,\mtob{rosinante}),(y,\mtob{rosinante})\}
 <p>We do not provide the interpretations of logical constants, which are
 taken to be the standard logical connectives.</p>
 
-<p>The first invoked clause of <a class="xref" href="#df-mt-l0-sem"></a>
+<p>The first invoked clause of <a class="xref" href="#df-mt-l0-sem" data-refmode="full"></a>
  is  (4):</p>
 
 \[\begin{align*}
@@ -1232,5 +1232,9 @@ This paragraph will be justified.</p>
 
 
 
+    <script>
+  document.documentElement.dataset.refsUrl = "/refs.json";
+</script>
+<script src="/assets/js/refs.js"></script>
   </body>
 </html>
