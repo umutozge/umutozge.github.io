@@ -5191,6 +5191,12 @@ body {
   border-left-color: #4A90E2;
 }
 
+.numbered .xref {
+  color: #0D93C5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .figure-row {
   display: flex;
   flex-wrap: wrap;
@@ -5323,7 +5329,7 @@ table.table--course td li {
 .tikz-display__img {
   display: inline-block;
   width: auto;
-  max-width: 75%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -5338,6 +5344,14 @@ table.table--course td li {
     max-width: 100%;
   }
 }
+body.layout--single .page__content p {
+  text-align: justify;
+}
+
+body.layout--numbered .page__content p {
+  text-align: justify;
+}
+
 .code-meta {
   margin-top: 0.15rem;
   margin-bottom: 0.15rem;

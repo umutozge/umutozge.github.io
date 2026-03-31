@@ -1,5 +1,695 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-03-27T12:31:34+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
-</subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-02-14T00:00:00+03:00</published><updated>2026-02-14T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-03-31T11:20:59+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
+</subtitle><entry><title type="html">Model-theoretic interpretation</title><link href="https://umutozge.github.io/posts/course/model-theoretic-interpretation/" rel="alternate" type="text/html" title="Model-theoretic interpretation" /><published>2026-03-31T00:00:00+03:00</published><updated>2026-03-31T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/model-theoretic-interpretation</id><content type="html" xml:base="https://umutozge.github.io/posts/course/model-theoretic-interpretation/"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+<p>Model-theoretic semantics in linguistics aims to define correspondences between
+the expressions of a language and objects that are external to that
+language. To give a very simple example: assume you and I have a silly
+code between us, according to which, during the normal course of my
+speaking whenever I utter the definite article <em>the</em> you blink your left
+eye and whenever I utter the indefinite article <em>a(n)</em> you blink your
+right eye. Of course my utterances have a semantics associated with the
+language I speak – some idiolect of English; but besides that, there is
+another correspondence that maps the expressions <em>the</em> and <em>a(n)</em> to
+some objects which has no place in the semantics of my English. This
+second semantics is defined over a microscopic subset of English, namely
+. What would a semantics for this subset look like? Here, one needs to
+decide on the basis of the particular aim one has in developing a
+semantics. If we need a semantics to instruct a robot, then it would be
+logical to construct our correspondence in such a way that expressions
+are mapped to a set of robot control routines. If we are more on the
+side of cognitive neuroscience, we would be likely to choose
+neurological triggering mechanisms as the other side of the
+correspondence. If the observable behavior would suffice for our
+purposes, then mapping <em>the</em> to “blink left eye”, and <em>a</em> and <em>an</em> to
+“blink right eye”. You may even associate <em>the</em> with the probability of
+observing a left-eye blink within the limits of a particular time frame,
+so on and so forth. The technical term for what you take to be on the
+non-language side of the correspondence is “model”.</p>
+
+<p>In natural language semantics, the general practice – or where people
+usually begin – is to take the world as the model. This approach
+conceives the world as consisting of entities (humans, cats, chairs,
+hopes, fears…) and properties of and relations among these entities.
+Again to give a very simple example: the expression “the largest planet
+in the solar system as of October 15, 2017, 14:14:19 CET" is mapped to
+Jupiter.</p>
+
+<p>Although model-theoretic semanticists intend to associate language with
+the world outside, they use a certain formal representation of the world
+instead of the world itself, when they construct their semantic
+theories. In the case of physical objects like Jupiter or the chair I
+sit on at the moment, the reason why they do so is that the physical
+objects are impractical (or impossible in the case of Jupiter) to put on
+paper or computer screen, where you describe your semantics. There are
+also abstract objects that language refers to, but for which it is not
+easy, if not impossible, to pick corresponding objects from the outer
+world.</p>
+
+<p>In natural language semantics, we are interested in natural languages,
+which are highly ambiguous. Given this and some other concerns that we
+will come to later, what semanticists do is to first map natural
+languages to a disambiguated formal language (e.g. first order logic),
+and then interpret the expressions of this formal language with respect
+to a given model. We will call such intermediate representation that
+serve a way point in mapping natural languages to model-theoretic
+objects “logical forms”. In what follows, we will have a deeper look at
+this process. We will return to the topic of how to map natural language
+expressions to logical forms later on, where we delve into the notion of
+grammar that governs that mapping.</p>
+
+<h2 id="characteristic-functions-and-currying">Characteristic functions and Currying</h2>
+
+<p>We will assume that natural language expressions get transformed
+into a formal disambiguated language. The formal language we will use is
+a slight variant of first-order logic with equality and lambda
+abstraction. We will develop it gradually. There are certain notational
+conventions and conceptual points we diverge from first-order logic. We
+will first discuss those.</p>
+
+<p>Natural language has many expressions that correspond to the mathematical
+concept of a <span class="term" id="relation">relation</span>. <em>Loves</em> for instance is a verb that denotes a
+relation defined over the set of individuals. It simply includes those ordered
+pairs \((x,y)\) s.t. \(x\) loves \(y\). Certain mathematical properties of
+relations directly apply to natural language meaning. For instance, the love
+relation is not <span class="term" id="symmetric">symmetric</span>, because the fact that \(x\) loves \(y\) does
+not guarantee that \(y\) loves \(x\) in return, it may but it doesn’t have to.
+Compare this with the relation <em>class-mate</em>. The love relation is also not
+<span class="term" id="reflexive">reflexive</span> (as not every individual has to love him/herself), but the
+relation denoted by <em>has the same name</em> is. Love is also far from being
+<span class="term" id="transitive">transitive</span>, because the fact that \(x\) loves \(y\) and \(y\) loves
+\(z\) does not guarantee that \(x\) loves \(z\), but <em>sibling</em> denotes a
+transitive relation (which is also symmetric but not reflexive).</p>
+
+<p>Relations are fun, but we need to get used to seeing everything as functions,
+which constitute a subset of relations that insist that each individual is related to
+one and only one individual. How can we think of love as a function then?</p>
+
+<p>Relations are simply sets. Binary relations are sets of ordered pairs, ternary
+relations are sets of triples, and so on. In model-theoretic semantics, a very
+central, and equally simple, mathematical fact is that every set is equivalent
+to a function, which is called its <span class="term" id="characteristic-function">characteristic function</span>.</p>
+
+<div class="item" id="df-char-func" data-kind="definition" data-label="Definition" data-title="Characteristic function">
+
+    
+      <p>For every set \(A\), there exists a unique function \(f_A\), called the
+characteristic function of \(A\), defined as follows:</p>
+
+\[f_A(x) =
+\begin{cases}
+1,  \text{ if } x \in A \\
+0,  \text{ otherwise }
+\end{cases}\]
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>Therefore we will take a binary relation \(R\) defined on a set \(A\) to be a function
+\(f:A\times A\mapsto \{0,1\}\). All functions with the codomain
+\(\lbrace0,1\rbrace\) will be called <span class="term" id="boolean">boolean</span> functions; the connection
+to truth and falsity should be obvious.</p>
+
+<p>The second concept related to functions that we will need is Currying.
+Take the following simple function that multiplies two numbers:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
+</code></pre></div></div>
+
+<p>Whenever you need to use <code class="language-plaintext highlighter-rouge">multiply</code>, you have to provide the both
+arguments; it is impossible to delay the saturation of
+one of the arguments. Compare the following Curried form with the above:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">curried_multiply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
+    <span class="k">return</span> <span class="n">f</span>
+</code></pre></div></div>
+
+<p>Now you can incrementally saturate the function: <code class="language-plaintext highlighter-rouge">curried_multiply(8)</code>
+will give you a function that multiplies its argument with 8 and returns
+the result; to get 72 you need to have <code class="language-plaintext highlighter-rouge">curried_multiply(8)(9)</code>, rather
+than <code class="language-plaintext highlighter-rouge">curried_multiply(8,9)</code>.</p>
+
+<p>The functions in our language will all be Curried as in the above example.
+Therefore a function like \(\sysm{Loves}\) (yes, we take it to be a function
+rather than a relation) will get its arguments one by one. By convention we will
+agree that the arguments are fed in the reverse order.<sup id="fnref:montnot"><a href="#fn:montnot" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> For instance, to express
+what is expressed by the sentence <em>John loves Mary</em>, we will first feed the second argument to the function,
+resulting in,</p>
+
+\[Loves(Mary)\]
+
+<p>which stands for a function that returns 1 for individuals who love
+Mary and 0 otherwise. The full form is,</p>
+
+\[Loves(Mary)(John)\]
+
+<p>We will adopt two other notational conventions: 1. The constants<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> like
+\(Loves\), \(John\), and so on, will be written in lower case and terminated by
+a prime as in \(\sysm{loves'}\) and \(\sysm{john'}\) (or an abbreviated form
+\(\sysm{j}'\)); 2. Given a function \(f\) and an argument \(a\), we will depict
+function application as \(\sysm{(f\cnct a)}\), rather than the standard notation
+\(\sysm{f(a)}\). Under these conventions the logical representation of <em>John
+loves Mary</em> becomes,</p>
+
+\[((loves'\cnct mary')\cnct john')\]
+
+<p>Next section is on one of the most important concepts in natural language semantics.</p>
+
+<h2 id="semantic-types">Semantic types</h2>
+
+<p>In programming, the error you get when you attempt to take the square root of a
+string is a <span class="term" id="type-error">type error</span>. The square root function is a function from
+floats to floats, it neither accepts nor returns any other type of object. Our
+functions will be similarly typed, so that they work with only objects of types
+designated beforehand.</p>
+
+<p>Thanks to the fact that our functions are Curried, we will be able to
+elegantly characterize the set of possible types our functions can get
+on the basis of a small set of basic types.</p>
+
+<p>For now we will have only two basic types. It is remarkable how far one
+can go with just two basic types in semantics. One of our basic types is
+the type of expressions that have a truth value; a sentence like <em>Mary
+smiled</em>, for instance. We will designate this type with \(t\). The second
+basic type is the type of individuals (or entities), and it is
+designated by \(e\). What about functions? The type of a function is
+designated by having its domain’s (input) type and range’s (output) type
+concatenated and wrapped in parentheses.
+For instance, \(\sysm{smiles'}\) is a function that
+returns 1 or 0 according to whether or not it takes an individual who
+had a smile on his/her face some time before the expression is uttered.
+Therefore it has the type \((et)\), a function from individuals (or entities) to truth values.
+What about \(\sysm{loves'}\)? Given that it takes an individual and returns a function,
+its result type should be more complex than its input type. The type of
+\(loves'\) after it is fed an individual is a function that takes an individual as
+an input and gives 1 if that individual loves whatever was the first
+argument and 0 otherwise. Therefore \(\sysm{loves'}\) has the type \(\smtyp{e}{\smtyp{e}{t}}\): a function from
+individuals to functions from individuals to truth values.</p>
+
+<p>Here is a definition that provides all the possible types that can be
+built on the basis of a set of basic types \(T\) (\(=\lbrace e, t\rbrace\) in our
+case):</p>
+
+<div class="item" id="df-sem-types" data-kind="defintion" data-label="Definition" data-title="Semantic types">
+
+    
+      <p>Given a set \(T\) of basic semantic types.</p>
+
+<ol>
+  <li>\(\tau\) is a semantic type if \(\tau \in T\).</li>
+  <li>If \(\tau_1\) and \(\tau_2\) are semantic types, then \(\smtyp{\tau_1}{\tau_2}\)
+is a semantic type.</li>
+  <li>Nothing else is a semantic type.</li>
+</ol>
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>In defining our formal language for semantic representations, every item
+in our vocabulary will belong to one of the types defined as in the definition
+above.</p>
+
+<h2 id="a-language-for-logical-forms">A language for logical forms</h2>
+
+<h3 id="syntax">Syntax</h3>
+
+<p>The vocabulary of our language – everything except parentheses – comes
+from the three sets below; type of each item is subscripted to its name,
+except quantifiers which do not have types.</p>
+
+<p>Logical constants come in two separate sets, connectives and
+quantifiers:</p>
+
+\[\begin{align}
+K &amp;  =  \{\land_{\smtyp{t}{\smtyp{t}{t}}},\lor_{\smtyp{t}{\smtyp{t}{t}}},\to_{\smtyp{t}{\smtyp{t}{t}}},\neg_{\smtyp{t}{t}}\}\\
+Q &amp; =  \{\forall,\exists\}
+\end{align}\]
+
+<p>Non-logical constants:</p>
+
+\[C=\{\tcon{loves}{(e(et))},
+\tcon{diameter}{\smtyp{e}{e}},
+\tcon{slowly}{\smtyp{\smtyp{e}{t}}{\smtyp{e}{t}}},
+\tcon{blue}{(et)},
+\tcon{j}{e},
+\ldots\}\]
+
+<p>Variables:</p>
+
+\[V=\{p_{(et)},q_{(et)},r_{(et)},\ldots,x_{e},y_{e},z_{e},\ldots\}\]
+
+<p>Think of logical constants as function words in natural language;
+non-logical constants as content-words; variables as pronouns. Variables
+are distinguished from non-logical constants by not having a prime. They
+are also always single character. When the type of an expression is not
+at issue or obvious, we do not write it.</p>
+
+<p>We are ready to define the well-formed expressions of our language.</p>
+
+<p>Let \(L\) be the set of well-formed expressions of the language of logical
+forms.</p>
+
+<div class="item" id="df-mt-l0" data-kind="defintion" data-label="Definition" data-title="Syntax">
+
+    
+      <p>Given the sets \(C\), \(K\), \(V\), \(Q\) for constants, connectives, variables,
+and quantifiers, respectively, the language \(L\) is defined as follows:</p>
+
+<ol>
+  <li>\(C\cup K\cup V \subseteq L\)</li>
+  <li>If \(\pi_{\smtyp{\alpha}{\beta}} \in L\) and \(\sigma_{\alpha} \in L\), then \((\pi\sigma)_{\beta} \in L\).</li>
+  <li>If \(\kappa \in \{\forall,\exists\}\), \(\chi \in V\) and \(\tau_{t} \in L\), then \((\kappa \chi \tau)_{t} \in L\)</li>
+  <li>Nothing else is in \(L\).</li>
+</ol>
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>Clause (1) says that all items in our vocabulary except the quantifiers
+are well-formed expressions. Clause (2) builds up complex expressions
+through function application. A simple example:</p>
+
+<div class="item" id="tr-mts-1" data-kind="example" data-label="Tree" data-title="">
+
+    
+      
+<div class="tikz-display">
+  <img src="/assets/png/mts-t1.png" alt="Tree diagram" class="tikz-display__img" style="max-width: 20%;" loading="lazy" />
+  
+</div>
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>The leaves of the tree \(\tcon{loves}{(e(et))}\) and \(x_{e}\) are
+validated by Clause (1), while application of the former to the latter
+to form the root of the tree, , is validated by Clause (2). Now we take
+a further step and apply the function we obtained in to another item
+from our vocabulary, this time a constant rather than a variable:</p>
+
+<div class="item" id="tr-mts-2" data-kind="example" data-label="Tree" data-title="">
+
+    
+      
+<div class="tikz-display">
+  <img src="/assets/png/mts-t2.png" alt="Tree diagram" class="tikz-display__img" style="max-width: 30%;" loading="lazy" />
+  
+</div>
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>Our type system says that the expression at the root of is of type \(t\),
+which means it must stand for something that can be true or false. An
+approximation to this formal expression from natural language would be
+<em>Mary loves it, him or her</em>. The variable acts like a pronoun as
+mentioned above. And as in the case of natural language pronouns, we
+cannot decide on the truth value of the expression unless we know who or
+what the variable (or pronoun) stands for.</p>
+
+<p>So far we made use of Clauses (1) and (2) of <a class="xref" href="#df-mt-l0"></a>
+.
+Now let us see Clause (3) in action.</p>
+
+<div class="item" id="tr-mts-3" data-kind="example" data-label="Tree" data-title="">
+
+    
+      
+<div class="tikz-display">
+  <img src="/assets/png/tk-mts-3.png" alt="Tree diagram" class="tikz-display__img" style="max-width: 40%;" loading="lazy" />
+  
+</div>
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>What we have here is an approximation to the sentence <em>Mary loves
+everything</em>.</p>
+
+<p>In a similar fashion, we can invite our connectives into the business.
+Connectives will also be curried functions, so that they can be applied to their
+arguments one by one. For instance, the conditional will be applied to its
+antecedent and consequent one by one, resulting in the following equivalence to
+standard logical notation:</p>
+
+\[\begin{align*}
+((\to \alpha)\beta) \equiv \alpha\to\beta
+\end{align*}\]
+
+<p>Here is a representation corresponding to <em>For any individual, if
+Mary loves him or her, then there is someone who gets broken</em>:</p>
+
+<div class="item" id="tr-mts-4" data-kind="example" data-label="Tree" data-title="">
+
+    
+      
+<div class="tikz-display">
+  <img src="/assets/png/tk-mts-4.png" alt="Tree diagram" class="tikz-display__img" style="max-width: 60%;" loading="lazy" />
+  
+</div>
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>The formulas in their current forms are quite hard to read. One way to make them
+more readable is to agree on a convention to eliminate some parentheses. From
+now on we agree that in function application (i) outermost parentheses are
+omitted, and (ii) application associates to left. The first is easy to grasp:
+\(((fx)y)\) becomes \((fx)y\). The second needs some time get used to. Assume
+you are given an expression with some of its parenthesis are removed. Left
+association means that in restoring the parentheses back, you start from the two
+left most expressions, <em>without looking into parentheses you encounter when
+counting the left-most two</em>. Here are a couple of examples:</p>
+
+\[\begin{align*}
+ x\cnct y \cnct z &amp;\equiv&amp; ((xy)z) &amp; \\
+ x(yz) &amp;\equiv&amp; (x(yz)) &amp;\\
+ x(yz)w &amp;\equiv&amp; ((x(yz))w) &amp;
+\end{align*}\]
+
+<p>Let us now apply these parentheses elimination conventions to <a class="xref" href="#tr-mts-4"></a>
+; observe
+that the type decorations goes away with the outer parentheses, you need
+to mentally keep track of them:</p>
+
+<div class="item" id="tr-mts-5" data-kind="example" data-label="Tree" data-title="">
+
+    
+      
+<div class="tikz-display">
+  <img src="/assets/png/tk-mts-5.png" alt="Tree diagram" class="tikz-display__img" style="max-width: 60%;" loading="lazy" />
+  
+</div>
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<h4 id="semantics">Semantics</h4>
+
+<p>Now it is time to give a semantics to our formal language \(L\). But before we
+embark on that task let’s preempt a nasty confusion of terminology. Below, we
+will use the term <span class="term" id="domain">domain</span> in a sense different from the usual one. The
+usual sense of the term is “the set of input values of a function”; but we will
+use it in a second sense, according to which the domain of a function \(f\) is
+the the set of all functions that has the same type as \(f\). In this extended
+sense, the domain of the function \(f(x)=x^2\) is the set of all functions from
+\(\mathbb{R}\) to \(\mathbb{R}\). The sense will also apply to non-functional
+objects.</p>
+
+<p>First we define a <strong>model</strong>. A model \(\mathcal{M}\) is a tuple \(\langle
+D_e,D_t,I\rangle\), where \(D_e\) is the domain of individuals (i.e. a set of
+\(e\) type entities), \(D_t\) is the domain of truth values (usually ${0,1}$),
+and \(I\) is the interpretation function. We need some more notation to
+understand the mechanics of \(I\).</p>
+
+<div class="item" id="df-funcset" data-kind="definition" data-label="Notation" data-title="Set exponents">
+
+    
+      <p>Given two sets \(X\) and \(Y\), \(X^Y\) denotes the set of all functions defined from \(Y\) to \(X\).
+<br />
+<br />
+The notation is motivated by the fact that given two sets \(X\) and \(Y\) with cardinalities \(m\) and \(n\), respectively. There exists \(m^n\) functions from \(Y\) to \(X\).</p>
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>Given a model \(\mathcal{M}=\langle D_e,D_t,I\rangle\), the domain of any type
+of objects can be denoted using <a class="xref" href="#df-funcset"></a>
+. For instance, the domain of
+functions from entities to truth values is \(D_t^{D_e}\) or \(\{0,1\}^{D_e}\).
+For the domain of functions of type \((e(et))\) you will have
+\((\{0,1\}^{D_e})^{D_e}\), or for \(((et)t)\) you will have
+\(\{0,1\}^{(\{0,1\}^{D_e})}\), and in general the domain of functions of type
+\(\smtyp{\alpha}{\beta}\) is \(D_{\beta}^{D_{\alpha}}\).</p>
+
+<p>For a model \(\mathcal{M} = \langle D_e, D_t, I \rangle\) to be a model for a
+language \(L\), the interpretation function $I$ should be able to return a value
+for all the constants (logical and non-logical) of \(L\) from the domain
+corresponding to the type of the constant. In other words, \(I\) needs to be an
+effective dictionary for the vocabulary of \(L\).</p>
+
+<p>The interpretation function that comes with the model takes care of
+constants of our language; how about the variables? The variables –
+pronouns of \(L\) – are handled via <em>the environment for evaluation</em>, a
+function that maps variables of the language to corresponding objects in
+the model. Like the interpretation function \(I\), the environment,
+denoted by \(g\) maps each variable to an object with the same type. The
+fundamental difference between \(I\) and \(g\) is that the former is fixed
+by the model and does not change during the course of evaluation; the
+environment on the other hand is dynamic, it gets <em>extended</em> during
+evaluation. We define the extension of an environment as follows:</p>
+
+<div class="item" id="df-mt-env-ext" data-kind="definition" data-label="Notation" data-title="Environment extension">
+
+    
+      <p>Given an environment \(g\), a variable \(x\), and a constant \(c\), an extension of \(g\) is the function denoted as \(\fnex{g}{x}{c}\) which is exactly like \(g\) possibly except that it maps \(x\) to \(c\).</p>
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>It is time to state the semantics of \(L\) with respect to a model
+\(\mathcal{M}\) and an environment \(g\). You can think of evaluation as a
+higher order function denoted by double pipes:
+\(\interp{\psi}_{\mathcal{M},g}\) stands for the semantic evaluation of
+the expression \(\psi\) with respect to \(\mathcal{M}\) and \(g\).</p>
+
+<div class="item" id="df-mt-l0-sem" data-kind="definition" data-label="Definition" data-title="Semantics of L">
+
+    
+      <ol>
+  <li>\(\interpp{\alpha} = g(\alpha)\), if \(\alpha \in V\)</li>
+  <li>\(\interpp{\alpha} = I(\alpha)\), if \(\alpha \in C \cup K\)</li>
+  <li>\( \interpp{(\alpha\beta)} = \interpp{\alpha}(\interpp{\beta}) \)</li>
+  <li>\(\interpp{(\forall \alpha_{\pi} \beta)} = 1\) iff for all  \(d \in D_{\pi}\), \(\interp{\beta}_{\mathcal{M},\fnex{g}{x}{d}} = 1\)</li>
+  <li>\(\interpp{(\exists \alpha_{\pi} \beta)} = 1\) iff there is at least one \(d \in D_{\pi}\), \(\interp{\beta}_{\mathcal{M},\fnex{g}{x}{d}} = 1\)</li>
+</ol>
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<h4 id="example">Example</h4>
+
+<p>Let’s clarify over an example. Assume we were able to transform the sentence
+<em>Whenever Mary loves someone, there is someone who will be jealous of the person
+Mary loves</em> into the following logical form:</p>
+
+\[\begin{align*}
+\interpp{\forall x (\to (loves'\cnct x\cnct mary')\cnct (\exists y (jealous'\cnct x\cnct y)))}
+\end{align*}\]
+
+<p>Any propositional expression like this can be either true or false <em>with respect
+to a model</em>. Therefore, we need to specify a model.</p>
+
+<p>Here is our model \(\mathcal{M}\) and the environment \(g\):</p>
+
+\[\begin{align*}
+D_e  = &amp; \{\mtob{mary,pedro,rosinante}\} \\
+D_t  = &amp; \{1,0\}\\
+I    = &amp; \{(mary',\mtob{mary}), (pedro',\mtob{pedro}),\\
+       &amp; (loves',\{(\mtob{mary},\{(\mtob{rosinante}, 1), (\mtob{pedro}, 1), (\mtob{mary}, 0)\}),\\
+       &amp; \quad\quad\quad\quad (\mtob{pedro}, \{(\mtob{rosinante}, 0), (\mtob{pedro}, 1), (\mtob{mary}, 0)\}), \\
+       &amp; \quad\quad\quad\quad (\mtob{rosinante}, \{(\mtob{rosinante}, 0), (\mtob{pedro}, 0), (\mtob{mary}, 1)\})\}), \\
+       &amp; (jealous',\{(\mtob{mary},\{(\mtob{rosinante}, 0), (\mtob{pedro}, 1), (\mtob{mary}, 0)\}),\\
+       &amp; \quad\quad\quad\quad (\mtob{pedro}, \{(\mtob{rosinante}, 1), (\mtob{pedro}, 0), (\mtob{mary}, 0)\}), \\
+       &amp; \quad\quad\quad\quad (\mtob{rosinante}, \{(\mtob{rosinante}, 0), (\mtob{pedro}, 0), (\mtob{mary}, 1)\})\})\}\\
+g    = &amp; \{(x,\mtob{rosinante}),(y,\mtob{rosinante})\}
+\end{align*}\]
+
+<p>We do not provide the interpretations of logical constants, which are
+taken to be the standard logical connectives.</p>
+
+<p>The first invoked clause of <a class="xref" href="#df-mt-l0-sem"></a>
+ is  (4):</p>
+
+\[\begin{align*}
+&amp; \interpp{\forall x (\to (loves'\cnct x\cnct mary')\cnct (\exists y (jealous'\cnct x\cnct y)))} = 1 \text{ iff }, &amp;\\
+&amp; \text{for all } d \in D_e,\quad \interp{(\to (loves'\cnct x\cnct mary')\cnct (\exists y (jealous'\cnct x\cnct y)))}_{\mathcal{M},\fnex{g}{x}{d}} = 1
+\end{align*}\]
+
+<p>We start iterating over \(D_e\), replacing \(x\) with a model-theoretic
+object in \(D_e\) and checking whether we obtain 1 as result. First,</p>
+
+\[\begin{align*}
+\interp{(\to (loves'\cnct x\cnct mary')\cnct (\exists y (jealous'\cnct x\cnct y)))}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}}
+\end{align*}\]
+
+<p>This invokes clause (3):</p>
+
+\[\begin{align*}
+\interp{(\to (loves'\cnct x\cnct mary')}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}} (\interp{(\exists y (jealous'\cnct x\cnct y))}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}})
+\end{align*}\]
+
+<p>To handle this function argument form, let us first compute the function
+part \(\interp{(\to (loves'\cnct x\cnct mary')}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}}\), which is itself a function application, invoking clause (3)
+again:</p>
+
+\[\begin{align*}
+\interp{\to}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}} (\interp{(loves' x\cnct mary')}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}})
+\end{align*}\]
+
+<p>Now evaluate \(\interp{(loves' x\cnct mary')}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}}\), invoking clause (3):</p>
+
+\[\begin{align*}
+\label{lovesxmary}
+\interp{(loves' x)}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}} (\interp{mary'}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}})
+\end{align*}\]
+
+<p>Evaluate \(\interp{(loves' x)}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}}\), once again invoking clause (3):</p>
+
+\[\begin{align*}
+\label{lovesx}
+\interp{loves'}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}} (\interp{x}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}})
+\end{align*}\]
+
+<p>Evaluate \(\interp{x}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}}\), invoking clause (1):</p>
+
+\[\begin{align*}
+\interp{x}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}} = \fnex{g}{x}{\mtob{mary}}(x) = \mtob{mary}
+\end{align*}\]
+
+<p>We also have the following by clause (2),</p>
+
+\[\begin{align*}
+\interp{loves'}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}} = I(loves')
+\end{align*}\]
+
+<p>the evaluation step yields a function from \(e\) type objects to \(t\)
+type objects:</p>
+
+\[\begin{align*}
+I(loves') (\mtob{mary}) \\
+= \{(\mtob{rosinante}, 1), (\mtob{pedro}, 1), (\mtob{mary}, 0)\}
+\end{align*}\]
+
+<p>We have,</p>
+
+\[\begin{align*}
+\interp{mary'}_{\mathcal{M},\fnex{g}{x}{\mtob{mary}}} = I(mary') = \mtob{mary}
+\end{align*}\]
+
+<p>Feeding this into its function, we get 0 as the value. Feeding 0
+to the interpretation of \(\to\) would yield the function
+\(\{(0,1), (1,1)\}\). The next task is to compute the value for the
+consequent of the conditional with the extended environment and
+completing the iteration for \(x\mapsto \mtob{mary}\). The iteration has
+to go on until we are out of objects in \(D_e\). The completion of the
+evaluation is left as an exercise.</p>
+
+<hr class="topic-separator" />
+
+<p>This was a brief and dense introduction to model-theoretic interpretation. It
+aimed to introduce how to define a semantics for a formal language that can be
+used as a logical form for natural language expressions. The research in natural
+language morphosyntax-semantics correspondence concentrates on how to map
+natural language expressions to logical forms. In such a setting logical forms
+serve an intermediary ground between form and meaning, just like intermediary
+languages and representations used in translating high-level
+programming languages to machine executable code. There are, broadly speaking,
+two camps that differ in the role they confer to intermediary representations.
+For one camp, the logical form is theoretically superfluous. According to this
+camp, semantic theory is a direct mapping from forms to model-theoretic objects,
+and logical form is there only to make this mapping more <em>readable</em>, or less
+complex to track, contributing nothing to the explanatory power of the theory.
+The other camp, on the other hand, takes logical form to be an essential part of
+the theory, where certain principles and mechanisms are defined at the level of
+logical form. In either case, the interpretation of logical forms has to be
+understood and internalized by semanticists, although it will not be part of
+their regular research practice.
+This paragraph will be justified.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:montnot">
+      <p>This has a deeper linguistic reason that we will see later on. <a href="#fnref:montnot" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:1">
+      <p>See below for what “constant” means. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="course" /><category term="language" /><category term="semantics" /><summary type="html"><![CDATA[A very brief introduction]]></summary></entry><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-02-14T00:00:00+03:00</published><updated>2026-02-14T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
 
   <p>This is a quick start on langugage for cognitive science students.</p>
 

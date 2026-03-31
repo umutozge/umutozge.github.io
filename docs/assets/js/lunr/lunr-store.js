@@ -161,7 +161,25 @@ var store = [{
         "url": "/items/df-char-func/",
         "teaser": null
       },{
-        "title": "Syntax of $$L$$",
+        "title": "Set exponents",
+        "excerpt":"Given two sets \\(X\\) and \\(Y\\), \\(X^Y\\) denotes the set of all functions defined from \\(Y\\) to \\(X\\).     The notation is motivated by the fact that given two sets \\(X\\) and \\(Y\\) with cardinalities \\(m\\) and \\(n\\), respectively. There exists \\(m^n\\) functions from \\(Y\\) to \\(X\\).  ","categories": [],
+        "tags": [],
+        "url": "/items/df-funcset/",
+        "teaser": null
+      },{
+        "title": "Environment extension",
+        "excerpt":"Given an environment \\(g\\), a variable \\(x\\), and a constant \\(c\\), an extension of \\(g\\) is the function denoted as \\(\\fnex{g}{x}{c}\\) which is exactly like \\(g\\) possibly except that it maps \\(x\\) to \\(c\\).  ","categories": [],
+        "tags": [],
+        "url": "/items/df-mt-env-ext/",
+        "teaser": null
+      },{
+        "title": "Semantics of L",
+        "excerpt":"\\(\\interpp{\\alpha} = g(\\alpha)\\), if \\(\\alpha \\in V\\) \\(\\interpp{\\alpha} = I(\\alpha)\\), if \\(\\alpha \\in C \\cup K\\) \\( \\interpp{(\\alpha\\beta)} = \\interpp{\\alpha}(\\interpp{\\beta}) \\) \\(\\interpp{(\\forall \\alpha_{\\pi} \\beta)} = 1\\) iff for all \\(d \\in D_{\\pi}\\), \\(\\interp{\\beta}_{\\mathcal{M},\\fnex{g}{x}{d}} = 1\\) \\(\\interpp{(\\exists \\alpha_{\\pi} \\beta)} = 1\\) iff there is at least one \\(d \\in D_{\\pi}\\), \\(\\interp{\\beta}_{\\mathcal{M},\\fnex{g}{x}{d}}...","categories": [],
+        "tags": [],
+        "url": "/items/df-mt-l0-sem/",
+        "teaser": null
+      },{
+        "title": "Syntax",
         "excerpt":"Given the sets \\(C\\), \\(K\\), \\(V\\), \\(Q\\) for constants, connectives, variables, and quantifiers, respectively, the language \\(L\\) is defined as follows: \\(C\\cup K\\cup V \\subseteq L\\) If \\(\\pi_{\\smtyp{\\alpha}{\\beta}} \\in L\\) and \\(\\sigma_{\\alpha} \\in L\\), then \\((\\pi\\sigma)_{\\beta} \\in L\\). If \\(\\kappa \\in \\{\\forall,\\exists\\}\\), \\(\\chi \\in V\\) and \\(\\tau_{t} \\in L\\), then...","categories": [],
         "tags": [],
         "url": "/items/df-mt-l0/",
@@ -317,6 +335,36 @@ var store = [{
         "url": "/items/ex-venn-for-cond/",
         "teaser": null
       },{
+        "title": "",
+        "excerpt":"          ","categories": [],
+        "tags": [],
+        "url": "/items/tr-mts-1/",
+        "teaser": null
+      },{
+        "title": "",
+        "excerpt":"          ","categories": [],
+        "tags": [],
+        "url": "/items/tr-mts-2/",
+        "teaser": null
+      },{
+        "title": "",
+        "excerpt":"          ","categories": [],
+        "tags": [],
+        "url": "/items/tr-mts-3/",
+        "teaser": null
+      },{
+        "title": "",
+        "excerpt":"          ","categories": [],
+        "tags": [],
+        "url": "/items/tr-mts-4/",
+        "teaser": null
+      },{
+        "title": "",
+        "excerpt":"          ","categories": [],
+        "tags": [],
+        "url": "/items/tr-mts-5/",
+        "teaser": null
+      },{
         "title": "Zero property of multiplication",
         "excerpt":"Given any number \\(n\\) you can write it as an addition of \\(n\\) number of \\(1\\)’s: \\[n = 1 + 1 + \\cdots + 1 (n\\text{ times})\\] Therefore, we have: \\[n\\times 0 = (1 + 1 + \\cdots + 1)\\times 0\\] By distributivity of multiplication over addition, we have: \\[n\\times...","categories": [],
         "tags": [],
@@ -425,6 +473,12 @@ var store = [{
         "url": "/posts/course/language-primer/",
         "teaser": null
       },{
+        "title": "Model-theoretic interpretation",
+        "excerpt":"Introduction Model-theoretic semantics in linguistics aims to define correspondences between the expressions of a language and objects that are external to that language. To give a very simple example: assume you and I have a silly code between us, according to which, during the normal course of my speaking whenever...","categories": ["course"],
+        "tags": ["language","semantics"],
+        "url": "/posts/course/model-theoretic-interpretation/",
+        "teaser": null
+      },{
         "title": "Mts T1",
         "excerpt":"\\begin{tikzpicture}[scale=1.5] \t\\Tree [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ] \\end{tikzpicture} ","categories": [],
         "tags": [],
@@ -432,7 +486,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Mts T2",
-        "excerpt":"\\begin{tikzpicture}[scale=1.5] \t\\Tree [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ]  \t\t\t  [.\\sysm{\\tcon{mary}{e}} ] \t] \\end{tikzpicture} ","categories": [],
+        "excerpt":"\\begin{tikzpicture}[scale=1.5]  \t\\Tree [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ]  \t\t\t  [.\\sysm{\\tcon{mary}{e}} ] \t] \\end{tikzpicture} ","categories": [],
         "tags": [],
         "url": "/tikz/mts-t2/",
         "teaser": null
@@ -441,6 +495,24 @@ var store = [{
         "excerpt":"\\begin{tikzpicture}[ every node/.style={inner sep=2pt}, edge/.style={draw, -latex} ] % Root \\node (root) at (0,0) {}; % Level 1 nodes \\node (A) at (2, -3) {$C$}; \\node (B) at (2, 0) {$B$}; \\node (C) at (2, 3) {$A$}; % Level 2 nodes under A \\node (AgB) at (4, -3.75) {$G_C$}; \\node (AgC)...","categories": [],
         "tags": [],
         "url": "/tikz/prisoners-dilemma/",
+        "teaser": null
+      },{
+        "title": "Tk Mts 3",
+        "excerpt":"\\begin{tikzpicture}[scale=1.5] \\Tree [.\\sysm{(\\forall x ((loves'\\cnct x)\\cnct mary'))_{t}} \t\t  [.\\sysm{\\forall x} \\sysm{\\forall} \\sysm{x_{e}} ]  \t      [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ]  \t\t\t  [.\\sysm{\\tcon{mary}{e}} ] \t] ] \\end{tikzpicture} ","categories": [],
+        "tags": [],
+        "url": "/tikz/tk-mts-3/",
+        "teaser": null
+      },{
+        "title": "Tk Mts 4",
+        "excerpt":"\\begin{tikzpicture} \\Tree [.\\sysm{(\\forall x ((\\cond ((loves'\\cnct x)\\cnct mary')) (\\exists y (broken'\\cnct y))))_{t}} [.\\sysm{\\forall x} \\sysm{\\forall} \\sysm{x_{e}} ] [.\\sysm{((\\cond ((loves'\\cnct x)\\cnct mary')) (\\exists y (broken'\\cnct y)))_{t}} [.\\sysm{(\\cond ((loves'\\cnct x)\\cnct mary'))_{\\smtyp{t}{t}}} \\sysm{\\cond_{\\smtyp{t}{\\smtyp{t}{t}}}} [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}} $\\tcon{loves}{\\Teet}$ $x_{e}$ ] [.\\sysm{\\tcon{mary}{e}} ] ] ] [.\\sysm{(\\exists y (broken'\\cnct y))_{t}} [.\\sysm{\\exists y} \\sysm{\\exists} \\sysm{y_{e}}...","categories": [],
+        "tags": [],
+        "url": "/tikz/tk-mts-4/",
+        "teaser": null
+      },{
+        "title": "Tk Mts 5",
+        "excerpt":"\\begin{tikzpicture} \\Tree [.\\sysm{\\forall x (\\cond (loves' x\\cnct mary')\\cnct (\\exists y (broken' y)))} [.\\sysm{\\forall x} \\sysm{\\forall} \\sysm{x_{e}} ] [.\\sysm{\\cond (loves' x\\cnct mary')\\cnct (\\exists y (broken' y))} [.\\sysm{\\cond (loves' x\\cnct mary')} \\sysm{\\cond_{\\smtyp{t}{\\smtyp{t}{t}}}} [.\\sysm{loves'\\cnct x\\cnct mary'} [.\\sysm{loves' x} $\\tcon{loves}{\\Teet}$ $x_{e}$ ] [.\\sysm{\\tcon{mary}{e}} ] ] ] [.\\sysm{\\exists y (broken' y)} [.\\sysm{\\exists y} \\sysm{\\exists} \\sysm{y_{e}}...","categories": [],
+        "tags": [],
+        "url": "/tikz/tk-mts-5/",
         "teaser": null
       },{
         "title": "Two Envelopes",

@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-03-27T12:31:34+03:00">
+  <meta property="article:published_time" content="2026-03-31T11:20:59+03:00">
 
 
 
@@ -68,7 +68,7 @@
 
 
 <script type="text/javascript">
-  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"tcon":{"def":"{#1'_{\\scriptscriptstyle #2}}","args":2},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"}};
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"tcon":{"def":"{#1'_{\\scriptscriptstyle #2}}","args":2},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1}};
   const extraMacros = {};
 
   for (const [name, val] of Object.entries(extraMacroData || {})) {
@@ -182,7 +182,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Peano Axioms">
     <meta itemprop="description" content="The set of natural numbers \(\mathbb{N}\) is defined as follows:1            This is a version of Peano Axioms that omits the axioms on &#8617;      ">
-    <meta itemprop="datePublished" content="2026-03-27T12:31:34+03:00">
+    <meta itemprop="datePublished" content="2026-03-31T11:20:59+03:00">
     
 
     <div class="page__inner-wrap">
@@ -229,6 +229,36 @@ base case. <a href="#fnref:version" class="reversefootnote" role="doc-backlink"
   </ol>
 </div>
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Build a map of id → { label, number }
+  const itemMap = {};
+  document.querySelectorAll('.numbered').forEach(container => {
+    let count = 0;
+    container.querySelectorAll('.item').forEach(item => {
+      if (!item.id) return;
+      count++;
+      itemMap[item.id] = {
+        label: item.dataset.label ?? 'Item',
+        number: count
+      };
+    });
+  });
+
+  // Fill in all cross-reference links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    if (itemMap[id]) {
+      const { label, number } = itemMap[id];
+      // Only replace if the author left it empty, or always replace
+      if (!link.textContent.trim()) {
+        link.textContent = `${label} ${number}`;
+      }
+    }
+  });
+});
+</script>
 </div>
 
         
@@ -242,7 +272,7 @@ base case. <a href="#fnref:version" class="reversefootnote" role="doc-backlink"
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-27T12:31:34+03:00">2026-03-27</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-31T11:20:59+03:00">2026-03-31</time></p>
 
       </footer>
 

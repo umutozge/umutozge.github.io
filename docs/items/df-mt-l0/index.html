@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Syntax of \(L\) - Umut Özge</title>
+<!-- begin _includes/seo.html --><title>Syntax - Umut Özge</title>
 <meta name="description" content="Given the sets \(C\), \(K\), \(V\), \(Q\) for constants, connectives, variables, and quantifiers, respectively, the language \(L\) is defined as follows:">
 
 
@@ -18,7 +18,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Umut Özge">
-<meta property="og:title" content="Syntax of \(L\)">
+<meta property="og:title" content="Syntax">
 <meta property="og:url" content="https://umutozge.github.io/items/df-mt-l0/">
 
 
@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-03-27T12:31:34+03:00">
+  <meta property="article:published_time" content="2026-03-31T11:20:59+03:00">
 
 
 
@@ -68,7 +68,7 @@
 
 
 <script type="text/javascript">
-  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"tcon":{"def":"{#1'_{\\scriptscriptstyle #2}}","args":2},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"}};
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"tcon":{"def":"{#1'_{\\scriptscriptstyle #2}}","args":2},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1}};
   const extraMacros = {};
 
   for (const [name, val] of Object.entries(extraMacroData || {})) {
@@ -180,9 +180,9 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Syntax of \(L\)">
+    <meta itemprop="headline" content="Syntax">
     <meta itemprop="description" content="Given the sets \(C\), \(K\), \(V\), \(Q\) for constants, connectives, variables,and quantifiers, respectively, the language \(L\) is defined as follows:">
-    <meta itemprop="datePublished" content="2026-03-27T12:31:34+03:00">
+    <meta itemprop="datePublished" content="2026-03-31T11:20:59+03:00">
     
 
     <div class="page__inner-wrap">
@@ -190,7 +190,7 @@
         <header>
           
               <h2 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://umutozge.github.io/items/df-mt-l0/" itemprop="url">Definition: Syntax of \(L\)
+                <a href="https://umutozge.github.io/items/df-mt-l0/" itemprop="url">Definition: Syntax
 </a>
               </h2>
             
@@ -214,6 +214,36 @@ and quantifiers, respectively, the language \(L\) is defined as follows:</p>
   <li>Nothing else is in \(L\).</li>
 </ol>
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Build a map of id → { label, number }
+  const itemMap = {};
+  document.querySelectorAll('.numbered').forEach(container => {
+    let count = 0;
+    container.querySelectorAll('.item').forEach(item => {
+      if (!item.id) return;
+      count++;
+      itemMap[item.id] = {
+        label: item.dataset.label ?? 'Item',
+        number: count
+      };
+    });
+  });
+
+  // Fill in all cross-reference links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    if (itemMap[id]) {
+      const { label, number } = itemMap[id];
+      // Only replace if the author left it empty, or always replace
+      if (!link.textContent.trim()) {
+        link.textContent = `${label} ${number}`;
+      }
+    }
+  });
+});
+</script>
 </div>
 
         
@@ -227,7 +257,7 @@ and quantifiers, respectively, the language \(L\) is defined as follows:</p>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-27T12:31:34+03:00">2026-03-27</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-31T11:20:59+03:00">2026-03-31</time></p>
 
       </footer>
 
@@ -236,7 +266,7 @@ and quantifiers, respectively, the language \(L\) is defined as follows:</p>
       
   <nav class="pagination">
     
-      <a href="/items/df-char-func/" class="pagination--pager" title="Characteristic function">Previous</a>
+      <a href="/items/df-mt-l0-sem/" class="pagination--pager" title="Semantics of L">Previous</a>
     
     
       <a href="/items/df-sem-types/" class="pagination--pager" title="Semantic types">Next</a>
