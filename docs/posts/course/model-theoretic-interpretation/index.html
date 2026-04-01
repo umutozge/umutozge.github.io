@@ -68,7 +68,7 @@
 
 
 <script type="text/javascript">
-  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"tcon":{"def":"{#1'_{\\scriptscriptstyle #2}}","args":2},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1}};
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2}};
   const extraMacros = {};
 
   for (const [name, val] of Object.entries(extraMacroData || {})) {
@@ -623,8 +623,7 @@ mentioned above. And as in the case of natural language pronouns, we
 cannot decide on the truth value of the expression unless we know who or
 what the variable (or pronoun) stands for.</p>
 
-<p>So far we made use of Clauses (1) and (2) of <a class="xref" href="#df-mt-l0" data-refmode="full"></a>
-.
+<p>So far we made use of Clauses (1) and (2) of <a class="xref" href="#df-mt-l0" data-refmode="full"></a>.
 Now let us see Clause (3) in action.</p>
 
 <div class="item" id="tr-mts-3" data-kind="example" data-label="Tree" data-title="" data-ref="Tree">
@@ -699,8 +698,7 @@ counting the left-most two</em>. Here are a couple of examples:</p>
  x(yz)w &amp;\equiv&amp; ((x(yz))w) &amp;
 \end{align*}\]
 
-<p>Let us now apply these parentheses elimination conventions to <a class="xref" href="#tr-mts-4" data-refmode="full"></a>
-; observe
+<p>Let us now apply these parentheses elimination conventions to <a class="xref" href="#tr-mts-4" data-refmode="full"></a>; observe
 that the type decorations goes away with the outer parentheses, you need
 to mentally keep track of them:</p>
 
@@ -761,8 +759,7 @@ The notation is motivated by the fact that given two sets \(X\) and \(Y\) with c
   </div>
 
 <p>Given a model \(\mathcal{M}=\langle D_e,D_t,I\rangle\), the domain of any type
-of objects can be denoted using <a class="xref" href="#df-funcset" data-refmode="full"></a>
-. For instance, the domain of
+of objects can be denoted using <a class="xref" href="#df-funcset" data-refmode="full"></a>. For instance, the domain of
 functions from entities to truth values is \(D_t^{D_e}\) or \(\{0,1\}^{D_e}\).
 For the domain of functions of type \((e(et))\) you will have
 \((\{0,1\}^{D_e})^{D_e}\), or for \(((et)t)\) you will have
@@ -859,8 +856,7 @@ g    = &amp; \{(x,\mtob{rosinante}),(y,\mtob{rosinante})\}
 <p>We do not provide the interpretations of logical constants, which are
 taken to be the standard logical connectives.</p>
 
-<p>The first invoked clause of <a class="xref" href="#df-mt-l0-sem" data-refmode="full"></a>
- is  (4):</p>
+<p>The first invoked clause of <a class="xref" href="#df-mt-l0-sem" data-refmode="full"></a> is  (4):</p>
 
 \[\begin{align*}
 &amp; \interpp{\forall x (\to (loves'\cnct x\cnct mary')\cnct (\exists y (jealous'\cnct x\cnct y)))} = 1 \text{ iff }, &amp;\\
@@ -1020,14 +1016,14 @@ This paragraph will be justified.</p>
       
       <a href="/tags/#language"
          class="page__taxonomy-item p-category" rel="tag">
-        language <span class="taxonomy__count">5</span>
+        language <span class="taxonomy__count">6</span>
       </a>
     
       
       
       <a href="/tags/#semantics"
          class="page__taxonomy-item p-category" rel="tag">
-        semantics <span class="taxonomy__count">1</span>
+        semantics <span class="taxonomy__count">2</span>
       </a>
     
     </span>

@@ -66,7 +66,7 @@
 
 
 <script type="text/javascript">
-  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"tcon":{"def":"{#1'_{\\scriptscriptstyle #2}}","args":2},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1}};
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2}};
   const extraMacros = {};
 
   for (const [name, val] of Object.entries(extraMacroData || {})) {
@@ -281,7 +281,7 @@
       <label class="taxonomy__checkbox">
         <input type="checkbox" name="tag" value="language" />
         <strong class="taxonomy__name">language</strong>
-        <span class="taxonomy__count">2</span>
+        <span class="taxonomy__count">3</span>
       </label>
     </li>
   
@@ -299,6 +299,15 @@
       <label class="taxonomy__checkbox">
         <input type="checkbox" name="tag" value="lists" />
         <strong class="taxonomy__name">lists</strong>
+        <span class="taxonomy__count">1</span>
+      </label>
+    </li>
+  
+    
+    <li class="taxonomy__index-item">
+      <label class="taxonomy__checkbox">
+        <input type="checkbox" name="tag" value="logic" />
+        <strong class="taxonomy__name">logic</strong>
         <span class="taxonomy__count">1</span>
       </label>
     </li>
@@ -363,6 +372,15 @@
         <input type="checkbox" name="tag" value="recursion" />
         <strong class="taxonomy__name">recursion</strong>
         <span class="taxonomy__count">2</span>
+      </label>
+    </li>
+  
+    
+    <li class="taxonomy__index-item">
+      <label class="taxonomy__checkbox">
+        <input type="checkbox" name="tag" value="semantics" />
+        <strong class="taxonomy__name">semantics</strong>
+        <span class="taxonomy__count">1</span>
       </label>
     </li>
   
@@ -443,6 +461,27 @@
     </h2>
 
     <p class="archive__item-excerpt" itemprop="description">Various counting exercises.
+</p>
+  </article>
+</div>
+
+  
+    
+    
+
+
+
+<div class="grid__item exercise-card" data-tags="language,semantics,logic">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/exercises/formal-semantics/" rel="permalink"><i class="fas fa-dumbbell" aria-hidden="true"></i>Formal semantics
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">Exercises on model-theoretic semantics, FOL, and lambda calculus for a computational semantics course
 </p>
   </article>
 </div>

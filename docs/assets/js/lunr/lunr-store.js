@@ -101,6 +101,12 @@ var store = [{
         "url": "/exercises/combinatorics/",
         "teaser": null
       },{
+        "title": "Formal semantics",
+        "excerpt":"For each pair, determine the logical relation between the left and right formulas (implies, contradicts, or independent): \\[\\begin{gather} \\forall x.\\con{p}x\\rightarrow \\con{q}x&amp; \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x\\rightarrow \\con{q}x&amp; \\exists x.\\con{q}x\\\\ \\exists x.\\con{p}x\\wedge \\con{q}x&amp; \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x &amp;\\exists x.\\con{p}x\\\\ \\neg\\exists x\\,\\con{r}x&amp; \\forall x.\\neg\\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&amp; \\forall x.\\con{p}x\\rightarrow \\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&amp; \\forall x.\\con{p}x...","categories": [],
+        "tags": ["language","semantics","logic"],
+        "url": "/exercises/formal-semantics/",
+        "teaser": null
+      },{
         "title": "Higher-order functions",
         "excerpt":"Define a function apply_twice that takes a function f and a value x, and returns the result of applying f to x two times. def sqr(x): return x * x def apply_twice(f, x): \"\"\"apply f to x twice. &gt;&gt;&gt; apply_twice(sqr, 3) 81 \"\"\" Define a function applier that applies a...","categories": [],
         "tags": ["python","funprog"],
@@ -221,10 +227,40 @@ var store = [{
         "url": "/items/df-cond-prob/",
         "teaser": null
       },{
+        "title": "A simple model",
+        "excerpt":"\\(\\mathcal{M} = \\langle D, I\\rangle\\) with domain:   \\[\\begin{align*} D = \\{a,b,c,d,e\\} \\end{align*}\\]  Interpretation function:   \\[\\begin{align*} I(\\con{anna}) &amp;= a\\\\ I(\\con{ben}) &amp;= b\\\\ I(\\con{cara}) &amp;= c\\\\ I(\\con{student}) &amp;= \\{a,b\\}\\\\ I(\\con{linguist}) &amp;= \\{b,c\\}\\\\ I(\\con{book}) &amp;= \\{d,e\\}\\\\ I(\\con{admire}) &amp;= \\{(a,b),(b,c),(c,d)\\}\\\\ I(\\con{read}) &amp;= \\{(a,d),(b,e),(c,d),(a,e)\\}\\\\ I(\\con{recommend}) &amp;= \\{(a,d),(c,a),(c,d)\\}\\\\ \\end{align*}\\]  Environment:   \\[\\begin{align*} g=\\lbrace (x,a), (y,b)\\rbrace \\end{align*}\\] ","categories": [],
+        "tags": [],
+        "url": "/items/eg-simple-model/",
+        "teaser": null
+      },{
         "title": "Grammar for arithmetic",
         "excerpt":"Consider simple arithmetic expressions involving addition and multiplication, such as: 3 + 4 3 + 4 * 2 ( 3 + 4 ) * 2 Write a CFG over the terminals \\(\\lbrace +, *, (, ),2,3,4\\)} that generates such expressions. Your grammar should assign more than one phrase structure to...","categories": [],
         "tags": [],
         "url": "/items/ex-arithmetic-grammar/",
+        "teaser": null
+      },{
+        "title": "FOL basics",
+        "excerpt":"State whether each atomic formula is true or false in : \\[\\begin{gather*} \\con{student}\\con{anna}\\\\ \\con{book}\\con{anna}\\\\ \\con{linguist}\\con{cara}\\\\ \\con{admire}\\con{ben}\\con{anna}\\\\ \\con{admire}\\con{anna}\\con{ben}\\\\ \\end{gather*}\\] Evaluate the following formulas in . \\[\\begin{gather*} \\exists x.\\con{student}x\\\\ \\forall x.\\con{student}x \\rightarrow \\con{linguist}x\\\\ \\exists x.\\con{student}x \\land \\con{linguist}x\\\\ \\forall x.\\con{book}x \\rightarrow \\con{student}x\\\\ \\exists x\\forall y. \\con{admire}y\\cnct x\\\\ \\con{student}x\\\\ \\con{linguist}x\\\\ \\exists x.\\con{admire}x\\cnct y\\\\ \\end{gather*}\\]...","categories": [],
+        "tags": [],
+        "url": "/items/ex-fol-basics/",
+        "teaser": null
+      },{
+        "title": "Logical relations",
+        "excerpt":"For each pair, determine the logical relation between the left and right formulas (implies, contradicts, or independent): \\[\\begin{gather} \\forall x.\\con{p}x\\rightarrow \\con{q}x&amp; \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x\\rightarrow \\con{q}x&amp; \\exists x.\\con{q}x\\\\ \\exists x.\\con{p}x\\wedge \\con{q}x&amp; \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x &amp;\\exists x.\\con{p}x\\\\ \\neg\\exists x\\,\\con{r}x&amp; \\forall x.\\neg\\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&amp; \\forall x.\\con{p}x\\rightarrow \\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&amp; \\forall x.\\con{p}x...","categories": [],
+        "tags": [],
+        "url": "/items/ex-logical-relations/",
+        "teaser": null
+      },{
+        "title": "Model building",
+        "excerpt":"Build a model with exactly three individuals where the following are all true: \\[\\exists x\\,\\con{student}x\\] \\[\\exists x\\,\\con{linguist}x\\] \\[\\neg\\forall x\\,\\con{student}x\\] \\[\\exists x(\\con{student}x\\wedge \\con{linguist}x)\\] \\[\\exists x\\exists y\\, \\con{admire}(x,y)\\] Build a model where the following set is inconsistent, and explain why: \\[\\forall x(\\con{student}x\\rightarrow \\con{read}(x,b))\\] \\[\\exists x\\,\\con{student}x\\] \\[\\forall x\\,\\neg \\con{read}(x,b)\\] Build a model where...","categories": [],
+        "tags": [],
+        "url": "/items/ex-model-building/",
+        "teaser": null
+      },{
+        "title": "Model theory basics",
+        "excerpt":"State whether each atomic formula is true or false in : \\[\\begin{gather*} \\con{student}\\con{anna}\\\\ \\con{book}\\con{anna}\\\\ \\con{linguist}\\con{cara}\\\\ \\con{admire}\\con{ben}\\con{anna}\\\\ \\con{admire}\\con{anna}\\con{ben}\\\\ \\end{gather*}\\] Evaluate the following formulas in . \\[\\begin{gather*} \\exists x.\\con{student}x\\\\ \\forall x.\\con{student}x \\rightarrow \\con{linguist}x\\\\ \\exists x.\\con{student}x \\land \\con{linguist}x\\\\ \\forall x.\\con{book}x \\rightarrow \\con{student}x\\\\ \\exists x\\forall y. \\con{admire}y\\cnct x\\\\ \\con{student}x\\\\ \\con{linguist}x\\\\ \\exists x.\\con{admire}x\\cnct y\\\\ \\end{gather*}\\]...","categories": [],
+        "tags": [],
+        "url": "/items/ex-model-theory-basics/",
         "teaser": null
       },{
         "title": "&quot;Telescope&quot; sentences",
@@ -582,7 +618,7 @@ var store = [{
     "excerpt":"Language: Any Python Haskell Type: Any Module Snippet collatz python · module Various goodies related to Collatz conjecture. funcutils python · module A utility module for functional abstractions. Files python · snippet Working with files in Python. Plotting python · snippet Plotting in Python. A sequence processor python · module...","url": "https://umutozge.github.io/code/browser/"
   },{
     "title": "Exercise browser",
-    "excerpt":"discrete 2 funprog 1 grammar 1 iteration 1 language 2 linear algebra 1 lists 1 number theory 2 parsing 1 probability 3 programming 1 proof 1 python 3 recursion 2 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. Combinatorics Various counting exercises. Higher-order functions A set...","url": "https://umutozge.github.io/exercise/browser/"
+    "excerpt":"discrete 2 funprog 1 grammar 1 iteration 1 language 3 linear algebra 1 lists 1 logic 1 number theory 2 parsing 1 probability 3 programming 1 proof 1 python 3 recursion 2 semantics 1 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. Combinatorics Various counting exercises....","url": "https://umutozge.github.io/exercise/browser/"
   },{
     "title": "COGS 543",
     "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Some exercises on this course may require some helper code. Please visit coursepy on how to get and install the helper code. Make sure you are on...","url": "https://umutozge.github.io/cl/schedule/"
@@ -697,6 +733,18 @@ var store = [{
   },{
     "title": "Solution: Grammar for arithmetic",
     "excerpt":"```python from coursepy.lang.parsing import make_parser, make_cfg grammar_text=\"\"\" E -> E O E E -> LP E RP E -> '1'|'2'|'3'|'4' O -> '+'|'*' LP -> '(' RP -> ')' \"\"\" parser = make_parser(make_cfg(grammar_text)) for e in \"3 + 4,3 + 4 * 2,( 3 + 4 ) * 2\".split(\",\"): print(f\"Parse(s)...","url": "https://umutozge.github.io/solutions/ex-arithmetic-grammar/"
+  },{
+    "title": "Solution: FOL basics",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-fol-basics/"
+  },{
+    "title": "Solution: Logical relations",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-logical-relations/"
+  },{
+    "title": "Solution: Model building",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-model-building/"
+  },{
+    "title": "Solution: Model theory basics",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-model-theory-basics/"
   },{
     "title": "Solution: &quot;Telescope&quot; sentences",
     "excerpt":"```python from coursepy.lang.parsing import make_parser, make_cfg grammar_text = \"\"\" S -> NP VP NP -> Det N | Det N PP VP -> V NP | VP PP PP -> P NP Det -> 'the' | 'a' N -> 'dog' | 'owner' | 'leash' V -> 'found' P -> 'with'...","url": "https://umutozge.github.io/solutions/ex-simple-pst/"

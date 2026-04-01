@@ -191,6 +191,30 @@
     "label": "Exercise",
     "title": "Four spades out"
   },
+  "ex-logical-relations": {
+    "page": "/exercises/formal-semantics/",
+    "number": 1,
+    "label": "Exercise",
+    "title": "Logical relations"
+  },
+  "eg-simple-model": {
+    "page": "/exercises/formal-semantics/",
+    "number": 2,
+    "label": "Model",
+    "title": "A simple model"
+  },
+  "ex-model-theory-basics": {
+    "page": "/exercises/formal-semantics/",
+    "number": 3,
+    "label": "Exercise",
+    "title": "Model theory basics"
+  },
+  "ex-model-building": {
+    "page": "/exercises/formal-semantics/",
+    "number": 4,
+    "label": "Exercise",
+    "title": "Model building"
+  },
   "ex-dot-product": {
     "page": "/exercises/linalg/",
     "number": 1,
