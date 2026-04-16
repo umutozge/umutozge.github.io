@@ -95,10 +95,10 @@ var store = [{
         "url": "/exams/2026-04-02-502-quiz/",
         "teaser": null
       },{
-        "title": "Ex Length",
+        "title": "502 Quiz",
         "excerpt":" ","categories": [],
         "tags": [],
-        "url": "/exams/ex-length/",
+        "url": "/exams/2026-04-16-502-quiz/",
         "teaser": null
       },{
         "title": "Basic probability",
@@ -168,7 +168,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Sets",
-        "excerpt":"Unless otherwise specified, you may use Python lists to represent sets. Given a set \\(A\\), the powerset of \\(A\\), denoted by \\(\\mathcal{P}(A)\\), is the set of all subsets of \\(A\\). Define a function powerset(s) that takes a set s and returns its powerset. Given a set \\(A\\), a partition of...","categories": [],
+        "excerpt":"Unless otherwise specified, you may use Python lists to represent sets. Given a set \\(A\\), the powerset of \\(A\\), denoted by \\(\\mathcal{P}(A)\\), is the set of all subsets of \\(A\\). Given a set of items provided as a list, write a function that returns the power set of the given...","categories": [],
         "tags": ["sets"],
         "url": "/exercises/sets/",
         "teaser": null
@@ -431,6 +431,12 @@ var store = [{
         "url": "/items/ex-length/",
         "teaser": null
       },{
+        "title": "Maximum depth",
+        "excerpt":"Given a possibly nested list, compute the deepest level of embedding in the list. The ground level counts as 0 depth. For example, the list   [1, [2, 3], 4, [5, [6, 7]]]   should return 2.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-maxdepth/",
+        "teaser": null
+      },{
         "title": "Index",
         "excerpt":"Write a function that takes an object and a sequence and returns the index of the item in the sequence, starting from 0. If the item does not occur in the sequence, return -1.  ","categories": [],
         "tags": [],
@@ -441,6 +447,12 @@ var store = [{
         "excerpt":"Given an item and a sequence, tell whether the item is in the sequence or not.  ","categories": [],
         "tags": [],
         "url": "/items/ex-member/",
+        "teaser": null
+      },{
+        "title": "Permutation",
+        "excerpt":"Compute the permutations of a list or string.   ","categories": [],
+        "tags": [],
+        "url": "/items/ex-permutation/",
         "teaser": null
       },{
         "title": "Power set",
@@ -798,10 +810,10 @@ var store = [{
     "excerpt":"It must be fairly straightforward to decide to start with the constructors. Define what is the base element in your system, and define how to construct other elements from this unique seed. One must, however, do this with some care. The correct approach is to first define the base element...","url": "https://umutozge.github.io/solutions/ex-peano-module/"
   },{
     "title": "Solution: Peano power",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-peano-pow/"
+    "excerpt":"  ```python from coursepy.math.peano import * ```    ```python def peano_pow(base, power):     assert peanop(base) and peanop(power)     if zerop(power):         return succ(zero())     else:         return  peano_mult(base, peano_pow(base, power[0])) ```           Back to exercise      Download .ipynb   Download .py   ","url": "https://umutozge.github.io/solutions/ex-peano-pow/"
   },{
     "title": "Solution: Peano subtraction",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-peano-sub/"
+    "excerpt":"  ```python from coursepy.math.peano import * ```    ```python def pred(a):     assert peanop(a)     if zerop(a):         return zero()     else:         return a[0] ```    ```python def peano_sub(a, b):     assert peanop(a) and peanop(b)     if zerop(b) or zerop(a):         return a     else:         return peano_sub(pred(a),pred(b)) ```           Back to exercise      Download .ipynb   Download .py   ","url": "https://umutozge.github.io/solutions/ex-peano-sub/"
   },{
     "title": "Solution: Flip",
     "excerpt":"All you can expect from Python is to generate for you a random number in $$[1,0)$$. In an unbiased `flip` all the shots of `random` below 0.5 would be `True` and above would be `False`, or vice versa. Now you can adjust the bias of the `flip` with the parameter...","url": "https://umutozge.github.io/solutions/ex-flip/"
@@ -860,14 +872,20 @@ var store = [{
     "title": "Solution: Length",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-length/"
   },{
+    "title": "Solution: Maximum depth",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-maxdepth/"
+  },{
     "title": "Solution: Index",
     "excerpt":"```python def index(item, seq): return -1 if not seq else (0 if item == seq[0] else (1 + index(item, seq[1:]))) ``` might look like a good attempt, but it is not. You cannot return -1 for unsuccesful tries in this way. You must interfere in the \"upward\" flow of the...","url": "https://umutozge.github.io/solutions/ex-member-index/"
   },{
     "title": "Solution: Member",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-member/"
   },{
+    "title": "Solution: Permutation",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-permutation/"
+  },{
     "title": "Solution: Power set",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-powerset/"
+    "excerpt":"  ```python def pset(seq):     if not seq:         return [[]]     else:         rest = pset(seq[1:])         return [[seq[0]] + x for x in rest] + rest ```           Back to exercise      Download .ipynb   Download .py   ","url": "https://umutozge.github.io/solutions/ex-powerset/"
   },{
     "title": "Proof of Zero property of multiplication",
     "excerpt":"Proof not written yet.          Back to statement      ","url": "https://umutozge.github.io/proofs/th-mult-zero/"

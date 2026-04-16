@@ -203,13 +203,29 @@
         
         <main class="solution">
   <div class="numbered">
-    <p>Solution not written yet.</p>
+    <div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">coursepy.math.peano</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div>  </div>
+</div>
+<div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">peano_pow</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">power</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="nf">peanop</span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="ow">and</span> <span class="nf">peanop</span><span class="p">(</span><span class="n">power</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nf">zerop</span><span class="p">(</span><span class="n">power</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nf">succ</span><span class="p">(</span><span class="nf">zero</span><span class="p">())</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span>  <span class="nf">peano_mult</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="nf">peano_pow</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">power</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</code></pre></div>  </div>
+</div>
 <hr />
 
 <div class="solution-actions">
   <button class="btn btn--primary" type="button" onclick="window.history.back()" aria-label="Go back to the previous page">
     Back to exercise
   </button>
+  <a class="btn btn--warning" href="/assets/solutions/ex-peano-pow/ex-peano-pow.ipynb">Download .ipynb</a>
+  <a class="btn btn--warning" href="/assets/solutions/ex-peano-pow/ex-peano-pow.py">Download .py</a>
 </div>
 
 

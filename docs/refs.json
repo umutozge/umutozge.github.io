@@ -350,8 +350,20 @@
   "ex-powerset": {
     "page": "/exercises/sets/",
     "number": 2,
+    "label": "Ex.",
+    "title": "Power set"
+  },
+  "ex-permutation": {
+    "page": "/exercises/recursion/",
+    "number": 7,
     "label": "Exercise",
-    "title": "Powerset"
+    "title": "Permutation"
+  },
+  "ex-maxdepth": {
+    "page": "/exercises/recursion/",
+    "number": 8,
+    "label": "Exercise",
+    "title": "Maximum depth"
   },
   "ex-sum": {
     "page": "/exercises/sequence-operations/",
