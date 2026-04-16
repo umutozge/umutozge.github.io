@@ -89,6 +89,18 @@ var store = [{
         "url": "/exams/2026-03-26-502-quiz/",
         "teaser": null
       },{
+        "title": "502 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-04-02-502-quiz/",
+        "teaser": null
+      },{
+        "title": "Ex Length",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/ex-length/",
+        "teaser": null
+      },{
         "title": "Basic probability",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": ["probability"],
@@ -144,7 +156,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Basic Recursion",
-        "excerpt":"Write a function that takes an object and a sequence and returns the index of the item in the sequence, starting from 0. If the item does not occur in the sequence, return -1. Use recursion. 🗝️ Given a set of items provided as a list, write a function that...","categories": [],
+        "excerpt":"Given an item and a sequence, tell whether the item is in the sequence or not. Use recursion. 🗝️ Find the length of a given sequence. Use recursion. 🗝️ Given a possibly nested sequence and an item, count the occurrences of the item in the sequence. For instance given, [1,...","categories": [],
         "tags": ["recursion"],
         "url": "/exercises/recursion/",
         "teaser": null
@@ -401,10 +413,34 @@ var store = [{
         "url": "/items/ex-venn-for-cond/",
         "teaser": null
       },{
+        "title": "Deep count",
+        "excerpt":"Given a possibly nested sequence and an item, count the occurrences of the item in the sequence.   For instance given,  [1, [2, 3], 4, [5, [6, 4]]]   you should be able to count 2 occurrences of 4.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-deep-count/",
+        "teaser": null
+      },{
+        "title": "Flatten",
+        "excerpt":"Map a possibly nested sequence to its flattend version, which comprises only the ground element. For example, the sequence   [1, [2, 3], 4, [5, [6, 7]]]   should be mapped to   [1, 2, 3, 4, 5, 6, 7]  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-flatten/",
+        "teaser": null
+      },{
+        "title": "Length",
+        "excerpt":"Find the length of a given sequence.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-length/",
+        "teaser": null
+      },{
         "title": "Index",
         "excerpt":"Write a function that takes an object and a sequence and returns the index of the item in the sequence, starting from 0. If the item does not occur in the sequence, return -1.  ","categories": [],
         "tags": [],
         "url": "/items/ex-member-index/",
+        "teaser": null
+      },{
+        "title": "Member",
+        "excerpt":"Given an item and a sequence, tell whether the item is in the sequence or not.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-member/",
         "teaser": null
       },{
         "title": "Power set",
@@ -738,13 +774,13 @@ var store = [{
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-fol-basics/"
   },{
     "title": "Solution: Logical relations",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-logical-relations/"
+    "excerpt":"All the answers are given under the assumption that no model can have an empty domain. $$ \\begin{gather} \\forall x.\\con{p}x\\rightarrow \\con{q}x&\\not\\models &\\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x\\rightarrow \\con{q}x&\\not\\models & \\exists x.\\con{q}x\\\\ \\exists x.\\con{p}x\\wedge \\con{q}x&\\models & \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x &\\models &\\exists x.\\con{p}x\\\\ \\neg\\exists x\\,\\con{r}x&\\models & \\forall x.\\neg\\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&\\not\\models & \\forall x.\\con{p}x\\rightarrow...","url": "https://umutozge.github.io/solutions/ex-logical-relations/"
   },{
     "title": "Solution: Model building",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-model-building/"
   },{
     "title": "Solution: Model theory basics",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-model-theory-basics/"
+    "excerpt":"@@item|eg-simple-model|raw=true@@ 1. State whether each atomic formula is true or false in @@xref|eg-simple-model@@: $$ \\begin{gather*} \\con{student}\\con{anna}\\quad\\checkmark \\\\ \\con{book}\\con{anna}\\quad\\times\\\\ \\con{linguist}\\con{cara}\\quad\\checkmark\\\\ \\con{admire}\\con{ben}\\con{anna}\\quad\\checkmark\\\\ \\con{admire}\\con{anna}\\con{ben}\\quad\\times\\\\ \\end{gather*} $$ 1. Evaluate the following formulas in @@xref|eg-simple-model@@. $$ \\begin{gather*} \\interp{\\exists x.\\con{student}x} = 1\\\\ \\interp{\\forall x.\\con{student}x \\rightarrow \\con{linguist}x} = 0\\\\ \\interp{\\exists x.\\con{student}x \\land \\con{linguist}x} = 1\\\\ \\interp{\\forall x.\\con{book}x...","url": "https://umutozge.github.io/solutions/ex-model-theory-basics/"
   },{
     "title": "Solution: &quot;Telescope&quot; sentences",
     "excerpt":"```python from coursepy.lang.parsing import make_parser, make_cfg grammar_text = \"\"\" S -> NP VP NP -> Det N | Det N PP VP -> V NP | VP PP PP -> P NP Det -> 'the' | 'a' N -> 'dog' | 'owner' | 'leash' V -> 'found' P -> 'with'...","url": "https://umutozge.github.io/solutions/ex-simple-pst/"
@@ -815,8 +851,20 @@ var store = [{
     "title": "Solution: Definitons over Venn",
     "excerpt":"{% capture img_url %}{% tikz_img venn-for-cond %}{% endcapture %} {% include figure-row.html src=img_url alt=\"Conditional Probability\" content=\" 1. \\\\( P(A\\given B) = \\frac{y}{y + z}\\\\) 1. \\\\( P(A\\given \\neg B) = \\frac{x}{x+t} \\\\) 1. \\\\( P(A\\cap \\neg B) = \\frac{x}{x+y+z+t}\\\\) 1. \\\\( P(B\\given A\\cap B) = 1 \\\\) 1. \\\\( P(A\\cup...","url": "https://umutozge.github.io/solutions/ex-venn-for-cond/"
   },{
+    "title": "Solution: Deep count",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-deep-count/"
+  },{
+    "title": "Solution: Flatten",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-flatten/"
+  },{
+    "title": "Solution: Length",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-length/"
+  },{
     "title": "Solution: Index",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-member-index/"
+    "excerpt":"```python def index(item, seq): return -1 if not seq else (0 if item == seq[0] else (1 + index(item, seq[1:]))) ``` might look like a good attempt, but it is not. You cannot return -1 for unsuccesful tries in this way. You must interfere in the \"upward\" flow of the...","url": "https://umutozge.github.io/solutions/ex-member-index/"
+  },{
+    "title": "Solution: Member",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-member/"
   },{
     "title": "Solution: Power set",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-powerset/"

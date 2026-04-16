@@ -203,7 +203,22 @@
         
         <main class="solution">
   <div class="numbered">
-    <p>Solution not written yet.</p>
+    <p>All the answers are given under the assumption that no model can have an empty
+domain.</p>
+
+\[\begin{gather}
+   \forall x.\con{p}x\rightarrow \con{q}x&amp;\not\models  &amp;\exists x.\con{p}x\\
+   \forall x.\con{p}x\rightarrow \con{q}x&amp;\not\models  &amp; \exists x.\con{q}x\\
+   \exists x.\con{p}x\wedge \con{q}x&amp;\models  &amp; \exists x.\con{p}x\\
+   \forall x.\con{p}x &amp;\models  &amp;\exists x.\con{p}x\\
+   \neg\exists x\,\con{r}x&amp;\models  &amp; \forall x.\neg\con{r}x\\
+   \forall x.\con{p}x\land\con{r}x&amp;\not\models  &amp; \forall x.\con{p}x\rightarrow \con{r}x\\
+   \forall x.\con{p}x\land\con{r}x&amp;\models  &amp; \forall x.\con{p}x :\land. \forall x.\con{r}x\\
+   \forall x.\con{p}x\lor\con{r}x&amp;\not\models  &amp; \forall x.\con{p}x :\lor. \forall x.\con{r}x\\
+   \exists x.\con{p}x\land\con{r}x&amp;\not\models  &amp; \exists x.\con{p}x :\land. \exists x.\con{r}x\\
+   \exists x.\con{p}x\lor\con{r}x&amp;\models  &amp; \exists x.\con{p}x :\lor. \exists x.\con{r}x\\
+\end{gather}\]
+
 <hr />
 
 <div class="solution-actions">

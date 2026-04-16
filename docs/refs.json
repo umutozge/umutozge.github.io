@@ -198,8 +198,8 @@
     "title": "Logical relations"
   },
   "eg-simple-model": {
-    "page": "/exercises/formal-semantics/",
-    "number": 2,
+    "page": "/solutions/ex-model-theory-basics/",
+    "number": 1,
     "label": "Model",
     "title": "A simple model"
   },
@@ -317,9 +317,33 @@
     "label": "Exercise",
     "title": "Grammar for arithmetic"
   },
-  "ex-member-index": {
+  "ex-member": {
     "page": "/exercises/recursion/",
     "number": 1,
+    "label": "Exercise",
+    "title": "Member"
+  },
+  "ex-length": {
+    "page": "/exercises/recursion/",
+    "number": 2,
+    "label": "Exercise",
+    "title": "Length"
+  },
+  "ex-deep-count": {
+    "page": "/exercises/recursion/",
+    "number": 3,
+    "label": "Exercise",
+    "title": "Deep count"
+  },
+  "ex-flatten": {
+    "page": "/exercises/recursion/",
+    "number": 4,
+    "label": "Exercise",
+    "title": "Flatten"
+  },
+  "ex-member-index": {
+    "page": "/exercises/recursion/",
+    "number": 5,
     "label": "Exercise",
     "title": "Index"
   },

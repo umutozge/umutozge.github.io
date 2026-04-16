@@ -203,7 +203,150 @@
         
         <main class="solution">
   <div class="numbered">
-    <p>Solution not written yet.</p>
+    
+<div class="item" id="eg-simple-model" data-kind="example" data-label="Model" data-title="A simple model" data-ref="Model">
+
+    
+      <p>\(\mathcal{M} = \langle D, I\rangle\) with domain:</p>
+
+\[\begin{align*}
+D = \{a,b,c,d,e\}
+\end{align*}\]
+
+<p>Interpretation function:</p>
+
+\[\begin{align*}
+I(\con{anna}) &amp;= a\\
+I(\con{ben}) &amp;= b\\
+I(\con{cara}) &amp;= c\\
+I(\con{student}) &amp;= \{a,b\}\\
+I(\con{linguist}) &amp;= \{b,c\}\\
+I(\con{book}) &amp;= \{d,e\}\\
+I(\con{admire}) &amp;= \{(a,b),(b,c),(c,d)\}\\
+I(\con{read}) &amp;= \{(a,d),(b,e),(c,d),(a,e)\}\\
+I(\con{recommend}) &amp;= \{(a,d),(c,a),(c,d)\}\\
+\end{align*}\]
+
+<p>Environment:</p>
+
+\[\begin{align*}
+g=\lbrace (x,a), (y,b)\rbrace
+\end{align*}\]
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<ol>
+  <li>
+    <p>State whether each atomic formula is true or false in <a class="xref" href="#eg-simple-model" data-refmode="full"></a>:</p>
+
+\[\begin{gather*}
+ \con{student}\con{anna}\quad\checkmark \\
+ \con{book}\con{anna}\quad\times\\
+ \con{linguist}\con{cara}\quad\checkmark\\
+ \con{admire}\con{ben}\con{anna}\quad\checkmark\\
+ \con{admire}\con{anna}\con{ben}\quad\times\\
+ \end{gather*}\]
+  </li>
+  <li>
+    <p>Evaluate the following formulas in <a class="xref" href="#eg-simple-model" data-refmode="full"></a>.</p>
+
+\[\begin{gather*}
+ \interp{\exists x.\con{student}x} = 1\\
+ \interp{\forall x.\con{student}x \rightarrow \con{linguist}x} = 0\\
+ \interp{\exists x.\con{student}x \land \con{linguist}x} = 1\\
+ \interp{\forall x.\con{book}x \rightarrow \con{student}x} = 0\\
+ \interp{\exists x\forall y. \con{admire}y\cnct x} = 0\\
+ \interp{\con{student}x} = 1\\
+ \interp{\con{linguist}x} = 0\\
+ \interp{\exists x.\con{admire}x\cnct y} = 1 \\
+ \end{gather*}\]
+  </li>
+  <li>Translate the following sentences into FOL:
+    <ol>
+      <li>Anna is a student.</li>
+    </ol>
+
+\[student'a'\]
+
+    <ol>
+      <li>Ben read a book.</li>
+    </ol>
+
+\[\exists x. book'x \land read'x\cnct{b'}\]
+
+    <ol>
+      <li>Every student read a book.</li>
+    </ol>
+
+\[\forall x. student'x \to \exists y. book'y \land read'y\cnct x\]
+
+    <ol>
+      <li>Some linguist recommended every book.</li>
+    </ol>
+
+\[\exists x. linguist'x \land \forall y. book'y \to recom'y\cnct x\]
+
+    <p>or, possibly,</p>
+
+\[\forall x. book'x \to \exists y.linguist'y \land  recom'x\cnct y\]
+
+    <ol>
+      <li>No student recommended Ben.</li>
+    </ol>
+
+\[\neg\exists x. student'x \land recom'b'x\]
+
+    <ol>
+      <li>Not every student read a book.</li>
+    </ol>
+
+\[\exists x. student'x \land \neg\exists y. book'y \land read'y\cnct x\]
+
+    <ol>
+      <li>No book is read by every student.</li>
+    </ol>
+
+\[\neg \exists x. book'x \land \forall y. student'y \to read'x\cnct y\]
+
+    <ol>
+      <li>Some book is read by every student.</li>
+    </ol>
+
+\[\exists x. book'x \land \forall y. student'y \to read'x\cnct y\]
+  </li>
+  <li>Translate the following sentences into FOL; you are not allowed to use a
+cardinality predicate:
+    <ol>
+      <li>Exactly one student laughed.</li>
+    </ol>
+
+\[\exists x. student'x \land laugh'x \land \forall y. student'y \land laugh'y \to y = x\]
+
+    <ol>
+      <li>At least two students laughed.</li>
+    </ol>
+
+\[\begin{align}
+\exists x,y. x\neq y\land student'x \land laugh'x \land student'y \land laugh'y\land \\ \nonumber
+\forall z. student'z \land laugh'z  \to z = x \lor z = y
+\end{align}\]
+
+    <ol>
+      <li>No more than one student laughed.</li>
+    </ol>
+
+\[\forall x,y. student'x \land laugh'x \land student'y \land laugh'y \to x = y\]
+  </li>
+</ol>
+
 <hr />
 
 <div class="solution-actions">
