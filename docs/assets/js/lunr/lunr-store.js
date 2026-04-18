@@ -335,6 +335,12 @@ var store = [{
         "url": "/items/ex-inspection-batch/",
         "teaser": null
       },{
+        "title": "King's sibling",
+        "excerpt":"The king has only one sibling. What is the probability that the sibling is male? Assume that every birth results in a boy with probability 1/2, independent of other births. Be careful to state any additional assumptions you have to make in order to arrive at an answer.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-kings-sibling/",
+        "teaser": null
+      },{
         "title": "Optimum order",
         "excerpt":"You enter a special kind of chess tournament, in which you play one game with each of three opponents, but you get to choose the order in which you play your opponents, knowing the probability of a win against each. You win the tournament if you win two games in...","categories": [],
         "tags": [],
@@ -823,6 +829,9 @@ var store = [{
   },{
     "title": "Solution: Inspection batch",
     "excerpt":"The batch gets accepted if the randomly selected four items are all from the 95 non-defective items. Thinking in terms of a sequential model avails us of using the multiplication rule. The probability we are interested in is, $$ P(\\text{accept}) = \\frac{95}{100} \\cdot \\frac{94}{99} \\cdot \\frac{93}{98} \\cdot \\frac{92}{97} \\approx 0.814...","url": "https://umutozge.github.io/solutions/ex-inspection-batch/"
+  },{
+    "title": "Solution: King's sibling",
+    "excerpt":"Not an easy one.[^wiki] The answer depends on the way you clarify the underlying process. Is the process that produces the data equivalent to \"two tosses of a fair coin\"? If so, what is the equivalent of the information we have in the present problem in the coin-tossing experiment? Is...","url": "https://umutozge.github.io/solutions/ex-kings-sibling/"
   },{
     "title": "Solution: Optimum order",
     "excerpt":"Let's name the three opponents as 1, 2, and 3, and let $$p_i$$ be the probability of winning against opponent $$i$$. Let's also take, without loss of generality, $$p_1 \\leq p_2 \\leq p_3$$, meaning that opponent 3 is the weakest. For a given order of opponents $$o_1, o_2 , o_3...","url": "https://umutozge.github.io/solutions/ex-middle-best/"

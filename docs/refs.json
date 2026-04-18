@@ -185,6 +185,12 @@
     "label": "Exercise",
     "title": "A question of independence"
   },
+  "ex-kings-sibling": {
+    "page": "/exercises/basic-probability/",
+    "number": 17,
+    "label": "Exercise",
+    "title": "King's sibling"
+  },
   "ex-four-out": {
     "page": "/exercises/combinatorics/",
     "number": 1,

@@ -10,34 +10,32 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Peano subtraction - Umut Özge</title>
-<meta name="description" content="Define two function pred and sub for predecessor and subtraction, respectively. As we are modeling the natural numbers, the predecessor of zero is zero, and subtraction is truncated at zero. For example, sub(from_int(3), from_int(5)) should return from_int(0), not from_int(-2).">
+<!-- begin _includes/seo.html --><title>Solution: King’s sibling - Umut Özge</title>
+<meta name="description" content="Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.">
 
 
 
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Umut Özge">
-<meta property="og:title" content="Peano subtraction">
-<meta property="og:url" content="https://umutozge.github.io/items/ex-peano-sub/">
+<meta property="og:title" content="Solution: King’s sibling">
+<meta property="og:url" content="https://umutozge.github.io/solutions/ex-kings-sibling/">
 
 
-  <meta property="og:description" content="Define two function pred and sub for predecessor and subtraction, respectively. As we are modeling the natural numbers, the predecessor of zero is zero, and subtraction is truncated at zero. For example, sub(from_int(3), from_int(5)) should return from_int(0), not from_int(-2).">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2026-04-18T14:11:20+03:00">
+  <meta property="og:description" content="Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.">
 
 
 
 
 
 
-<link rel="canonical" href="https://umutozge.github.io/items/ex-peano-sub/">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/solutions/ex-kings-sibling/">
 
 
 
@@ -112,7 +110,7 @@
 
   </head>
 
-  <body class="layout--numbered" dir="ltr">
+  <body class="layout--solution" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -180,19 +178,19 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Peano subtraction">
-    <meta itemprop="description" content="Define two function pred and sub for predecessor and subtraction,respectively. As we are modeling the natural numbers, the predecessor of zero iszero, and subtraction is truncated at zero. For example, sub(from_int(3),from_int(5)) should return from_int(0), not from_int(-2).">
-    <meta itemprop="datePublished" content="2026-04-18T14:11:20+03:00">
+    <meta itemprop="headline" content="Solution: King’s sibling">
+    
+    
     
 
     <div class="page__inner-wrap">
       
         <header>
           
-              <h2 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://umutozge.github.io/items/ex-peano-sub/" itemprop="url">Exercise: Peano subtraction
+              <h1 id="page-title" class="page__title" itemprop="headline">
+                <a href="https://umutozge.github.io/solutions/ex-kings-sibling/" itemprop="url">Solution: King’s sibling
 </a>
-              </h2>
+              </h1>
             
           
           
@@ -203,43 +201,47 @@
 
       <section class="page__content" itemprop="text">
         
-        <div class="numbered">
-  <p>Define two function <code class="language-plaintext highlighter-rouge">pred</code> and <code class="language-plaintext highlighter-rouge">sub</code> for predecessor and subtraction,
-respectively. As we are modeling the natural numbers, the predecessor of zero is
-zero, and subtraction is truncated at zero. For example, <code class="language-plaintext highlighter-rouge">sub(from_int(3),
-from_int(5))</code> should return <code class="language-plaintext highlighter-rouge">from_int(0)</code>, not <code class="language-plaintext highlighter-rouge">from_int(-2)</code>.</p>
+        <main class="solution">
+  <div class="numbered">
+    <p>Not an easy one.<sup id="fnref:wiki"><a href="#fn:wiki" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> The answer depends on the way you clarify the underlying
+process. Is the process that produces the data equivalent to “two tosses of a
+fair coin”? If so, what is the equivalent of the information we have in the
+present problem in the coin-tossing experiment? Is it that we know there is at
+least one head? If so, then the answer is 1/3, else if the information is, say,
+the first toss is H, then the answer is 1/2.</p>
 
+<p>“Two tosses of a fair coin” is a reasonable model. When a couple has exactly two
+children, there are two objects \(C_1\) and \(C_2\). Don’t think that the
+ordering indicated by the subscripts is necessarily on the temporal scale; any
+two or more non-identical objects can be ordered in some way. The information
+given in the question says that either \(C_1\) or \(C_2\) is a boy. Here, the
+word “sibling” is critical, as the word does not imply any ordering relation. As
+the possiblities of mapping \(C_1\) and \(C_2\) to biological genders is BB, BG,
+GB, GG and the information given in the question rules out GG, the probability
+of BB is 1/3.</p>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-  // Build a map of id → { label, number }
-  const itemMap = {};
-  document.querySelectorAll('.numbered').forEach(container => {
-    let count = 0;
-    container.querySelectorAll('.item').forEach(item => {
-      if (!item.id) return;
-      count++;
-      itemMap[item.id] = {
-        label: item.dataset.label ?? 'Item',
-        number: count
-      };
-    });
-  });
+<p>If the question said that the king has an <em>elder</em> sibling, then the answer would
+be 1/2, because the information would this time rule out the two possibilities
+GB and GG.</p>
 
-  // Fill in all cross-reference links
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    const id = link.getAttribute('href').slice(1);
-    if (itemMap[id]) {
-      const { label, number } = itemMap[id];
-      // Only replace if the author left it empty, or always replace
-      if (!link.textContent.trim()) {
-        link.textContent = `${label} ${number}`;
-      }
-    }
-  });
-});
-</script>
+<hr />
+
+<div class="solution-actions">
+  <button class="btn btn--primary" type="button" onclick="window.history.back()" aria-label="Go back to the previous page">
+    Back to exercise
+  </button>
 </div>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:wiki">
+      <p>See this <a href="https://en.wikipedia.org/wiki/Boy_or_girl_paradox">Wikipedia article</a> for further discussion. <a href="#fnref:wiki" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </div>
+</main>
 
         
       </section>
@@ -252,22 +254,11 @@ from_int(5))</code> should return <code class="language-plaintext highlighter-ro
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-04-18T14:11:20+03:00">2026-04-18</time></p>
-
       </footer>
 
       
 
       
-  <nav class="pagination">
-    
-      <a href="/items/ex-peano-pow/" class="pagination--pager" title="Peano power">Previous</a>
-    
-    
-      <a href="/items/ex-flip/" class="pagination--pager" title="Flip">Next</a>
-    
-  </nav>
-
 
     </div>
 

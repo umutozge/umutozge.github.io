@@ -5362,6 +5362,10 @@ table.table--course a {
     max-width: 100%;
   }
 }
+body.layout--solution .page__content p {
+  text-align: justify;
+}
+
 body.layout--single .page__content p {
   text-align: justify;
 }
