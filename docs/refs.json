@@ -221,6 +221,12 @@
     "label": "Exercise",
     "title": "Model building"
   },
+  "ex-lambda-basics": {
+    "page": "/exercises/formal-semantics/",
+    "number": 5,
+    "label": "Exercise",
+    "title": "Lambda calculus basics"
+  },
   "ex-dot-product": {
     "page": "/exercises/linalg/",
     "number": 1,

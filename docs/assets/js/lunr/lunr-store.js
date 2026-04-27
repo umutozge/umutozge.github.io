@@ -257,6 +257,12 @@ var store = [{
         "url": "/items/ex-fol-basics/",
         "teaser": null
       },{
+        "title": "Lambda calculus basics",
+        "excerpt":"State the type of the whole expression; there are partial type decorations: \\[\\begin{gather*} \\lambda x.\\con{student}_{et}x\\\\ \\lambda x.\\con{read}_{e(et)}x\\,\\con{anna}_{e}\\\\ \\lambda p\\exists x. p_{et}\\, x\\\\ \\lambda y\\lambda x.\\con{admire}_{e(et)}y\\, x\\\\ \\lambda f\\lambda g\\lambda x.f_{e(tt)}\\,x(gx) \\end{gather*}\\] Identify bound and free variables in: \\[\\begin{gather*} \\lambda x.\\con{student}x\\\\ \\lambda x.\\con{admire}y\\cnct x\\\\ \\lambda p\\lambda x.p\\cnct x\\land \\con{student}x q\\cnct x\\\\...","categories": [],
+        "tags": [],
+        "url": "/items/ex-lambda-basics/",
+        "teaser": null
+      },{
         "title": "Logical relations",
         "excerpt":"For each pair, determine the logical relation between the left and right formulas (implies, contradicts, or independent): \\[\\begin{gather} \\forall x.\\con{p}x\\rightarrow \\con{q}x&amp; \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x\\rightarrow \\con{q}x&amp; \\exists x.\\con{q}x\\\\ \\exists x.\\con{p}x\\wedge \\con{q}x&amp; \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x &amp;\\exists x.\\con{p}x\\\\ \\neg\\exists x\\,\\con{r}x&amp; \\forall x.\\neg\\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&amp; \\forall x.\\con{p}x\\rightarrow \\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&amp; \\forall x.\\con{p}x...","categories": [],
         "tags": [],
@@ -790,6 +796,9 @@ var store = [{
   },{
     "title": "Solution: FOL basics",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-fol-basics/"
+  },{
+    "title": "Solution: Lambda calculus basics",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-lambda-basics/"
   },{
     "title": "Solution: Logical relations",
     "excerpt":"All the answers are given under the assumption that no model can have an empty domain. $$ \\begin{gather} \\forall x.\\con{p}x\\rightarrow \\con{q}x&\\not\\models &\\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x\\rightarrow \\con{q}x&\\not\\models & \\exists x.\\con{q}x\\\\ \\exists x.\\con{p}x\\wedge \\con{q}x&\\models & \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x &\\models &\\exists x.\\con{p}x\\\\ \\neg\\exists x\\,\\con{r}x&\\models & \\forall x.\\neg\\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&\\not\\models & \\forall x.\\con{p}x\\rightarrow...","url": "https://umutozge.github.io/solutions/ex-logical-relations/"

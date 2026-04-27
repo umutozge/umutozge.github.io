@@ -10,34 +10,34 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Zero property of multiplication - Umut Özge</title>
-<meta name="description" content="For any number \(n\), we have \(n \times 0 = 0\).">
+<!-- begin _includes/seo.html --><title>Lambda calculus basics - Umut Özge</title>
+<meta name="description" content="State the type of the whole expression; there are partial type decorations:">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Umut Özge">
-<meta property="og:title" content="Zero property of multiplication">
-<meta property="og:url" content="https://umutozge.github.io/items/th-mult-zero/">
+<meta property="og:title" content="Lambda calculus basics">
+<meta property="og:url" content="https://umutozge.github.io/items/ex-lambda-basics/">
 
 
-  <meta property="og:description" content="For any number \(n\), we have \(n \times 0 = 0\).">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2026-04-27T14:02:19+03:00">
+  <meta property="og:description" content="State the type of the whole expression; there are partial type decorations:">
 
 
 
 
 
 
-<link rel="canonical" href="https://umutozge.github.io/items/th-mult-zero/">
+
+  <meta property="article:published_time" content="2026-04-21T00:00:00+03:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/items/ex-lambda-basics/">
 
 
 
@@ -180,9 +180,9 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Zero property of multiplication">
-    <meta itemprop="description" content="For any number \(n\), we have \(n \times 0 = 0\).">
-    <meta itemprop="datePublished" content="2026-04-27T14:02:19+03:00">
+    <meta itemprop="headline" content="Lambda calculus basics">
+    <meta itemprop="description" content="  State the type of the whole expression; there are partial type decorations:">
+    <meta itemprop="datePublished" content="2026-04-21T00:00:00+03:00">
     
 
     <div class="page__inner-wrap">
@@ -190,7 +190,7 @@
         <header>
           
               <h2 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://umutozge.github.io/items/th-mult-zero/" itemprop="url">Theorem: Zero property of multiplication
+                <a href="https://umutozge.github.io/items/ex-lambda-basics/" itemprop="url">Exercise: Lambda calculus basics
 </a>
               </h2>
             
@@ -204,7 +204,41 @@
       <section class="page__content" itemprop="text">
         
         <div class="numbered">
-  <p>For any number \(n\), we have \(n \times 0 = 0\).</p>
+  <ol>
+  <li>
+    <p>State the type of the whole expression; there are partial type decorations:</p>
+
+\[\begin{gather*}
+ \lambda x.\con{student}_{et}x\\
+ \lambda x.\con{read}_{e(et)}x\,\con{anna}_{e}\\
+ \lambda p\exists x. p_{et}\, x\\
+ \lambda y\lambda x.\con{admire}_{e(et)}y\, x\\
+ \lambda f\lambda g\lambda x.f_{e(tt)}\,x(gx)
+ \end{gather*}\]
+  </li>
+  <li>
+    <p>Identify bound and free variables in:</p>
+
+\[\begin{gather*}
+ \lambda x.\con{student}x\\
+ \lambda x.\con{admire}y\cnct x\\
+ \lambda p\lambda x.p\cnct x\land \con{student}x q\cnct x\\
+ \end{gather*}\]
+  </li>
+  <li>
+    <p>Reduce each expression as far as possible.</p>
+
+\[\begin{gather*}
+ (\lambda x.\con{student}x)\con{anna}\\
+ (\lambda x\lambda y.\con{admire}x\,y)\con{ben}\\
+ (\lambda p.p\,\con{anna})(\lambda x.\con{linguist}x)\\
+ (\lambda q\exists x.q\,x)(\lambda y.\con{book}y)\\
+ (\lambda p\lambda q\forall x. p\,x \to q\,x)(\lambda x.\con{student}x)(\lambda x.\con{admire}x\con{anna})\\
+ (\lambda p.\lambda q.\exists x.p\,x\land q\,x)(\lambda x.\con{student}x\land \exists y. \con{book}y\land \con{read}y\,x)
+ \end{gather*}\]
+  </li>
+</ol>
+
 
 
 <script>
@@ -249,7 +283,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-04-27T14:02:19+03:00">2026-04-27</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-04-21T00:00:00+03:00">2026-04-21</time></p>
 
       </footer>
 
@@ -258,10 +292,10 @@
       
   <nav class="pagination">
     
-      <a href="/items/pr-mult-zero/" class="pagination--pager" title="Zero property of multiplication">Previous</a>
+      <a href="/items/ex-fol-basics/" class="pagination--pager" title="FOL basics">Previous</a>
     
     
-      <a href="/items/ex-insert/" class="pagination--pager" title="Insertion">Next</a>
+      <a href="/items/ex-logical-relations/" class="pagination--pager" title="Logical relations">Next</a>
     
   </nav>
 
