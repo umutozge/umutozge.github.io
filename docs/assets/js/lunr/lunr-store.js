@@ -468,7 +468,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Maximum depth",
-        "excerpt":"Given a possibly nested list, compute the deepest level of embedding in the list. The ground level counts as 0 depth. For example, the list   [1, [2, 3], 4, [5, [6, 7]]]   should return 2.  ","categories": [],
+        "excerpt":"Given a possibly nested list, compute the deepest level of embedding in the list. The ground level counts as 0 depth. For example, the list T  [1, [2, 3], 4, [5, [6, 7]]]   should return 2.   ","categories": [],
         "tags": [],
         "url": "/items/ex-maxdepth/",
         "teaser": null
