@@ -68,7 +68,7 @@
 
 
 <script type="text/javascript">
-  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2}};
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0}};
   const extraMacros = {};
 
   for (const [name, val] of Object.entries(extraMacroData || {})) {
@@ -240,7 +240,6 @@
 </ol>
 
 
-
 <script>
   document.addEventListener('DOMContentLoaded', () => {
   // Build a map of id → { label, number }
@@ -295,7 +294,7 @@
       <a href="/items/ex-fol-basics/" class="pagination--pager" title="FOL basics">Previous</a>
     
     
-      <a href="/items/ex-logical-relations/" class="pagination--pager" title="Logical relations">Next</a>
+      <a href="/items/ex-lambda-reduction/" class="pagination--pager" title="Lambda reduction">Next</a>
     
   </nav>
 

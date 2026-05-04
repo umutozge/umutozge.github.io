@@ -101,6 +101,18 @@ var store = [{
         "url": "/exams/2026-04-16-502-quiz/",
         "teaser": null
       },{
+        "title": "543 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-04-29-543-quiz/",
+        "teaser": null
+      },{
+        "title": "502 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-04-30-502-quiz/",
+        "teaser": null
+      },{
         "title": "Basic probability",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": ["probability"],
@@ -261,6 +273,12 @@ var store = [{
         "excerpt":"State the type of the whole expression; there are partial type decorations: \\[\\begin{gather*} \\lambda x.\\con{student}_{et}x\\\\ \\lambda x.\\con{read}_{e(et)}x\\,\\con{anna}_{e}\\\\ \\lambda p\\exists x. p_{et}\\, x\\\\ \\lambda y\\lambda x.\\con{admire}_{e(et)}y\\, x\\\\ \\lambda f\\lambda g\\lambda x.f_{e(tt)}\\,x(gx) \\end{gather*}\\] Identify bound and free variables in: \\[\\begin{gather*} \\lambda x.\\con{student}x\\\\ \\lambda x.\\con{admire}y\\cnct x\\\\ \\lambda p\\lambda x.p\\cnct x\\land \\con{student}x q\\cnct x\\\\...","categories": [],
         "tags": [],
         "url": "/items/ex-lambda-basics/",
+        "teaser": null
+      },{
+        "title": "Lambda reduction",
+        "excerpt":"Reduce the following lambda expressions as much as possible:   \\[\\begin{gather*} (\\x.a') b' \\\\ (\\x.p'x \\to \\E x.r'b'\\, x) a'\\\\ (\\x\\x.p'x \\to q'x\\,c') a'\\, b'\\\\ (\\x\\E y.r'x\\,y)y \\end{gather*}\\] ","categories": [],
+        "tags": [],
+        "url": "/items/ex-lambda-reduction/",
         "teaser": null
       },{
         "title": "Logical relations",
@@ -441,6 +459,12 @@ var store = [{
         "excerpt":"Find the length of a given sequence.  ","categories": [],
         "tags": [],
         "url": "/items/ex-length/",
+        "teaser": null
+      },{
+        "title": "Deep Max",
+        "excerpt":"Define a recursive procedure that finds the maximum integer in a possibly nested list of integers.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-max/",
         "teaser": null
       },{
         "title": "Maximum depth",
@@ -704,6 +728,12 @@ var store = [{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
   },{
+    "title": "A very short introduction to CCG",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/shortccg/"
+  },{
+    "title": "Lambda Calculator",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/lambdacalculator/"
+  },{
     "title": "Discrete Mathematics and Its Applications",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/rosen/"
   },{
@@ -800,6 +830,9 @@ var store = [{
     "title": "Solution: Lambda calculus basics",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-lambda-basics/"
   },{
+    "title": "Solution: Lambda reduction",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-lambda-reduction/"
+  },{
     "title": "Solution: Logical relations",
     "excerpt":"All the answers are given under the assumption that no model can have an empty domain. $$ \\begin{gather} \\forall x.\\con{p}x\\rightarrow \\con{q}x&\\not\\models &\\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x\\rightarrow \\con{q}x&\\not\\models & \\exists x.\\con{q}x\\\\ \\exists x.\\con{p}x\\wedge \\con{q}x&\\models & \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x &\\models &\\exists x.\\con{p}x\\\\ \\neg\\exists x\\,\\con{r}x&\\models & \\forall x.\\neg\\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&\\not\\models & \\forall x.\\con{p}x\\rightarrow...","url": "https://umutozge.github.io/solutions/ex-logical-relations/"
   },{
@@ -890,8 +923,11 @@ var store = [{
     "title": "Solution: Length",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-length/"
   },{
+    "title": "Solution: Deep Max",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-max/"
+  },{
     "title": "Solution: Maximum depth",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-maxdepth/"
+    "excerpt":"This is the shortest I could get.    ```python def maxdepth(seq):     \"\"\"Find the maximum nesting level in seq     In: list     Out: int     \"\"\"     if isinstance(seq, list):         return 0 if not seq else max(maxdepth(seq[0]) + 1, maxdepth(seq[1:]))     elif not isinstance(seq, list):         return -1 ```           Back to exercise      Download .ipynb   Download .py   ","url": "https://umutozge.github.io/solutions/ex-maxdepth/"
   },{
     "title": "Solution: Index",
     "excerpt":"```python def index(item, seq): return -1 if not seq else (0 if item == seq[0] else (1 + index(item, seq[1:]))) ``` might look like a good attempt, but it is not. You cannot return -1 for unsuccesful tries in this way. You must interfere in the \"upward\" flow of the...","url": "https://umutozge.github.io/solutions/ex-member-index/"

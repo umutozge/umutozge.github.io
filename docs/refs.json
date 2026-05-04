@@ -227,6 +227,12 @@
     "label": "Exercise",
     "title": "Lambda calculus basics"
   },
+  "ex-lambda-reduction": {
+    "page": "/exercises/formal-semantics/",
+    "number": 6,
+    "label": "Exercise",
+    "title": "Lambda reduction"
+  },
   "ex-dot-product": {
     "page": "/exercises/linalg/",
     "number": 1,

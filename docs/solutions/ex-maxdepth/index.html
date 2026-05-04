@@ -66,7 +66,7 @@
 
 
 <script type="text/javascript">
-  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2}};
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0}};
   const extraMacros = {};
 
   for (const [name, val] of Object.entries(extraMacroData || {})) {
@@ -203,13 +203,29 @@
         
         <main class="solution">
   <div class="numbered">
-    <p>Solution not written yet.</p>
+    <p>This is the shortest I could get.</p>
+
+<div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">maxdepth</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Find the maximum nesting level in seq
+    In: list
+    Out: int
+    </span><span class="sh">"""</span>
+    <span class="k">if</span> <span class="nf">isinstance</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">0</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">seq</span> <span class="k">else</span> <span class="nf">max</span><span class="p">(</span><span class="nf">maxdepth</span><span class="p">(</span><span class="n">seq</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nf">maxdepth</span><span class="p">(</span><span class="n">seq</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="nf">isinstance</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div>  </div>
+</div>
 <hr />
 
 <div class="solution-actions">
   <button class="btn btn--primary" type="button" onclick="window.history.back()" aria-label="Go back to the previous page">
     Back to exercise
   </button>
+  <a class="btn btn--warning" href="/assets/solutions/ex-maxdepth/ex-maxdepth.ipynb">Download .ipynb</a>
+  <a class="btn btn--warning" href="/assets/solutions/ex-maxdepth/ex-maxdepth.py">Download .py</a>
 </div>
 
 
