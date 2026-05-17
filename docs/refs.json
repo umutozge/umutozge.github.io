@@ -89,6 +89,18 @@
     "label": "Definition",
     "title": "Semantics of L"
   },
+  "df-dot-product": {
+    "page": "/posts/course/vectors/",
+    "number": 1,
+    "label": "Definition",
+    "title": "Dot product"
+  },
+  "th-law-of-cosines": {
+    "page": "/posts/course/vectors/",
+    "number": 2,
+    "label": "Theorem",
+    "title": "The law of cosines"
+  },
   "ex-flip": {
     "page": "/exercises/basic-probability/",
     "number": 1,
@@ -191,11 +203,23 @@
     "label": "Exercise",
     "title": "King's sibling"
   },
-  "ex-four-out": {
+  "ex-counting-integers": {
     "page": "/exercises/combinatorics/",
     "number": 1,
     "label": "Exercise",
-    "title": "Four spades out"
+    "title": "Counting integers"
+  },
+  "ex-men-women": {
+    "page": "/exercises/combinatorics/",
+    "number": 2,
+    "label": "Exercise",
+    "title": "Men and women"
+  },
+  "ex-ninety-students": {
+    "page": "/exercises/combinatorics/",
+    "number": 3,
+    "label": "Exercise",
+    "title": "Ninety students"
   },
   "ex-logical-relations": {
     "page": "/exercises/formal-semantics/",
@@ -221,17 +245,23 @@
     "label": "Exercise",
     "title": "Model building"
   },
-  "ex-lambda-basics": {
-    "page": "/exercises/formal-semantics/",
-    "number": 5,
+  "ex-lambda-conventions": {
+    "page": "/exercises/lambda-calculus/",
+    "number": 1,
     "label": "Exercise",
-    "title": "Lambda calculus basics"
+    "title": "Notational conventions"
   },
   "ex-lambda-reduction": {
-    "page": "/exercises/formal-semantics/",
-    "number": 6,
+    "page": "/exercises/lambda-calculus/",
+    "number": 2,
     "label": "Exercise",
-    "title": "Lambda reduction"
+    "title": "Reduction"
+  },
+  "ex-lambda-inference": {
+    "page": "/exercises/lambda-calculus/",
+    "number": 3,
+    "label": "Exercise",
+    "title": "Infer a term"
   },
   "ex-dot-product": {
     "page": "/exercises/linalg/",

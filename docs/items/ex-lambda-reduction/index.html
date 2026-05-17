@@ -10,19 +10,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Lambda reduction - Umut Özge</title>
-<meta name="description" content="Reduce the following lambda expressions as much as possible:">
+<!-- begin _includes/seo.html --><title>Reduction - Umut Özge</title>
+<meta name="description" content="Reduce each expression as far as possible.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Umut Özge">
-<meta property="og:title" content="Lambda reduction">
+<meta property="og:title" content="Reduction">
 <meta property="og:url" content="https://umutozge.github.io/items/ex-lambda-reduction/">
 
 
-  <meta property="og:description" content="Reduce the following lambda expressions as much as possible:">
+  <meta property="og:description" content="Reduce each expression as far as possible.">
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-05-04T12:15:17+03:00">
+  <meta property="article:published_time" content="2026-05-17T16:31:07+03:00">
 
 
 
@@ -68,7 +68,7 @@
 
 
 <script type="text/javascript">
-  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0}};
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0},"pmatrix":{"def":"\\begin{pmatrix}#1\\end{pmatrix}","args":1}};
   const extraMacros = {};
 
   for (const [name, val] of Object.entries(extraMacroData || {})) {
@@ -180,9 +180,9 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Lambda reduction">
-    <meta itemprop="description" content="Reduce the following lambda expressions as much as possible:">
-    <meta itemprop="datePublished" content="2026-05-04T12:15:17+03:00">
+    <meta itemprop="headline" content="Reduction">
+    <meta itemprop="description" content="Reduce each expression as far as possible.">
+    <meta itemprop="datePublished" content="2026-05-17T16:31:07+03:00">
     
 
     <div class="page__inner-wrap">
@@ -190,7 +190,7 @@
         <header>
           
               <h2 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://umutozge.github.io/items/ex-lambda-reduction/" itemprop="url">Exercise: Lambda reduction
+                <a href="https://umutozge.github.io/items/ex-lambda-reduction/" itemprop="url">Exercise: Reduction
 </a>
               </h2>
             
@@ -204,14 +204,237 @@
       <section class="page__content" itemprop="text">
         
         <div class="numbered">
-  <p>Reduce the following lambda expressions as much as possible:</p>
+  <p>Reduce each expression as far as possible.</p>
 
-\[\begin{gather*}
-(\x.a') b' \\
-(\x.p'x \to \E x.r'b'\, x) a'\\
-(\x\x.p'x \to q'x\,c') a'\, b'\\
-(\x\E y.r'x\,y)y
-\end{gather*}\]
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda x. (m\,\, x))\,\,j\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda y. (y\,\, j))\,\,m\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\(((\lambda x.(\lambda y. (y\,\,(y\,\, x))))\,\, j)\,\,m\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda y.(y\cnct{}j))(\lambda x.(m\cnct{}x))\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda z.z) (\lambda y . y\,\, y) (\lambda x.x\,\, a)\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda x\lambda y.x\,\,  y\,\,  y) (\lambda a.a) b\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda x.x\,\, x) (\lambda y.y\,\, x) z\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\(((\lambda x.x\,\, x) (\lambda y.y)) (\lambda y.y)\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda f.fx)g\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda f.fx)ga\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda f.fx)(ga)\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda f\lambda x.fx)g a\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda x\lambda y \lambda z.x(yz))f\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<p>Now some examples with logical forms:</p>
+
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda p.p\cnct{}john')(\lambda x.sleeps'x)\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda p\lambda q.\forall x. p'x \to q'x)(\lambda x. student'x)(\lambda x. sleeps'x)\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda p\lambda x.think'p\cnct{x})((\lambda p.p\cnct{}john')(\lambda x.sleeps'x))alice'\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\lambda p\lambda q.\exists x. p\cnct{x}\land q\cnct{x})(\lambda x. student' x)((\lambda p\lambda x.think'p\cnct{x})((\lambda p.p\cnct{}john')(\lambda x.sleeps'x)))\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<table>
+  <tbody>
+    <tr>
+      <td>These are from @@exlink</td>
+      <td>lambdacalculator@@</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\x.a') b'\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\x.p'x \to \E x.r'b'\, x) a'\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\x\x.p'x \to q'x\,c') a'\, b'\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>@@math_item</td>
+          <td>content=\((\x\E y.r'x\,y)y\)@@</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
 
 
 <script>
@@ -256,7 +479,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-05-04T12:15:17+03:00">2026-05-04</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-05-17T16:31:07+03:00">2026-05-17</time></p>
 
       </footer>
 
@@ -265,7 +488,7 @@
       
   <nav class="pagination">
     
-      <a href="/items/ex-lambda-basics/" class="pagination--pager" title="Lambda calculus basics">Previous</a>
+      <a href="/items/ex-lambda-inference/" class="pagination--pager" title="Infer a term">Previous</a>
     
     
       <a href="/items/ex-logical-relations/" class="pagination--pager" title="Logical relations">Next</a>

@@ -1,5 +1,260 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-05-04T12:15:17+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
-</subtitle><entry><title type="html">Model-theoretic interpretation</title><link href="https://umutozge.github.io/posts/course/model-theoretic-interpretation/" rel="alternate" type="text/html" title="Model-theoretic interpretation" /><published>2026-03-31T00:00:00+03:00</published><updated>2026-03-31T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/model-theoretic-interpretation</id><content type="html" xml:base="https://umutozge.github.io/posts/course/model-theoretic-interpretation/"><![CDATA[<h2 id="introduction">Introduction</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-05-17T16:31:07+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
+</subtitle><entry><title type="html">Vectors</title><link href="https://umutozge.github.io/posts/course/vectors/" rel="alternate" type="text/html" title="Vectors" /><published>2026-05-17T00:00:00+03:00</published><updated>2026-05-17T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/vectors</id><content type="html" xml:base="https://umutozge.github.io/posts/course/vectors/"><![CDATA[<p>When we model the world through mathematics, we frequently find ourselves talking
+about magnitudes. Mass, length, price, and so on, are all examples of quantities
+that we use numbers to represent. We build our mathematical models in such a
+way that these numbers and operations involving them has some, largely
+idealized, correspondence to the entities, relations and processes out there
+that we aim to understand and predict. Numbers that are used in this way are called
+<span class="term" id="scalars">scalars</span>.</p>
+
+<p>Sometimes we need to couple the concept of magnitude with a direction. The prime
+example is the concept of force that we use in physics. A force has both a
+magnitude and a particular direction in space. The mathematical object that
+brings together magnitude and direction is called a <span class="term" id="vector">vector</span>.</p>
+
+<p>As a simple example, take a vector with a magnitude of 5 units and a direction
+of \(32^\circ\) measured counterclockwise from the positive \(x\)-axis. We can
+represent this vector in several ways. Initially, assume we don’t care about
+where the vector starts (its <span class="term" id="tail">tail</span>). We just want to encode its length
+and direction. We represent it as a two component vector, where the first
+component is the horizontal (\(x\)) magnitude, and the second eomponent is the
+vertical (\(y\)) magnitude. The components can be calculated using trigonometry
+via the cosine and sine of the direction angle:<sup id="fnref:trig"><a href="#fn:trig" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>:</p>
+
+\[\begin{align}
+\vect{v} &amp;= \begin{pmatrix} 5\cos 32^\circ &amp; 5\sin 32^\circ \end{pmatrix}\nonumber\\
+         &amp;= \begin{pmatrix}4.2402406 &amp; 2.6495962\end{pmatrix}
+\end{align}\]
+
+<p>In other words, if you do not care about the tail point, a vector in a plane
+(2D) is represented by two real numbers.</p>
+
+<p>You can abstract the directon from a vector by a <span class="term" id="unit-vector">unit vector</span>, whose
+magnitude is 1. Such a unit vector for our example would be:</p>
+
+\[\vect{u} = \begin{pmatrix} \cos 32^\circ &amp; \sin 32^\circ \end{pmatrix}\]
+
+<p>or, with the angle in radians (\(d=180^\circ \pi\)):</p>
+
+\[\vect{u} = \begin{pmatrix} \cos \frac{32\pi}{180} &amp; \sin \frac{32\pi}{180}
+\end{pmatrix}\]
+
+<p>or, with the values of the trig functions plugged in:</p>
+
+\[\vect{u} = \begin{pmatrix} 0.8480481 &amp; 0.52991927 \end{pmatrix}\]
+
+<h3 id="element-wise-operations">Element-wise operations</h3>
+
+<p>Given a unit vector, you can factor the magnitude back in by multiplying the
+unit vector by the scalar magnitude. This is an example of an element-wise
+operation, where you apply the same operation to each component of the vector.
+In this case, you multiply each component of the unit vector by the magnitude:</p>
+
+\[\vect{r} = 5\vect{u} = \begin{pmatrix} 4.2402406 &amp; 2.6495962\end{pmatrix}\]
+
+<p>An operation between vectors can also be element-wise. For example, if you have
+two vectors \(\vect{v}\) and \(\vect{w}\), you can add them together by adding their
+components:</p>
+
+\[\begin{align}
+\vect{v} + \vect{w} &amp;= \begin{pmatrix} v_1 &amp; v_2 \end{pmatrix} + \begin{pmatrix}
+w_1 &amp; w_2 \end{pmatrix}\nonumber\\
+&amp;= \begin{pmatrix} v_1 + w_1 &amp; v_2 + w_2 \end{pmatrix}
+\end{align}\]
+
+<p>Geometrically, adding two vectors means constructing a third spanning from the
+tail of the first to the head of the second, where you place the tail of the
+second at the head of the first. This arrangement gives a triangle when the
+vectors are not parallel (= in the same or opposite direction).</p>
+
+<h3 id="norm-of-a-vector">Norm of a vector</h3>
+
+<p>We’ve been talking about the magnitude of a vector. The interpretation of
+magnitude may change from context to context. In geometry, the magnitude of a
+vector is its length; in physics, the magnitude of a force vector is the
+strength of the force, and so on. The general mathematical term for the
+magnitude of a vector is its <span class="term" id="norm">norm</span>. The norm of a vector is a
+non-negative real number that represents the size or length of the vector.</p>
+
+<p>The simplest and most common type of norm is <span class="term" id="euclidian-norm">Euclidian norm</span> based on Pythogoras’ theorem. For a vector 
+\(\vect{v} = \begin{pmatrix} 3 &amp; 4 \end{pmatrix}\), the Euclidean norm is</p>
+
+\[\|\vect{v}\|_2 = \sqrt{3^2 + 4^2} = 5\]
+
+<p>This is the ordinary geometric length of the arrow from \((0,0)\) to \((3,4)\).</p>
+
+<p>A useful related idea is distance between two vectors. This is usually defined by the norm of their difference:</p>
+
+\[\text{distance}(x,y) = \|x-y\|\]
+
+<p>That formula says that two vectors are close when their difference has small norm, where difference is the element-wise subtraction.</p>
+
+<h5 id="properties-of-the-norm-function">Properties of the norm function</h5>
+
+<p>The concept of norm is not limited to just measuring the length of a vector. Any
+function with the following properties can be considered a norm:</p>
+
+<ul>
+  <li>Non-negativity: \(\|x\| \ge 0\).</li>
+  <li>Zero only at the zero vector: \(\|x\| = 0\) exactly when \(x=0\).</li>
+  <li>Homogeneity: \(\|a x\| = \lvert a\rvert \,\|x\|\) for any scalar \(a\).</li>
+  <li>Triangle inequality: \(\|x+y\| \le \|x\| + \|y\|\).</li>
+</ul>
+
+<p>Here are some examples of different norms (subscript indicates the type of
+norm):</p>
+
+<ul>
+  <li><strong>Euclidean norm</strong>: \(\|x\|_2 = \sqrt{x_1^2 + \cdots + x_n^2}\), the usual geometric length.</li>
+  <li><strong>1-norm</strong>: \(\|x\|_1 = \lvert x_1\rvert + \cdots + \lvert x_n\rvert\), the sum of absolute values.</li>
+  <li><strong>Infinity norm</strong>: \(\|x\|_\infty = \max_i \lvert x_i\rvert\), the largest absolute coordinate.</li>
+</ul>
+
+<p>You might find it a bit confusing that we defined the norms for vectors in \(n\)
+dimensions. Just go on reading.</p>
+
+<h3 id="dimensions">Dimensions</h3>
+
+<p>Except the definitions of different types of norms above,  we’ve been dealing
+with vectors in a 2-dimensional plane. But the dimensionality of a vector can be
+any positive integer. A vector in 3D will naturally be conceived as an arrow in
+a 3D space. But what about vectors in 8D?</p>
+
+<p>We, as humans, can visualize and intuitively understand geometry in 2D and 3D,
+but higher dimensions need a proper mathematical thinking. In mathematics, we
+operate on definitions and properties that follow from these definitions obeying
+the laws of logic. In mathematical education, we often start with intuitively
+familiar concepts and give them certain names. A good example is the circle and
+sphere. It is easy to grasp a circle in 2D and a sphere in 3D, as we think of
+them as some idealized forms of some objects we see around. But actually, what
+we call circle in 2D and sphere in 3D are just sets. How?</p>
+
+<p>Start with the notion of a point. A point, in common-sense, is either a pair
+(2D)  or a triple (3D) of numbers. In mathematics, a point is any \(n\)-tuple of
+numbers. The concepts circle and sphere are just the names we give to the notion
+of “the set of points that are at a fixed distance from a given point”, in 2D
+and 3D, respectively.</p>
+
+<p>Likewise for vectors. A vector is a mathematical object in \(\mathbb{R}^n\),
+where \(n\) is any positive integer. When you need its Euclidean length, you
+simple compute the sum of squares of its components and take the square root, no
+matter how many components it has.</p>
+
+<p>For a right triangle with legs $a$ and $b$ and hypotenuse $c$, Pythagoras says</p>
+
+\[a^{2} + b^{2} = c^{2}.\]
+
+<p>If you view the hypotenuse as a vector from the origin to the point \((a,b)\), then that vector’s length is</p>
+
+\[\|\begin{pmatrix} a &amp; b \end{pmatrix}\| = \sqrt{a^{2} + b^{2}},\]
+
+<p>which is exactly “take the hypotenuse using Pythagoras.”</p>
+
+<p>In \(\mathbb{R}^{n}\), the Euclidean norm of a vector \(x = \begin{pmatrix}x_{1} &amp; \dots &amp; x_{n}\end{pmatrix}\) is</p>
+
+\[\|x\| = \sqrt{x_{1}^{2} + \dots + x_{n}^{2}}\]
+
+<p>which is just repeatedly applying Pythagoras along mutually perpendicular axes.  Each coordinate plays the role of a leg in a higher‑dimensional right triangle whose “hypotenuse” is the vector.</p>
+
+<h3 id="dot-product">Dot product</h3>
+
+<p>A key operation that maps two vectors to a scalar is the <span class="term" id="dot-product">dot product</span>
+which is an instance of a family of operations called inner product.</p>
+
+<div class="item" id="df-dot-product" data-kind="definition" data-label="Definition" data-title="Dot product" data-ref="Definition">
+
+    
+      <p>The <span class="term" id="dot-product">dot product</span> of two vectors $u$ and $v$ in $\mathbb{R}^n$ is defined
+as:</p>
+
+\[u \cdot v = u_{1}v_{1} + \dots + u_{n}v_{n}.\]
+
+<p>Another common notation for the dot product is \(\langle u, v \rangle\).</p>
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>It’s close relation to Pythogoras’ theorem makes dot product a fundamental tool
+in linear algebra.</p>
+
+<p>Given \(\vect{v} = \pmatrix{x &amp; y}\):</p>
+
+\[\|\vect{v}\|^2 = \vect{v} \cdot \vect{v} = x^2 + y^2.\]
+
+<p>Now take two vectors \(\vect{u} = \pmatrix{u_1&amp; u_2}\) and \(\vect{v}=\pmatrix{v_1&amp;v_2}\). Now, imagine you form a triangle by putting the tail of \(\vect{v}\) at the head of \(\vect{u}\). The vector from the tail of \(\vect{u}\) to the head of \(\vect{v}\) is \(\vect{u} + \vect{v}\). We know from above that:</p>
+
+\[\begin{align}\label{vec-pytho}
+\|\vect{u} + \vect{v}\|^2 &amp; = (\vect{u} + \vect{v}) \cdot (\vect{u} + \vect{v})\\
+&amp; = \pmatrix{u_1 + v_1 &amp; u_2 + v_2} \cdot \pmatrix{u_1 + v_1 &amp; u_2 + v_2}\nonumber\\
+&amp; = (u_1 + v_1)^2 + (u_2 + v_2)^2\nonumber\\
+&amp; = u_1^2 + 2u_1v_1 + v_1^2 + u_2^2 + 2u_2v_2 + v_2^2\nonumber\\
+&amp; = (u_1^2 + u_2^2) + (v_1^2 + v_2^2) + 2(u_1v_1 + u_2v_2)\nonumber\\
+&amp; = \|\vect{u}\|^2 + \|\vect{v}\|^2 + 2\,(\vect{u} \cdot \vect{v})\nonumber
+\end{align}\]
+
+<p>To relate this equality to the angle between the vectors \(\vect{u}\) and
+\(\vect{v}\), we turn to a theorem from elementary geometry:</p>
+
+<div class="item" id="th-law-of-cosines" data-kind="theorem" data-label="Theorem" data-title="The law of cosines" data-ref="Theorem">
+
+    
+      <p>Given a triangle with sides of lengths \(a\), \(b\), and \(c\), and an angle \(\theta\)
+opposite the side of length \(c\), the law of cosines states that:</p>
+
+\[c^2 = a^2 + b^2 - 2ab \cos(\theta) \nonumber\]
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>By \eqref{vec-pytho} and <a class="xref" href="#th-law-of-cosines" data-refmode="full"></a>, we get:</p>
+
+\[\begin{align}
+\|\vect{u} + \vect{v}\|^2 &amp; = \|\vect{u}\|^2 + \|\vect{v}\|^2 +
+2\,\|\vect{u}\|\|\vect{v}\|\cos\theta\\
+&amp; = \|\vect{u}\|^2 + \|\vect{v}\|^2 + 2\,(\vect{u} \cdot \vect{v})\nonumber
+\end{align}\]
+
+<p>yielding the equality:</p>
+
+\[\cos\theta = \frac{\vect{u} \cdot \vect{v}}{\|\vect{u}\|\|\vect{v}\|}\]
+
+<p>which is of prime importance in linear algebra and its applications in
+artificial intelligence and machine learning.</p>
+
+<p>Its importance lies in the fact that it gives a measure of the directional similarity of two
+vectors that is independent of their magnitudes, as the cosine function
+approaches 1 from both directions as the angle approaches 0. This is the basis
+of the widely used cosine similarity measure in machine learning and information
+retrieval. In 2 and 3 dimensions, the concept of angle is intuitive, but in
+higher dimensions there is neither an intuitive approximation nor a need for
+one.</p>
+
+<p>This was a very brief introduction to linear algebra through vectors.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:trig">
+      <p>Let \(\theta\) be one of the acute angles of a right triangle:
+\(\cos\theta\) gives the ratio of the adjacent leg to the hypotenuse, and
+\(\sin\theta\) gives the ratio of the opposite leg to the hypotenuse. <a href="#fnref:trig" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="course" /><category term="continuous" /><category term="linear algebra" /><summary type="html"><![CDATA[A gentle intro to linear algebra through vectors]]></summary></entry><entry><title type="html">Model-theoretic interpretation</title><link href="https://umutozge.github.io/posts/course/model-theoretic-interpretation/" rel="alternate" type="text/html" title="Model-theoretic interpretation" /><published>2026-03-31T00:00:00+03:00</published><updated>2026-03-31T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/model-theoretic-interpretation</id><content type="html" xml:base="https://umutozge.github.io/posts/course/model-theoretic-interpretation/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <p>Model-theoretic semantics in linguistics aims to define correspondences between
 the expressions of a language and objects that are external to that
@@ -1625,109 +1880,7 @@ as we were able to keep track of multiple pieces of information in each cycle of
       <p>You can map 0 and 1 to <code class="language-plaintext highlighter-rouge">False</code> and <code class="language-plaintext highlighter-rouge">True</code> respectively by applying the built-in <code class="language-plaintext highlighter-rouge">bool</code> to them. Actually <code class="language-plaintext highlighter-rouge">bool</code> returns <code class="language-plaintext highlighter-rouge">True</code> for any integer other than 0. <a href="#fnref:bool" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name></name></author><category term="course" /><category term="programming" /><category term="tuples" /><summary type="html"><![CDATA[The notion of state and how to enhance its memory power by tuples.]]></summary></entry><entry><title type="html">Euclid’s Algorithm</title><link href="https://umutozge.github.io/posts/course/euclids-algorithm/" rel="alternate" type="text/html" title="Euclid’s Algorithm" /><published>2025-11-24T00:00:00+03:00</published><updated>2025-11-24T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/euclids-algorithm</id><content type="html" xml:base="https://umutozge.github.io/posts/course/euclids-algorithm/"><![CDATA[<p class="notice--warning"><strong>Check:</strong> Make sure you are fine with <a href="/blog/intro-number-theory">very basic number theory</a>.</p>
-
-<blockquote class="mathbox definition" id="def:gcd">
-  <p><strong>Definition</strong> (greatest common divisor) <br /><br />
-Given two integers \(a\) and \(b\), the <strong>greatest common divisor</strong> (GCD) of \(a\) and \(b\), denoted by \(\gcd(a,b)\), is the largest integer that divides both \(a\) and \(b\).</p>
-</blockquote>
-
-<p>Euclid’s algorithm (300 BC) which computes the GCD of two positive integers is one of the oldest algorithms still useful today.</p>
-
-<p>The algorithm for computing GCD of \(a\) and \(b\), where \(a&gt;b\):</p>
-<ul>
-  <li>To compute \(gcd(a,b)\):
-    <ul>
-      <li>Let \(r = a\bmod b\);</li>
-      <li>if \(r = 0\), then the answer is \(b\).</li>
-      <li>else, the answer is \(gcd(b,r)\).</li>
-    </ul>
-  </li>
-</ul>
-
-<p>This simple yet ingenious algorithm may not be easy to understand without examples.<sup id="fnref:euc"><a href="#fn:euc" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Take the numbers 48 and 18.</p>
-
-\[48 = 2 \times 18 + 12\]
-
-<p>As the remainder is not 0, we repeat the process with 18 and 12:</p>
-
-\[18 = 1 \times 12 + 6\]
-
-<p>One more time with 12 and 6:</p>
-
-\[12 = 2 \times 6 + 0\]
-
-<p>As the remainder is now 0, we can stop. The GCD of 48 and 18 is therefore 6.</p>
-
-<p>Another quick example: what is the GCD of 476 and 272? The answer is 68, as we can see from the following steps:</p>
-
-\[\begin{align*}
-476 &amp; = 1 \times 272 + 204 \\
-272 &amp; = 1 \times 204 + 68 \\
-204 &amp; = 3 \times 68 + 0
-\end{align*}\]
-
-<p>So much for <em>how</em> the algorithm works. But <em>why</em> does it work?</p>
-
-<p>The critical observation is that the GCD of any \(a\) and \(b\), with \(a&gt;b\), is the same as the GCD of \(b\) and the remainder of dividing \(a\) by \(b\). In a concise and more formal way, we can state this as:</p>
-
-\[\begin{align}
-\forall a,b,r\in \mathbb{Z} \text{ s.t. } a&gt;b, gcd(a,b) = gcd(b,a \bmod b)
-\label{gcdequal}
-\end{align}\]
-
-<p>Why is \eqref{gcdequal} true?</p>
-
-<p>We will see two proofs of \eqref{gcdequal}, both correct. You decide which one is “better”.</p>
-
-<blockquote class="mathbox proof" id="proof:gcd-euclid-1">
-  <p><strong>Proof</strong> (\eqref{gcdequal}, version 1):<br />
-Let’s say \(gcd(a,b)=g\), we want to show that \(gcd(b,r)=g\), where \(r=a \bmod b\).
-We can think of this task as two sub-tasks: (1) show that \(g\) divides both \(b\) and \(r\), and (2) show that any other common divisor of \(b\) and \(r\) cannot be larger than \(g\).<br />
-First part: <br /></p>
-  <ol>
-    <li>As \(gcd(a,b)=g\), then \(g\) divides both \(a\) and \(b\), and we can write \(a=mg\) and \(b=ng\) for some integers \(m,n\).<br /></li>
-    <li>Let \(r=a \bmod b\), which means \(a=kb+r\), and therefore \(r=a-kb\) for some integer \(k\).<br /></li>
-    <li>Replace \(a,b\) with \(mg,ng\) respectively in the equation for \(r\) to get \(r=mg-k(ng)=g(m-kn)\).<br /></li>
-    <li>As \(m-kn\) is an integer, we can conclude that \(r\) is divisible by \(g\).<br /></li>
-    <li>We already know that \(g\mid b\), therefore \(g\) is a common divisor of \(b\) and \(r\).<br /></li>
-  </ol>
-
-  <p>Second part:<br /></p>
-  <ol>
-    <li>Assume that there is another common divisor of \(b\) and \(r\), call it \(h\), where \(h &gt; g\).<br /></li>
-    <li>First, \(h\nmid a\), because otherwise \(h\) becomes a common divisor of \(a\) and \(b\) larger than their GCD \(g\), which is a contradiction.<br /></li>
-    <li>As \(h\) divides both \(b\) and \(r\), we can write \(b=ph\) and \(r=qh\) for some integers \(p,q\).<br /></li>
-    <li>Replace \(b\) and \(r\) in the equation \(a=kb+r\) with \(ph\) and \(qh\), respectively. We get \(a=k(ph)+qh=h(kp+q)\), which in turn means \(h\mid a\), given that \(kp+q\) is guaranteed to be an integer. Again we contradicted ourselves.<br /></li>
-    <li>Therefore \(b\) and \(r\) cannot have a common divisor larger than \(g\), completing the proof<br /></li>
-  </ol>
-</blockquote>
-
-<p>Here is a slightly different proof. In this we will not proceed over the GCD of \(a\) and \(b\) directly, but prove that the set of common divisors of \(a\) and \(b\) is the same with the set of common divisors of \(b\) and \(r\). As the GCD is defined as the largest common divisor, if the two sets are the same, their GCDs must be the same as well.</p>
-
-<blockquote class="mathbox proof" id="proof:gcd-euclid-2">
-  <p><strong>Proof</strong> (\eqref{gcdequal}, version 2):<br />
-Let \(A = \lbrace x: x\mid a, x\mid b \rbrace\) and \(B = \lbrace y: y\mid b, y\mid r \rbrace\) be the sets of common divisors of \(a\) and \(b\), and \(b\) and \(r\), respectively. We want to show that \(A = B\).<br />
-First show \(A \subseteq B\):<br />
-Pick any \(g\in A\), then by the exact same steps in the earlier proof, you deduce \(g\mid b\) and \(g\mid r\), and therefore \(g\in B\).<br />
-Second show \(B \subseteq A\):<br />
-Pick any \(h\in B\), then by the exact same steps in the earlier proof, you deduce \(h\mid a\) and \(h\mid b\), and therefore \(h\in A\).<br /></p>
-</blockquote>
-
-<p>In my opinion, there is an air of elegance in the second proof, in the sense that it does not resort to proof by contradiction.</p>
-
-<p>Having proved \eqref{gcdequal},  we now know that we can reduce the problem of finding GCD of \(a\) and \(b\) to finding GCD of \(b\) and \(r\). To complete the picture for now, we will count on our intuition, without a rigorous proof,<sup id="fnref:converge"><a href="#fn:converge" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> that repeating this process will eventually lead us to a remainder of 0, at which point the other number is the GCD.</p>
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:euc">
-      <p>Even better are the visualizations you can find on Wikipedia. <a href="#fnref:euc" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:converge">
-      <p>You need to show (1) that the remainders must decrease in each step, and (2) that they cannot go below 0; so eventually we must reach 0. <a href="#fnref:converge" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name></name></author><category term="course" /><category term="algorithms" /><category term="iteration" /><category term="proof" /><category term="discrete" /><category term="number theory" /><summary type="html"><![CDATA[Euclid's algorithm for finding the greatest common divisor of two integers and its partial proof.]]></summary></entry><entry><title type="html">Very basic number theory</title><link href="https://umutozge.github.io/posts/course/intro-number-theory/" rel="alternate" type="text/html" title="Very basic number theory" /><published>2025-11-24T00:00:00+03:00</published><updated>2025-11-24T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/intro-number-theory</id><content type="html" xml:base="https://umutozge.github.io/posts/course/intro-number-theory/"><![CDATA[<p>This is a healthy minimum dose of number theory to make you feel comfortable with the concepts we will be using in this course.</p>
+</div>]]></content><author><name></name></author><category term="course" /><category term="programming" /><category term="tuples" /><summary type="html"><![CDATA[The notion of state and how to enhance its memory power by tuples.]]></summary></entry><entry><title type="html">Very basic number theory</title><link href="https://umutozge.github.io/posts/course/intro-number-theory/" rel="alternate" type="text/html" title="Very basic number theory" /><published>2025-11-24T00:00:00+03:00</published><updated>2025-11-24T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/intro-number-theory</id><content type="html" xml:base="https://umutozge.github.io/posts/course/intro-number-theory/"><![CDATA[<p>This is a healthy minimum dose of number theory to make you feel comfortable with the concepts we will be using in this course.</p>
 
 <p>We do not start from the absolute beginning. We take for granted integers and arithmetic operations. We start by some terminology.
 The set of integers, denoted by \(\mathbb{Z}\), is the set of whole numbers including negative numbers, zero, and positive numbers. When we say <strong>positive integers</strong> – aka <strong>natural numbers</strong> – we exclude zero and, obviously, negative integers. The set of positive integers is denoted by \(\mathbb{Z}^+\). If you want to include zero but leave out negative integers, the term is <strong>non-negative integers</strong>. The set of non-negative integers is denoted by \(\mathbb{Z}_{\geq 0}\), and so on with other subscripts. When we say number we will mean integer unless stated otherwise.</p>
@@ -2004,7 +2157,109 @@ Simply there is no way that a triple other than 3,5,7 can be all primes.</p>
       <p>We  used the Division Algorithm three times, once for each term connected by ‘+’, and once for the overall \(\bmod\). <a href="#fnref:rda" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name></name></author><category term="course" /><category term="discrete" /><category term="proof" /><category term="number theory" /><summary type="html"><![CDATA[Fundamental notions of number theory and proof techniques.]]></summary></entry><entry><title type="html">Higher order functions</title><link href="https://umutozge.github.io/posts/course/higher-order-functions/" rel="alternate" type="text/html" title="Higher order functions" /><published>2025-11-21T00:00:00+03:00</published><updated>2025-11-21T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/higher-order-functions</id><content type="html" xml:base="https://umutozge.github.io/posts/course/higher-order-functions/"><![CDATA[<p>Remember our <a href="/blog/iteration-by-while">earlier</a> discussion of Collatz function and sequences. Here is our task:</p>
+</div>]]></content><author><name></name></author><category term="course" /><category term="discrete" /><category term="proof" /><category term="number theory" /><summary type="html"><![CDATA[Fundamental notions of number theory and proof techniques.]]></summary></entry><entry><title type="html">Euclid’s Algorithm</title><link href="https://umutozge.github.io/posts/course/euclids-algorithm/" rel="alternate" type="text/html" title="Euclid’s Algorithm" /><published>2025-11-24T00:00:00+03:00</published><updated>2025-11-24T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/euclids-algorithm</id><content type="html" xml:base="https://umutozge.github.io/posts/course/euclids-algorithm/"><![CDATA[<p class="notice--warning"><strong>Check:</strong> Make sure you are fine with <a href="/blog/intro-number-theory">very basic number theory</a>.</p>
+
+<blockquote class="mathbox definition" id="def:gcd">
+  <p><strong>Definition</strong> (greatest common divisor) <br /><br />
+Given two integers \(a\) and \(b\), the <strong>greatest common divisor</strong> (GCD) of \(a\) and \(b\), denoted by \(\gcd(a,b)\), is the largest integer that divides both \(a\) and \(b\).</p>
+</blockquote>
+
+<p>Euclid’s algorithm (300 BC) which computes the GCD of two positive integers is one of the oldest algorithms still useful today.</p>
+
+<p>The algorithm for computing GCD of \(a\) and \(b\), where \(a&gt;b\):</p>
+<ul>
+  <li>To compute \(gcd(a,b)\):
+    <ul>
+      <li>Let \(r = a\bmod b\);</li>
+      <li>if \(r = 0\), then the answer is \(b\).</li>
+      <li>else, the answer is \(gcd(b,r)\).</li>
+    </ul>
+  </li>
+</ul>
+
+<p>This simple yet ingenious algorithm may not be easy to understand without examples.<sup id="fnref:euc"><a href="#fn:euc" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Take the numbers 48 and 18.</p>
+
+\[48 = 2 \times 18 + 12\]
+
+<p>As the remainder is not 0, we repeat the process with 18 and 12:</p>
+
+\[18 = 1 \times 12 + 6\]
+
+<p>One more time with 12 and 6:</p>
+
+\[12 = 2 \times 6 + 0\]
+
+<p>As the remainder is now 0, we can stop. The GCD of 48 and 18 is therefore 6.</p>
+
+<p>Another quick example: what is the GCD of 476 and 272? The answer is 68, as we can see from the following steps:</p>
+
+\[\begin{align*}
+476 &amp; = 1 \times 272 + 204 \\
+272 &amp; = 1 \times 204 + 68 \\
+204 &amp; = 3 \times 68 + 0
+\end{align*}\]
+
+<p>So much for <em>how</em> the algorithm works. But <em>why</em> does it work?</p>
+
+<p>The critical observation is that the GCD of any \(a\) and \(b\), with \(a&gt;b\), is the same as the GCD of \(b\) and the remainder of dividing \(a\) by \(b\). In a concise and more formal way, we can state this as:</p>
+
+\[\begin{align}
+\forall a,b,r\in \mathbb{Z} \text{ s.t. } a&gt;b, gcd(a,b) = gcd(b,a \bmod b)
+\label{gcdequal}
+\end{align}\]
+
+<p>Why is \eqref{gcdequal} true?</p>
+
+<p>We will see two proofs of \eqref{gcdequal}, both correct. You decide which one is “better”.</p>
+
+<blockquote class="mathbox proof" id="proof:gcd-euclid-1">
+  <p><strong>Proof</strong> (\eqref{gcdequal}, version 1):<br />
+Let’s say \(gcd(a,b)=g\), we want to show that \(gcd(b,r)=g\), where \(r=a \bmod b\).
+We can think of this task as two sub-tasks: (1) show that \(g\) divides both \(b\) and \(r\), and (2) show that any other common divisor of \(b\) and \(r\) cannot be larger than \(g\).<br />
+First part: <br /></p>
+  <ol>
+    <li>As \(gcd(a,b)=g\), then \(g\) divides both \(a\) and \(b\), and we can write \(a=mg\) and \(b=ng\) for some integers \(m,n\).<br /></li>
+    <li>Let \(r=a \bmod b\), which means \(a=kb+r\), and therefore \(r=a-kb\) for some integer \(k\).<br /></li>
+    <li>Replace \(a,b\) with \(mg,ng\) respectively in the equation for \(r\) to get \(r=mg-k(ng)=g(m-kn)\).<br /></li>
+    <li>As \(m-kn\) is an integer, we can conclude that \(r\) is divisible by \(g\).<br /></li>
+    <li>We already know that \(g\mid b\), therefore \(g\) is a common divisor of \(b\) and \(r\).<br /></li>
+  </ol>
+
+  <p>Second part:<br /></p>
+  <ol>
+    <li>Assume that there is another common divisor of \(b\) and \(r\), call it \(h\), where \(h &gt; g\).<br /></li>
+    <li>First, \(h\nmid a\), because otherwise \(h\) becomes a common divisor of \(a\) and \(b\) larger than their GCD \(g\), which is a contradiction.<br /></li>
+    <li>As \(h\) divides both \(b\) and \(r\), we can write \(b=ph\) and \(r=qh\) for some integers \(p,q\).<br /></li>
+    <li>Replace \(b\) and \(r\) in the equation \(a=kb+r\) with \(ph\) and \(qh\), respectively. We get \(a=k(ph)+qh=h(kp+q)\), which in turn means \(h\mid a\), given that \(kp+q\) is guaranteed to be an integer. Again we contradicted ourselves.<br /></li>
+    <li>Therefore \(b\) and \(r\) cannot have a common divisor larger than \(g\), completing the proof<br /></li>
+  </ol>
+</blockquote>
+
+<p>Here is a slightly different proof. In this we will not proceed over the GCD of \(a\) and \(b\) directly, but prove that the set of common divisors of \(a\) and \(b\) is the same with the set of common divisors of \(b\) and \(r\). As the GCD is defined as the largest common divisor, if the two sets are the same, their GCDs must be the same as well.</p>
+
+<blockquote class="mathbox proof" id="proof:gcd-euclid-2">
+  <p><strong>Proof</strong> (\eqref{gcdequal}, version 2):<br />
+Let \(A = \lbrace x: x\mid a, x\mid b \rbrace\) and \(B = \lbrace y: y\mid b, y\mid r \rbrace\) be the sets of common divisors of \(a\) and \(b\), and \(b\) and \(r\), respectively. We want to show that \(A = B\).<br />
+First show \(A \subseteq B\):<br />
+Pick any \(g\in A\), then by the exact same steps in the earlier proof, you deduce \(g\mid b\) and \(g\mid r\), and therefore \(g\in B\).<br />
+Second show \(B \subseteq A\):<br />
+Pick any \(h\in B\), then by the exact same steps in the earlier proof, you deduce \(h\mid a\) and \(h\mid b\), and therefore \(h\in A\).<br /></p>
+</blockquote>
+
+<p>In my opinion, there is an air of elegance in the second proof, in the sense that it does not resort to proof by contradiction.</p>
+
+<p>Having proved \eqref{gcdequal},  we now know that we can reduce the problem of finding GCD of \(a\) and \(b\) to finding GCD of \(b\) and \(r\). To complete the picture for now, we will count on our intuition, without a rigorous proof,<sup id="fnref:converge"><a href="#fn:converge" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> that repeating this process will eventually lead us to a remainder of 0, at which point the other number is the GCD.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:euc">
+      <p>Even better are the visualizations you can find on Wikipedia. <a href="#fnref:euc" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:converge">
+      <p>You need to show (1) that the remainders must decrease in each step, and (2) that they cannot go below 0; so eventually we must reach 0. <a href="#fnref:converge" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="course" /><category term="algorithms" /><category term="iteration" /><category term="proof" /><category term="discrete" /><category term="number theory" /><summary type="html"><![CDATA[Euclid's algorithm for finding the greatest common divisor of two integers and its partial proof.]]></summary></entry><entry><title type="html">Higher order functions</title><link href="https://umutozge.github.io/posts/course/higher-order-functions/" rel="alternate" type="text/html" title="Higher order functions" /><published>2025-11-21T00:00:00+03:00</published><updated>2025-11-21T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/higher-order-functions</id><content type="html" xml:base="https://umutozge.github.io/posts/course/higher-order-functions/"><![CDATA[<p>Remember our <a href="/blog/iteration-by-while">earlier</a> discussion of Collatz function and sequences. Here is our task:</p>
 
 <p class="notice--info"><strong>Task:</strong> Given a positive integer \(n\), find the largest integer in the Collatz sequence seeded by \(n\).<sup id="fnref:wonder"><a href="#fn:wonder" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
 
@@ -2253,171 +2508,4 @@ Please think before proceeding. Try to come up with your own modification.</p>
       <p>You don’t need to write it actually; you can simply import it by <code class="language-plaintext highlighter-rouge">from operator import add</code>. <a href="#fnref:add" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name></name></author><category term="course" /><category term="programming" /><category term="funprog" /><summary type="html"><![CDATA[An introduction to higher-order functions in programming.]]></summary></entry><entry><title type="html">Iteration by `while`</title><link href="https://umutozge.github.io/posts/course/iteration-by-while/" rel="alternate" type="text/html" title="Iteration by `while`" /><published>2025-11-13T00:00:00+03:00</published><updated>2025-11-13T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/iteration-by-while</id><content type="html" xml:base="https://umutozge.github.io/posts/course/iteration-by-while/"><![CDATA[<p>Let’s start with a simple function defined over integers called the Collatz function \(C\).</p>
-
-\[C(n) =
-\begin{cases}
-\frac{n}{2} &amp; \text{if } n \text{ is even}\\
-3n + 1 &amp; \text{if } n \text{ is odd}
-\end{cases}\]
-
-<p><strong>Collatz’ conjecture</strong> states that for any positive integer \(n\), repeated application of \(C\) will eventually reach 1.
-The <strong>Collatz sequence</strong> of a given positive integer \(n\) is the sequence of numbers obtained by repeatedly applying \(C\) starting from \(n\) until reaching 1. We will call \(n\) the <strong>seed</strong> of the sequence, and also use phrases like “a (Collatz) sequence seeded by \(n\)”, and so on. When we talk about the Collatz sequence of a number, we will include the starting number and the ending 1 in the sequence, this is good because by looking at the sequence, you immediately see how it started and that it is completed. Finally, we will use the phrase
-“Collatz sequence seeded by \(n\)” to refer to the Collatz sequence generated to reduce \(n\) to 1.</p>
-
-<p class="notice--warning"><strong>Check:</strong> Write the Collatz sequence seeded by 11.</p>
-
-<p>One can be interested in many questions about Collatz sequence. For one:</p>
-
-<p class="notice--info"><strong>Question:</strong> Given an upper bound \(k \geq 1\), find the seed \(n \leq k\) that produces the longest Collatz sequence.</p>
-
-<p>The first question to ask about a programming problem is what are the inputs and outputs of the function we want to write. Here, the input is a positive integer \(k\), and the output is another positive integer \(n \leq k\) that produces the longest Collatz sequence among all integers from 1 to \(k\).</p>
-
-<p>Once this global input-output relation is clear, the next step is to think about how to break this relation into smaller parts, or simpler problems that we can solve one by one to reach the final solution. At this point, a strategy that works quite well in most cases is to ask “What do I have to be able to do in order to solve this problem?”</p>
-
-<p>Let’s list:</p>
-<ol>
-  <li>Given a seed \(n\), we need to be able to compute the Collatz sequence seeded by \(n\).</li>
-  <li>We need to be able to compute the length of a given sequence.</li>
-  <li>We need to be able to compare lengths of multiple sequences and come up with the longest sequence.</li>
-  <li>Finding the longest sequence is not enough, we also need to remember the seed that produced that sequence.</li>
-</ol>
-
-<p>We can start with the first one. What is the input-output relation for this subproblem? Input is a positive  integer \(n\), and output is the Collatz sequence seeded by \(n\), which is a list (or sequence) of integers. We have a problem here since we do not know yet constructing lists in Python. But we can at least print the numbers in the Collatz sequence one by one. Here is how we can do that using a <code class="language-plaintext highlighter-rouge">while</code> loop:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_collatz_sequence</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sh">"""</span><span class="s">Print the Collatz sequence seeded by n.</span><span class="sh">"""</span>
-    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nf">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>   <span class="c1"># checks whether n is even
-</span>            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="nf">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Print the last element of the sequence
-</span></code></pre></div></div>
-
-<p>There is a very important principle in good programming that we need to follow as tightly as we can:</p>
-
-<p class="notice--success"><strong>Principle:</strong> Each function should do one thing.</p>
-
-<p>Think for a moment whether <code class="language-plaintext highlighter-rouge">print_collatz_sequence</code> follows this principle. It might appear to be so. But actually, it does two things. It computes the Collatz function for numbers within a loop, and it prints the numbers. That there are two separable tasks might not be obvious to you for the moment, but here is a simple test: What if we wanted to add the numbers in a Collatz sequence rather than print them on screen? That code would be very similar to the one we wrote. There would be the exact same or very similar lines for computing the next number in the sequence. The following bit:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>   <span class="c1"># checks whether n is even
-</span>    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-</code></pre></div></div>
-
-<p>The only difference would be that instead of printing the number, we would add it to a running total. This shows that our function is doing two things: computing the next number in the sequence, and printing it. Here is a useful principle:</p>
-
-<p class="notice--success"><strong>Principle:</strong> Examining the function you wrote, if you discover blocks of code (like the <code class="language-plaintext highlighter-rouge">if</code> statement above) that might be useful for other tasks as well, separate that block into another function and use that function instead of the block.</p>
-
-<p>In our example, this principle dictates us to write a separate function to apply the Collatz function:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sh">"""</span><span class="s">The Collatz function
-</span><span class="gp">
-    &gt;&gt;&gt;</span> <span class="nf">collatz</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-    <span class="mi">0</span>
-    <span class="o">&gt;&gt;&gt;</span> <span class="nf">collatz</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-    <span class="mi">10</span>
-    <span class="o">&gt;&gt;&gt;</span> <span class="nf">collatz</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
-    <span class="mi">4</span>
-    <span class="o">&gt;&gt;&gt;</span> <span class="nf">collatz</span><span class="p">(</span><span class="o">-</span><span class="mi">8</span><span class="p">)</span>
-    <span class="o">-</span><span class="mi">4</span>
-    <span class="sh">"""</span>
-    <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span>     <span class="c1"># // instead of / for an integer result
-</span>    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span>
-</code></pre></div></div>
-
-<p>and handle the printing of the sequence with:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_collatz_sequence</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sh">"""</span><span class="s">Print the Collatz sequence seeded by n.
-</span><span class="gp">
-    &gt;&gt;&gt;</span> <span class="nf">print_collatz_sequence</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
-    <span class="mi">8</span>
-    <span class="mi">4</span>
-    <span class="mi">2</span>
-    <span class="mi">1</span>
-    <span class="sh">"""</span>
-    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nf">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="nf">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Print the last element of the sequence
-</span></code></pre></div></div>
-
-<p>What we actually want is the length of the sequence, not its display on the screen. To get the length we will have to violate our principle of doing one thing at a time in a function. But this is only a temporary thing, once we learn how to form the sequences themselves, rather than their prints on the screen, we will get back to our principle. For now, counting has to be done like this:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">collatz_length</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sh">"""</span><span class="s">The length of the Collatz sequence seeded by n (n and 1 are included)
-</span><span class="gp">
-    &gt;&gt;&gt;</span> <span class="nf">collatz_length</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
-    <span class="mi">4</span>
-    <span class="o">&gt;&gt;&gt;</span> <span class="nf">collatz_length</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-    <span class="mi">8</span>
-    <span class="sh">"""</span>
-    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">counter</span>
-</code></pre></div></div>
-
-<p>We seem to have all the ingredients we need to solve our original problem. But let’s do not rush. Let’s try to abstract a little away from our problem. The problem can be thought as a composition of two components:
-    1. There is a <strong>message source</strong> that generates numbers in order. You can also think of it as a stream, or a channel.
-    1. There is a <strong>listener</strong> (or <strong>receiver</strong>) that listens to the channel and keeps the record of the largest number received so far.</p>
-
-<p>The generating source can vary from problem to problem, but the listener has a more general character. For example, the source could have been random integers between, say 1 and 1000000 (a million), and assume we were asked to find the largest such integer in \(k\) random integers. The code would look like:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">largest_random</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
-    <span class="sh">"""</span><span class="s">Return the largest of k ranndom integers between 1 and 1000000.</span><span class="sh">"""</span>
-    <span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">randint</span>
-    <span class="n">largest_so_far</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">:</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="nf">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="n">largest_so_far</span><span class="p">:</span>
-            <span class="n">largest_so_far</span> <span class="o">=</span> <span class="n">r</span>
-        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">largest_so_far</span>
-</code></pre></div></div>
-
-<p>The function <code class="language-plaintext highlighter-rouge">randint</code> is imported from the <code class="language-plaintext highlighter-rouge">random</code> module, and generates a random integer between the two arguments (inclusive).</p>
-
-<p>If our problem were to find the largest length rather than the seed that yields the largest length, we would have a very similar function:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">largest_collatz_length</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
-    <span class="sh">"""</span><span class="s">The largest Collatz length for the seeds between 1 and k.</span><span class="sh">"""</span>
-    <span class="n">largest_so_far</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">:</span>
-        <span class="n">current_length</span> <span class="o">=</span> <span class="nf">collatz_length</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">current_length</span> <span class="o">&gt;</span> <span class="n">largest_so_far</span><span class="p">:</span>
-            <span class="n">largest_so_far</span> <span class="o">=</span> <span class="n">current_length</span>
-        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">largest_so_far</span>
-</code></pre></div></div>
-
-<p>Ours is a little more complicated than this. We need to remember the seed that produced the largest length as well. Here is the final code:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">maximal_collatz_seed</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
-    <span class="sh">"""</span><span class="s">The largest seed between 1 and k that produces the largest Collatz length.</span><span class="sh">"""</span>
-    <span class="n">largest_length</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">seed_with_largest_length</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">:</span>
-        <span class="n">current_length</span> <span class="o">=</span> <span class="nf">collatz_length</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">current_length</span> <span class="o">&gt;</span> <span class="n">largest_length</span><span class="p">:</span>
-            <span class="n">largest_length</span> <span class="o">=</span> <span class="n">current_length</span>
-            <span class="n">seed_with_largest_length</span> <span class="o">=</span> <span class="n">counter</span>
-        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">seed_with_largest_length</span>
-
-</code></pre></div></div>
-
-<p>Once again we could not follow our principle of “one thing at a time” in the above function. The source component and listener component are fused together. In the earlier case we were helpless because we did not know how to construct sequences. If we knew we could have separated the construction and length components. The reason we are helpless in the current case is that we do not know about higher order functions – functions that take other functions as arguments. Once we learn about them, we will be able to separate the source and listener components.</p>
-
-<p>Finally, notice that I wrote “The largest seed between 1 and k that produces the largest Collatz length” in the docstring. Why is that? Why did I say “the <em>largest</em> seed”?</p>]]></content><author><name></name></author><category term="course" /><category term="iteration" /><summary type="html"><![CDATA[An introduction to iteration using while loops in Python, illustrated with the Collatz conjecture.]]></summary></entry></feed>
+</div>]]></content><author><name></name></author><category term="course" /><category term="programming" /><category term="funprog" /><summary type="html"><![CDATA[An introduction to higher-order functions in programming.]]></summary></entry></feed>

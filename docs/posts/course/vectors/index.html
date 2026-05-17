@@ -1,0 +1,805 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Vectors - Umut Özge</title>
+<meta name="description" content="A gentle intro to linear algebra through vectors">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Umut Özge">
+<meta property="og:title" content="Vectors">
+<meta property="og:url" content="https://umutozge.github.io/posts/course/vectors/">
+
+
+  <meta property="og:description" content="A gentle intro to linear algebra through vectors">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-05-17T00:00:00+03:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/posts/course/vectors/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+<script type="text/javascript">
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0},"pmatrix":{"def":"\\begin{pmatrix}#1\\end{pmatrix}","args":1}};
+  const extraMacros = {};
+
+  for (const [name, val] of Object.entries(extraMacroData || {})) {
+    extraMacros[name] = val.def ? [val.def, val.args] : val;
+  }
+
+  window.MathJax = {
+    loader: {load: ['[tex]/ams', '[tex]/boldsymbol']},
+    tex: {
+      packages: {'[+]': ['ams', 'boldsymbol']},
+      tags: 'all',
+      macros: {
+        vectg: ["\\boldsymbol{#1}", 1],
+        vect: ["\\mathbf{#1}", 1],
+        softmax: ["\\operatorname{softmax}\\bigl(#1\\bigr)", 1],
+        given: "{\\mathrel{\\mkern-1mu\\mid\\mkern-1mu}}",
+        card: ["\\mid\\mkern-3mu#1\\mkern-3mu\\mid", 1],
+        ...extraMacros
+      }
+    },
+    options: {
+      tagSide: "right",
+      tagIndent: "0.8em"
+    }
+  };
+</script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--numbered" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Umut Özge
+          <span class="site-subtitle">Graduate School of Informatics, METU</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Courses</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/prelim/schedule/">COGS 502</a></li>
+            
+              <li><a href="/cl/schedule/">COGS 543</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <a href="/exercise/browser/"><span class="nav__sub-title">Exercises</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
+          
+
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Vectors">
+    <meta itemprop="description" content="A gentle intro to linear algebra through vectors">
+    <meta itemprop="datePublished" content="2026-05-17T00:00:00+03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+              <h1 id="page-title" class="page__title" itemprop="headline">
+                <a href="https://umutozge.github.io/posts/course/vectors/" itemprop="url">Vectors
+</a>
+              </h1>
+            
+          
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2026-05-17T00:00:00+03:00">2026-05-17</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="numbered">
+  <p>When we model the world through mathematics, we frequently find ourselves talking
+about magnitudes. Mass, length, price, and so on, are all examples of quantities
+that we use numbers to represent. We build our mathematical models in such a
+way that these numbers and operations involving them has some, largely
+idealized, correspondence to the entities, relations and processes out there
+that we aim to understand and predict. Numbers that are used in this way are called
+<span class="term" id="scalars">scalars</span>.</p>
+
+<p>Sometimes we need to couple the concept of magnitude with a direction. The prime
+example is the concept of force that we use in physics. A force has both a
+magnitude and a particular direction in space. The mathematical object that
+brings together magnitude and direction is called a <span class="term" id="vector">vector</span>.</p>
+
+<p>As a simple example, take a vector with a magnitude of 5 units and a direction
+of \(32^\circ\) measured counterclockwise from the positive \(x\)-axis. We can
+represent this vector in several ways. Initially, assume we don’t care about
+where the vector starts (its <span class="term" id="tail">tail</span>). We just want to encode its length
+and direction. We represent it as a two component vector, where the first
+component is the horizontal (\(x\)) magnitude, and the second eomponent is the
+vertical (\(y\)) magnitude. The components can be calculated using trigonometry
+via the cosine and sine of the direction angle:<sup id="fnref:trig"><a href="#fn:trig" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>:</p>
+
+\[\begin{align}
+\vect{v} &amp;= \begin{pmatrix} 5\cos 32^\circ &amp; 5\sin 32^\circ \end{pmatrix}\nonumber\\
+         &amp;= \begin{pmatrix}4.2402406 &amp; 2.6495962\end{pmatrix}
+\end{align}\]
+
+<p>In other words, if you do not care about the tail point, a vector in a plane
+(2D) is represented by two real numbers.</p>
+
+<p>You can abstract the directon from a vector by a <span class="term" id="unit-vector">unit vector</span>, whose
+magnitude is 1. Such a unit vector for our example would be:</p>
+
+\[\vect{u} = \begin{pmatrix} \cos 32^\circ &amp; \sin 32^\circ \end{pmatrix}\]
+
+<p>or, with the angle in radians (\(d=180^\circ \pi\)):</p>
+
+\[\vect{u} = \begin{pmatrix} \cos \frac{32\pi}{180} &amp; \sin \frac{32\pi}{180}
+\end{pmatrix}\]
+
+<p>or, with the values of the trig functions plugged in:</p>
+
+\[\vect{u} = \begin{pmatrix} 0.8480481 &amp; 0.52991927 \end{pmatrix}\]
+
+<h3 id="element-wise-operations">Element-wise operations</h3>
+
+<p>Given a unit vector, you can factor the magnitude back in by multiplying the
+unit vector by the scalar magnitude. This is an example of an element-wise
+operation, where you apply the same operation to each component of the vector.
+In this case, you multiply each component of the unit vector by the magnitude:</p>
+
+\[\vect{r} = 5\vect{u} = \begin{pmatrix} 4.2402406 &amp; 2.6495962\end{pmatrix}\]
+
+<p>An operation between vectors can also be element-wise. For example, if you have
+two vectors \(\vect{v}\) and \(\vect{w}\), you can add them together by adding their
+components:</p>
+
+\[\begin{align}
+\vect{v} + \vect{w} &amp;= \begin{pmatrix} v_1 &amp; v_2 \end{pmatrix} + \begin{pmatrix}
+w_1 &amp; w_2 \end{pmatrix}\nonumber\\
+&amp;= \begin{pmatrix} v_1 + w_1 &amp; v_2 + w_2 \end{pmatrix}
+\end{align}\]
+
+<p>Geometrically, adding two vectors means constructing a third spanning from the
+tail of the first to the head of the second, where you place the tail of the
+second at the head of the first. This arrangement gives a triangle when the
+vectors are not parallel (= in the same or opposite direction).</p>
+
+<h3 id="norm-of-a-vector">Norm of a vector</h3>
+
+<p>We’ve been talking about the magnitude of a vector. The interpretation of
+magnitude may change from context to context. In geometry, the magnitude of a
+vector is its length; in physics, the magnitude of a force vector is the
+strength of the force, and so on. The general mathematical term for the
+magnitude of a vector is its <span class="term" id="norm">norm</span>. The norm of a vector is a
+non-negative real number that represents the size or length of the vector.</p>
+
+<p>The simplest and most common type of norm is <span class="term" id="euclidian-norm">Euclidian norm</span> based on Pythogoras’ theorem. For a vector 
+\(\vect{v} = \begin{pmatrix} 3 &amp; 4 \end{pmatrix}\), the Euclidean norm is</p>
+
+\[\|\vect{v}\|_2 = \sqrt{3^2 + 4^2} = 5\]
+
+<p>This is the ordinary geometric length of the arrow from \((0,0)\) to \((3,4)\).</p>
+
+<p>A useful related idea is distance between two vectors. This is usually defined by the norm of their difference:</p>
+
+\[\text{distance}(x,y) = \|x-y\|\]
+
+<p>That formula says that two vectors are close when their difference has small norm, where difference is the element-wise subtraction.</p>
+
+<h5 id="properties-of-the-norm-function">Properties of the norm function</h5>
+
+<p>The concept of norm is not limited to just measuring the length of a vector. Any
+function with the following properties can be considered a norm:</p>
+
+<ul>
+  <li>Non-negativity: \(\|x\| \ge 0\).</li>
+  <li>Zero only at the zero vector: \(\|x\| = 0\) exactly when \(x=0\).</li>
+  <li>Homogeneity: \(\|a x\| = \lvert a\rvert \,\|x\|\) for any scalar \(a\).</li>
+  <li>Triangle inequality: \(\|x+y\| \le \|x\| + \|y\|\).</li>
+</ul>
+
+<p>Here are some examples of different norms (subscript indicates the type of
+norm):</p>
+
+<ul>
+  <li><strong>Euclidean norm</strong>: \(\|x\|_2 = \sqrt{x_1^2 + \cdots + x_n^2}\), the usual geometric length.</li>
+  <li><strong>1-norm</strong>: \(\|x\|_1 = \lvert x_1\rvert + \cdots + \lvert x_n\rvert\), the sum of absolute values.</li>
+  <li><strong>Infinity norm</strong>: \(\|x\|_\infty = \max_i \lvert x_i\rvert\), the largest absolute coordinate.</li>
+</ul>
+
+<p>You might find it a bit confusing that we defined the norms for vectors in \(n\)
+dimensions. Just go on reading.</p>
+
+<h3 id="dimensions">Dimensions</h3>
+
+<p>Except the definitions of different types of norms above,  we’ve been dealing
+with vectors in a 2-dimensional plane. But the dimensionality of a vector can be
+any positive integer. A vector in 3D will naturally be conceived as an arrow in
+a 3D space. But what about vectors in 8D?</p>
+
+<p>We, as humans, can visualize and intuitively understand geometry in 2D and 3D,
+but higher dimensions need a proper mathematical thinking. In mathematics, we
+operate on definitions and properties that follow from these definitions obeying
+the laws of logic. In mathematical education, we often start with intuitively
+familiar concepts and give them certain names. A good example is the circle and
+sphere. It is easy to grasp a circle in 2D and a sphere in 3D, as we think of
+them as some idealized forms of some objects we see around. But actually, what
+we call circle in 2D and sphere in 3D are just sets. How?</p>
+
+<p>Start with the notion of a point. A point, in common-sense, is either a pair
+(2D)  or a triple (3D) of numbers. In mathematics, a point is any \(n\)-tuple of
+numbers. The concepts circle and sphere are just the names we give to the notion
+of “the set of points that are at a fixed distance from a given point”, in 2D
+and 3D, respectively.</p>
+
+<p>Likewise for vectors. A vector is a mathematical object in \(\mathbb{R}^n\),
+where \(n\) is any positive integer. When you need its Euclidean length, you
+simple compute the sum of squares of its components and take the square root, no
+matter how many components it has.</p>
+
+<p>For a right triangle with legs $a$ and $b$ and hypotenuse $c$, Pythagoras says</p>
+
+\[a^{2} + b^{2} = c^{2}.\]
+
+<p>If you view the hypotenuse as a vector from the origin to the point \((a,b)\), then that vector’s length is</p>
+
+\[\|\begin{pmatrix} a &amp; b \end{pmatrix}\| = \sqrt{a^{2} + b^{2}},\]
+
+<p>which is exactly “take the hypotenuse using Pythagoras.”</p>
+
+<p>In \(\mathbb{R}^{n}\), the Euclidean norm of a vector \(x = \begin{pmatrix}x_{1} &amp; \dots &amp; x_{n}\end{pmatrix}\) is</p>
+
+\[\|x\| = \sqrt{x_{1}^{2} + \dots + x_{n}^{2}}\]
+
+<p>which is just repeatedly applying Pythagoras along mutually perpendicular axes.  Each coordinate plays the role of a leg in a higher‑dimensional right triangle whose “hypotenuse” is the vector.</p>
+
+<h3 id="dot-product">Dot product</h3>
+
+<p>A key operation that maps two vectors to a scalar is the <span class="term" id="dot-product">dot product</span>
+which is an instance of a family of operations called inner product.</p>
+
+<div class="item" id="df-dot-product" data-kind="definition" data-label="Definition" data-title="Dot product" data-ref="Definition">
+
+    
+      <p>The <span class="term" id="dot-product">dot product</span> of two vectors $u$ and $v$ in $\mathbb{R}^n$ is defined
+as:</p>
+
+\[u \cdot v = u_{1}v_{1} + \dots + u_{n}v_{n}.\]
+
+<p>Another common notation for the dot product is \(\langle u, v \rangle\).</p>
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>It’s close relation to Pythogoras’ theorem makes dot product a fundamental tool
+in linear algebra.</p>
+
+<p>Given \(\vect{v} = \pmatrix{x &amp; y}\):</p>
+
+\[\|\vect{v}\|^2 = \vect{v} \cdot \vect{v} = x^2 + y^2.\]
+
+<p>Now take two vectors \(\vect{u} = \pmatrix{u_1&amp; u_2}\) and \(\vect{v}=\pmatrix{v_1&amp;v_2}\). Now, imagine you form a triangle by putting the tail of \(\vect{v}\) at the head of \(\vect{u}\). The vector from the tail of \(\vect{u}\) to the head of \(\vect{v}\) is \(\vect{u} + \vect{v}\). We know from above that:</p>
+
+\[\begin{align}\label{vec-pytho}
+\|\vect{u} + \vect{v}\|^2 &amp; = (\vect{u} + \vect{v}) \cdot (\vect{u} + \vect{v})\\
+&amp; = \pmatrix{u_1 + v_1 &amp; u_2 + v_2} \cdot \pmatrix{u_1 + v_1 &amp; u_2 + v_2}\nonumber\\
+&amp; = (u_1 + v_1)^2 + (u_2 + v_2)^2\nonumber\\
+&amp; = u_1^2 + 2u_1v_1 + v_1^2 + u_2^2 + 2u_2v_2 + v_2^2\nonumber\\
+&amp; = (u_1^2 + u_2^2) + (v_1^2 + v_2^2) + 2(u_1v_1 + u_2v_2)\nonumber\\
+&amp; = \|\vect{u}\|^2 + \|\vect{v}\|^2 + 2\,(\vect{u} \cdot \vect{v})\nonumber
+\end{align}\]
+
+<p>To relate this equality to the angle between the vectors \(\vect{u}\) and
+\(\vect{v}\), we turn to a theorem from elementary geometry:</p>
+
+<div class="item" id="th-law-of-cosines" data-kind="theorem" data-label="Theorem" data-title="The law of cosines" data-ref="Theorem">
+
+    
+      <p>Given a triangle with sides of lengths \(a\), \(b\), and \(c\), and an angle \(\theta\)
+opposite the side of length \(c\), the law of cosines states that:</p>
+
+\[c^2 = a^2 + b^2 - 2ab \cos(\theta) \nonumber\]
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>By \eqref{vec-pytho} and <a class="xref" href="#th-law-of-cosines" data-refmode="full"></a>, we get:</p>
+
+\[\begin{align}
+\|\vect{u} + \vect{v}\|^2 &amp; = \|\vect{u}\|^2 + \|\vect{v}\|^2 +
+2\,\|\vect{u}\|\|\vect{v}\|\cos\theta\\
+&amp; = \|\vect{u}\|^2 + \|\vect{v}\|^2 + 2\,(\vect{u} \cdot \vect{v})\nonumber
+\end{align}\]
+
+<p>yielding the equality:</p>
+
+\[\cos\theta = \frac{\vect{u} \cdot \vect{v}}{\|\vect{u}\|\|\vect{v}\|}\]
+
+<p>which is of prime importance in linear algebra and its applications in
+artificial intelligence and machine learning.</p>
+
+<p>Its importance lies in the fact that it gives a measure of the directional similarity of two
+vectors that is independent of their magnitudes, as the cosine function
+approaches 1 from both directions as the angle approaches 0. This is the basis
+of the widely used cosine similarity measure in machine learning and information
+retrieval. In 2 and 3 dimensions, the concept of angle is intuitive, but in
+higher dimensions there is neither an intuitive approximation nor a need for
+one.</p>
+
+<p>This was a very brief introduction to linear algebra through vectors.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:trig">
+      <p>Let \(\theta\) be one of the acute angles of a right triangle:
+\(\cos\theta\) gives the ratio of the adjacent leg to the hypotenuse, and
+\(\sin\theta\) gives the ratio of the opposite leg to the hypotenuse. <a href="#fnref:trig" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Build a map of id → { label, number }
+  const itemMap = {};
+  document.querySelectorAll('.numbered').forEach(container => {
+    let count = 0;
+    container.querySelectorAll('.item').forEach(item => {
+      if (!item.id) return;
+      count++;
+      itemMap[item.id] = {
+        label: item.dataset.label ?? 'Item',
+        number: count
+      };
+    });
+  });
+
+  // Fill in all cross-reference links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    if (itemMap[id]) {
+      const { label, number } = itemMap[id];
+      // Only replace if the author left it empty, or always replace
+      if (!link.textContent.trim()) {
+        link.textContent = `${label} ${number}`;
+      }
+    }
+  });
+});
+</script>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#continuous"
+         class="page__taxonomy-item p-category" rel="tag">
+        continuous <span class="taxonomy__count">1</span>
+      </a>
+    
+      
+      
+      <a href="/tags/#linear-algebra"
+         class="page__taxonomy-item p-category" rel="tag">
+        linear algebra <span class="taxonomy__count">2</span>
+      </a>
+    
+    </span>
+  </p>
+
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#course" class="page__taxonomy-item p-category" rel="tag">course</a>
+    
+    </span>
+  </p>
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-05-17T00:00:00+03:00">2026-05-17</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/posts/course/model-theoretic-interpretation/" class="pagination--pager" title="Model-theoretic interpretation">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item"
+     
+     
+    >
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/course/model-theoretic-interpretation/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>Model-theoretic interpretation
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">A very brief introduction
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item"
+     
+     
+    >
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/course/language-primer/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>Language primer
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">Initial steps for cognitive science students interested in language.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item"
+     
+     
+    >
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/course/walrus-operator/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>Assignment in lambda expressions
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">We closed the post More state power with a function that collects n random numbers between start and end into a list. Here is the function again:
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item"
+     
+     
+    >
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/posts/course/more-state-power/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>More state power
+</a>
+      
+    </h2>
+
+    <p class="archive__item-excerpt" itemprop="description">State unfied into a single parameter, dictionaries introduced.
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://umutozge.github.io">Umut Özge</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+    <script>
+  document.documentElement.dataset.refsUrl = "/refs.json";
+</script>
+<script src="/assets/js/refs.js"></script>
+  </body>
+</html>

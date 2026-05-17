@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Solution: Lambda reduction - Umut Özge</title>
+<!-- begin _includes/seo.html --><title>Solution: Reduction - Umut Özge</title>
 <meta name="description" content="Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.">
 
 
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Umut Özge">
-<meta property="og:title" content="Solution: Lambda reduction">
+<meta property="og:title" content="Solution: Reduction">
 <meta property="og:url" content="https://umutozge.github.io/solutions/ex-lambda-reduction/">
 
 
@@ -66,7 +66,7 @@
 
 
 <script type="text/javascript">
-  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0}};
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0},"pmatrix":{"def":"\\begin{pmatrix}#1\\end{pmatrix}","args":1}};
   const extraMacros = {};
 
   for (const [name, val] of Object.entries(extraMacroData || {})) {
@@ -178,7 +178,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Solution: Lambda reduction">
+    <meta itemprop="headline" content="Solution: Reduction">
     
     
     
@@ -188,7 +188,7 @@
         <header>
           
               <h1 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://umutozge.github.io/solutions/ex-lambda-reduction/" itemprop="url">Solution: Lambda reduction
+                <a href="https://umutozge.github.io/solutions/ex-lambda-reduction/" itemprop="url">Solution: Reduction
 </a>
               </h1>
             
@@ -203,7 +203,152 @@
         
         <main class="solution">
   <div class="numbered">
-    <p>Solution not written yet.</p>
+    <ol>
+  <li>
+    <p><span style="display:none"></span> \((\lambda x. (m\,\, x))\,\,j\)</p>
+
+\[\begin{align*}
+ \equiv_\beta &amp;\,\, m\,\, j
+ \end{align*}\]
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda y. (y\,\, j))\,\,m\)</p>
+
+\[\begin{align*}
+ \equiv_\beta &amp;\,\, m\,\, j
+ \end{align*}\]
+  </li>
+  <li>
+    <p><span style="display:none"></span> \(((\lambda x.(\lambda y. (y\,\,(y\,\, x))))\,\, j)\,\,m\)</p>
+
+\[\begin{align*}
+ \equiv_\beta &amp;\,\, (\lambda y. (y\,\,(y\,\, j)))\,\, m \\
+ \equiv_\beta &amp;\,\, m\,\,(m\,\, j)
+ \end{align*}\]
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda y.(y\cnct{}j))(\lambda x.(m\cnct{}x))\)</p>
+
+\[\begin{align*}
+ \equiv_\beta &amp;\,\, (\lambda x.(m\cnct{}x))\cnct{}j \\
+ \equiv_\beta &amp;\,\, m\cnct{}j
+ \end{align*}\]
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda z.z) (\lambda y . y\,\, y) (\lambda x.x\,\, a)\)</p>
+
+\[\begin{align*}
+ \equiv_\beta &amp;\,\, (\lambda y . y\,\, y) (\lambda x.x\,\, a) \\
+ \equiv_\beta &amp;\,\, (\lambda x.x\,\, a) (\lambda x.x\,\, a) \\
+ \equiv_\beta &amp;\,\, (\lambda x.x\,\, a) a \\
+ \equiv_\beta &amp;\,\, a\,\, a
+ \end{align*}\]
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda x\lambda y.x\,\,  y\,\,  y) (\lambda a.a) b\)</p>
+
+\[\begin{align*}
+ \equiv_\beta &amp;\,\, (\lambda y.(\lambda a.a)\,\,  y\,\,  y) b \\
+ \equiv_\beta &amp;\,\, (\lambda a.a)\,\,  b\,\,  b\\
+ \equiv_\beta &amp;\,\, b\,\,  b\\
+ \end{align*}\]
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda x.x\,\, x) (\lambda y.y\,\, x) z\)</p>
+
+\[\begin{align*}
+ \equiv_\beta &amp;\,\, (\lambda y.y\,\, x) (\lambda y.y\,\, x) z \\
+ \equiv_\beta &amp;\,\, (\lambda y.y\,\, x) x z \\
+ \equiv_\beta &amp;\,\,  x\,\, x\,\, z
+ \end{align*}\]
+  </li>
+  <li>
+    <p><span style="display:none"></span> \(((\lambda x.x\,\, x) (\lambda y.y)) (\lambda y.y)\)</p>
+
+\[\begin{align*}
+ \equiv_\beta &amp;\,\, (\lambda y.y) (\lambda y.y) (\lambda y.y)\\
+ \equiv_\beta &amp;\,\, (\lambda y.y) (\lambda y.y)\\
+ \equiv_\beta &amp;\,\,  (\lambda y.y) \\
+ \end{align*}\]
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda f.fx)g\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta gx\)</p>
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda f.fx)ga\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta gxa\)</p>
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda f.fx)(ga)\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta gax\)</p>
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda f\lambda x.fx)g a\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta ga\)</p>
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda x\lambda y \lambda z.x(yz))f\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta \lambda y \lambda z.f(yz)\)</p>
+  </li>
+</ol>
+
+<p>With logical forms:</p>
+<ol>
+  <li>
+    <p><span style="display:none"></span> \((\lambda p.p\cnct{}john')(\lambda x.sleeps'x)\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta sleeps'john'\)</p>
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda p\lambda q.\forall x. p'x \to q'x)(\lambda x. student'x)(\lambda x. sleeps'x)\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta \forall x. student'x \to sleeps'x\)</p>
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda p\lambda x.think'p\cnct{x})((\lambda p.p\cnct{}john')(\lambda x.sleeps'x))alice'\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta think'(sleeps'john')\cnct{alice'}\)</p>
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\lambda p\lambda q.\exists x. p\cnct{x}\land q\cnct{x})(\lambda x. student' x)((\lambda p\lambda x.think'p\cnct{x})((\lambda p.p\cnct{}john')(\lambda x.sleeps'x)))\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta \exists x. student'x\land think'(sleeps'john')x\)</p>
+  </li>
+</ol>
+
+<p>From <a href="/p/lambdacalculator/" target="_blank" rel="noopener">LC public exercises</a>:</p>
+
+<ol>
+  <li>
+    <p><span style="display:none"></span> \((\x.a') b'\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta a'\)</p>
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\x.p'x \to \E x.r'b'\, x) a'\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta p'a' \to \E x.r'b'\, x\)</p>
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\x\x.p'x \to q'x\,c') a'\, b'\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta p'b' \to q'b'c'\)</p>
+  </li>
+  <li>
+    <p><span style="display:none"></span> \((\x\E y.r'x\,y)y\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\alpha(\x\E z.r'x\,z)y\)</p>
+
+    <p><span style="display:none"></span> \(\equiv_\beta\E z.r'y\,z\)</p>
+  </li>
+</ol>
+
 <hr />
 
 <div class="solution-actions">

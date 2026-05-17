@@ -113,15 +113,27 @@ var store = [{
         "url": "/exams/2026-04-30-502-quiz/",
         "teaser": null
       },{
+        "title": "502 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-05-07-502-quiz/",
+        "teaser": null
+      },{
         "title": "Basic probability",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": ["probability"],
         "url": "/exercises/basic-probability/",
         "teaser": null
       },{
-        "title": "Combinatorics",
-        "excerpt":"Playing cards: A standard deck has 52 cards, divided into 4 suits (hearts ♥️, diamonds ♦️, clubs ♣️, spades ♠️), each with 13 ranks (A(ce), 2, …, 10, J(ack), Q(ueen), K(ing)). The cards J, Q, and K are called face cards. Suits are broken into two colors: red (♥️, ♦️)...","categories": [],
+        "title": "CCG",
+        "excerpt":" ","categories": [],
         "tags": ["probability"],
+        "url": "/exercises/ccg/",
+        "teaser": null
+      },{
+        "title": "Combinatorics",
+        "excerpt":"How many positive integers are there less than 1000000 (a million), such that: its digits are all distinct; (25% of the total score) it is even; (25% of the total score) have exactly 3 identical digits. (50% of the total score) Handle each condition independently. 🗝️ How many ways are...","categories": [],
+        "tags": ["counting"],
         "url": "/exercises/combinatorics/",
         "teaser": null
       },{
@@ -141,6 +153,12 @@ var store = [{
         "excerpt":"The factorial function is defined over the non-negative integers as:1 \\[n! = \\begin{cases} 1, &amp; \\text{if } n = 0;\\\\ n \\times (n - 1)!, &amp; \\text{if } n &gt; 0. \\end{cases}\\] Define a function that computes the factorial of a given non-negative integer \\(n\\) using iteration by while. def...","categories": [],
         "tags": ["python","iteration","programming"],
         "url": "/exercises/iteration/",
+        "teaser": null
+      },{
+        "title": "Lambda calculus",
+        "excerpt":"Remember that application associates to left, \\(a\\, b\\, c\\) means \\(((a b) c)\\); and stacked lambdas associate to right, \\((\\lambda x\\lambda y. x\\,y\\,y)\\) means \\((\\lambda x.(\\lambda y. x\\,y\\,y))\\). Restore the parentheses and dots in the following: \\(\\lambda f \\lambda g \\lambda h \\lambda x.(f(g(h x)))\\) \\(xxxx\\) \\(\\lambda x.x\\lambda y.y\\) \\(\\lambda...","categories": [],
+        "tags": ["language","semantics"],
+        "url": "/exercises/lambda-calculus/",
         "teaser": null
       },{
         "title": "Linear Algebra",
@@ -227,6 +245,18 @@ var store = [{
         "url": "/items/df-sem-types/",
         "teaser": null
       },{
+        "title": "Standard deck of 52",
+        "excerpt":"A standard deck has 52 cards, divided into 4 suits (hearts ♥️, diamonds ♦️, clubs ♣️, spades ♠️), each with 13 ranks (A(ce), 2, …, 10, J(ack), Q(ueen), K(ing)). The cards J, Q, and K are called face cards. Suits are broken into two colors: red and black. Each color...","categories": [],
+        "tags": [],
+        "url": "/items/df-standard-deck/",
+        "teaser": null
+      },{
+        "title": "Dot product",
+        "excerpt":"The dot product of two vectors $u$ and $v$ in $\\mathbb{R}^n$ is defined as:   \\[u \\cdot v = u_{1}v_{1} + \\dots + u_{n}v_{n}.\\]  Another common notation for the dot product is \\(\\langle u, v \\rangle\\).   ","categories": [],
+        "tags": [],
+        "url": "/items/df-dot-product/",
+        "teaser": null
+      },{
         "title": "Addition",
         "excerpt":"   \\(\\forall x. x+0=x\\).   \\(\\forall x,y. x+s(y) = s(x + y)\\).  ","categories": [],
         "tags": [],
@@ -257,6 +287,24 @@ var store = [{
         "url": "/items/eg-simple-model/",
         "teaser": null
       },{
+        "title": "Counting integers",
+        "excerpt":"How many positive integers are there less than 1000000 (a million), such that:      its digits are all distinct; (25% of the total score)   it is even; (25% of the total score)   have exactly 3 identical digits. (50% of the total score)   Handle each condition independently.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-counting-integers/",
+        "teaser": null
+      },{
+        "title": "Men and women",
+        "excerpt":"How many ways are there for eight men and five women to stand in a line so that no two women stand next to each other?   Interpret “way” in two different ways:      Number of sequences of people.   Number of arrangements of people; e.g. ‘WMMW…’, ‘MWM…’, etc.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-men-women/",
+        "teaser": null
+      },{
+        "title": "Ninety students",
+        "excerpt":"Ninety students, including Joe and Jane, are to be split into three classes of equal size, and this is to be done at random. What is the probability that Joe and Jane end up in the same class?   ","categories": [],
+        "tags": [],
+        "url": "/items/ex-ninety-students/",
+        "teaser": null
+      },{
         "title": "Grammar for arithmetic",
         "excerpt":"Consider simple arithmetic expressions involving addition and multiplication, such as: 3 + 4 3 + 4 * 2 ( 3 + 4 ) * 2 Write a CFG over the terminals \\(\\lbrace +, *, (, ),2,3,4\\)} that generates such expressions. Your grammar should assign more than one phrase structure to...","categories": [],
         "tags": [],
@@ -269,14 +317,26 @@ var store = [{
         "url": "/items/ex-fol-basics/",
         "teaser": null
       },{
-        "title": "Lambda calculus basics",
+        "title": "Basics",
         "excerpt":"State the type of the whole expression; there are partial type decorations: \\[\\begin{gather*} \\lambda x.\\con{student}_{et}x\\\\ \\lambda x.\\con{read}_{e(et)}x\\,\\con{anna}_{e}\\\\ \\lambda p\\exists x. p_{et}\\, x\\\\ \\lambda y\\lambda x.\\con{admire}_{e(et)}y\\, x\\\\ \\lambda f\\lambda g\\lambda x.f_{e(tt)}\\,x(gx) \\end{gather*}\\] Identify bound and free variables in: \\[\\begin{gather*} \\lambda x.\\con{student}x\\\\ \\lambda x.\\con{admire}y\\cnct x\\\\ \\lambda p\\lambda x.p\\cnct x\\land \\con{student}x q\\cnct x\\\\...","categories": [],
         "tags": [],
         "url": "/items/ex-lambda-basics/",
         "teaser": null
       },{
-        "title": "Lambda reduction",
-        "excerpt":"Reduce the following lambda expressions as much as possible:   \\[\\begin{gather*} (\\x.a') b' \\\\ (\\x.p'x \\to \\E x.r'b'\\, x) a'\\\\ (\\x\\x.p'x \\to q'x\\,c') a'\\, b'\\\\ (\\x\\E y.r'x\\,y)y \\end{gather*}\\] ","categories": [],
+        "title": "Notational conventions",
+        "excerpt":"Restore the parentheses and dots in the following: \\(\\lambda f \\lambda g \\lambda h \\lambda x.(f(g(h x)))\\) \\(xxxx\\) \\(\\lambda x.x\\lambda y.y\\) \\(\\lambda x.(x\\lambda y.yxx)x\\) Simplify the parentheses and dots in the following: \\((xy)\\) \\((x(yz))\\) \\(((xy)z)\\) \\((\\lambda x.x)\\) \\((\\lambda y.(\\lambda x.x))\\) \\((\\lambda z.(x(\\lambda y.(yz))))\\) \\((x(\\lambda z.(\\lambda y.(yz))))\\) \\((x(\\lambda x.x))\\) \\(((\\lambda y.(\\lambda...","categories": [],
+        "tags": [],
+        "url": "/items/ex-lambda-conventions/",
+        "teaser": null
+      },{
+        "title": "Infer a term",
+        "excerpt":"Give the lambda term that needs to replace \\(\\alpha\\) so that the reduction results as given. \\(\\alpha \\cnct a \\cnct b = b \\cnct a\\) \\(\\alpha \\cnct a \\cnct b \\cnct c = a \\cnct c \\cnct b\\) \\(\\alpha \\cnct a \\cnct b \\cnct c = a \\cnct (c \\cnct...","categories": [],
+        "tags": [],
+        "url": "/items/ex-lambda-inference/",
+        "teaser": null
+      },{
+        "title": "Reduction",
+        "excerpt":"Reduce each expression as far as possible. @@math_item content=\\((\\lambda x. (m\\,\\, x))\\,\\,j\\)@@ @@math_item content=\\((\\lambda y. (y\\,\\, j))\\,\\,m\\)@@ @@math_item content=\\(((\\lambda x.(\\lambda y. (y\\,\\,(y\\,\\, x))))\\,\\, j)\\,\\,m\\)@@ @@math_item content=\\((\\lambda y.(y\\cnct{}j))(\\lambda x.(m\\cnct{}x))\\)@@ @@math_item content=\\((\\lambda z.z) (\\lambda y . y\\,\\, y) (\\lambda x.x\\,\\, a)\\)@@ @@math_item content=\\((\\lambda x\\lambda y.x\\,\\, y\\,\\, y) (\\lambda a.a) b\\)@@ @@math_item content=\\((\\lambda...","categories": [],
         "tags": [],
         "url": "/items/ex-lambda-reduction/",
         "teaser": null
@@ -339,6 +399,12 @@ var store = [{
         "excerpt":"Define two function pred and sub for predecessor and subtraction, respectively. As we are modeling the natural numbers, the predecessor of zero is zero, and subtraction is truncated at zero. For example, sub(from_int(3), from_int(5)) should return from_int(0), not from_int(-2).  ","categories": [],
         "tags": [],
         "url": "/items/ex-peano-sub/",
+        "teaser": null
+      },{
+        "title": "Four spades out",
+        "excerpt":"Four people around a table are randomly dealt a standard deck of 52, each receiving 13 cards. You are paired with the person sitting opposite you. You know that you and your partner jointly hold 9 of the ♠️’s. Which is more likely: the remaining 4 ♠️’s are distributed evenly...","categories": [],
+        "tags": [],
+        "url": "/items/ex-four-spades-out/",
         "teaser": null
       },{
         "title": "Flip",
@@ -569,10 +635,22 @@ var store = [{
         "url": "/items/ax-peano-1/",
         "teaser": null
       },{
+        "title": "The law of cosines",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/items/ex-law-of-cosines/",
+        "teaser": null
+      },{
         "title": "Bayes' Theorem",
         "excerpt":"Given a sample space \\(\\Omega\\), with events \\(A_1,...,A_n \\subseteq \\Omega\\) forming a partition of \\(\\Omega\\), with \\(P(A_i) &gt; 0\\) for all \\(i\\leq n\\), and an event \\(B \\subseteq \\Omega\\), such that \\(P(B) &gt; 0\\): \\[\\begin{align*} P(A_i\\given B) &amp;= \\frac{P(A_i)P(B\\given A_i)}{P(B)} \\\\ &amp; = \\frac{P(A_i)P(B\\given A_i)}{P(A_1)P(B\\given A_1) + \\cdots + P(A_n)P(B\\given...","categories": [],
         "tags": [],
         "url": "/items/th-bayes/",
+        "teaser": null
+      },{
+        "title": "The law of cosines",
+        "excerpt":"Given a triangle with sides of lengths \\(a\\), \\(b\\), and \\(c\\), and an angle \\(\\theta\\) opposite the side of length \\(c\\), the law of cosines states that:   \\[c^2 = a^2 + b^2 - 2ab \\cos(\\theta) \\nonumber\\]  ","categories": [],
+        "tags": [],
+        "url": "/items/th-law-of-cosines/",
         "teaser": null
       },{
         "title": "Total Probability",
@@ -641,6 +719,12 @@ var store = [{
         "url": "/posts/course/model-theoretic-interpretation/",
         "teaser": null
       },{
+        "title": "Vectors",
+        "excerpt":"When we model the world through mathematics, we frequently find ourselves talking about magnitudes. Mass, length, price, and so on, are all examples of quantities that we use numbers to represent. We build our mathematical models in such a way that these numbers and operations involving them has some, largely...","categories": ["course"],
+        "tags": ["continuous","linear algebra"],
+        "url": "/posts/course/vectors/",
+        "teaser": null
+      },{
         "title": "Mts T1",
         "excerpt":"\\begin{tikzpicture}[scale=1.5] \t\\Tree [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ] \\end{tikzpicture} ","categories": [],
         "tags": [],
@@ -702,7 +786,7 @@ var store = [{
     "excerpt":"Language: Any Python Haskell Type: Any Module Snippet collatz python · module Various goodies related to Collatz conjecture. funcutils python · module A utility module for functional abstractions. Files python · snippet Working with files in Python. Plotting python · snippet Plotting in Python. A sequence processor python · module...","url": "https://umutozge.github.io/code/browser/"
   },{
     "title": "Exercise browser",
-    "excerpt":"discrete 2 funprog 1 grammar 1 iteration 1 language 3 linear algebra 1 lists 1 logic 1 number theory 2 parsing 1 probability 3 programming 1 proof 1 python 3 recursion 2 semantics 1 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. Combinatorics Various counting exercises....","url": "https://umutozge.github.io/exercise/browser/"
+    "excerpt":"counting 1 discrete 2 funprog 1 grammar 1 iteration 1 language 4 linear algebra 1 lists 1 logic 1 number theory 2 parsing 1 probability 3 programming 1 proof 1 python 3 recursion 2 semantics 2 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. CCG Exercises...","url": "https://umutozge.github.io/exercise/browser/"
   },{
     "title": "COGS 543",
     "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Some exercises on this course may require some helper code. Please visit coursepy on how to get and install the helper code. Make sure you are on...","url": "https://umutozge.github.io/cl/schedule/"
@@ -727,6 +811,12 @@ var store = [{
   },{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
+  },{
+    "title": "Vector review",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/vector_review/"
+  },{
+    "title": "Calculus Review",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/calculus_review/"
   },{
     "title": "A very short introduction to CCG",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/shortccg/"
@@ -821,17 +911,32 @@ var store = [{
     "title": "A logic for default reasoning",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/reiter-default/"
   },{
+    "title": "Solution: Counting integers",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-counting-integers/"
+  },{
+    "title": "Solution: Men and women",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-men-women/"
+  },{
+    "title": "Solution: Ninety students",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-ninety-students/"
+  },{
     "title": "Solution: Grammar for arithmetic",
     "excerpt":"```python from coursepy.lang.parsing import make_parser, make_cfg grammar_text=\"\"\" E -> E O E E -> LP E RP E -> '1'|'2'|'3'|'4' O -> '+'|'*' LP -> '(' RP -> ')' \"\"\" parser = make_parser(make_cfg(grammar_text)) for e in \"3 + 4,3 + 4 * 2,( 3 + 4 ) * 2\".split(\",\"): print(f\"Parse(s)...","url": "https://umutozge.github.io/solutions/ex-arithmetic-grammar/"
   },{
     "title": "Solution: FOL basics",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-fol-basics/"
   },{
-    "title": "Solution: Lambda calculus basics",
+    "title": "Solution: Basics",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-lambda-basics/"
   },{
-    "title": "Solution: Lambda reduction",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-lambda-reduction/"
+    "title": "Solution: Notational conventions",
+    "excerpt":"1. Restoration: 1. @@math_item|content=$$\\lambda f \\lambda g \\lambda h \\lambda x.(f(g(h x)))$$@@ $$\\equiv (\\lambda f.(\\lambda g.(\\lambda h.(\\lambda x.(f(g(h x)))))))$$ 1. @@math_item|content=$$xxxx$$@@ $$\\equiv (((xx)x)x)$$ 1. @@math_item|content=$$\\lambda x.x\\lambda y.y$$@@ $$\\equiv (\\lambda x.(x(\\lambda y.y)))$$ 1. @@math_item|content=$$\\lambda x.(x\\lambda y.yxx)x$$@@ $$\\equiv (\\lambda x.(x(\\lambda y.((yx)x)))x)$$ 1. Elimination: 1. @@math_item|content=$$(xy)$$@@ @@math_item|content=$$\\equiv xy$$@@ 1. @@math_item|content=$$(x(yz))$$@@ @@math_item|content=$$\\equiv x(yz)$$@@ 1....","url": "https://umutozge.github.io/solutions/ex-lambda-conventions/"
+  },{
+    "title": "Solution: Infer a term",
+    "excerpt":"1. @@math_item|content=$$\\alpha (\\lambda x. walks'x) john' \\equiv_{\\beta} slow'(walks'john')$$@@ @@math_item|content=$$\\lambda p\\lambda x.slow'(p\\cnct{x})$$@@ 1. @@math_item|content=$$\\alpha (\\lambda x. walks'x) john' \\equiv_{\\beta} slow'walks'john'$$@@ @@math_item|content=$$\\lambda p\\lambda x.slow'p\\cnct{}x$$@@ Note that, first one obtains: @@math_item|content=$$slow'(\\lambda x.walks'x)john'$$@@ then, after $$\\eta-$$reduction, you get: @@math_item|content=$$slow'walks'john'$$@@ 1. @@math_item|content=$$\\alpha\\cnct{mary'}john'(\\lambda x.walks'x) \\equiv_{\\beta} walks'john' \\land walks'mary'$$@@ @@math_item|content=$$\\lambda x\\lambda y\\lambda p. p\\cnct{y} \\land p\\cnct{x}$$@@ 1....","url": "https://umutozge.github.io/solutions/ex-lambda-inference/"
+  },{
+    "title": "Solution: Reduction",
+    "excerpt":"1. @@math_item|content=$$(\\lambda x. (m\\,\\, x))\\,\\,j$$@@ $$ \\begin{align*} \\equiv_\\beta &\\,\\, m\\,\\, j \\end{align*} $$ 1. @@math_item|content=$$(\\lambda y. (y\\,\\, j))\\,\\,m$$@@ $$ \\begin{align*} \\equiv_\\beta &\\,\\, m\\,\\, j \\end{align*} $$ 1. @@math_item|content=$$((\\lambda x.(\\lambda y. (y\\,\\,(y\\,\\, x))))\\,\\, j)\\,\\,m$$@@ $$ \\begin{align*} \\equiv_\\beta &\\,\\, (\\lambda y. (y\\,\\,(y\\,\\, j)))\\,\\, m \\\\ \\equiv_\\beta &\\,\\, m\\,\\,(m\\,\\, j) \\end{align*} $$ 1....","url": "https://umutozge.github.io/solutions/ex-lambda-reduction/"
   },{
     "title": "Solution: Logical relations",
     "excerpt":"All the answers are given under the assumption that no model can have an empty domain. $$ \\begin{gather} \\forall x.\\con{p}x\\rightarrow \\con{q}x&\\not\\models &\\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x\\rightarrow \\con{q}x&\\not\\models & \\exists x.\\con{q}x\\\\ \\exists x.\\con{p}x\\wedge \\con{q}x&\\models & \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x &\\models &\\exists x.\\con{p}x\\\\ \\neg\\exists x\\,\\con{r}x&\\models & \\forall x.\\neg\\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&\\not\\models & \\forall x.\\con{p}x\\rightarrow...","url": "https://umutozge.github.io/solutions/ex-logical-relations/"
@@ -862,6 +967,9 @@ var store = [{
   },{
     "title": "Solution: Peano subtraction",
     "excerpt":"  ```python from coursepy.math.peano import * ```    ```python def pred(a):     assert peanop(a)     if zerop(a):         return zero()     else:         return a[0] ```    ```python def peano_sub(a, b):     assert peanop(a) and peanop(b)     if zerop(b) or zerop(a):         return a     else:         return peano_sub(pred(a),pred(b)) ```           Back to exercise      Download .ipynb   Download .py   ","url": "https://umutozge.github.io/solutions/ex-peano-sub/"
+  },{
+    "title": "Solution: Four spades out",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-four-spades-out/"
   },{
     "title": "Solution: Flip",
     "excerpt":"All you can expect from Python is to generate for you a random number in $$[1,0)$$. In an unbiased `flip` all the shots of `random` below 0.5 would be `True` and above would be `False`, or vice versa. Now you can adjust the bias of the `flip` with the parameter...","url": "https://umutozge.github.io/solutions/ex-flip/"
@@ -949,6 +1057,12 @@ var store = [{
   },{
     "title": "Solution: Summation",
     "excerpt":"With `while`: ```python def mysum(seq): total = 0 while seq: total += seq[0] seq = seq[1:] return total ``` With `for`: ```python def mysum(seq): total = 0 for x in seq: total += x return total ``` With `proc`: ```python from funcutils import proc mysum = lambda seq: proc((0,seq), lambda...","url": "https://umutozge.github.io/solutions/ex-sum/"
+  },{
+    "title": "Solution: The law of cosines",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-law-of-cosines/"
+  },{
+    "title": "Proof of The law of cosines",
+    "excerpt":"Proof not written yet.          Back to statement      ","url": "https://umutozge.github.io/proofs/th-law-of-cosines/"
   },{
     "title": "Proof of Total Probability",
     "excerpt":"Proof not written yet.          Back to statement      ","url": "https://umutozge.github.io/proofs/th-total-probability/"

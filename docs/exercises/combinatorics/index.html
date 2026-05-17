@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-05-04T12:15:17+03:00">
+  <meta property="article:published_time" content="2026-05-17T16:31:07+03:00">
 
 
 
@@ -68,7 +68,7 @@
 
 
 <script type="text/javascript">
-  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0}};
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0},"pmatrix":{"def":"\\begin{pmatrix}#1\\end{pmatrix}","args":1}};
   const extraMacros = {};
 
   for (const [name, val] of Object.entries(extraMacroData || {})) {
@@ -112,7 +112,7 @@
 
   </head>
 
-  <body class="layout--single wide" dir="ltr">
+  <body class="layout--numbered wide" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -240,7 +240,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Combinatorics">
     <meta itemprop="description" content="Various counting exercises.">
-    <meta itemprop="datePublished" content="2026-05-04T12:15:17+03:00">
+    <meta itemprop="datePublished" content="2026-05-17T16:31:07+03:00">
     
 
     <div class="page__inner-wrap">
@@ -262,26 +262,129 @@
       <section class="page__content" itemprop="text">
         
         <div class="numbered">
+  
+<div class="item" id="ex-counting-integers" data-kind="exercise" data-label="Exercise" data-title="Counting integers" data-ref="Exercise">
 
-  <p class="notice--info"><strong>Playing cards:</strong> A standard deck has 52 cards, divided into
-4 <strong>suits</strong> (hearts ♥️, diamonds
-♦️, clubs ♣️, spades
-♠️), each with 13 <strong>ranks</strong> (A(ce), 2, …, 10, J(ack), Q(ueen),
-K(ing)). The cards J, Q, and K are called <strong>face cards</strong>. Suits are broken into
-two <strong>colors</strong>: red (♥️, ♦️) and black (♣️, ♠️).</p>
+    
+      <p>How many positive integers are there less than 1000000 (a million), such that:</p>
 
-  <div class="item" id="ex-four-out" data-kind="exercise" data-label="Exercise" data-title="Four spades out">
+<ol>
+  <li>its digits are all distinct; (25% of the total score)</li>
+  <li>it is even; (25% of the total score)</li>
+  <li>have exactly 3 identical digits. (50% of the total score)</li>
+</ol>
 
-    <p>Four people around a table are randomly dealt a standard deck of 52, each
-receiving 13 cards. You are paired with the person sitting opposite you. You
-know that you and your partner jointly hold 9 of the ♠️’s. Which is more
-likely: the remaining 4 ♠️’s are distributed evenly
-between the opponents, or one or the other opponent holds 2 more
-♠️’s than the other? If one scenario is more likely, by
-how much?</p>
+<p>Handle each condition independently.</p>
 
+    
+
+
+    
+
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-counting-integers/" aria-label="Solution for ex-counting-integers">
+        🗝️
+      </a>
+    
   </div>
 
+<div class="item" id="ex-men-women" data-kind="exercise" data-label="Exercise" data-title="Men and women" data-ref="Exercise">
+
+    
+      <p>How many <em>ways</em> are there for eight men and five women
+to stand in a line so that no two women stand next to each
+other?</p>
+
+<p>Interpret “way” in two different ways:</p>
+
+<ol>
+  <li>Number of sequences of people.</li>
+  <li>Number of arrangements of people; e.g. ‘WMMW…’, ‘MWM…’, etc.</li>
+</ol>
+
+    
+
+
+    
+
+    
+      <i> Source: </i>
+      
+        
+          <a href="/p//" target="_blank" rel="noopener">[missing external link]</a>
+        
+      
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-men-women/" aria-label="Solution for ex-men-women">
+        🗝️
+      </a>
+    
+  </div>
+
+<div class="item" id="ex-ninety-students" data-kind="exercise" data-label="Exercise" data-title="Ninety students" data-ref="Exercise">
+
+    
+      <p>Ninety students, including Joe and Jane, are to be split into three
+classes of equal size, and this is to be done at random. What is the probability that
+Joe and Jane end up in the same class?</p>
+
+
+    
+
+
+    
+
+    
+      <i> Source: </i>
+      
+        
+          <a href="/p//" target="_blank" rel="noopener">[missing external link]</a>
+        
+      
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-ninety-students/" aria-label="Solution for ex-ninety-students">
+        🗝️
+      </a>
+    
+  </div>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Build a map of id → { label, number }
+  const itemMap = {};
+  document.querySelectorAll('.numbered').forEach(container => {
+    let count = 0;
+    container.querySelectorAll('.item').forEach(item => {
+      if (!item.id) return;
+      count++;
+      itemMap[item.id] = {
+        label: item.dataset.label ?? 'Item',
+        number: count
+      };
+    });
+  });
+
+  // Fill in all cross-reference links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    if (itemMap[id]) {
+      const { label, number } = itemMap[id];
+      // Only replace if the author left it empty, or always replace
+      if (!link.textContent.trim()) {
+        link.textContent = `${label} ${number}`;
+      }
+    }
+  });
+});
+</script>
 </div>
 
         
@@ -301,9 +404,9 @@ how much?</p>
     
       
       
-      <a href="/tags/#probability"
+      <a href="/tags/#counting"
          class="page__taxonomy-item p-category" rel="tag">
-        probability <span class="taxonomy__count">3</span>
+        counting <span class="taxonomy__count">1</span>
       </a>
     
     </span>
@@ -316,7 +419,7 @@ how much?</p>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-05-04T12:15:17+03:00">2026-05-04</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-05-17T16:31:07+03:00">2026-05-17</time></p>
 
       </footer>
 
@@ -325,7 +428,7 @@ how much?</p>
       
   <nav class="pagination">
     
-      <a href="/exercises/basic-probability/" class="pagination--pager" title="Basic probability">Previous</a>
+      <a href="/exercises/ccg/" class="pagination--pager" title="CCG">Previous</a>
     
     
       <a href="/exercises/formal-semantics/" class="pagination--pager" title="Formal semantics">Next</a>
