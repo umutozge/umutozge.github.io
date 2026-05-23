@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-05-17T16:37:02+03:00">
+  <meta property="article:published_time" content="2026-05-23T15:13:24+03:00">
 
 
 
@@ -68,7 +68,7 @@
 
 
 <script type="text/javascript">
-  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0},"pmatrix":{"def":"\\begin{pmatrix}#1\\end{pmatrix}","args":1}};
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"fs":{"def":"/","args":0},"bs":{"def":"\\backslash","args":0},"lam":{"def":"\\lambda","args":0},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0},"pmatrix":{"def":"\\begin{pmatrix}#1\\end{pmatrix}","args":1}};
   const extraMacros = {};
 
   for (const [name, val] of Object.entries(extraMacroData || {})) {
@@ -213,7 +213,7 @@
       
         <li>
           
-            <a href="/exercise/browser/"><span class="nav__sub-title">Exercises</span></a>
+            <a href="/exercise/browser/"><span class="nav__sub-title">Workbooks</span></a>
           
 
           
@@ -240,7 +240,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="CCG">
     <meta itemprop="description" content="Exercises on Combinatory Categorial Grammar.">
-    <meta itemprop="datePublished" content="2026-05-17T16:37:02+03:00">
+    <meta itemprop="datePublished" content="2026-05-23T15:13:24+03:00">
     
 
     <div class="page__inner-wrap">
@@ -262,7 +262,100 @@
       <section class="page__content" itemprop="text">
         
         <div class="numbered">
-  
+  <p>Here is a basic lexicon:</p>
+
+<div class="item" id="lx-basic" data-kind="lexicon" data-label="Lexicon" data-title="Basic" data-ref="Lexicon">
+
+    
+      <p>Let \(\sysm{G}\) be an abbreviation for \(\sysm{(S\fs(S\bs NP))}\)</p>
+
+\[\begin{align}
+\textit{donkey} &amp;:=&amp; \sysm{N} &amp;:&amp; \sysm{\lam x.donkey'x} &amp;::&amp; et\\
+\textit{student}&amp;:=&amp; \sysm{N} &amp;:&amp; \sysm{\lam x.student'x} &amp;::&amp; et\\
+\textit{John}   &amp;:=&amp; \sysm{S\fs(S\bs NP)} &amp;:&amp; \sysm{\lam p.p\cnct{}john'} &amp;::&amp; ett\\
+\quad \nonumber\\
+\textit{sleeps} &amp;:=&amp; \sysm{S\bs NP} &amp;:&amp; \sysm{\lam x.sleeps'x} &amp;::&amp; et\\
+\textit{walk(s)}   &amp;:=&amp; \sysm{S\bs NP} &amp;:&amp; \sysm{\lam x.walk'x} &amp;::&amp; et\\
+\quad \nonumber\\
+\textit{lazy}   &amp;:=&amp; \sysm{N\fs N} &amp;:&amp; \sysm{\lam p\lam x.p'x \land lazy'x} &amp;::&amp; et(et)\\
+\quad \nonumber\\
+\textit{slowly}   &amp;:=&amp; \sysm{S\bs NP \bs (S\bs NP)}  &amp;:&amp; \sysm{\lam p\lam x.slowly'px} &amp;::&amp; et(et)\\
+\quad \nonumber\\
+\textit{and}   &amp;:=&amp; \sysm{G\bs G\fs G} &amp;:&amp; \sysm{\lam p\lam q\lam r.pr \land qr} &amp;::&amp; ett(ett(ett))\\
+\quad \nonumber\\
+\textit{every}  &amp;:=&amp; \sysm{S\fs(S\bs NP)\fs N} &amp;:&amp; \sysm{\lam{p}\lam{q}\forall x.px\to qx} &amp;::&amp; et(ett)\\
+\textit{a}      &amp;:=&amp; \sysm{S\fs(S\bs NP)\fs N} &amp;:&amp; \sysm{\lam{p}\lam{q}\exists x.px\land qx} &amp;::&amp; et(et t)
+\end{align}\]
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<div class="item" id="ex-ccg-derivation" data-kind="exercise" data-label="Exercise" data-title="Lexicon to derivation" data-ref="Exercise">
+
+    
+      <p>Derive the meaning of the following sentences specifying their order of
+combination, syntactic categories, semantic interpretations and semantic types
+in each step, based on the lexicon given in <a class="xref" href="#lx-basic" data-refmode="full"></a>:</p>
+
+<ol>
+  <li>Every donkey sleeps.</li>
+  <li>John walks slowly.</li>
+  <li>A lazy donkey walks.</li>
+  <li>Every student and a lazy donkey walk.</li>
+</ol>
+
+
+    
+
+
+    
+
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-ccg-derivation/" aria-label="Solution for ex-ccg-derivation">
+        🗝️
+      </a>
+    
+  </div>
+
+<div class="item" id="ex-ccg-derivation-2" data-kind="exercise" data-label="Exercise" data-title="Logical form to lexicon and derivation" data-ref="Exercise">
+
+    
+      <p>Write the needed lexical categories (phon, syn, sem) and derive the logical forms of the following sentences:</p>
+
+<ol>
+  <li>
+    <p><span style="display:none"></span> \(\interp{\text{Every man and John walk}} = (\forall x. man'x \to walk'x) \land walk'j'\)</p>
+  </li>
+  <li><span style="display:none"></span> \(\text{Every woman who loves John walks} = \forall x. woman'x \land love'j'x \to walk'x\)
+.</li>
+  <li><span style="display:none"></span> \(\text{Every woman whom John loves walks} = \forall x. woman'x \land love'x\,j' \to walk'x\)
+.</li>
+</ol>
+
+
+    
+
+
+    
+
+    
+
+    
+      <a class="solution-badge" href="/solutions/ex-ccg-derivation-2/" aria-label="Solution for ex-ccg-derivation-2">
+        🗝️
+      </a>
+    
+  </div>
+
 
 
 <script>
@@ -313,9 +406,9 @@
     
       
       
-      <a href="/tags/#probability"
+      <a href="/tags/#language"
          class="page__taxonomy-item p-category" rel="tag">
-        probability <span class="taxonomy__count">3</span>
+        language <span class="taxonomy__count">9</span>
       </a>
     
     </span>
@@ -328,7 +421,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-05-17T16:37:02+03:00">2026-05-17</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-05-23T15:13:24+03:00">2026-05-23</time></p>
 
       </footer>
 

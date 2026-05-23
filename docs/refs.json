@@ -203,6 +203,24 @@
     "label": "Exercise",
     "title": "King's sibling"
   },
+  "lx-basic": {
+    "page": "/exercises/ccg/",
+    "number": 1,
+    "label": "Lexicon",
+    "title": "Basic"
+  },
+  "ex-ccg-derivation": {
+    "page": "/exercises/ccg/",
+    "number": 2,
+    "label": "Exercise",
+    "title": "Lexicon to derivation"
+  },
+  "ex-ccg-derivation-2": {
+    "page": "/exercises/ccg/",
+    "number": 3,
+    "label": "Exercise",
+    "title": "Logical form to lexicon and derivation"
+  },
   "ex-counting-integers": {
     "page": "/exercises/combinatorics/",
     "number": 1,
@@ -221,11 +239,23 @@
     "label": "Exercise",
     "title": "Ninety students"
   },
-  "ex-logical-relations": {
-    "page": "/exercises/formal-semantics/",
+  "ex-fol-basics": {
+    "page": "/exercises/first-order-logic/",
     "number": 1,
     "label": "Exercise",
+    "title": "FOL basics"
+  },
+  "ex-logical-relations": {
+    "page": "/exercises/first-order-logic/",
+    "number": 2,
+    "label": "Exercise",
     "title": "Logical relations"
+  },
+  "ex-logic-translation": {
+    "page": "/exercises/first-order-logic/",
+    "number": 3,
+    "label": "Exercise",
+    "title": "Translation"
   },
   "eg-simple-model": {
     "page": "/solutions/ex-model-theory-basics/",
@@ -235,13 +265,13 @@
   },
   "ex-model-theory-basics": {
     "page": "/exercises/formal-semantics/",
-    "number": 3,
+    "number": 2,
     "label": "Exercise",
     "title": "Model theory basics"
   },
   "ex-model-building": {
     "page": "/exercises/formal-semantics/",
-    "number": 4,
+    "number": 3,
     "label": "Exercise",
     "title": "Model building"
   },
@@ -412,6 +442,12 @@
     "number": 8,
     "label": "Exercise",
     "title": "Maximum depth"
+  },
+  "ex-maptree": {
+    "page": "/exercises/recursion/",
+    "number": 9,
+    "label": "Exercise",
+    "title": "Map tree"
   },
   "ex-sum": {
     "page": "/exercises/sequence-operations/",

@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="382.963484pt" height="118.04752pt" viewBox="-68.014933 -68.010522 382.963484 118.04752">
+<style type="text/css">
+@font-face{font-family:cmbx5;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAAIEAAoAAAAAA6QAAAG4AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAANAqBBIEQCwYAATYCJAMIBCAFgjIHIBv3AgAuC3jDaPQLgwHSaslFKlgU8/5pGVbx8N/a776Z2f2oJUk/I0klVA6VX8GTlmrJUqAUS4nKHq2tWdQiSbNoMtW9w7SRIdISpVmohPzaM5GmzdIXkj0/y9+LyipHqrYsd9qLFNBtYVuuWZIH/IEHnFmatSWBlkQWQWDpNh3iIYhExerwKTqakPMnUpFe0v9jrhni0CxGN5A1KjB1rtZ9YNiuy4x/5BrxNjYNSMgYQxUYQzMLFEVgu2l6J5tPASCBgow2sAJAAeTR7p668Pnd64OIr+4A4tI5We77l599NL6Hdfaj3TvP6DgirFGiJroWnKrgkPggHhF72HTydRsdMFhxTxHRTK1DGG9xpWeXSZIACAQTa+yqLrT8dWUaNBP5J0GXBILqXFKW9LTzSwAm5RvDRkjaqIUA7vEAgQbdGEVlEJVeY6hVZsY9pqhQRWFDmGYRFD2OUJnQQa3HTeox53zuum+1uI1bW9M9Ns6rtXPZq+SKznq4WPexbFFtBjcSNrWy1DUnE0XqoE1ow1q2THJ6uzBEIsjoqGk55PfESt/cjTpv0LIj07E2tLDWh8kYqJlRAaoKAAAA) format('woff2');}
+@font-face{font-family:cmti10;src:url(data:application/x-font-woff2;base64,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) format('woff2');}
+@font-face{font-family:cmsy10;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAALQAAoAAAAABLwAAAKGAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAATAqCcIITCwwAATYCJAMUBCAFgjgHIBukAyAuBuzG6WIaQqiFWVoaIMtWFiPaa/iT4IHf33vuffijlBWlaNdloalEQGl1lfxj3Pu+zAhN1nU7qs/dSWi7XYf63//dvC38Qe+uiOMxJkEv8DCyQDZoPPAcy3+RFm3Xz6uBjkpXONubUDcNfDaQAQ5s6R/w/3839T5oC+wW5v6prQv0sp73TijksUAmSAHmCfTSuQWIDO+8A4IWZnABSvBQXIpAPgd//+zMeCL+TSA2YAyODiVAFV1B3VFfPQhlVR3K5ScYKGXlBhBg/M+XJFCAHRQB7KAlAUwYkaSyyrwSlK3/QZ/+L57Nr8rfLQEGmtDEbl0JMQABoAIAQZBEMtgOZV89JNw4dh4UrB70Wdx+jSzb084j9mfHlcebWLJ/yjRceZY1v8fH1eKYSX6Cu/ySu7LR1bDqtyMsWzfN3TOXsp0N3BYs1RQXN5cumTzWF5cdykpWHXaEy7zyDdOH5zv772TBUBZy/vwidvDsvH+eWeL8u8/n67dbIuNFq2bHTuKu/Y5dk50YVq6qfJCeLB4m/xThg3b5nKIj2h/wWVHR82ILtaxGxeW8Jc7T85QKpLISPzkcrSdbxrKGkCkf+WXbt4f+4vemDwM19Jd2QN8FAAII3JvHX6Xl5NWIqmjfv//orhIAjEiJeG+eGkBoTnpVyA2QSApDcjDpn9z0IYAmuJAGysQgLGCJlKp0llRjyp7qdF79JpxooYiwMYIHH6UqM2VU46CB6swMliaijHcH+PlXpbq1e9Bhb7cLh9W+V3s9PaOmr7G7r75V7rJ6IayUq/Q6vgZIVfJoW8GVa80ku7zhbsVKBWha2YMg3i+SfbsgeGmVeSHXGMTal4dywMXKCwUA) format('woff2');}
+@font-face{font-family:cmsy7;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAAHEAAoAAAAAA2AAAAF7AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAANApATwsGAAE2AiQDCAQgBYIyByAbtgJgrgrsZsvPKCYIS0zB3XdWh2cZD1/78Tv37X5RqWpNk0ozyAxNE90TOet08fbl4FyLpFnZjcZrGnFUEBRImL3AJw9kc9sZXgJLlKfctHzVnbrJ75v+fONT7MvG0gm0QAPOJA9sAaWpJdg7o45HJD0vsTFmvx2QikcRkuJD8V2zV17EN7NMBQsvhdfjXD1eUoT6Wj9L8o2GvZh+CADu70GBhGZJoFnWjywLvtbf38Of7PuNBIACZATq0ATIgKh7eHJ7eeG8lGfp8P8L/3yUtt3p7kbKBSAQzL/v2OX8Z1KmN9KbAsoVIFiZ9w1VTxgC4pcEErtUUagTK4H6Si/Kog4xZCXqAlWiSrMoVaLvDpXaDUsiVwi9lkFllc5UiVZXqlSlJ2OlcS/PTPQj5iGsx92+g9YTo+OJxYviE1fk45LWMDU6a0Wr1plNYgOwqRXhfiNUG+1sR8xG+XYDTBg1LmCjajTF/igQffSFHbiyyI0WqRqYMmpWArClAAA=) format('woff2');}
+@font-face{font-family:cmmi10;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAARwAAoAAAAABxAAAAQlAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAVAqHMIU+CxAAATYCJAMcBCAFgjgHIBtfBQAuBnIymldiwcUmHmprraaunB9fjuutMmUsr30gVM9j8gAo1OIfhF4WD8BCEQk3ISexA+dcgY+iqQLXj7LGiLTzm85Fej2G2AFPAFzuvrUpmkML6UEbFAXUU23RtDDyPZCnZR2dIusgsxqly4kvEzbgjogiu78/VfOSjdlAf2hYw2t10ALZ1vNeheoVKRfHsgL1PNQxganWrhi0KZiiXfko7nEnQBEIW6iAj/z0dzq1GvgqFDANaAFLDXYB6GF+nhyiQBfHlxWQqQrkdQ5NKaSMFuAsKUFFtPaMtHi8uphsbBVflv+A8KO6fLC7xf9VfywAQqrxYO5pgRqVCRUAlICYAMzQm2UN9aAop5ugC2mgfChvuGIwIpU0h4EyiPTrPicPiEhW2OHoueHF4UCQQIAh4rpKxSl2GFbZfQ/cZEmiN9m5NYxjBwcOT7+Zx4HOjuV5RM7ZYQ9HFA7LOapUASu0u8DEnShhRhS3EuKp2iKAoNxART/k4nKR3fsMwoVhCbjQfyjVvI7EB87DkIILkRscUy6/kW3h7eAiYVtDHHlJQH5/Fx4i0rvwQL6UhFpxnDvD4ERHDMvPuJvHRSp6cwcE8ZxC89c88JeuN4J9N45brwyYp9Asse7SfyvXfK3Sf4glLcwNkRV2RfpA4R2BYyTElSTYh8kTCXGfGhLGgUQkcv5WyqsRjQeWnHQ9G2CTM+bOs4rynRiuHXjcdX2+u/Gz6oMGF0V6PlZAXMfvRyFWLNvFtaO777j4+srRs+g9GKL4uA1K24wkfTss3IB4LLjB/qVuYGSL8L29dMt36as/+iF2TwlEODFT4NWG9XYrt09Sb8XZrnFdhd6nbAYsBsxk418b47vXlJ4XIhuqHwIbq/8QhgjiXAfItHeerCiigjhsw/QQue3OQCoWUOdAyW5obIfI7aK581qOoLkpU/19TGyE5tNCXFNGmmkvfqKxfg4MzPgrdhRZIGK+nSrGmp5xuo2G4+Lxq9Yjvxi0oscm2AVrWWmfjhhqUisCP/98FbF1rjBMPIgxB27dKlw2UEekqDgu75WcqsS2YXULnKc2/sZKGr6CjBzrDjTPVHZXM3OgP/nWieInxVml0Sh/TrKWBV11GrsjW0MsdB5tvTCkALdQ2eDxGYzFOGQHUEr5t9iZb5LwYdb8miFXghzihVcKYKjFYOWdtSW8EvtmBVGASIMLAKAaUIoBqI2RizyBccwMeMwJFhCgMbLiDBrpZYEaYPHGSEnNglQMXEhNLbpdz4sHo4QOJMx2SMloHKm4tZCaUXasV2p7s/N+3DYREBUVJif7VOrKSctOTn35PjcwOSwhOSSKV0FaGQgM9Y3MzdRNkDIprWHdQFVfX5tKka/OqbahAXJeomhBLB1Yp+UVodarWCOltdC2pxaa+kBf3AIjAAA=) format('woff2');}
+@font-face{font-family:cmmi5;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAAHgAAoAAAAAA9QAAAGXAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAPAqBKIEOCwgAATYCJAMKBCAFgjIHIBv/AgCeg3HjXEK0/b9orVbLDjiUcosI4u/N2bfvLq1do0Q/hkInmM4Bi1XRRpU0hAGMZg/WeYMTnASl1dXHANV1sTEFpbJOk4xtVrXsUzf5ARubxgLwsu1T25ymiWUQjgXS5QkvK9C0XS0+SlpuDeVDHmbIrFgZ0d7a/xPL5sSq4Ig18DFE8Co3t6MyUC2FUyGFr7MKNCQmee0E2QCMdaFZCleRmvVT37XYhM1pGIATADogxGQy73Sf4pNyp+69JFdN/8hSmHlnx1R16KjqRr6baWfkUoav3bC971i/nZ/5xdEc+OB7/5e6jO07ABAIfj0oC9kJ/tGzo4PqOWsAqxoIUqGfefjOBACg5anjGYE0QQAB4bon8DuIvBvZicWRDRNxbOSoe92CEkn0NeFQMBa7ddfiyExBHFt3V6w7tjh/te+18nyzWXXdZ12b2apVXif3KIyq/VG5KXWY3ZDQ1tQxNFDUI5XVVkDcktfktMolp57tq2prkbIxs3pARm+N1LHZQOEf4KakCkaq+kbKmqQczNxIALsK) format('woff2');}
+@font-face{font-family:cmr10;src:url(data:application/x-font-woff2;base64,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) format('woff2');}
+text.f0 {font-family:cmbx5;font-size:4.98132px}
+text.f1 {font-family:cmti10;font-size:9.96264px}
+text.f2 {font-family:cmsy10;font-size:9.96264px}
+text.f3 {font-family:cmsy7;font-size:6.973848px}
+text.f4 {font-family:cmmi10;font-size:9.96264px}
+text.f5 {font-family:cmmi5;font-size:4.98132px}
+text.f6 {font-family:cmr10;font-size:9.96264px}
+
+</style>
+<text class="f6" x="-33.979556" y="-61.09645">ev<tspan x="-24.570365">ery</tspan><tspan x="29.786144">w</tspan><tspan x="36.704656">oman</tspan><tspan x="97.689147">whom</tspan><tspan x="173.799044">john</tspan><tspan x="234.572213">lo</tspan><tspan x="242.044212">v</tspan><tspan x="247.025551">es</tspan><tspan x="285.915427">w</tspan><tspan x="292.833939">alks</tspan></text>
+<rect x="-68.014933" y="-55.37348" height=".3985" width="91.067874" />
+<rect x="26.373831" y="-55.37348" height=".3985" width="37.542823" />
+<rect x="67.237544" y="-55.37348" height=".3985" width="86.916814" />
+<rect x="157.475248" y="-55.37348" height=".3985" width="51.742702" />
+<rect x="212.538841" y="-55.37348" height=".3985" width="64.877604" />
+<rect x="280.737335" y="-55.37348" height=".3985" width="34.211216" />
+<text class="f6" x="-58.240263" y="-45.709707">((</text>
+<text class="f1" x="-50.491515" y="-45.709707">S</text>
+<text class="f4" x="-44.693841" y="-45.709707">/</text>
+<text class="f6" x="-40.708766" y="-45.709707">(</text>
+<text class="f1" x="-36.834392" y="-45.709707">S</text>
+<text class="f2" x="-30.339335" y="-45.709707">\</text>
+<text class="f1" x="-25.557246" y="-45.709707">NP</text>
+<text class="f6" x="-10.371912" y="-45.709707">))</text>
+<text class="f4" x="-3.619428" y="-45.709707">/</text>
+<text class="f1" x=".365647" y="-45.709707">N</text>
+<text class="f6" x="9.403929" y="-45.709707">)</text>
+<text class="f1" x="40.62611" y="-45.709707">N</text>
+<text class="f6" x="73.814519" y="-45.709707">((</text>
+<text class="f1" x="81.563267" y="-45.709707">N</text>
+<text class="f2" x="90.302667" y="-45.709707">\</text>
+<text class="f1" x="95.084756" y="-45.709707">N</text>
+<text class="f6" x="104.123039" y="-45.709707">)</text>
+<text class="f4" x="107.001149" y="-45.709707">/</text>
+<text class="f6" x="110.986224" y="-45.709707">(</text>
+<text class="f1" x="114.860597" y="-45.709707">S</text>
+<text class="f4" x="120.658272" y="-45.709707">/</text>
+<text class="f1" x="124.643347" y="-45.709707">NP</text>
+<text class="f6" x="139.828681" y="-45.709707">))<tspan x="157.475248">(</tspan></text>
+<text class="f1" x="161.349622" y="-45.709707">S</text>
+<text class="f4" x="167.147297" y="-45.709707">/</text>
+<text class="f6" x="171.132372" y="-45.709707">(</text>
+<text class="f1" x="175.006746" y="-45.709707">S</text>
+<text class="f2" x="181.501802" y="-45.709707">\</text>
+<text class="f1" x="186.283892" y="-45.709707">NP</text>
+<text class="f6" x="201.469226" y="-45.709707">))<tspan x="214.910592">((</tspan></text>
+<text class="f1" x="222.65934" y="-45.709707">S</text>
+<text class="f2" x="229.154396" y="-45.709707">\</text>
+<text class="f1" x="233.936486" y="-45.709707">NP</text>
+<text class="f6" x="249.12182" y="-45.709707">)</text>
+<text class="f4" x="251.999929" y="-45.709707">/</text>
+<text class="f1" x="255.985004" y="-45.709707">NP</text>
+<text class="f6" x="271.170338" y="-45.709707">)<tspan x="280.737335">(</tspan></text>
+<text class="f1" x="284.611709" y="-45.709707">S</text>
+<text class="f2" x="291.106765" y="-45.709707">\</text>
+<text class="f1" x="295.888855" y="-45.709707">NP</text>
+<text class="f6" x="311.074189" y="-45.709707">)<tspan x="-68.014933" y="-34.889139">:</tspan></text>
+<text class="f4" x="-64.583389" y="-34.889139">λp.<tspan x="-49.331551">λq</tspan><tspan x="-38.715084">.</tspan></text>
+<text class="f2" x="-34.287276" y="-34.889139">∀</text>
+<text class="f4" x="-28.752459" y="-34.889139">x.<tspan x="-18.630719">p</tspan><tspan x="-11.957855">x</tspan></text>
+<text class="f2" x="-3.49659" y="-34.889139">→</text>
+<text class="f4" x="10.89381" y="-34.889139">q<tspan x="17.359111">x</tspan></text>
+<text class="f6" x="26.373831" y="-34.889139">:</text>
+<text class="f1" x="29.805375" y="-34.889139">woman</text>
+<text class="f3" x="61.121578" y="-38.504503"></text>
+<text class="f6" x="67.237544" y="-34.889139">:</text>
+<text class="f4" x="70.669088" y="-34.889139">λp.<tspan x="85.920926">λq</tspan><tspan x="96.537393">.</tspan><tspan x="100.965201">λx.</tspan><tspan x="116.898507">p</tspan><tspan x="123.571371">x</tspan></text>
+<text class="f2" x="131.479169" y="-34.889139">∧</text>
+<text class="f4" x="141.995216" y="-34.889139">q<tspan x="148.460517">x</tspan></text>
+<text class="f6" x="159.468643" y="-34.889139">:</text>
+<text class="f4" x="162.900187" y="-34.889139">λp.<tspan x="178.152025">p</tspan></text>
+<text class="f1" x="184.824889" y="-34.889139">john</text>
+<text class="f3" x="204.429518" y="-39.344675"></text>
+<text class="f6" x="231.016896" y="-34.889139">:</text>
+<text class="f1" x="234.44844" y="-34.889139">loves</text>
+<text class="f3" x="256.143314" y="-39.344675"></text>
+<text class="f6" x="282.863791" y="-34.889139">:</text>
+<text class="f1" x="286.295335" y="-34.889139">walks</text>
+<text class="f3" x="310.02702" y="-39.344675"></text>
+<rect x="163.452833" y="-29.16617" height=".3985" width="100.600942" />
+<text class="f5" x="264.053774" y="-27.771407">&gt;</text>
+<text class="f0" x="269.49487" y="-27.771407">B</text>
+<text class="f6" x="163.452833" y="-18.644469">(</text>
+<text class="f1" x="167.327206" y="-18.644469">S</text>
+<text class="f4" x="173.124881" y="-18.644469">/</text>
+<text class="f1" x="177.109956" y="-18.644469">NP</text>
+<text class="f6" x="192.29529" y="-18.644469">)<tspan x="199.490539">:</tspan></text>
+<text class="f4" x="202.922083" y="-18.644469">λx.</text>
+<text class="f1" x="218.855388" y="-18.644469">loves</text>
+<text class="f3" x="240.550262" y="-23.100005"></text>
+<text class="f4" x="245.005738" y="-18.644469">x</text>
+<text class="f1" x="252.360069" y="-18.644469">john</text>
+<text class="f3" x="271.964698" y="-23.100005"></text>
+<rect x="73.215128" y="-12.368018" height=".3985" width="196.148112" />
+<text class="f5" x="269.36324" y="-10.973255">&gt;</text>
+<text class="f6" x="99.571447" y="-1.846317">(</text>
+<text class="f1" x="103.44582" y="-1.846317">N</text>
+<text class="f2" x="112.18522" y="-1.846317">\</text>
+<text class="f1" x="116.96731" y="-1.846317">N</text>
+<text class="f6" x="126.005592" y="-1.846317">)<tspan x="133.200841">:</tspan></text>
+<text class="f4" x="136.632385" y="-1.846317">λq<tspan x="147.248852">.</tspan><tspan x="151.67666">λx.</tspan></text>
+<text class="f1" x="167.609965" y="-1.846317">loves</text>
+<text class="f3" x="189.304839" y="-6.301853"></text>
+<text class="f4" x="193.760314" y="-1.846317">x</text>
+<text class="f1" x="201.114646" y="-1.846317">john</text>
+<text class="f3" x="220.719275" y="-6.301853"></text>
+<text class="f2" x="225.728217" y="-1.846317">∧</text>
+<text class="f4" x="236.244264" y="-1.846317">q<tspan x="242.709565">x</tspan></text>
+<rect x="32.351415" y="4.430134" height=".3985" width="237.011825" />
+<text class="f5" x="269.36324" y="5.824897">&lt;</text>
+<text class="f1" x="82.643639" y="14.951835">N</text>
+<text class="f6" x="95.002796" y="14.951835">:</text>
+<text class="f4" x="98.43434" y="14.951835">λx.</text>
+<text class="f1" x="114.367645" y="14.951835">loves</text>
+<text class="f3" x="136.062519" y="10.496299"></text>
+<text class="f4" x="140.517995" y="14.951835">x</text>
+<text class="f1" x="147.872326" y="14.951835">john</text>
+<text class="f3" x="167.476955" y="10.496299"></text>
+<text class="f2" x="172.485897" y="14.951835">∧</text>
+<text class="f1" x="183.001945" y="14.951835">woman</text>
+<text class="f3" x="214.318148" y="11.336471"></text>
+<text class="f4" x="218.773624" y="14.951835">x</text>
+<rect x="-62.037349" y="20.674804" height=".3985" width="331.400589" />
+<text class="f5" x="269.36324" y="22.069568">&gt;</text>
+<text class="f6" x="-7.945166" y="31.196505">(</text>
+<text class="f1" x="-4.070792" y="31.196505">S</text>
+<text class="f4" x="1.726883" y="31.196505">/</text>
+<text class="f6" x="5.711958" y="31.196505">(</text>
+<text class="f1" x="9.586331" y="31.196505">S</text>
+<text class="f2" x="16.081388" y="31.196505">\</text>
+<text class="f1" x="20.863477" y="31.196505">NP</text>
+<text class="f6" x="36.048811" y="31.196505">))<tspan x="47.118434">:</tspan></text>
+<text class="f4" x="50.549978" y="31.196505">λq<tspan x="61.166445">.</tspan></text>
+<text class="f2" x="65.594252" y="31.196505">∀</text>
+<text class="f4" x="71.129069" y="31.196505">x.</text>
+<text class="f1" x="81.250809" y="31.196505">loves</text>
+<text class="f3" x="102.945684" y="26.740969"></text>
+<text class="f4" x="107.401159" y="31.196505">x</text>
+<text class="f1" x="114.75549" y="31.196505">john</text>
+<text class="f3" x="134.360119" y="26.740969"></text>
+<text class="f2" x="139.369061" y="31.196505">∧</text>
+<text class="f1" x="149.885109" y="31.196505">woman</text>
+<text class="f3" x="181.201312" y="27.581141"></text>
+<text class="f4" x="185.656788" y="31.196505">x</text>
+<text class="f2" x="194.118052" y="31.196505">→</text>
+<text class="f4" x="208.508453" y="31.196505">q<tspan x="214.973754">x</tspan></text>
+<rect x="-62.037349" y="37.472956" height=".3985" width="368.932695" />
+<text class="f5" x="306.895346" y="38.86772">&gt;</text>
+<text class="f1" x="29.956465" y="47.994657">S</text>
+<text class="f6" x="40.071279" y="47.994657">:</text>
+<text class="f2" x="43.502823" y="47.994657">∀</text>
+<text class="f4" x="49.03764" y="47.994657">x.</text>
+<text class="f1" x="59.15938" y="47.994657">loves</text>
+<text class="f3" x="80.854254" y="43.539121"></text>
+<text class="f4" x="85.309729" y="47.994657">x</text>
+<text class="f1" x="92.664061" y="47.994657">john</text>
+<text class="f3" x="112.26869" y="43.539121"></text>
+<text class="f2" x="117.277631" y="47.994657">∧</text>
+<text class="f1" x="127.793679" y="47.994657">woman</text>
+<text class="f3" x="159.109883" y="44.379293"></text>
+<text class="f4" x="163.565358" y="47.994657">x</text>
+<text class="f2" x="172.026623" y="47.994657">→</text>
+<text class="f1" x="186.417023" y="47.994657">walks</text>
+<text class="f3" x="210.148708" y="43.539121"></text>
+<text class="f4" x="214.604183" y="47.994657">x</text>
+</svg>

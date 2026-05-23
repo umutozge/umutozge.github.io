@@ -66,7 +66,7 @@
 
 
 <script type="text/javascript">
-  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0},"pmatrix":{"def":"\\begin{pmatrix}#1\\end{pmatrix}","args":1}};
+  const extraMacroData = {"sysm":{"def":"\\mathit{#1}","args":1},"smtyp":{"def":"(#1#2)","args":2},"fs":{"def":"/","args":0},"bs":{"def":"\\backslash","args":0},"lam":{"def":"\\lambda","args":0},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0},"pmatrix":{"def":"\\begin{pmatrix}#1\\end{pmatrix}","args":1}};
   const extraMacros = {};
 
   for (const [name, val] of Object.entries(extraMacroData || {})) {
@@ -110,7 +110,7 @@
 
   </head>
 
-  <body class="layout--solution" dir="ltr">
+  <body class="layout--solution wide" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -171,37 +171,15 @@
 
 
 
-
-
 <div id="main" role="main">
   
 
 
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Solution: Reduction">
+  <div class="archive">
     
+      <h1 id="page-title" class="page__title">Solution: Reduction</h1>
     
-    
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          
-              <h1 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://umutozge.github.io/solutions/ex-lambda-reduction/" itemprop="url">Solution: Reduction
-</a>
-              </h1>
-            
-          
-          
-
-
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        
-        <main class="solution">
+    <main>
   <div class="numbered">
     <ol>
   <li>
@@ -322,23 +300,29 @@
   </li>
 </ol>
 
-<p>From <a href="/p/lambdacalculator/" target="_blank" rel="noopener">LC public exercises</a>:</p>
+<p>From <a href="/p/lambdacalculator/" target="_blank" rel="noopener">LC public exercises</a> (by Anıl Öğdül):</p>
 
 <ol>
   <li>
     <p><span style="display:none"></span> \((\x.a') b'\)</p>
 
     <p><span style="display:none"></span> \(\equiv_\beta a'\)</p>
+
+    <p>Since the variable \(x\) does not appear as a free variable in the body \(a'\), the argument \(b'\) has no slot to fill and is discarded during \(\beta\)-reduction.</p>
   </li>
   <li>
     <p><span style="display:none"></span> \((\x.p'x \to \E x.r'b'\, x) a'\)</p>
 
     <p><span style="display:none"></span> \(\equiv_\beta p'a' \to \E x.r'b'\, x\)</p>
+
+    <p>The existential quantifier \(\exists x\) creates a local scope that binds the second \(x\) (in \(r'b'x\)). Consequently, the \(x\) inside the quantifier cannot be substituted, and only the first \(x\) (in \(p' x\)) is replaced by \(a'\).</p>
   </li>
   <li>
     <p><span style="display:none"></span> \((\x\x.p'x \to q'x\,c') a'\, b'\)</p>
 
     <p><span style="display:none"></span> \(\equiv_\beta p'b' \to q'b'c'\)</p>
+
+    <p>Here, the inner \(\lambda x\) binds the occurences of \(x\)s in the body of the inner lambda \(p'x \rightarrow q'xc'\), if we put parantheses according to the right-hand rule \((\lambda x (\lambda x. p' x \rightarrow q' x c'))\). When the first argument \(a'\) is applied, it finds no free occurrences of \(x\) to bind to and is discarded. The second argument \(b'\) is then successfully applied to the inner \(\lambda x\), replacing the occurrences of \(x\).</p>
   </li>
   <li>
     <p><span style="display:none"></span> \((\x\E y.r'x\,y)y\)</p>
@@ -346,6 +330,8 @@
     <p><span style="display:none"></span> \(\equiv_\alpha(\x\E z.r'x\,z)y\)</p>
 
     <p><span style="display:none"></span> \(\equiv_\beta\E z.r'y\,z\)</p>
+
+    <p>If the free argument \(y\) were substituted directly, it would accidentally fall under the scope of the existential quantifier \(\exists y\), resulting in \(\exists y.r'yy\). In order to keep the meaning intact, we rename the bound variable \(y\) to a fresh variable \(z\), applying \(\alpha\)-conversion before performing the \(\beta\)-reduction.</p>
   </li>
 </ol>
 
@@ -357,34 +343,10 @@
   </button>
 </div>
 
-
   </div>
 </main>
 
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-
-        
-
-      </footer>
-
-      
-
-      
-
-    </div>
-
-    
-  </article>
-
-  
-  
+  </div>
 </div>
 
       

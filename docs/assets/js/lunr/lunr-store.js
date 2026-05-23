@@ -119,6 +119,18 @@ var store = [{
         "url": "/exams/2026-05-07-502-quiz/",
         "teaser": null
       },{
+        "title": "543 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-05-20-543-quiz/",
+        "teaser": null
+      },{
+        "title": "502 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-05-21-502-quiz/",
+        "teaser": null
+      },{
         "title": "Basic probability",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": ["probability"],
@@ -126,8 +138,8 @@ var store = [{
         "teaser": null
       },{
         "title": "CCG",
-        "excerpt":" ","categories": [],
-        "tags": ["probability"],
+        "excerpt":"Here is a basic lexicon: Let \\(\\sysm{G}\\) be an abbreviation for \\(\\sysm{(S\\fs(S\\bs NP))}\\) \\[\\begin{align} \\textit{donkey} &amp;:=&amp; \\sysm{N} &amp;:&amp; \\sysm{\\lam x.donkey'x} &amp;::&amp; et\\\\ \\textit{student}&amp;:=&amp; \\sysm{N} &amp;:&amp; \\sysm{\\lam x.student'x} &amp;::&amp; et\\\\ \\textit{John} &amp;:=&amp; \\sysm{S\\fs(S\\bs NP)} &amp;:&amp; \\sysm{\\lam p.p\\cnct{}john'} &amp;::&amp; ett\\\\ \\quad \\nonumber\\\\ \\textit{sleeps} &amp;:=&amp; \\sysm{S\\bs NP} &amp;:&amp; \\sysm{\\lam x.sleeps'x} &amp;::&amp; et\\\\ \\textit{walk(s)}...","categories": [],
+        "tags": ["language"],
         "url": "/exercises/ccg/",
         "teaser": null
       },{
@@ -137,8 +149,14 @@ var store = [{
         "url": "/exercises/combinatorics/",
         "teaser": null
       },{
+        "title": "First-order logic",
+        "excerpt":"State whether each atomic formula is true or false in : \\[\\begin{gather*} \\con{student}\\con{anna}\\\\ \\con{book}\\con{anna}\\\\ \\con{linguist}\\con{cara}\\\\ \\con{admire}\\con{ben}\\con{anna}\\\\ \\con{admire}\\con{anna}\\con{ben}\\\\ \\end{gather*}\\] Evaluate the following formulas in . \\[\\begin{gather*} \\exists x.\\con{student}x\\\\ \\forall x.\\con{student}x \\rightarrow \\con{linguist}x\\\\ \\exists x.\\con{student}x \\land \\con{linguist}x\\\\ \\forall x.\\con{book}x \\rightarrow \\con{student}x\\\\ \\exists x\\forall y. \\con{admire}y\\cnct x\\\\ \\con{student}x\\\\ \\con{linguist}x\\\\ \\exists x.\\con{admire}x\\cnct y\\\\ \\end{gather*}\\]...","categories": [],
+        "tags": ["language","semantics","logic"],
+        "url": "/exercises/first-order-logic/",
+        "teaser": null
+      },{
         "title": "Formal semantics",
-        "excerpt":"For each pair, determine the logical relation between the left and right formulas (implies, contradicts, or independent): \\[\\begin{gather} \\forall x.\\con{p}x\\rightarrow \\con{q}x&amp; \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x\\rightarrow \\con{q}x&amp; \\exists x.\\con{q}x\\\\ \\exists x.\\con{p}x\\wedge \\con{q}x&amp; \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x &amp;\\exists x.\\con{p}x\\\\ \\neg\\exists x\\,\\con{r}x&amp; \\forall x.\\neg\\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&amp; \\forall x.\\con{p}x\\rightarrow \\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&amp; \\forall x.\\con{p}x...","categories": [],
+        "excerpt":"\\(\\mathcal{M} = \\langle D, I\\rangle\\) with domain: \\[\\begin{align*} D = \\{a,b,c,d,e\\} \\end{align*}\\] Interpretation function: \\[\\begin{align*} I(\\con{anna}) &amp;= a\\\\ I(\\con{ben}) &amp;= b\\\\ I(\\con{cara}) &amp;= c\\\\ I(\\con{student}) &amp;= \\{a,b\\}\\\\ I(\\con{linguist}) &amp;= \\{b,c\\}\\\\ I(\\con{book}) &amp;= \\{d,e\\}\\\\ I(\\con{admire}) &amp;= \\{(a,b),(b,c),(c,d)\\}\\\\ I(\\con{read}) &amp;= \\{(a,d),(b,e),(c,d),(a,e)\\}\\\\ I(\\con{recommend}) &amp;= \\{(a,d),(c,a),(c,d)\\}\\\\ \\end{align*}\\] Environment: \\[\\begin{align*} g=\\lbrace (x,a), (y,b)\\rbrace \\end{align*}\\] State...","categories": [],
         "tags": ["language","semantics","logic"],
         "url": "/exercises/formal-semantics/",
         "teaser": null
@@ -252,9 +270,39 @@ var store = [{
         "teaser": null
       },{
         "title": "Dot product",
-        "excerpt":"The dot product of two vectors $u$ and $v$ in $\\mathbb{R}^n$ is defined as:   \\[u \\cdot v = u_{1}v_{1} + \\dots + u_{n}v_{n}.\\]  Another common notation for the dot product is \\(\\langle u, v \\rangle\\).   ","categories": [],
+        "excerpt":"The dot product of two vectors $u$ and $v$ in $\\mathbb{R}^n$ is defined as:   \\[u \\cdot v = u_{1}v_{1} + \\dots + u_{n}v_{n}.\\]  Another common notation for the dot product is \\(\\langle u, v \\rangle\\).  ","categories": [],
         "tags": [],
         "url": "/items/df-dot-product/",
+        "teaser": null
+      },{
+        "title": "Matrix addition",
+        "excerpt":"Let \\(\\mathbf{A}\\) and \\(\\mathbf{B}\\) be two \\(m \\times n\\) matrices. The sum of \\(\\mathbf{A}\\) and \\(\\mathbf{B}\\), denoted by \\(\\mathbf{A} + \\mathbf{B}\\), is the \\(m \\times n\\) matrix defined by,   \\[(\\mathbf{A} + \\mathbf{B})_{i,j} = \\mathbf{A}_{i,j} + \\mathbf{B}_{i,j}, \\quad 1 \\leq i \\leq m, \\quad 1 \\leq j \\leq n\\] ","categories": [],
+        "tags": [],
+        "url": "/items/df-matrix-add/",
+        "teaser": null
+      },{
+        "title": "Identity matrix",
+        "excerpt":"Let \\(\\mathbf{I}_n\\) be the \\(n \\times n\\) matrix defined by, \\[\\mathbf{I}_n = \\begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; \\cdots &amp; 0 \\\\ 0 &amp; 1 &amp; 0 &amp; \\cdots &amp; 0 \\\\ 0 &amp; 0 &amp; 1 &amp; \\cdots &amp; 0 \\\\ \\vdots &amp; \\vdots &amp; \\vdots &amp; \\ddots...","categories": [],
+        "tags": [],
+        "url": "/items/df-matrix-id/",
+        "teaser": null
+      },{
+        "title": "Matrix multiplication",
+        "excerpt":"Let \\(\\mathbf{A}\\) be an \\(m \\times n\\) matrix and \\(\\mathbf{B}\\) be an \\(n \\times p\\) matrix. The product of \\(\\mathbf{A}\\) and \\(\\mathbf{B}\\), denoted by \\(\\mathbf{AB}\\), is the \\(m \\times p\\) matrix defined by,   \\[[\\mathbf{AB}]_{i,j} = \\sum_{r=1}^{n} a_{i,r}b_{r,j}, \\quad 1 \\leq i \\leq m, \\quad 1 \\leq j \\leq p\\nonumber\\] ","categories": [],
+        "tags": [],
+        "url": "/items/df-matrix-mul/",
+        "teaser": null
+      },{
+        "title": "Transpose of a matrix",
+        "excerpt":"Let \\(\\mathbf{A}\\) be an \\(m \\times n\\) matrix. The transpose of \\(\\mathbf{A}\\), denoted by \\(\\mathbf{A}^{\\mathrm{T}}\\), is the \\(n \\times m\\) matrix defined by,   \\[\\left(\\mathbf{A}^{\\mathrm{T}}\\right)_{i,j} = \\mathbf{A}_{j,i}\\] ","categories": [],
+        "tags": [],
+        "url": "/items/df-matrix-trans/",
+        "teaser": null
+      },{
+        "title": "Properties of a norm function",
+        "excerpt":"   Non-negativity: \\(\\|x\\| \\ge 0\\).   Zero only at the zero vector: \\(\\|x\\| = 0\\) exactly when \\(x=0\\).   Homogeneity: \\(\\|a x\\| = \\lvert a\\rvert \\,\\|x\\|\\) for any scalar \\(a\\).   Triangle inequality: \\(\\|x+y\\| \\le \\|x\\| + \\|y\\|\\).  ","categories": [],
+        "tags": [],
+        "url": "/items/df-norm-function/",
         "teaser": null
       },{
         "title": "Addition",
@@ -300,7 +348,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Ninety students",
-        "excerpt":"Ninety students, including Joe and Jane, are to be split into three classes of equal size, and this is to be done at random. What is the probability that Joe and Jane end up in the same class?   ","categories": [],
+        "excerpt":"Ninety students, including Joe and Jane, are to be split into three classes of equal size, and this is to be done at random. What is the probability that Joe and Jane end up in the same class?  ","categories": [],
         "tags": [],
         "url": "/items/ex-ninety-students/",
         "teaser": null
@@ -311,8 +359,20 @@ var store = [{
         "url": "/items/ex-arithmetic-grammar/",
         "teaser": null
       },{
+        "title": "Logical form to lexicon and derivation",
+        "excerpt":"Write the needed lexical categories (phon, syn, sem) and derive the logical forms of the following sentences: \\(\\interp{\\text{Every man and John walk}} = (\\forall x. man'x \\to walk'x) \\land walk'j'\\) \\(\\text{Every woman who loves John walks} = \\forall x. woman'x \\land love'j'x \\to walk'x\\) . \\(\\text{Every woman whom John loves...","categories": [],
+        "tags": [],
+        "url": "/items/ex-ccg-derivation-2/",
+        "teaser": null
+      },{
+        "title": "Lexicon to derivation",
+        "excerpt":"Derive the meaning of the following sentences specifying their order of combination, syntactic categories, semantic interpretations and semantic types in each step, based on the lexicon given in :      Every donkey sleeps.   John walks slowly.   A lazy donkey walks.   Every student and a lazy donkey walk.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-ccg-derivation/",
+        "teaser": null
+      },{
         "title": "FOL basics",
-        "excerpt":"State whether each atomic formula is true or false in : \\[\\begin{gather*} \\con{student}\\con{anna}\\\\ \\con{book}\\con{anna}\\\\ \\con{linguist}\\con{cara}\\\\ \\con{admire}\\con{ben}\\con{anna}\\\\ \\con{admire}\\con{anna}\\con{ben}\\\\ \\end{gather*}\\] Evaluate the following formulas in . \\[\\begin{gather*} \\exists x.\\con{student}x\\\\ \\forall x.\\con{student}x \\rightarrow \\con{linguist}x\\\\ \\exists x.\\con{student}x \\land \\con{linguist}x\\\\ \\forall x.\\con{book}x \\rightarrow \\con{student}x\\\\ \\exists x\\forall y. \\con{admire}y\\cnct x\\\\ \\con{student}x\\\\ \\con{linguist}x\\\\ \\exists x.\\con{admire}x\\cnct y\\\\ \\end{gather*}\\]...","categories": [],
+        "excerpt":"State whether each atomic formula is true or false in @@xref eg-simple-model@@: \\[\\begin{gather*} \\con{student}\\con{anna}\\\\ \\con{book}\\con{anna}\\\\ \\con{linguist}\\con{cara}\\\\ \\con{admire}\\con{ben}\\con{anna}\\\\ \\con{admire}\\con{anna}\\con{ben}\\\\ \\end{gather*}\\] Evaluate the following formulas in @@xref eg-simple-model@@. \\[\\begin{gather*} \\exists x.\\con{student}x\\\\ \\forall x.\\con{student}x \\rightarrow \\con{linguist}x\\\\ \\exists x.\\con{student}x \\land \\con{linguist}x\\\\ \\forall x.\\con{book}x \\rightarrow \\con{student}x\\\\ \\exists x\\forall y. \\con{admire}y\\cnct x\\\\ \\con{student}x\\\\ \\con{linguist}x\\\\ \\exists x.\\con{admire}x\\cnct...","categories": [],
         "tags": [],
         "url": "/items/ex-fol-basics/",
         "teaser": null
@@ -339,6 +399,12 @@ var store = [{
         "excerpt":"Reduce each expression as far as possible. @@math_item content=\\((\\lambda x. (m\\,\\, x))\\,\\,j\\)@@ @@math_item content=\\((\\lambda y. (y\\,\\, j))\\,\\,m\\)@@ @@math_item content=\\(((\\lambda x.(\\lambda y. (y\\,\\,(y\\,\\, x))))\\,\\, j)\\,\\,m\\)@@ @@math_item content=\\((\\lambda y.(y\\cnct{}j))(\\lambda x.(m\\cnct{}x))\\)@@ @@math_item content=\\((\\lambda z.z) (\\lambda y . y\\,\\, y) (\\lambda x.x\\,\\, a)\\)@@ @@math_item content=\\((\\lambda x\\lambda y.x\\,\\, y\\,\\, y) (\\lambda a.a) b\\)@@ @@math_item content=\\((\\lambda...","categories": [],
         "tags": [],
         "url": "/items/ex-lambda-reduction/",
+        "teaser": null
+      },{
+        "title": "Translation",
+        "excerpt":"Translate to first-order logic: No one speaks French. (Note: you can take \\emph{speak French} as a single lexical item. But, if you like, try to take the two words separately.) No one speaks French or Arabic. Every student is happy. Every student is happy and tired. Every student is happy,...","categories": [],
+        "tags": [],
+        "url": "/items/ex-logic-translation/",
         "teaser": null
       },{
         "title": "Logical relations",
@@ -527,6 +593,12 @@ var store = [{
         "url": "/items/ex-length/",
         "teaser": null
       },{
+        "title": "Map tree",
+        "excerpt":"Take a possibly nested list of items, a test function, and a transformation function, Return a list identical to the input list except that the items passing the test functions are altered with the transformation function. For example, if the input list is [[1, 2], [3, 4]], the test function...","categories": [],
+        "tags": [],
+        "url": "/items/ex-maptree/",
+        "teaser": null
+      },{
         "title": "Deep Max",
         "excerpt":"Define a recursive procedure that finds the maximum integer in a possibly nested list of integers.  ","categories": [],
         "tags": [],
@@ -534,7 +606,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Maximum depth",
-        "excerpt":"Given a possibly nested list, compute the deepest level of embedding in the list. The ground level counts as 0 depth. For example, the list T  [1, [2, 3], 4, [5, [6, 7]]]   should return 2.   ","categories": [],
+        "excerpt":"Given a possibly nested list, compute the deepest level of embedding in the list. The ground level counts as 0 depth. For example, the list T  [1, [2, 3], 4, [5, [6, 7]]]   should return 2.  ","categories": [],
         "tags": [],
         "url": "/items/ex-maxdepth/",
         "teaser": null
@@ -552,7 +624,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Permutation",
-        "excerpt":"Compute the permutations of a list or string.   ","categories": [],
+        "excerpt":"Compute the permutations of a list or string.  ","categories": [],
         "tags": [],
         "url": "/items/ex-permutation/",
         "teaser": null
@@ -591,6 +663,12 @@ var store = [{
         "excerpt":"          ","categories": [],
         "tags": [],
         "url": "/items/tr-mts-5/",
+        "teaser": null
+      },{
+        "title": "Basic",
+        "excerpt":"Let \\(\\sysm{G}\\) be an abbreviation for \\(\\sysm{(S\\fs(S\\bs NP))}\\) \\[\\begin{align} \\textit{donkey} &amp;:=&amp; \\sysm{N} &amp;:&amp; \\sysm{\\lam x.donkey'x} &amp;::&amp; et\\\\ \\textit{student}&amp;:=&amp; \\sysm{N} &amp;:&amp; \\sysm{\\lam x.student'x} &amp;::&amp; et\\\\ \\textit{John} &amp;:=&amp; \\sysm{S\\fs(S\\bs NP)} &amp;:&amp; \\sysm{\\lam p.p\\cnct{}john'} &amp;::&amp; ett\\\\ \\quad \\nonumber\\\\ \\textit{sleeps} &amp;:=&amp; \\sysm{S\\bs NP} &amp;:&amp; \\sysm{\\lam x.sleeps'x} &amp;::&amp; et\\\\ \\textit{walk(s)} &amp;:=&amp; \\sysm{S\\bs NP} &amp;:&amp; \\sysm{\\lam...","categories": [],
+        "tags": [],
+        "url": "/items/lx-basic/",
         "teaser": null
       },{
         "title": "Zero property of multiplication",
@@ -648,13 +726,13 @@ var store = [{
         "teaser": null
       },{
         "title": "The law of cosines",
-        "excerpt":"Given a triangle with sides of lengths \\(a\\), \\(b\\), and \\(c\\), and an angle \\(\\theta\\) opposite the side of length \\(c\\), the law of cosines states that:   \\[c^2 = a^2 + b^2 - 2ab \\cos(\\theta) \\nonumber\\]  ","categories": [],
+        "excerpt":"Given a triangle with sides of lengths \\(a\\), \\(b\\), and \\(c\\), and an angle \\(\\theta\\) opposite the side of length \\(c\\), the law of cosines states that:   \\[c^2 = a^2 + b^2 - 2ab \\cos(\\theta) \\nonumber\\] ","categories": [],
         "tags": [],
         "url": "/items/th-law-of-cosines/",
         "teaser": null
       },{
         "title": "Total Probability",
-        "excerpt":"Let a collection of sets \\(\\mathcal{A}= \\lbrace A_i:A_i \\subseteq \\Omega\\rbrace\\) be such that,      each \\(x\\in \\Omega\\) occurs in exactly one \\(A_i \\in \\mathcal{A}\\) (partition);   and  \\(P(A_i) &gt; 0\\) for each \\(A_i\\in\\mathcal{A}\\),   then for any event \\(B\\subseteq \\Omega\\):   \\[P(B) = \\sum_{i}^{} P(A_i \\cap B) = \\sum_{i}^{}{P(B\\given A_i) P(A_i)}\\]  ","categories": [],
+        "excerpt":"Let a collection of sets \\(\\mathcal{A}= \\lbrace A_i:A_i \\subseteq \\Omega\\rbrace\\) be such that,      each \\(x\\in \\Omega\\) occurs in exactly one \\(A_i \\in \\mathcal{A}\\) (partition);   and  \\(P(A_i) &gt; 0\\) for each \\(A_i\\in\\mathcal{A}\\),   then for any event \\(B\\subseteq \\Omega\\):   \\[P(B) = \\sum_{i}^{} P(A_i \\cap B) = \\sum_{i}^{}{P(B\\given A_i) P(A_i)}\\] ","categories": [],
         "tags": [],
         "url": "/items/th-total-probability/",
         "teaser": null
@@ -726,13 +804,13 @@ var store = [{
         "teaser": null
       },{
         "title": "Mts T1",
-        "excerpt":"\\begin{tikzpicture}[scale=1.5] \t\\Tree [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ] \\end{tikzpicture} ","categories": [],
+        "excerpt":"\\begin{tikzpicture}[scale=1.5] \t\\Tree [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ] \\end{tikzpicture}","categories": [],
         "tags": [],
         "url": "/tikz/mts-t1/",
         "teaser": null
       },{
         "title": "Mts T2",
-        "excerpt":"\\begin{tikzpicture}[scale=1.5]  \t\\Tree [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ]  \t\t\t  [.\\sysm{\\tcon{mary}{e}} ] \t] \\end{tikzpicture} ","categories": [],
+        "excerpt":"\\begin{tikzpicture}[scale=1.5]  \t\\Tree [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ]  \t\t\t  [.\\sysm{\\tcon{mary}{e}} ] \t] \\end{tikzpicture}","categories": [],
         "tags": [],
         "url": "/tikz/mts-t2/",
         "teaser": null
@@ -744,7 +822,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Tk Mts 3",
-        "excerpt":"\\begin{tikzpicture}[scale=1.5] \\Tree [.\\sysm{(\\forall x ((loves'\\cnct x)\\cnct mary'))_{t}} \t\t  [.\\sysm{\\forall x} \\sysm{\\forall} \\sysm{x_{e}} ]  \t      [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ]  \t\t\t  [.\\sysm{\\tcon{mary}{e}} ] \t] ] \\end{tikzpicture} ","categories": [],
+        "excerpt":"\\begin{tikzpicture}[scale=1.5] \\Tree [.\\sysm{(\\forall x ((loves'\\cnct x)\\cnct mary'))_{t}} \t\t  [.\\sysm{\\forall x} \\sysm{\\forall} \\sysm{x_{e}} ]  \t      [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ]  \t\t\t  [.\\sysm{\\tcon{mary}{e}} ] \t] ] \\end{tikzpicture}","categories": [],
         "tags": [],
         "url": "/tikz/tk-mts-3/",
         "teaser": null
@@ -785,8 +863,8 @@ var store = [{
     "title": "Code browser",
     "excerpt":"Language: Any Python Haskell Type: Any Module Snippet collatz python · module Various goodies related to Collatz conjecture. funcutils python · module A utility module for functional abstractions. Files python · snippet Working with files in Python. Plotting python · snippet Plotting in Python. A sequence processor python · module...","url": "https://umutozge.github.io/code/browser/"
   },{
-    "title": "Exercise browser",
-    "excerpt":"counting 1 discrete 2 funprog 1 grammar 1 iteration 1 language 4 linear algebra 1 lists 1 logic 1 number theory 2 parsing 1 probability 3 programming 1 proof 1 python 3 recursion 2 semantics 2 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. CCG Exercises...","url": "https://umutozge.github.io/exercise/browser/"
+    "title": "Workbook browser",
+    "excerpt":"counting 1 discrete 2 funprog 1 grammar 1 iteration 1 language 6 linear algebra 1 lists 1 logic 2 number theory 2 parsing 1 probability 2 programming 1 proof 1 python 3 recursion 2 semantics 3 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. CCG Exercises...","url": "https://umutozge.github.io/exercise/browser/"
   },{
     "title": "COGS 543",
     "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Some exercises on this course may require some helper code. Please visit coursepy on how to get and install the helper code. Make sure you are on...","url": "https://umutozge.github.io/cl/schedule/"
@@ -923,8 +1001,14 @@ var store = [{
     "title": "Solution: Grammar for arithmetic",
     "excerpt":"```python from coursepy.lang.parsing import make_parser, make_cfg grammar_text=\"\"\" E -> E O E E -> LP E RP E -> '1'|'2'|'3'|'4' O -> '+'|'*' LP -> '(' RP -> ')' \"\"\" parser = make_parser(make_cfg(grammar_text)) for e in \"3 + 4,3 + 4 * 2,( 3 + 4 ) * 2\".split(\",\"): print(f\"Parse(s)...","url": "https://umutozge.github.io/solutions/ex-arithmetic-grammar/"
   },{
+    "title": "Solution: Logical form to lexicon and derivation",
+    "excerpt":"               Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-ccg-derivation-2/"
+  },{
+    "title": "Solution: Lexicon to derivation",
+    "excerpt":"                 Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-ccg-derivation/"
+  },{
     "title": "Solution: FOL basics",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-fol-basics/"
+    "excerpt":"1. You have two predicates $p$ and $q$. Express the following situations in first order logic: 1. there is no $$p$$ that is not also $$q$$. @@math_item|content=$$\\forall x.px\\cond qx$$@@ 1. there is exactly one $$p$$. @@math_item|content=$$\\exists x.px\\land \\forall y. py \\cond y = x$$@@ 1. there are exactly two $p$s....","url": "https://umutozge.github.io/solutions/ex-fol-basics/"
   },{
     "title": "Solution: Basics",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-lambda-basics/"
@@ -937,6 +1021,9 @@ var store = [{
   },{
     "title": "Solution: Reduction",
     "excerpt":"1. @@math_item|content=$$(\\lambda x. (m\\,\\, x))\\,\\,j$$@@ $$ \\begin{align*} \\equiv_\\beta &\\,\\, m\\,\\, j \\end{align*} $$ 1. @@math_item|content=$$(\\lambda y. (y\\,\\, j))\\,\\,m$$@@ $$ \\begin{align*} \\equiv_\\beta &\\,\\, m\\,\\, j \\end{align*} $$ 1. @@math_item|content=$$((\\lambda x.(\\lambda y. (y\\,\\,(y\\,\\, x))))\\,\\, j)\\,\\,m$$@@ $$ \\begin{align*} \\equiv_\\beta &\\,\\, (\\lambda y. (y\\,\\,(y\\,\\, j)))\\,\\, m \\\\ \\equiv_\\beta &\\,\\, m\\,\\,(m\\,\\, j) \\end{align*} $$ 1....","url": "https://umutozge.github.io/solutions/ex-lambda-reduction/"
+  },{
+    "title": "Solution: Translation",
+    "excerpt":"1. No one speaks French. (Note: you can take _speak French_ as a single lexical item. But, if you like, try to take the two words separately.) @@math_item|content=$$\\neg\\exists x.sf'x$$@@ Decomposing _speak French_: @@math_item|content=$$\\neg\\exists y. speak'french'y$$@@ 1. No one speaks French or Arabic: @@math_item|content=$$\\neg\\exists x. sf'x \\lor sa'x$$@@\\\\ No one speaks...","url": "https://umutozge.github.io/solutions/ex-logic-translation/"
   },{
     "title": "Solution: Logical relations",
     "excerpt":"All the answers are given under the assumption that no model can have an empty domain. $$ \\begin{gather} \\forall x.\\con{p}x\\rightarrow \\con{q}x&\\not\\models &\\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x\\rightarrow \\con{q}x&\\not\\models & \\exists x.\\con{q}x\\\\ \\exists x.\\con{p}x\\wedge \\con{q}x&\\models & \\exists x.\\con{p}x\\\\ \\forall x.\\con{p}x &\\models &\\exists x.\\con{p}x\\\\ \\neg\\exists x\\,\\con{r}x&\\models & \\forall x.\\neg\\con{r}x\\\\ \\forall x.\\con{p}x\\land\\con{r}x&\\not\\models & \\forall x.\\con{p}x\\rightarrow...","url": "https://umutozge.github.io/solutions/ex-logical-relations/"
@@ -1030,6 +1117,9 @@ var store = [{
   },{
     "title": "Solution: Length",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-length/"
+  },{
+    "title": "Solution: Map tree",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-maptree/"
   },{
     "title": "Solution: Deep Max",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-max/"
