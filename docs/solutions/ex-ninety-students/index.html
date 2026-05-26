@@ -171,17 +171,55 @@
 
 
 
+
+
 <div id="main" role="main">
   
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Solution: Ninety students">
     
-      <h1 id="page-title" class="page__title">Solution: Ninety students</h1>
     
-    <main>
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+              <h1 id="page-title" class="page__title" itemprop="headline">
+                <a href="https://umutozge.github.io/solutions/ex-ninety-students/" itemprop="url">Solution: Ninety students
+</a>
+              </h1>
+            
+          
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <main>
+		<hr>
   <div class="numbered">
-    <p>Solution not written yet.</p>
+    <p>The elegant solution is to randomly assign a number from between 1 and 90
+inclusive to Jane, where groups are defined by the numbers (1-30, 31-60, 61-90).
+Now the probability that Joe is assigned to the same group as Jane is
+\(\frac{29}{89}\).</p>
+
+<p>The more complicated solution is to think of groups one at a time. The
+probability that Joe and Jane are both in the first group is to divide the number
+of ways that this can happen by the total number of ways that the first
+group can be formed. There are \({88 \choose 28}\) ways  to form the first group
+with Joe and Jane, and \({90 \choose 30}\) ways to form the first group without
+any restrictions. Therefore the probability that Joe and Jane both fall into the
+first group is \({88 \choose 28} / {90 \choose 30}\). By symmetry, the
+probability that Joe and Jane both fall into the second or third group is the
+same, so the total probability that Joe and Jane end up in the same group is
+\(3 \cdot {88 \choose 28} / {90 \choose 30}\).</p>
+
 <hr />
 
 <div class="solution-actions">
@@ -193,7 +231,30 @@
   </div>
 </main>
 
-  </div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+        
+
+      </footer>
+
+      
+
+      
+
+    </div>
+
+    
+  </article>
+
+  
+  
 </div>
 
       

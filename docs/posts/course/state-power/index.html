@@ -112,7 +112,7 @@
 
   </head>
 
-  <body class="layout--single wide" dir="ltr">
+  <body class="layout--numbered wide" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -177,64 +177,6 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-  
-    
-      
-      
-      
-      
-    
-    
-      <nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle Menu</label>
-  <ul class="nav__items">
-    
-      
-      
-        <li>
-          
-            <span class="nav__sub-title">Courses</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/prelim/schedule/">COGS 502</a></li>
-            
-              <li><a href="/cl/schedule/">COGS 543</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <a href="/exercise/browser/"><span class="nav__sub-title">Workbooks</span></a>
-          
-
-          
-        </li>
-      
-        <li>
-          
-            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
-          
-
-          
-        </li>
-      
-    
-  </ul>
-</nav>
-
-    
-  
-  </div>
-
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -276,7 +218,15 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Computation can be thought of as a sequence of states, where there is a meaningful relation between the initial and the final state. Think of summing the first \(n\) positive integers. One strategy is to start with an empty store (or accumulator), and (i) either adding \(n\), then \(n-1\), and so on, to the store until you reach 1; or (ii) adding 1, then 2, and so on, to the store until you reach \(n\), and returning the store at the end.</p>
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list"></i> Contents</h4></header>
+              
+            </nav>
+          </aside>
+        
+        <div class="numbered">
+  <p>Computation can be thought of as a sequence of states, where there is a meaningful relation between the initial and the final state. Think of summing the first \(n\) positive integers. One strategy is to start with an empty store (or accumulator), and (i) either adding \(n\), then \(n-1\), and so on, to the store until you reach 1; or (ii) adding 1, then 2, and so on, to the store until you reach \(n\), and returning the store at the end.</p>
 
 <p>There is a cyclic pattern in this computation. In each cycle the values of \(n\) and  \(store\) change, while the method of computing the next number in the sequence (increasing or decreasing by 1) and the condition on when to stop (\(= 1\) or \(=n\) ) stay constant.</p>
 
@@ -472,6 +422,38 @@ as we were able to keep track of multiple pieces of information in each cycle of
       <p>You can map 0 and 1 to <code class="language-plaintext highlighter-rouge">False</code> and <code class="language-plaintext highlighter-rouge">True</code> respectively by applying the built-in <code class="language-plaintext highlighter-rouge">bool</code> to them. Actually <code class="language-plaintext highlighter-rouge">bool</code> returns <code class="language-plaintext highlighter-rouge">True</code> for any integer other than 0. <a href="#fnref:bool" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Build a map of id → { label, number }
+  const itemMap = {};
+  document.querySelectorAll('.numbered').forEach(container => {
+    let count = 0;
+    container.querySelectorAll('.item').forEach(item => {
+      if (!item.id) return;
+      count++;
+      itemMap[item.id] = {
+        label: item.dataset.label ?? 'Item',
+        number: count
+      };
+    });
+  });
+
+  // Fill in all cross-reference links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    if (itemMap[id]) {
+      const { label, number } = itemMap[id];
+      // Only replace if the author left it empty, or always replace
+      if (!link.textContent.trim()) {
+        link.textContent = `${label} ${number}`;
+      }
+    }
+  });
+});
+</script>
 </div>
 
         

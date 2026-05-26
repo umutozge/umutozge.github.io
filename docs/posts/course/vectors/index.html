@@ -112,7 +112,7 @@
 
   </head>
 
-  <body class="layout--numbered" dir="ltr">
+  <body class="layout--numbered no-left-sidebar" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -177,64 +177,6 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-  
-    
-      
-      
-      
-      
-    
-    
-      <nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle Menu</label>
-  <ul class="nav__items">
-    
-      
-      
-        <li>
-          
-            <span class="nav__sub-title">Courses</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/prelim/schedule/">COGS 502</a></li>
-            
-              <li><a href="/cl/schedule/">COGS 543</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <a href="/exercise/browser/"><span class="nav__sub-title">Workbooks</span></a>
-          
-
-          
-        </li>
-      
-        <li>
-          
-            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
-          
-
-          
-        </li>
-      
-    
-  </ul>
-</nav>
-
-    
-  
-  </div>
-
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -275,6 +217,13 @@
       
 
       <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list"></i> Contents</h4></header>
+              <ul class="toc__menu"><li><a href="#element-wise-operations">Element-wise operations</a></li><li><a href="#norm-of-a-vector">Norm of a vector</a><ul><li><a href="#properties-of-the-norm-function">Properties of the norm function</a></li></ul></li></ul></li><li><a href="#dimensions">Dimensions</a></li><li><a href="#dot-product">Dot product</a></li></ul>
+            </nav>
+          </aside>
         
         <div class="numbered">
   <p>When we model the world through mathematics, we frequently find ourselves talking

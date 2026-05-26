@@ -143,8 +143,8 @@ var store = [{
         "url": "/exercises/ccg/",
         "teaser": null
       },{
-        "title": "Combinatorics",
-        "excerpt":"How many positive integers are there less than 1000000 (a million), such that: its digits are all distinct; (25% of the total score) it is even; (25% of the total score) have exactly 3 identical digits. (50% of the total score) Handle each condition independently. 🗝️ How many ways are...","categories": [],
+        "title": "Counting",
+        "excerpt":"How many positive integers are there less than 1000000 (a million), such that: its digits are all distinct; it is even; have exactly 3 identical digits. Handle each condition independently. 🗝️ How many ways are there for eight men and five women to stand in a line so that no...","categories": [],
         "tags": ["counting"],
         "url": "/exercises/combinatorics/",
         "teaser": null
@@ -335,10 +335,28 @@ var store = [{
         "url": "/items/eg-simple-model/",
         "teaser": null
       },{
+        "title": "Count sentences",
+        "excerpt":"How many 6-word sentences can be made using each of the 26 letters of the alphabet exactly once? A word is defined as a nonempty (possibly jibberish) sequence of letters.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-count-sentences/",
+        "teaser": null
+      },{
         "title": "Counting integers",
-        "excerpt":"How many positive integers are there less than 1000000 (a million), such that:      its digits are all distinct; (25% of the total score)   it is even; (25% of the total score)   have exactly 3 identical digits. (50% of the total score)   Handle each condition independently.  ","categories": [],
+        "excerpt":"How many positive integers are there less than 1000000 (a million), such that:      its digits are all distinct;   it is even;   have exactly 3 identical digits.   Handle each condition independently.  ","categories": [],
         "tags": [],
         "url": "/items/ex-counting-integers/",
+        "teaser": null
+      },{
+        "title": "Curriculum",
+        "excerpt":"An academic department offers 8 lower level courses: \\(\\lbrace L_1, L_2,\\ldots, L_8\\rbrace\\) and 10 higher level courses: \\(\\lbrace H_1, H_2,\\ldots, H_{10}\\rbrace\\). A valid curriculum consists of 4 lower level courses. and 3 higher level courses. How many different curricula are possible? Suppose that \\(\\lbrace H_1, \\ldots, H_5\\rbrace\\) have \\(L_1\\) as...","categories": [],
+        "tags": [],
+        "url": "/items/ex-curriculum/",
+        "teaser": null
+      },{
+        "title": "lemons",
+        "excerpt":"A parking lot contains 100 cars, \\(k\\) of which happen to be lemons (=in a bad unreliable condition). We select \\(m\\) of these cars at random and take them for a test drive. Find the probability that \\(n\\) of the cars tested turn out to be lemons.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-lemons/",
         "teaser": null
       },{
         "title": "Men and women",
@@ -351,6 +369,12 @@ var store = [{
         "excerpt":"Ninety students, including Joe and Jane, are to be split into three classes of equal size, and this is to be done at random. What is the probability that Joe and Jane end up in the same class?  ","categories": [],
         "tags": [],
         "url": "/items/ex-ninety-students/",
+        "teaser": null
+      },{
+        "title": "Top seven",
+        "excerpt":"We draw the top 7 cards from a well-shuffled standard 52-card deck. Find the probability that: The 7 cards include exactly 3 aces. The 7 cards include exactly 2 kings. The probability that the 7 cards include exactly 3 aces. or exactly 2 kings, or both. Check here the definiton...","categories": [],
+        "tags": [],
+        "url": "/items/ex-top-seven/",
         "teaser": null
       },{
         "title": "Grammar for arithmetic",
@@ -473,6 +497,12 @@ var store = [{
         "url": "/items/ex-four-spades-out/",
         "teaser": null
       },{
+        "title": "Eight rooks",
+        "excerpt":"Eight rooks are placed in distinct squares of an \\(8 \\times 8\\) chessboard, with all possible placements being equally likely. Find the probability that all the rooks are safe from one another, i.e. that there is no row or column with more than one rook.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-eight-rooks/",
+        "teaser": null
+      },{
         "title": "Flip",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": [],
@@ -507,6 +537,12 @@ var store = [{
         "excerpt":"Alice and Bob have \\(2 n + 1\\) coins, each coin with probability of heads equal to \\(1/2\\). Bob tosses \\(n+1\\) coins, while Alice tosses the remaining \\(n\\) coins. Assuming independent coin tosses, show that the probability that after all coins have been tossed, Bob will have gotten more heads...","categories": [],
         "tags": [],
         "url": "/items/ex-more-heads/",
+        "teaser": null
+      },{
+        "title": "Parking cars",
+        "excerpt":"Twenty distinct cars park in the same parking lot every day. Ten of these cars are US-made. while the other ten are foreign-made. The parking lot has exactly twenty spaces, all in a row, so the cars park side by side. However, the drivers have varying schedules, so the position...","categories": [],
+        "tags": [],
+        "url": "/items/ex-parking-cars/",
         "teaser": null
       },{
         "title": "The prisoner's dilemma",
@@ -636,31 +672,31 @@ var store = [{
         "teaser": null
       },{
         "title": "",
-        "excerpt":"          ","categories": [],
+        "excerpt":"         ","categories": [],
         "tags": [],
         "url": "/items/tr-mts-1/",
         "teaser": null
       },{
         "title": "",
-        "excerpt":"          ","categories": [],
+        "excerpt":"         ","categories": [],
         "tags": [],
         "url": "/items/tr-mts-2/",
         "teaser": null
       },{
         "title": "",
-        "excerpt":"          ","categories": [],
+        "excerpt":"         ","categories": [],
         "tags": [],
         "url": "/items/tr-mts-3/",
         "teaser": null
       },{
         "title": "",
-        "excerpt":"          ","categories": [],
+        "excerpt":"         ","categories": [],
         "tags": [],
         "url": "/items/tr-mts-4/",
         "teaser": null
       },{
         "title": "",
-        "excerpt":"          ","categories": [],
+        "excerpt":"         ","categories": [],
         "tags": [],
         "url": "/items/tr-mts-5/",
         "teaser": null
@@ -803,40 +839,40 @@ var store = [{
         "url": "/posts/course/vectors/",
         "teaser": null
       },{
-        "title": "Mts T1",
-        "excerpt":"\\begin{tikzpicture}[scale=1.5] \t\\Tree [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ] \\end{tikzpicture}","categories": [],
-        "tags": [],
-        "url": "/tikz/mts-t1/",
-        "teaser": null
-      },{
-        "title": "Mts T2",
-        "excerpt":"\\begin{tikzpicture}[scale=1.5]  \t\\Tree [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ]  \t\t\t  [.\\sysm{\\tcon{mary}{e}} ] \t] \\end{tikzpicture}","categories": [],
-        "tags": [],
-        "url": "/tikz/mts-t2/",
-        "teaser": null
-      },{
         "title": "Prisoners Dilemma",
         "excerpt":"\\begin{tikzpicture}[ every node/.style={inner sep=2pt}, edge/.style={draw, -latex} ] % Root \\node (root) at (0,0) {}; % Level 1 nodes \\node (A) at (2, -3) {$C$}; \\node (B) at (2, 0) {$B$}; \\node (C) at (2, 3) {$A$}; % Level 2 nodes under A \\node (AgB) at (4, -3.75) {$G_C$}; \\node (AgC)...","categories": [],
         "tags": [],
         "url": "/tikz/prisoners-dilemma/",
         "teaser": null
       },{
-        "title": "Tk Mts 3",
+        "title": "Tr Mts 1",
+        "excerpt":"\\begin{tikzpicture}[scale=1.5] \t\\Tree [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ] \\end{tikzpicture}","categories": [],
+        "tags": [],
+        "url": "/tikz/tr-mts-1/",
+        "teaser": null
+      },{
+        "title": "Tr Mts 2",
+        "excerpt":"\\begin{tikzpicture}[scale=1.5]  \t\\Tree [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ]  \t\t\t  [.\\sysm{\\tcon{mary}{e}} ] \t] \\end{tikzpicture}","categories": [],
+        "tags": [],
+        "url": "/tikz/tr-mts-2/",
+        "teaser": null
+      },{
+        "title": "Tr Mts 3",
         "excerpt":"\\begin{tikzpicture}[scale=1.5] \\Tree [.\\sysm{(\\forall x ((loves'\\cnct x)\\cnct mary'))_{t}} \t\t  [.\\sysm{\\forall x} \\sysm{\\forall} \\sysm{x_{e}} ]  \t      [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}}    \t\t\t\t$\\tcon{loves}{\\Teet}$  \t\t\t\t$x_{e}$ ]  \t\t\t  [.\\sysm{\\tcon{mary}{e}} ] \t] ] \\end{tikzpicture}","categories": [],
         "tags": [],
-        "url": "/tikz/tk-mts-3/",
+        "url": "/tikz/tr-mts-3/",
         "teaser": null
       },{
-        "title": "Tk Mts 4",
+        "title": "Tr Mts 4",
         "excerpt":"\\begin{tikzpicture} \\Tree [.\\sysm{(\\forall x ((\\cond ((loves'\\cnct x)\\cnct mary')) (\\exists y (broken'\\cnct y))))_{t}} [.\\sysm{\\forall x} \\sysm{\\forall} \\sysm{x_{e}} ] [.\\sysm{((\\cond ((loves'\\cnct x)\\cnct mary')) (\\exists y (broken'\\cnct y)))_{t}} [.\\sysm{(\\cond ((loves'\\cnct x)\\cnct mary'))_{\\smtyp{t}{t}}} \\sysm{\\cond_{\\smtyp{t}{\\smtyp{t}{t}}}} [.\\sysm{((loves'\\cnct x)\\cnct mary')_{t}} [.\\sysm{(loves'\\cnct x)_{\\Tet}} $\\tcon{loves}{\\Teet}$ $x_{e}$ ] [.\\sysm{\\tcon{mary}{e}} ] ] ] [.\\sysm{(\\exists y (broken'\\cnct y))_{t}} [.\\sysm{\\exists y} \\sysm{\\exists} \\sysm{y_{e}}...","categories": [],
         "tags": [],
-        "url": "/tikz/tk-mts-4/",
+        "url": "/tikz/tr-mts-4/",
         "teaser": null
       },{
-        "title": "Tk Mts 5",
+        "title": "Tr Mts 5",
         "excerpt":"\\begin{tikzpicture} \\Tree [.\\sysm{\\forall x (\\cond (loves' x\\cnct mary')\\cnct (\\exists y (broken' y)))} [.\\sysm{\\forall x} \\sysm{\\forall} \\sysm{x_{e}} ] [.\\sysm{\\cond (loves' x\\cnct mary')\\cnct (\\exists y (broken' y))} [.\\sysm{\\cond (loves' x\\cnct mary')} \\sysm{\\cond_{\\smtyp{t}{\\smtyp{t}{t}}}} [.\\sysm{loves'\\cnct x\\cnct mary'} [.\\sysm{loves' x} $\\tcon{loves}{\\Teet}$ $x_{e}$ ] [.\\sysm{\\tcon{mary}{e}} ] ] ] [.\\sysm{\\exists y (broken' y)} [.\\sysm{\\exists y} \\sysm{\\exists} \\sysm{y_{e}}...","categories": [],
         "tags": [],
-        "url": "/tikz/tk-mts-5/",
+        "url": "/tikz/tr-mts-5/",
         "teaser": null
       },{
         "title": "Two Envelopes",
@@ -866,11 +902,11 @@ var store = [{
     "title": "Workbook browser",
     "excerpt":"counting 1 discrete 2 funprog 1 grammar 1 iteration 1 language 6 linear algebra 1 lists 1 logic 2 number theory 2 parsing 1 probability 2 programming 1 proof 1 python 3 recursion 2 semantics 3 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. CCG Exercises...","url": "https://umutozge.github.io/exercise/browser/"
   },{
-    "title": "COGS 543",
-    "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Some exercises on this course may require some helper code. Please visit coursepy on how to get and install the helper code. Make sure you are on...","url": "https://umutozge.github.io/cl/schedule/"
-  },{
     "title": "COGS 502",
     "excerpt":"Spring 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ T 2:40-5:30, II03 Check the current syllabus for course information and policies. Some exercises on this course may require some helper code. Please visit coursepy on how to get and install the helper code. Make sure you are on...","url": "https://umutozge.github.io/prelim/schedule/"
+  },{
+    "title": "COGS 543",
+    "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Some exercises on this course may require some helper code. Please visit coursepy on how to get and install the helper code. Make sure you are on...","url": "https://umutozge.github.io/cl/schedule/"
   },{
     "title": "COGS 526",
     "excerpt":"Spring 2026 Umut Özge (✉️), Anıl Öğdül (TA, ✉️) 🕐 W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. ✳️ marks optional material. Week Content 1&nbsp;(18/2) Why logic is still relevant for cognitive science and AI...","url": "https://umutozge.github.io/courses/lccm/schedule/"
@@ -989,14 +1025,26 @@ var store = [{
     "title": "A logic for default reasoning",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/reiter-default/"
   },{
+    "title": "Solution: Count sentences",
+    "excerpt":"I would go as follows: the 26 letters can be laid out as a sequence in 26! ways. For each sequence, we can split it into 6 words by placin 5 dividers in 25 possible places. So the total number of sentences is $$26! \\cdot {25 \\choose 5 }$$. Back...","url": "https://umutozge.github.io/solutions/ex-count-sentences/"
+  },{
     "title": "Solution: Counting integers",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-counting-integers/"
+    "excerpt":"How many positive integers are there less than 1000000 (a million), such that: 1. its digits are all distinct; **Solution:** A positive integer less than 1000000 has at most 6 digits. To count those that do not repeat any digit, we need to handle the cases of 1, 2, 3,...","url": "https://umutozge.github.io/solutions/ex-counting-integers/"
+  },{
+    "title": "Solution: Curriculum",
+    "excerpt":"The total count of curricula: $${8 \\choose 4}\\cdot{10 \\choose 3}$$ To handle the prerequisites we need to consider the problem case by case. It needs some care to organize the cases. Let's agree on a scheme where a 3-tuple of 0's and 1's represents the absence and presence of low-level...","url": "https://umutozge.github.io/solutions/ex-curriculum/"
+  },{
+    "title": "Solution: lemons",
+    "excerpt":"          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-lemons/"
   },{
     "title": "Solution: Men and women",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-men-women/"
+    "excerpt":"Let's first tackle the arrangment problem. Fix 8 men into the line. There are 9 slots where you can place a woman. Therefore the number of arrangments is $${9 \\choose 5}$$. For each such arrangment, there are $$5!$$ and $$8!$$ ways to arrange the women and the men among themselves,...","url": "https://umutozge.github.io/solutions/ex-men-women/"
   },{
     "title": "Solution: Ninety students",
-    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-ninety-students/"
+    "excerpt":"The elegant solution is to randomly assign a number from between 1 and 90 inclusive to Jane, where groups are defined by the numbers (1-30, 31-60, 61-90). Now the probability that Joe is assigned to the same group as Jane is $$\\frac{29}{89}$$. The more complicated solution is to think of...","url": "https://umutozge.github.io/solutions/ex-ninety-students/"
+  },{
+    "title": "Solution: Top seven",
+    "excerpt":"**Exactly three aces:** First pick the three aces out of four aces in the deck and then pick the remaning 4 cards from the remaining 48 cards. This, divided by the total number of possible selections of top 7 cards, gives the answer, $$ \\frac{ {4 \\choose 3} \\cdot {48...","url": "https://umutozge.github.io/solutions/ex-top-seven/"
   },{
     "title": "Solution: Grammar for arithmetic",
     "excerpt":"```python from coursepy.lang.parsing import make_parser, make_cfg grammar_text=\"\"\" E -> E O E E -> LP E RP E -> '1'|'2'|'3'|'4' O -> '+'|'*' LP -> '(' RP -> ')' \"\"\" parser = make_parser(make_cfg(grammar_text)) for e in \"3 + 4,3 + 4 * 2,( 3 + 4 ) * 2\".split(\",\"): print(f\"Parse(s)...","url": "https://umutozge.github.io/solutions/ex-arithmetic-grammar/"
@@ -1005,7 +1053,7 @@ var store = [{
     "excerpt":"               Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-ccg-derivation-2/"
   },{
     "title": "Solution: Lexicon to derivation",
-    "excerpt":"                 Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-ccg-derivation/"
+    "excerpt":"@@svg|ex-ccg-derivation-1@@ @@svg|ex-ccg-derivation-2@@ @@svg|ex-ccg-derivation-3@@ @@svg|ex-ccg-derivation-4@@            Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-ccg-derivation/"
   },{
     "title": "Solution: FOL basics",
     "excerpt":"1. You have two predicates $p$ and $q$. Express the following situations in first order logic: 1. there is no $$p$$ that is not also $$q$$. @@math_item|content=$$\\forall x.px\\cond qx$$@@ 1. there is exactly one $$p$$. @@math_item|content=$$\\exists x.px\\land \\forall y. py \\cond y = x$$@@ 1. there are exactly two $p$s....","url": "https://umutozge.github.io/solutions/ex-fol-basics/"
@@ -1058,6 +1106,9 @@ var store = [{
     "title": "Solution: Four spades out",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-four-spades-out/"
   },{
+    "title": "Solution: Eight rooks",
+    "excerpt":"Let's place the rooks one by one, indexing them starting with 0. Let $$P(n)$$ denote the probabiity that the rook $$n$$ drops to a safe square given that the previous $$n-1$$ rooks were placed safely. Obviously $$P(0)$$ is 1. For $$P(1)$$, we have $$64 - 15$$ safe squares out of...","url": "https://umutozge.github.io/solutions/ex-eight-rooks/"
+  },{
     "title": "Solution: Flip",
     "excerpt":"All you can expect from Python is to generate for you a random number in $$[1,0)$$. In an unbiased `flip` all the shots of `random` below 0.5 would be `True` and above would be `False`, or vice versa. Now you can adjust the bias of the `flip` with the parameter...","url": "https://umutozge.github.io/solutions/ex-flip/"
   },{
@@ -1075,6 +1126,9 @@ var store = [{
   },{
     "title": "Solution: More heads for Bob",
     "excerpt":"There is an elegant solution to the problem, which is, at least for me, not easy to come by. I'll come back to it after I discuss my not-so-elegant solution. If you already discovered the \"harder\" solution, congratulate yourself, and feel free to ignore the rest of this page. There...","url": "https://umutozge.github.io/solutions/ex-more-heads/"
+  },{
+    "title": "Solution: Parking cars",
+    "excerpt":"The cars can line up in $$20!$$ different ways, too many variations for a simple parking space. There are 2 arrangments of the cars that alternate: starting with US-made and starting with foreign-made. The total number of arrangments is $${ 20 \\choose 10} $$, since a specific arrangment is about...","url": "https://umutozge.github.io/solutions/ex-parking-cars/"
   },{
     "title": "Solution: The prisoner's dilemma",
     "excerpt":"Let's name the prisoners $$A$$, $$B$$ and $$C$$, where ours is $$A$$. The two possible responses of the guard are $$G_B$$ and $$G_C$$. The prisoner $$A$$ thinks that the probability that he will be released is $$P(A_r)=2/3$$. He also thinks that the probability that his chances of being released gets...","url": "https://umutozge.github.io/solutions/ex-prisoners-dilemma/"

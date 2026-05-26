@@ -112,7 +112,7 @@
 
   </head>
 
-  <body class="layout--single wide" dir="ltr">
+  <body class="layout--numbered no-left-sidebar" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -177,64 +177,6 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-  
-    
-      
-      
-      
-      
-    
-    
-      <nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle Menu</label>
-  <ul class="nav__items">
-    
-      
-      
-        <li>
-          
-            <span class="nav__sub-title">Courses</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/prelim/schedule/">COGS 502</a></li>
-            
-              <li><a href="/cl/schedule/">COGS 543</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <a href="/exercise/browser/"><span class="nav__sub-title">Workbooks</span></a>
-          
-
-          
-        </li>
-      
-        <li>
-          
-            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
-          
-
-          
-        </li>
-      
-    
-  </ul>
-</nav>
-
-    
-  
-  </div>
-
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -276,7 +218,15 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>When I say “Call a plumber”, you need to know the meaning of “plumber” and “call”, and enough English syntax to be able to execute the command. In case you know what “call” means but not “plumber”, you consult a dictionary before you are ready to execute the command. I could have also said “Call someone who installs, repairs, and maintains piping, fittings, and fixtures involved in the distribution and use of water in a building”, substituting the Merriam-Webster definition of “plumber” for the word itself. This would save you the dictionary lookup.</p>
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list"></i> Contents</h4></header>
+              
+            </nav>
+          </aside>
+        
+        <div class="numbered">
+  <p>When I say “Call a plumber”, you need to know the meaning of “plumber” and “call”, and enough English syntax to be able to execute the command. In case you know what “call” means but not “plumber”, you consult a dictionary before you are ready to execute the command. I could have also said “Call someone who installs, repairs, and maintains piping, fittings, and fixtures involved in the distribution and use of water in a building”, substituting the Merriam-Webster definition of “plumber” for the word itself. This would save you the dictionary lookup.</p>
 
 <p>Let’s define a function <code class="language-plaintext highlighter-rouge">fmax(x,y,f)</code> which picks <code class="language-plaintext highlighter-rouge">x</code> or <code class="language-plaintext highlighter-rouge">y</code> according for which <code class="language-plaintext highlighter-rouge">f</code> returns the larger value:</p>
 
@@ -375,6 +325,38 @@ Statements are toxic to your programs, you need to learn to avoid them as much a
       <p>Sometimes <code class="language-plaintext highlighter-rouge">lambda</code> functions are called <em>anonymous functions</em> in the “unnamed” sense of the word. I rather find taking the definition itself as the “name” more illuminating. <a href="#fnref:anon" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Build a map of id → { label, number }
+  const itemMap = {};
+  document.querySelectorAll('.numbered').forEach(container => {
+    let count = 0;
+    container.querySelectorAll('.item').forEach(item => {
+      if (!item.id) return;
+      count++;
+      itemMap[item.id] = {
+        label: item.dataset.label ?? 'Item',
+        number: count
+      };
+    });
+  });
+
+  // Fill in all cross-reference links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    if (itemMap[id]) {
+      const { label, number } = itemMap[id];
+      // Only replace if the author left it empty, or always replace
+      if (!link.textContent.trim()) {
+        link.textContent = `${label} ${number}`;
+      }
+    }
+  });
+});
+</script>
 </div>
 
         

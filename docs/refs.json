@@ -239,6 +239,42 @@
     "label": "Exercise",
     "title": "Ninety students"
   },
+  "ex-parking-cars": {
+    "page": "/exercises/combinatorics/",
+    "number": 4,
+    "label": "Exercise",
+    "title": "Parking cars"
+  },
+  "ex-eight-rooks": {
+    "page": "/exercises/combinatorics/",
+    "number": 5,
+    "label": "Exercise",
+    "title": "Eight rooks"
+  },
+  "ex-curriculum": {
+    "page": "/exercises/combinatorics/",
+    "number": 6,
+    "label": "Exercise",
+    "title": "Curriculum"
+  },
+  "ex-count-sentences": {
+    "page": "/exercises/combinatorics/",
+    "number": 7,
+    "label": "Exercise",
+    "title": "Count sentences"
+  },
+  "ex-top-seven": {
+    "page": "/exercises/combinatorics/",
+    "number": 8,
+    "label": "Exercise",
+    "title": "Top seven"
+  },
+  "df-standard-deck": {
+    "page": "/items/ex-top-seven/",
+    "number": 1,
+    "label": "Definition",
+    "title": "Standard deck of 52"
+  },
   "ex-fol-basics": {
     "page": "/exercises/first-order-logic/",
     "number": 1,

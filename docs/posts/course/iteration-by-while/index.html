@@ -112,7 +112,7 @@
 
   </head>
 
-  <body class="layout--single" dir="ltr">
+  <body class="layout--numbered no-left-sidebar" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -177,64 +177,6 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-  
-    
-      
-      
-      
-      
-    
-    
-      <nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle Menu</label>
-  <ul class="nav__items">
-    
-      
-      
-        <li>
-          
-            <span class="nav__sub-title">Courses</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/prelim/schedule/">COGS 502</a></li>
-            
-              <li><a href="/cl/schedule/">COGS 543</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <a href="/exercise/browser/"><span class="nav__sub-title">Workbooks</span></a>
-          
-
-          
-        </li>
-      
-        <li>
-          
-            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
-          
-
-          
-        </li>
-      
-    
-  </ul>
-</nav>
-
-    
-  
-  </div>
-
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -276,7 +218,15 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Let’s start with a simple function defined over integers called the Collatz function \(C\).</p>
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list"></i> Contents</h4></header>
+              
+            </nav>
+          </aside>
+        
+        <div class="numbered">
+  <p>Let’s start with a simple function defined over integers called the Collatz function \(C\).</p>
 
 \[C(n) =
 \begin{cases}
@@ -444,6 +394,38 @@ The <strong>Collatz sequence</strong> of a given positive integer \(n\) is the s
 <p>Once again we could not follow our principle of “one thing at a time” in the above function. The source component and listener component are fused together. In the earlier case we were helpless because we did not know how to construct sequences. If we knew we could have separated the construction and length components. The reason we are helpless in the current case is that we do not know about higher order functions – functions that take other functions as arguments. Once we learn about them, we will be able to separate the source and listener components.</p>
 
 <p>Finally, notice that I wrote “The largest seed between 1 and k that produces the largest Collatz length” in the docstring. Why is that? Why did I say “the <em>largest</em> seed”?</p>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Build a map of id → { label, number }
+  const itemMap = {};
+  document.querySelectorAll('.numbered').forEach(container => {
+    let count = 0;
+    container.querySelectorAll('.item').forEach(item => {
+      if (!item.id) return;
+      count++;
+      itemMap[item.id] = {
+        label: item.dataset.label ?? 'Item',
+        number: count
+      };
+    });
+  });
+
+  // Fill in all cross-reference links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    if (itemMap[id]) {
+      const { label, number } = itemMap[id];
+      // Only replace if the author left it empty, or always replace
+      if (!link.textContent.trim()) {
+        link.textContent = `${label} ${number}`;
+      }
+    }
+  });
+});
+</script>
+</div>
 
         
       </section>

@@ -171,17 +171,89 @@
 
 
 
+
+
 <div id="main" role="main">
   
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Solution: Counting integers">
     
-      <h1 id="page-title" class="page__title">Solution: Counting integers</h1>
     
-    <main>
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+              <h1 id="page-title" class="page__title" itemprop="headline">
+                <a href="https://umutozge.github.io/solutions/ex-counting-integers/" itemprop="url">Solution: Counting integers
+</a>
+              </h1>
+            
+          
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <main>
+		<hr>
   <div class="numbered">
-    <p>Solution not written yet.</p>
+    <p>How many positive integers are there less than 1000000 (a million), such that:</p>
+
+<ol>
+  <li>
+    <p>its digits are all distinct;</p>
+
+    <p><strong>Solution:</strong> A positive integer less than 1000000 has at most 6 digits. To count those that
+ do not repeat any digit, we need to handle the cases of 1, 2, 3, 4, 5 and 6
+ digits separately. For \(n\) digit(s), the left-most digit can be any of the 9
+ non-zero digits, and the next digit will be picked from the set \(\lbrace
+ 0,\ldots,9\rbrace\) minus the digit we picked in the previous step, i.e. there are 9
+ possibilities. Therefore, for \(n\) digit(s), there are \(9 \cdot P(9,n-1)\)
+ positive numbers with distinct digits. The answer, therefore is,</p>
+
+\[9 \cdot\sum_{n=1}^6  P(9,n-1)\nonumber\]
+  </li>
+  <li>
+    <p>it is even;</p>
+
+    <p><strong>Solution:</strong> Here we do not need to handle the cases separately. A positive
+ integer less than 1000000 must pick its last digit from the set \(\lbrace 0,
+ 2,4,6,8\rbrace\), unless it is a single digit number, in which case the last
+ digit cannot be 0. The remaining digits – 5 of them – can be picked from the
+ set \(\lbrace 0,1,2,3,4,5,6,7,8,9\rbrace\). Therefore the answer is \(5 \cdot
+ 10^5 - 1\). The subtracted case is the number 0, which is not a positive
+ integer.</p>
+  </li>
+  <li>
+    <p>have exactly 3 identical digits.</p>
+
+    <p><strong>Solution:</strong> Again we need to handle the cases separately. We start from 3,
+ as that’s the minimum number of digits we can have. For 3 digits, we have 9
+ possibilities. For 4, the first digit can be any of the 9 non-zero digits,
+ for the rest we can either pick a repeated digit different from the first in
+ 9 ways, or repeat the first digit two more times. Therefore, for 4,
+ we have \(9\cdot (9\cdot {3\choose 3} + 9\cdot {3 \choose 2})\). Going
+ forward, we discover that, the count we are after is:</p>
+
+\[9 + 9\cdot\sum^6_{n=4} P(9, n-3) \cdot ({n -1 \choose 3} + {n-1 \choose 2})\]
+
+    <p>In general, whenever we are asked to count the number of positive intgegers
+ less than \(10^p\) with exactly \(k\) identical digits, we can use the
+ following formula:</p>
+
+\[9 + 9\cdot\sum^p_{n=k+1} P(9, n-k) \cdot ({n-1 \choose k} + {n-1 \choose k-1})\]
+
+    <p>I took some <a href="/assets/pdf/gemini.pdf">effort</a> to convince  Gemini 3.1 Pro Thinking that my solution is correct.</p>
+  </li>
+</ol>
+
 <hr />
 
 <div class="solution-actions">
@@ -193,7 +265,30 @@
   </div>
 </main>
 
-  </div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+        
+
+      </footer>
+
+      
+
+      
+
+    </div>
+
+    
+  </article>
+
+  
+  
 </div>
 
       

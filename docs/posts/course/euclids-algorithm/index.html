@@ -112,7 +112,7 @@
 
   </head>
 
-  <body class="layout--single" dir="ltr">
+  <body class="layout--numbered no-left-sidebar" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -177,64 +177,6 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-  
-    
-      
-      
-      
-      
-    
-    
-      <nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle Menu</label>
-  <ul class="nav__items">
-    
-      
-      
-        <li>
-          
-            <span class="nav__sub-title">Courses</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/prelim/schedule/">COGS 502</a></li>
-            
-              <li><a href="/cl/schedule/">COGS 543</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <a href="/exercise/browser/"><span class="nav__sub-title">Workbooks</span></a>
-          
-
-          
-        </li>
-      
-        <li>
-          
-            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
-          
-
-          
-        </li>
-      
-    
-  </ul>
-</nav>
-
-    
-  
-  </div>
-
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -276,7 +218,15 @@
 
       <section class="page__content" itemprop="text">
         
-        <p class="notice--warning"><strong>Check:</strong> Make sure you are fine with <a href="/blog/intro-number-theory">very basic number theory</a>.</p>
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list"></i> Contents</h4></header>
+              
+            </nav>
+          </aside>
+        
+        <div class="numbered">
+  <p class="notice--warning"><strong>Check:</strong> Make sure you are fine with <a href="/blog/intro-number-theory">very basic number theory</a>.</p>
 
 <blockquote class="mathbox definition" id="def:gcd">
   <p><strong>Definition</strong> (greatest common divisor) <br /><br />
@@ -378,6 +328,38 @@ Pick any \(h\in B\), then by the exact same steps in the earlier proof, you dedu
       <p>You need to show (1) that the remainders must decrease in each step, and (2) that they cannot go below 0; so eventually we must reach 0. <a href="#fnref:converge" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Build a map of id → { label, number }
+  const itemMap = {};
+  document.querySelectorAll('.numbered').forEach(container => {
+    let count = 0;
+    container.querySelectorAll('.item').forEach(item => {
+      if (!item.id) return;
+      count++;
+      itemMap[item.id] = {
+        label: item.dataset.label ?? 'Item',
+        number: count
+      };
+    });
+  });
+
+  // Fill in all cross-reference links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    if (itemMap[id]) {
+      const { label, number } = itemMap[id];
+      // Only replace if the author left it empty, or always replace
+      if (!link.textContent.trim()) {
+        link.textContent = `${label} ${number}`;
+      }
+    }
+  });
+});
+</script>
 </div>
 
         

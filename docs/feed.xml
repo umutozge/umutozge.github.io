@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-05-23T22:17:54+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-05-26T18:46:06+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
 </subtitle><entry><title type="html">Vectors</title><link href="https://umutozge.github.io/posts/course/vectors/" rel="alternate" type="text/html" title="Vectors" /><published>2026-05-17T00:00:00+03:00</published><updated>2026-05-17T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/vectors</id><content type="html" xml:base="https://umutozge.github.io/posts/course/vectors/"><![CDATA[<p>When we model the world through mathematics, we frequently find ourselves talking
 about magnitudes. Mass, length, price, and so on, are all examples of quantities
 that we use numbers to represent. We build our mathematical models in such a
@@ -550,8 +550,8 @@ through function application. A simple example:</p>
 
     
       
-<div class="tikz-display">
-  <img src="/assets/png/mts-t1.png" alt="Tree diagram" class="tikz-display__img" style="max-width: 20%;" loading="lazy" />
+<div class="svg-display" style="text-align: center;">
+  <img src="/assets/svg/tr-mts-1.svg" alt="A diagram" class="svg-display__img" loading="lazy" />
   
 </div>
 
@@ -576,8 +576,8 @@ from our vocabulary, this time a constant rather than a variable:</p>
 
     
       
-<div class="tikz-display">
-  <img src="/assets/png/mts-t2.png" alt="Tree diagram" class="tikz-display__img" style="max-width: 30%;" loading="lazy" />
+<div class="svg-display" style="text-align: center;">
+  <img src="/assets/svg/tr-mts-2.svg" alt="A diagram" class="svg-display__img" loading="lazy" />
   
 </div>
 
@@ -607,8 +607,8 @@ Now let us see Clause (3) in action.</p>
 
     
       
-<div class="tikz-display">
-  <img src="/assets/png/tk-mts-3.png" alt="Tree diagram" class="tikz-display__img" style="max-width: 40%;" loading="lazy" />
+<div class="svg-display" style="text-align: center;">
+  <img src="/assets/svg/tr-mts-3.svg" alt="A diagram" class="svg-display__img" loading="lazy" />
   
 </div>
 
@@ -643,8 +643,8 @@ Mary loves him or her, then there is someone who gets broken</em>:</p>
 
     
       
-<div class="tikz-display">
-  <img src="/assets/png/tk-mts-4.png" alt="Tree diagram" class="tikz-display__img" style="max-width: 60%;" loading="lazy" />
+<div class="svg-display" style="text-align: center;">
+  <img src="/assets/svg/tr-mts-4.svg" alt="A diagram" class="svg-display__img" style="zoom: 1.3;" loading="lazy" />
   
 </div>
 
@@ -683,8 +683,8 @@ to mentally keep track of them:</p>
 
     
       
-<div class="tikz-display">
-  <img src="/assets/png/tk-mts-5.png" alt="Tree diagram" class="tikz-display__img" style="max-width: 60%;" loading="lazy" />
+<div class="svg-display" style="text-align: center;">
+  <img src="/assets/svg/tr-mts-5.svg" alt="A diagram" class="svg-display__img" style="zoom: 1.3;" loading="lazy" />
   
 </div>
 

@@ -112,7 +112,7 @@
 
   </head>
 
-  <body class="layout--single wide" dir="ltr">
+  <body class="layout--numbered wide" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -177,64 +177,6 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-  
-    
-      
-      
-      
-      
-    
-    
-      <nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle Menu</label>
-  <ul class="nav__items">
-    
-      
-      
-        <li>
-          
-            <span class="nav__sub-title">Courses</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/prelim/schedule/">COGS 502</a></li>
-            
-              <li><a href="/cl/schedule/">COGS 543</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <a href="/exercise/browser/"><span class="nav__sub-title">Workbooks</span></a>
-          
-
-          
-        </li>
-      
-        <li>
-          
-            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
-          
-
-          
-        </li>
-      
-    
-  </ul>
-</nav>
-
-    
-  
-  </div>
-
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -276,7 +218,15 @@
 
       <section class="page__content" itemprop="text">
         
-        <p class="notice--warning"><strong>Prerequisites:</strong> <a href="/posts/course/state-power/">The power of the state</a> and <a href="/posts/course/way-of-lambda/">The way of lambda</a></p>
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list"></i> Contents</h4></header>
+              
+            </nav>
+          </aside>
+        
+        <div class="numbered">
+  <p class="notice--warning"><strong>Prerequisites:</strong> <a href="/posts/course/state-power/">The power of the state</a> and <a href="/posts/course/way-of-lambda/">The way of lambda</a></p>
 
 <p>We fortified our <code class="language-plaintext highlighter-rouge">proc_seq</code> with tuples to keep track of multiple state variables.  We scan through a sequence of numbers that proceeds according to a given rule, keeping track of various properties of the sequence, like what is the largest number seen so far according to a given criterion, or what is the sum of all numbers seen so far. We are able to scan through the sequence in pairs, triples, or more, and can keep record of multiple properties of the sequence. We can add as many state variables as we want, but these variables can hold only single values.</p>
 
@@ -499,6 +449,38 @@ The update task should not be hard to come by:</p>
       <p>Two actually; you can also ditch <code class="language-plaintext highlighter-rouge">proc_seq</code> and shift to a <code class="language-plaintext highlighter-rouge">while</code> loop solution, but not in this course, sorry. <a href="#fnref:ditch" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Build a map of id → { label, number }
+  const itemMap = {};
+  document.querySelectorAll('.numbered').forEach(container => {
+    let count = 0;
+    container.querySelectorAll('.item').forEach(item => {
+      if (!item.id) return;
+      count++;
+      itemMap[item.id] = {
+        label: item.dataset.label ?? 'Item',
+        number: count
+      };
+    });
+  });
+
+  // Fill in all cross-reference links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    if (itemMap[id]) {
+      const { label, number } = itemMap[id];
+      // Only replace if the author left it empty, or always replace
+      if (!link.textContent.trim()) {
+        link.textContent = `${label} ${number}`;
+      }
+    }
+  });
+});
+</script>
 </div>
 
         

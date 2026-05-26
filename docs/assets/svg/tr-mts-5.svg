@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="275.095741pt" height="167.278645pt" viewBox="-68.014948 -68.014943 275.095741 167.278645">
+<style type="text/css">
+@font-face{font-family:cmti7;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAAKIAAoAAAAABGwAAAI/AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAPAqCQIIPCwgAATYCJAMMBCAFgjIHIBuCAyAeA+4KRLmuHuHV1zw1Q4jB4Bnt5wPu+DqTtFWz1hatFA258sP+8v0TB4HJSWay2nZpZBvP/3u7+xtZPIqpE2HWKQCJorBnueOHKC+g2wKBLMlbC6jAW0QRxy8tsEziOEJLt6noKbGjmOuL6GsCKz2kArDQE3XwP1Y+PPJcBqyNCCiHFlzFc8+IBJyXtA4BRmhsBECBgXGujmGsAC4R6iUtIbpcUSYjMeHcA/ABACRs8XHIwqQUSmo5vzCfvXKtr21kz7UT23e7vPS48hyWvCIXX/CfWy2YrXuQey3nJfdEm9ZIdWo9YtuRXjVQc4v3XnnW15PZa9lz5RqkVtyKDgXqeH1JPW397GTP+mHJXu5aLjdyf2sNh/i90SoET3NI2iTxxScMHJXTri8R7YJ4R4FzTzM3Nc1xVHXUNFUioo2LNtivXPiVKmoxL6Ka5CThqWtOOUWQOuw05KjEnjxjCyUxe5108rEzkXZz6z5qjJa+oeNizXkCuphxx+ESzQTFPAY/YixWHdDN/McAQIBg+5f7BtL1fghoDMCMT98rF2JJGy/ABOjrnkdlAGFjq3fohKJWDyGEZK4CDeTaH0KIPUyRZD1kjTFctuRrc2LQZBBBLOgZktoN2VQYXO1daieFJ4D933MOjU+L1rxRB2UFpaXqfXRHWEZ0akZkvJCqggaYShQvSbo04VIIsZcozMcJQsVLE02TR5ymipYogRBlCpQoZOkSGl2wGIU9PkQ2IWEyREuVIVI8IaoUaEAD) format('woff2');}
+@font-face{font-family:cmti10;src:url(data:application/x-font-woff2;base64,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) format('woff2');}
+@font-face{font-family:cmsy10;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAAJ4AAoAAAAABJAAAAItAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAARAqCUIIECwoAATYCJAMOBCAFgjgHIBuHAwAeB9VtL8YwJklemvNTBo2jZnGwnZVdyXdzvfYSgtzmJwVRlqPURAEdmu7/b+qm/mtpoBMjzPyprW2w7M//AssCDDCwNXRMwUADirK5kXSQG3+xOIMTwOITmUYDeujdP3lMbYs8sQCziAAyQWCyoTB/NRZBsM/qMqb6xwRgnL0BEPA74P8AgAIYQB5DAPI4a4AwYRR0ti508/9e3tuqt/QtEEBxujBlMwG12YMBgiJDnmm2Sc5v9GwqSD233H6ttKSkNLag8CrG5M5hYUX/5cv4+XlRxUWc/8Zv6aSpeFl/QzVzVWztQCVBImnNaF1lIT8lrYyvzBuKz0mSYPaTNhccsp9+PktST3r28/O7L/KRVDjmULxBWb12p+FSNNtWLkEvq0U6TH1Q/DBGmMpHKqTuYz58HT3pxH+3hupaB8a/d4p/76+rQ9mW8Fj5aDn+0yF8W919mKiReNhmWHEYqBF4WGHYFvtkd/UdAAABENg/GPDKknL/Ksw4oO1//2WX9BIgjOpEJ6TwChAhhQAAluoAB5dwFhouIWcyIwZ8UZ25kJCqsznBCPJZAWIUWEGCtNtFKTPEkCoCQpPnYjlx6awARcWsIHGdkShrozcA9MEXlldR12JjfaX2bCytlXghvSO/saSusahC287SEX6qVKjWoF6BWtoiVMmnukp5KtRpYcNaokrrlKhSSTttyboKBqmV3WrORJhv52qxxPkalah7eZEK2uxYcsQAAAA=) format('woff2');}
+@font-face{font-family:cmsy7;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAAHEAAoAAAAAA2AAAAF7AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAANApATwsGAAE2AiQDCAQgBYIyByAbtgJgrgrsZsvPKCYIS0zB3XdWh2cZD1/78Tv37X5RqWpNk0ozyAxNE90TOet08fbl4FyLpFnZjcZrGnFUEBRImL3AJw9kc9sZXgJLlKfctHzVnbrJ75v+fONT7MvG0gm0QAPOJA9sAaWpJdg7o45HJD0vsTFmvx2QikcRkuJD8V2zV17EN7NMBQsvhdfjXD1eUoT6Wj9L8o2GvZh+CADu70GBhGZJoFnWjywLvtbf38Of7PuNBIACZATq0ATIgKh7eHJ7eeG8lGfp8P8L/3yUtt3p7kbKBSAQzL/v2OX8Z1KmN9KbAsoVIFiZ9w1VTxgC4pcEErtUUagTK4H6Si/Kog4xZCXqAlWiSrMoVaLvDpXaDUsiVwi9lkFllc5UiVZXqlSlJ2OlcS/PTPQj5iGsx92+g9YTo+OJxYviE1fk45LWMDU6a0Wr1plNYgOwqRXhfiNUG+1sR8xG+XYDTBg1LmCjajTF/igQffSFHbiyyI0WqRqYMmpWArClAAA=) format('woff2');}
+@font-face{font-family:cmmi10;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAATgAAoAAAAAB7AAAASXAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAXAqISIYxCxAAATYCJAMcBCAFgjgHIBvaBVGU7E0H4ssCTuDarUCNTeOy7J49hXjTx3IQRbHmk+uxoZpuo4cqf8XLXkE8L5fN+wurCnSiq3OZuDuJFVhJZTbVEe3t6DY86volQntMYphfcgWBbU60RkM1mpJgicrBHznnrb6UJ2Qze/8DzHMeyrPShVIAKyIH4wUgWMLT5uwn3CZujrWmTtUM8ITnedzX9Gxck57+IhSz0OiYVitoz2u1Wom16papWIpcBDza/IRtj92BJvwQ6KBu1X8vG4cjt4QaMQFCD1LwUyxodogKC/moFDTE7GRJAAU0wJspL1pDMjsjRQKuDg/LO8Fb3zCX5TCNBFwD6FQUQCqRvMBDC64iBZG3On3HKLDYQX4rlpmzhFJCxquOQKMEk8twHnrK/575FKJ7N4mcXGlFwo9ecr6JbgJL4eKoVqtJzekezxJv86ldq4PCe9kWpaQmk8dDoegjrAu/siA/LVglwTGzYxk4PPgmvJ23DUzwB3yKXXyG9u2Cq6RTI0lpGfAsAcFVQJo/vy1jwhzMhbLbLZqbbdDqeexMmHd5zcZze+G1slNdltVagdRwQa04Z0JeUqfOcRP0Lht+yT5ldkNyunLbKSQP+AOkyZffsTSDXIbnUvaUcEvmkHv3zPwY5pRpVxvV3A3tCtYBcKtuNGywhqQc8cVyK1vLtyFJAmo+Pxz+wsA+FGquJIRdSMuM+J51VfiVGXlmrdXV4lNl5ijPonVRQZJyoMO8BCD3+HyMf9ot0653WanWJXPRq3RcRrS1VFBaKq1K+JZD9tyqns+eNdZsyXsL41VXskFdj/CdYw4LH0yEiHX6cZK2iNGaYwMH0qt4JyWvSsvEIT43VppE+23rMO5Tdz/xYefQb7aQ4b+TGGmGm1PmMzEN3Pr9IcaDzc/wpGUKzEs49T+j+5I9KNEZvW/zneJAxYDeor5jPPFhM1U0U2cyUm3sM1rrGhc+Q0Uybbp9dTbWuUsrO6FyftI3Ji53/IrylImlPxsbp1rHhCi6Sf7t+z9ge4hZr27Zi4v1QxlVB6skX60RsBcjk10vEH1tf/MLfOFTdEuclY9ex+2lqzR5rzS0xy59k6sTaq+XMZMabPbRnCPiNSkPF5Tpj7SJViuXrjnOMTbNWbE6EGe3xHh9FSNRbvX10PrnGbNTN1R7ofGj5jxYPynRGyoxjP2V9lQvNLFWfXXInSnBz6R4ixNh2py+Ru5c4c/66s8tzRbV1HHMb7FMO5ZTb9p2aX7+wrVNr3SH+CBfHAsdHuMlTZLkrQ/Rc+cLnCdDNPv7xoLPLm3o+0vZfb05zdubZvKiirM8ZphsFAEIEJjWUU2r/M+YasFi6cqqDzBSVbjlgOoAnCqqEFTD4e5IfiqkijL5SS9F6qbrQA0FIMBgKuEICrNGsQHqwKXQ0nMsOR0LH6enlzxtFiSPhiQTIk6vwGlZzeB0/Czh9KwaS7NK1jxTCr+MG8htm0jlS5pXVV65B31zf3SBnR47bKimvBP9HTanz0u7IUaKrtKhnbTZTAiVTOr8x+SwQ9NyKo3QwfrurHNCVCXzBEj51uRhDR+OqKGcTmgA) format('woff2');}
+@font-face{font-family:cmmi7;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAAI0AAoAAAAAA8wAAAHrAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAANAqBLIEmCwYAATYCJAMIBCAFgjIHIBsNA2CuB3hDGvUbIo1FuzW88UzJtXpr/fzqQGiJwhBBtHSz+/ehVtWLi0Y9wjVNJKp1oyNFhMNJ+PlfV38WZiMajswr/JmTkxXvXd56SFTeDeUirOBpqM+0WmytNNsHHtm7OvH5DGbndwDQE7p26DBt1rrA0dcKIzQRX61teZxIAf1dIJAlecAFPuaBDXSgExjBAHV6sr2fyBAUJlhQ5UukarKf/89b04g3KjI43EGCs9zeD2UASU+qQgsqAQFA+wMSFebhBeYRrAGKItBrf36efxQAEhQkuoBzABRA7nK6aeOy5CD6TmO+b9/bqfBjDS8d5alclswV+tKvsrPm0NVFn5oT77O+R3SxLXh43TmCzPD0e5n/688lwvL+/Xg3wrsWfNKEw1Ntrg5vlZVGjwZOf384Lo60MuxhrpuOvvwYABAI/jZjtvpnVQEAQLvlIG7AsARBpQU5YNjiBgAgcwB5CKIQpC4cCAAAjPqCgDCFAEVtSoDamHkI6KitQsCoZQZ4UUaEFSEDxagb1BYl0THqrUedmR7F9mmrEhDmvKtt2i02x3Co3JEcyvUPZaDGafGAMAzUY9CAlD4ajTBJzFEJEJTj1SW3/XIwKA07C1sAVTua5rFSlHyDuFEaSUNy+g3JgDScLDzwAC0F) format('woff2');}
+@font-face{font-family:cmmi5;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAAKgAAoAAAAABHgAAAJVAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAPAqCTIIgCwgAATYCJAMMBCAFgjIHIBuTA1FU7AlkPxIyNz01S4iWrUZpJ4dHSnwfD+Xe9naT/LujdQUWVapSX6HpElx1DMIzGItQSIsmQ+tq9qA98gkny0lqZoPyO39Bsk/e4n0034BekDnNerULeIF3EUUcf895Ji9FquncxiCqezEx08NHNhNsTlDyN2jkV57+b2haaRwa7ZjBBnjwKVdPmVEA41p6AR1F8NbeQaJgI5ZuQNkHDKqQrqX3jtf6d2/UqUKGtgfABwAq1X+S+MtSdcMIw6ziW9u6e3MOp6Oj58Lh4Ebu7s7/3n9O/h6+vQU3Pks6N37whP2q/rF07xFh0qFd5iAqgFs8I7t6r93VBbM6WMUW3QonPnt3YiUCcX9C+yRUMsWC/QV9c/DEDPDxgbsmipntTOl3py1xYxObJ7s8hej/kOAHqFw3NAQL0pDhucABmeBiGX4eoBVoB1y0FVDWFnxKpSuxRNrk4m+7ME2TmKAQkvLHbwSWtU7KgCssLvYy61LqhOdTCFSJvzAxJ2SyjS5MsE43/kh5YpGYBp+54qUN4Zckqi6J7sb0Sb6Q5eVKqTUACASfMiOyQRSTv2mpsKr/lTFLMJUguJY98uOdoSDKvlJGIH88piU/EIpzsQJ+zjuIgGWXomqWRTNvQwyavfY5O2QgRZ0Ju0xSVHMuRbMlXAzmPBdzjpR3Affry4clJMTodutc8+DoLD1KjwjPjEnLjEqQ0D64YC1JgmQZ0kVIJcFVknBrThQmQYIYuvzm2TQxkiSSoEmNBgP2QaIQhJSA8CxUzjbDZYqR9vIoCSRoU6MHCQAA) format('woff2');}
+@font-face{font-family:cmr10;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAAIcAAoAAAAAA9AAAAHSAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAANAqBLIExCwgAATYCJAMKBCAFgjIHIBsaAwCeB7atYr0IU6AsFnnK8C6EeBAP/+3Hum/mIyYRmiUih5AsWYIuYo1sjZQ2pD2bxFPcGVpzdzPT+4k31+aIWvIEmUrr00YpS+CUY0m0MIToDt8TeYJVv1vu+AFfCui2QODtJQ8CKvDU2sIkSYJAYg0sIOibksNBUoRDrda+LcjxL0YN6T19/t/tw3y8OmajAVOLDX7I1v7JKiCZYM0KsoAAoBSQkNENL9CNYBxQqQQmS8FEKeWnAJBBLRKmAIsAqAAh+iX9u3zTZKL/1vZ0+tLdPdrmaN6Ufg4bNUaj5+ibtnV/sn2JX16+cjyuLRp7B33UsbTlPwzzQ9/GFTRYXhLRP21I/3mKkwXozV89c1GxI2R8We9n/+PhY+l8gauHDT1zBgAEgm1pue6ysajPFfcaRbrJUC+BICtIN+aEYwUEAKR0QzzbEgaR9YMgQGx0RdQmMSo12lCjSTdq1RibN+pngBdVgzAqBqg0WkWNXkuo1egsN5rydDTl481puH2AoatuwFwoVzxcnlg6WT88Wd3WeF0BELdr255jR5Yd0CjatYT9HUPbDmCQFvGh9foODYwLYkrrTqf2p9HSHQyc01hyYt2hE6u2aXi5BOABtgoA) format('woff2');}
+@font-face{font-family:cmr7;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAAIgAAoAAAAAA9wAAAHWAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAANAqBQIE7CwgAATYCJAMKBCAFgiwHIBseAwCOw7jhK4slhnLnK6Jq2Hr27hM5y8ehUC6VpzxZogQS59A4z/n0c/p+y6oDZrYTluU4SVs3krs5crHc8e3BC+i3QCB7CSuJ0hZoABpIEIehZWEA1Dut0hFJlHTEmH3r0MqQLIBPfXPu/lXMu8uXGZwjBjVFh894emsrh8CSZcMANIEAMFgAhYY9XMEenivQdcH1YAHLwbJyEAANTFG4BXcAOiByql2tujqgQqVIoOjUtFZh0va0mHTy+tL84ja7mnTKABVAUWfqg+raUmk6w6StkXX1avaiUKE0wNmzut6jgXNrJvW/NGdDofBipNCl5/HcpIcUkUabIcp1ENljuNBVL5FlcaDvWlBbdCjmGr8mR2d/44Bz/fwZ6jkpECUCEIQfV72ffInPj4jLQ3iNQeqlAXMFQjMA9SdCZAZAAABVL5BfLSIQNKcICEgrvjqwSVnTdZsCJlbtImCqu0DAiiNGuNLFiAteOXdzjzxxoICn5j7Liht9h9R+wTkX1za533mjo52DNg+YM0raKpvbymsNnO3cEKxerQatWpRqYiBWvRIcrVOsVhN3aUo1aVapXh0Djuw4MMKlboIUTkLJGRTpZKBEm0rN2pSrZcCZHTdcgH0CAA==) format('woff2');}
+@font-face{font-family:cmr5;src:url(data:application/x-font-woff2;base64,d09GMgABAAAAAAIgAAoAAAAAA+wAAAHXAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAANAqBUIFGCwgAATYCJAMKBCAFgiwHIBspAwiOwradM0Yo0lmHJIzzi0BatskmlNbcg2oSjDpFk+BwTSJU06AdzrD//37uDtPk5u9NVBJqp/MrkmARS7TNO4loZrnj97iAbgsop7eXOInSwAOApK00CK0wjQiyW6YsSrJQV4xmlt++QbaP2OJN+22P/6uwaT6e1XIR/uhxTLCVh2cJFXyMZCV0pECrvYOGxCp/3Covh0ApgePeMeq9/wkACcbRcAncAVCAEAexTItl1DJ2HGUd2w/T7a2MX9uKbeP2iUt7jX11H/aQZfTMUmk5DQ/XR5jtE3a3bfwg4pAYu7IWWW+ehspML2Vus0cy6UGuXIqF/l43240lQV03P7VcTyKJK95P13VQ40X0lJef7/9kcCs1wq/laXw5baxUD1GPX4J7RnbqVsU5ABAIfvoX7hZCa1/9PIvr6nJIwKQGglndAYLiQShuyAG0EzgBhIR0gAQCxWnvEC1whFIWMGbGCsaV/fq0Tck8RU0J+6ojlEnXGLNuEeMmveVppzSbzT+5EmILyi5wKMovlOKduQJL6EIJlZ1Ykl8OLbjYeMREyAQS9eHCNMuBsAmUGUcmIETHxZGoSL5CiDqE0yJLbYTfYJlcIkyCTkiCii1RiXzlPAEmBQ==) format('woff2');}
+text.f0 {font-family:cmti7;font-size:4.98132px}
+text.f1 {font-family:cmti7;font-size:6.973848px}
+text.f2 {font-family:cmti10;font-size:9.96264px}
+text.f3 {font-family:cmsy10;font-size:9.96264px}
+text.f4 {font-family:cmsy7;font-size:6.973848px}
+text.f5 {font-family:cmmi10;font-size:9.96264px}
+text.f6 {font-family:cmmi7;font-size:6.973848px}
+text.f7 {font-family:cmmi5;font-size:4.98132px}
+text.f8 {font-family:cmr10;font-size:9.96264px}
+text.f9 {font-family:cmr7;font-size:6.973848px}
+text.f10 {font-family:cmr5;font-size:4.98132px}
+
+</style>
+<g id="page1">
+<g stroke-miterlimit="10" transform="matrix(.996264 0 0 -.996264 18.199889 -57.204682)" fill="#000" stroke="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -186.778409 -214.47435)" stroke="none" fill="#000">
+<text class="f3" x="104.414734" y="-213.673076">∀</text>
+<text class="f2" x="109.949551" y="-213.673076">x</text>
+<text class="f8" x="115.770757" y="-213.673076">(</text>
+<text class="f3" x="119.64513" y="-213.673076">→</text>
+<text class="f8" x="132.375131" y="-213.673076">(</text>
+<text class="f2" x="136.249505" y="-213.673076">loves</text>
+<text class="f4" x="157.944404" y="-217.28844"></text>
+<text class="f2" x="160.73948" y="-213.673076">x<tspan x="168.221084">mary</tspan></text>
+<text class="f4" x="191.379951" y="-217.28844"></text>
+<text class="f8" x="194.175027" y="-213.673076">)<tspan x="199.7098">(</tspan></text>
+<text class="f3" x="203.584174" y="-213.673076">∃</text>
+<text class="f2" x="209.118991" y="-213.673076">y</text>
+<text class="f8" x="214.837793" y="-213.673076">(</text>
+<text class="f2" x="218.712167" y="-213.673076">br<tspan x="226.986628">oken</tspan></text>
+<text class="f4" x="247.609651" y="-217.28844"></text>
+<text class="f2" x="250.404727" y="-213.673076">y</text>
+<text class="f8" x="256.123529" y="-213.673076">)))</text>
+</g>
+<g transform="translate(-72.340411 -.000005)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="translate(144.680827 -30.000009)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -299.768446 -655.639786)" stroke="none" fill="#000">
+<text class="f3" x="226.53503" y="-653.190322">→</text>
+<text class="f8" x="239.265031" y="-653.190322">(</text>
+<text class="f2" x="243.139405" y="-653.190322">loves</text>
+<text class="f4" x="264.834304" y="-656.805686"></text>
+<text class="f2" x="267.62938" y="-653.190322">x<tspan x="275.110984">mary</tspan></text>
+<text class="f4" x="298.269851" y="-656.805686"></text>
+<text class="f8" x="301.064927" y="-653.190322">)<tspan x="306.5997">(</tspan></text>
+<text class="f3" x="310.474074" y="-653.190322">∃</text>
+<text class="f2" x="316.008891" y="-653.190322">y</text>
+<text class="f8" x="321.727693" y="-653.190322">(</text>
+<text class="f2" x="325.602067" y="-653.190322">br<tspan x="333.876528">oken</tspan></text>
+<text class="f4" x="354.499551" y="-656.805686"></text>
+<text class="f2" x="357.294627" y="-653.190322">y</text>
+<text class="f8" x="363.013429" y="-653.190322">))</text>
+</g>
+<g transform="translate(-63.544509 -.000005)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="translate(127.08904 -30.000009)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -277.993788 -946.805222)" stroke="none" fill="#000">
+<text class="f3" x="248.748392" y="-943.267967">∃</text>
+<text class="f2" x="254.283209" y="-943.267967">y</text>
+<text class="f8" x="260.002011" y="-943.267967">(</text>
+<text class="f2" x="263.876385" y="-943.267967">br<tspan x="272.150846">oken</tspan></text>
+<text class="f4" x="292.773869" y="-946.883331"></text>
+<text class="f2" x="295.568945" y="-943.267967">y</text>
+<text class="f8" x="301.287747" y="-943.267967">)</text>
+</g>
+<g transform="translate(-28.947878 -.000005)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="translate(57.895745 -30.00001)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -304.812637 -1117.970657)" stroke="none" fill="#000">
+<text class="f2" x="284.138019" y="-1113.79393">br<tspan x="292.412481">oken</tspan></text>
+<text class="f4" x="313.035504" y="-1117.409294"></text>
+<text class="f2" x="317.490979" y="-1113.79393">y</text>
+</g>
+<g transform="translate(-16.58487 -.000004)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -263.043832 -1225.580579)" stroke="none" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<text class="f2" x="290.286472" y="-1191.113935">y</text>
+<text class="f1" x="295.123859" y="-1189.619554">e</text>
+</g>
+<g transform="matrix(1.00375 0 0 -1.00375 -373.86347 -1229.136079)" stroke="none" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<text class="f2" x="352.874946" y="-1194.656133">br<tspan x="361.149407">oken</tspan></text>
+<text class="f4" x="381.77243" y="-1198.271497"></text>
+<text class="f10" x="381.008161" y="-1192.193201">(</text>
+<text class="f0" x="383.706415" y="-1192.193201">et</text>
+<text class="f10" x="388.862237" y="-1192.193201">)</text>
+</g>
+</g>
+<path d="M0-5.4774L-16.58487-18.9492" fill="none" />
+<path d="M0-5.4774L16.58487-22.16148" fill="none" />
+</g>
+<g transform="translate(.000005 -29.999991)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -298.084774 -1114.415176)" stroke="none" fill="#000">
+<text class="f3" x="291.344333" y="-1110.251732">∃</text>
+<text class="f2" x="296.87915" y="-1110.251732">y</text>
+</g>
+<g transform="translate(-8.141126 .000005)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -287.164642 -1220.247356)" stroke="none" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<text class="f2" x="297.492785" y="-1185.800638">y</text>
+<text class="f1" x="302.330173" y="-1184.306258">e</text>
+</g>
+<g transform="matrix(1.00375 0 0 -1.00375 -313.546942 -1216.358518)" stroke="none" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<text class="f3" x="309.608135" y="-1181.926312">∃</text>
+</g>
+</g>
+<path d="M0-5.47742L-8.14113-19.5226" fill="none" />
+<path d="M0-5.47742L8.14114-22.16148" fill="none" />
+</g>
+</g>
+<path d="M0-6.03297L-28.94788-19.52258" fill="none" />
+<path d="M0-6.03297L28.94788-18.9492" fill="none" />
+</g>
+<g transform="translate(0 -30.000009)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -455.692117 -1006.805221)" stroke="none" fill="#000">
+<text class="f3" x="414.787564" y="-1003.043807">→</text>
+<text class="f8" x="427.517565" y="-1003.043807">(</text>
+<text class="f2" x="431.391939" y="-1003.043807">loves</text>
+<text class="f4" x="453.086838" y="-1006.659171"></text>
+<text class="f2" x="455.881914" y="-1003.043807">x<tspan x="463.363518">mary</tspan></text>
+<text class="f4" x="486.522385" y="-1006.659171"></text>
+<text class="f8" x="489.31746" y="-1003.043807">)</text>
+</g>
+<g transform="translate(-43.327422 -.000005)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="translate(86.654867 -30.000008)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -509.243792 -1267.970658)" stroke="none" fill="#000">
+<text class="f2" x="477.548336" y="-1263.233532">loves</text>
+<text class="f4" x="499.243234" y="-1266.848895"></text>
+<text class="f2" x="503.69871" y="-1263.233532">x<tspan x="511.180314">mary</tspan></text>
+<text class="f4" x="534.339181" y="-1266.848895"></text>
+</g>
+<g transform="translate(-22.203213 -.000005)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -479.061959 -1406.636076)" stroke="none" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<text class="f2" x="508.535786" y="-1371.492994">mary</text>
+<text class="f4" x="531.694652" y="-1375.108358"></text>
+<text class="f0" x="530.813238" y="-1369.030062">e</text>
+</g>
+<g transform="translate(-.000004 -30.000009)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -622.930265 -1439.136093)" stroke="none" fill="#000">
+<text class="f2" x="605.447437" y="-1433.759495">loves</text>
+<text class="f4" x="627.142336" y="-1437.374859"></text>
+<text class="f2" x="629.937412" y="-1433.759495">x</text>
+</g>
+<g transform="translate(-17.710192 -.000004)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -583.639811 -1545.857108)" stroke="none" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<text class="f5" x="611.761421" y="-1510.193905">x</text>
+<text class="f6" x="617.455354" y="-1508.699524">e</text>
+</g>
+<g transform="matrix(1.00375 0 0 -1.00375 -704.715748 -1550.301508)" stroke="none" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<text class="f5" x="680.414464" y="-1514.621698">l<tspan x="683.583158">ov</tspan><tspan x="693.598851">es</tspan></text>
+<text class="f4" x="702.90771" y="-1518.237061"></text>
+<text class="f10" x="702.90771" y="-1512.158766">(</text>
+<text class="f7" x="705.605964" y="-1512.158766">e</text>
+<text class="f10" x="708.978404" y="-1512.158766">(</text>
+<text class="f7" x="711.676658" y="-1512.158766">et</text>
+<text class="f10" x="717.856895" y="-1512.158766">))</text>
+</g>
+</g>
+<path d="M0-3.53297L-17.71019-18.9492" fill="none" />
+<path d="M0-3.53297L17.71019-22.16148" fill="none" />
+</g>
+</g>
+<path d="M0-5.4774L-22.20322-18.9492" fill="none" />
+<path d="M0-5.4774L22.20323-18.9492" fill="none" />
+</g>
+<g transform="matrix(1.00375 0 0 -1.00375 -491.644985 -1177.637443)" stroke="none" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<text class="f3" x="473.543441" y="-1143.349904">→</text>
+<text class="f9" x="483.50611" y="-1141.551077">(</text>
+<text class="f1" x="486.619453" y="-1141.551077">t</text>
+<text class="f9" x="490.040687" y="-1141.551077">(</text>
+<text class="f1" x="493.15403" y="-1141.551077">tt</text>
+<text class="f9" x="499.348234" y="-1141.551077">))</text>
+</g>
+</g>
+<path d="M0-6.03297L-43.32742-22.7983" fill="none" />
+<path d="M0-6.03297L43.32744-18.9492" fill="none" />
+</g>
+</g>
+<path d="M0-6.03297L-63.54451-18.9492" fill="none" />
+<path d="M0-6.03297L63.54453-18.9492" fill="none" />
+</g>
+<g transform="translate(-.000001 -30.000006)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -153.098806 -471.195389)" stroke="none" fill="#000">
+<text class="f3" x="146.848823" y="-469.435008">∀</text>
+<text class="f2" x="152.383639" y="-469.435008">x</text>
+</g>
+<g transform="translate(-8.086977 -.000003)" stroke="#000" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<g transform="matrix(1.00375 0 0 -1.00375 -142.018956 -575.694224)" stroke="none" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<text class="f2" x="152.889357" y="-543.655521">x</text>
+<text class="f1" x="157.510899" y="-542.16114">e</text>
+</g>
+<g transform="matrix(1.00375 0 0 -1.00375 -168.509576 -572.694284)" stroke="none" stroke-miterlimit="10" fill="#000" stroke-width="0.4">
+<text class="f3" x="165.112624" y="-540.66679">∀</text>
+</g>
+</g>
+<path d="M0-3.53297L-8.08698-19.5226" fill="none" />
+<path d="M0-3.53297L8.08698-22.16148" fill="none" />
+</g>
+</g>
+<path d="M0-6.03297L-72.34041-19.5226" fill="none" />
+<path d="M0-6.03297L72.34042-18.9492" fill="none" />
+</g>
+</g>
+</svg>
