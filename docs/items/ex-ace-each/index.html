@@ -10,22 +10,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Umut Özge - Page 3</title>
-<meta name="description" content="Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.">
+<!-- begin _includes/seo.html --><title>Ace each - Umut Özge</title>
+<meta name="description" content="A well-shuffled 52-card deck is dealt to 4 players. Find the probability that each of the players gets an ace.">
 
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Umut Özge">
-<meta property="og:title" content="Umut Özge">
-<meta property="og:url" content="https://umutozge.github.io/page3/">
+<meta property="og:title" content="Ace each">
+<meta property="og:url" content="https://umutozge.github.io/items/ex-ace-each/">
 
 
-  <meta property="og:description" content="Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.">
-
-
-
+  <meta property="og:description" content="A well-shuffled 52-card deck is dealt to 4 players. Find the probability that each of the players gets an ace.">
 
 
 
@@ -33,12 +30,15 @@
 
 
 
+  <meta property="article:published_time" content="2026-05-26T23:47:29+03:00">
 
 
-<link rel="canonical" href="https://umutozge.github.io/page3/">
 
 
-  <link rel="prev" href="https://umutozge.github.io/page2/">
+
+
+<link rel="canonical" href="https://umutozge.github.io/items/ex-ace-each/">
+
 
 
 
@@ -112,7 +112,7 @@
 
   </head>
 
-  <body class="layout--home" dir="ltr">
+  <body class="layout--numbered" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -177,76 +177,23 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-  
-    
-      
-      
-      
-      
-    
-    
-      <nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle Menu</label>
-  <ul class="nav__items">
-    
-      
-      
-        <li>
-          
-            <span class="nav__sub-title">Courses</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/prelim/schedule/">COGS 502</a></li>
-            
-              <li><a href="/cl/schedule/">COGS 543</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <a href="/exercise/browser/"><span class="nav__sub-title">Workbooks</span></a>
-          
-
-          
-        </li>
-      
-        <li>
-          
-            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
-          
-
-          
-        </li>
-      
-    
-  </ul>
-</nav>
-
-    
-  
-  </div>
-
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    
-    
+    <meta itemprop="headline" content="Ace each">
+    <meta itemprop="description" content="A well-shuffled 52-card deck is dealt to 4 players. Find the probabilitythat each of the players gets an ace.">
+    <meta itemprop="datePublished" content="2026-05-26T23:47:29+03:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           
+              <h2 id="page-title" class="page__title" itemprop="headline">
+                <a href="https://umutozge.github.io/items/ex-ace-each/" itemprop="url">Exercise: Ace each
+</a>
+              </h2>
+            
           
           
 
@@ -256,95 +203,41 @@
 
       <section class="page__content" itemprop="text">
         
-        
-
-<h3 class="archive__subtitle">Recent Posts</h3>
-
-
+        <div class="numbered">
+  <p>A well-shuffled 52-card deck is dealt to 4 players. Find the probability
+that each of the players gets an ace.</p>
 
 
-<div class="entries-list">
-  
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Build a map of id → { label, number }
+  const itemMap = {};
+  document.querySelectorAll('.numbered').forEach(container => {
+    let count = 0;
+    container.querySelectorAll('.item').forEach(item => {
+      if (!item.id) return;
+      count++;
+      itemMap[item.id] = {
+        label: item.dataset.label ?? 'Item',
+        number: count
+      };
+    });
+  });
 
-
-
-
-
-
-
-<div class="list__item"
-     
-     
-    >
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/posts/course/iteration-by-while/" rel="permalink"><i class="fas fa-file-alt" aria-hidden="true"></i>Iteration by <code class="language-plaintext highlighter-rouge">while</code>
-</a>
-      
-    </h2>
-
-    <p class="archive__item-excerpt" itemprop="description">An introduction to iteration using while loops in Python, illustrated with the Collatz conjecture.
-</p>
-  </article>
+  // Fill in all cross-reference links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    if (itemMap[id]) {
+      const { label, number } = itemMap[id];
+      // Only replace if the author left it empty, or always replace
+      if (!link.textContent.trim()) {
+        link.textContent = `${label} ${number}`;
+      }
+    }
+  });
+});
+</script>
 </div>
-
-</div>
-
-
-  
-    
-<nav class="pagination">
-  
-  
-  <ul>
-    
-    
-      
-        <li><a href="/page2/">Previous</a></li>
-      
-    
-
-    
-    
-      <li><a href="/">1</a></li>
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-        
-        
-        
-        <li><a href="/page2/">2</a></li>
-      
-    
-
-    
-    
-
-    
-      <li><a href="#" class="disabled current">3</a></li>
-    
-
-    
-    
-      <li><a href="#" class="disabled"><span aria-hidden="true">Next</span></a></li>
-    
-  </ul>
-</nav>
-
-
-  
-
-
 
         
       </section>
@@ -357,11 +250,22 @@
 
         
 
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-05-26T23:47:29+03:00">2026-05-26</time></p>
+
       </footer>
 
       
 
       
+  <nav class="pagination">
+    
+      <a href="/items/eg-simple-model/" class="pagination--pager" title="A simple model">Previous</a>
+    
+    
+      <a href="/items/ex-count-sentences/" class="pagination--pager" title="Count sentences">Next</a>
+    
+  </nav>
+
 
     </div>
 

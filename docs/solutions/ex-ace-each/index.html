@@ -10,34 +10,32 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Bayes’ Theorem - Umut Özge</title>
-<meta name="description" content="Given a sample space \(\Omega\), with events \(A_1,...,A_n \subseteq \Omega\) forming a partition of \(\Omega\), with \(P(A_i) &gt; 0\) for all \(i\leq n\), and an event \(B \subseteq \Omega\), such that \(P(B) &gt; 0\):">
+<!-- begin _includes/seo.html --><title>Solution: Ace each - Umut Özge</title>
+<meta name="description" content="Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.">
 
 
 
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Umut Özge">
-<meta property="og:title" content="Bayes’ Theorem">
-<meta property="og:url" content="https://umutozge.github.io/items/th-bayes/">
+<meta property="og:title" content="Solution: Ace each">
+<meta property="og:url" content="https://umutozge.github.io/solutions/ex-ace-each/">
 
 
-  <meta property="og:description" content="Given a sample space \(\Omega\), with events \(A_1,...,A_n \subseteq \Omega\) forming a partition of \(\Omega\), with \(P(A_i) &gt; 0\) for all \(i\leq n\), and an event \(B \subseteq \Omega\), such that \(P(B) &gt; 0\):">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2026-05-26T23:47:29+03:00">
+  <meta property="og:description" content="Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.">
 
 
 
 
 
 
-<link rel="canonical" href="https://umutozge.github.io/items/th-bayes/">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/solutions/ex-ace-each/">
 
 
 
@@ -112,7 +110,7 @@
 
   </head>
 
-  <body class="layout--numbered" dir="ltr">
+  <body class="layout--solution wide" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -180,19 +178,19 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Bayes’ Theorem">
-    <meta itemprop="description" content="Given a sample space \(\Omega\), with events \(A_1,...,A_n \subseteq \Omega\)forming a partition of \(\Omega\), with \(P(A_i) &gt; 0\) for all \(i\leq n\), and an event \(B \subseteq \Omega\), such that \(P(B) &gt; 0\):">
-    <meta itemprop="datePublished" content="2026-05-26T23:47:29+03:00">
+    <meta itemprop="headline" content="Solution: Ace each">
+    
+    
     
 
     <div class="page__inner-wrap">
       
         <header>
           
-              <h2 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://umutozge.github.io/items/th-bayes/" itemprop="url">Theorem: Bayes’ Theorem
+              <h1 id="page-title" class="page__title" itemprop="headline">
+                <a href="https://umutozge.github.io/solutions/ex-ace-each/" itemprop="url">Solution: Ace each
 </a>
-              </h2>
+              </h1>
             
           
           
@@ -203,46 +201,38 @@
 
       <section class="page__content" itemprop="text">
         
-        <div class="numbered">
-  <p>Given a sample space \(\Omega\), with events \(A_1,...,A_n \subseteq \Omega\)
-forming a partition of \(\Omega\), with \(P(A_i) &gt; 0\) for all \(i\leq n\), and an event \(B \subseteq \Omega\), such that \(P(B) &gt; 0\):</p>
+        <main>
+		<hr>
+  <div class="numbered">
+    <p>Let’s deal the cards 13 by 13. The number of possible hands (as a set rather
+than a sequence) for the first player is \(\binom{52}{13}\), for the second player
+is \(\binom{39}{13}\), for the third player is \(\binom{26}{13}\), and for the
+fourth player is \(\binom{13}{13}\). The product is the total number of ways to
+deal the cards to four players.</p>
 
-\[\begin{align*}
-P(A_i\given B) &amp;= \frac{P(A_i)P(B\given A_i)}{P(B)} \\
-&amp; = \frac{P(A_i)P(B\given A_i)}{P(A_1)P(B\given A_1) + \cdots + P(A_n)P(B\given A_n)}
-\end{align*}\]
+<p>The deals that everyone has exactly one ace can be counted by first deciding
+which ace goes to which player. This can be settled in \(\)4!\(\) ways. Then we need
+to deal the remaing 48 cards, first in \(\binom{48}{12}\) ways for the first
+player, then in \(\binom{36}{12}\) ways for the second player, then in
+\(\binom{24}{12}\) ways for the third player, and finally in \(\binom{12}{12}\) ways
+for the fourth player. The product is the total number of ways to deal the cards
+to four players such that everyone has exactly one ace.</p>
 
+<p>Thus the probability that each of the players gets an ace is,</p>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-  // Build a map of id → { label, number }
-  const itemMap = {};
-  document.querySelectorAll('.numbered').forEach(container => {
-    let count = 0;
-    container.querySelectorAll('.item').forEach(item => {
-      if (!item.id) return;
-      count++;
-      itemMap[item.id] = {
-        label: item.dataset.label ?? 'Item',
-        number: count
-      };
-    });
-  });
+\[\frac{4! \binom{48}{12} \binom{36}{12} \binom{24}{12}
+\binom{12}{12}}{\binom{52}{13} \binom{39}{13} \binom{26}{13} \binom{13}{13}}.\]
 
-  // Fill in all cross-reference links
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    const id = link.getAttribute('href').slice(1);
-    if (itemMap[id]) {
-      const { label, number } = itemMap[id];
-      // Only replace if the author left it empty, or always replace
-      if (!link.textContent.trim()) {
-        link.textContent = `${label} ${number}`;
-      }
-    }
-  });
-});
-</script>
+<hr />
+
+<div class="solution-actions">
+  <button class="btn btn--primary" type="button" onclick="window.history.back()" aria-label="Go back to the previous page">
+    Back to exercise
+  </button>
 </div>
+
+  </div>
+</main>
 
         
       </section>
@@ -255,22 +245,11 @@ P(A_i\given B) &amp;= \frac{P(A_i)P(B\given A_i)}{P(B)} \\
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-05-26T23:47:29+03:00">2026-05-26</time></p>
-
       </footer>
 
       
 
       
-  <nav class="pagination">
-    
-      <a href="/items/ex-law-of-cosines/" class="pagination--pager" title="The law of cosines">Previous</a>
-    
-    
-      <a href="/items/th-law-of-cosines/" class="pagination--pager" title="The law of cosines">Next</a>
-    
-  </nav>
-
 
     </div>
 

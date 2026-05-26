@@ -275,6 +275,18 @@
     "label": "Definition",
     "title": "Standard deck of 52"
   },
+  "ex-lemons": {
+    "page": "/exercises/combinatorics/",
+    "number": 10,
+    "label": "Exercise",
+    "title": "Lemons"
+  },
+  "ex-ace-each": {
+    "page": "/exercises/combinatorics/",
+    "number": 11,
+    "label": "Exercise",
+    "title": "Ace each"
+  },
   "ex-fol-basics": {
     "page": "/exercises/first-order-logic/",
     "number": 1,

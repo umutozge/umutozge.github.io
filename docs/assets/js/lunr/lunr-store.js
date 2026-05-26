@@ -335,6 +335,12 @@ var store = [{
         "url": "/items/eg-simple-model/",
         "teaser": null
       },{
+        "title": "Ace each",
+        "excerpt":"A well-shuffled 52-card deck is dealt to 4 players. Find the probability that each of the players gets an ace.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-ace-each/",
+        "teaser": null
+      },{
         "title": "Count sentences",
         "excerpt":"How many 6-word sentences can be made using each of the 26 letters of the alphabet exactly once? A word is defined as a nonempty (possibly jibberish) sequence of letters.  ","categories": [],
         "tags": [],
@@ -353,7 +359,7 @@ var store = [{
         "url": "/items/ex-curriculum/",
         "teaser": null
       },{
-        "title": "lemons",
+        "title": "Lemons",
         "excerpt":"A parking lot contains 100 cars, \\(k\\) of which happen to be lemons (=in a bad unreliable condition). We select \\(m\\) of these cars at random and take them for a test drive. Find the probability that \\(n\\) of the cars tested turn out to be lemons.  ","categories": [],
         "tags": [],
         "url": "/items/ex-lemons/",
@@ -1025,6 +1031,9 @@ var store = [{
     "title": "A logic for default reasoning",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/reiter-default/"
   },{
+    "title": "Solution: Ace each",
+    "excerpt":"Let's deal the cards 13 by 13. The number of possible hands (as a set rather than a sequence) for the first player is $$\\binom{52}{13}$$, for the second player is $$\\binom{39}{13}$$, for the third player is $$\\binom{26}{13}$$, and for the fourth player is $$\\binom{13}{13}$$. The product is the total number...","url": "https://umutozge.github.io/solutions/ex-ace-each/"
+  },{
     "title": "Solution: Count sentences",
     "excerpt":"I would go as follows: the 26 letters can be laid out as a sequence in 26! ways. For each sequence, we can split it into 6 words by placin 5 dividers in 25 possible places. So the total number of sentences is $$26! \\cdot {25 \\choose 5 }$$. Back...","url": "https://umutozge.github.io/solutions/ex-count-sentences/"
   },{
@@ -1034,8 +1043,8 @@ var store = [{
     "title": "Solution: Curriculum",
     "excerpt":"The total count of curricula: $${8 \\choose 4}\\cdot{10 \\choose 3}$$ To handle the prerequisites we need to consider the problem case by case. It needs some care to organize the cases. Let's agree on a scheme where a 3-tuple of 0's and 1's represents the absence and presence of low-level...","url": "https://umutozge.github.io/solutions/ex-curriculum/"
   },{
-    "title": "Solution: lemons",
-    "excerpt":"          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-lemons/"
+    "title": "Solution: Lemons",
+    "excerpt":"The number of all possible selections in $${100 \\choose m}$$. Now we will count how many of those have $$n$$ lemons. First we choose $$n$$ out of $$k$$ lemons by $${k \\choose n}$$; and then decide on the remaining cars on the batch. The batch size is $$m$$, of which...","url": "https://umutozge.github.io/solutions/ex-lemons/"
   },{
     "title": "Solution: Men and women",
     "excerpt":"Let's first tackle the arrangment problem. Fix 8 men into the line. There are 9 slots where you can place a woman. Therefore the number of arrangments is $${9 \\choose 5}$$. For each such arrangment, there are $$5!$$ and $$8!$$ ways to arrange the women and the men among themselves,...","url": "https://umutozge.github.io/solutions/ex-men-women/"

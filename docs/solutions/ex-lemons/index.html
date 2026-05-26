@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Solution: lemons - Umut Özge</title>
+<!-- begin _includes/seo.html --><title>Solution: Lemons - Umut Özge</title>
 <meta name="description" content="Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.">
 
 
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Umut Özge">
-<meta property="og:title" content="Solution: lemons">
+<meta property="og:title" content="Solution: Lemons">
 <meta property="og:url" content="https://umutozge.github.io/solutions/ex-lemons/">
 
 
@@ -178,7 +178,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Solution: lemons">
+    <meta itemprop="headline" content="Solution: Lemons">
     
     
     
@@ -188,7 +188,7 @@
         <header>
           
               <h1 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://umutozge.github.io/solutions/ex-lemons/" itemprop="url">Solution: lemons
+                <a href="https://umutozge.github.io/solutions/ex-lemons/" itemprop="url">Solution: Lemons
 </a>
               </h1>
             
@@ -204,7 +204,15 @@
         <main>
 		<hr>
   <div class="numbered">
-    
+    <p>The number of all possible selections in \({100 \choose m}\). Now we will count
+how many of those have \(n\) lemons. First we choose \(n\) out of \(k\) lemons
+by \({k \choose n}\); and then decide on the remaining cars on the batch. The
+batch size is \(m\), of which \(n\) are lemons, therefore the number of ways to
+pick non-lemons for the reamining slots in the batch is \({100 - k \choose m - n}\).
+Finally, the probability of picking \(n\) lemons in a \(m\) car batch is,</p>
+
+\[\frac{ { k \choose n } \cdot { 100 - k \choose m - n } }{100 \choose m}\]
+
 <hr />
 
 <div class="solution-actions">
