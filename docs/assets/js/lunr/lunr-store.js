@@ -131,6 +131,30 @@ var store = [{
         "url": "/exams/2026-05-21-502-quiz/",
         "teaser": null
       },{
+        "title": "543 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-06-03-543-quiz/",
+        "teaser": null
+      },{
+        "title": "543 Final",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-06-10-543-final/",
+        "teaser": null
+      },{
+        "title": "502 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-06-04-502-quiz/",
+        "teaser": null
+      },{
+        "title": "502 Final",
+        "excerpt":"Given a set \\(A\\), a partition of \\(A\\) is a set of sets \\(\\{A_1, A_2, \\ldots, A_k\\}\\) such that, \\(\\bigcup_{i=1}^k A_i = A\\) and \\(A_i \\cap A_j = \\emptyset\\) for all \\(i \\neq j\\). Define a function random_partition(s) that takes a set s and returns a random partition of it....","categories": [],
+        "tags": [],
+        "url": "/exams/2026-06-11-502-final/",
+        "teaser": null
+      },{
         "title": "Basic probability",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": ["probability"],
@@ -255,6 +279,12 @@ var store = [{
         "excerpt":"Given the sets \\(C\\), \\(K\\), \\(V\\), \\(Q\\) for constants, connectives, variables, and quantifiers, respectively, the language \\(L\\) is defined as follows: \\(C\\cup K\\cup V \\subseteq L\\) If \\(\\pi_{\\smtyp{\\alpha}{\\beta}} \\in L\\) and \\(\\sigma_{\\alpha} \\in L\\), then \\((\\pi\\sigma)_{\\beta} \\in L\\). If \\(\\kappa \\in \\{\\forall,\\exists\\}\\), \\(\\chi \\in V\\) and \\(\\tau_{t} \\in L\\), then...","categories": [],
         "tags": [],
         "url": "/items/df-mt-l0/",
+        "teaser": null
+      },{
+        "title": "Partition",
+        "excerpt":"Given a set \\(A\\), a partition of \\(A\\) is a set of sets \\(\\{A_1, A_2, \\ldots, A_k\\}\\) such that, \\(\\bigcup_{i=1}^k A_i = A\\) and \\(A_i \\cap A_j = \\emptyset\\) for all \\(i \\neq j\\).  ","categories": [],
+        "tags": [],
+        "url": "/items/df-partition/",
         "teaser": null
       },{
         "title": "Semantic types",
@@ -389,8 +419,14 @@ var store = [{
         "url": "/items/ex-arithmetic-grammar/",
         "teaser": null
       },{
+        "title": "Completion",
+        "excerpt":"You are given the lexicon: Let \\(\\sysm{G}\\) be an abbreviation for \\(\\sysm{(S\\fs(S\\bs NP))}\\) \\[\\begin{align} \\textit{donkey} &amp;:=&amp; \\sysm{N} &amp;:&amp; \\sysm{\\lam x.donkey'x} &amp;::&amp; et\\\\ \\textit{student}&amp;:=&amp; \\sysm{N} &amp;:&amp; \\sysm{\\lam x.student'x} &amp;::&amp; et\\\\ \\textit{John} &amp;:=&amp; \\sysm{S\\fs(S\\bs NP)} &amp;:&amp; \\sysm{\\lam p.p\\cnct{}john'} &amp;::&amp; ett\\\\ \\quad \\nonumber\\\\ \\textit{sleeps} &amp;:=&amp; \\sysm{S\\bs NP} &amp;:&amp; \\sysm{\\lam x.sleeps'x} &amp;::&amp; et\\\\ \\textit{walk(s)}...","categories": [],
+        "tags": [],
+        "url": "/items/ex-ccg-complete/",
+        "teaser": null
+      },{
         "title": "Logical form to lexicon and derivation",
-        "excerpt":"Write the needed lexical categories (phon, syn, sem) and derive the logical forms of the following sentences: \\(\\interp{\\text{Every man and John walk}} = (\\forall x. man'x \\to walk'x) \\land walk'j'\\) \\(\\text{Every woman who loves John walks} = \\forall x. woman'x \\land love'j'x \\to walk'x\\) . \\(\\text{Every woman whom John loves...","categories": [],
+        "excerpt":"Write the needed lexical categories (phon, syn, sem) and derive the logical forms of the following sentences: @@math_item content=\\(\\interp{\\text{Every man and John walk}} = (\\forall x. man'x \\to walk'x) \\land walk'j'\\)@@ @@math_item content=\\(\\text{Every woman who loves John walks} = \\forall x. woman'x \\land love'j'x \\to walk'x\\)@@. @@math_item content=\\(\\text{Every woman whom...","categories": [],
         "tags": [],
         "url": "/items/ex-ccg-derivation-2/",
         "teaser": null
@@ -420,7 +456,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Infer a term",
-        "excerpt":"Give the lambda term that needs to replace \\(\\alpha\\) so that the reduction results as given. \\(\\alpha \\cnct a \\cnct b = b \\cnct a\\) \\(\\alpha \\cnct a \\cnct b \\cnct c = a \\cnct c \\cnct b\\) \\(\\alpha \\cnct a \\cnct b \\cnct c = a \\cnct (c \\cnct...","categories": [],
+        "excerpt":"Give the lambda term that needs to replace \\(\\alpha\\) so that the reduction results as given. @@math_item content=\\(\\alpha \\cnct a \\cnct b = b \\cnct a\\)@@ @@math_item content=\\(\\alpha \\cnct a \\cnct b \\cnct c = a \\cnct c \\cnct b\\)@@ @@math_item content=\\(\\alpha \\cnct a \\cnct b \\cnct c = a...","categories": [],
         "tags": [],
         "url": "/items/ex-lambda-inference/",
         "teaser": null
@@ -624,7 +660,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Flatten",
-        "excerpt":"Map a possibly nested sequence to its flattend version, which comprises only the ground element. For example, the sequence   [1, [2, 3], 4, [5, [6, 7]]]   should be mapped to   [1, 2, 3, 4, 5, 6, 7]  ","categories": [],
+        "excerpt":"Map a possibly nested sequence to its flattened version, which comprises only the ground element. For example, the sequence   [1, [2, 3], 4, [5, [6, 7]]]   should be mapped to   [1, 2, 3, 4, 5, 6, 7]  ","categories": [],
         "tags": [],
         "url": "/items/ex-flatten/",
         "teaser": null
@@ -663,6 +699,12 @@ var store = [{
         "excerpt":"Given an item and a sequence, tell whether the item is in the sequence or not.  ","categories": [],
         "tags": [],
         "url": "/items/ex-member/",
+        "teaser": null
+      },{
+        "title": "Random partition",
+        "excerpt":"Define a function random_partition that takes a set (can be a Python list) and returns a random partition of it (as a list of lists). You are granted access to a function named rand that generates a random number between 0 and 1 every time it is called. Each call...","categories": [],
+        "tags": [],
+        "url": "/items/ex-partition/",
         "teaser": null
       },{
         "title": "Permutation",
@@ -932,6 +974,9 @@ var store = [{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
   },{
+    "title": "OCaml CEB",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/ocaml-ceb/"
+  },{
     "title": "Vector review",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/vector_review/"
   },{
@@ -1057,6 +1102,9 @@ var store = [{
   },{
     "title": "Solution: Grammar for arithmetic",
     "excerpt":"```python from coursepy.lang.parsing import make_parser, make_cfg grammar_text=\"\"\" E -> E O E E -> LP E RP E -> '1'|'2'|'3'|'4' O -> '+'|'*' LP -> '(' RP -> ')' \"\"\" parser = make_parser(make_cfg(grammar_text)) for e in \"3 + 4,3 + 4 * 2,( 3 + 4 ) * 2\".split(\",\"): print(f\"Parse(s)...","url": "https://umutozge.github.io/solutions/ex-arithmetic-grammar/"
+  },{
+    "title": "Solution: Completion",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-ccg-complete/"
   },{
     "title": "Solution: Logical form to lexicon and derivation",
     "excerpt":"               Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-ccg-derivation-2/"
@@ -1195,6 +1243,9 @@ var store = [{
   },{
     "title": "Solution: Member",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-member/"
+  },{
+    "title": "Solution: Random partition",
+    "excerpt":"Let's first load our randomization gun. ```python import random random.seed(42) rand = lambda : random.uniform(0, 1) ``` ### Random integer generation Here is one possible solution to turning our float-based randomizer to an integer-based one. The idea is to separate the interval [0, 1) into bins of equal length, and...","url": "https://umutozge.github.io/solutions/ex-partition/"
   },{
     "title": "Solution: Permutation",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-permutation/"

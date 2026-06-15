@@ -215,9 +215,15 @@
     "label": "Exercise",
     "title": "Lexicon to derivation"
   },
-  "ex-ccg-derivation-2": {
+  "ex-ccg-complete": {
     "page": "/exercises/ccg/",
     "number": 3,
+    "label": "Exercise",
+    "title": "Completion"
+  },
+  "ex-ccg-derivation-2": {
+    "page": "/exercises/ccg/",
+    "number": 4,
     "label": "Exercise",
     "title": "Logical form to lexicon and derivation"
   },
@@ -569,13 +575,13 @@
     "label": "Definition",
     "title": "Powerset"
   },
-  "def-partition": {
+  "df-partition": {
     "page": "/exercises/sets/",
     "number": 3,
     "label": "Definition",
     "title": "Partition"
   },
-  "ex-random-partition": {
+  "ex-partition": {
     "page": "/exercises/sets/",
     "number": 4,
     "label": "Exercise",
