@@ -155,51 +155,57 @@
     "label": "Exercise",
     "title": "Rolex"
   },
-  "ex-recursive-jar": {
+  "ex-emilios-violin": {
     "page": "/exercises/basic-probability/",
     "number": 10,
+    "label": "Exercise",
+    "title": "Emilio's violin"
+  },
+  "ex-recursive-jar": {
+    "page": "/exercises/basic-probability/",
+    "number": 11,
     "label": "Exercise",
     "title": "Recursive jar"
   },
   "ex-recursive-jars": {
     "page": "/exercises/basic-probability/",
-    "number": 11,
+    "number": 12,
     "label": "Exercise",
     "title": "Recursive jars"
   },
   "ex-swap-game": {
     "page": "/exercises/basic-probability/",
-    "number": 12,
+    "number": 13,
     "label": "Exercise",
     "title": "Swap game"
   },
   "ex-prisoners-dilemma": {
     "page": "/exercises/basic-probability/",
-    "number": 13,
+    "number": 14,
     "label": "Exercise",
     "title": "The prisoner's dilemma"
   },
   "ex-two-envelopes": {
     "page": "/exercises/basic-probability/",
-    "number": 14,
+    "number": 15,
     "label": "Exercise",
     "title": "Two envelopes"
   },
   "ex-more-heads": {
     "page": "/exercises/basic-probability/",
-    "number": 15,
+    "number": 16,
     "label": "Exercise",
     "title": "More heads for Bob"
   },
   "ex-question-of-independence": {
     "page": "/exercises/basic-probability/",
-    "number": 16,
+    "number": 17,
     "label": "Exercise",
     "title": "A question of independence"
   },
   "ex-kings-sibling": {
     "page": "/exercises/basic-probability/",
-    "number": 17,
+    "number": 18,
     "label": "Exercise",
     "title": "King's sibling"
   },
@@ -617,10 +623,22 @@
     "label": "Exercise",
     "title": "Plotting frequency vs. rank"
   },
+  "th-bayes": {
+    "page": "/solutions/ex-emilios-violin/",
+    "number": 1,
+    "label": "Theorem",
+    "title": "Bayes' Theorem"
+  },
   "df-cond-prob": {
     "page": "/solutions/ex-second-throw/",
     "number": 1,
     "label": "Definition",
-    "title": "Conditional proability"
+    "title": "Conditional probability"
+  },
+  "df-cond-ind": {
+    "page": "/solutions/ex-emilios-violin/",
+    "number": 3,
+    "label": "Definition",
+    "title": "Conditional independence"
   }
 }

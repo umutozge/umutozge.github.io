@@ -353,7 +353,13 @@ var store = [{
         "url": "/items/df-peano-type/",
         "teaser": null
       },{
-        "title": "Conditional proability",
+        "title": "Conditional independence",
+        "excerpt":"Given three events \\(A\\), \\(B\\), and \\(C\\), we say that \\(A\\) and \\(B\\) are conditionally independent given \\(C\\) if the occurrence of one event does not affect the probability of the other event occurring, given that \\(C\\) has occurred. This can be expressed mathematically as: \\[P(A \\cap B \\given C)...","categories": [],
+        "tags": [],
+        "url": "/items/df-cond-ind/",
+        "teaser": null
+      },{
+        "title": "Conditional probability",
         "excerpt":"The conditional probability of an event \\(A\\) given an event \\(B\\) is the probability of \\(A\\) occurring given that \\(B\\) has occurred. It is denoted as \\(P(A\\given B)\\) and can be calculated using the formula:   \\[P(A\\given B) = \\frac{P(A \\cap B)}{P(B)}\\] ","categories": [],
         "tags": [],
         "url": "/items/df-cond-prob/",
@@ -543,6 +549,12 @@ var store = [{
         "excerpt":"Eight rooks are placed in distinct squares of an \\(8 \\times 8\\) chessboard, with all possible placements being equally likely. Find the probability that all the rooks are safe from one another, i.e. that there is no row or column with more than one rook.  ","categories": [],
         "tags": [],
         "url": "/items/ex-eight-rooks/",
+        "teaser": null
+      },{
+        "title": "Emilio's violin",
+        "excerpt":"Emilio found an old violin in his grand-grandmother’s attic. He wonders if it is one of those instruments hand-made by the 17th century Italian family Stradivari, which are extremely valuable today. He knows this is highly improbable, but since he is in Italy, it is relatively higher, say 3%. In...","categories": [],
+        "tags": [],
+        "url": "/items/ex-emilios-violin/",
         "teaser": null
       },{
         "title": "Flip",
@@ -1165,6 +1177,9 @@ var store = [{
   },{
     "title": "Solution: Eight rooks",
     "excerpt":"Let's place the rooks one by one, indexing them starting with 0. Let $$P(n)$$ denote the probabiity that the rook $$n$$ drops to a safe square given that the previous $$n-1$$ rooks were placed safely. Obviously $$P(0)$$ is 1. For $$P(1)$$, we have $$64 - 15$$ safe squares out of...","url": "https://umutozge.github.io/solutions/ex-eight-rooks/"
+  },{
+    "title": "Solution: Emilio's violin",
+    "excerpt":"Let $$S$$ be the event that the violin is a Strad, and $$L$$ be the event that the violin has the label Emilio found. The probability we are interested in is $$P(S\\given L)$$. The Bayes' theorem (@@xref|th-bayes@@) says, $$ P(S\\given L) = \\frac{P(L\\given S)P(S)}{P(L\\given S)P(S)+P(L\\given \\neg S)P(\\neg S)} $$ The...","url": "https://umutozge.github.io/solutions/ex-emilios-violin/"
   },{
     "title": "Solution: Flip",
     "excerpt":"All you can expect from Python is to generate for you a random number in $$[1,0)$$. In an unbiased `flip` all the shots of `random` below 0.5 would be `True` and above would be `False`, or vice versa. Now you can adjust the bias of the `flip` with the parameter...","url": "https://umutozge.github.io/solutions/ex-flip/"

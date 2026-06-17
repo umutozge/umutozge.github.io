@@ -10,19 +10,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Addition - Umut Özge</title>
-<meta name="description" content="\(\forall x. x+0=x\).   \(\forall x,y. x+s(y) = s(x + y)\).">
+<!-- begin _includes/seo.html --><title>Conditional independence - Umut Özge</title>
+<meta name="description" content="Given three events \(A\), \(B\), and \(C\), we say that \(A\) and \(B\) are conditionally independent given \(C\) if the occurrence of one event does not affect the probability of the other event occurring, given that \(C\) has occurred. This can be expressed mathematically as:">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Umut Özge">
-<meta property="og:title" content="Addition">
-<meta property="og:url" content="https://umutozge.github.io/items/df-addition/">
+<meta property="og:title" content="Conditional independence">
+<meta property="og:url" content="https://umutozge.github.io/items/df-cond-ind/">
 
 
-  <meta property="og:description" content="\(\forall x. x+0=x\).   \(\forall x,y. x+s(y) = s(x + y)\).">
+  <meta property="og:description" content="Given three events \(A\), \(B\), and \(C\), we say that \(A\) and \(B\) are conditionally independent given \(C\) if the occurrence of one event does not affect the probability of the other event occurring, given that \(C\) has occurred. This can be expressed mathematically as:">
 
 
 
@@ -37,7 +37,7 @@
 
 
 
-<link rel="canonical" href="https://umutozge.github.io/items/df-addition/">
+<link rel="canonical" href="https://umutozge.github.io/items/df-cond-ind/">
 
 
 
@@ -180,8 +180,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Addition">
-    <meta itemprop="description" content="  \(\forall x. x+0=x\).  \(\forall x,y. x+s(y) = s(x + y)\).">
+    <meta itemprop="headline" content="Conditional independence">
+    <meta itemprop="description" content="Given three events \(A\), \(B\), and \(C\), we say that \(A\) and \(B\) are conditionally independent given \(C\) if the occurrence of one event does not affect the probability of the other event occurring, given that \(C\) has occurred. This can be expressed mathematically as:">
     <meta itemprop="datePublished" content="2026-06-17T16:50:15+03:00">
     
 
@@ -190,7 +190,7 @@
         <header>
           
               <h2 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://umutozge.github.io/items/df-addition/" itemprop="url">Definition: Addition
+                <a href="https://umutozge.github.io/items/df-cond-ind/" itemprop="url">Definition: Conditional independence
 </a>
               </h2>
             
@@ -204,10 +204,44 @@
       <section class="page__content" itemprop="text">
         
         <div class="numbered">
-  <ol>
-  <li>\(\forall x. x+0=x\).</li>
-  <li>\(\forall x,y. x+s(y) = s(x + y)\).</li>
-</ol>
+  <p>Given three events \(A\), \(B\), and \(C\), we say that \(A\) and \(B\) are <strong>conditionally independent</strong> given \(C\) if the occurrence of one event does not affect the probability of the other event occurring, given that \(C\) has occurred. This can be expressed mathematically as:</p>
+
+\[P(A \cap B \given C) = P(A \given C)  P(B \given C)\]
+
+<p>The formula can be rearranged to a more intuitive form. First, observe that the
+LHS can be rewritten as,</p>
+
+\[\begin{align}
+\begin{aligned}
+P(A \cap B \given C) &amp; = \frac{P(A \cap B\cap C)}{P(C)}\\
+                    &amp; = \frac{P(A\cap C)P(B\given A\cap C)}{P(C)}
+\end{aligned}
+\end{align}\]
+
+<p>Now transform the RHS as,</p>
+
+\[\begin{align}
+\begin{aligned}
+P(A \given C)  P(B \given C) &amp; = \frac{P(A\cap C)}{P(C)} P(B\given C)
+\end{aligned}
+\end{align}\]
+
+<p>Re-drawing the equality with the transformed LHS and RHS, we get,</p>
+
+\[\begin{align}
+\begin{aligned}
+\frac{P(A\cap C)P(B\given A\cap C)}{P(C)} = \frac{P(A\cap C)}{P(C)} P(B\given C)
+\end{aligned}
+\end{align}\]
+
+<p>which, after cancellations, gives,</p>
+
+<p>\(\begin{align}
+\begin{aligned}
+P(B\given A\cap C)= P(B\given C)
+\end{aligned}
+\end{align}\)
+which more explicitly states that “when you know that \(C\) has occurred, learning that \(A\) has occurred does not provide any information on the probability of \(B\) occurring”.</p>
 
 
 <script>
@@ -261,10 +295,10 @@
       
   <nav class="pagination">
     
-      <a href="/items/df-norm-function/" class="pagination--pager" title="Properties of a norm function">Previous</a>
+      <a href="/items/df-peano-type/" class="pagination--pager" title="The Peano type">Previous</a>
     
     
-      <a href="/items/df-multiplication/" class="pagination--pager" title="Multiplication">Next</a>
+      <a href="/items/df-cond-prob/" class="pagination--pager" title="Conditional probability">Next</a>
     
   </nav>
 
