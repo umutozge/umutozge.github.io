@@ -222,12 +222,19 @@ The idea is to separate the interval [0, 1) into bins of equal length, and then 
 <div class="nb-cell nb-input">
   <div class="nb-prompt"></div>
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">random_int</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="sh">"""</span><span class="s">random integer in [a, b) that makes use of rand</span><span class="sh">"""</span>  <span class="c1">##]
-</span>    <span class="n">nbin</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="n">a</span>    <span class="c1"># number of bins
+    <span class="sh">"""</span><span class="s">random integer in [a, b) that makes use of rand</span><span class="sh">"""</span>
+    <span class="n">nbin</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="n">a</span>    <span class="c1"># number of bins
 </span>    <span class="n">lbin</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">nbin</span> <span class="c1"># length of each bin
-</span>    <span class="n">r</span> <span class="o">=</span> <span class="nf">rand</span><span class="p">()</span>      <span class="c1"># random number in [0, 1) ##]
+</span>    <span class="n">r</span> <span class="o">=</span> <span class="nf">rand</span><span class="p">()</span>      <span class="c1"># random number in [0, 1)
 </span>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="nf">int</span><span class="p">(</span><span class="n">r</span><span class="o">/</span><span class="n">lbin</span><span class="p">)</span> <span class="c1"># which bin does r fall into?
 </span></code></pre></div>  </div>
+</div>
+<p>My students (COGS 502 class of Spring 2026) do much better than my embarrasingly complex solution:</p>
+
+<div class="nb-cell nb-input">
+  <div class="nb-prompt"></div>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">random_int</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span> <span class="k">return</span> <span class="nf">int</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="nf">rand</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">))</span>
+</code></pre></div>  </div>
 </div>
 <h3 id="random-partition-generation">Random partition generation</h3>
 
