@@ -834,7 +834,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Iteration by `while`",
-        "excerpt":"Let’s start with a simple function defined over integers called the Collatz function \\(C\\). \\[C(n) = \\begin{cases} \\frac{n}{2} &amp; \\text{if } n \\text{ is even}\\\\ 3n + 1 &amp; \\text{if } n \\text{ is odd} \\end{cases}\\] Collatz’ conjecture states that for any positive integer \\(n\\), repeated application of \\(C\\) will...","categories": ["course"],
+        "excerpt":"Let’s start with a simple function defined over integers called the Collatz function \\(C\\). \\[C(n) = \\begin{cases} \\frac{n}{2} &amp; \\text{if } n \\text{ is even}\\\\ 3n + 1 &amp; \\text{if } n \\text{ is odd} \\end{cases}\\] Collatz’ conjecture states that for any positive integer1 \\(n\\), repeated application of \\(C\\) will...","categories": ["course"],
         "tags": ["iteration"],
         "url": "/posts/course/iteration-by-while/",
         "teaser": null
@@ -897,6 +897,12 @@ var store = [{
         "excerpt":"When we model the world through mathematics, we frequently find ourselves talking about magnitudes. Mass, length, price, and so on, are all examples of quantities that we use numbers to represent. We build our mathematical models in such a way that these numbers and operations involving them has some, largely...","categories": ["course"],
         "tags": ["continuous","linear algebra"],
         "url": "/posts/course/vectors/",
+        "teaser": null
+      },{
+        "title": "Why do we have 501 and 502?",
+        "excerpt":"Why should anyone take pains to learn programming in the Fall of 2026? Humans are now ranked second among the autonomous intelligent organisms that compose computer code in the known universe; and the gap separating us and machines is so swiftly widening that even the comparison might stop making sense...","categories": ["course"],
+        "tags": ["python"],
+        "url": "/posts/course/why-5012/",
         "teaser": null
       },{
         "title": "Prisoners Dilemma",
@@ -962,11 +968,11 @@ var store = [{
     "title": "Workbook browser",
     "excerpt":"counting 1 discrete 2 funprog 1 grammar 1 iteration 1 language 6 linear algebra 1 lists 1 logic 2 number theory 2 parsing 1 probability 2 programming 1 proof 1 python 3 recursion 2 semantics 3 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. CCG Exercises...","url": "https://umutozge.github.io/exercise/browser/"
   },{
-    "title": "COGS 502",
-    "excerpt":"Spring 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ T 2:40-5:30, II03 Check the current syllabus for course information and policies. Some exercises on this course may require some helper code. Please visit coursepy on how to get and install the helper code. Make sure you are on...","url": "https://umutozge.github.io/prelim/schedule/"
+    "title": "COGS 501",
+    "excerpt":"Fall 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ M 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(28/9) 📖 Why do we...","url": "https://umutozge.github.io/prelim/schedule/"
   },{
     "title": "COGS 543",
-    "excerpt":"Spring 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ W 2:40-5:30, II04 Check the current syllabus for course information and policies. Some exercises on this course may require some helper code. Please visit coursepy on how to get and install the helper code. Make sure you are on...","url": "https://umutozge.github.io/cl/schedule/"
+    "excerpt":"     Fall 2026  Umut Özge (✉️) , Anıl Öğdül (TA, ✉️)    ⏰ T 2:40-5:30, II04  Check the current syllabus for course information and policies.   Make sure you are on odtuclass to get announcements and updates.  📖: reading | 📝: exercise | 🧩: optional/advanced material                   Week       Content             ","url": "https://umutozge.github.io/cl/schedule/"
   },{
     "title": "COGS 526",
     "excerpt":"Spring 2026 Umut Özge (✉️), Anıl Öğdül (TA, ✉️) 🕐 W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. ✳️ marks optional material. Week Content 1&nbsp;(18/2) Why logic is still relevant for cognitive science and AI...","url": "https://umutozge.github.io/courses/lccm/schedule/"
@@ -978,7 +984,7 @@ var store = [{
     "excerpt":"Course information The course is an introduction to computational approaches to representing and processing meaning in natural language. The course takes a scientific perspective on the subject and focuses on interpretable models that potentially have cognitive plausiblity. If you are interested rather in the engineering field of NLP and state-of-the-art...","url": "https://umutozge.github.io/cl/syllabus/"
   },{
     "title": "Syllabus for COGS 501/2",
-    "excerpt":"Course Information These courses aim to introduce graduate students in cognitive science to the mathematical and computational foundations that are necessary for advanced study in cognitive science. The mathematical topics covered at a basic level are, sets, relations, functions, logic, combinatorics, number theory, probability, linear algebra, and calculus. A functional...","url": "https://umutozge.github.io/prelim/syllabus/"
+    "excerpt":"Course Information These two courses aim to introduce graduate students in cognitive science to the mathematical and computational foundations that are necessary for advanced study in cognitive science. The mathematical topics covered at a basic level are, sets, relations, functions, logic, combinatorics, number theory, probability, linear algebra, and calculus. A...","url": "https://umutozge.github.io/prelim/syllabus/"
   },{
     "title": "Posts by Tag",
     "excerpt":" ","url": "https://umutozge.github.io/tags-old/"
@@ -1176,7 +1182,7 @@ var store = [{
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-four-spades-out/"
   },{
     "title": "Solution: Eight rooks",
-    "excerpt":"Let's place the rooks one by one, indexing them starting with 0. Let $$P(n)$$ denote the probabiity that the rook $$n$$ drops to a safe square given that the previous $$n-1$$ rooks were placed safely. Obviously $$P(0)$$ is 1. For $$P(1)$$, we have $$64 - 15$$ safe squares out of...","url": "https://umutozge.github.io/solutions/ex-eight-rooks/"
+    "excerpt":"**Solution 1:** Let's place the rooks one by one, indexing them starting with 0. Let $$P(n)$$ denote the probabiity that the rook $$n$$ drops to a safe square given that the previous $$n-1$$ rooks were placed safely. Obviously $$P(0)$$ is 1. For $$P(1)$$, we have $$64 - 15$$ safe squares...","url": "https://umutozge.github.io/solutions/ex-eight-rooks/"
   },{
     "title": "Solution: Emilio's violin",
     "excerpt":"Let $$S$$ be the event that the violin is a Strad, and $$L$$ be the event that the violin has the label Emilio found. The probability we are interested in is $$P(S\\given L)$$. The Bayes' theorem (@@xref|th-bayes@@) says, $$ P(S\\given L) = \\frac{P(L\\given S)P(S)}{P(L\\given S)P(S)+P(L\\given \\neg S)P(\\neg S)} $$ The...","url": "https://umutozge.github.io/solutions/ex-emilios-violin/"
@@ -1260,7 +1266,7 @@ var store = [{
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-member/"
   },{
     "title": "Solution: Random partition",
-    "excerpt":"Let's first load our randomization gun. ```python import random random.seed(42) rand = lambda : random.uniform(0, 1) ``` ### Random integer generation Here is one possible solution to turning our float-based randomizer to an integer-based one. The idea is to separate the interval [0, 1) into bins of equal length, and...","url": "https://umutozge.github.io/solutions/ex-partition/"
+    "excerpt":"Let's first load our randomization gun. ```python import random random.seed(42) rand = lambda : random.uniform(0, 1) ``` ### Random integer generation I prepared this solution shortly before I gave the final exam for COGS 502 on Spring 2026. I was able to realize the embarrassing complexity of my solution only...","url": "https://umutozge.github.io/solutions/ex-partition/"
   },{
     "title": "Solution: Permutation",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-permutation/"

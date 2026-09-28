@@ -216,6 +216,8 @@
 </div>
 <h3 id="random-integer-generation">Random integer generation</h3>
 
+<p class="notice--warning">I prepared this solution shortly before I gave the final exam for COGS 502 on Spring 2026. I was able to realize the embarrassing complexity of my solution only after I sat down to grade the final exams. Almost all of the class was able to come up with a much simpler solution, which is that a random integer in \([a,b)\) is simply \(\lfloor a + r(b-a)\rfloor\), where \(r\) is a random float in \([0,1)\). Let this stand here as one clear instance of, unfortunately not so rare, occasions I fall behind. Still, the class of Spring 2026 was one of the best.</p>
+
 <p>Here is one possible solution to turning our float-based randomizer to an integer-based one.
 The idea is to separate the interval [0, 1) into bins of equal length, and then see which bin the random number falls into.</p>
 

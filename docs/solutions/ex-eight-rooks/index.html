@@ -204,7 +204,7 @@
         <main>
 		<hr>
   <div class="numbered">
-    <p>Let’s place the rooks one by one, indexing them starting with 0. Let \(P(n)\)
+    <p><strong>Solution 1:</strong> Let’s place the rooks one by one, indexing them starting with 0. Let \(P(n)\)
 denote the probabiity that the rook \(n\)  drops to a safe square given that the
 previous \(n-1\) rooks were placed safely.</p>
 
@@ -218,7 +218,7 @@ on. We apply the chain rule to compute \(P(n)\) in the general:</p>
 
 <p>Therefore,</p>
 
-\[P(7) = 
+\[P(7) =
 \frac{49}{63} \cdot
 \frac{36}{62} \cdot
 \frac{25}{61} \cdot
@@ -227,13 +227,64 @@ on. We apply the chain rule to compute \(P(n)\) in the general:</p>
 \frac{4}{58} \cdot
 \frac{1}{57}\]
 
-<p>An alternative solution would be to first count the different ways of choosing
+<hr />
+
+<p><strong>Solution 2:</strong> An alternative solution would be to first count the different ways of choosing
 where to put the rooks ensuring they are safe,  and then divide this by the
 total number of ways to place 8 rooks without caring for keeping them safe.
 In numbers,</p>
 
 \[\frac{64\cdot 49 \cdot 36 \cdot 25 \cdot 16 \cdot 9 \cdot 4 \cdot 1}{64\cdot
 63\cdot 62\cdot 61\cdot 60\cdot 59\cdot 58\cdot 57}\]
+
+<hr />
+
+<p><strong>Solution 3:</strong> The placement of rooks can also go like this. We place the first rook to an
+\(8\times 8\) grid; the second rook must be placed in a \(7\times 7\) grid, and
+so on. Therefore, there are \(8!^2\) ways to place the rooks safely. Dividing
+this by the total number of ways to place 8 rooks on a \(8\times 8 = 64\) cell
+board, we get:</p>
+
+\[\frac{8!^2}{P(64,8)}\]
+
+<hr />
+
+<p><strong>Solution 4:</strong> All the results above are equal to the following expression:</p>
+
+\[\frac{8!}{64 \choose 8}\]
+
+<p>Wouldn’t it have been possible to directly arrive at this expression? Let’s
+approach the problem from a different angle. The task is to pick 8 squares from
+a total of 64 to be occupied by rooks. This can be done in \({64 \choose 8}\)
+ways. We need to count how many of these selections are safe.</p>
+
+<p>Think about this collection of safe placements, where each placement is say a
+collection of \(8\) tuples of row and column index. Given any placement from
+this set, when I order the tuples wrt their first index and stack them
+vertically starting from 1, I would have an 8 row table where the first column
+is simpy 1 to 8, and the second column is the corresponding column indices for
+each row. As there are \(8!\) such tables in the entire collection, I have
+\(8!\) many safe placements.</p>
+
+<p>If you want to think more concretely, consider the following game. Assume I know
+what there is to know about safe placements, on a notebook or on my computer.
+You sit in front of a chess board and you have 8 rook pieces beside the board.
+Our task is me telling you how to place the rooks safely on the board for each
+safe placement in my collection. Of course, for each placement, I can tell you
+the coordinates one by one. But assume we are a little short on time, on a task
+that would take quite a long time anyway. So, we would want to use some
+information that follows from the nature of the collection of safe placements.
+That information is that whichever placement I tell you, the first indices will
+always be 1 to 8 in some order – of course likewise for the column indices.
+Therefore, I can simply tell you the order of indices in only one of the
+dimensions – we can agree on rows or columns. Therefore, for each placement you
+will receive a particular permutation of the numbers 1 to 8.</p>
+
+<p>I know the commentary above is rather an overkill, if not silly. But I hope you
+get the point that most of the time there is a multidue of ways to approach a
+mathematical/computational problem; and also that these routes to the solution
+are not equivalent beyond leading to the same destination. They can be more or
+less beautiful, illuminating, enjoyable, and what not.</p>
 
 <hr />
 
