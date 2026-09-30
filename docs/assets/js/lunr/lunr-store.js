@@ -881,12 +881,6 @@ var store = [{
         "url": "/posts/course/walrus-operator/",
         "teaser": null
       },{
-        "title": "Language primer",
-        "excerpt":"This is a quick start on langugage for cognitive science students. A simple formal system Douglas Hofstadter1 has this tiny formal system called pq-System. In defining formal systems, we start with a set of symbols, called the alphabet. This dictates that any expression of the system must be made by...","categories": ["course"],
-        "tags": ["language","cogsci"],
-        "url": "/posts/course/language-primer/",
-        "teaser": null
-      },{
         "title": "Model-theoretic interpretation",
         "excerpt":"Introduction Model-theoretic semantics in linguistics aims to define correspondences between the expressions of a language and objects that are external to that language. To give a very simple example: assume you and I have a silly code between us, according to which, during the normal course of my speaking whenever...","categories": ["course"],
         "tags": ["language","semantics"],
@@ -903,6 +897,12 @@ var store = [{
         "excerpt":"Why should anyone take pains to learn programming in the Fall of 2026? Humans are now ranked second among the autonomous intelligent organisms that compose computer code in the known universe; and the gap separating us and machines is so swiftly widening that even the comparison might stop making sense...","categories": ["course"],
         "tags": ["python"],
         "url": "/posts/course/why-5012/",
+        "teaser": null
+      },{
+        "title": "Language primer",
+        "excerpt":"This is a quick start on langugage for cognitive science students. A simple formal system Douglas Hofstadter1 has this tiny formal system called pq-System. In defining formal systems, we start with a set of symbols, called the alphabet. This dictates that any expression of the system must be made by...","categories": ["course"],
+        "tags": ["language","cogsci"],
+        "url": "/posts/course/language-primer/",
         "teaser": null
       },{
         "title": "Prisoners Dilemma",
@@ -972,7 +972,7 @@ var store = [{
     "excerpt":"Fall 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ M 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(28/9) 📖 Why do we...","url": "https://umutozge.github.io/prelim/schedule/"
   },{
     "title": "COGS 543",
-    "excerpt":"     Fall 2026  Umut Özge (✉️) , Anıl Öğdül (TA, ✉️)    ⏰ T 2:40-5:30, II04  Check the current syllabus for course information and policies.   Make sure you are on odtuclass to get announcements and updates.  📖: reading | 📝: exercise | 🧩: optional/advanced material                   Week       Content             ","url": "https://umutozge.github.io/cl/schedule/"
+    "excerpt":"Fall 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ T 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(29/9) 📖 Language primer, the...","url": "https://umutozge.github.io/cl/schedule/"
   },{
     "title": "COGS 526",
     "excerpt":"Spring 2026 Umut Özge (✉️), Anıl Öğdül (TA, ✉️) 🕐 W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. ✳️ marks optional material. Week Content 1&nbsp;(18/2) Why logic is still relevant for cognitive science and AI...","url": "https://umutozge.github.io/courses/lccm/schedule/"
@@ -991,6 +991,18 @@ var store = [{
   },{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
+  },{
+    "title": "Modelling meaning composition from formalism to mechanism",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/martin-baggio/"
+  },{
+    "title": "Computational linguistics and deep learning",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/manning-computational/"
+  },{
+    "title": "A pendulum swung too far",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/church-pendulum/"
+  },{
+    "title": "The truth about English Grammar",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/pullum-truth/"
   },{
     "title": "OCaml CEB",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/ocaml-ceb/"

@@ -1,28 +1,4 @@
 {
-  "def:pq-axioms": {
-    "page": "/posts/course/language-primer/",
-    "number": 1,
-    "label": "Definition",
-    "title": "Axioms of `pq-System`"
-  },
-  "def:pq-production": {
-    "page": "/posts/course/language-primer/",
-    "number": 2,
-    "label": "Definition",
-    "title": "Productions of `pq-System`"
-  },
-  "ex:telescope": {
-    "page": "/posts/course/language-primer/",
-    "number": 3,
-    "label": "Example",
-    "title": "The telescope sentence"
-  },
-  "ex:telescope-structures": {
-    "page": "/posts/course/language-primer/",
-    "number": 4,
-    "label": "Example",
-    "title": "Two structures for the telescope sentence"
-  },
   "df-char-func": {
     "page": "/posts/course/model-theoretic-interpretation/",
     "number": 1,
@@ -100,6 +76,30 @@
     "number": 2,
     "label": "Theorem",
     "title": "The law of cosines"
+  },
+  "def:pq-axioms": {
+    "page": "/posts/course/language-primer/",
+    "number": 1,
+    "label": "Definition",
+    "title": "Axioms of `pq-System`"
+  },
+  "def:pq-production": {
+    "page": "/posts/course/language-primer/",
+    "number": 2,
+    "label": "Definition",
+    "title": "Productions of `pq-System`"
+  },
+  "ex:telescope": {
+    "page": "/posts/course/language-primer/",
+    "number": 3,
+    "label": "Example",
+    "title": "The telescope sentence"
+  },
+  "ex:telescope-structures": {
+    "page": "/posts/course/language-primer/",
+    "number": 4,
+    "label": "Example",
+    "title": "Two structures for the telescope sentence"
   },
   "ex-flip": {
     "page": "/exercises/basic-probability/",

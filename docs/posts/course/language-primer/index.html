@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-02-14T00:00:00+03:00">
+  <meta property="article:published_time" content="2026-09-29T00:00:00+03:00">
 
 
 
@@ -182,7 +182,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Language primer">
     <meta itemprop="description" content="Initial steps for cognitive science students interested in language.">
-    <meta itemprop="datePublished" content="2026-02-14T00:00:00+03:00">
+    <meta itemprop="datePublished" content="2026-09-29T00:00:00+03:00">
     
 
     <div class="page__inner-wrap">
@@ -203,7 +203,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2026-02-14T00:00:00+03:00">2026-02-14</time>
+        <time datetime="2026-09-29T00:00:00+03:00">2026-09-29</time>
       </span>
     
 
@@ -232,27 +232,18 @@
 
   <h2 id="a-simple-formal-system">A simple formal system</h2>
 
-  <p>Douglas Hofstadter<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> has this tiny formal system called <code class="language-plaintext highlighter-rouge">pq-System</code>. In
-defining formal systems, we start with a set of symbols, called <strong>the
-alphabet</strong>. This dictates that any expression of the system must be made by
-bringing together, in some order, one or more of these symbols. Next, and the
-last, step is to define which expressions formed out of these symbols are
-<strong>well-formed</strong> in the system.</p>
+  <p>Douglas Hofstadter<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> has this tiny formal system called <code class="language-plaintext highlighter-rouge">pq-System</code>. In defining formal systems, we start with a set of symbols, called <strong>the alphabet</strong>. This dictates that any expression of the system must be made by bringing together, in some order, one or more of these symbols. Next, and the last, step is to define which expressions formed out of these symbols are <strong>well-formed</strong> in the system.</p>
 
   <p>This well-formedness step comes in two sub-steps.</p>
 
   <ol>
-    <li>First we define the <strong>axioms</strong>, those expressions that we take to be
-well-formed without any further justification.</li>
-    <li>Second is <strong>the rules of production</strong> that allow us to generate new
-well-formed expressions from already existing well-formed expressions.</li>
+    <li>First we define the <strong>axioms</strong>, those expressions that we take to be well-formed without any further justification.</li>
+    <li>Second is <strong>the rules of production</strong> that allow us to generate new well-formed expressions from already existing well-formed expressions.</li>
   </ol>
 
   <p>In <code class="language-plaintext highlighter-rouge">pq-System</code>, the alphabet consists of the following three symbols: <code class="language-plaintext highlighter-rouge">p</code>, <code class="language-plaintext highlighter-rouge">q</code>, and <code class="language-plaintext highlighter-rouge">-</code>.</p>
 
-  <p>We have infinitely many axioms in <code class="language-plaintext highlighter-rouge">pq-System</code>, therefore we cannot list them
-all. Instead, we provide a rule that generates all of the axioms, usually called
-an <strong>axiom schema</strong>.</p>
+  <p>We have infinitely many axioms in <code class="language-plaintext highlighter-rouge">pq-System</code>, therefore we cannot list them all. Instead, we provide a rule that generates all of the axioms, usually called an <strong>axiom schema</strong>.</p>
 
   <div class="item" id="def:pq-axioms" data-kind="definition" data-label="Definition" data-title="Axioms of `pq-System`">
 
@@ -272,87 +263,47 @@ of the system (=a well-formed expression).</p>
 
   </div>
 
-  <p>Now. think of a <strong>decision procedure</strong> that takes an expression and decides
-whether it is well-formed or not.</p>
+  <p>Now. think of a <strong>decision procedure</strong> that takes an expression and decides whether it is well-formed or not.</p>
 
   <hr class="topic-separator" />
 
-  <p>Inspecting the well-formed expressions of <code class="language-plaintext highlighter-rouge">pq-System</code>, can you see what do they
-<em>mean</em>? Or, can you say what they are <em>about</em>? Or, can you say what they are
-<em>for</em>?</p>
+  <p>Inspecting the well-formed expressions of <code class="language-plaintext highlighter-rouge">pq-System</code>, can you see what do they <em>mean</em>? Or, can you say what they are <em>about</em>? Or, can you say what they are <em>for</em>?</p>
 
-  <p>They are theorems of binary addition of non-equal (except \(1 + 1 = 2\)) and non-negative integers. Their
-<em>meaning</em> is this.</p>
+  <p>They are theorems (truths) of binary addition of non-equal (except \(1 + 1 = 2\)) and non-negative integers. Their <em>meaning</em> is this.</p>
 
   <h3 id="levels-of-analysis">Levels of analysis</h3>
 
-  <p>Language is studied in levels of analysis. The study of the atomic building
-blocks of language and how they combine into more complex structures is called
-<strong>phonology</strong>. The alphabet analogy, although the best we can do, would be a little
-misleading here, because the building blocks of language are not the
-orthographic symbols, but the <strong>phonemes</strong>, the smallest units of sound that can
-distinguish meaning in a language.</p>
+  <p>Language is studied in levels of analysis. The study of the atomic building blocks of language and how they combine into more complex structures is called <strong>phonology</strong>. The alphabet analogy, although the best we can do, would be a little misleading here, because the building blocks of language are not the orthographic symbols, but the <strong>phonemes</strong>, the smallest units of sound that can distinguish meaning in a language.</p>
 
-  <p>The study of the properties of well-formed expressions is called
-<strong>morphosyntax</strong>. As you observed above, this can be studied without any
-reference to meaning or significance in any form.</p>
+  <p>The study of the properties of well-formed expressions is called <strong>morphosyntax</strong>. As you observed above, this can be studied without any reference to meaning or significance in any form.</p>
 
-  <p>The study of the meaning of expressions is called <strong>semantics</strong>. And again as
-you saw above, what we mean by “meaning” is not obvious at all. What sort of a
-relation is it? Correspondence, aboutness, use (procedural)? If it’s a
-correspondence, what is the nature of the entities that are related? Are they
-mental, neural, abstract? All these, and many more, are part of the game in the
-study of natural language meaning.</p>
+  <p>The study of the meaning of expressions is called <strong>semantics</strong>. And again as you saw above, what we mean by “meaning” is not obvious at all. What sort of a relation is it? Correspondence, aboutness, use (procedural)? If it’s a correspondence, what is the nature of the entities that are related? Are they mental, neural, abstract? All these, and many more, are part of the game in the study of natural language meaning.</p>
 
-  <p>The last level that is interest to cognitive science is <strong>pragmatics</strong>, the
-study of how language is used in context. The boundary between semantics and
-pragmatics is not clear, and there are many different views on how to draw it.
-As we go along, we will see that there might not be much value in drawing such
-a boundary. Perhaps some boundaries are more useful when they are left fuzzy.</p>
+  <p>The last level that is interest to cognitive science is <strong>pragmatics</strong>, the study of how language is used in context. The boundary between semantics and pragmatics is not clear, and there are many different views on how to draw it. As we go along, we will see that there might not be much value in drawing such a boundary. Perhaps some boundaries are more useful when they are left fuzzy.</p>
 
-  <p>In studying language from a cognitive science perspective, studying morphosyntax
-on its own does not make much sense.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> The relevant field of inquiry is rather
-the study of the relation between morphosyntax on one hand, and semantics and
-pragmatics on the other. Let’s call this domain <strong>semantax</strong> for the sake of
-having a name for it.<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
+  <p>In studying language from a cognitive science perspective, studying morphosyntax on its own does not make much sense.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> The relevant field of inquiry is rather the study of the relation between morphosyntax on one hand, and semantics and pragmatics on the other. Let’s call this domain <strong>semantax</strong> for the sake of having a name for it.<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
 
   <h3 id="grammar">Grammar</h3>
 
   <p>Some important aspects of human language are:</p>
 
   <ol>
-    <li><strong>Compositionality:</strong> “The meaning of a compound expression is a function of
-the meanings of its parts and of the way they are syntactically
-combined.”<sup id="fnref:partee"><a href="#fn:partee" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> This is usually cited as <strong>Frege’s principle</strong>. Fodor and
-Lepore has a nice way to put it: You cannot understand <em>John loves Mary</em>
-without also understanding <em>Mary loves John</em>.</li>
-    <li><strong>Recursion:</strong> In principle, there is no end to the expressions that can be generated
-   in a language. This is due to the fact that expressions of a given type
-   can be (directly or indirectly) inserted in expressions of the same type.</li>
+    <li><strong>Compositionality:</strong> “The meaning of a compound expression is a function of the meanings of its parts and of the way they are syntactically combined.”<sup id="fnref:partee"><a href="#fn:partee" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> This is usually cited as <strong>Frege’s principle</strong>. Fodor and Lepore has a nice way to put it: You cannot understand <em>John loves Mary</em> without also understanding <em>Mary loves John</em>.</li>
+    <li><strong>Recursion:</strong> In principle, there is no end to the expressions that can be generated in a language. This is due to the fact that expressions of a given type can be (directly or indirectly) inserted in expressions of the same type.</li>
     <li>
-      <p><strong>Structure dependence:</strong> For physical constraints, language is produced in a
-linear fashion (you can speak one word at a time). But the meaning is “read
-off” from the hierarchical structure. A necessary consequence of this is that
-items that are related at the meaning level may find themselves fallen apart
-on the actual acoustic/visual signal. Take:</p>
+      <p><strong>Structure dependence:</strong> For physical constraints, language is produced in a linear fashion (you can speak one word at a time). But the meaning is “read off” from the hierarchical structure. A necessary consequence of this is that items that are related at the meaning level may find themselves fallen apart on the actual acoustic/visual signal. Take:</p>
 
       <div class="item" id="ex:telescope" data-kind="definition" data-label="Example" data-title="The telescope sentence">
         <p>I saw the man with the telescope.</p>
       </div>
 
-      <p>The sentence can mean two different things: (1) the speaker has the telescope, or (2)
-the man has the telescope. The two meanings are determined by the hierarchical
-structure of the expression: in (2) <code class="language-plaintext highlighter-rouge">the telescope</code> is
-attached to <code class="language-plaintext highlighter-rouge">the man</code>, in (1), to <code class="language-plaintext highlighter-rouge">saw</code>.</p>
+      <p>The sentence can mean two different things: (1) the speaker has the telescope, or (2) the man has the telescope. The two meanings are determined by the hierarchical structure of the expression: in (2) <code class="language-plaintext highlighter-rouge">the telescope</code> is attached to <code class="language-plaintext highlighter-rouge">the man</code>, in (1), to <code class="language-plaintext highlighter-rouge">saw</code>.</p>
     </li>
   </ol>
 
-  <p>In a very broad sense, a <strong>grammar</strong> regulates the correspondence between form
-and meaning in a way that manifests the three properties above.</p>
+  <p>In a very broad sense, a <strong>grammar</strong> regulates the correspondence between form and meaning in a way that manifests the three properties above.</p>
 
-  <p>When we talk about <strong>syntactic structure</strong>, we mean a particular organisation of
-the components of an expression. For instance the two meanings of the telescope
-sentence are related to the following (fairly simplified) structures:</p>
+  <p>When we talk about <strong>syntactic structure</strong>, we mean a particular organisation of the components of an expression. For instance the two meanings of the telescope sentence are related to the following (fairly simplified) structures:</p>
 
   <div class="item" id="ex:telescope-structures" data-kind="definition" data-label="Example" data-title="Two structures for the telescope sentence">
     <ol>
@@ -361,24 +312,13 @@ sentence are related to the following (fairly simplified) structures:</p>
     </ol>
   </div>
 
-  <p>Another way of thinking about structure, which is more transparent to semantics,
-is to think of it as a particular organization of operators and arguments,
-like we do in arithmetic.</p>
+  <p>Another way of thinking about structure, which is more transparent to semantics, is to think of it as a particular organization of operators and arguments, like we do in arithmetic.</p>
 
 \[((3 + 4) \times 5)\]
 
-  <p>When we go from the linear string of symbols \(((3 + 4) \times 5)\) to its
-meaning, which is the value of the expression (=35), we work out the structure
-of the expression in such a way that the <strong>operator</strong> +  is applied to its
-<strong>arguments</strong> 3 and 4, and then the operator \(\times\) is applied to its
-arguments, which are, 7, the value of the first operation (recursion!), and 5.</p>
+  <p>When we go from the linear string of symbols \(((3 + 4) \times 5)\) to its meaning, which is the value of the expression (=35), we work out the structure of the expression in such a way that the <strong>operator</strong> +  is applied to its <strong>arguments</strong> 3 and 4, and then the operator \(\times\) is applied to its arguments, which are, 7, the value of the first operation (recursion!), and 5.</p>
 
-  <p>Similarly, for the telescope example, in one reading the operator <em>saw</em> takes as
-arguments the subject <em>I</em> and the object <em>the man with the telescope</em>; and in
-the other reading, the operator <em>saw</em> takes as its object argument the noun
-phrase <em>the man</em>, rather than the entire phrase <em>the man with the telescope</em>;
-and this time the operator <em>with</em> takes as arguments the noun <em>the telescope</em>
-and the verb phrase <em>saw the man</em> as arguments.<sup id="fnref:ser"><a href="#fn:ser" class="footnote" rel="footnote" role="doc-noteref">5</a></sup></p>
+  <p>Similarly, for the telescope example, in one reading the operator <em>saw</em> takes as arguments the subject <em>I</em> and the object <em>the man with the telescope</em>; and in the other reading, the operator <em>saw</em> takes as its object argument the noun phrase <em>the man</em>, rather than the entire phrase <em>the man with the telescope</em>; and this time the operator <em>with</em> takes as arguments the noun <em>the telescope</em> and the verb phrase <em>saw the man</em> as arguments.<sup id="fnref:ser"><a href="#fn:ser" class="footnote" rel="footnote" role="doc-noteref">5</a></sup></p>
 
   <h3 id="main-questions">Main questions</h3>
 
@@ -387,70 +327,36 @@ and the verb phrase <em>saw the man</em> as arguments.<sup id="fnref:ser"><a hre
   <ol>
     <li>How do we understand and produce language?</li>
     <li>How do we acquire the capacity to do so?</li>
-    <li>How is our language capacity related to other cognitive capacities, such as
-perception, planning, reasoning, etc.?</li>
+    <li>How is our language capacity related to other cognitive capacities, such as perception, planning, reasoning, etc.?</li>
     <li>How do these relate to our neural substance?</li>
   </ol>
 
   <h3 id="cognitive-science-of-language">Cognitive science of language</h3>
 
-  <p>The above questions are studied in several fields. What distinguishes cognitive
-science from fields like psychology and linguistics is its emphasis on the
-computational modeling of the phenomena. Cognitive science, at least in how we
-take it to mean in our institute, takes the mind to be an information processing
-system, and therefore the best way to understand it is by building computational
-models of the phenomena we are interested in, be it a processing question or a
-learning question.</p>
+  <p>The above questions are studied in several fields. What distinguishes cognitive science from fields like psychology and linguistics is its emphasis on the computational modeling of the phenomena. Cognitive science, at least in how we take it to mean in our institute, takes the mind to be an information processing system, and therefore the best way to understand it is by building computational models of the phenomena we are interested in, be it a processing question or a learning question.</p>
 
-  <p class="notice--warning"><strong>Warning:</strong> Some, or perhaps all, readings suggested below might be difficult at this
-stage. There is no cure for this. There are no textbooks, which can be read in
-a linear way.<sup id="fnref:strictly"><a href="#fn:strictly" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> You need to have a couple of passes with low reception and come back
-to them later.</p>
+  <p class="notice--warning"><strong>Warning:</strong> Some, or perhaps all, readings suggested below might be difficult at this stage. There is no cure for this. There are no textbooks, which can be read in a linear way.<sup id="fnref:strictly"><a href="#fn:strictly" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> You need to have a couple of passes with low reception and come back to them later.</p>
 
-  <p>There are two closely related axes of tension in the field, which I think it
-is better to open-mindedly meet them from the very start, before you find
-yourself socialized<sup id="fnref:gazdar"><a href="#fn:gazdar" class="footnote" rel="footnote" role="doc-noteref">8</a></sup> into one camp or another.</p>
+  <p>There are two closely related axes of tension in the field, which I think it is better to open-mindedly meet them from the very start, before you find yourself socialized<sup id="fnref:gazdar"><a href="#fn:gazdar" class="footnote" rel="footnote" role="doc-noteref">8</a></sup> into one camp or another.</p>
 
-  <p>The first of these is the debate on the relevance of probability  (statistics
-and information theory) to the study of language, particularly syntax. Chomsky
-is widely considered, at times too crudely I think,  to be firmly on the “not
-relevant” side of the debate. It is nevertheless true that probability is not
-much popular in mainstream linguistics. But in cognitive science, the debate is
-almost never on <em>whether</em> but <em>how</em> these fields are relevant for the scientific
-study of language. For convenience, I will call this the <strong>probability
-debate</strong>.<sup id="fnref:catogorist"><a href="#fn:catogorist" class="footnote" rel="footnote" role="doc-noteref">9</a></sup></p>
+  <p>The first of these is the debate on the relevance of probability  (statistics and information theory) to the study of language, particularly syntax. Chomsky is widely considered, at times too crudely I think,  to be firmly on the “not relevant” side of the debate. It is nevertheless true that probability is not much popular in mainstream linguistics. But in cognitive science, the debate is almost never on <em>whether</em> but <em>how</em> these fields are relevant for the scientific study of language. For convenience, I will call this the <strong>probability debate</strong>.<sup id="fnref:catogorist"><a href="#fn:catogorist" class="footnote" rel="footnote" role="doc-noteref">9</a></sup></p>
 
-  <p>Another source of tension in the field concerns the relevance of data-driven
-approaches like corpus linguistics, deep neural nets, machine learning,
-statistical language models, etc. to the scientific study of language, which
-seems to be going nuclear especially after the appearance of LLMs.  This debate
-naturally comes intertwined with discussions on the goals of science, especially
-the distinction between prediction and explanation. For convenience, I will call
-this the <strong>data debate</strong>.</p>
+  <p>Another source of tension in the field concerns the relevance of data-driven approaches like corpus linguistics, deep neural nets, machine learning, statistical language models, etc. to the scientific study of language, which seems to be going nuclear especially after the appearance of LLMs.  This debate naturally comes intertwined with discussions on the goals of science, especially the distinction between prediction and explanation. For convenience, I will call this the <strong>data debate</strong>.</p>
 
   <ul>
-    <li>I suggest to start with <a href="/p/chomsky-ss/" target="_blank" rel="noopener">Chomsky (1957)</a>.<sup id="fnref:ss-parts"><a href="#fn:ss-parts" class="footnote" rel="footnote" role="doc-noteref">10</a></sup>
-This sets the frame of discussion for almost everything that follows, and
-remarkably – considering its impact – requires almost no background.</li>
-    <li>On how probability fits into the study of language:  <a href="/p/manning-prob/" target="_blank" rel="noopener">Manning (2003)</a> and
-<a href="/p/jurafsky-psycho/" target="_blank" rel="noopener">Jurafsky (2003)</a>.</li>
+    <li>For an introduction to grammar read (or skim through) <a href="/p/pullum-truth/" target="_blank" rel="noopener">Pullum (2024)</a>; I think it is more useful than any introduction to linguistics, and will be good for your English as well.</li>
+    <li>In your later readings, whenever you hit an unfamiliar linguistic concept or term, consult <a href="/p/bender-fundamentals/" target="_blank" rel="noopener">Bender (2022)</a>. This will work fine as a practical reference until you develop a more serious interest in linguistics and/or go on with language research.</li>
+    <li><a href="/p/chomsky-ss/" target="_blank" rel="noopener">Chomsky (1957)</a><sup id="fnref:ss-parts"><a href="#fn:ss-parts" class="footnote" rel="footnote" role="doc-noteref">10</a></sup> sets the frame of discussion for almost everything that follows about the cognitive science of language, and remarkably – considering its impact – requires relatively little background.</li>
+    <li>“Computational linguistics” and “Natural Language Processing” (NLP)  are sometimes used interchangeably. A better practice is to reserve the former for the scientific study of language through computational modeling, which differs in aims and scope from the engineering field of NLP. <a href="/p/manning-computational/" target="_blank" rel="noopener">Manning (2015)</a> and the introduction chapter of <a href="/p/eisenstein/" target="_blank" rel="noopener">Eisenstein (2019)</a> are illuminating on this important distinction.</li>
+    <li>For a historical perspective on the data debate, read <a href="/p/church-pendulum/" target="_blank" rel="noopener">Church (2011)</a>.</li>
+    <li>On how probability fits into the study of language, read  <a href="/p/manning-prob/" target="_blank" rel="noopener">Manning (2003)</a> and <a href="/p/jurafsky-psycho/" target="_blank" rel="noopener">Jurafsky (2003)</a>.</li>
     <li>Readings relevant for the both debates are <a href="/p/pereira/" target="_blank" rel="noopener">Pereira (2000)</a> and <a href="/p/lappin-shieber/" target="_blank" rel="noopener">Lappin and Shieber (2007)</a></li>
-    <li><a href="/p/norvig-chomsky/" target="_blank" rel="noopener">Norvig (2011)</a> addresses the latest views of
-Chomsky on the relevance of (statistical) language models to the study of
-language. Although, Norvig’s reading of Chomsky’s “claims” are rather superficial,<sup id="fnref:calmer"><a href="#fn:calmer" class="footnote" rel="footnote" role="doc-noteref">11</a></sup>
-I think it is still a good read.</li>
-    <li>People sometimes use the term <strong>computational linguistics</strong> to differentiate the
-scientific study of language through computational modeling from the engineering
-field of NLP. But be warned that this is not a well-established terminology. See
-<a href="/p/stanford-cl/" target="_blank" rel="noopener">Schubert (2020)</a><span aria-hidden="true">, 1-4</span> for a balanced view.</li>
-    <li>For a taste of the data debate focused on deep neural networks: <a href="/p/pater-2019/" target="_blank" rel="noopener">Pater (2019)</a> and <a href="/p/rawski-heins/" target="_blank" rel="noopener">Rawski and Heins (2023)</a>.</li>
-    <li><a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a> and the commentaries on it are a good place
-  to get introduced to the data debate within the broader cognitive
-  science.<sup id="fnref:data-debate-terms"><a href="#fn:data-debate-terms" class="footnote" rel="footnote" role="doc-noteref">12</a></sup></li>
-    <li>Whenever you hit an unfamiliar linguistic concept or term, consult <a href="/p/bender-fundamentals/" target="_blank" rel="noopener">Bender (2022)</a>. This will work fine as a practical
-reference book until you develop a more serious interest in linguistics and/or
-go on with language research.</li>
+    <li><a href="/p/norvig-chomsky/" target="_blank" rel="noopener">Norvig (2011)</a> addresses the latest views of Chomsky on the relevance of (statistical) language models to the study of language. Although, Norvig’s reading of Chomsky’s “claims” are rather superficial,<sup id="fnref:calmer"><a href="#fn:calmer" class="footnote" rel="footnote" role="doc-noteref">11</a></sup> It is still a good read, I think.</li>
+    <li>For a taste of the data debate focused on deep neural networks, read  <a href="/p/pater-2019/" target="_blank" rel="noopener">Pater (2019)</a> and <a href="/p/rawski-heins/" target="_blank" rel="noopener">Rawski and Heins (2023)</a>.</li>
+    <li><a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a> and the commentaries on it are good sources to get introduced to the data debate within broader cognitive science.<sup id="fnref:data-debate-terms"><a href="#fn:data-debate-terms" class="footnote" rel="footnote" role="doc-noteref">12</a></sup></li>
   </ul>
+
+  <hr />
 
 </div>
 <div class="footnotes" role="doc-endnotes">
@@ -483,8 +389,7 @@ go on with language research.</li>
       <p>Closely, related to this is the issue of categorical vs. gradient phenomena in language. <a href="#fnref:catogorist" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:ss-parts">
-      <p>Chapters 1-4, 6, and 8. Chapter 9 is also of interest on Chomsky’s
-take on syntax-semantics relation. <a href="#fnref:ss-parts" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>Chapters 1-4, 6, and 8. Chapter 9 is also of interest on Chomsky’s take on syntax-semantics relation. Some basic knowledge of automata theory, though not essential, will make it easier to follow. <a href="#fnref:ss-parts" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:calmer">
       <p>Objectors of Chomsky on this count largely concentrate on his observation that the grammatical English sentence <em>Colorless green ideas sleep furiously</em> has zero probability on crude frequency based models without smoothing, which was the state-of-art at that date, and the corollary he draws from this fact that statistical regularity has no place in defining the notion of “grammatical sentence in language \(L\)”. Chomsky’s attitude toward the place of probability and statistics in language science is not as crude as his objectors appear to think. For instance, Norvig seems to have missed footnote 4 on p. 17 of <em>Syntactic Structures</em>, and his remarks on syntax, semantics, and language use in Chapter 9. See Chomsky’s preface to 1975 edition of <em>Logical Structure of Linguistic Theory</em>, p.3. Also see the other LSLT quotes in <a href="/p/yang-crunch/" target="_blank" rel="noopener">Yang (2008)</a> for a more accurate view on Chomsky’s stance on the subject. <a href="#fnref:calmer" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
@@ -581,7 +486,7 @@ take on syntax-semantics relation. <a href="#fnref:ss-parts" class="reversefoot
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-02-14T00:00:00+03:00">2026-02-14</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-09-29T00:00:00+03:00">2026-09-29</time></p>
 
       </footer>
 
@@ -590,10 +495,10 @@ take on syntax-semantics relation. <a href="#fnref:ss-parts" class="reversefoot
       
   <nav class="pagination">
     
-      <a href="/posts/course/walrus-operator/" class="pagination--pager" title="Assignment in lambda expressions">Previous</a>
+      <a href="/posts/course/why-5012/" class="pagination--pager" title="Why do we have 501 and 502?">Previous</a>
     
     
-      <a href="/posts/course/model-theoretic-interpretation/" class="pagination--pager" title="Model-theoretic interpretation">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
