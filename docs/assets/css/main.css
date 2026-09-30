@@ -5335,7 +5335,9 @@ table.table--course td p {
 
 table.table--course td ul,
 table.table--course td ol {
-  margin: 0.15rem 0 0.15rem 1.2rem; /* small top/bottom, keep indent */
+  margin: 0.15rem 0;
+  padding-left: 0;
+  list-style-position: inside;
 }
 
 table.table--course td li {

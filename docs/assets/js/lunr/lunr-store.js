@@ -972,7 +972,7 @@ var store = [{
     "excerpt":"Fall 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ M 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(28/9) 📖 Why do we...","url": "https://umutozge.github.io/prelim/schedule/"
   },{
     "title": "COGS 543",
-    "excerpt":"Fall 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ T 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(29/9) 📖 Language primer, the...","url": "https://umutozge.github.io/cl/schedule/"
+    "excerpt":"Fall 2026 Umut Özge (✉️) , Anıl Öğdül (TA, ✉️) ⏰ T 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(29/9) 📖 Language primer (Just...","url": "https://umutozge.github.io/cl/schedule/"
   },{
     "title": "COGS 526",
     "excerpt":"Spring 2026 Umut Özge (✉️), Anıl Öğdül (TA, ✉️) 🕐 W 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. ✳️ marks optional material. Week Content 1&nbsp;(18/2) Why logic is still relevant for cognitive science and AI...","url": "https://umutozge.github.io/courses/lccm/schedule/"
@@ -991,6 +991,9 @@ var store = [{
   },{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
+  },{
+    "title": "davis-etal",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/davis-etal/"
   },{
     "title": "Modelling meaning composition from formalism to mechanism",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/martin-baggio/"
