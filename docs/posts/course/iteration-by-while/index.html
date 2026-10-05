@@ -262,8 +262,8 @@ The <strong>Collatz sequence</strong> of a given positive integer \(n\) is the s
     <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="nf">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>   <span class="c1"># checks whether n is even
-</span>            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span>
-        <span class="k">else</span><span class="p">:</span>
+</span>            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>   <span class="c1"># integer division
+</span>        <span class="k">else</span><span class="p">:</span>
             <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="nf">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Print the last element of the sequence
 </span></code></pre></div></div>
@@ -275,7 +275,7 @@ The <strong>Collatz sequence</strong> of a given positive integer \(n\) is the s
 <p>Think for a moment whether <code class="language-plaintext highlighter-rouge">print_collatz_sequence</code> follows this principle. It might appear to be so. But actually, it does two things. It computes the Collatz function for numbers within a loop, and it prints the numbers. That there are two separable tasks might not be obvious to you for the moment, but here is a simple test: What if we wanted to add the numbers in a Collatz sequence rather than print them on screen? That code would be very similar to the one we wrote. There would be the exact same or very similar lines for computing the next number in the sequence. The following bit:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>   <span class="c1"># checks whether n is even
-</span>    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span>
+</span>    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
 </code></pre></div></div>
@@ -289,7 +289,7 @@ The <strong>Collatz sequence</strong> of a given positive integer \(n\) is the s
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sh">"""</span><span class="s">The Collatz function</span><span class="sh">"""</span>
     <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span><span class="o">/</span><span class="mi">2</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span>
 </code></pre></div></div>

@@ -29,6 +29,12 @@ var store = [{
         "url": "/code/python/snippets/proc_seq/",
         "teaser": null
       },{
+        "title": "Python project setup",
+        "excerpt":"For very simple tasks, mkdir my_project cd my_project uv init --no-package uv python pin 3.13 uv add --dev pyright ruff This will create a file named main.py at the root of your project. Edit the file to add your code. Check that your code is properly typed with: uv run...","categories": [],
+        "tags": [],
+        "url": "/code/python/snippets/pyproject/",
+        "teaser": null
+      },{
         "title": "Randomization",
         "excerpt":"There are two relevant modules. random is for basic general purpose randomization; numpy.random is for more advanced randomization for scientific computing, statistics, machine learning, etc. Generate random integer: random.randint(a,b) # Returns a random integer in the range [a,b], # including both end points. Basic random choice: random.choice(seq) # Choose a...","categories": [],
         "tags": [],
