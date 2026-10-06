@@ -998,6 +998,9 @@ var store = [{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
   },{
+    "title": "Composing Programs",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/composing-programs/"
+  },{
     "title": "davis-etal",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/davis-etal/"
   },{
