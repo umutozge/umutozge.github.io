@@ -30,7 +30,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Python project setup",
-        "excerpt":"For very simple tasks, mkdir my_project cd my_project uv init --no-package uv python pin 3.13 uv add --dev pyright ruff This will create a file named main.py at the root of your project. Edit the file to add your code. Check that your code is properly typed with: uv run...","categories": [],
+        "excerpt":"First make sure that you have uv on your system. If you don’t have it, see this for installation instructions for your system. For very simple tasks, mkdir my_project cd my_project uv init --no-package uv python pin 3.13 uv add --dev pyright ruff This will create a file named main.py...","categories": [],
         "tags": [],
         "url": "/code/python/snippets/pyproject/",
         "teaser": null
@@ -161,6 +161,12 @@ var store = [{
         "url": "/exams/2026-06-11-502-final/",
         "teaser": null
       },{
+        "title": "501 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-10-19-501-quiz/",
+        "teaser": null
+      },{
         "title": "Basic probability",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": ["probability"],
@@ -183,6 +189,12 @@ var store = [{
         "excerpt":"State whether each atomic formula is true or false in : \\[\\begin{gather*} \\con{student}\\con{anna}\\\\ \\con{book}\\con{anna}\\\\ \\con{linguist}\\con{cara}\\\\ \\con{admire}\\con{ben}\\con{anna}\\\\ \\con{admire}\\con{anna}\\con{ben}\\\\ \\end{gather*}\\] Evaluate the following formulas in . \\[\\begin{gather*} \\exists x.\\con{student}x\\\\ \\forall x.\\con{student}x \\rightarrow \\con{linguist}x\\\\ \\exists x.\\con{student}x \\land \\con{linguist}x\\\\ \\forall x.\\con{book}x \\rightarrow \\con{student}x\\\\ \\exists x\\forall y. \\con{admire}y\\cnct x\\\\ \\con{student}x\\\\ \\con{linguist}x\\\\ \\exists x.\\con{admire}x\\cnct y\\\\ \\end{gather*}\\]...","categories": [],
         "tags": ["language","semantics","logic"],
         "url": "/exercises/first-order-logic/",
+        "teaser": null
+      },{
+        "title": "First steps",
+        "excerpt":"Convert a given nonnegative integer representing seconds into minutes and seconds. Use % and // operators in your solution. 🗝️ Given an integer print whether its “Negative”, “Positive” or “Zero”. Use if, elif and else in your solution. 🗝️ Take two arguments. First is a float and the second is...","categories": [],
+        "tags": ["programming"],
+        "url": "/exercises/firststeps/",
         "teaser": null
       },{
         "title": "Formal semantics",
@@ -719,6 +731,12 @@ var store = [{
         "url": "/items/ex-member/",
         "teaser": null
       },{
+        "title": "Negative, Positive, or Zero",
+        "excerpt":"Given an integer print whether its “Negative”, “Positive” or “Zero”. Use if, elif and else in your solution.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-negpos/",
+        "teaser": null
+      },{
         "title": "Random partition",
         "excerpt":"Define a function random_partition that takes a set (can be a Python list) and returns a random partition of it (as a list of lists). You are granted access to a function named rand that generates a random number between 0 and 1 every time it is called. Each call...","categories": [],
         "tags": [],
@@ -735,6 +753,30 @@ var store = [{
         "excerpt":"Given a set of items provided as a list, write a function that returns the power set of the given set.  ","categories": [],
         "tags": [],
         "url": "/items/ex-powerset/",
+        "teaser": null
+      },{
+        "title": "print",
+        "excerpt":"Complete the missing parts:   &gt;&gt;&gt; x = abs(-3) &gt;&gt;&gt; print(x) 3 &gt;&gt;&gt; y = print(-3) # WHAT DO YOU EXPECT TO SEE HERE? &gt;&gt;&gt; print(y) # WHAT DO YOU EXPECT TO SEE HERE?  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-print/",
+        "teaser": null
+      },{
+        "title": "Second largest",
+        "excerpt":"Take three integers and return the second largest of them. You may not use any built-in functions like min, max, or sorted.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-second-largest/",
+        "teaser": null
+      },{
+        "title": "Seconds to minutes",
+        "excerpt":"Convert a given nonnegative integer representing seconds into minutes and seconds. Use % and // operators in your solution.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-secs2mins/",
+        "teaser": null
+      },{
+        "title": "Temperature unit conversion",
+        "excerpt":"Take two arguments. First is a float and the second is a string. The second argument will be a keyword argument named unit with the default value \"c\". Another possible value of unit is \"f\". If unit is \"c\", take the first argument to be degrees Celsius and convert to...","categories": [],
+        "tags": [],
+        "url": "/items/ex-temperature-conversion/",
         "teaser": null
       },{
         "title": "",
@@ -972,7 +1014,7 @@ var store = [{
     "excerpt":"Language: Any Python Haskell Type: Any Module Snippet collatz python · module Various goodies related to Collatz conjecture. funcutils python · module A utility module for functional abstractions. Files python · snippet Working with files in Python. Plotting python · snippet Plotting in Python. A sequence processor python · module...","url": "https://umutozge.github.io/code/browser/"
   },{
     "title": "Workbook browser",
-    "excerpt":"counting 1 discrete 2 funprog 1 grammar 1 iteration 1 language 6 linear algebra 1 lists 1 logic 2 number theory 2 parsing 1 probability 2 programming 1 proof 1 python 3 recursion 2 semantics 3 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. CCG Exercises...","url": "https://umutozge.github.io/exercise/browser/"
+    "excerpt":"counting 1 discrete 2 funprog 1 grammar 1 iteration 1 language 6 linear algebra 1 lists 1 logic 2 number theory 2 parsing 1 probability 2 programming 2 proof 1 python 3 recursion 2 semantics 3 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. CCG Exercises...","url": "https://umutozge.github.io/exercise/browser/"
   },{
     "title": "COGS 501",
     "excerpt":"Fall 2026 Umut Özge (✉️) , İlteriş Bozkurt (TA, ✉️) ⏰ M 2:40-5:30, II04 Check the current syllabus for course information and policies. Make sure you are on odtuclass to get announcements and updates. 📖: reading | 📝: exercise | 🧩: optional/advanced material Week Content 1&nbsp;(28/9) 📖 Why do we...","url": "https://umutozge.github.io/prelim/schedule/"
@@ -1289,6 +1331,9 @@ var store = [{
     "title": "Solution: Member",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-member/"
   },{
+    "title": "Solution: Negative, Positive, or Zero",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-negpos/"
+  },{
     "title": "Solution: Random partition",
     "excerpt":"Let's first load our randomization gun. ```python import random random.seed(42) rand = lambda : random.uniform(0, 1) ``` ### Random integer generation I prepared this solution shortly before I gave the final exam for COGS 502 on Spring 2026. I was able to realize the embarrassing complexity of my solution only...","url": "https://umutozge.github.io/solutions/ex-partition/"
   },{
@@ -1297,6 +1342,18 @@ var store = [{
   },{
     "title": "Solution: Power set",
     "excerpt":"  ```python def pset(seq):     if not seq:         return [[]]     else:         rest = pset(seq[1:])         return [[seq[0]] + x for x in rest] + rest ```           Back to exercise      Download .ipynb   Download .py   ","url": "https://umutozge.github.io/solutions/ex-powerset/"
+  },{
+    "title": "Solution: print",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-print/"
+  },{
+    "title": "Solution: Second largest",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-second-largest/"
+  },{
+    "title": "Solution: Seconds to minutes",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-secs2mins/"
+  },{
+    "title": "Solution: Temperature unit conversion",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-temperature-conversion/"
   },{
     "title": "Proof of Zero property of multiplication",
     "excerpt":"Proof not written yet.          Back to statement      ","url": "https://umutozge.github.io/proofs/th-mult-zero/"

@@ -317,6 +317,30 @@
     "label": "Exercise",
     "title": "Translation"
   },
+  "ex-secs2mins": {
+    "page": "/exercises/firststeps/",
+    "number": 1,
+    "label": "Exercise",
+    "title": "Seconds to minutes"
+  },
+  "ex-negpos": {
+    "page": "/exercises/firststeps/",
+    "number": 2,
+    "label": "Exercise",
+    "title": "Negative, Positive, or Zero"
+  },
+  "ex-temperature-conversion": {
+    "page": "/exercises/firststeps/",
+    "number": 3,
+    "label": "Exercise",
+    "title": "Temperature unit conversion"
+  },
+  "ex-second-largest": {
+    "page": "/exercises/firststeps/",
+    "number": 4,
+    "label": "Exercise",
+    "title": "Second largest"
+  },
   "eg-simple-model": {
     "page": "/solutions/ex-model-theory-basics/",
     "number": 1,
