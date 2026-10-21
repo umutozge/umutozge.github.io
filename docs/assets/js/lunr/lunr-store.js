@@ -1040,6 +1040,9 @@ var store = [{
     "title": "Posts by Year",
     "excerpt":" ","url": "https://umutozge.github.io/posts/"
   },{
+    "title": "Symbolic Logic",
+    "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/thomason-symbolic/"
+  },{
     "title": "Composing Programs",
     "excerpt":"        {{ page.title }}        ","url": "https://umutozge.github.io/p/composing-programs/"
   },{
