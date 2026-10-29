@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-10-26T21:46:26+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-10-29T17:45:17+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
 </subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-09-29T00:00:00+03:00</published><updated>2026-09-29T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
 
   <p>This is a quick start on langugage for cognitive science students.</p>
@@ -460,30 +460,24 @@ one.</p>
   </ol>
 </div>]]></content><author><name></name></author><category term="course" /><category term="continuous" /><category term="linear algebra" /><summary type="html"><![CDATA[A gentle intro to linear algebra through vectors]]></summary></entry><entry><title type="html">Model-theoretic interpretation</title><link href="https://umutozge.github.io/posts/course/model-theoretic-interpretation/" rel="alternate" type="text/html" title="Model-theoretic interpretation" /><published>2026-03-31T00:00:00+03:00</published><updated>2026-03-31T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/model-theoretic-interpretation</id><content type="html" xml:base="https://umutozge.github.io/posts/course/model-theoretic-interpretation/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
-<p>Model-theoretic semantics in linguistics aims to define correspondences between
-the expressions of a language and objects that are external to that
-language. To give a very simple example: assume you and I have a silly
-code between us, according to which, during the normal course of my
-speaking whenever I utter the definite article <em>the</em> you blink your left
-eye and whenever I utter the indefinite article <em>a(n)</em> you blink your
-right eye. Of course my utterances have a semantics associated with the
-language I speak – some idiolect of English; but besides that, there is
-another correspondence that maps the expressions <em>the</em> and <em>a(n)</em> to
-some objects which has no place in the semantics of my English. This
-second semantics is defined over a microscopic subset of English, namely
-. What would a semantics for this subset look like? Here, one needs to
-decide on the basis of the particular aim one has in developing a
-semantics. If we need a semantics to instruct a robot, then it would be
-logical to construct our correspondence in such a way that expressions
-are mapped to a set of robot control routines. If we are more on the
-side of cognitive neuroscience, we would be likely to choose
-neurological triggering mechanisms as the other side of the
-correspondence. If the observable behavior would suffice for our
-purposes, then mapping <em>the</em> to “blink left eye”, and <em>a</em> and <em>an</em> to
-“blink right eye”. You may even associate <em>the</em> with the probability of
-observing a left-eye blink within the limits of a particular time frame,
-so on and so forth. The technical term for what you take to be on the
-non-language side of the correspondence is “model”.</p>
+<p>Model-theoretic semantics in linguistics aims to define a systematic correspondence between the expressions of a language and objects that are external to that language, i.e. objects that are not expressions of the language at hand.</p>
+
+<p>Let’s take a standard traffic light. The language of a traffic light, call it \(T\), is simply the set \(\{red, yellow, green\}\). The three expressions of \(T\) are systematically associated with three distinct abstract objects that are not expressions of \(T\), which have nothing to do with colors. What are these three objects exactly? You might say \(\{\text{"stop"},\text{"ready"}, \text{"go"}\}\). Technically, this is actually an interpretation, it fulfills our definition. \(T\) is associated with words of English. The question is are we happy with this interpretation? By begin happy, I mean, can we say that we have a satisfactory characterization of what traffic lights mean?</p>
+
+<p>Although technically a legitimate interpretation, the correspondence to English words is actually an unsatisfactory  characterization of the meaning of traffic lights. If the red light means “stop”, this cannot be its only meaning. If it were, we would have to conclude that people who do not know the meaning of “stop” also do not know the meaning of red traffic light. If we say that the red traffic light has as many meanings as there are (or can be) human languages, this time we need to claim that the red traffic light means different things to a Russian speaker and an Italian speaker, or polyglots attribute more than one meaning to the red light.<sup id="fnref:sap"><a href="#fn:sap" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<p class="notice--info">Not all technically correct interpretations of a language are equally useful.</p>
+
+<p>I think best we can do is to say that the expressions of \(T\) systematically correspond to some abstract objects that live in the realm of laws that regulate traffic, calling them \(\{S,R,G\}\).<sup id="fnref:otherside"><a href="#fn:otherside" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> Observe that “the realm of laws that regulate traffic” is not made up of expressions in a language. You use a language, Russian, English, whatever, when you want to refer to objects living in that realm.</p>
+
+<p>What do we have so far? We have a correspondence between three things on the language side and three things on the meaning side, without being able to characterize what those things really are, at least on the meaning side. But still we find it safe and sound to talk about the correspondence. The reason is that we know that it exists. We know it exists, because we know that it has causal efficacy. It is by the means of this correspondence that drivers, robot or human, adjust their behavior at certain occasions. The red traffic light does not have the causal power to stop the driver, the causal chain simply breaks without the correspondence.</p>
+
+<p>The semantics of natural languages profoundly differ from traffic lights.</p>
+
+<ol>
+  <li>The language side is non-finite. It is the product of a generative mechanism that yields an infinite number of expressions using a finite number of building blocks and a finite number of production rules. Therefore, the correspondence cannot be a simple listing of pairs as in the traffic lights.</li>
+  <li>In the traffic light example, drivers, humans at least, are aware of the meaning of traffic lights. They do not behave as if they know the correspondence without consciously being aware of it. In human languages, the conscious self of the agent has no access to the correspondence.<sup id="fnref:gerci"><a href="#fn:gerci" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></li>
+</ol>
 
 <p>In natural language semantics, the general practice – or where people
 usually begin – is to take the world as the model. This approach
@@ -599,7 +593,7 @@ than <code class="language-plaintext highlighter-rouge">curried_multiply(8,9)</c
 <p>The functions in our language will all be Curried as in the above example.
 Therefore a function like \(\sysm{Loves}\) (yes, we take it to be a function
 rather than a relation) will get its arguments one by one. By convention we will
-agree that the arguments are fed in the reverse order.<sup id="fnref:montnot"><a href="#fn:montnot" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> For instance, to express
+agree that the arguments are fed in the reverse order.<sup id="fnref:montnot"><a href="#fn:montnot" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> For instance, to express
 what is expressed by the sentence <em>John loves Mary</em>, we will first feed the second argument to the function,
 resulting in,</p>
 
@@ -610,7 +604,7 @@ Mary and 0 otherwise. The full form is,</p>
 
 \[Loves(Mary)(John)\]
 
-<p>We will adopt two other notational conventions: 1. The constants<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> like
+<p>We will adopt two other notational conventions: 1. The constants<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">5</a></sup> like
 \(Loves\), \(John\), and so on, will be written in lower case and terminated by
 a prime as in \(\sysm{loves'}\) and \(\sysm{john'}\) (or an abbreviated form
 \(\sysm{j}'\)); 2. Given a function \(f\) and an argument \(a\), we will depict
@@ -1137,6 +1131,15 @@ This paragraph will be justified.</p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
+    <li id="fn:sap">
+      <p>If you are interested in the relation between the language we speak and the way we experience the world, check Sapir-Worf thesis and its critiques. <a href="#fnref:sap" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:otherside">
+      <p>By the way, we’ve been acting as if the \(T\) side of the correspondence, the expressions, is as solid as rock. But, is it? What are those expressions, are they just colors, patches of them, lamps on the post, spectral ranges? <a href="#fnref:otherside" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:gerci">
+      <p>It is hard to resist the feeling that you have access to the meaning of your language. We seem to know a great deal about the meaning of words. But, as you study semantics, you will realize that the knowledge you feel you have conscious access to is world (or conceptual) knowledge, rather than the knowledge of “grammar”. The latter stands for the correspondence that pairs a non-finite set of expressions with a non-finite set of meanings in a computable way. <a href="#fnref:gerci" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
     <li id="fn:montnot">
       <p>This has a deeper linguistic reason that we will see later on. <a href="#fnref:montnot" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>

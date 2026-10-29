@@ -173,6 +173,12 @@ var store = [{
         "url": "/exams/2026-10-26-501-quiz/",
         "teaser": null
       },{
+        "title": "543 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-10-27-543-quiz/",
+        "teaser": null
+      },{
         "title": "Basic probability",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": ["probability"],
@@ -519,6 +525,18 @@ var store = [{
         "excerpt":"State whether each atomic formula is true or false in : \\[\\begin{gather*} \\con{student}\\con{anna}\\\\ \\con{book}\\con{anna}\\\\ \\con{linguist}\\con{cara}\\\\ \\con{admire}\\con{ben}\\con{anna}\\\\ \\con{admire}\\con{anna}\\con{ben}\\\\ \\end{gather*}\\] Evaluate the following formulas in . \\[\\begin{gather*} \\exists x.\\con{student}x\\\\ \\forall x.\\con{student}x \\rightarrow \\con{linguist}x\\\\ \\exists x.\\con{student}x \\land \\con{linguist}x\\\\ \\forall x.\\con{book}x \\rightarrow \\con{student}x\\\\ \\exists x\\forall y. \\con{admire}y\\cnct x\\\\ \\con{student}x\\\\ \\con{linguist}x\\\\ \\exists x.\\con{admire}x\\cnct y\\\\ \\end{gather*}\\]...","categories": [],
         "tags": [],
         "url": "/items/ex-model-theory-basics/",
+        "teaser": null
+      },{
+        "title": "PL parentheses",
+        "excerpt":"Given that, \\(\\neg\\) binds most tightly, \\(\\land\\) and \\(\\lor\\) bind more tightly than \\(\\rightarrow\\), and their binding power is the same, Outermost parentheses are eliminable, \\(\\land\\) and \\(\\lor\\) are both associative. Restore the full parentheses in the following formulas: \\[\\neg p \\lor q \\rightarrow r\\] \\[p \\rightarrow q \\land r\\]...","categories": [],
+        "tags": [],
+        "url": "/items/ex-pl-parens/",
+        "teaser": null
+      },{
+        "title": "The dark room",
+        "excerpt":"Assume you are interested in a room with a light bulb as the only source of light and a single door. The light bulb can be on or off, and the door can be open or closed. The room counts as occupied if there is at least one person at...","categories": [],
+        "tags": [],
+        "url": "/items/ex-pl-room/",
         "teaser": null
       },{
         "title": "&quot;Telescope&quot; sentences",
@@ -936,7 +954,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Model-theoretic interpretation",
-        "excerpt":"Introduction Model-theoretic semantics in linguistics aims to define correspondences between the expressions of a language and objects that are external to that language. To give a very simple example: assume you and I have a silly code between us, according to which, during the normal course of my speaking whenever...","categories": ["course"],
+        "excerpt":"Introduction Model-theoretic semantics in linguistics aims to define a systematic correspondence between the expressions of a language and objects that are external to that language, i.e. objects that are not expressions of the language at hand. Let’s take a standard traffic light. The language of a traffic light, call it...","categories": ["course"],
         "tags": ["language","semantics"],
         "url": "/posts/course/model-theoretic-interpretation/",
         "teaser": null
@@ -1231,6 +1249,12 @@ var store = [{
   },{
     "title": "Solution: Model theory basics",
     "excerpt":"@@item|eg-simple-model|raw=true@@ 1. State whether each atomic formula is true or false in @@xref|eg-simple-model@@: $$ \\begin{gather*} \\con{student}\\con{anna}\\quad\\checkmark \\\\ \\con{book}\\con{anna}\\quad\\times\\\\ \\con{linguist}\\con{cara}\\quad\\checkmark\\\\ \\con{admire}\\con{ben}\\con{anna}\\quad\\checkmark\\\\ \\con{admire}\\con{anna}\\con{ben}\\quad\\times\\\\ \\end{gather*} $$ 1. Evaluate the following formulas in @@xref|eg-simple-model@@. $$ \\begin{gather*} \\interp{\\exists x.\\con{student}x} = 1\\\\ \\interp{\\forall x.\\con{student}x \\rightarrow \\con{linguist}x} = 0\\\\ \\interp{\\exists x.\\con{student}x \\land \\con{linguist}x} = 1\\\\ \\interp{\\forall x.\\con{book}x...","url": "https://umutozge.github.io/solutions/ex-model-theory-basics/"
+  },{
+    "title": "Solution: PL parentheses",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-pl-parens/"
+  },{
+    "title": "Solution: The dark room",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-pl-room/"
   },{
     "title": "Solution: &quot;Telescope&quot; sentences",
     "excerpt":"```python from coursepy.lang.parsing import make_parser, make_cfg grammar_text = \"\"\" S -> NP VP NP -> Det N | Det N PP VP -> V NP | VP PP PP -> P NP Det -> 'the' | 'a' N -> 'dog' | 'owner' | 'leash' V -> 'found' P -> 'with'...","url": "https://umutozge.github.io/solutions/ex-simple-pst/"
