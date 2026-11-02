@@ -179,6 +179,12 @@ var store = [{
         "url": "/exams/2026-10-27-543-quiz/",
         "teaser": null
       },{
+        "title": "501 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-11-02-501-quiz/",
+        "teaser": null
+      },{
         "title": "Basic probability",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": ["probability"],
@@ -717,6 +723,18 @@ var store = [{
         "excerpt":"Map a possibly nested sequence to its flattened version, which comprises only the ground element. For example, the sequence   [1, [2, 3], 4, [5, [6, 7]]]   should be mapped to   [1, 2, 3, 4, 5, 6, 7]  ","categories": [],
         "tags": [],
         "url": "/items/ex-flatten/",
+        "teaser": null
+      },{
+        "title": "Modulo by while",
+        "excerpt":"Implement the modulo operation using iteration by while. The modulo operation \\(a \\bmod b\\) returns the remainder of the division of \\(a\\) by \\(b\\). You can assume that \\(a \\geq 0\\) and \\(b &gt; 0\\). ```python def modulo(a, b): \"\"\"Return a mod b (a&gt;=0, b&gt;0). &gt;&gt;&gt; modulo(10, 3) 1 &gt;&gt;&gt;...","categories": [],
+        "tags": [],
+        "url": "/items/ex-iter-mod/",
+        "teaser": null
+      },{
+        "title": "Power by while",
+        "excerpt":"Define a function that takes two numbers b (base) and e (exponent) and returns the value of raising b to the power e (e many bs multiplied). No built-in power functions or operators are allowed, use while.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-iter-power/",
         "teaser": null
       },{
         "title": "Length",
@@ -1345,6 +1363,12 @@ var store = [{
   },{
     "title": "Solution: Flatten",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-flatten/"
+  },{
+    "title": "Solution: Modulo by while",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-iter-mod/"
+  },{
+    "title": "Solution: Power by while",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-iter-power/"
   },{
     "title": "Solution: Length",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-length/"

@@ -317,9 +317,12 @@ The <strong>Collatz sequence</strong> of a given positive integer \(n\) is the s
 
 <p>We seem to have all the pieces needed to solve our original problem. But let’s do not rush. Let’s try to go a little more abstract.</p>
 
-<p>The problem can be thought as a composition of two components:
-    1. There is a <strong>message source</strong> that generates numbers in order. You can also think of it as a stream, or a channel.
-    1. There is a <strong>listener</strong> (or <strong>receiver</strong>) that listens to the channel and keeps the record of the largest number received so far.</p>
+<p>The problem can be thought as a composition of two components:</p>
+
+<ol>
+  <li>There is a <strong>message source</strong> that generates numbers in order. You can also think of it as a stream, or a channel.</li>
+  <li>There is a <strong>listener</strong> (or <strong>receiver</strong>) that listens to the channel and keeps the record of the largest number received so far.</li>
+</ol>
 
 <p>The generating source can vary from problem to problem, but the listener has a more general character. For example, the source could have been random integers between, say 1 and 1000000 (a million), and assume we were asked to find the largest such integer in \(k\) random integers. The code would look like:</p>
 
