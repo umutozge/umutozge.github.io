@@ -329,6 +329,18 @@ var store = [{
         "url": "/items/df-sem-types/",
         "teaser": null
       },{
+        "title": "Semantic objects",
+        "excerpt":"Let \\(E = \\lbrace e_1,e_2,\\ldots\\rbrace\\) be a set of individuals.1 The set of semantic objects \\(O\\) is the smallest set such that, \\(E\\subseteq O\\); \\(\\emptyset\\in O\\); If \\(\\omega\\in O\\), then so is \\(\\lbrace \\omega \\rbrace\\); If \\(\\omega_1,\\omega_2,\\ldots,\\omega_k\\in O\\) with \\(k &gt; 1\\), then so are \\(\\lbrace\\omega_1,\\omega_2,\\ldots,\\omega_k\\rbrace\\) and \\((\\omega_1,\\omega_2,\\ldots,\\omega_k)\\). “Individual” is...","categories": [],
+        "tags": [],
+        "url": "/items/df-semantic-objects-stage/",
+        "teaser": null
+      },{
+        "title": "The unvierse of semantic objects",
+        "excerpt":"Let \\(E\\) be an infinite set of individuals.1 Let \\(\\top\\) and \\(\\bot\\) be two atoms that do not belong in \\(E\\). \\(U_0 = E \\cup \\lbrace \\top,\\bot\\rbrace\\); \\(U_{n+1} = U_n \\cup \\mathcal{P}(U_n) \\cup \\lbrace\\langle x_1, x_2,\\ldots,x_k\\rangle\\mid k \\geq 2 \\text{ and } x_1, x_2,\\ldots,x_k\\in U_n \\rbrace\\);2 \\(U = \\bigcup\\limits_{n=0}^{\\infty} U_n\\)....","categories": [],
+        "tags": [],
+        "url": "/items/df-semantic-objects/",
+        "teaser": null
+      },{
         "title": "Standard deck of 52",
         "excerpt":"A standard deck has 52 cards, divided into 4 suits (hearts ♥️, diamonds ♦️, clubs ♣️, spades ♠️), each with 13 ranks (A(ce), 2, …, 10, J(ack), Q(ueen), K(ing)). The cards J, Q, and K are called face cards. Suits are broken into two colors: red and black. Each color...","categories": [],
         "tags": [],
@@ -972,7 +984,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Model-theoretic interpretation",
-        "excerpt":"Introduction Model-theoretic semantics in linguistics aims to define a systematic correspondence between the expressions of a language and objects that are external to that language, i.e. objects that are not expressions of the language at hand. Let’s take a standard traffic light. The language of a traffic light, call it...","categories": ["course"],
+        "excerpt":"The meaning of traffic lights Model-theoretic semantics aims to define a mechanism that systematically maps the expressions of a language to objects that are not expressions of that language. Let’s take traffic lights as our first example. The language of traffic lights, call it \\(T\\), is simply the set \\(\\{red,...","categories": ["course"],
         "tags": ["language","semantics"],
         "url": "/posts/course/model-theoretic-interpretation/",
         "teaser": null
