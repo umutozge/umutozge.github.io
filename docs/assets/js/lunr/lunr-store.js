@@ -65,6 +65,12 @@ var store = [{
         "url": "/code/python/snippets/tokenization/",
         "teaser": null
       },{
+        "title": "Tuples",
+        "excerpt":"A tuple is an immutable ordered sequence. It can contain items of any type, including tuples themselves. Another sequence data structure is the list. Tuples and lists have some impoartant differences. Tuples are generally advised to be used for heterogenous (items of different types) and fixed-length data (RGB coordinates, or...","categories": [],
+        "tags": ["python","tuples"],
+        "url": "/code/python/snippets/tuples/",
+        "teaser": null
+      },{
         "title": "COGS 502 Quiz",
         "excerpt":"[2pt] You roll a 6-sided dice once; only if the outcome is even, you roll it for a second time. What is the probability that you roll a 6 on the second roll? [2pts] A six-sided die is loaded in a way that each even face is twice as likely...","categories": [],
         "tags": [],
@@ -183,6 +189,12 @@ var store = [{
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/exams/2026-11-02-501-quiz/",
+        "teaser": null
+      },{
+        "title": "501 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-11-09-501-quiz/",
         "teaser": null
       },{
         "title": "Basic probability",
@@ -833,6 +845,18 @@ var store = [{
         "url": "/items/ex-temperature-conversion/",
         "teaser": null
       },{
+        "title": "Pride of an integer",
+        "excerpt":"An integer is happy if it divides the sum of the numbers in its collatz sequence. The pride of an integer is the total number of happy integers in its collatz sequence, excluding itself if it is happy. Define a function pride(n) that returns the pride of n. Assume you...","categories": [],
+        "tags": [],
+        "url": "/items/ex-pride-of-integers/",
+        "teaser": null
+      },{
+        "title": "Sum of digits",
+        "excerpt":"Define a function that takes a positive integer and returns the sum of its digits (e.g. 4096 is mapped to 19). Two mathematical operations that might be useful here are modulo (%) and integer division (//).  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-sum-of-digits/",
+        "teaser": null
+      },{
         "title": "",
         "excerpt":"         ","categories": [],
         "tags": [],
@@ -1423,6 +1447,12 @@ var store = [{
   },{
     "title": "Solution: Temperature unit conversion",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-temperature-conversion/"
+  },{
+    "title": "Solution: Pride of an integer",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-pride-of-integers/"
+  },{
+    "title": "Solution: Sum of digits",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-sum-of-digits/"
   },{
     "title": "Proof of Zero property of multiplication",
     "excerpt":"Proof not written yet.          Back to statement      ","url": "https://umutozge.github.io/proofs/th-mult-zero/"
