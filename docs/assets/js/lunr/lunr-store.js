@@ -197,6 +197,12 @@ var store = [{
         "url": "/exams/2026-11-09-501-quiz/",
         "teaser": null
       },{
+        "title": "501 Quiz",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/exams/2026-11-16-501-quiz/",
+        "teaser": null
+      },{
         "title": "Basic probability",
         "excerpt":"Define flip(p) that returns True with probability p and False with probability (1-p). The only built-in you can use is random.random: &gt;&gt;&gt; import random &gt;&gt;&gt; random.random() # returns a number in [0,1) 0.4013560344771465 which returns a uniformly distributed number in the interval [0,1). You cannot specify any parameters to random.random()....","categories": [],
         "tags": ["probability"],
@@ -348,9 +354,15 @@ var store = [{
         "teaser": null
       },{
         "title": "The unvierse of semantic objects",
-        "excerpt":"Let \\(E\\) be an infinite set of individuals.1 Let \\(\\top\\) and \\(\\bot\\) be two atoms that do not belong in \\(E\\). \\(U_0 = E \\cup \\lbrace \\top,\\bot\\rbrace\\); \\(U_{n+1} = U_n \\cup \\mathcal{P}(U_n) \\cup \\lbrace\\langle x_1, x_2,\\ldots,x_k\\rangle\\mid k \\geq 2 \\text{ and } x_1, x_2,\\ldots,x_k\\in U_n \\rbrace\\);2 \\(U = \\bigcup\\limits_{n=0}^{\\infty} U_n\\)....","categories": [],
+        "excerpt":"A universe of semantic objects \\(U\\) is constructed on the basis of an infinite set \\(E\\) of individuals,1 and the set \\(T= \\lbrace 0, 1\\rbrace\\)2 disjoint with \\(E\\) as follows, \\(U_0 = E \\cup T\\); \\(U_{n+1} = U_n \\cup \\mathcal{P}(U_n) \\cup \\lbrace\\langle x_1, x_2,\\ldots,x_k\\rangle\\mid k \\geq 2 \\text{ and }...","categories": [],
         "tags": [],
         "url": "/items/df-semantic-objects/",
+        "teaser": null
+      },{
+        "title": "Semantic model",
+        "excerpt":"A model \\(M\\) for a language \\(L= \\langle B, r\\rangle\\) is a triple \\(\\langle E,T,\\mathrm{lex}\\rangle\\) where \\(E\\) is a set of individuals,1 \\(T=\\lbrace 0,1\\rbrace\\), \\(\\mathrm{lex}: B \\mapsto O\\) is a function from the basic signs of \\(L\\) to the set \\(O\\) of semantic objects constructed on \\(E\\). “Individual” is used...","categories": [],
+        "tags": [],
+        "url": "/items/df-semantic-model/",
         "teaser": null
       },{
         "title": "Standard deck of 52",
@@ -423,6 +435,12 @@ var store = [{
         "excerpt":"The conditional probability of an event \\(A\\) given an event \\(B\\) is the probability of \\(A\\) occurring given that \\(B\\) has occurred. It is denoted as \\(P(A\\given B)\\) and can be calculated using the formula:   \\[P(A\\given B) = \\frac{P(A \\cap B)}{P(B)}\\] ","categories": [],
         "tags": [],
         "url": "/items/df-cond-prob/",
+        "teaser": null
+      },{
+        "title": "A simple model",
+        "excerpt":"\\(M = \\langle E,\\lbrace 0, 1\\rbrace, \\mathrm{lex}\\rangle\\) with domain:   \\[\\begin{align*} \\begin{aligned} E &amp;= \\{a,b,c,d,e\\}\\\\ \\mathrm{lex}(\\sign{John}) &amp;= a\\\\ \\mathrm{lex}(\\sign{Mary}) &amp;= c\\\\ \\mathrm{lex}(\\sign{loves}) &amp;= \\lbrace (a,b), (c,a), (c,c)\\rbrace\\ \\end{aligned} \\end{align*}\\] ","categories": [],
+        "tags": [],
+        "url": "/items/eg-model-jlm/",
         "teaser": null
       },{
         "title": "A simple model",
@@ -737,6 +755,12 @@ var store = [{
         "url": "/items/ex-venn-for-cond/",
         "teaser": null
       },{
+        "title": "Count item",
+        "excerpt":"Define a function count(x, seq) that returns the number of occurrences of x in the sequence seq.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-count-item/",
+        "teaser": null
+      },{
         "title": "Deep count",
         "excerpt":"Given a possibly nested sequence and an item, count the occurrences of the item in the sequence.   For instance given,  [1, [2, 3], 4, [5, [6, 4]]]   you should be able to count 2 occurrences of 4.  ","categories": [],
         "tags": [],
@@ -855,6 +879,12 @@ var store = [{
         "excerpt":"Define a function that takes a positive integer and returns the sum of its digits (e.g. 4096 is mapped to 19). Two mathematical operations that might be useful here are modulo (%) and integer division (//).  ","categories": [],
         "tags": [],
         "url": "/items/ex-sum-of-digits/",
+        "teaser": null
+      },{
+        "title": "Proc seq",
+        "excerpt":"You are given the function: def procseq(n, sequencer, alive, update, init): \"\"\"Return the accumulated value in the sequence seeded by n using sequencer function. \"\"\" store = init while alive(n): store = update(store, n) n = sequencer(n) return store Also a function collatz(n) that computes the next number in the...","categories": [],
+        "tags": [],
+        "url": "/items/ex-procseq/",
         "teaser": null
       },{
         "title": "",
@@ -1007,8 +1037,8 @@ var store = [{
         "url": "/posts/course/walrus-operator/",
         "teaser": null
       },{
-        "title": "Model-theoretic interpretation",
-        "excerpt":"The meaning of traffic lights Model-theoretic semantics aims to define a mechanism that systematically maps the expressions of a language to objects that are not expressions of that language. Let’s take traffic lights as our first example. The language of traffic lights, call it \\(T\\), is simply the set \\(\\{red,...","categories": ["course"],
+        "title": "Natural language semantics",
+        "excerpt":"The meaning of traffic lights The language of traffic lights, call it \\(T\\), is simply the set \\(\\{red, yellow, green\\}\\). The three expressions of \\(T\\) are associated with three distinct things that have nothing to do with colors. Those who are aware of this association are said to know the...","categories": ["course"],
         "tags": ["language","semantics"],
         "url": "/posts/course/model-theoretic-interpretation/",
         "teaser": null
@@ -1394,6 +1424,9 @@ var store = [{
     "title": "Solution: Definitons over Venn",
     "excerpt":"{% capture img_url %}{% tikz_img venn-for-cond %}{% endcapture %} {% include figure-row.html src=img_url alt=\"Conditional Probability\" content=\" 1. \\\\( P(A\\given B) = \\frac{y}{y + z}\\\\) 1. \\\\( P(A\\given \\neg B) = \\frac{x}{x+t} \\\\) 1. \\\\( P(A\\cap \\neg B) = \\frac{x}{x+y+z+t}\\\\) 1. \\\\( P(B\\given A\\cap B) = 1 \\\\) 1. \\\\( P(A\\cup...","url": "https://umutozge.github.io/solutions/ex-venn-for-cond/"
   },{
+    "title": "Solution: Count item",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-count-item/"
+  },{
     "title": "Solution: Deep count",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-deep-count/"
   },{
@@ -1453,6 +1486,9 @@ var store = [{
   },{
     "title": "Solution: Sum of digits",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-sum-of-digits/"
+  },{
+    "title": "Solution: Proc seq",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-procseq/"
   },{
     "title": "Proof of Zero property of multiplication",
     "excerpt":"Proof not written yet.          Back to statement      ","url": "https://umutozge.github.io/proofs/th-mult-zero/"

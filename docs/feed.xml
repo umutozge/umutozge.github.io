@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-11-09T20:22:45+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-11-16T22:48:53+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
 </subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-09-29T00:00:00+03:00</published><updated>2026-09-29T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
 
   <p>This is a quick start on langugage for cognitive science students.</p>
@@ -458,52 +458,40 @@ one.</p>
 \(\sin\theta\) gives the ratio of the opposite leg to the hypotenuse. <a href="#fnref:trig" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name></name></author><category term="course" /><category term="continuous" /><category term="linear algebra" /><summary type="html"><![CDATA[A gentle intro to linear algebra through vectors]]></summary></entry><entry><title type="html">Model-theoretic interpretation</title><link href="https://umutozge.github.io/posts/course/model-theoretic-interpretation/" rel="alternate" type="text/html" title="Model-theoretic interpretation" /><published>2026-03-31T00:00:00+03:00</published><updated>2026-03-31T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/model-theoretic-interpretation</id><content type="html" xml:base="https://umutozge.github.io/posts/course/model-theoretic-interpretation/"><![CDATA[<h2 id="the-meaning-of-traffic-lights">The meaning of traffic lights</h2>
+</div>]]></content><author><name></name></author><category term="course" /><category term="continuous" /><category term="linear algebra" /><summary type="html"><![CDATA[A gentle intro to linear algebra through vectors]]></summary></entry><entry><title type="html">Natural language semantics</title><link href="https://umutozge.github.io/posts/course/model-theoretic-interpretation/" rel="alternate" type="text/html" title="Natural language semantics" /><published>2026-03-31T00:00:00+03:00</published><updated>2026-03-31T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/model-theoretic-interpretation</id><content type="html" xml:base="https://umutozge.github.io/posts/course/model-theoretic-interpretation/"><![CDATA[<h2 id="the-meaning-of-traffic-lights">The meaning of traffic lights</h2>
 
-<p>Model-theoretic semantics aims to define a mechanism that systematically maps the expressions of a language to objects that are not expressions of that language.</p>
+<p>The language of traffic lights, call it \(T\), is simply the set \(\{red, yellow, green\}\). The three expressions of \(T\) are associated with three distinct things that have nothing to do with colors. Those who are aware of this association are said to know the meaning of traffic lights. But, what are these things associated with traffic lights exactly?</p>
 
-<p>Let’s take traffic lights as our first example. The language of traffic lights, call it \(T\), is simply the set \(\{red, yellow, green\}\). The three expressions of \(T\) are systematically associated with three distinct abstract objects that are not expressions of \(T\).
-What are these objects exactly?</p>
+<p>You might say \(\{\)“stop”, “ready”, “go”\(\}\). You <span class="term" id="interpreted">interpreted</span> the lights by offering this three element set. Any such map from the expressions of a language to objects external to it is an <span class="term" id="interpretation">interpretation</span> of that language. But is this a good interpretation? Do we have a satisfactory characterization of what traffic lights mean?</p>
 
-<p>You might say \(\{\)“stop”, “ready”, “go”\(\}\). Technically, this is a legitimate interpretation as it fits our definition by associating the elements of \(T\) with some English words. But are we happy with this interpretation? Do we have a satisfactory characterization of what traffic lights mean? Yes, why not, you might think. But there is a lot left to worry about.</p>
+<p>If \(red\) means “stop”, this cannot be its only meaning. If it were, we would have to conclude that people who do not know the meaning of “stop” also do not know the meaning of red traffic light. As a solution to this problem, we may take the red traffic light to be ambiguous between as many meanings as there are (or can be) human languages. This time we would need to accept that the red traffic light means different things to a Russian speaker and an Italian speaker, or that polyglots attribute more than one meaning to the red light.<sup id="fnref:sap"><a href="#fn:sap" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Both conclusions are disturbing.</p>
 
-<p>If \(red\) means “stop”, this cannot be its only meaning. If it were, we would have to conclude that people who do not know the meaning of “stop” also do not know the meaning of red traffic light. As a solution to this problem, we may take the red traffic light to be ambiguous between as many meanings as there are (or can be) human languages. This time we would need to accept that the red traffic light means different things to a Russian speaker and an Italian speaker, or that polyglots attribute more than one meaning to the red light.<sup id="fnref:sap"><a href="#fn:sap" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> These conclusions do not feel right, right?</p>
-
-<p>Given that we have a technically correct but unsatisfactory interpretation, we should note that</p>
-
-<p class="notice">not all technically correct interpretations of a language are equally useful.</p>
-
-<p>I think the best we can do for \(T\) is to say that its expressions correspond to some abstract objects living in the realm of laws that regulate traffic, calling them \(\{S,R,G\}\).<sup id="fnref:otherside"><a href="#fn:otherside" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> Note that “the realm of laws that regulate traffic” is not made up of expressions of a particular language. We use a language, Russian, English, whatever, when we want to refer to objects living in that realm. The objects themselves are not linguistic expressions, they are more abstract than that.</p>
+<p>It seems the best we can do for \(T\) is to say that its expressions correspond to some abstract objects living in the realm of laws that regulate traffic, calling them \(\{S,R,G\}\).<sup id="fnref:otherside"><a href="#fn:otherside" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> Note that “the realm of laws that regulate traffic” is not made up of expressions of a particular language. We use a language, Russian, English, whatever, when we want to refer to objects living in that realm. The objects themselves are not linguistic expressions, they are more abstract than that.</p>
 
 <p>Did we get any better on the meaning of traffic lights? All we have, it seems, is a correspondence between three things on the language side and three things on the meaning side. And we, at least on the meaning side, are not able to characterize what those things really are.</p>
 
-<p>But we still find it sound to talk about the correspondence itself. The reason is that we know that it exists. We know it exists, because we know that it has causal efficacy. This follows from the fact that it is by means of this correspondence that drivers adjust their behavior at certain occasions. The red traffic light on its own does not have the causal power to stop the driver, the causal chain tying the red light to the relevant firings of muscular pathways of the driver breaks off without the correspondence, which, in some form or other, is represented in the driver’s nervous system.</p>
+<p>But we still find it sound to talk about the correspondence itself. The reason is that we know that it exists. We know it exists, because we know that it has causal efficacy. This follows from the fact that it is by means of this correspondence that drivers adjust their behavior at certain occasions. The red traffic light on its own does not have the causal power to stop the driver, the causal chain linking the red light to driver’s muscles pressing on the brake pedal breaks off without the correspondence, which, in some form or other, is represented in the driver’s nervous system.</p>
 
 <h2 id="natural-languages">Natural languages</h2>
 
-<p>Of course, natural languages profoundly differ from traffic lights.</p>
+<p>When we talk about semantics, this will always be the semantics of some language (aka the object language). We will study the semantics of natural languages, which profoundly differ from traffic lights.</p>
 
 <ol>
-  <li>They are non-finite. A natural language is the product of a generative mechanism that yields an infinite number of expressions using a finite number of building blocks and a finite number of production rules. Therefore, the correspondence cannot be a simple listing of pairs (<em>aka</em> dictionary) as in the case of traffic lights. We give the name “grammar” to the system of rules and regulations that maps a non-finite set of expressions to a non-finite set of meanings in a computable way.</li>
-  <li>In the traffic light example, drivers, human drivers at least, are consciously aware of the relevant mapping between the lights and the corresponding regulations.<sup id="fnref:prin"><a href="#fn:prin" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> In human languages, however, the conscious self of the agent has no access to the mapping.<sup id="fnref:gerci"><a href="#fn:gerci" class="footnote" rel="footnote" role="doc-noteref">4</a></sup></li>
+  <li>Natural languages are non-finite. A natural language is the product of a generative mechanism that yields an infinite number of expressions using a finite number of building blocks and a finite number of production rules. Therefore, the correspondence cannot be a simple listing of pairs  (like a dictionary) as in the case of traffic lights. We give the name <span class="term" id="grammar">grammar</span> to the system of rules and regulations that maps a non-finite set of expressions to a non-finite set of meanings in a computable way.</li>
+  <li>In the traffic light example, drivers, human drivers at least, are consciously aware of the relevant mapping between the lights and the corresponding regulations.<sup id="fnref:prin"><a href="#fn:prin" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> In human languages, however, the agent has no conscious access to the mapping.<sup id="fnref:gerci"><a href="#fn:gerci" class="footnote" rel="footnote" role="doc-noteref">4</a></sup></li>
+  <li>You will discover more as you proceed…</li>
 </ol>
 
-<h2 id="basic-terminology-concepts-and-methods">Basic terminology, concepts, and methods</h2>
-
-<h3 id="language">Language</h3>
-
-<p>When we talk about semantics, this will always be the semantics of some language (aka the object language). The languages we study will be related to some or other natural language. I said “related to” because our conception of language will substantially differ from common usage. Here are some key differences, to be qualified and further clarified later:</p>
+<p>Like in other sciences, our conception of a natural language will substantially differ from the common usage of the term “language”. Here are some key differences, to be qualified and further clarified later:</p>
 
 <ol>
-  <li>We will define a language as a set of its basic units, which we will call <span class="term" id="signs">signs</span>.</li>
-  <li>The closure of this set under a finite number of language-invariant rules of production will yield a possibly non-finite set of signs.<sup id="fnref:ax"><a href="#fn:ax" class="footnote" rel="footnote" role="doc-noteref">5</a></sup></li>
+  <li>We will define a language as a set of its basic units, which we will call its <span class="term" id="basic-signs">basic signs</span>.</li>
+  <li>The closure of this set under a finite number of language-invariant rules of production will yield a possibly non-finite set of <span class="term" id="basic-and-compound-signs">basic and compound signs</span>.<sup id="fnref:ax"><a href="#fn:ax" class="footnote" rel="footnote" role="doc-noteref">5</a></sup></li>
   <li>Observe that there will be two related but distinct uses of the term “language”, one to refer to the definition (set of basic signs), and the other to the set of all possible signs (basic or compound).</li>
   <li>When we talk about, say, English, we will always focus on a <span class="term" id="fragment">fragment</span> (=subset) of the language. This will allow us to isolate the phenomena we want to study in detail without getting lost in the vast complexity of English herself.</li>
 </ol>
 
-<h3 id="evaluation">Evaluation</h3>
-
-<p>Assume we want to study a microscopic fragment of English, containing only three basic signs, corresponding to the words <em>John</em>, <em>Mary</em> and <em>loves</em>.<sup id="fnref:emph"><a href="#fn:emph" class="footnote" rel="footnote" role="doc-noteref">6</a></sup> Let’s use an orthographic indicator of whether we deal with expressions of English or signs corresponding to them, and define our fragment \(F\) as a set of basic signs,</p>
+<p>Assume we want to study a microscopic fragment of English, containing only three basic signs, corresponding to the words <em>John</em>, <em>Mary</em> and <em>loves</em>.<sup id="fnref:emph"><a href="#fn:emph" class="footnote" rel="footnote" role="doc-noteref">6</a></sup> Let’s use an orthographic indicator of whether we deal with expressions of English or signs representing them, and define our fragment \(F\) as a set of basic signs,</p>
 
 \[F=\lbrace\sign{John}, \sign{Mary}, \sign{loves}\rbrace\]
 
@@ -524,42 +512,165 @@ What are these objects exactly?</p>
 
 <ol>
   <li>The \(\oplus\) symbol and the parentheses represent which signs \(r\) worked on and in what order to generate these compound signs.</li>
-  <li>\(r\) appears to be more intelligent than a simple concatenation operator, as you don’t see signs like \((\sign{loves}\oplus\sign{loves})\) or any sign that has more than 3 component basic signs. A simple concatenation operation would yield an infinite set of signs.</li>
+  <li>\(r\) appears to be more intelligent than a simple concatenation operator, as you don’t see signs like \((\sign{loves}\oplus\sign{loves})\) or any sign that has more than 4 component basic signs. A simple concatenation operation would yield an infinite set of signs.</li>
 </ol>
 
-<p>Our central task is to construct a semantic <span class="term" id="theory">theory</span> (aka account) that, in effect, maps the set \(\closure{r}{F}\) to their <span class="term" id="semantic-values">semantic values</span> – put aside for now what those values are. A familiar name for this mapping is <span class="term" id="evaluation">evaluation</span>, in the same sense we commit to when talking about evaluating expressions in a programming language. In this regard, we will treat natural languages pretty much as programming languages, but those with the crucial quality of having no statements. This means that any sign (basic or compound) has a value, and when a sign is evaluated its value replaces the sign, and nothing else happens (no side-effect).<sup id="fnref:sign"><a href="#fn:sign" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> A useful model to keep in mind is the evaluation of an arithmetic expression of arbitrary complexity with a recursive algorithm.</p>
+<h2 id="what-is-meaning">What is meaning?</h2>
 
-<p>We will use the following notation to denote evaluation functions that apply to signs \(\interp{\cdot}: S\mapsto O\),</p>
+<p>A semantic account of a fragment like \(F\) is an <span class="term" id="evaluation">evaluation</span> function that maps the set of signs \(\closure{r}{F}\) to the set of <span class="term" id="semantic-values">semantic values</span>, caring to concur with actual speaker intuitions.</p>
+
+<div class="notice--warning">
+  <p>Think of evaluating a sign to its semantic value exactly in the sense of evaluating expressions in a programming language. In this regard, a natural language will be treated as a programming language consisting purely of expressions. This means that any sign (basic or compound) has a value, and when a sign is evaluated its value replaces the sign, and nothing else happens (no side-effect).<sup id="fnref:sign"><a href="#fn:sign" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> A useful model to keep in mind is the evaluation of an arithmetic expression of arbitrary complexity with a recursive algorithm.</p>
+
+</div>
+
+<p>An evaluation function \(\interp{\cdot}: S\mapsto M\) is denoted by,</p>
 
 \[\begin{align*}
-\interp{s} = o 
+\interp{s} = m
 \end{align*}\]
 
-<p>where \(s\) is a sign and \(o\) is its semantic value.</p>
+<p>where \(s\) is a sign and \(m\) is its semantic value, or meaning, if you like.</p>
 
-<h3 id="semantic-values">Semantic values</h3>
+<p>Now we can start to talk about the meaning of the English sentence <em>John loves Mary</em> denoted by,</p>
 
-<p>We now know enough about the set of signs \(S\), the domain of the evaluation function. But what about its codomain \(O\), namely the universe from which the evaluation function picks the semantic values of its input signs?</p>
+\[\interp{(\sign{John\oplus (loves\oplus Mary)})}\]
 
-<p>First, this is the fundamental research question of the theory of meaning and reference. And it, as of now, has both empirical and philosophical aspects. Let’s start with the most simple and intuitive proposal.</p>
+<p>This brings us to the question about the codomain \(M\) of the function \(\interp{\cdot}\), namely the universe from which the evaluation function picks the semantic values of its input signs?</p>
 
-<p>Take the sentence,</p>
+<p>This looks like we are simply asking what does the sentence,</p>
 
-\[\text{A sample is contaminated.}\label{sample}\]
+\[\text{John loves Mary}\label{sample}\]
 
-<p>What does sentence (\ref{sample}) mean?</p>
+<p>mean?</p>
 
-<p>On one hand it is impossible to tell. What are we sampling? What does it mean to be contaminated for our samples? Where are we? Who are we?</p>
+<p>On one hand, it seems impossible to tell: we don’t know what the names <em>John</em> and <em>Mary</em> name. We don’t know in what sense the relation <em>love</em> is intended. But, on the other hand, we know that names  <em>do</em> name things, and that the relation meant by  <em>love</em> is in a sense from what the name <em>John</em> stands for to what the name <em>Mary</em> stands for. And most significantly we know that it is legitimate to talk about the degree of truthfulness that can be attributed to the speaker of this sentence.</p>
 
-<p>We will call the inhabitants of that universe  <span class="term" id="semantic-objects">semantic objects</span>.<sup id="fnref:valueobject"><a href="#fn:valueobject" class="footnote" rel="footnote" role="doc-noteref">8</a></sup> Here is how that universe is defined:</p>
+<p>Let’s lean on this final aspect and call the object thanks to which the question of truthfulness comes up, the <span class="term" id="proposition">proposition</span> denoted by (\ref{sample}). Speakers <span class="term" id="use">use</span> such declarative sentences to <span class="term" id="express">express</span> propositions. But what is a proposition anyway?</p>
+
+<p>What is a rule of traffic? What is a university? What is meaning? We are inclined to (think it is sound to) ask these questions, because we think they are of the same kind as asking “What is this?” when we are showing an apple in our hand; or, hiding an apple inside a box, and then asking “What is inside?” In such contexts, there is an object that can answer the question: the word “apple”, and the apple itself, respectively. But, not every concept is of this form. Some concepts fail to make sense when you ask for the object standing for the concept.<sup id="fnref:uni"><a href="#fn:uni" class="footnote" rel="footnote" role="doc-noteref">8</a></sup></p>
+
+<p>Fortunately, we do not need to answer the question “What is meaning?”. We will instead ask the question of “What does meaning do?” When we have an answer for that, our job will be to propose objects that do things that can be done with meaning.<sup id="fnref:lewis"><a href="#fn:lewis" class="footnote" rel="footnote" role="doc-noteref">9</a></sup> It is like the case of traffic regulations. I can’t point to an object that <em>is</em> the regulation, but I can tell what people who know the regulation <em>do</em> with it.</p>
+
+<p>OK, what do we do with propositions?</p>
+
+<p class="notice--danger">At this point, we need to start making some choices, as we are entering a territory parceled by competing philosophical and scientific persuasions. Instead of presenting and comparing the possibilities, I will stick to one.</p>
+
+<p>We will follow a truth-based formulation, which finds one of its most influential wording in Ludwig Wittgenstein: “To understand a proposition means to know what is the case if it is true.”<sup id="fnref:tract"><a href="#fn:tract" class="footnote" rel="footnote" role="doc-noteref">10</a></sup></p>
+
+<p>This tiny quote gives us a handle on the question of what do we do with meanings. Here is how we think about it,</p>
+
+<ol>
+  <li>You understand (\ref{sample}) as you know English.</li>
+  <li>Since you understand it, you understand the proposition it denotes, call it \(p\).</li>
+  <li>Therefore, you know what is the case if \(p\) is true (we used the quote at this step).</li>
+  <li>Let’s call what you know \(k\) (the part “what is the case if \(p\) is true” in the previous sentence.)</li>
+  <li>We don’t ask what is \(k\), but we ask what do, or can, you do with it.</li>
+</ol>
+
+<p>For one thing you can do with \(k\), you can succeed in the following game:</p>
+
+<div class="notice--warning">
+  <p><strong>Investigating “state of affairs”:</strong></p>
+
+  <p>I give you a deck of laminated sheets. In each sheet, there are,</p>
+
+  <ol>
+    <li>a number of human stick figures with unique integer id’s;</li>
+    <li>a list of any number of integer-word pairs;</li>
+    <li>a list of any number of integer-integer pairs.</li>
+  </ol>
+
+  <p>where in both lists integers are picked from among the id’s. I also tell you that the integer-integer pairs are for figures where the first loves the second.</p>
+
+  <p>Now I tell you that (\ref{sample}) is a key for dividing the deck into two. You win, if you can figure out how.</p>
+</div>
+
+<p>You will have no difficulty in doing this as you know the meaning of (\ref{sample}), which is equivalent to having \(k\), which is equivalent to knowing what is the case if \(p\) is true.</p>
+
+<p>It will be no harder, if I changed the sentence to <em>John loves John</em> or <em>Mary loves John</em>, picking other items from the fragment \(F\).</p>
+
+<p>Now, our object of inquiry is not the meaning of (\ref{sample}). It is the mechanism that makes you succeed in games like the above played with any sign picked from the fragment.</p>
+
+<h2 id="model">Model</h2>
+
+<p>What is this ability we start to have when we understand a proposition? Let’s proceed over the word “case”. Here is a definition from <a href="https://www.oed.com/dictionary/case_n1?tab=meaning_and_use#10014900">OED</a>:</p>
+
+<blockquote>
+  <p>An instance of a particular situation; an example of something occurring; a particular circumstance or state of affairs.</p>
+</blockquote>
+
+<p>With this definition, one is inclined to think that each sheet in our game is a case, as each depicts a state of affairs involving some individuals and relations between them. But the grammar of the phrase “the case” in “knowing what the case is”, suggests that, when we understand \(p\) we can pick one unique case among the cases. This is not what happens in the game, though. You do not pick <em>the case</em>, you pick a <em>set</em> of cases with a common denominator. What you know is that common denominator.</p>
+
+<p>We will take that common denominator to be a function from cases to a two element set. Any two elements, one standing for “OK” and the other for “not OK” will do. Whenever we have such a binary valued function from a set, we actually define a subset of our domain, or simply a set. The technical name is <span class="term" id="characteristic-function">characteristic function</span>.</p>
+
+<div class="item" id="df-char-func" data-kind="definition" data-label="Definition" data-title="Characteristic function" data-ref="Definition">
+
+    
+      <p>For every set \(A\), there exists a unique function \(f_A\), called the
+characteristic function of \(A\), defined as follows:</p>
+
+\[f_A(x) =
+\begin{cases}
+1,  \text{ if } x \in A \\
+0,  \text{ otherwise }
+\end{cases}\]
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p class="notice--danger">Do not confuse the values \(0\) and \(1\) with the usual integers. We could have \(\top\) and \(\bot\) or any other distinct symbols instead of these. Think of them as integers cast to boolean type by a statement like <code class="language-plaintext highlighter-rouge">if</code>.</p>
+
+<p>In this setting, a proposition is a characteristic function of a set of cases, a function from the set of all possible cases to the set \(\lbrace 0, 1\rbrace\).</p>
+
+<p>Therefore, the semantic value of <em>John loves Mary</em> will be a function from cases to \(\lbrace 0, 1\rbrace\). In order to proceed, we need to have a representation of what a case is that is more formal than our laminate sheets. The term for case in semantics is <span class="term" id="model">model</span>.</p>
+
+<div class="item" id="df-semantic-model" data-kind="definition" data-label="Definition" data-title="Semantic model" data-ref="Definition">
+
+    
+      <p>A model \(M\) for a language \(L= \langle B, r\rangle\) is a triple \(\langle E,T,\mathrm{lex}\rangle\) where</p>
+
+<ol>
+  <li>\(E\) is a set of individuals,<sup id="fnref:ind"><a href="#fn:ind" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></li>
+  <li>\(T=\lbrace 0,1\rbrace\),</li>
+  <li>\(\mathrm{lex}: B \mapsto O\) is a function from the basic signs of \(L\) to the set \(O\) of semantic objects constructed on \(E\).</li>
+</ol>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:ind">
+      <p>“Individual” is used here in the sense of “indivisible entity”. <a href="#fnref:ind" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>The universe of semantic objects is defined as,</p>
 
 <div class="item" id="df-semantic-objects" data-kind="definition" data-label="Definition" data-title="The unvierse of semantic objects" data-ref="Definition">
 
     
-      <p>Let \(E\) be an infinite set of individuals.<sup id="fnref:ind"><a href="#fn:ind" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Let \(\top\) and \(\bot\) be two atoms that do not belong in \(E\).</p>
+      <p>A universe of semantic objects \(U\) is constructed on the basis of an infinite set \(E\)  of individuals,<sup id="fnref:ind"><a href="#fn:ind" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> and the set \(T= \lbrace 0, 1\rbrace\)<sup id="fnref:topbot"><a href="#fn:topbot" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> disjoint with \(E\) as follows,</p>
+
 <ol>
-  <li>\(U_0 = E \cup \lbrace \top,\bot\rbrace\);</li>
-  <li>\(U_{n+1} = U_n \cup \mathcal{P}(U_n) \cup \lbrace\langle x_1, x_2,\ldots,x_k\rangle\mid k \geq 2 \text{ and }  x_1, x_2,\ldots,x_k\in U_n \rbrace\);<sup id="fnref:pow"><a href="#fn:pow" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></li>
+  <li>\(U_0 = E \cup T\);</li>
+  <li>\(U_{n+1} = U_n \cup \mathcal{P}(U_n) \cup \lbrace\langle x_1, x_2,\ldots,x_k\rangle\mid k \geq 2 \text{ and }  x_1, x_2,\ldots,x_k\in U_n \rbrace\);<sup id="fnref:pow"><a href="#fn:pow" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></li>
   <li>\(U = \bigcup\limits_{n=0}^{\infty} U_n\).</li>
 </ol>
 
@@ -568,7 +679,10 @@ What are these objects exactly?</p>
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:ind">
-      <p>“Individual” is used here in the sense of “indivisible entity”. <a href="#fnref:ind" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>Using “individual” in the sense of “indivisible entity”. <a href="#fnref:ind" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:topbot">
+      <p>Don’t read these as integers, they are two distinct symbols not in \(E\), symbols like \(\top\) and \(\bot\), for instance. <a href="#fnref:topbot" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:pow">
       <p>\(\mathcal{P}\) is the full power set function. <a href="#fnref:pow" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
@@ -586,7 +700,7 @@ What are these objects exactly?</p>
     
   </div>
 
-<p>In plain words, we construct a set-theoretic universe containing all possible structures (by set and tuple constructors) that can be formed on the basis of some primitive atoms.</p>
+<p>In plain words, the universe of semantic objects is a set-theoretic universe containing all possible structures that can be formed on the basis of some primitive atoms, by using set and tuple constructors.</p>
 
 <div class="notice--warning">
   <p><strong>Digression:</strong>
@@ -603,19 +717,155 @@ If you have difficulty in understanding the motivation of the definition despite
   </ol>
 </div>
 
-<h3 id="anatomy-of-evaluation">Anatomy of evaluation</h3>
+<h2 id="compositionality">Compositionality</h2>
 
-<p>The process of evaluation is broken down into some levels and components.</p>
+<p>We now take the value,</p>
 
-<p>We will name the function that evaluates expressions the “interpretation function”, denoted by \(I\). Being a function, \(I\) will have a domain and a codomain. Its domain is the set of expressions of the language under discussion. Its codomain will be a set-theoretic structure.</p>
+\[\interp{(\sign{John\oplus (loves\oplus Mary)})}\]
 
-<p>which covers all the objects you can possibly build by elements, set, and n-tuples and sets of previously cited items.</p>
+<p>to be a function from models to \(\lbrace 0, 1\rbrace\), which is to say that the meaning of <em>John loves Mary</em> is a decision procedure which can tell between cases where the sentence is true and the cases where it is false.</p>
 
-<p>Our main aim is to map expressions of the object language to objects in a realm that is external to the object language. This realm will be a structure that holds worlds. Again, the term “world” is an abstract technical term. In the simplest case we will assume that there is a single world. We will be interested in the meaning of our expressions in this world.</p>
+<p class="notice--info">We could have equivalently taken the function \(\interp{.}\) to be \(S\times M \mapsto \lbrace 0,1\rbrace\). In the end what it does is to take a sign and a model and return \(0\) or \(1\), a function that takes two arguments. We will almost always do things in the former way, our functions will always take a single argument and at times return other single argument functions as values. We will have more about this below.</p>
 
-<p>Think of a world as a structure that can be at one of some possible states.</p>
+<p>Let’s take an example model \(M\):</p>
 
-<p>In natural language semantics, the general practice – or where people
+<div class="item" id="eg-model-jlm" data-kind="example" data-label="Model" data-title="A simple model" data-ref="Model">
+
+    
+      <p>\(M = \langle E,\lbrace 0, 1\rbrace, \mathrm{lex}\rangle\) with domain:</p>
+
+\[\begin{align*}
+\begin{aligned}
+E &amp;= \{a,b,c,d,e\}\\
+\mathrm{lex}(\sign{John}) &amp;= a\\
+\mathrm{lex}(\sign{Mary}) &amp;= c\\
+\mathrm{lex}(\sign{loves}) &amp;= \lbrace (a,b), (c,a), (c,c)\rbrace\
+\end{aligned}
+\end{align*}\]
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>Then we have,</p>
+
+\[\interp{(\sign{John\oplus (loves\oplus Mary)})}(M) = 0\]
+
+<p>while we would have</p>
+
+\[\interp{(\sign{Mary\oplus (loves\oplus John)})}(M) = 1\]
+
+<p>Further changes in the component signs or their arrangement will alter the behaviour of \(\interp{.}\). This is one of the fundamental principles in semantics, which is sometimes called “Frege’s principle”:<sup id="fnref:jannsen"><a href="#fn:jannsen" class="footnote" rel="footnote" role="doc-noteref">11</a></sup></p>
+
+<p class="notice--warning"><strong>The principle of compositionality</strong>: The meaning of the whole is a function of the meaning of its parts and the way they come together.</p>
+
+<p>How do we make \(\interp{.}\) sensitive to the internal structure of its inputs in a non-random fashion.</p>
+
+<p>Let’s switch to a much simpler evaluation task where the principle of compositionality is applicable. Let’s assume we are trying to evaluate the language,</p>
+
+\[L = \langle B, \{\circ,\sim\}\rangle\]
+
+<p>where the set of basic signs \(B\) is defined as the smallest set that contains any string that can be formed by zero or more repetitions of the symbols \(\triangle\) and \(\square\) in any order.</p>
+
+<p>The production operators \(\circ\) and \(\sim\) are defined as,</p>
+
+\[\text{If } \alpha,\beta \in L \text{ s.t. } \sim \text{ does not occur in them, then} (\alpha \circ \beta), (\alpha \sim \beta) \in L.\]
+
+<p>which says that \(\sim\) is a one-shot tool, while \(\circ\) is unbounded.</p>
+
+<p>Take the following sign of \(L\),</p>
+
+\[k = ((\triangle\square\square\square \circ \triangle\square\triangle) \sim (\triangle\square\square \circ (\triangle\triangle\triangle \circ \triangle\square\triangle)))\]
+
+<p>What is \(\interp{k}\)?</p>
+
+<p>Likening it to the case above, we might think that it must be a function from models to \(\{0,1\}\). But a possible model gives a set of individuals and a function \(\lexf\) that maps the basic signs to their values. It simply leaves out the construction operators \(\circ\) and \(\sim\). And without them, it seems impossible to map a given model to one of 0 or 1.</p>
+
+<p>Back to the principle of compositionality, this is exactly why the principle has an <em>and</em>: we need to be able to make sense of both the basic components <em>and</em> the way they combine into larger structures.</p>
+
+<p>It turns out that the evaluator \(\interp{.}\) needs to have another parameter for handling the construction operators. Here is one possible evaluation account for \(L\), given in an inductive form,</p>
+
+<p>Given \(L\) as defined above and a model \(M=\langle E,\{0,1\}, \lexf \rangle\) for \(L\),</p>
+<ol>
+  <li>\(\interp{\alpha} = \lexf(\alpha)\), if \(\alpha \in B\)</li>
+  <li>\(\interp{(\alpha_1\circ\alpha_2)} = \interp{\alpha_1} + \interp{\alpha_2}\);</li>
+  <li>\(\interp{(\alpha_1\sim\alpha_2)} = 1\), if \(\interp{\alpha_1} = \interp{\alpha_2}\), and 0 otherwise;</li>
+</ol>
+
+<p>This is the mechanics of the evaluation function \(\interp{.}\). If you want to get a specific value, you need to provide a concrete model to it. One would be having \(E\) as the set of integers and have \(\lexf\) map a string of \(\triangle\)s and \(\square\)s to the decimal representation of the integer obtained by treating \(\triangle\)s as 1 and \(\square\)s as 0.</p>
+
+<p>Before returning to our natural language example and see how this mechanics apply there, we need to get clear about currying.</p>
+
+<h2 id="currying">Currying</h2>
+
+<p>Natural language has many expressions that correspond to the mathematical concept of a <span class="term" id="relation">relation</span>. <em>Loves</em> for instance is a verb that denotes a relation defined over the set of individuals. It simply includes those ordered pairs \((x,y)\) s.t. \(x\) loves \(y\). Certain mathematical properties of relations directly apply to natural language meaning. For instance, the love relation is not <span class="term" id="symmetric">symmetric</span>, because the fact that \(x\) loves \(y\) does not guarantee that \(y\) loves \(x\) in return, it may but it doesn’t have to. Compare this with the relation <em>be in physical contact with</em>. The love relation is also not <span class="term" id="reflexive">reflexive</span> (as not every individual has to love him/herself), but the relation denoted by <em>has the same name</em> is. Love is also far from being <span class="term" id="transitive">transitive</span>, because the fact that \(x\) loves \(y\) and \(y\) loves \(z\) does not guarantee that \(x\) loves \(z\).<sup id="fnref:sibling"><a href="#fn:sibling" class="footnote" rel="footnote" role="doc-noteref">12</a></sup></p>
+
+<p>Relations are fun, but we need to get used to seeing everything as functions, which constitute a subset of relations that insist that each individual is related to one and only one individual. How can we think of love as a function then?</p>
+
+<p>Relations are simply sets. Binary relations are sets of ordered pairs, ternary relations are sets of triples, and so on. As we saw above every set is equivalent to a function, which is called its <span class="term" id="characteristic-function">characteristic function</span>. Therefore we will take a binary relation \(R\) defined on a set \(A\) to be a function \(f:A\times A\mapsto \{0,1\}\). All functions with the codomain \(\lbrace0,1\rbrace\) will be called <span class="term" id="boolean">boolean</span> functions; the connection to truth and falsity should be obvious.</p>
+
+<p>The second concept related to functions that we will need is Currying. Take the following simple function that multiplies two numbers:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
+</code></pre></div></div>
+
+<p>Whenever you need to use <code class="language-plaintext highlighter-rouge">multiply</code>, you have to provide the both arguments; it is impossible to delay the saturation of one of the arguments. Compare the following Curried form with the above:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">curried_multiply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
+    <span class="k">return</span> <span class="n">f</span>
+</code></pre></div></div>
+
+<p>Now you can incrementally saturate the function: <code class="language-plaintext highlighter-rouge">curried_multiply(8)</code> will give you a function that multiplies its argument with 8 and returns the result; to get 72 you need to have <code class="language-plaintext highlighter-rouge">curried_multiply(8)(9)</code>, rather than <code class="language-plaintext highlighter-rouge">curried_multiply(8,9)</code>.</p>
+
+<h2 id="curried-english">Curried English</h2>
+
+<p>Now back to our <em>John loves Mary</em> example. How can we treat it as we treated arithmetical equalities above?</p>
+
+<p>In evaluating,</p>
+
+\[(\sign{John\oplus (loves\oplus Mary)})\]
+
+<p>the evaluator, at some point, has to be able to evaluate the part,</p>
+
+\[\sign{(loves\oplus Mary)}\]
+
+<p>The functions in our language will all be Curried as in the above example. Therefore a function like \(\sysm{Loves}\) (yes, we take it to be a function rather than a relation) will get its arguments one by one. By convention we will agree that the arguments are fed in the reverse order.<sup id="fnref:montnot"><a href="#fn:montnot" class="footnote" rel="footnote" role="doc-noteref">13</a></sup> For instance, to express what is expressed by the sentence <em>John loves Mary</em>, we will first feed the second argument to the function, resulting in,</p>
+
+\[Loves(Mary)\]
+
+<p>which stands for a function that returns 1 for individuals who love Mary and 0 otherwise. The fully saturated form is,</p>
+
+\[Loves(Mary)(John)\]
+
+<p>We will adopt two other notational conventions:</p>
+
+<ol>
+  <li>The constants<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">14</a></sup> like \(Loves\), \(John\), and so on, will be written in lower case and terminated by a prime as in \(loves'\) and \(john'\) (or an abbreviated form \(j'\));</li>
+  <li>Given a function \(f\) and an argument \(a\), we will depict function application as \((f\cnct a)\), rather than the standard notation
+\(f(a)\).</li>
+</ol>
+
+<p>Under these conventions the logical representation of <em>John loves Mary</em> becomes,</p>
+
+\[((loves'\cnct mary')\cnct john')\]
+
+<p>Next section is on one of the most important concepts in natural language semantics.</p>
+
+<p>We will assume that natural language expressions get transformed
+into a formal disambiguated language. The formal language we will use is
+a slight variant of first-order logic with equality and lambda
+abstraction. We will develop it gradually. There are certain notational
+conventions and conceptual points we diverge from first-order logic. We
+will first discuss those.
+In natural language semantics, the general practice – or where people
 usually begin – is to take the world as the model. This approach
 conceives the world as consisting of entities (humans, cats, chairs,
 hopes, fears…) and properties of and relations among these entities.
@@ -647,110 +897,6 @@ expressions to logical forms later on, where we delve into the notion of
 grammar that governs that mapping.</p>
 
 <h2 id="characteristic-functions-and-currying">Characteristic functions and Currying</h2>
-
-<p>We will assume that natural language expressions get transformed
-into a formal disambiguated language. The formal language we will use is
-a slight variant of first-order logic with equality and lambda
-abstraction. We will develop it gradually. There are certain notational
-conventions and conceptual points we diverge from first-order logic. We
-will first discuss those.</p>
-
-<p>Natural language has many expressions that correspond to the mathematical
-concept of a <span class="term" id="relation">relation</span>. <em>Loves</em> for instance is a verb that denotes a
-relation defined over the set of individuals. It simply includes those ordered
-pairs \((x,y)\) s.t. \(x\) loves \(y\). Certain mathematical properties of
-relations directly apply to natural language meaning. For instance, the love
-relation is not <span class="term" id="symmetric">symmetric</span>, because the fact that \(x\) loves \(y\) does
-not guarantee that \(y\) loves \(x\) in return, it may but it doesn’t have to.
-Compare this with the relation <em>class-mate</em>. The love relation is also not
-<span class="term" id="reflexive">reflexive</span> (as not every individual has to love him/herself), but the
-relation denoted by <em>has the same name</em> is. Love is also far from being
-<span class="term" id="transitive">transitive</span>, because the fact that \(x\) loves \(y\) and \(y\) loves
-\(z\) does not guarantee that \(x\) loves \(z\), but <em>sibling</em> denotes a
-transitive relation (which is also symmetric but not reflexive).</p>
-
-<p>Relations are fun, but we need to get used to seeing everything as functions,
-which constitute a subset of relations that insist that each individual is related to
-one and only one individual. How can we think of love as a function then?</p>
-
-<p>Relations are simply sets. Binary relations are sets of ordered pairs, ternary
-relations are sets of triples, and so on. In model-theoretic semantics, a very
-central, and equally simple, mathematical fact is that every set is equivalent
-to a function, which is called its <span class="term" id="characteristic-function">characteristic function</span>.</p>
-
-<div class="item" id="df-char-func" data-kind="definition" data-label="Definition" data-title="Characteristic function" data-ref="Definition">
-
-    
-      <p>For every set \(A\), there exists a unique function \(f_A\), called the
-characteristic function of \(A\), defined as follows:</p>
-
-\[f_A(x) =
-\begin{cases}
-1,  \text{ if } x \in A \\
-0,  \text{ otherwise }
-\end{cases}\]
-
-    
-
-
-    
-
-    
-
-    
-  </div>
-
-<p>Therefore we will take a binary relation \(R\) defined on a set \(A\) to be a function
-\(f:A\times A\mapsto \{0,1\}\). All functions with the codomain
-\(\lbrace0,1\rbrace\) will be called <span class="term" id="boolean">boolean</span> functions; the connection
-to truth and falsity should be obvious.</p>
-
-<p>The second concept related to functions that we will need is Currying.
-Take the following simple function that multiplies two numbers:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
-</code></pre></div></div>
-
-<p>Whenever you need to use <code class="language-plaintext highlighter-rouge">multiply</code>, you have to provide the both
-arguments; it is impossible to delay the saturation of
-one of the arguments. Compare the following Curried form with the above:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">curried_multiply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
-    <span class="k">return</span> <span class="n">f</span>
-</code></pre></div></div>
-
-<p>Now you can incrementally saturate the function: <code class="language-plaintext highlighter-rouge">curried_multiply(8)</code>
-will give you a function that multiplies its argument with 8 and returns
-the result; to get 72 you need to have <code class="language-plaintext highlighter-rouge">curried_multiply(8)(9)</code>, rather
-than <code class="language-plaintext highlighter-rouge">curried_multiply(8,9)</code>.</p>
-
-<p>The functions in our language will all be Curried as in the above example.
-Therefore a function like \(\sysm{Loves}\) (yes, we take it to be a function
-rather than a relation) will get its arguments one by one. By convention we will
-agree that the arguments are fed in the reverse order.<sup id="fnref:montnot"><a href="#fn:montnot" class="footnote" rel="footnote" role="doc-noteref">9</a></sup> For instance, to express
-what is expressed by the sentence <em>John loves Mary</em>, we will first feed the second argument to the function,
-resulting in,</p>
-
-\[Loves(Mary)\]
-
-<p>which stands for a function that returns 1 for individuals who love
-Mary and 0 otherwise. The full form is,</p>
-
-\[Loves(Mary)(John)\]
-
-<p>We will adopt two other notational conventions: 1. The constants<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">10</a></sup> like
-\(Loves\), \(John\), and so on, will be written in lower case and terminated by
-a prime as in \(\sysm{loves'}\) and \(\sysm{john'}\) (or an abbreviated form
-\(\sysm{j}'\)); 2. Given a function \(f\) and an argument \(a\), we will depict
-function application as \(\sysm{(f\cnct a)}\), rather than the standard notation
-\(\sysm{f(a)}\). Under these conventions the logical representation of <em>John
-loves Mary</em> becomes,</p>
-
-\[((loves'\cnct mary')\cnct john')\]
-
-<p>Next section is on one of the most important concepts in natural language semantics.</p>
 
 <h2 id="semantic-types">Semantic types</h2>
 
@@ -1274,7 +1420,7 @@ This paragraph will be justified.</p>
       <p>By the way, we’ve been acting as if the elements of \(T\) stand on solid rock. But, do they? What are those expressions? Are they just colors, patches of them, lamps on the post, spectral ranges? <a href="#fnref:otherside" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:prin">
-      <p>Of course this is so only in principle. No one, I guess, consciously thinks of the regulation every time they stop at a red light; but everyone, I guess, when asked, will cite the regulation as part of the reason why they stopped. <a href="#fnref:prin" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>This is so only in principle. No one, I guess, consciously thinks of the regulation every time they stop at a red light; but everyone, I guess, when asked, will cite the regulation as part of the reason why they stopped. <a href="#fnref:prin" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:gerci">
       <p>It is hard to resist the feeling that you have access to the meaning of the languages you competently speak – we know a great deal about the meaning of words, don’t we?. But, the knowledge you have conscious access to is world (or conceptual) knowledge, rather than grammatical knowledge. As you advance in semantics, you will get much clearer on the difference. <a href="#fnref:gerci" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
@@ -1288,8 +1434,20 @@ This paragraph will be justified.</p>
     <li id="fn:sign">
       <p>This is actually a provisional description, which I will adapt when I qualify the notion of sign below. <a href="#fnref:sign" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:valueobject">
-      <p>You may be thinking “we already have the name ‘semantic value’, why do we need the term ‘semantic object’? Isn’t it redundant?” It is not. Value is a relational concept: if you are a value, you are always a value of some other thing – this is even so for the fixed points of a function where \(c\) is the value of \(f(c)\), not \(c\) itself. Therefore, “semantic value” is the name of a relation, rather than a property or description of an entity with an existence independent of the relations it participates in. If you define something as a value, it stops existing without something that it is the value of. This is why we need the concept of a semantic object besides semantic value. It allows us to talk about semantic objects with no sign whatsoever that they are the value of. It is perfectly fine for something to be a semantic object without being at the same time a semantic value. As we will see, there are in fact infinitely many of them. <a href="#fnref:valueobject" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    <li id="fn:uni">
+      <p>You might be thinking that there is some object that stands as an answer to the question “What is a university?” Try for some time to describe that object. You will soon discover that this object is so slippery that you will be unable to come up with a description that tells what a university is in a satisfactory way. Don’t worry, you’ve just discovered the reason why good old-fashioned AI’s explicit knowledge representation efforts have miserably failed. <a href="#fnref:uni" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:lewis">
+      <p>Lewis (1979) “General Semantics”. <a href="#fnref:lewis" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:tract">
+      <p>Tractatus Logico-Philosophicus, 4.024. <a href="#fnref:tract" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:jannsen">
+      <p>See <a href="https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780444817143500114">Janssen (1997)</a> for the problems with this naming. <a href="#fnref:jannsen" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:sibling">
+      <p>Think about the concept of <em>sibling</em>. If we put aside the notion of half siblings (Tr. üvey kardeş), we would think that it is a transitive and symmetric relation. But this causes a problem, can you see what? (Thanks to <a href="https://github.com/howion/">Omer Mert Coskun</a> ) for pointing this out. <a href="#fnref:sibling" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:montnot">
       <p>This has a deeper linguistic reason that we will see later on. <a href="#fnref:montnot" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
@@ -1298,7 +1456,7 @@ This paragraph will be justified.</p>
       <p>See below for what “constant” means. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name></name></author><category term="course" /><category term="language" /><category term="semantics" /><summary type="html"><![CDATA[A very brief introduction]]></summary></entry><entry><title type="html">Assignment in lambda expressions</title><link href="https://umutozge.github.io/posts/course/walrus-operator/" rel="alternate" type="text/html" title="Assignment in lambda expressions" /><published>2026-02-12T00:00:00+03:00</published><updated>2026-02-12T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/walrus-operator</id><content type="html" xml:base="https://umutozge.github.io/posts/course/walrus-operator/"><![CDATA[<p>We closed the post <a href="/posts/course/more-state-power/">More state power</a> with a function that collects <code class="language-plaintext highlighter-rouge">n</code> random numbers between <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code> into a list. Here is the function again:</p>
+</div>]]></content><author><name></name></author><category term="course" /><category term="language" /><category term="semantics" /><summary type="html"><![CDATA[Basics]]></summary></entry><entry><title type="html">Assignment in lambda expressions</title><link href="https://umutozge.github.io/posts/course/walrus-operator/" rel="alternate" type="text/html" title="Assignment in lambda expressions" /><published>2026-02-12T00:00:00+03:00</published><updated>2026-02-12T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/walrus-operator</id><content type="html" xml:base="https://umutozge.github.io/posts/course/walrus-operator/"><![CDATA[<p>We closed the post <a href="/posts/course/more-state-power/">More state power</a> with a function that collects <code class="language-plaintext highlighter-rouge">n</code> random numbers between <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code> into a list. Here is the function again:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">n_uniq_random</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
     <span class="sh">"""</span><span class="s">Return a list of n unique random numbers between start and end. </span><span class="sh">"""</span>
@@ -1748,7 +1906,7 @@ The update task should not be hard to come by:</p>
 
 <hr class="topic-separator" />
 
-<p>As you might have noticed from the equivalence above, lambda expressions differ from <code class="language-plaintext highlighter-rouge">def</code>ed functions not only in lacking explicit names. They also have no room for statements. All you can have to the right of <code class="language-plaintext highlighter-rouge">=</code> in a lambda expression is just an expression, i.e. a stretch of code that gets evaluated to a value. This restriction means you cannot have <code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">while</code>, assignment (<code class="language-plaintext highlighter-rouge">=</code>), <code class="language-plaintext highlighter-rouge">return</code>, etc., statements in a lambda expression.</p>
+<p>As you might have noticed from the equivalence above, lambda expressions differ from <code class="language-plaintext highlighter-rouge">def</code>ed functions not only in lacking explicit names. They also have no room for statements. All you can have to the right of <code class="language-plaintext highlighter-rouge">:</code> in a lambda expression is just an expression, i.e. a stretch of code that gets evaluated to a value. This restriction means you cannot have <code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">while</code>, assignment (<code class="language-plaintext highlighter-rouge">=</code>), <code class="language-plaintext highlighter-rouge">return</code>, etc., statements in a lambda expression.</p>
 
 <p>At this point you may revolt that how can we compute beyond simple arithmetic without having <code class="language-plaintext highlighter-rouge">if</code>? How can we make decisions in a lambda expression?</p>
 

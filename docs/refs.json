@@ -1,73 +1,85 @@
 {
-  "df-semantic-objects": {
+  "df-char-func": {
     "page": "/posts/course/model-theoretic-interpretation/",
     "number": 1,
     "label": "Definition",
-    "title": "The unvierse of semantic objects"
+    "title": "Characteristic function"
   },
-  "df-char-func": {
+  "df-semantic-model": {
     "page": "/posts/course/model-theoretic-interpretation/",
     "number": 2,
     "label": "Definition",
-    "title": "Characteristic function"
+    "title": "Semantic model"
+  },
+  "df-semantic-objects": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 3,
+    "label": "Definition",
+    "title": "The unvierse of semantic objects"
+  },
+  "eg-model-jlm": {
+    "page": "/posts/course/model-theoretic-interpretation/",
+    "number": 4,
+    "label": "Model",
+    "title": "A simple model"
   },
   "df-sem-types": {
     "page": "/posts/course/model-theoretic-interpretation/",
-    "number": 3,
+    "number": 5,
     "label": "Definition",
     "title": "Semantic types"
   },
   "df-mt-l0": {
     "page": "/posts/course/model-theoretic-interpretation/",
-    "number": 4,
+    "number": 6,
     "label": "Definition",
     "title": "Syntax"
   },
   "tr-mts-1": {
     "page": "/posts/course/model-theoretic-interpretation/",
-    "number": 5,
+    "number": 7,
     "label": "Tree",
     "title": ""
   },
   "tr-mts-2": {
     "page": "/posts/course/model-theoretic-interpretation/",
-    "number": 6,
+    "number": 8,
     "label": "Tree",
     "title": ""
   },
   "tr-mts-3": {
     "page": "/posts/course/model-theoretic-interpretation/",
-    "number": 7,
+    "number": 9,
     "label": "Tree",
     "title": ""
   },
   "tr-mts-4": {
     "page": "/posts/course/model-theoretic-interpretation/",
-    "number": 8,
+    "number": 10,
     "label": "Tree",
     "title": ""
   },
   "tr-mts-5": {
     "page": "/posts/course/model-theoretic-interpretation/",
-    "number": 9,
+    "number": 11,
     "label": "Tree",
     "title": ""
   },
   "df-funcset": {
     "page": "/posts/course/model-theoretic-interpretation/",
-    "number": 10,
+    "number": 12,
     "label": "Notation",
     "title": "Set exponents"
   },
   "df-mt-env-ext": {
     "page": "/posts/course/model-theoretic-interpretation/",
-    "number": 11,
+    "number": 13,
     "label": "Notation",
     "title": "Environment extension"
   },
   "df-mt-l0-sem": {
     "page": "/posts/course/model-theoretic-interpretation/",
-    "number": 12,
+    "number": 14,
     "label": "Definition",
     "title": "Semantics of L"
   },

@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>The unvierse of semantic objects - Umut Özge</title>
-<meta name="description" content="Let \(E\) be an infinite set of individuals.1 Let \(\top\) and \(\bot\) be two atoms that do not belong in \(E\).    \(U_0 = E \cup \lbrace \top,\bot\rbrace\);   \(U_{n+1} = U_n \cup \mathcal{P}(U_n) \cup \lbrace\langle x_1, x_2,\ldots,x_k\rangle\mid k \geq 2 \text{ and }  x_1, x_2,\ldots,x_k\in U_n \rbrace\);2   \(U = \bigcup\limits_{n=0}^{\infty} U_n\).                  “Individual” is used here in the sense of “indivisible entity”. &#8617;                 \(\mathcal{P}\) is the full power set function. &#8617;">
+<meta name="description" content="A universe of semantic objects \(U\) is constructed on the basis of an infinite set \(E\)  of individuals,1 and the set \(T= \lbrace 0, 1\rbrace\)2 disjoint with \(E\) as follows,                 Using “individual” in the sense of “indivisible entity”. &#8617;                 Don’t read these as integers, they are two distinct symbols not in \(E\), symbols like \(\top\) and \(\bot\), for instance. &#8617;">
 
 
 
@@ -22,7 +22,7 @@
 <meta property="og:url" content="https://umutozge.github.io/items/df-semantic-objects/">
 
 
-  <meta property="og:description" content="Let \(E\) be an infinite set of individuals.1 Let \(\top\) and \(\bot\) be two atoms that do not belong in \(E\).    \(U_0 = E \cup \lbrace \top,\bot\rbrace\);   \(U_{n+1} = U_n \cup \mathcal{P}(U_n) \cup \lbrace\langle x_1, x_2,\ldots,x_k\rangle\mid k \geq 2 \text{ and }  x_1, x_2,\ldots,x_k\in U_n \rbrace\);2   \(U = \bigcup\limits_{n=0}^{\infty} U_n\).                  “Individual” is used here in the sense of “indivisible entity”. &#8617;                 \(\mathcal{P}\) is the full power set function. &#8617;">
+  <meta property="og:description" content="A universe of semantic objects \(U\) is constructed on the basis of an infinite set \(E\)  of individuals,1 and the set \(T= \lbrace 0, 1\rbrace\)2 disjoint with \(E\) as follows,                 Using “individual” in the sense of “indivisible entity”. &#8617;                 Don’t read these as integers, they are two distinct symbols not in \(E\), symbols like \(\top\) and \(\bot\), for instance. &#8617;">
 
 
 
@@ -68,7 +68,7 @@
 
 
 <script type="text/javascript">
-  const extraMacroData = {"sysm":{"def":"#1","args":1},"smtyp":{"def":"(#1#2)","args":2},"fs":{"def":"\\kern-1pt /\\kern-1pt","args":0},"bs":{"def":"\\kern-.3pt\\backslash\\kern-.2pt","args":0},"lam":{"def":"\\lambda","args":0},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0},"pmatrix":{"def":"\\begin{pmatrix}#1\\end{pmatrix}","args":1},"closure":{"def":"\\mathrm{Cl}_{#1}(#2)","args":2},"sign":{"def":"\\mathsf{#1}","args":1}};
+  const extraMacroData = {"sysm":{"def":"#1","args":1},"smtyp":{"def":"(#1#2)","args":2},"fs":{"def":"\\kern-1pt /\\kern-1pt","args":0},"bs":{"def":"\\kern-.3pt\\backslash\\kern-.2pt","args":0},"lam":{"def":"\\lambda","args":0},"interp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}","args":1},"interpp":{"def":"\\boldsymbol{\\Vert}#1\\boldsymbol{\\Vert}_{\\mathcal{M},g}","args":1},"cnct":{"def":"\\mspace{3mu}"},"fnex":{"def":"#1_{[#2\\mapsto#3]}","args":3},"mtob":{"def":"\\mathscr{#1}","args":1},"con":{"def":"\\sysm{#1}'","args":1},"tcon":{"def":"{\\sysm{#1}'_{\\scriptscriptstyle #2}}","args":2},"x":{"def":"\\lambda x","args":0},"y":{"def":"\\lambda y","args":0},"z":{"def":"\\lambda x","args":0},"E":{"def":"\\exists","args":0},"A":{"def":"\\forall","args":0},"pmatrix":{"def":"\\begin{pmatrix}#1\\end{pmatrix}","args":1},"closure":{"def":"\\mathrm{Cl}_{#1}(#2)","args":2},"sign":{"def":"\\mathsf{#1}","args":1},"lexf":{"def":"\\mathrm{lex}","args":0}};
   const extraMacros = {};
 
   for (const [name, val] of Object.entries(extraMacroData || {})) {
@@ -181,7 +181,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="The unvierse of semantic objects">
-    <meta itemprop="description" content="Let \(E\) be an infinite set of individuals.1 Let \(\top\) and \(\bot\) be two atoms that do not belong in \(E\).  \(U_0 = E \cup \lbrace \top,\bot\rbrace\);  \(U_{n+1} = U_n \cup \mathcal{P}(U_n) \cup \lbrace\langle x_1, x_2,\ldots,x_k\rangle\mid k \geq 2 \text{ and }  x_1, x_2,\ldots,x_k\in U_n \rbrace\);2  \(U = \bigcup\limits_{n=0}^{\infty} U_n\).            “Individual” is used here in the sense of “indivisible entity”. &#8617;              \(\mathcal{P}\) is the full power set function. &#8617;      ">
+    <meta itemprop="description" content="A universe of semantic objects \(U\) is constructed on the basis of an infinite set \(E\)  of individuals,1 and the set \(T= \lbrace 0, 1\rbrace\)2 disjoint with \(E\) as follows,            Using “individual” in the sense of “indivisible entity”. &#8617;              Don’t read these as integers, they are two distinct symbols not in \(E\), symbols like \(\top\) and \(\bot\), for instance. &#8617;      ">
     <meta itemprop="datePublished" content="2026-11-05T00:00:00+03:00">
     
 
@@ -204,10 +204,11 @@
       <section class="page__content" itemprop="text">
         
         <div class="numbered">
-  <p>Let \(E\) be an infinite set of individuals.<sup id="fnref:ind"><a href="#fn:ind" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Let \(\top\) and \(\bot\) be two atoms that do not belong in \(E\).</p>
+  <p>A universe of semantic objects \(U\) is constructed on the basis of an infinite set \(E\)  of individuals,<sup id="fnref:ind"><a href="#fn:ind" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> and the set \(T= \lbrace 0, 1\rbrace\)<sup id="fnref:topbot"><a href="#fn:topbot" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> disjoint with \(E\) as follows,</p>
+
 <ol>
-  <li>\(U_0 = E \cup \lbrace \top,\bot\rbrace\);</li>
-  <li>\(U_{n+1} = U_n \cup \mathcal{P}(U_n) \cup \lbrace\langle x_1, x_2,\ldots,x_k\rangle\mid k \geq 2 \text{ and }  x_1, x_2,\ldots,x_k\in U_n \rbrace\);<sup id="fnref:pow"><a href="#fn:pow" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></li>
+  <li>\(U_0 = E \cup T\);</li>
+  <li>\(U_{n+1} = U_n \cup \mathcal{P}(U_n) \cup \lbrace\langle x_1, x_2,\ldots,x_k\rangle\mid k \geq 2 \text{ and }  x_1, x_2,\ldots,x_k\in U_n \rbrace\);<sup id="fnref:pow"><a href="#fn:pow" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></li>
   <li>\(U = \bigcup\limits_{n=0}^{\infty} U_n\).</li>
 </ol>
 
@@ -216,7 +217,10 @@
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:ind">
-      <p>“Individual” is used here in the sense of “indivisible entity”. <a href="#fnref:ind" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>Using “individual” in the sense of “indivisible entity”. <a href="#fnref:ind" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:topbot">
+      <p>Don’t read these as integers, they are two distinct symbols not in \(E\), symbols like \(\top\) and \(\bot\), for instance. <a href="#fnref:topbot" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:pow">
       <p>\(\mathcal{P}\) is the full power set function. <a href="#fnref:pow" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
@@ -279,7 +283,7 @@
       <a href="/items/df-semantic-objects-stage/" class="pagination--pager" title="Semantic objects">Previous</a>
     
     
-      <a href="/items/df-standard-deck/" class="pagination--pager" title="Standard deck of 52">Next</a>
+      <a href="/items/df-semantic-model/" class="pagination--pager" title="Semantic model">Next</a>
     
   </nav>
 
