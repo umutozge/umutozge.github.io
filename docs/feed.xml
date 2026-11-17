@@ -1,464 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-11-16T22:48:53+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
-</subtitle><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-09-29T00:00:00+03:00</published><updated>2026-09-29T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
-
-  <p>This is a quick start on langugage for cognitive science students.</p>
-
-  <h2 id="a-simple-formal-system">A simple formal system</h2>
-
-  <p>Douglas Hofstadter<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> has this tiny formal system called <code class="language-plaintext highlighter-rouge">pq-System</code>. In defining formal systems, we start with a set of symbols, called <strong>the alphabet</strong>. This dictates that any expression of the system must be made by bringing together, in some order, one or more of these symbols. Next, and the last, step is to define which expressions formed out of these symbols are <strong>well-formed</strong> in the system.</p>
-
-  <p>This well-formedness step comes in two sub-steps.</p>
-
-  <ol>
-    <li>First we define the <strong>axioms</strong>, those expressions that we take to be well-formed without any further justification.</li>
-    <li>Second is <strong>the rules of production</strong> that allow us to generate new well-formed expressions from already existing well-formed expressions.</li>
-  </ol>
-
-  <p>In <code class="language-plaintext highlighter-rouge">pq-System</code>, the alphabet consists of the following three symbols: <code class="language-plaintext highlighter-rouge">p</code>, <code class="language-plaintext highlighter-rouge">q</code>, and <code class="language-plaintext highlighter-rouge">-</code>.</p>
-
-  <p>We have infinitely many axioms in <code class="language-plaintext highlighter-rouge">pq-System</code>, therefore we cannot list them all. Instead, we provide a rule that generates all of the axioms, usually called an <strong>axiom schema</strong>.</p>
-
-  <div class="item" id="def:pq-axioms" data-kind="definition" data-label="Definition" data-title="Axioms of `pq-System`">
-
-    <p>\(x\vect{p}\text{-}\vect{q}x\text{-}\) is an axiom, whenever \(x\) is composed of only ‘\(\text{-}\)’s.</p>
-
-  </div>
-
-  <p>Given this, you should be able to verify that
-\(\text{-}\text{-}\vect{p}\text{-}\vect{q}\text{-}\text{-}\text{-}\) is an axiom
-of the system (=a well-formed expression).</p>
-
-  <p>There is only one rule of production:</p>
-
-  <div class="item" id="def:pq-production" data-kind="definition" data-label="Definition" data-title="Productions of `pq-System`">
-
-    <p>If \(x\vect{p}y\vect{q}z\) is a well-formed expression, again with \(x,y,z\) all composed of zero or more ‘\(\text{-}\)’s, then so is \(x\vect{p}y\text{-}\vect{q}z\text{-}\).</p>
-
-  </div>
-
-  <p>Now. think of a <strong>decision procedure</strong> that takes an expression and decides whether it is well-formed or not.</p>
-
-  <hr class="topic-separator" />
-
-  <p>Inspecting the well-formed expressions of <code class="language-plaintext highlighter-rouge">pq-System</code>, can you see what do they <em>mean</em>? Or, can you say what they are <em>about</em>? Or, can you say what they are <em>for</em>?</p>
-
-  <p>They are theorems (truths) of binary addition of non-equal (except \(1 + 1 = 2\)) and non-negative integers. Their <em>meaning</em> is this.</p>
-
-  <h3 id="levels-of-analysis">Levels of analysis</h3>
-
-  <p>Language is studied in levels of analysis. The study of the atomic building blocks of language and how they combine into more complex structures is called <strong>phonology</strong>. The alphabet analogy, although the best we can do, would be a little misleading here, because the building blocks of language are not the orthographic symbols, but the <strong>phonemes</strong>, the smallest units of sound that can distinguish meaning in a language.</p>
-
-  <p>The study of the properties of well-formed expressions is called <strong>morphosyntax</strong>. As you observed above, this can be studied without any reference to meaning or significance in any form.</p>
-
-  <p>The study of the meaning of expressions is called <strong>semantics</strong>. And again as you saw above, what we mean by “meaning” is not obvious at all. What sort of a relation is it? Correspondence, aboutness, use (procedural)? If it’s a correspondence, what is the nature of the entities that are related? Are they mental, neural, abstract? All these, and many more, are part of the game in the study of natural language meaning.</p>
-
-  <p>The last level that is interest to cognitive science is <strong>pragmatics</strong>, the study of how language is used in context. The boundary between semantics and pragmatics is not clear, and there are many different views on how to draw it. As we go along, we will see that there might not be much value in drawing such a boundary. Perhaps some boundaries are more useful when they are left fuzzy.</p>
-
-  <p>In studying language from a cognitive science perspective, studying morphosyntax on its own does not make much sense.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> The relevant field of inquiry is rather the study of the relation between morphosyntax on one hand, and semantics and pragmatics on the other. Let’s call this domain <strong>semantax</strong> for the sake of having a name for it.<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
-
-  <h3 id="grammar">Grammar</h3>
-
-  <p>Some important aspects of human language are:</p>
-
-  <ol>
-    <li><strong>Compositionality:</strong> “The meaning of a compound expression is a function of the meanings of its parts and of the way they are syntactically combined.”<sup id="fnref:partee"><a href="#fn:partee" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> This is usually cited as <strong>Frege’s principle</strong>. Fodor and Lepore has a nice way to put it: You cannot understand <em>John loves Mary</em> without also understanding <em>Mary loves John</em>.</li>
-    <li><strong>Recursion:</strong> In principle, there is no end to the expressions that can be generated in a language. This is due to the fact that expressions of a given type can be (directly or indirectly) inserted in expressions of the same type.</li>
-    <li>
-      <p><strong>Structure dependence:</strong> For physical constraints, language is produced in a linear fashion (you can speak one word at a time). But the meaning is “read off” from the hierarchical structure. A necessary consequence of this is that items that are related at the meaning level may find themselves fallen apart on the actual acoustic/visual signal. Take:</p>
-
-      <div class="item" id="ex:telescope" data-kind="definition" data-label="Example" data-title="The telescope sentence">
-        <p>I saw the man with the telescope.</p>
-      </div>
-
-      <p>The sentence can mean two different things: (1) the speaker has the telescope, or (2) the man has the telescope. The two meanings are determined by the hierarchical structure of the expression: in (2) <code class="language-plaintext highlighter-rouge">the telescope</code> is attached to <code class="language-plaintext highlighter-rouge">the man</code>, in (1), to <code class="language-plaintext highlighter-rouge">saw</code>.</p>
-    </li>
-  </ol>
-
-  <p>In a very broad sense, a <strong>grammar</strong> regulates the correspondence between form and meaning in a way that manifests the three properties above.</p>
-
-  <p>When we talk about <strong>syntactic structure</strong>, we mean a particular organisation of the components of an expression. For instance the two meanings of the telescope sentence are related to the following (fairly simplified) structures:</p>
-
-  <div class="item" id="ex:telescope-structures" data-kind="definition" data-label="Example" data-title="Two structures for the telescope sentence">
-    <ol>
-      <li>[I [saw [the man [with the telescope]]]]</li>
-      <li>[I [[saw [the man]] [with the telescope]]]</li>
-    </ol>
-  </div>
-
-  <p>Another way of thinking about structure, which is more transparent to semantics, is to think of it as a particular organization of operators and arguments, like we do in arithmetic.</p>
-
-\[((3 + 4) \times 5)\]
-
-  <p>When we go from the linear string of symbols \(((3 + 4) \times 5)\) to its meaning, which is the value of the expression (=35), we work out the structure of the expression in such a way that the <strong>operator</strong> +  is applied to its <strong>arguments</strong> 3 and 4, and then the operator \(\times\) is applied to its arguments, which are, 7, the value of the first operation (recursion!), and 5.</p>
-
-  <p>Similarly, for the telescope example, in one reading the operator <em>saw</em> takes as arguments the subject <em>I</em> and the object <em>the man with the telescope</em>; and in the other reading, the operator <em>saw</em> takes as its object argument the noun phrase <em>the man</em>, rather than the entire phrase <em>the man with the telescope</em>; and this time the operator <em>with</em> takes as arguments the noun <em>the telescope</em> and the verb phrase <em>saw the man</em> as arguments.<sup id="fnref:ser"><a href="#fn:ser" class="footnote" rel="footnote" role="doc-noteref">5</a></sup></p>
-
-  <h3 id="main-questions">Main questions</h3>
-
-  <p>The  major research questions on the grammar<sup id="fnref:sense"><a href="#fn:sense" class="footnote" rel="footnote" role="doc-noteref">6</a></sup> are:</p>
-
-  <ol>
-    <li>How do we understand and produce language?</li>
-    <li>How do we acquire the capacity to do so?</li>
-    <li>How is our language capacity related to other cognitive capacities, such as perception, planning, reasoning, etc.?</li>
-    <li>How do these relate to our neural substance?</li>
-  </ol>
-
-  <h3 id="cognitive-science-of-language">Cognitive science of language</h3>
-
-  <p>The above questions are studied in several fields. What distinguishes cognitive science from fields like psychology and linguistics is its emphasis on the computational modeling of the phenomena. Cognitive science, at least in how we take it to mean in our institute, takes the mind to be an information processing system, and therefore the best way to understand it is by building computational models of the phenomena we are interested in, be it a processing question or a learning question.</p>
-
-  <p class="notice--warning"><strong>Warning:</strong> Some, or perhaps all, readings suggested below might be difficult at this stage. There is no cure for this. There are no textbooks, which can be read in a linear way.<sup id="fnref:strictly"><a href="#fn:strictly" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> You need to have a couple of passes with low reception and come back to them later.</p>
-
-  <p>There are two closely related axes of tension in the field, which I think it is better to open-mindedly meet them from the very start, before you find yourself socialized<sup id="fnref:gazdar"><a href="#fn:gazdar" class="footnote" rel="footnote" role="doc-noteref">8</a></sup> into one camp or another.</p>
-
-  <p>The first of these is the debate on the relevance of probability  (statistics and information theory) to the study of language, particularly syntax. Chomsky is widely considered, at times too crudely I think,  to be firmly on the “not relevant” side of the debate. It is nevertheless true that probability is not much popular in mainstream linguistics. But in cognitive science, the debate is almost never on <em>whether</em> but <em>how</em> these fields are relevant for the scientific study of language. For convenience, I will call this the <strong>probability debate</strong>.<sup id="fnref:catogorist"><a href="#fn:catogorist" class="footnote" rel="footnote" role="doc-noteref">9</a></sup></p>
-
-  <p>Another source of tension in the field concerns the relevance of data-driven approaches like corpus linguistics, deep neural nets, machine learning, statistical language models, etc. to the scientific study of language, which seems to be going nuclear especially after the appearance of LLMs.  This debate naturally comes intertwined with discussions on the goals of science, especially the distinction between prediction and explanation. For convenience, I will call this the <strong>data debate</strong>.</p>
-
-  <ul>
-    <li>For an introduction to grammar read (or skim through) <a href="/p/pullum-truth/" target="_blank" rel="noopener">Pullum (2024)</a>; I think it is more useful than any introduction to linguistics, and will be good for your English as well.</li>
-    <li>In your later readings, whenever you hit an unfamiliar linguistic concept or term, consult <a href="/p/bender-fundamentals/" target="_blank" rel="noopener">Bender (2022)</a>. This will work fine as a practical reference until you develop a more serious interest in linguistics and/or go on with language research.</li>
-    <li><a href="/p/chomsky-ss/" target="_blank" rel="noopener">Chomsky (1957)</a><sup id="fnref:ss-parts"><a href="#fn:ss-parts" class="footnote" rel="footnote" role="doc-noteref">10</a></sup> sets the frame of discussion for almost everything that follows about the cognitive science of language, and remarkably – considering its impact – requires relatively little background.</li>
-    <li>“Computational linguistics” and “Natural Language Processing” (NLP)  are sometimes used interchangeably. A better practice is to reserve the former for the scientific study of language through computational modeling, which differs in aims and scope from the engineering field of NLP. <a href="/p/manning-computational/" target="_blank" rel="noopener">Manning (2015)</a> and the introduction chapter of <a href="/p/eisenstein/" target="_blank" rel="noopener">Eisenstein (2019)</a> are illuminating on this important distinction.</li>
-    <li>For a historical perspective on the data debate, read <a href="/p/church-pendulum/" target="_blank" rel="noopener">Church (2011)</a>.</li>
-    <li>On how probability fits into the study of language, read  <a href="/p/manning-prob/" target="_blank" rel="noopener">Manning (2003)</a> and <a href="/p/jurafsky-psycho/" target="_blank" rel="noopener">Jurafsky (2003)</a>.</li>
-    <li>Readings relevant for the both debates are <a href="/p/pereira/" target="_blank" rel="noopener">Pereira (2000)</a> and <a href="/p/lappin-shieber/" target="_blank" rel="noopener">Lappin and Shieber (2007)</a></li>
-    <li><a href="/p/norvig-chomsky/" target="_blank" rel="noopener">Norvig (2011)</a> addresses the latest views of Chomsky on the relevance of (statistical) language models to the study of language. Although, Norvig’s reading of Chomsky’s “claims” are rather superficial,<sup id="fnref:calmer"><a href="#fn:calmer" class="footnote" rel="footnote" role="doc-noteref">11</a></sup> It is still a good read, I think.</li>
-    <li>For a taste of the data debate focused on deep neural networks, read  <a href="/p/pater-2019/" target="_blank" rel="noopener">Pater (2019)</a> and <a href="/p/rawski-heins/" target="_blank" rel="noopener">Rawski and Heins (2023)</a>.</li>
-    <li><a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a> and the commentaries on it are good sources to get introduced to the data debate within broader cognitive science.<sup id="fnref:data-debate-terms"><a href="#fn:data-debate-terms" class="footnote" rel="footnote" role="doc-noteref">12</a></sup></li>
-  </ul>
-
-  <hr />
-
-</div>
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1">
-      <p>Douglas Hofstadter, <em>Gödel, Escher, Bach: An Eternal Golden Braid</em> (Basic Books, 1979), Ch. 2. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p>The same does not apply to phonology, which is a very interesting field of study from a cognitive science perspective on its own. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:3">
-      <p><a href="https://en.wikipedia.org/wiki/John_R._Ross">John R. Ross</a> offered the term “semantax”, but it seems it did not get caught on. <a href="https://homepages.inf.ed.ac.uk/steedman/">Mark Steedman</a> has a project named such, though. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:partee">
-      <p>Barbara Partee, “Compositionality”, in <em>Varieties of Formal Semantics</em>, 1984. <a href="#fnref:partee" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:ser">
-      <p>I am wildly simplifying for the sake of discussion. <a href="#fnref:ser" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:sense">
-      <p>I use the term grammar in a fairly broad sense as the totality of the system that mediates between form and meaning. The term has a well-defined technical sense in formal language theory and the theory (and applications) of parsing. <a href="#fnref:sense" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:strictly">
-      <p>There actually <em>are</em>, but they are too opinionated. Also be warned about “handbook” entries that focus on the personal contributions of the author. <a href="#fnref:strictly" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:gazdar">
-      <p>“Just a collection of buzz words whose appropriate use you are socialized into”, says <a href="https://nlp.fi.muni.cz/~xjakub/briscoe-gazdar/gpsg.html">Gerald Gazdar</a> describing his not so bright opinion about a particular version of Chomskyan generative grammar. <a href="#fnref:gazdar" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:catogorist">
-      <p>Closely, related to this is the issue of categorical vs. gradient phenomena in language. <a href="#fnref:catogorist" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:ss-parts">
-      <p>Chapters 1-4, 6, and 8. Chapter 9 is also of interest on Chomsky’s take on syntax-semantics relation. Some basic knowledge of automata theory, though not essential, will make it easier to follow. <a href="#fnref:ss-parts" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:calmer">
-      <p>Objectors of Chomsky on this count largely concentrate on his observation that the grammatical English sentence <em>Colorless green ideas sleep furiously</em> has zero probability on crude frequency based models without smoothing, which was the state-of-art at that date, and the corollary he draws from this fact that statistical regularity has no place in defining the notion of “grammatical sentence in language \(L\)”. Chomsky’s attitude toward the place of probability and statistics in language science is not as crude as his objectors appear to think. For instance, Norvig seems to have missed footnote 4 on p. 17 of <em>Syntactic Structures</em>, and his remarks on syntax, semantics, and language use in Chapter 9. See Chomsky’s preface to 1975 edition of <em>Logical Structure of Linguistic Theory</em>, p.3. Also see the other LSLT quotes in <a href="/p/yang-crunch/" target="_blank" rel="noopener">Yang (2008)</a> for a more accurate view on Chomsky’s stance on the subject. <a href="#fnref:calmer" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:data-debate-terms">
-      <p>Useful terminology on the data debate are <a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a>’s <strong>pattern recognition</strong> vs. <strong>model building</strong>, and <a href="/p/softmax/" target="_blank" rel="noopener">Frank and Degen (2023)</a>’s <strong>input-output models</strong> vs <strong>internally meaningful models</strong>. <a href="#fnref:data-debate-terms" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name></name></author><category term="course" /><category term="language" /><category term="cogsci" /><summary type="html"><![CDATA[Initial steps for cognitive science students interested in language.]]></summary></entry><entry><title type="html">Why do we have 501 and 502?</title><link href="https://umutozge.github.io/posts/course/why-5012/" rel="alternate" type="text/html" title="Why do we have 501 and 502?" /><published>2026-09-25T00:00:00+03:00</published><updated>2026-09-25T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/why-5012</id><content type="html" xml:base="https://umutozge.github.io/posts/course/why-5012/"><![CDATA[<p>Why should anyone take pains to learn programming in the Fall of 2026? Humans are now ranked second among the autonomous intelligent organisms that compose computer code in the known universe; and the gap separating us and machines is so swiftly widening that even the comparison might stop making sense before the end of the year. The problem – if you want to name it that way – is not that machines program better, faster, etc. It is rather that the level of complexity at which they autonomously operate (motivation, design and implementation) seems, at the time of writing, to have already surpassed human-level intelligibility. Sooner or later, there will remain no place for humans in this business; not even as supervisors or auditors of what machines (might plan to) do.</p>
-
-<p>In the face of this state of affairs, we still find some value in offering 501/2, as an introduction to computation, programming, probability theory, and linear algebra, though a very brief one.</p>
-
-<p>First of all, cognitive science belongs in the broader field of informatics. It takes cognition principally to be information processing carried out by organisms above a certain level of complexity.<sup id="fnref:level"><a href="#fn:level" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Naturally, a student of cognitive science must ideally have a thorough understanding of what information is, and what does it mean to process it.
-Of course, it is arguable whether taking courses, let alone taking these specific ones, is the best way to achieve this, but, as long as science remains a primarily human institution that aims to improve <em>our</em> knowledge and understanding, no one can get very far in cognitive science without understanding the subjects listed above.</p>
-
-<p>Another motivation for these courses can be found in the following quote from a prominent cognitive scientist, Philip Johnson-Laird (1980):</p>
-
-<blockquote>
-  <p>Computer programming is too useful to cognitive science to be left solely in the hands of the artificial intelligenzia [UO: he means engineering work on intelligence back then]. There is a well established list of advantages that programs bring to a theorist: they concentrate the mind marvelously; they transform mysticism into information processing, forcing the theorist to make intuitions explicit and to translate vague terminology into concrete proposals; they provide a secure test of the consistency of a theory and thereby allow complicated interactive components to be safely assembled; they are “working models” whose behavior can be directly compared with human performance.</p>
-</blockquote>
-
-<p>The use of programming in Johnson-Laird’s sense, namely as a tool for design and understanding, is, I think, more doable now than before, thanks to code writing machines. Before them, writing working code beyond a certain level of complexity was so difficult that achieving the level of abstraction essential for human understanding was considered a nicety everyone praised but no one achieved. Now it is possible to sit back and concentrate on what is essential, leaving the tedious, unimportant details to machines.</p>
-
-<p>Doable, however, does not mean easy. Using programming in Johnson-Laird’s sense requires a genuine understanding of some fundamental concepts. And this is not easy to achieve. On one hand, programming, like every sophisticated subject, requires hard work. On the other hand, it may not be easy to realize that you are totally missing some important concepts. Without such realization, there is no chance for improvement.</p>
-
-<p>It is very easy to spend an entire coding career without ever understanding what is worth understanding about coding and computation. You can simply go on writing code without much intellectual improvement. This, I think, is largely due to the interactional nature of coding. Computers/programs are responsive, so you can have long and consuming stretches of trial-and-error that will eventually land you on some useful territory. Or, if you are smart enough, you can conjure up nice tricks that will keep the wheels turning no matter what. Compare this with mathematics. The paper or the board, where math’s engine runs on, are dead silent; you are on your own, and there is no alternative to genuine understanding.<sup id="fnref:compsci"><a href="#fn:compsci" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
-
-<p>For this reason, I believe learning programming requires guidance and discipline; a discipline that needs to be externally enforced, unless you are already a very good learner.</p>
-
-<p>To sum up, programming and mathematics teach one how to organize, develop, and express their thoughts. They are equally useful in understanding what others mean, an essential skill in research and collaboration. With 501 and 502, our aim is to very briefly introduce you to some fundamental concepts of these fields, with occasional glimpses into their significance in the study of cognition.</p>
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:level">
-      <p>What that level is is itself an item of inquiry. <a href="#fnref:level" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:compsci">
-      <p>The same applies to the field of computer science, which is much more mathematics than coding. <a href="#fnref:compsci" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name></name></author><category term="course" /><category term="python" /><summary type="html"><![CDATA[Motivations behind having introductory programming and mathematics courses in our department.]]></summary></entry><entry><title type="html">Vectors</title><link href="https://umutozge.github.io/posts/course/vectors/" rel="alternate" type="text/html" title="Vectors" /><published>2026-05-17T00:00:00+03:00</published><updated>2026-05-17T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/vectors</id><content type="html" xml:base="https://umutozge.github.io/posts/course/vectors/"><![CDATA[<p>When we model the world through mathematics, we frequently find ourselves talking
-about magnitudes. Mass, length, price, and so on, are all examples of quantities
-that we use numbers to represent. We build our mathematical models in such a
-way that these numbers and operations involving them has some, largely
-idealized, correspondence to the entities, relations and processes out there
-that we aim to understand and predict. Numbers that are used in this way are called
-<span class="term" id="scalars">scalars</span>.</p>
-
-<p>Sometimes we need to couple the concept of magnitude with a direction. The prime
-example is the concept of force that we use in physics. A force has both a
-magnitude and a particular direction in space. The mathematical object that
-brings together magnitude and direction is called a <span class="term" id="vector">vector</span>.</p>
-
-<p>As a simple example, take a vector with a magnitude of 5 units and a direction
-of \(32^\circ\) measured counterclockwise from the positive \(x\)-axis. We can
-represent this vector in several ways. Initially, assume we don’t care about
-where the vector starts (its <span class="term" id="tail">tail</span>). We just want to encode its length
-and direction. We represent it as a two component vector, where the first
-component is the horizontal (\(x\)) magnitude, and the second eomponent is the
-vertical (\(y\)) magnitude. The components can be calculated using trigonometry
-via the cosine and sine of the direction angle:<sup id="fnref:trig"><a href="#fn:trig" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>:</p>
-
-\[\begin{align}
-\vect{v} &amp;= \begin{pmatrix} 5\cos 32^\circ &amp; 5\sin 32^\circ \end{pmatrix}\nonumber\\
-         &amp;= \begin{pmatrix}4.2402406 &amp; 2.6495962\end{pmatrix}
-\end{align}\]
-
-<p>In other words, if you do not care about the tail point, a vector in a plane
-(2D) is represented by two real numbers.</p>
-
-<p>You can abstract the directon from a vector by a <span class="term" id="unit-vector">unit vector</span>, whose
-magnitude is 1. Such a unit vector for our example would be:</p>
-
-\[\vect{u} = \begin{pmatrix} \cos 32^\circ &amp; \sin 32^\circ \end{pmatrix}\]
-
-<p>or, with the angle in radians (\(d=180^\circ \pi\)):</p>
-
-\[\vect{u} = \begin{pmatrix} \cos \frac{32\pi}{180} &amp; \sin \frac{32\pi}{180}
-\end{pmatrix}\]
-
-<p>or, with the values of the trig functions plugged in:</p>
-
-\[\vect{u} = \begin{pmatrix} 0.8480481 &amp; 0.52991927 \end{pmatrix}\]
-
-<h3 id="element-wise-operations">Element-wise operations</h3>
-
-<p>Given a unit vector, you can factor the magnitude back in by multiplying the
-unit vector by the scalar magnitude. This is an example of an element-wise
-operation, where you apply the same operation to each component of the vector.
-In this case, you multiply each component of the unit vector by the magnitude:</p>
-
-\[\vect{r} = 5\vect{u} = \begin{pmatrix} 4.2402406 &amp; 2.6495962\end{pmatrix}\]
-
-<p>An operation between vectors can also be element-wise. For example, if you have
-two vectors \(\vect{v}\) and \(\vect{w}\), you can add them together by adding their
-components:</p>
-
-\[\begin{align}
-\vect{v} + \vect{w} &amp;= \begin{pmatrix} v_1 &amp; v_2 \end{pmatrix} + \begin{pmatrix}
-w_1 &amp; w_2 \end{pmatrix}\nonumber\\
-&amp;= \begin{pmatrix} v_1 + w_1 &amp; v_2 + w_2 \end{pmatrix}
-\end{align}\]
-
-<p>Geometrically, adding two vectors means constructing a third spanning from the
-tail of the first to the head of the second, where you place the tail of the
-second at the head of the first. This arrangement gives a triangle when the
-vectors are not parallel (= in the same or opposite direction).</p>
-
-<h3 id="norm-of-a-vector">Norm of a vector</h3>
-
-<p>We’ve been talking about the magnitude of a vector. The interpretation of
-magnitude may change from context to context. In geometry, the magnitude of a
-vector is its length; in physics, the magnitude of a force vector is the
-strength of the force, and so on. The general mathematical term for the
-magnitude of a vector is its <span class="term" id="norm">norm</span>. The norm of a vector is a
-non-negative real number that represents the size or length of the vector.</p>
-
-<p>The simplest and most common type of norm is <span class="term" id="euclidian-norm">Euclidian norm</span> based on Pythogoras’ theorem. For a vector 
-\(\vect{v} = \begin{pmatrix} 3 &amp; 4 \end{pmatrix}\), the Euclidean norm is</p>
-
-\[\|\vect{v}\|_2 = \sqrt{3^2 + 4^2} = 5\]
-
-<p>This is the ordinary geometric length of the arrow from \((0,0)\) to \((3,4)\).</p>
-
-<p>A useful related idea is distance between two vectors. This is usually defined by the norm of their difference:</p>
-
-\[\text{distance}(x,y) = \|x-y\|\]
-
-<p>That formula says that two vectors are close when their difference has small norm, where difference is the element-wise subtraction.</p>
-
-<h5 id="properties-of-the-norm-function">Properties of the norm function</h5>
-
-<p>The concept of norm is not limited to just measuring the length of a vector. Any
-function with the following properties can be considered a norm:</p>
-
-<ul>
-  <li>Non-negativity: \(\|x\| \ge 0\).</li>
-  <li>Zero only at the zero vector: \(\|x\| = 0\) exactly when \(x=0\).</li>
-  <li>Homogeneity: \(\|a x\| = \lvert a\rvert \,\|x\|\) for any scalar \(a\).</li>
-  <li>Triangle inequality: \(\|x+y\| \le \|x\| + \|y\|\).</li>
-</ul>
-
-<p>Here are some examples of different norms (subscript indicates the type of
-norm):</p>
-
-<ul>
-  <li><strong>Euclidean norm</strong>: \(\|x\|_2 = \sqrt{x_1^2 + \cdots + x_n^2}\), the usual geometric length.</li>
-  <li><strong>1-norm</strong>: \(\|x\|_1 = \lvert x_1\rvert + \cdots + \lvert x_n\rvert\), the sum of absolute values.</li>
-  <li><strong>Infinity norm</strong>: \(\|x\|_\infty = \max_i \lvert x_i\rvert\), the largest absolute coordinate.</li>
-</ul>
-
-<p>You might find it a bit confusing that we defined the norms for vectors in \(n\)
-dimensions. Just go on reading.</p>
-
-<h3 id="dimensions">Dimensions</h3>
-
-<p>Except the definitions of different types of norms above,  we’ve been dealing
-with vectors in a 2-dimensional plane. But the dimensionality of a vector can be
-any positive integer. A vector in 3D will naturally be conceived as an arrow in
-a 3D space. But what about vectors in 8D?</p>
-
-<p>We, as humans, can visualize and intuitively understand geometry in 2D and 3D,
-but higher dimensions need a proper mathematical thinking. In mathematics, we
-operate on definitions and properties that follow from these definitions obeying
-the laws of logic. In mathematical education, we often start with intuitively
-familiar concepts and give them certain names. A good example is the circle and
-sphere. It is easy to grasp a circle in 2D and a sphere in 3D, as we think of
-them as some idealized forms of some objects we see around. But actually, what
-we call circle in 2D and sphere in 3D are just sets. How?</p>
-
-<p>Start with the notion of a point. A point, in common-sense, is either a pair
-(2D)  or a triple (3D) of numbers. In mathematics, a point is any \(n\)-tuple of
-numbers. The concepts circle and sphere are just the names we give to the notion
-of “the set of points that are at a fixed distance from a given point”, in 2D
-and 3D, respectively.</p>
-
-<p>Likewise for vectors. A vector is a mathematical object in \(\mathbb{R}^n\),
-where \(n\) is any positive integer. When you need its Euclidean length, you
-simple compute the sum of squares of its components and take the square root, no
-matter how many components it has.</p>
-
-<p>For a right triangle with legs $a$ and $b$ and hypotenuse $c$, Pythagoras says</p>
-
-\[a^{2} + b^{2} = c^{2}.\]
-
-<p>If you view the hypotenuse as a vector from the origin to the point \((a,b)\), then that vector’s length is</p>
-
-\[\|\begin{pmatrix} a &amp; b \end{pmatrix}\| = \sqrt{a^{2} + b^{2}},\]
-
-<p>which is exactly “take the hypotenuse using Pythagoras.”</p>
-
-<p>In \(\mathbb{R}^{n}\), the Euclidean norm of a vector \(x = \begin{pmatrix}x_{1} &amp; \dots &amp; x_{n}\end{pmatrix}\) is</p>
-
-\[\|x\| = \sqrt{x_{1}^{2} + \dots + x_{n}^{2}}\]
-
-<p>which is just repeatedly applying Pythagoras along mutually perpendicular axes.  Each coordinate plays the role of a leg in a higher‑dimensional right triangle whose “hypotenuse” is the vector.</p>
-
-<h3 id="dot-product">Dot product</h3>
-
-<p>A key operation that maps two vectors to a scalar is the <span class="term" id="dot-product">dot product</span>
-which is an instance of a family of operations called inner product.</p>
-
-<div class="item" id="df-dot-product" data-kind="definition" data-label="Definition" data-title="Dot product" data-ref="Definition">
-
-    
-      <p>The <span class="term" id="dot-product">dot product</span> of two vectors $u$ and $v$ in $\mathbb{R}^n$ is defined
-as:</p>
-
-\[u \cdot v = u_{1}v_{1} + \dots + u_{n}v_{n}.\]
-
-<p>Another common notation for the dot product is \(\langle u, v \rangle\).</p>
-
-
-    
-
-
-    
-
-    
-
-    
-  </div>
-
-<p>It’s close relation to Pythogoras’ theorem makes dot product a fundamental tool
-in linear algebra.</p>
-
-<p>Given \(\vect{v} = \pmatrix{x &amp; y}\):</p>
-
-\[\|\vect{v}\|^2 = \vect{v} \cdot \vect{v} = x^2 + y^2.\]
-
-<p>Now take two vectors \(\vect{u} = \pmatrix{u_1&amp; u_2}\) and \(\vect{v}=\pmatrix{v_1&amp;v_2}\). Now, imagine you form a triangle by putting the tail of \(\vect{v}\) at the head of \(\vect{u}\). The vector from the tail of \(\vect{u}\) to the head of \(\vect{v}\) is \(\vect{u} + \vect{v}\). We know from above that:</p>
-
-\[\begin{align}\label{vec-pytho}
-\|\vect{u} + \vect{v}\|^2 &amp; = (\vect{u} + \vect{v}) \cdot (\vect{u} + \vect{v})\\
-&amp; = \pmatrix{u_1 + v_1 &amp; u_2 + v_2} \cdot \pmatrix{u_1 + v_1 &amp; u_2 + v_2}\nonumber\\
-&amp; = (u_1 + v_1)^2 + (u_2 + v_2)^2\nonumber\\
-&amp; = u_1^2 + 2u_1v_1 + v_1^2 + u_2^2 + 2u_2v_2 + v_2^2\nonumber\\
-&amp; = (u_1^2 + u_2^2) + (v_1^2 + v_2^2) + 2(u_1v_1 + u_2v_2)\nonumber\\
-&amp; = \|\vect{u}\|^2 + \|\vect{v}\|^2 + 2\,(\vect{u} \cdot \vect{v})\nonumber
-\end{align}\]
-
-<p>To relate this equality to the angle between the vectors \(\vect{u}\) and
-\(\vect{v}\), we turn to a theorem from elementary geometry:</p>
-
-<div class="item" id="th-law-of-cosines" data-kind="theorem" data-label="Theorem" data-title="The law of cosines" data-ref="Theorem">
-
-    
-      <p>Given a triangle with sides of lengths \(a\), \(b\), and \(c\), and an angle \(\theta\)
-opposite the side of length \(c\), the law of cosines states that:</p>
-
-\[c^2 = a^2 + b^2 - 2ab \cos(\theta) \nonumber\]
-
-
-    
-
-
-    
-
-    
-
-    
-  </div>
-
-<p>By \eqref{vec-pytho} and <a class="xref" href="#th-law-of-cosines" data-refmode="full"></a>, we get:</p>
-
-\[\begin{align}
-\|\vect{u} + \vect{v}\|^2 &amp; = \|\vect{u}\|^2 + \|\vect{v}\|^2 +
-2\,\|\vect{u}\|\|\vect{v}\|\cos\theta\\
-&amp; = \|\vect{u}\|^2 + \|\vect{v}\|^2 + 2\,(\vect{u} \cdot \vect{v})\nonumber
-\end{align}\]
-
-<p>yielding the equality:</p>
-
-\[\cos\theta = \frac{\vect{u} \cdot \vect{v}}{\|\vect{u}\|\|\vect{v}\|}\]
-
-<p>which is of prime importance in linear algebra and its applications in
-artificial intelligence and machine learning.</p>
-
-<p>Its importance lies in the fact that it gives a measure of the directional similarity of two
-vectors that is independent of their magnitudes, as the cosine function
-approaches 1 from both directions as the angle approaches 0. This is the basis
-of the widely used cosine similarity measure in machine learning and information
-retrieval. In 2 and 3 dimensions, the concept of angle is intuitive, but in
-higher dimensions there is neither an intuitive approximation nor a need for
-one.</p>
-
-<p>This was a very brief introduction to linear algebra through vectors.</p>
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:trig">
-      <p>Let \(\theta\) be one of the acute angles of a right triangle:
-\(\cos\theta\) gives the ratio of the adjacent leg to the hypotenuse, and
-\(\sin\theta\) gives the ratio of the opposite leg to the hypotenuse. <a href="#fnref:trig" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name></name></author><category term="course" /><category term="continuous" /><category term="linear algebra" /><summary type="html"><![CDATA[A gentle intro to linear algebra through vectors]]></summary></entry><entry><title type="html">Natural language semantics</title><link href="https://umutozge.github.io/posts/course/model-theoretic-interpretation/" rel="alternate" type="text/html" title="Natural language semantics" /><published>2026-03-31T00:00:00+03:00</published><updated>2026-03-31T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/model-theoretic-interpretation</id><content type="html" xml:base="https://umutozge.github.io/posts/course/model-theoretic-interpretation/"><![CDATA[<h2 id="the-meaning-of-traffic-lights">The meaning of traffic lights</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://umutozge.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://umutozge.github.io/" rel="alternate" type="text/html" /><updated>2026-11-17T13:32:05+03:00</updated><id>https://umutozge.github.io/feed.xml</id><title type="html">Umut Özge</title><subtitle>Website for the courses offered by Dr. Umut Özge at the Graduate School of Informatics, Middle East Technical University.
+</subtitle><entry><title type="html">Natural language semantics</title><link href="https://umutozge.github.io/posts/course/natural-language-semantics/" rel="alternate" type="text/html" title="Natural language semantics" /><published>2026-11-17T00:00:00+03:00</published><updated>2026-11-17T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/natural-language-semantics</id><content type="html" xml:base="https://umutozge.github.io/posts/course/natural-language-semantics/"><![CDATA[<h2 id="the-meaning-of-traffic-lights">The meaning of traffic lights</h2>
 
 <p>The language of traffic lights, call it \(T\), is simply the set \(\{red, yellow, green\}\). The three expressions of \(T\) are associated with three distinct things that have nothing to do with colors. Those who are aware of this association are said to know the meaning of traffic lights. But, what are these things associated with traffic lights exactly?</p>
 
@@ -630,7 +171,7 @@ characteristic function of \(A\), defined as follows:</p>
 
 <p>In this setting, a proposition is a characteristic function of a set of cases, a function from the set of all possible cases to the set \(\lbrace 0, 1\rbrace\).</p>
 
-<p>Therefore, the semantic value of <em>John loves Mary</em> will be a function from cases to \(\lbrace 0, 1\rbrace\). In order to proceed, we need to have a representation of what a case is that is more formal than our laminate sheets. The term for case in semantics is <span class="term" id="model">model</span>.</p>
+<p>Therefore, the semantic value of <em>John loves Mary</em> will be a function from cases to \(\lbrace 0, 1\rbrace\). In order to proceed, we need to have a representation of what a case is, and this needs to be more formal than our laminated sheets. The term for case in semantics is <span class="term" id="model">model</span>.</p>
 
 <div class="item" id="df-semantic-model" data-kind="definition" data-label="Definition" data-title="Semantic model" data-ref="Definition">
 
@@ -725,7 +266,7 @@ If you have difficulty in understanding the motivation of the definition despite
 
 <p>to be a function from models to \(\lbrace 0, 1\rbrace\), which is to say that the meaning of <em>John loves Mary</em> is a decision procedure which can tell between cases where the sentence is true and the cases where it is false.</p>
 
-<p class="notice--info">We could have equivalently taken the function \(\interp{.}\) to be \(S\times M \mapsto \lbrace 0,1\rbrace\). In the end what it does is to take a sign and a model and return \(0\) or \(1\), a function that takes two arguments. We will almost always do things in the former way, our functions will always take a single argument and at times return other single argument functions as values. We will have more about this below.</p>
+<p class="notice--info">We could have equivalently taken the function \(\interp{\cdot}\) to be \(S\times M \mapsto \lbrace 0,1\rbrace\); after all what it does is to take a sign and a model and return \(0\) or \(1\), a function that takes two arguments. We will almost always do things in the former way. Our functions will always take a single argument, and at times return other single argument functions as values. We will have more about this below.</p>
 
 <p>Let’s take an example model \(M\):</p>
 
@@ -761,11 +302,11 @@ E &amp;= \{a,b,c,d,e\}\\
 
 \[\interp{(\sign{Mary\oplus (loves\oplus John)})}(M) = 1\]
 
-<p>Further changes in the component signs or their arrangement will alter the behaviour of \(\interp{.}\). This is one of the fundamental principles in semantics, which is sometimes called “Frege’s principle”:<sup id="fnref:jannsen"><a href="#fn:jannsen" class="footnote" rel="footnote" role="doc-noteref">11</a></sup></p>
+<p>Further changes in the component signs or their arrangement will alter the behaviour of \(\interp{\cdot}\). This is one of the fundamental principles in semantics, which is sometimes called “Frege’s principle”:<sup id="fnref:jannsen"><a href="#fn:jannsen" class="footnote" rel="footnote" role="doc-noteref">11</a></sup></p>
 
 <p class="notice--warning"><strong>The principle of compositionality</strong>: The meaning of the whole is a function of the meaning of its parts and the way they come together.</p>
 
-<p>How do we make \(\interp{.}\) sensitive to the internal structure of its inputs in a non-random fashion.</p>
+<p>Now the question is: How do we make \(\interp{\cdot}\) sensitive to the internal structure of its inputs in a non-random fashion?</p>
 
 <p>Let’s switch to a much simpler evaluation task where the principle of compositionality is applicable. Let’s assume we are trying to evaluate the language,</p>
 
@@ -775,7 +316,7 @@ E &amp;= \{a,b,c,d,e\}\\
 
 <p>The production operators \(\circ\) and \(\sim\) are defined as,</p>
 
-\[\text{If } \alpha,\beta \in L \text{ s.t. } \sim \text{ does not occur in them, then} (\alpha \circ \beta), (\alpha \sim \beta) \in L.\]
+\[\text{If } \alpha,\beta \in \closure{\{\circ,\sim\}}{L}  \text{ s.t. } \sim \text{ does not occur in them, then so are} (\alpha \circ \beta), (\alpha \sim \beta).\]
 
 <p>which says that \(\sim\) is a one-shot tool, while \(\circ\) is unbounded.</p>
 
@@ -789,7 +330,7 @@ E &amp;= \{a,b,c,d,e\}\\
 
 <p>Back to the principle of compositionality, this is exactly why the principle has an <em>and</em>: we need to be able to make sense of both the basic components <em>and</em> the way they combine into larger structures.</p>
 
-<p>It turns out that the evaluator \(\interp{.}\) needs to have another parameter for handling the construction operators. Here is one possible evaluation account for \(L\), given in an inductive form,</p>
+<p>It turns out that the evaluator \(\interp{\cdot}\) needs to have another parameter for handling the construction operators. Here is one possible account for \(L\), given in an inductive form,</p>
 
 <p>Given \(L\) as defined above and a model \(M=\langle E,\{0,1\}, \lexf \rangle\) for \(L\),</p>
 <ol>
@@ -798,19 +339,19 @@ E &amp;= \{a,b,c,d,e\}\\
   <li>\(\interp{(\alpha_1\sim\alpha_2)} = 1\), if \(\interp{\alpha_1} = \interp{\alpha_2}\), and 0 otherwise;</li>
 </ol>
 
-<p>This is the mechanics of the evaluation function \(\interp{.}\). If you want to get a specific value, you need to provide a concrete model to it. One would be having \(E\) as the set of integers and have \(\lexf\) map a string of \(\triangle\)s and \(\square\)s to the decimal representation of the integer obtained by treating \(\triangle\)s as 1 and \(\square\)s as 0.</p>
+<p>This is the mechanics of the evaluation function \(\interp{\cdot}\). If you want to get a specific value, you need to provide a concrete model to it. One possible model would be having \(E\) as the set of integers and having \(\lexf\) map a string of \(\triangle\)s and \(\square\)s to the decimal representation of the integer obtained by treating \(\triangle\)s as 1 and \(\square\)s as 0.</p>
 
-<p>Before returning to our natural language example and see how this mechanics apply there, we need to get clear about currying.</p>
+<p>Before returning to our natural language example and see how this mechanics apply there, we need to learn about Currying.</p>
 
 <h2 id="currying">Currying</h2>
 
 <p>Natural language has many expressions that correspond to the mathematical concept of a <span class="term" id="relation">relation</span>. <em>Loves</em> for instance is a verb that denotes a relation defined over the set of individuals. It simply includes those ordered pairs \((x,y)\) s.t. \(x\) loves \(y\). Certain mathematical properties of relations directly apply to natural language meaning. For instance, the love relation is not <span class="term" id="symmetric">symmetric</span>, because the fact that \(x\) loves \(y\) does not guarantee that \(y\) loves \(x\) in return, it may but it doesn’t have to. Compare this with the relation <em>be in physical contact with</em>. The love relation is also not <span class="term" id="reflexive">reflexive</span> (as not every individual has to love him/herself), but the relation denoted by <em>has the same name</em> is. Love is also far from being <span class="term" id="transitive">transitive</span>, because the fact that \(x\) loves \(y\) and \(y\) loves \(z\) does not guarantee that \(x\) loves \(z\).<sup id="fnref:sibling"><a href="#fn:sibling" class="footnote" rel="footnote" role="doc-noteref">12</a></sup></p>
 
-<p>Relations are fun, but we need to get used to seeing everything as functions, which constitute a subset of relations that insist that each individual is related to one and only one individual. How can we think of love as a function then?</p>
+<p>Relations are fun, but we need to get used to seeing everything as functions,<sup id="fnref:reap"><a href="#fn:reap" class="footnote" rel="footnote" role="doc-noteref">13</a></sup> which constitute a subset of relations that insist that each individual is related to one and only one individual. How can we think of <em>love</em> as a function then?</p>
 
-<p>Relations are simply sets. Binary relations are sets of ordered pairs, ternary relations are sets of triples, and so on. As we saw above every set is equivalent to a function, which is called its <span class="term" id="characteristic-function">characteristic function</span>. Therefore we will take a binary relation \(R\) defined on a set \(A\) to be a function \(f:A\times A\mapsto \{0,1\}\). All functions with the codomain \(\lbrace0,1\rbrace\) will be called <span class="term" id="boolean">boolean</span> functions; the connection to truth and falsity should be obvious.</p>
+<p>Relations are simply sets. Binary relations are sets of ordered pairs, ternary relations are sets of triples, and so on. As we saw above, every set is equivalent to a function, which is called its <span class="term" id="characteristic-function">characteristic function</span>. Therefore we will take a binary relation \(R\) defined on a set \(A\) to be a function \(f:A\times A\mapsto \{0,1\}\). All functions with the codomain \(\lbrace 0,1\rbrace\) will be called <span class="term" id="boolean">boolean</span> functions; the connection to truth and falsity should be obvious.</p>
 
-<p>The second concept related to functions that we will need is Currying. Take the following simple function that multiplies two numbers:</p>
+<p>The second concept related to functions that we need is Currying.<sup id="fnref:curry"><a href="#fn:curry" class="footnote" rel="footnote" role="doc-noteref">14</a></sup> Take the following simple function that multiplies two numbers:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
 </code></pre></div></div>
@@ -837,27 +378,43 @@ E &amp;= \{a,b,c,d,e\}\\
 
 \[\sign{(loves\oplus Mary)}\]
 
-<p>The functions in our language will all be Curried as in the above example. Therefore a function like \(\sysm{Loves}\) (yes, we take it to be a function rather than a relation) will get its arguments one by one. By convention we will agree that the arguments are fed in the reverse order.<sup id="fnref:montnot"><a href="#fn:montnot" class="footnote" rel="footnote" role="doc-noteref">13</a></sup> For instance, to express what is expressed by the sentence <em>John loves Mary</em>, we will first feed the second argument to the function, resulting in,</p>
+<p>We can accomplish this by taking the meaning of <em>loves</em> to be a single-argument function that returns another single-argument function. The meaning of <em>Mary</em> will be an atomic value that the love function will apply to. Let’s denote these values as \(love'\) and \(mary'\). We now have,</p>
 
-\[Loves(Mary)\]
+\[\interp{\sign{(loves\oplus Mary)}} = love'(mary')\]
 
-<p>which stands for a function that returns 1 for individuals who love Mary and 0 otherwise. The fully saturated form is,</p>
+<p>This is a function that takes another atomic value like \(mary'\) and returns 1 if the relation of love holds between the two, and 0 otherwise. Therefore,</p>
 
-\[Loves(Mary)(John)\]
+\[(\sign{John\oplus (loves\oplus Mary)}) = love'(mary')(john')\]
 
-<p>We will adopt two other notational conventions:</p>
+<p>This is the value that would be written as,</p>
 
-<ol>
-  <li>The constants<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">14</a></sup> like \(Loves\), \(John\), and so on, will be written in lower case and terminated by a prime as in \(loves'\) and \(john'\) (or an abbreviated form \(j'\));</li>
-  <li>Given a function \(f\) and an argument \(a\), we will depict function application as \((f\cnct a)\), rather than the standard notation
-\(f(a)\).</li>
-</ol>
+\[Love(john,mary)\]
+
+<p>in standard first-order logic notation. There is a linguistic reason why we “feed” the arguments in the reverse order, but we will come to that later. Here is another notational convention that will take some time to get used to:</p>
+
+<div class="item" id="df-app-notation" data-kind="definition" data-label="Definition" data-title="Functional application notation" data-ref="Definition">
+
+    
+      <p>Given a function \(f\) and an argument \(a\), \(f(a)\) will be notated as \((f\cnct a)\). Parentheses will be eliminated in a left associative fashion.</p>
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
 
 <p>Under these conventions the logical representation of <em>John loves Mary</em> becomes,</p>
 
 \[((loves'\cnct mary')\cnct john')\]
 
-<p>Next section is on one of the most important concepts in natural language semantics.</p>
+<p>which will be simplified to,</p>
+
+\[loves'mary'john'\]
 
 <p>We will assume that natural language expressions get transformed
 into a formal disambiguated language. The formal language we will use is
@@ -895,8 +452,6 @@ objects “logical forms”. In what follows, we will have a deeper look at
 this process. We will return to the topic of how to map natural language
 expressions to logical forms later on, where we delve into the notion of
 grammar that governs that mapping.</p>
-
-<h2 id="characteristic-functions-and-currying">Characteristic functions and Currying</h2>
 
 <h2 id="semantic-types">Semantic types</h2>
 
@@ -1449,14 +1004,473 @@ This paragraph will be justified.</p>
     <li id="fn:sibling">
       <p>Think about the concept of <em>sibling</em>. If we put aside the notion of half siblings (Tr. üvey kardeş), we would think that it is a transitive and symmetric relation. But this causes a problem, can you see what? (Thanks to <a href="https://github.com/howion/">Omer Mert Coskun</a> ) for pointing this out. <a href="#fnref:sibling" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:montnot">
-      <p>This has a deeper linguistic reason that we will see later on. <a href="#fnref:montnot" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    <li id="fn:reap">
+      <p>We will reap the benefits on the computation side. <a href="#fnref:reap" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:1">
-      <p>See below for what “constant” means. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    <li id="fn:curry">
+      <p>Named after <a href="https://en.wikipedia.org/wiki/Haskell_Curry">Haskell Brooks Curry</a>, one of the inventors of the concept. Programming languages <a href="https://www.haskell.org/">Haskell</a>, <a href="https://graphics.stanford.edu/projects/brookgpu/">Brook</a> and <a href="https://www.curry-lang.org/">Curry</a> are also named after him. <a href="#fnref:curry" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name></name></author><category term="course" /><category term="language" /><category term="semantics" /><summary type="html"><![CDATA[Basics]]></summary></entry><entry><title type="html">Assignment in lambda expressions</title><link href="https://umutozge.github.io/posts/course/walrus-operator/" rel="alternate" type="text/html" title="Assignment in lambda expressions" /><published>2026-02-12T00:00:00+03:00</published><updated>2026-02-12T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/walrus-operator</id><content type="html" xml:base="https://umutozge.github.io/posts/course/walrus-operator/"><![CDATA[<p>We closed the post <a href="/posts/course/more-state-power/">More state power</a> with a function that collects <code class="language-plaintext highlighter-rouge">n</code> random numbers between <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code> into a list. Here is the function again:</p>
+</div>]]></content><author><name></name></author><category term="course" /><category term="language" /><category term="semantics" /><summary type="html"><![CDATA[Basics]]></summary></entry><entry><title type="html">Language primer</title><link href="https://umutozge.github.io/posts/course/language-primer/" rel="alternate" type="text/html" title="Language primer" /><published>2026-09-29T00:00:00+03:00</published><updated>2026-09-29T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/language-primer</id><content type="html" xml:base="https://umutozge.github.io/posts/course/language-primer/"><![CDATA[<div class="numbered">
+
+  <p>This is a quick start on langugage for cognitive science students.</p>
+
+  <h2 id="a-simple-formal-system">A simple formal system</h2>
+
+  <p>Douglas Hofstadter<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> has this tiny formal system called <code class="language-plaintext highlighter-rouge">pq-System</code>. In defining formal systems, we start with a set of symbols, called <strong>the alphabet</strong>. This dictates that any expression of the system must be made by bringing together, in some order, one or more of these symbols. Next, and the last, step is to define which expressions formed out of these symbols are <strong>well-formed</strong> in the system.</p>
+
+  <p>This well-formedness step comes in two sub-steps.</p>
+
+  <ol>
+    <li>First we define the <strong>axioms</strong>, those expressions that we take to be well-formed without any further justification.</li>
+    <li>Second is <strong>the rules of production</strong> that allow us to generate new well-formed expressions from already existing well-formed expressions.</li>
+  </ol>
+
+  <p>In <code class="language-plaintext highlighter-rouge">pq-System</code>, the alphabet consists of the following three symbols: <code class="language-plaintext highlighter-rouge">p</code>, <code class="language-plaintext highlighter-rouge">q</code>, and <code class="language-plaintext highlighter-rouge">-</code>.</p>
+
+  <p>We have infinitely many axioms in <code class="language-plaintext highlighter-rouge">pq-System</code>, therefore we cannot list them all. Instead, we provide a rule that generates all of the axioms, usually called an <strong>axiom schema</strong>.</p>
+
+  <div class="item" id="def:pq-axioms" data-kind="definition" data-label="Definition" data-title="Axioms of `pq-System`">
+
+    <p>\(x\vect{p}\text{-}\vect{q}x\text{-}\) is an axiom, whenever \(x\) is composed of only ‘\(\text{-}\)’s.</p>
+
+  </div>
+
+  <p>Given this, you should be able to verify that
+\(\text{-}\text{-}\vect{p}\text{-}\vect{q}\text{-}\text{-}\text{-}\) is an axiom
+of the system (=a well-formed expression).</p>
+
+  <p>There is only one rule of production:</p>
+
+  <div class="item" id="def:pq-production" data-kind="definition" data-label="Definition" data-title="Productions of `pq-System`">
+
+    <p>If \(x\vect{p}y\vect{q}z\) is a well-formed expression, again with \(x,y,z\) all composed of zero or more ‘\(\text{-}\)’s, then so is \(x\vect{p}y\text{-}\vect{q}z\text{-}\).</p>
+
+  </div>
+
+  <p>Now. think of a <strong>decision procedure</strong> that takes an expression and decides whether it is well-formed or not.</p>
+
+  <hr class="topic-separator" />
+
+  <p>Inspecting the well-formed expressions of <code class="language-plaintext highlighter-rouge">pq-System</code>, can you see what do they <em>mean</em>? Or, can you say what they are <em>about</em>? Or, can you say what they are <em>for</em>?</p>
+
+  <p>They are theorems (truths) of binary addition of non-equal (except \(1 + 1 = 2\)) and non-negative integers. Their <em>meaning</em> is this.</p>
+
+  <h3 id="levels-of-analysis">Levels of analysis</h3>
+
+  <p>Language is studied in levels of analysis. The study of the atomic building blocks of language and how they combine into more complex structures is called <strong>phonology</strong>. The alphabet analogy, although the best we can do, would be a little misleading here, because the building blocks of language are not the orthographic symbols, but the <strong>phonemes</strong>, the smallest units of sound that can distinguish meaning in a language.</p>
+
+  <p>The study of the properties of well-formed expressions is called <strong>morphosyntax</strong>. As you observed above, this can be studied without any reference to meaning or significance in any form.</p>
+
+  <p>The study of the meaning of expressions is called <strong>semantics</strong>. And again as you saw above, what we mean by “meaning” is not obvious at all. What sort of a relation is it? Correspondence, aboutness, use (procedural)? If it’s a correspondence, what is the nature of the entities that are related? Are they mental, neural, abstract? All these, and many more, are part of the game in the study of natural language meaning.</p>
+
+  <p>The last level that is interest to cognitive science is <strong>pragmatics</strong>, the study of how language is used in context. The boundary between semantics and pragmatics is not clear, and there are many different views on how to draw it. As we go along, we will see that there might not be much value in drawing such a boundary. Perhaps some boundaries are more useful when they are left fuzzy.</p>
+
+  <p>In studying language from a cognitive science perspective, studying morphosyntax on its own does not make much sense.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> The relevant field of inquiry is rather the study of the relation between morphosyntax on one hand, and semantics and pragmatics on the other. Let’s call this domain <strong>semantax</strong> for the sake of having a name for it.<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
+
+  <h3 id="grammar">Grammar</h3>
+
+  <p>Some important aspects of human language are:</p>
+
+  <ol>
+    <li><strong>Compositionality:</strong> “The meaning of a compound expression is a function of the meanings of its parts and of the way they are syntactically combined.”<sup id="fnref:partee"><a href="#fn:partee" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> This is usually cited as <strong>Frege’s principle</strong>. Fodor and Lepore has a nice way to put it: You cannot understand <em>John loves Mary</em> without also understanding <em>Mary loves John</em>.</li>
+    <li><strong>Recursion:</strong> In principle, there is no end to the expressions that can be generated in a language. This is due to the fact that expressions of a given type can be (directly or indirectly) inserted in expressions of the same type.</li>
+    <li>
+      <p><strong>Structure dependence:</strong> For physical constraints, language is produced in a linear fashion (you can speak one word at a time). But the meaning is “read off” from the hierarchical structure. A necessary consequence of this is that items that are related at the meaning level may find themselves fallen apart on the actual acoustic/visual signal. Take:</p>
+
+      <div class="item" id="ex:telescope" data-kind="definition" data-label="Example" data-title="The telescope sentence">
+        <p>I saw the man with the telescope.</p>
+      </div>
+
+      <p>The sentence can mean two different things: (1) the speaker has the telescope, or (2) the man has the telescope. The two meanings are determined by the hierarchical structure of the expression: in (2) <code class="language-plaintext highlighter-rouge">the telescope</code> is attached to <code class="language-plaintext highlighter-rouge">the man</code>, in (1), to <code class="language-plaintext highlighter-rouge">saw</code>.</p>
+    </li>
+  </ol>
+
+  <p>In a very broad sense, a <strong>grammar</strong> regulates the correspondence between form and meaning in a way that manifests the three properties above.</p>
+
+  <p>When we talk about <strong>syntactic structure</strong>, we mean a particular organisation of the components of an expression. For instance the two meanings of the telescope sentence are related to the following (fairly simplified) structures:</p>
+
+  <div class="item" id="ex:telescope-structures" data-kind="definition" data-label="Example" data-title="Two structures for the telescope sentence">
+    <ol>
+      <li>[I [saw [the man [with the telescope]]]]</li>
+      <li>[I [[saw [the man]] [with the telescope]]]</li>
+    </ol>
+  </div>
+
+  <p>Another way of thinking about structure, which is more transparent to semantics, is to think of it as a particular organization of operators and arguments, like we do in arithmetic.</p>
+
+\[((3 + 4) \times 5)\]
+
+  <p>When we go from the linear string of symbols \(((3 + 4) \times 5)\) to its meaning, which is the value of the expression (=35), we work out the structure of the expression in such a way that the <strong>operator</strong> +  is applied to its <strong>arguments</strong> 3 and 4, and then the operator \(\times\) is applied to its arguments, which are, 7, the value of the first operation (recursion!), and 5.</p>
+
+  <p>Similarly, for the telescope example, in one reading the operator <em>saw</em> takes as arguments the subject <em>I</em> and the object <em>the man with the telescope</em>; and in the other reading, the operator <em>saw</em> takes as its object argument the noun phrase <em>the man</em>, rather than the entire phrase <em>the man with the telescope</em>; and this time the operator <em>with</em> takes as arguments the noun <em>the telescope</em> and the verb phrase <em>saw the man</em> as arguments.<sup id="fnref:ser"><a href="#fn:ser" class="footnote" rel="footnote" role="doc-noteref">5</a></sup></p>
+
+  <h3 id="main-questions">Main questions</h3>
+
+  <p>The  major research questions on the grammar<sup id="fnref:sense"><a href="#fn:sense" class="footnote" rel="footnote" role="doc-noteref">6</a></sup> are:</p>
+
+  <ol>
+    <li>How do we understand and produce language?</li>
+    <li>How do we acquire the capacity to do so?</li>
+    <li>How is our language capacity related to other cognitive capacities, such as perception, planning, reasoning, etc.?</li>
+    <li>How do these relate to our neural substance?</li>
+  </ol>
+
+  <h3 id="cognitive-science-of-language">Cognitive science of language</h3>
+
+  <p>The above questions are studied in several fields. What distinguishes cognitive science from fields like psychology and linguistics is its emphasis on the computational modeling of the phenomena. Cognitive science, at least in how we take it to mean in our institute, takes the mind to be an information processing system, and therefore the best way to understand it is by building computational models of the phenomena we are interested in, be it a processing question or a learning question.</p>
+
+  <p class="notice--warning"><strong>Warning:</strong> Some, or perhaps all, readings suggested below might be difficult at this stage. There is no cure for this. There are no textbooks, which can be read in a linear way.<sup id="fnref:strictly"><a href="#fn:strictly" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> You need to have a couple of passes with low reception and come back to them later.</p>
+
+  <p>There are two closely related axes of tension in the field, which I think it is better to open-mindedly meet them from the very start, before you find yourself socialized<sup id="fnref:gazdar"><a href="#fn:gazdar" class="footnote" rel="footnote" role="doc-noteref">8</a></sup> into one camp or another.</p>
+
+  <p>The first of these is the debate on the relevance of probability  (statistics and information theory) to the study of language, particularly syntax. Chomsky is widely considered, at times too crudely I think,  to be firmly on the “not relevant” side of the debate. It is nevertheless true that probability is not much popular in mainstream linguistics. But in cognitive science, the debate is almost never on <em>whether</em> but <em>how</em> these fields are relevant for the scientific study of language. For convenience, I will call this the <strong>probability debate</strong>.<sup id="fnref:catogorist"><a href="#fn:catogorist" class="footnote" rel="footnote" role="doc-noteref">9</a></sup></p>
+
+  <p>Another source of tension in the field concerns the relevance of data-driven approaches like corpus linguistics, deep neural nets, machine learning, statistical language models, etc. to the scientific study of language, which seems to be going nuclear especially after the appearance of LLMs.  This debate naturally comes intertwined with discussions on the goals of science, especially the distinction between prediction and explanation. For convenience, I will call this the <strong>data debate</strong>.</p>
+
+  <ul>
+    <li>For an introduction to grammar read (or skim through) <a href="/p/pullum-truth/" target="_blank" rel="noopener">Pullum (2024)</a>; I think it is more useful than any introduction to linguistics, and will be good for your English as well.</li>
+    <li>In your later readings, whenever you hit an unfamiliar linguistic concept or term, consult <a href="/p/bender-fundamentals/" target="_blank" rel="noopener">Bender (2022)</a>. This will work fine as a practical reference until you develop a more serious interest in linguistics and/or go on with language research.</li>
+    <li><a href="/p/chomsky-ss/" target="_blank" rel="noopener">Chomsky (1957)</a><sup id="fnref:ss-parts"><a href="#fn:ss-parts" class="footnote" rel="footnote" role="doc-noteref">10</a></sup> sets the frame of discussion for almost everything that follows about the cognitive science of language, and remarkably – considering its impact – requires relatively little background.</li>
+    <li>“Computational linguistics” and “Natural Language Processing” (NLP)  are sometimes used interchangeably. A better practice is to reserve the former for the scientific study of language through computational modeling, which differs in aims and scope from the engineering field of NLP. <a href="/p/manning-computational/" target="_blank" rel="noopener">Manning (2015)</a> and the introduction chapter of <a href="/p/eisenstein/" target="_blank" rel="noopener">Eisenstein (2019)</a> are illuminating on this important distinction.</li>
+    <li>For a historical perspective on the data debate, read <a href="/p/church-pendulum/" target="_blank" rel="noopener">Church (2011)</a>.</li>
+    <li>On how probability fits into the study of language, read  <a href="/p/manning-prob/" target="_blank" rel="noopener">Manning (2003)</a> and <a href="/p/jurafsky-psycho/" target="_blank" rel="noopener">Jurafsky (2003)</a>.</li>
+    <li>Readings relevant for the both debates are <a href="/p/pereira/" target="_blank" rel="noopener">Pereira (2000)</a> and <a href="/p/lappin-shieber/" target="_blank" rel="noopener">Lappin and Shieber (2007)</a></li>
+    <li><a href="/p/norvig-chomsky/" target="_blank" rel="noopener">Norvig (2011)</a> addresses the latest views of Chomsky on the relevance of (statistical) language models to the study of language. Although, Norvig’s reading of Chomsky’s “claims” are rather superficial,<sup id="fnref:calmer"><a href="#fn:calmer" class="footnote" rel="footnote" role="doc-noteref">11</a></sup> It is still a good read, I think.</li>
+    <li>For a taste of the data debate focused on deep neural networks, read  <a href="/p/pater-2019/" target="_blank" rel="noopener">Pater (2019)</a> and <a href="/p/rawski-heins/" target="_blank" rel="noopener">Rawski and Heins (2023)</a>.</li>
+    <li><a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a> and the commentaries on it are good sources to get introduced to the data debate within broader cognitive science.<sup id="fnref:data-debate-terms"><a href="#fn:data-debate-terms" class="footnote" rel="footnote" role="doc-noteref">12</a></sup></li>
+  </ul>
+
+  <hr />
+
+</div>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Douglas Hofstadter, <em>Gödel, Escher, Bach: An Eternal Golden Braid</em> (Basic Books, 1979), Ch. 2. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>The same does not apply to phonology, which is a very interesting field of study from a cognitive science perspective on its own. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://en.wikipedia.org/wiki/John_R._Ross">John R. Ross</a> offered the term “semantax”, but it seems it did not get caught on. <a href="https://homepages.inf.ed.ac.uk/steedman/">Mark Steedman</a> has a project named such, though. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:partee">
+      <p>Barbara Partee, “Compositionality”, in <em>Varieties of Formal Semantics</em>, 1984. <a href="#fnref:partee" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:ser">
+      <p>I am wildly simplifying for the sake of discussion. <a href="#fnref:ser" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:sense">
+      <p>I use the term grammar in a fairly broad sense as the totality of the system that mediates between form and meaning. The term has a well-defined technical sense in formal language theory and the theory (and applications) of parsing. <a href="#fnref:sense" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:strictly">
+      <p>There actually <em>are</em>, but they are too opinionated. Also be warned about “handbook” entries that focus on the personal contributions of the author. <a href="#fnref:strictly" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:gazdar">
+      <p>“Just a collection of buzz words whose appropriate use you are socialized into”, says <a href="https://nlp.fi.muni.cz/~xjakub/briscoe-gazdar/gpsg.html">Gerald Gazdar</a> describing his not so bright opinion about a particular version of Chomskyan generative grammar. <a href="#fnref:gazdar" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:catogorist">
+      <p>Closely, related to this is the issue of categorical vs. gradient phenomena in language. <a href="#fnref:catogorist" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:ss-parts">
+      <p>Chapters 1-4, 6, and 8. Chapter 9 is also of interest on Chomsky’s take on syntax-semantics relation. Some basic knowledge of automata theory, though not essential, will make it easier to follow. <a href="#fnref:ss-parts" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:calmer">
+      <p>Objectors of Chomsky on this count largely concentrate on his observation that the grammatical English sentence <em>Colorless green ideas sleep furiously</em> has zero probability on crude frequency based models without smoothing, which was the state-of-art at that date, and the corollary he draws from this fact that statistical regularity has no place in defining the notion of “grammatical sentence in language \(L\)”. Chomsky’s attitude toward the place of probability and statistics in language science is not as crude as his objectors appear to think. For instance, Norvig seems to have missed footnote 4 on p. 17 of <em>Syntactic Structures</em>, and his remarks on syntax, semantics, and language use in Chapter 9. See Chomsky’s preface to 1975 edition of <em>Logical Structure of Linguistic Theory</em>, p.3. Also see the other LSLT quotes in <a href="/p/yang-crunch/" target="_blank" rel="noopener">Yang (2008)</a> for a more accurate view on Chomsky’s stance on the subject. <a href="#fnref:calmer" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:data-debate-terms">
+      <p>Useful terminology on the data debate are <a href="/p/lake/" target="_blank" rel="noopener">Lake et al. (2017)</a>’s <strong>pattern recognition</strong> vs. <strong>model building</strong>, and <a href="/p/softmax/" target="_blank" rel="noopener">Frank and Degen (2023)</a>’s <strong>input-output models</strong> vs <strong>internally meaningful models</strong>. <a href="#fnref:data-debate-terms" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="course" /><category term="language" /><category term="cogsci" /><summary type="html"><![CDATA[Initial steps for cognitive science students interested in language.]]></summary></entry><entry><title type="html">Why do we have 501 and 502?</title><link href="https://umutozge.github.io/posts/course/why-5012/" rel="alternate" type="text/html" title="Why do we have 501 and 502?" /><published>2026-09-25T00:00:00+03:00</published><updated>2026-09-25T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/why-5012</id><content type="html" xml:base="https://umutozge.github.io/posts/course/why-5012/"><![CDATA[<p>Why should anyone take pains to learn programming in the Fall of 2026? Humans are now ranked second among the autonomous intelligent organisms that compose computer code in the known universe; and the gap separating us and machines is so swiftly widening that even the comparison might stop making sense before the end of the year. The problem – if you want to name it that way – is not that machines program better, faster, etc. It is rather that the level of complexity at which they autonomously operate (motivation, design and implementation) seems, at the time of writing, to have already surpassed human-level intelligibility. Sooner or later, there will remain no place for humans in this business; not even as supervisors or auditors of what machines (might plan to) do.</p>
+
+<p>In the face of this state of affairs, we still find some value in offering 501/2, as an introduction to computation, programming, probability theory, and linear algebra, though a very brief one.</p>
+
+<p>First of all, cognitive science belongs in the broader field of informatics. It takes cognition principally to be information processing carried out by organisms above a certain level of complexity.<sup id="fnref:level"><a href="#fn:level" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Naturally, a student of cognitive science must ideally have a thorough understanding of what information is, and what does it mean to process it.
+Of course, it is arguable whether taking courses, let alone taking these specific ones, is the best way to achieve this, but, as long as science remains a primarily human institution that aims to improve <em>our</em> knowledge and understanding, no one can get very far in cognitive science without understanding the subjects listed above.</p>
+
+<p>Another motivation for these courses can be found in the following quote from a prominent cognitive scientist, Philip Johnson-Laird (1980):</p>
+
+<blockquote>
+  <p>Computer programming is too useful to cognitive science to be left solely in the hands of the artificial intelligenzia [UO: he means engineering work on intelligence back then]. There is a well established list of advantages that programs bring to a theorist: they concentrate the mind marvelously; they transform mysticism into information processing, forcing the theorist to make intuitions explicit and to translate vague terminology into concrete proposals; they provide a secure test of the consistency of a theory and thereby allow complicated interactive components to be safely assembled; they are “working models” whose behavior can be directly compared with human performance.</p>
+</blockquote>
+
+<p>The use of programming in Johnson-Laird’s sense, namely as a tool for design and understanding, is, I think, more doable now than before, thanks to code writing machines. Before them, writing working code beyond a certain level of complexity was so difficult that achieving the level of abstraction essential for human understanding was considered a nicety everyone praised but no one achieved. Now it is possible to sit back and concentrate on what is essential, leaving the tedious, unimportant details to machines.</p>
+
+<p>Doable, however, does not mean easy. Using programming in Johnson-Laird’s sense requires a genuine understanding of some fundamental concepts. And this is not easy to achieve. On one hand, programming, like every sophisticated subject, requires hard work. On the other hand, it may not be easy to realize that you are totally missing some important concepts. Without such realization, there is no chance for improvement.</p>
+
+<p>It is very easy to spend an entire coding career without ever understanding what is worth understanding about coding and computation. You can simply go on writing code without much intellectual improvement. This, I think, is largely due to the interactional nature of coding. Computers/programs are responsive, so you can have long and consuming stretches of trial-and-error that will eventually land you on some useful territory. Or, if you are smart enough, you can conjure up nice tricks that will keep the wheels turning no matter what. Compare this with mathematics. The paper or the board, where math’s engine runs on, are dead silent; you are on your own, and there is no alternative to genuine understanding.<sup id="fnref:compsci"><a href="#fn:compsci" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
+
+<p>For this reason, I believe learning programming requires guidance and discipline; a discipline that needs to be externally enforced, unless you are already a very good learner.</p>
+
+<p>To sum up, programming and mathematics teach one how to organize, develop, and express their thoughts. They are equally useful in understanding what others mean, an essential skill in research and collaboration. With 501 and 502, our aim is to very briefly introduce you to some fundamental concepts of these fields, with occasional glimpses into their significance in the study of cognition.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:level">
+      <p>What that level is is itself an item of inquiry. <a href="#fnref:level" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:compsci">
+      <p>The same applies to the field of computer science, which is much more mathematics than coding. <a href="#fnref:compsci" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="course" /><category term="python" /><summary type="html"><![CDATA[Motivations behind having introductory programming and mathematics courses in our department.]]></summary></entry><entry><title type="html">Vectors</title><link href="https://umutozge.github.io/posts/course/vectors/" rel="alternate" type="text/html" title="Vectors" /><published>2026-05-17T00:00:00+03:00</published><updated>2026-05-17T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/vectors</id><content type="html" xml:base="https://umutozge.github.io/posts/course/vectors/"><![CDATA[<p>When we model the world through mathematics, we frequently find ourselves talking
+about magnitudes. Mass, length, price, and so on, are all examples of quantities
+that we use numbers to represent. We build our mathematical models in such a
+way that these numbers and operations involving them has some, largely
+idealized, correspondence to the entities, relations and processes out there
+that we aim to understand and predict. Numbers that are used in this way are called
+<span class="term" id="scalars">scalars</span>.</p>
+
+<p>Sometimes we need to couple the concept of magnitude with a direction. The prime
+example is the concept of force that we use in physics. A force has both a
+magnitude and a particular direction in space. The mathematical object that
+brings together magnitude and direction is called a <span class="term" id="vector">vector</span>.</p>
+
+<p>As a simple example, take a vector with a magnitude of 5 units and a direction
+of \(32^\circ\) measured counterclockwise from the positive \(x\)-axis. We can
+represent this vector in several ways. Initially, assume we don’t care about
+where the vector starts (its <span class="term" id="tail">tail</span>). We just want to encode its length
+and direction. We represent it as a two component vector, where the first
+component is the horizontal (\(x\)) magnitude, and the second eomponent is the
+vertical (\(y\)) magnitude. The components can be calculated using trigonometry
+via the cosine and sine of the direction angle:<sup id="fnref:trig"><a href="#fn:trig" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>:</p>
+
+\[\begin{align}
+\vect{v} &amp;= \begin{pmatrix} 5\cos 32^\circ &amp; 5\sin 32^\circ \end{pmatrix}\nonumber\\
+         &amp;= \begin{pmatrix}4.2402406 &amp; 2.6495962\end{pmatrix}
+\end{align}\]
+
+<p>In other words, if you do not care about the tail point, a vector in a plane
+(2D) is represented by two real numbers.</p>
+
+<p>You can abstract the directon from a vector by a <span class="term" id="unit-vector">unit vector</span>, whose
+magnitude is 1. Such a unit vector for our example would be:</p>
+
+\[\vect{u} = \begin{pmatrix} \cos 32^\circ &amp; \sin 32^\circ \end{pmatrix}\]
+
+<p>or, with the angle in radians (\(d=180^\circ \pi\)):</p>
+
+\[\vect{u} = \begin{pmatrix} \cos \frac{32\pi}{180} &amp; \sin \frac{32\pi}{180}
+\end{pmatrix}\]
+
+<p>or, with the values of the trig functions plugged in:</p>
+
+\[\vect{u} = \begin{pmatrix} 0.8480481 &amp; 0.52991927 \end{pmatrix}\]
+
+<h3 id="element-wise-operations">Element-wise operations</h3>
+
+<p>Given a unit vector, you can factor the magnitude back in by multiplying the
+unit vector by the scalar magnitude. This is an example of an element-wise
+operation, where you apply the same operation to each component of the vector.
+In this case, you multiply each component of the unit vector by the magnitude:</p>
+
+\[\vect{r} = 5\vect{u} = \begin{pmatrix} 4.2402406 &amp; 2.6495962\end{pmatrix}\]
+
+<p>An operation between vectors can also be element-wise. For example, if you have
+two vectors \(\vect{v}\) and \(\vect{w}\), you can add them together by adding their
+components:</p>
+
+\[\begin{align}
+\vect{v} + \vect{w} &amp;= \begin{pmatrix} v_1 &amp; v_2 \end{pmatrix} + \begin{pmatrix}
+w_1 &amp; w_2 \end{pmatrix}\nonumber\\
+&amp;= \begin{pmatrix} v_1 + w_1 &amp; v_2 + w_2 \end{pmatrix}
+\end{align}\]
+
+<p>Geometrically, adding two vectors means constructing a third spanning from the
+tail of the first to the head of the second, where you place the tail of the
+second at the head of the first. This arrangement gives a triangle when the
+vectors are not parallel (= in the same or opposite direction).</p>
+
+<h3 id="norm-of-a-vector">Norm of a vector</h3>
+
+<p>We’ve been talking about the magnitude of a vector. The interpretation of
+magnitude may change from context to context. In geometry, the magnitude of a
+vector is its length; in physics, the magnitude of a force vector is the
+strength of the force, and so on. The general mathematical term for the
+magnitude of a vector is its <span class="term" id="norm">norm</span>. The norm of a vector is a
+non-negative real number that represents the size or length of the vector.</p>
+
+<p>The simplest and most common type of norm is <span class="term" id="euclidian-norm">Euclidian norm</span> based on Pythogoras’ theorem. For a vector 
+\(\vect{v} = \begin{pmatrix} 3 &amp; 4 \end{pmatrix}\), the Euclidean norm is</p>
+
+\[\|\vect{v}\|_2 = \sqrt{3^2 + 4^2} = 5\]
+
+<p>This is the ordinary geometric length of the arrow from \((0,0)\) to \((3,4)\).</p>
+
+<p>A useful related idea is distance between two vectors. This is usually defined by the norm of their difference:</p>
+
+\[\text{distance}(x,y) = \|x-y\|\]
+
+<p>That formula says that two vectors are close when their difference has small norm, where difference is the element-wise subtraction.</p>
+
+<h5 id="properties-of-the-norm-function">Properties of the norm function</h5>
+
+<p>The concept of norm is not limited to just measuring the length of a vector. Any
+function with the following properties can be considered a norm:</p>
+
+<ul>
+  <li>Non-negativity: \(\|x\| \ge 0\).</li>
+  <li>Zero only at the zero vector: \(\|x\| = 0\) exactly when \(x=0\).</li>
+  <li>Homogeneity: \(\|a x\| = \lvert a\rvert \,\|x\|\) for any scalar \(a\).</li>
+  <li>Triangle inequality: \(\|x+y\| \le \|x\| + \|y\|\).</li>
+</ul>
+
+<p>Here are some examples of different norms (subscript indicates the type of
+norm):</p>
+
+<ul>
+  <li><strong>Euclidean norm</strong>: \(\|x\|_2 = \sqrt{x_1^2 + \cdots + x_n^2}\), the usual geometric length.</li>
+  <li><strong>1-norm</strong>: \(\|x\|_1 = \lvert x_1\rvert + \cdots + \lvert x_n\rvert\), the sum of absolute values.</li>
+  <li><strong>Infinity norm</strong>: \(\|x\|_\infty = \max_i \lvert x_i\rvert\), the largest absolute coordinate.</li>
+</ul>
+
+<p>You might find it a bit confusing that we defined the norms for vectors in \(n\)
+dimensions. Just go on reading.</p>
+
+<h3 id="dimensions">Dimensions</h3>
+
+<p>Except the definitions of different types of norms above,  we’ve been dealing
+with vectors in a 2-dimensional plane. But the dimensionality of a vector can be
+any positive integer. A vector in 3D will naturally be conceived as an arrow in
+a 3D space. But what about vectors in 8D?</p>
+
+<p>We, as humans, can visualize and intuitively understand geometry in 2D and 3D,
+but higher dimensions need a proper mathematical thinking. In mathematics, we
+operate on definitions and properties that follow from these definitions obeying
+the laws of logic. In mathematical education, we often start with intuitively
+familiar concepts and give them certain names. A good example is the circle and
+sphere. It is easy to grasp a circle in 2D and a sphere in 3D, as we think of
+them as some idealized forms of some objects we see around. But actually, what
+we call circle in 2D and sphere in 3D are just sets. How?</p>
+
+<p>Start with the notion of a point. A point, in common-sense, is either a pair
+(2D)  or a triple (3D) of numbers. In mathematics, a point is any \(n\)-tuple of
+numbers. The concepts circle and sphere are just the names we give to the notion
+of “the set of points that are at a fixed distance from a given point”, in 2D
+and 3D, respectively.</p>
+
+<p>Likewise for vectors. A vector is a mathematical object in \(\mathbb{R}^n\),
+where \(n\) is any positive integer. When you need its Euclidean length, you
+simple compute the sum of squares of its components and take the square root, no
+matter how many components it has.</p>
+
+<p>For a right triangle with legs $a$ and $b$ and hypotenuse $c$, Pythagoras says</p>
+
+\[a^{2} + b^{2} = c^{2}.\]
+
+<p>If you view the hypotenuse as a vector from the origin to the point \((a,b)\), then that vector’s length is</p>
+
+\[\|\begin{pmatrix} a &amp; b \end{pmatrix}\| = \sqrt{a^{2} + b^{2}},\]
+
+<p>which is exactly “take the hypotenuse using Pythagoras.”</p>
+
+<p>In \(\mathbb{R}^{n}\), the Euclidean norm of a vector \(x = \begin{pmatrix}x_{1} &amp; \dots &amp; x_{n}\end{pmatrix}\) is</p>
+
+\[\|x\| = \sqrt{x_{1}^{2} + \dots + x_{n}^{2}}\]
+
+<p>which is just repeatedly applying Pythagoras along mutually perpendicular axes.  Each coordinate plays the role of a leg in a higher‑dimensional right triangle whose “hypotenuse” is the vector.</p>
+
+<h3 id="dot-product">Dot product</h3>
+
+<p>A key operation that maps two vectors to a scalar is the <span class="term" id="dot-product">dot product</span>
+which is an instance of a family of operations called inner product.</p>
+
+<div class="item" id="df-dot-product" data-kind="definition" data-label="Definition" data-title="Dot product" data-ref="Definition">
+
+    
+      <p>The <span class="term" id="dot-product">dot product</span> of two vectors $u$ and $v$ in $\mathbb{R}^n$ is defined
+as:</p>
+
+\[u \cdot v = u_{1}v_{1} + \dots + u_{n}v_{n}.\]
+
+<p>Another common notation for the dot product is \(\langle u, v \rangle\).</p>
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>It’s close relation to Pythogoras’ theorem makes dot product a fundamental tool
+in linear algebra.</p>
+
+<p>Given \(\vect{v} = \pmatrix{x &amp; y}\):</p>
+
+\[\|\vect{v}\|^2 = \vect{v} \cdot \vect{v} = x^2 + y^2.\]
+
+<p>Now take two vectors \(\vect{u} = \pmatrix{u_1&amp; u_2}\) and \(\vect{v}=\pmatrix{v_1&amp;v_2}\). Now, imagine you form a triangle by putting the tail of \(\vect{v}\) at the head of \(\vect{u}\). The vector from the tail of \(\vect{u}\) to the head of \(\vect{v}\) is \(\vect{u} + \vect{v}\). We know from above that:</p>
+
+\[\begin{align}\label{vec-pytho}
+\|\vect{u} + \vect{v}\|^2 &amp; = (\vect{u} + \vect{v}) \cdot (\vect{u} + \vect{v})\\
+&amp; = \pmatrix{u_1 + v_1 &amp; u_2 + v_2} \cdot \pmatrix{u_1 + v_1 &amp; u_2 + v_2}\nonumber\\
+&amp; = (u_1 + v_1)^2 + (u_2 + v_2)^2\nonumber\\
+&amp; = u_1^2 + 2u_1v_1 + v_1^2 + u_2^2 + 2u_2v_2 + v_2^2\nonumber\\
+&amp; = (u_1^2 + u_2^2) + (v_1^2 + v_2^2) + 2(u_1v_1 + u_2v_2)\nonumber\\
+&amp; = \|\vect{u}\|^2 + \|\vect{v}\|^2 + 2\,(\vect{u} \cdot \vect{v})\nonumber
+\end{align}\]
+
+<p>To relate this equality to the angle between the vectors \(\vect{u}\) and
+\(\vect{v}\), we turn to a theorem from elementary geometry:</p>
+
+<div class="item" id="th-law-of-cosines" data-kind="theorem" data-label="Theorem" data-title="The law of cosines" data-ref="Theorem">
+
+    
+      <p>Given a triangle with sides of lengths \(a\), \(b\), and \(c\), and an angle \(\theta\)
+opposite the side of length \(c\), the law of cosines states that:</p>
+
+\[c^2 = a^2 + b^2 - 2ab \cos(\theta) \nonumber\]
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
+
+<p>By \eqref{vec-pytho} and <a class="xref" href="#th-law-of-cosines" data-refmode="full"></a>, we get:</p>
+
+\[\begin{align}
+\|\vect{u} + \vect{v}\|^2 &amp; = \|\vect{u}\|^2 + \|\vect{v}\|^2 +
+2\,\|\vect{u}\|\|\vect{v}\|\cos\theta\\
+&amp; = \|\vect{u}\|^2 + \|\vect{v}\|^2 + 2\,(\vect{u} \cdot \vect{v})\nonumber
+\end{align}\]
+
+<p>yielding the equality:</p>
+
+\[\cos\theta = \frac{\vect{u} \cdot \vect{v}}{\|\vect{u}\|\|\vect{v}\|}\]
+
+<p>which is of prime importance in linear algebra and its applications in
+artificial intelligence and machine learning.</p>
+
+<p>Its importance lies in the fact that it gives a measure of the directional similarity of two
+vectors that is independent of their magnitudes, as the cosine function
+approaches 1 from both directions as the angle approaches 0. This is the basis
+of the widely used cosine similarity measure in machine learning and information
+retrieval. In 2 and 3 dimensions, the concept of angle is intuitive, but in
+higher dimensions there is neither an intuitive approximation nor a need for
+one.</p>
+
+<p>This was a very brief introduction to linear algebra through vectors.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:trig">
+      <p>Let \(\theta\) be one of the acute angles of a right triangle:
+\(\cos\theta\) gives the ratio of the adjacent leg to the hypotenuse, and
+\(\sin\theta\) gives the ratio of the opposite leg to the hypotenuse. <a href="#fnref:trig" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="course" /><category term="continuous" /><category term="linear algebra" /><summary type="html"><![CDATA[A gentle intro to linear algebra through vectors]]></summary></entry><entry><title type="html">Assignment in lambda expressions</title><link href="https://umutozge.github.io/posts/course/walrus-operator/" rel="alternate" type="text/html" title="Assignment in lambda expressions" /><published>2026-02-12T00:00:00+03:00</published><updated>2026-02-12T00:00:00+03:00</updated><id>https://umutozge.github.io/posts/course/walrus-operator</id><content type="html" xml:base="https://umutozge.github.io/posts/course/walrus-operator/"><![CDATA[<p>We closed the post <a href="/posts/course/more-state-power/">More state power</a> with a function that collects <code class="language-plaintext highlighter-rouge">n</code> random numbers between <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code> into a list. Here is the function again:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">n_uniq_random</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
     <span class="sh">"""</span><span class="s">Return a list of n unique random numbers between start and end. </span><span class="sh">"""</span>

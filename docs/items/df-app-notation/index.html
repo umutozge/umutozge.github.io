@@ -10,34 +10,34 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Formal semantics - Umut Özge</title>
-<meta name="description" content="Exercises on model-theoretic semantics, FOL, and lambda calculus for a computational semantics course">
+<!-- begin _includes/seo.html --><title>Functional application notation - Umut Özge</title>
+<meta name="description" content="Given a function \(f\) and an argument \(a\), \(f(a)\) will be notated as \((f\cnct a)\). Parentheses will be eliminated in a left associative fashion.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Umut Özge">
-<meta property="og:title" content="Formal semantics">
-<meta property="og:url" content="https://umutozge.github.io/exercises/formal-semantics/">
+<meta property="og:title" content="Functional application notation">
+<meta property="og:url" content="https://umutozge.github.io/items/df-app-notation/">
 
 
-  <meta property="og:description" content="Exercises on model-theoretic semantics, FOL, and lambda calculus for a computational semantics course">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2026-11-16T22:48:53+03:00">
+  <meta property="og:description" content="Given a function \(f\) and an argument \(a\), \(f(a)\) will be notated as \((f\cnct a)\). Parentheses will be eliminated in a left associative fashion.">
 
 
 
 
 
 
-<link rel="canonical" href="https://umutozge.github.io/exercises/formal-semantics/">
+
+  <meta property="article:published_time" content="2026-11-17T00:00:00+03:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://umutozge.github.io/items/df-app-notation/">
 
 
 
@@ -112,7 +112,7 @@
 
   </head>
 
-  <body class="layout--numbered narrow" dir="ltr">
+  <body class="layout--numbered" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -177,84 +177,22 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-  
-    
-      
-      
-      
-      
-    
-    
-      <nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle Menu</label>
-  <ul class="nav__items">
-    
-      
-      
-        <li>
-          
-            <span class="nav__sub-title">Courses</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/prelim/schedule/">COGS 501</a></li>
-            
-              <li><a href="/cl/schedule/">COGS 543</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <a href="/exercise/browser/"><span class="nav__sub-title">Workbooks</span></a>
-          
-
-          
-        </li>
-      
-        <li>
-          
-            <a href="/code/browser/"><span class="nav__sub-title">Code</span></a>
-          
-
-          
-        </li>
-      
-    
-  </ul>
-</nav>
-
-    
-  
-  <br/>
-  <div class="notice" role="alert">
-    <strong>Notice:</strong> Unless stated otherwise, the prose on this site is written and edited without the use of AI.
-  </div>
-  </div>
-
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Formal semantics">
-    <meta itemprop="description" content="Exercises on model-theoretic semantics, FOL, and lambda calculus for a computational semantics course">
-    <meta itemprop="datePublished" content="2026-11-16T22:48:53+03:00">
+    <meta itemprop="headline" content="Functional application notation">
+    <meta itemprop="description" content="Given a function \(f\) and an argument \(a\), \(f(a)\) will be notated as \((f\cnct a)\). Parentheses will be eliminated in a left associative fashion.">
+    <meta itemprop="datePublished" content="2026-11-17T00:00:00+03:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           
-              <h1 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://umutozge.github.io/exercises/formal-semantics/" itemprop="url">Formal semantics
+              <h2 id="page-title" class="page__title" itemprop="headline">
+                <a href="https://umutozge.github.io/items/df-app-notation/" itemprop="url">Definition: Functional application notation
 </a>
-              </h1>
+              </h2>
             
           
           
@@ -266,166 +204,7 @@
       <section class="page__content" itemprop="text">
         
         <div class="numbered">
-  
-<div class="item" id="eg-simple-model" data-kind="example" data-label="Model" data-title="A simple model" data-ref="Model">
-
-    
-      <p>\(\mathcal{M} = \langle D, I\rangle\) with domain:</p>
-
-\[\begin{align*}
-D = \{a,b,c,d,e\}
-\end{align*}\]
-
-<p>Interpretation function:</p>
-
-\[\begin{align*}
-I(\con{anna}) &amp;= a\\
-I(\con{ben}) &amp;= b\\
-I(\con{cara}) &amp;= c\\
-I(\con{student}) &amp;= \{a,b\}\\
-I(\con{linguist}) &amp;= \{b,c\}\\
-I(\con{book}) &amp;= \{d,e\}\\
-I(\con{admire}) &amp;= \{(a,b),(b,c),(c,d)\}\\
-I(\con{read}) &amp;= \{(a,d),(b,e),(c,d),(a,e)\}\\
-I(\con{recommend}) &amp;= \{(a,d),(c,a),(c,d)\}\\
-\end{align*}\]
-
-<p>Environment:</p>
-
-\[\begin{align*}
-g=\lbrace (x,a), (y,b)\rbrace
-\end{align*}\]
-
-    
-
-
-    
-
-    
-
-    
-  </div>
-
-<div class="item" id="ex-model-theory-basics" data-kind="exercise" data-label="Exercise" data-title="Model theory basics" data-ref="Exercise">
-
-    
-      <ol>
-  <li>
-    <p>State whether each atomic formula is true or false in <a class="xref" href="#eg-simple-model" data-refmode="full"></a>:</p>
-
-\[\begin{gather*}
- \con{student}\con{anna}\\
- \con{book}\con{anna}\\
- \con{linguist}\con{cara}\\
- \con{admire}\con{ben}\con{anna}\\
- \con{admire}\con{anna}\con{ben}\\
- \end{gather*}\]
-  </li>
-  <li>
-    <p>Evaluate the following formulas in <a class="xref" href="#eg-simple-model" data-refmode="full"></a>.</p>
-
-\[\begin{gather*}
- \exists x.\con{student}x\\
- \forall x.\con{student}x \rightarrow \con{linguist}x\\
- \exists x.\con{student}x \land \con{linguist}x\\
- \forall x.\con{book}x \rightarrow \con{student}x\\
- \exists x\forall y. \con{admire}y\cnct x\\
-\con{student}x\\
-\con{linguist}x\\
-\exists x.\con{admire}x\cnct y\\
- \end{gather*}\]
-  </li>
-  <li>Translate the following sentences into FOL:
-    <ol>
-      <li>Anna is a student.</li>
-      <li>Ben read a book.</li>
-      <li>Every student read a book.</li>
-      <li>Some linguist recommended every book.</li>
-      <li>No student recommended Ben.</li>
-      <li>Not every student read a book.</li>
-      <li>No book is read by every student.</li>
-      <li>Some book is read by every student.</li>
-    </ol>
-  </li>
-  <li>Translate the following sentences into FOL; you are not allowed to use a
-cardinality predicate:
-    <ol>
-      <li>Exactly one student laughed.</li>
-      <li>At least two students laughed.</li>
-      <li>No more than one student laughed.</li>
-    </ol>
-  </li>
-</ol>
-
-    
-
-
-    
-
-    
-
-    
-      <a class="solution-badge" href="/solutions/ex-model-theory-basics/" aria-label="Solution for ex-model-theory-basics">
-        🗝️
-      </a>
-    
-  </div>
-
-<div class="item" id="ex-model-building" data-kind="exercise" data-label="Exercise" data-title="Model building" data-ref="Exercise">
-
-    
-      <ol>
-  <li>Build a model with exactly three individuals where the following are all true:
-    <ul>
-      <li>
-\[\exists x\,\con{student}x\]
-      </li>
-      <li>
-\[\exists x\,\con{linguist}x\]
-      </li>
-      <li>
-\[\neg\forall x\,\con{student}x\]
-      </li>
-      <li>
-\[\exists x(\con{student}x\wedge \con{linguist}x)\]
-      </li>
-      <li>
-\[\exists x\exists y\, \con{admire}(x,y)\]
-      </li>
-    </ul>
-  </li>
-  <li>Build a model where the following set is inconsistent, and explain why:
-    <ul>
-      <li>
-\[\forall x(\con{student}x\rightarrow \con{read}(x,b))\]
-      </li>
-      <li>
-\[\exists x\,\con{student}x\]
-      </li>
-      <li>
-\[\forall x\,\neg \con{read}(x,b)\]
-      </li>
-    </ul>
-  </li>
-  <li>Build a model where these are all true:
-    <ul>
-      <li>Every student admires some linguist.</li>
-      <li>No linguist admires Anna.</li>
-      <li>Anna admires Ben.</li>
-    </ul>
-  </li>
-</ol>
-
-    
-
-
-    
-
-    
-
-    
-  </div>
-
+  <p>Given a function \(f\) and an argument \(a\), \(f(a)\) will be notated as \((f\cnct a)\). Parentheses will be eliminated in a left associative fashion.</p>
 
 
 <script>
@@ -465,47 +244,12 @@ cardinality predicate:
       <footer class="page__meta">
         
         
-  
-
-
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="/tags/#language"
-         class="page__taxonomy-item p-category" rel="tag">
-        language <span class="taxonomy__count">9</span>
-      </a>
-    
-      
-      
-      <a href="/tags/#logic"
-         class="page__taxonomy-item p-category" rel="tag">
-        logic <span class="taxonomy__count">2</span>
-      </a>
-    
-      
-      
-      <a href="/tags/#semantics"
-         class="page__taxonomy-item p-category" rel="tag">
-        semantics <span class="taxonomy__count">4</span>
-      </a>
-    
-    </span>
-  </p>
-
-
-
 
 
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-11-16T22:48:53+03:00">2026-11-16</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-11-17T00:00:00+03:00">2026-11-17</time></p>
 
       </footer>
 
@@ -514,10 +258,10 @@ cardinality predicate:
       
   <nav class="pagination">
     
-      <a href="/exercises/firststeps/" class="pagination--pager" title="First steps">Previous</a>
+      <a href="#" class="pagination--pager disabled">Previous</a>
     
     
-      <a href="/exercises/higher-order-functions/" class="pagination--pager" title="Higher-order functions">Next</a>
+      <a href="/items/df-char-func/" class="pagination--pager" title="Characteristic function">Next</a>
     
   </nav>
 

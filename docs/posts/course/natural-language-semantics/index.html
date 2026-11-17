@@ -19,7 +19,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Umut Özge">
 <meta property="og:title" content="Natural language semantics">
-<meta property="og:url" content="https://umutozge.github.io/posts/course/model-theoretic-interpretation/">
+<meta property="og:url" content="https://umutozge.github.io/posts/course/natural-language-semantics/">
 
 
   <meta property="og:description" content="Basics">
@@ -30,14 +30,14 @@
 
 
 
-  <meta property="article:published_time" content="2026-03-31T00:00:00+03:00">
+  <meta property="article:published_time" content="2026-11-17T00:00:00+03:00">
 
 
 
 
 
 
-<link rel="canonical" href="https://umutozge.github.io/posts/course/model-theoretic-interpretation/">
+<link rel="canonical" href="https://umutozge.github.io/posts/course/natural-language-semantics/">
 
 
 
@@ -182,7 +182,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Natural language semantics">
     <meta itemprop="description" content="Basics">
-    <meta itemprop="datePublished" content="2026-03-31T00:00:00+03:00">
+    <meta itemprop="datePublished" content="2026-11-17T00:00:00+03:00">
     
 
     <div class="page__inner-wrap">
@@ -190,7 +190,7 @@
         <header>
           
               <h1 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://umutozge.github.io/posts/course/model-theoretic-interpretation/" itemprop="url">Natural language semantics
+                <a href="https://umutozge.github.io/posts/course/natural-language-semantics/" itemprop="url">Natural language semantics
 </a>
               </h1>
             
@@ -203,7 +203,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2026-03-31T00:00:00+03:00">2026-03-31</time>
+        <time datetime="2026-11-17T00:00:00+03:00">2026-11-17</time>
       </span>
     
 
@@ -221,7 +221,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-list"></i> Contents</h4></header>
-              <ul class="toc__menu"><li><a href="#the-meaning-of-traffic-lights">The meaning of traffic lights</a></li><li><a href="#natural-languages">Natural languages</a></li><li><a href="#what-is-meaning">What is meaning?</a></li><li><a href="#model">Model</a></li><li><a href="#compositionality">Compositionality</a></li><li><a href="#currying">Currying</a></li><li><a href="#curried-english">Curried English</a></li><li><a href="#characteristic-functions-and-currying">Characteristic functions and Currying</a></li><li><a href="#semantic-types">Semantic types</a></li><li><a href="#a-language-for-logical-forms">A language for logical forms</a><ul><li><a href="#syntax">Syntax</a><ul><li><a href="#semantics">Semantics</a></li><li><a href="#example">Example</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#the-meaning-of-traffic-lights">The meaning of traffic lights</a></li><li><a href="#natural-languages">Natural languages</a></li><li><a href="#what-is-meaning">What is meaning?</a></li><li><a href="#model">Model</a></li><li><a href="#compositionality">Compositionality</a></li><li><a href="#currying">Currying</a></li><li><a href="#curried-english">Curried English</a></li><li><a href="#semantic-types">Semantic types</a></li><li><a href="#a-language-for-logical-forms">A language for logical forms</a><ul><li><a href="#syntax">Syntax</a><ul><li><a href="#semantics">Semantics</a></li><li><a href="#example">Example</a></li></ul></li></ul></li></ul>
             </nav>
           </aside>
         
@@ -398,7 +398,7 @@ characteristic function of \(A\), defined as follows:</p>
 
 <p>In this setting, a proposition is a characteristic function of a set of cases, a function from the set of all possible cases to the set \(\lbrace 0, 1\rbrace\).</p>
 
-<p>Therefore, the semantic value of <em>John loves Mary</em> will be a function from cases to \(\lbrace 0, 1\rbrace\). In order to proceed, we need to have a representation of what a case is that is more formal than our laminate sheets. The term for case in semantics is <span class="term" id="model">model</span>.</p>
+<p>Therefore, the semantic value of <em>John loves Mary</em> will be a function from cases to \(\lbrace 0, 1\rbrace\). In order to proceed, we need to have a representation of what a case is, and this needs to be more formal than our laminated sheets. The term for case in semantics is <span class="term" id="model">model</span>.</p>
 
 <div class="item" id="df-semantic-model" data-kind="definition" data-label="Definition" data-title="Semantic model" data-ref="Definition">
 
@@ -493,7 +493,7 @@ If you have difficulty in understanding the motivation of the definition despite
 
 <p>to be a function from models to \(\lbrace 0, 1\rbrace\), which is to say that the meaning of <em>John loves Mary</em> is a decision procedure which can tell between cases where the sentence is true and the cases where it is false.</p>
 
-<p class="notice--info">We could have equivalently taken the function \(\interp{.}\) to be \(S\times M \mapsto \lbrace 0,1\rbrace\). In the end what it does is to take a sign and a model and return \(0\) or \(1\), a function that takes two arguments. We will almost always do things in the former way, our functions will always take a single argument and at times return other single argument functions as values. We will have more about this below.</p>
+<p class="notice--info">We could have equivalently taken the function \(\interp{\cdot}\) to be \(S\times M \mapsto \lbrace 0,1\rbrace\); after all what it does is to take a sign and a model and return \(0\) or \(1\), a function that takes two arguments. We will almost always do things in the former way. Our functions will always take a single argument, and at times return other single argument functions as values. We will have more about this below.</p>
 
 <p>Let’s take an example model \(M\):</p>
 
@@ -529,11 +529,11 @@ E &amp;= \{a,b,c,d,e\}\\
 
 \[\interp{(\sign{Mary\oplus (loves\oplus John)})}(M) = 1\]
 
-<p>Further changes in the component signs or their arrangement will alter the behaviour of \(\interp{.}\). This is one of the fundamental principles in semantics, which is sometimes called “Frege’s principle”:<sup id="fnref:jannsen"><a href="#fn:jannsen" class="footnote" rel="footnote" role="doc-noteref">11</a></sup></p>
+<p>Further changes in the component signs or their arrangement will alter the behaviour of \(\interp{\cdot}\). This is one of the fundamental principles in semantics, which is sometimes called “Frege’s principle”:<sup id="fnref:jannsen"><a href="#fn:jannsen" class="footnote" rel="footnote" role="doc-noteref">11</a></sup></p>
 
 <p class="notice--warning"><strong>The principle of compositionality</strong>: The meaning of the whole is a function of the meaning of its parts and the way they come together.</p>
 
-<p>How do we make \(\interp{.}\) sensitive to the internal structure of its inputs in a non-random fashion.</p>
+<p>Now the question is: How do we make \(\interp{\cdot}\) sensitive to the internal structure of its inputs in a non-random fashion?</p>
 
 <p>Let’s switch to a much simpler evaluation task where the principle of compositionality is applicable. Let’s assume we are trying to evaluate the language,</p>
 
@@ -543,7 +543,7 @@ E &amp;= \{a,b,c,d,e\}\\
 
 <p>The production operators \(\circ\) and \(\sim\) are defined as,</p>
 
-\[\text{If } \alpha,\beta \in L \text{ s.t. } \sim \text{ does not occur in them, then} (\alpha \circ \beta), (\alpha \sim \beta) \in L.\]
+\[\text{If } \alpha,\beta \in \closure{\{\circ,\sim\}}{L}  \text{ s.t. } \sim \text{ does not occur in them, then so are} (\alpha \circ \beta), (\alpha \sim \beta).\]
 
 <p>which says that \(\sim\) is a one-shot tool, while \(\circ\) is unbounded.</p>
 
@@ -557,7 +557,7 @@ E &amp;= \{a,b,c,d,e\}\\
 
 <p>Back to the principle of compositionality, this is exactly why the principle has an <em>and</em>: we need to be able to make sense of both the basic components <em>and</em> the way they combine into larger structures.</p>
 
-<p>It turns out that the evaluator \(\interp{.}\) needs to have another parameter for handling the construction operators. Here is one possible evaluation account for \(L\), given in an inductive form,</p>
+<p>It turns out that the evaluator \(\interp{\cdot}\) needs to have another parameter for handling the construction operators. Here is one possible account for \(L\), given in an inductive form,</p>
 
 <p>Given \(L\) as defined above and a model \(M=\langle E,\{0,1\}, \lexf \rangle\) for \(L\),</p>
 <ol>
@@ -566,19 +566,19 @@ E &amp;= \{a,b,c,d,e\}\\
   <li>\(\interp{(\alpha_1\sim\alpha_2)} = 1\), if \(\interp{\alpha_1} = \interp{\alpha_2}\), and 0 otherwise;</li>
 </ol>
 
-<p>This is the mechanics of the evaluation function \(\interp{.}\). If you want to get a specific value, you need to provide a concrete model to it. One would be having \(E\) as the set of integers and have \(\lexf\) map a string of \(\triangle\)s and \(\square\)s to the decimal representation of the integer obtained by treating \(\triangle\)s as 1 and \(\square\)s as 0.</p>
+<p>This is the mechanics of the evaluation function \(\interp{\cdot}\). If you want to get a specific value, you need to provide a concrete model to it. One possible model would be having \(E\) as the set of integers and having \(\lexf\) map a string of \(\triangle\)s and \(\square\)s to the decimal representation of the integer obtained by treating \(\triangle\)s as 1 and \(\square\)s as 0.</p>
 
-<p>Before returning to our natural language example and see how this mechanics apply there, we need to get clear about currying.</p>
+<p>Before returning to our natural language example and see how this mechanics apply there, we need to learn about Currying.</p>
 
 <h2 id="currying">Currying</h2>
 
 <p>Natural language has many expressions that correspond to the mathematical concept of a <span class="term" id="relation">relation</span>. <em>Loves</em> for instance is a verb that denotes a relation defined over the set of individuals. It simply includes those ordered pairs \((x,y)\) s.t. \(x\) loves \(y\). Certain mathematical properties of relations directly apply to natural language meaning. For instance, the love relation is not <span class="term" id="symmetric">symmetric</span>, because the fact that \(x\) loves \(y\) does not guarantee that \(y\) loves \(x\) in return, it may but it doesn’t have to. Compare this with the relation <em>be in physical contact with</em>. The love relation is also not <span class="term" id="reflexive">reflexive</span> (as not every individual has to love him/herself), but the relation denoted by <em>has the same name</em> is. Love is also far from being <span class="term" id="transitive">transitive</span>, because the fact that \(x\) loves \(y\) and \(y\) loves \(z\) does not guarantee that \(x\) loves \(z\).<sup id="fnref:sibling"><a href="#fn:sibling" class="footnote" rel="footnote" role="doc-noteref">12</a></sup></p>
 
-<p>Relations are fun, but we need to get used to seeing everything as functions, which constitute a subset of relations that insist that each individual is related to one and only one individual. How can we think of love as a function then?</p>
+<p>Relations are fun, but we need to get used to seeing everything as functions,<sup id="fnref:reap"><a href="#fn:reap" class="footnote" rel="footnote" role="doc-noteref">13</a></sup> which constitute a subset of relations that insist that each individual is related to one and only one individual. How can we think of <em>love</em> as a function then?</p>
 
-<p>Relations are simply sets. Binary relations are sets of ordered pairs, ternary relations are sets of triples, and so on. As we saw above every set is equivalent to a function, which is called its <span class="term" id="characteristic-function">characteristic function</span>. Therefore we will take a binary relation \(R\) defined on a set \(A\) to be a function \(f:A\times A\mapsto \{0,1\}\). All functions with the codomain \(\lbrace0,1\rbrace\) will be called <span class="term" id="boolean">boolean</span> functions; the connection to truth and falsity should be obvious.</p>
+<p>Relations are simply sets. Binary relations are sets of ordered pairs, ternary relations are sets of triples, and so on. As we saw above, every set is equivalent to a function, which is called its <span class="term" id="characteristic-function">characteristic function</span>. Therefore we will take a binary relation \(R\) defined on a set \(A\) to be a function \(f:A\times A\mapsto \{0,1\}\). All functions with the codomain \(\lbrace 0,1\rbrace\) will be called <span class="term" id="boolean">boolean</span> functions; the connection to truth and falsity should be obvious.</p>
 
-<p>The second concept related to functions that we will need is Currying. Take the following simple function that multiplies two numbers:</p>
+<p>The second concept related to functions that we need is Currying.<sup id="fnref:curry"><a href="#fn:curry" class="footnote" rel="footnote" role="doc-noteref">14</a></sup> Take the following simple function that multiplies two numbers:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
 </code></pre></div></div>
@@ -605,27 +605,43 @@ E &amp;= \{a,b,c,d,e\}\\
 
 \[\sign{(loves\oplus Mary)}\]
 
-<p>The functions in our language will all be Curried as in the above example. Therefore a function like \(\sysm{Loves}\) (yes, we take it to be a function rather than a relation) will get its arguments one by one. By convention we will agree that the arguments are fed in the reverse order.<sup id="fnref:montnot"><a href="#fn:montnot" class="footnote" rel="footnote" role="doc-noteref">13</a></sup> For instance, to express what is expressed by the sentence <em>John loves Mary</em>, we will first feed the second argument to the function, resulting in,</p>
+<p>We can accomplish this by taking the meaning of <em>loves</em> to be a single-argument function that returns another single-argument function. The meaning of <em>Mary</em> will be an atomic value that the love function will apply to. Let’s denote these values as \(love'\) and \(mary'\). We now have,</p>
 
-\[Loves(Mary)\]
+\[\interp{\sign{(loves\oplus Mary)}} = love'(mary')\]
 
-<p>which stands for a function that returns 1 for individuals who love Mary and 0 otherwise. The fully saturated form is,</p>
+<p>This is a function that takes another atomic value like \(mary'\) and returns 1 if the relation of love holds between the two, and 0 otherwise. Therefore,</p>
 
-\[Loves(Mary)(John)\]
+\[(\sign{John\oplus (loves\oplus Mary)}) = love'(mary')(john')\]
 
-<p>We will adopt two other notational conventions:</p>
+<p>This is the value that would be written as,</p>
 
-<ol>
-  <li>The constants<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">14</a></sup> like \(Loves\), \(John\), and so on, will be written in lower case and terminated by a prime as in \(loves'\) and \(john'\) (or an abbreviated form \(j'\));</li>
-  <li>Given a function \(f\) and an argument \(a\), we will depict function application as \((f\cnct a)\), rather than the standard notation
-\(f(a)\).</li>
-</ol>
+\[Love(john,mary)\]
+
+<p>in standard first-order logic notation. There is a linguistic reason why we “feed” the arguments in the reverse order, but we will come to that later. Here is another notational convention that will take some time to get used to:</p>
+
+<div class="item" id="df-app-notation" data-kind="definition" data-label="Definition" data-title="Functional application notation" data-ref="Definition">
+
+    
+      <p>Given a function \(f\) and an argument \(a\), \(f(a)\) will be notated as \((f\cnct a)\). Parentheses will be eliminated in a left associative fashion.</p>
+
+
+    
+
+
+    
+
+    
+
+    
+  </div>
 
 <p>Under these conventions the logical representation of <em>John loves Mary</em> becomes,</p>
 
 \[((loves'\cnct mary')\cnct john')\]
 
-<p>Next section is on one of the most important concepts in natural language semantics.</p>
+<p>which will be simplified to,</p>
+
+\[loves'mary'john'\]
 
 <p>We will assume that natural language expressions get transformed
 into a formal disambiguated language. The formal language we will use is
@@ -663,8 +679,6 @@ objects “logical forms”. In what follows, we will have a deeper look at
 this process. We will return to the topic of how to map natural language
 expressions to logical forms later on, where we delve into the notion of
 grammar that governs that mapping.</p>
-
-<h2 id="characteristic-functions-and-currying">Characteristic functions and Currying</h2>
 
 <h2 id="semantic-types">Semantic types</h2>
 
@@ -1217,11 +1231,11 @@ This paragraph will be justified.</p>
     <li id="fn:sibling">
       <p>Think about the concept of <em>sibling</em>. If we put aside the notion of half siblings (Tr. üvey kardeş), we would think that it is a transitive and symmetric relation. But this causes a problem, can you see what? (Thanks to <a href="https://github.com/howion/">Omer Mert Coskun</a> ) for pointing this out. <a href="#fnref:sibling" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:montnot">
-      <p>This has a deeper linguistic reason that we will see later on. <a href="#fnref:montnot" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    <li id="fn:reap">
+      <p>We will reap the benefits on the computation side. <a href="#fnref:reap" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:1">
-      <p>See below for what “constant” means. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    <li id="fn:curry">
+      <p>Named after <a href="https://en.wikipedia.org/wiki/Haskell_Curry">Haskell Brooks Curry</a>, one of the inventors of the concept. Programming languages <a href="https://www.haskell.org/">Haskell</a>, <a href="https://graphics.stanford.edu/projects/brookgpu/">Brook</a> and <a href="https://www.curry-lang.org/">Curry</a> are also named after him. <a href="#fnref:curry" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -1312,7 +1326,7 @@ This paragraph will be justified.</p>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-03-31T00:00:00+03:00">2026-03-31</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-11-17T00:00:00+03:00">2026-11-17</time></p>
 
       </footer>
 
@@ -1321,10 +1335,10 @@ This paragraph will be justified.</p>
       
   <nav class="pagination">
     
-      <a href="/posts/course/walrus-operator/" class="pagination--pager" title="Assignment in lambda expressions">Previous</a>
+      <a href="/posts/course/language-primer/" class="pagination--pager" title="Language primer">Previous</a>
     
     
-      <a href="/posts/course/vectors/" class="pagination--pager" title="Vectors">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 

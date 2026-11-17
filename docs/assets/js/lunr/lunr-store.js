@@ -222,7 +222,7 @@ var store = [{
         "teaser": null
       },{
         "title": "First-order logic",
-        "excerpt":"State whether each atomic formula is true or false in : \\[\\begin{gather*} \\con{student}\\con{anna}\\\\ \\con{book}\\con{anna}\\\\ \\con{linguist}\\con{cara}\\\\ \\con{admire}\\con{ben}\\con{anna}\\\\ \\con{admire}\\con{anna}\\con{ben}\\\\ \\end{gather*}\\] Evaluate the following formulas in . \\[\\begin{gather*} \\exists x.\\con{student}x\\\\ \\forall x.\\con{student}x \\rightarrow \\con{linguist}x\\\\ \\exists x.\\con{student}x \\land \\con{linguist}x\\\\ \\forall x.\\con{book}x \\rightarrow \\con{student}x\\\\ \\exists x\\forall y. \\con{admire}y\\cnct x\\\\ \\con{student}x\\\\ \\con{linguist}x\\\\ \\exists x.\\con{admire}x\\cnct y\\\\ \\end{gather*}\\]...","categories": [],
+        "excerpt":"\\(\\mathcal{M} = \\langle E, \\{0,1\\}, \\lexf\\rangle\\) with domain: \\[\\begin{align*} E &amp;= \\{a,b,c,d,e\\}\\\\ \\lexf(\\con{anna}) &amp;= a\\\\ \\lexf(\\con{ben}) &amp;= b\\\\ \\lexf(\\con{cara}) &amp;= c\\\\ \\lexf(\\con{student}) &amp;= \\{a,b\\}\\\\ \\lexf(\\con{linguist}) &amp;= \\{b,c\\}\\\\ \\lexf(\\con{book}) &amp;= \\{d,e\\}\\\\ \\lexf(\\con{admire}) &amp;= \\{(a,b),(b,c),(c,d)\\}\\\\ \\lexf(\\con{read}) &amp;= \\{(a,d),(b,e),(c,d),(a,e)\\}\\\\ \\lexf(\\con{recommend}) &amp;= \\{(a,d),(c,a),(c,d)\\}\\\\ \\end{align*}\\] Environment: \\[\\begin{align*} g=\\lbrace (x,a), (y,b)\\rbrace \\end{align*}\\] State whether each atomic...","categories": [],
         "tags": ["language","semantics","logic"],
         "url": "/exercises/first-order-logic/",
         "teaser": null
@@ -233,10 +233,10 @@ var store = [{
         "url": "/exercises/firststeps/",
         "teaser": null
       },{
-        "title": "Formal semantics",
-        "excerpt":"\\(\\mathcal{M} = \\langle D, I\\rangle\\) with domain: \\[\\begin{align*} D = \\{a,b,c,d,e\\} \\end{align*}\\] Interpretation function: \\[\\begin{align*} I(\\con{anna}) &amp;= a\\\\ I(\\con{ben}) &amp;= b\\\\ I(\\con{cara}) &amp;= c\\\\ I(\\con{student}) &amp;= \\{a,b\\}\\\\ I(\\con{linguist}) &amp;= \\{b,c\\}\\\\ I(\\con{book}) &amp;= \\{d,e\\}\\\\ I(\\con{admire}) &amp;= \\{(a,b),(b,c),(c,d)\\}\\\\ I(\\con{read}) &amp;= \\{(a,d),(b,e),(c,d),(a,e)\\}\\\\ I(\\con{recommend}) &amp;= \\{(a,d),(c,a),(c,d)\\}\\\\ \\end{align*}\\] Environment: \\[\\begin{align*} g=\\lbrace (x,a), (y,b)\\rbrace \\end{align*}\\] State...","categories": [],
+        "title": "First-order logic (semantics)",
+        "excerpt":"\\(\\mathcal{M} = \\langle E, \\{0,1\\}, \\lexf\\rangle\\) with domain: \\[\\begin{align*} E &amp;= \\{a,b,c,d,e\\}\\\\ \\lexf(\\con{anna}) &amp;= a\\\\ \\lexf(\\con{ben}) &amp;= b\\\\ \\lexf(\\con{cara}) &amp;= c\\\\ \\lexf(\\con{student}) &amp;= \\{a,b\\}\\\\ \\lexf(\\con{linguist}) &amp;= \\{b,c\\}\\\\ \\lexf(\\con{book}) &amp;= \\{d,e\\}\\\\ \\lexf(\\con{admire}) &amp;= \\{(a,b),(b,c),(c,d)\\}\\\\ \\lexf(\\con{read}) &amp;= \\{(a,d),(b,e),(c,d),(a,e)\\}\\\\ \\lexf(\\con{recommend}) &amp;= \\{(a,d),(c,a),(c,d)\\}\\\\ \\end{align*}\\] Environment: \\[\\begin{align*} g=\\lbrace (x,a), (y,b)\\rbrace \\end{align*}\\] State whether each atomic...","categories": [],
         "tags": ["language","semantics","logic"],
-        "url": "/exercises/formal-semantics/",
+        "url": "/exercises/fol-semantics/",
         "teaser": null
       },{
         "title": "Higher-order functions",
@@ -303,6 +303,12 @@ var store = [{
         "excerpt":"Assume we have a collection of texts (corpus) with \\(n\\) words. We pair each unique word \\(w\\) with its frequency of occurrence in the corpus, designated as \\(f(w)\\). The rank \\(r(w)\\) of a word \\(w\\), with \\(1 \\leq r(w) \\leq n\\) is defined as its position in the list of...","categories": [],
         "tags": ["probability","language"],
         "url": "/exercises/zipfs-law/",
+        "teaser": null
+      },{
+        "title": "Functional application notation",
+        "excerpt":"Given a function \\(f\\) and an argument \\(a\\), \\(f(a)\\) will be notated as \\((f\\cnct a)\\). Parentheses will be eliminated in a left associative fashion.  ","categories": [],
+        "tags": [],
+        "url": "/items/df-app-notation/",
         "teaser": null
       },{
         "title": "Characteristic function",
@@ -444,7 +450,7 @@ var store = [{
         "teaser": null
       },{
         "title": "A simple model",
-        "excerpt":"\\(\\mathcal{M} = \\langle D, I\\rangle\\) with domain:   \\[\\begin{align*} D = \\{a,b,c,d,e\\} \\end{align*}\\]  Interpretation function:   \\[\\begin{align*} I(\\con{anna}) &amp;= a\\\\ I(\\con{ben}) &amp;= b\\\\ I(\\con{cara}) &amp;= c\\\\ I(\\con{student}) &amp;= \\{a,b\\}\\\\ I(\\con{linguist}) &amp;= \\{b,c\\}\\\\ I(\\con{book}) &amp;= \\{d,e\\}\\\\ I(\\con{admire}) &amp;= \\{(a,b),(b,c),(c,d)\\}\\\\ I(\\con{read}) &amp;= \\{(a,d),(b,e),(c,d),(a,e)\\}\\\\ I(\\con{recommend}) &amp;= \\{(a,d),(c,a),(c,d)\\}\\\\ \\end{align*}\\]  Environment:   \\[\\begin{align*} g=\\lbrace (x,a), (y,b)\\rbrace \\end{align*}\\] ","categories": [],
+        "excerpt":"\\(\\mathcal{M} = \\langle E, \\{0,1\\}, \\lexf\\rangle\\) with domain:   \\[\\begin{align*} E &amp;= \\{a,b,c,d,e\\}\\\\ \\lexf(\\con{anna}) &amp;= a\\\\ \\lexf(\\con{ben}) &amp;= b\\\\ \\lexf(\\con{cara}) &amp;= c\\\\ \\lexf(\\con{student}) &amp;= \\{a,b\\}\\\\ \\lexf(\\con{linguist}) &amp;= \\{b,c\\}\\\\ \\lexf(\\con{book}) &amp;= \\{d,e\\}\\\\ \\lexf(\\con{admire}) &amp;= \\{(a,b),(b,c),(c,d)\\}\\\\ \\lexf(\\con{read}) &amp;= \\{(a,d),(b,e),(c,d),(a,e)\\}\\\\ \\lexf(\\con{recommend}) &amp;= \\{(a,d),(c,a),(c,d)\\}\\\\ \\end{align*}\\]  Environment:   \\[\\begin{align*} g=\\lbrace (x,a), (y,b)\\rbrace \\end{align*}\\] ","categories": [],
         "tags": [],
         "url": "/items/eg-simple-model/",
         "teaser": null
@@ -564,9 +570,15 @@ var store = [{
         "teaser": null
       },{
         "title": "Model building",
-        "excerpt":"Build a model with exactly three individuals where the following are all true: \\[\\exists x\\,\\con{student}x\\] \\[\\exists x\\,\\con{linguist}x\\] \\[\\neg\\forall x\\,\\con{student}x\\] \\[\\exists x(\\con{student}x\\wedge \\con{linguist}x)\\] \\[\\exists x\\exists y\\, \\con{admire}(x,y)\\] Build a model where the following set is inconsistent, and explain why: \\[\\forall x(\\con{student}x\\rightarrow \\con{read}(x,b))\\] \\[\\exists x\\,\\con{student}x\\] \\[\\forall x\\,\\neg \\con{read}(x,b)\\] Build a model where...","categories": [],
+        "excerpt":"Build a model with exactly three individuals where the following are all true: \\(\\exists x\\,\\con{student}x\\); \\(\\exists x\\,\\con{linguist}x\\); \\(\\neg\\forall x\\,\\con{student}x\\); \\(\\exists x(\\con{student}x\\wedge \\con{linguist}x)\\); \\(\\exists x\\exists y\\, \\con{admire}(x,y)\\). Build a model where the following set is inconsistent, and explain why: \\(\\forall x(\\con{student}x\\rightarrow \\con{read}(x,b))\\); \\(\\exists x\\,\\con{student}x\\); \\(\\forall x\\,\\neg \\con{read}(x,b)\\). Build a model where...","categories": [],
         "tags": [],
         "url": "/items/ex-model-building/",
+        "teaser": null
+      },{
+        "title": "Model manipulation",
+        "excerpt":"Evaluate the following formula in :   \\[\\exists x.\\con{student}x\\land \\con{admire}x\\con{cara}\\land [\\exists z. book'z \\land \\con{recommend} z\\, x \\to \\forall y. \\con{linguist}y \\to \\con{read}z\\, y]\\]  If the model does not satisfy the formula, suggest an alteration to the model, so that the formula is satisfied. Try to find a minimal alteration.  ","categories": [],
+        "tags": [],
+        "url": "/items/ex-model-manipulation/",
         "teaser": null
       },{
         "title": "Model theory basics",
@@ -1037,12 +1049,6 @@ var store = [{
         "url": "/posts/course/walrus-operator/",
         "teaser": null
       },{
-        "title": "Natural language semantics",
-        "excerpt":"The meaning of traffic lights The language of traffic lights, call it \\(T\\), is simply the set \\(\\{red, yellow, green\\}\\). The three expressions of \\(T\\) are associated with three distinct things that have nothing to do with colors. Those who are aware of this association are said to know the...","categories": ["course"],
-        "tags": ["language","semantics"],
-        "url": "/posts/course/model-theoretic-interpretation/",
-        "teaser": null
-      },{
         "title": "Vectors",
         "excerpt":"When we model the world through mathematics, we frequently find ourselves talking about magnitudes. Mass, length, price, and so on, are all examples of quantities that we use numbers to represent. We build our mathematical models in such a way that these numbers and operations involving them has some, largely...","categories": ["course"],
         "tags": ["continuous","linear algebra"],
@@ -1059,6 +1065,12 @@ var store = [{
         "excerpt":"This is a quick start on langugage for cognitive science students. A simple formal system Douglas Hofstadter1 has this tiny formal system called pq-System. In defining formal systems, we start with a set of symbols, called the alphabet. This dictates that any expression of the system must be made by...","categories": ["course"],
         "tags": ["language","cogsci"],
         "url": "/posts/course/language-primer/",
+        "teaser": null
+      },{
+        "title": "Natural language semantics",
+        "excerpt":"The meaning of traffic lights The language of traffic lights, call it \\(T\\), is simply the set \\(\\{red, yellow, green\\}\\). The three expressions of \\(T\\) are associated with three distinct things that have nothing to do with colors. Those who are aware of this association are said to know the...","categories": ["course"],
+        "tags": ["language","semantics"],
+        "url": "/posts/course/natural-language-semantics/",
         "teaser": null
       },{
         "title": "Prisoners Dilemma",
@@ -1331,8 +1343,11 @@ var store = [{
     "title": "Solution: Model building",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-model-building/"
   },{
+    "title": "Solution: Model manipulation",
+    "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-model-manipulation/"
+  },{
     "title": "Solution: Model theory basics",
-    "excerpt":"@@item|eg-simple-model|raw=true@@ 1. State whether each atomic formula is true or false in @@xref|eg-simple-model@@: $$ \\begin{gather*} \\con{student}\\con{anna}\\quad\\checkmark \\\\ \\con{book}\\con{anna}\\quad\\times\\\\ \\con{linguist}\\con{cara}\\quad\\checkmark\\\\ \\con{admire}\\con{ben}\\con{anna}\\quad\\checkmark\\\\ \\con{admire}\\con{anna}\\con{ben}\\quad\\times\\\\ \\end{gather*} $$ 1. Evaluate the following formulas in @@xref|eg-simple-model@@. $$ \\begin{gather*} \\interp{\\exists x.\\con{student}x} = 1\\\\ \\interp{\\forall x.\\con{student}x \\rightarrow \\con{linguist}x} = 0\\\\ \\interp{\\exists x.\\con{student}x \\land \\con{linguist}x} = 1\\\\ \\interp{\\forall x.\\con{book}x...","url": "https://umutozge.github.io/solutions/ex-model-theory-basics/"
+    "excerpt":"1. State whether each atomic formula is true or false in @@xref|eg-simple-model@@: $$ \\begin{gather*} \\con{student}\\con{anna}\\quad\\checkmark \\\\ \\con{book}\\con{anna}\\quad\\times\\\\ \\con{linguist}\\con{cara}\\quad\\checkmark\\\\ \\con{admire}\\con{ben}\\con{anna}\\quad\\checkmark\\\\ \\con{admire}\\con{anna}\\con{ben}\\quad\\times\\\\ \\end{gather*} $$ 1. Evaluate the following formulas in @@xref|eg-simple-model@@. $$ \\begin{gather*} \\interp{\\exists x.\\con{student}x} = 1\\\\ \\interp{\\forall x.\\con{student}x \\rightarrow \\con{linguist}x} = 0\\\\ \\interp{\\exists x.\\con{student}x \\land \\con{linguist}x} = 1\\\\ \\interp{\\forall x.\\con{book}x \\rightarrow...","url": "https://umutozge.github.io/solutions/ex-model-theory-basics/"
   },{
     "title": "Solution: PL parentheses",
     "excerpt":"Solution not written yet.          Back to exercise      ","url": "https://umutozge.github.io/solutions/ex-pl-parens/"
