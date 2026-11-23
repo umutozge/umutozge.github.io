@@ -112,7 +112,7 @@
 
   </head>
 
-  <body class="layout--numbered wide" dir="ltr">
+  <body class="layout--numbered no-left-sidebar" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -228,92 +228,7 @@
         <div class="numbered">
   <p class="notice--warning"><strong>Prerequisites:</strong> <a href="/posts/course/state-power/">The power of the state</a> and <a href="/posts/course/way-of-lambda/">The way of lambda</a></p>
 
-<p>We fortified our <code class="language-plaintext highlighter-rouge">proc_seq</code> with tuples to keep track of multiple state variables.  We scan through a sequence of numbers that proceeds according to a given rule, keeping track of various properties of the sequence, like what is the largest number seen so far according to a given criterion, or what is the sum of all numbers seen so far. We are able to scan through the sequence in pairs, triples, or more, and can keep record of multiple properties of the sequence. We can add as many state variables as we want, but these variables can hold only single values.</p>
-
-<p>We are still unable to handle the task of mapping a positive integer to the Collatz sequence it seeds. To do that, we need a state variable that can hold a sequence of numbers, not just a single number. Lists exist for this purpose. Here is a brief interlude on lists.</p>
-
-<hr class="topic-separator" />
-
-<p>Construction and indexing of lists is similar to tuples:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># first element
-</span><span class="mi">1</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>	<span class="c1"># fourth element
-</span><span class="mi">4</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># last element
-</span><span class="mi">5</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># all but the first element
-</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-</code></pre></div></div>
-
-<p>Lists are <strong>mutable</strong>, meaning that we can change them <strong>in place</strong>. Here is how:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>  <span class="c1"># insert 6 at index 2
-</span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">.</span><span class="nf">extend</span><span class="p">([</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>  <span class="c1"># extend by another list
-</span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-</code></pre></div></div>
-
-<p>Operations like <code class="language-plaintext highlighter-rouge">.insert</code>, <code class="language-plaintext highlighter-rouge">.extend</code>, <code class="language-plaintext highlighter-rouge">.append</code>, and so on, are not expressions. They do now have any return value, but have side-effects that modify the list in place. Operations like these cause too much pain in programs, causing errors usually very hard to detect. We are not fond of side-effects, we like expressions that return values. Here are the expression equivalents of the above operations:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="p">[</span><span class="mi">7</span><span class="p">]</span>  <span class="c1"># concatenation
-</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>  <span class="c1"># insert 6 at index 2
-</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>  <span class="c1"># extend by another list
-</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-</code></pre></div></div>
-
-<p>As you see, the list <code class="language-plaintext highlighter-rouge">x</code> remains unchanged after these operations. To actually change <code class="language-plaintext highlighter-rouge">x</code>, you need to assign the result back to <code class="language-plaintext highlighter-rouge">x</code>; unless you do that the original list remains unchanged.</p>
-
-<p>Finally, here are some useful  functions on lists:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># length of the list
-</span><span class="mi">3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="ow">in</span> <span class="n">x</span>  <span class="c1"># membership test
-</span><span class="bp">True</span>
-</code></pre></div></div>
-
-<hr class="topic-separator" />
-
-<p>Back to Collatz sequences. Here is how we can use lists to construct the sequence seeded by a positive integer \(n\):</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">collatz_sequence</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sh">"""</span><span class="s">Return the Collatz sequence seeded by positive integer n.
-</span><span class="gp">
-    &gt;&gt;&gt;</span> <span class="nf">collatz_sequence</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-    <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-    <span class="o">&gt;&gt;&gt;</span> <span class="nf">collatz_sequence</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
-    <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-    <span class="sh">"""</span>
-    <span class="kn">from</span> <span class="n">collatz</span> <span class="kn">import</span> <span class="n">collatz</span>
-    <span class="k">return</span> <span class="nf">proc_seq</span><span class="p">(</span>
-        <span class="n">n</span><span class="p">,</span>
-        <span class="n">seq</span><span class="o">=</span><span class="n">collatz</span><span class="p">,</span>
-        <span class="n">alive</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">update</span><span class="o">=</span> <span class="k">lambda</span> <span class="n">store</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">store</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">],</span>
-        <span class="n">init</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="p">)</span>
-</code></pre></div></div>
-
-<hr class="topic-separator" />
+<p>We fortified our <code class="language-plaintext highlighter-rouge">proc_seq</code> with tuples to keep track of multiple state variables.  We scan through a sequence of numbers that proceeds according to a given rule, keeping track of various properties of the sequence, like what is the largest number seen so far according to a given criterion, or what is the sum of all numbers seen so far. We are able to scan through the sequence in pairs, triples, or more, and can keep record of multiple properties of the sequence. We can add as many state variables as we want.</p>
 
 <p>The post <a href="/posts/course/state-power/">The power of the state</a> closed:</p>
 

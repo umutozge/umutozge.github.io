@@ -37,91 +37,103 @@
   },
   "df-char-func": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 1,
+    "number": 4,
     "label": "Definition",
     "title": "Characteristic function"
   },
-  "df-semantic-model": {
+  "df-true-set": {
     "page": "/posts/course/natural-language-semantics/",
     "number": 2,
+    "label": "Definition",
+    "title": "True set of a boolean function"
+  },
+  "df-currying": {
+    "page": "/posts/course/natural-language-semantics/",
+    "number": 3,
+    "label": "Definition",
+    "title": "Currying"
+  },
+  "df-semantic-model": {
+    "page": "/posts/course/natural-language-semantics/",
+    "number": 5,
     "label": "Definition",
     "title": "Semantic model"
   },
   "df-semantic-objects": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 3,
+    "number": 6,
     "label": "Definition",
     "title": "The unvierse of semantic objects"
   },
   "eg-model-jlm": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 4,
+    "number": 7,
     "label": "Model",
     "title": "A simple model"
   },
   "df-app-notation": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 5,
+    "number": 8,
     "label": "Definition",
     "title": "Functional application notation"
   },
   "df-sem-types": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 6,
+    "number": 9,
     "label": "Definition",
     "title": "Semantic types"
   },
   "df-mt-l0": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 7,
+    "number": 10,
     "label": "Definition",
     "title": "Syntax"
   },
   "tr-mts-1": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 8,
+    "number": 11,
     "label": "Tree",
     "title": ""
   },
   "tr-mts-2": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 9,
+    "number": 12,
     "label": "Tree",
     "title": ""
   },
   "tr-mts-3": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 10,
+    "number": 13,
     "label": "Tree",
     "title": ""
   },
   "tr-mts-4": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 11,
+    "number": 14,
     "label": "Tree",
     "title": ""
   },
   "tr-mts-5": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 12,
+    "number": 15,
     "label": "Tree",
     "title": ""
   },
   "df-funcset": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 13,
+    "number": 16,
     "label": "Notation",
     "title": "Set exponents"
   },
   "df-mt-env-ext": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 14,
+    "number": 17,
     "label": "Notation",
     "title": "Environment extension"
   },
   "df-mt-l0-sem": {
     "page": "/posts/course/natural-language-semantics/",
-    "number": 15,
+    "number": 18,
     "label": "Definition",
     "title": "Semantics of L"
   },

@@ -17,6 +17,12 @@ var store = [{
         "url": "/code/python/snippets/files/",
         "teaser": null
       },{
+        "title": "Lists",
+        "excerpt":"Construction and indexing of lists is similar to tuples: &gt;&gt;&gt; x = [1, 2, 3, 4, 5] &gt;&gt;&gt; x [1, 2, 3, 4, 5] &gt;&gt;&gt; x[0] # first element 1 &gt;&gt;&gt; x[3] # fourth element 4 &gt;&gt;&gt; x[-1] # last element 5 &gt;&gt;&gt; x[1:] # all but the first element...","categories": [],
+        "tags": ["python","list"],
+        "url": "/code/python/snippets/lists/",
+        "teaser": null
+      },{
         "title": "Plotting",
         "excerpt":"The most basic way to create plots in Python is by using the matplotlib library. Below is an example of how to create a simple line plot. import matplotlib.pyplot as plt x = [1, 2, 3, 4, 5] y = [1, 4, 9, 16, 25] plt.plot(x, y) plt.xlabel(\"X-axis\") plt.ylabel(\"Y-axis\") plt.title(\"Simple...","categories": [],
         "tags": ["python","plotting"],
@@ -67,7 +73,7 @@ var store = [{
       },{
         "title": "Tuples",
         "excerpt":"A tuple is an immutable ordered sequence. It can contain items of any type, including tuples themselves. Another sequence data structure is the list. Tuples and lists have some impoartant differences. Tuples are generally advised to be used for heterogenous (items of different types) and fixed-length data (RGB coordinates, or...","categories": [],
-        "tags": ["python","tuples"],
+        "tags": ["python","tuple"],
         "url": "/code/python/snippets/tuples/",
         "teaser": null
       },{
@@ -317,6 +323,12 @@ var store = [{
         "url": "/items/df-char-func/",
         "teaser": null
       },{
+        "title": "Currying",
+        "excerpt":"Given any \\(n-1\\) place function \\(f: A_1 \\times A_2\\times, \\ldots, \\times A_{n-1} \\mapsto A_n\\), with \\(n&gt;1\\), there exists a function, \\[g:(A_1 \\mapsto (A_2 \\mapsto\\ldots(A_{n-1}\\mapsto A_n)\\ldots)) \\nonumber\\] such that for any, \\((x_1,x_2,\\dots,x_{n-1})\\in A_1 \\times A_2 \\times, \\ldots, \\times A_{n-1}\\), \\[f(x_1,x_2,\\dots,x_{n-1}) = g(x_1)(x_2)\\ldots(x_{n-1})\\nonumber\\] The function \\(g\\) is called the curried version of...","categories": [],
+        "tags": [],
+        "url": "/items/df-currying/",
+        "teaser": null
+      },{
         "title": "Set exponents",
         "excerpt":"Given two sets \\(X\\) and \\(Y\\), \\(X^Y\\) denotes the set of all functions defined from \\(Y\\) to \\(X\\).     The notation is motivated by the fact that given two sets \\(X\\) and \\(Y\\) with cardinalities \\(m\\) and \\(n\\), respectively. There exists \\(m^n\\) functions from \\(Y\\) to \\(X\\).  ","categories": [],
         "tags": [],
@@ -375,6 +387,12 @@ var store = [{
         "excerpt":"A standard deck has 52 cards, divided into 4 suits (hearts ♥️, diamonds ♦️, clubs ♣️, spades ♠️), each with 13 ranks (A(ce), 2, …, 10, J(ack), Q(ueen), K(ing)). The cards J, Q, and K are called face cards. Suits are broken into two colors: red and black. Each color...","categories": [],
         "tags": [],
         "url": "/items/df-standard-deck/",
+        "teaser": null
+      },{
+        "title": "True set of a boolean function",
+        "excerpt":"Given any boolean function \\(f: A \\mapsto \\lbrace 0,1\\rbrace\\),  \\(\\mathrm{tset}(f) = \\lbrace a\\in A\\mid f(a) = 1 \\rbrace\\) is called the true set of \\(f\\).  ","categories": [],
+        "tags": [],
+        "url": "/items/df-true-set/",
         "teaser": null
       },{
         "title": "Dot product",
@@ -1131,7 +1149,7 @@ var store = [{
     "excerpt":" ","url": "https://umutozge.github.io/categories/"
   },{
     "title": "Code browser",
-    "excerpt":"Language: Any Python Haskell Type: Any Module Snippet collatz python · module Various goodies related to Collatz conjecture. funcutils python · module A utility module for functional abstractions. Files python · snippet Working with files in Python. Plotting python · snippet Plotting in Python. A sequence processor python · module...","url": "https://umutozge.github.io/code/browser/"
+    "excerpt":"Language: Any Python Haskell Type: Any Module Snippet collatz python · module Various goodies related to Collatz conjecture. funcutils python · module A utility module for functional abstractions. Files python · snippet Working with files in Python. Lists python · snippet lists in Python. Plotting python · snippet Plotting in...","url": "https://umutozge.github.io/code/browser/"
   },{
     "title": "Workbook browser",
     "excerpt":"counting 1 discrete 2 funprog 1 grammar 1 iteration 1 language 6 linear algebra 1 lists 1 logic 2 number theory 2 parsing 1 probability 2 programming 2 proof 1 python 3 recursion 2 semantics 3 sequence 1 sets 1 tuples 1 typing 1 Basic probability Probability exercises. CCG Exercises...","url": "https://umutozge.github.io/exercise/browser/"
